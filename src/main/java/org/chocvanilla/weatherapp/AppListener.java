@@ -6,10 +6,11 @@ import java.awt.*;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 import java.io.*;
+import java.nio.file.*;
 
 public class AppListener extends WindowAdapter {
     private static final Dimension DEFAULT_WINDOW_SIZE = new Dimension(800, 600);
-    private static final String PREFERENCES_PATH = "preferences.json";
+    private static final Path PREFERENCES_PATH = Paths.get("preferences.json");
 
     @Override
     public void windowClosing(WindowEvent e) {
@@ -25,7 +26,7 @@ public class AppListener extends WindowAdapter {
 
 
     private void saveCoordinates(Window window) {
-        try (BufferedWriter writer = new BufferedWriter(new FileWriter(PREFERENCES_PATH))){
+        try (BufferedWriter writer = Files.newBufferedWriter(PREFERENCES_PATH)){
             Rectangle bounds = window.getBounds();
             Gson gson = new Gson();
             gson.toJson(bounds, writer);
@@ -35,7 +36,7 @@ public class AppListener extends WindowAdapter {
     }
     
     private void loadCoordinates(Window window) {
-        try  (BufferedReader reader = new BufferedReader(new FileReader(PREFERENCES_PATH))){
+        try  (BufferedReader reader = Files.newBufferedReader(PREFERENCES_PATH)){
             Gson gson = new Gson();
             Rectangle bounds = gson.fromJson(reader, Rectangle.class);
             window.setBounds(bounds);           
