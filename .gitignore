@@ -1,5 +1,5 @@
-*.iml
 .classpath
+*.json
 .gradle/
 .idea/
 .project
