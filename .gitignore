@@ -3,7 +3,9 @@
 .gradle/
 .idea/
 .project
-/bin/
+
 build/
 gradle/
-.settings
+
+bin/
+.settings/
