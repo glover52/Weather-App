@@ -9,3 +9,4 @@ gradle/
 
 bin/
 .settings/
+.settings/*.prefs
