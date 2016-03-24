@@ -1,6 +1,7 @@
 package org.chocvanilla.weatherapp;
 
 import javax.swing.*;
+import org.chocvanilla.weatherapp.gui.*;
 
 public class WeatherApp {
     final JFrame mainWindow = new JFrame("Weather App");
