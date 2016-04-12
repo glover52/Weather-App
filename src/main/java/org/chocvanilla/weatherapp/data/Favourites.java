@@ -1,60 +1,40 @@
 package org.chocvanilla.weatherapp.data;
 
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.IOException;
-import java.io.PrintWriter;
+import java.io.*;
+import java.nio.file.*;
 import java.util.ArrayList;
+import java.util.Iterator;
 
-public class Favourites {
+public class Favourites implements Iterable<WeatherStation>{
+	private static final Path FAVOURITES_PATH = Paths.get("favourites.dat");
+	private final WeatherStations all;
+	private ArrayList<Integer> wmoNumbers = new ArrayList<>();
 
-	private ArrayList<WeatherStation> list = new ArrayList<WeatherStation>();
-
-	public Favourites() {
-
+	public Favourites(WeatherStations allStations){
+		all = allStations;
 	}
 
-	public boolean saveToFile(String n) {
-		File f = new File(n);
-		
-		try {
-			PrintWriter pw = new PrintWriter(f);
-			f.createNewFile();
-			
-			for (WeatherStation ws : list) {
-				String id = Integer.toString(ws.getWmoNumber());
-				
+	public boolean saveToFile() {
+		try (BufferedWriter writer = Files.newBufferedWriter(FAVOURITES_PATH)) {
+			PrintWriter pw = new PrintWriter(writer);
+			for (int wmoNumber : wmoNumbers) {
+				String id = Integer.toString(wmoNumber);
 				pw.println(id);
 			}
-			
-			pw.close();
-		}
-		catch (FileNotFoundException e) {
-			System.out.println("Could not find file: " + n);
-			return false;
-		}
-		catch (IOException e) { return false; }
-
+		} catch (IOException e) { return false; }
 		return true;
 	}
 
-	public boolean loadFromFile(String n) {
-		try {
-			File f = new File(n);
-			BufferedReader br = new BufferedReader(new FileReader(f));
-
-			@SuppressWarnings("unused")
+	public boolean loadFromFile() {
+		try (BufferedReader reader = Files.newBufferedReader(FAVOURITES_PATH)){
 			String line;
-			while ((line = br.readLine()) != null) {
-				// Implement me
+			while ((line = reader.readLine()) != null) {
+				int id = Integer.parseInt(line);
+				wmoNumbers.add(id);
 			}
-
-			br.close();
 		}
 		catch (FileNotFoundException e) {
-			System.out.println("Could not find file: " + n);
+			System.out.println("Could not find file: " + FAVOURITES_PATH);
 			return false;
 		}
 		catch (IOException e) { return false; }
@@ -63,18 +43,23 @@ public class Favourites {
 	}
 
 	public WeatherStation getFavourite(int i) {
-		return list.get(i);
+		return all.getByWmoNumber(wmoNumbers.get(i));
 	}
 
 	public void addToFavourites(WeatherStation ws) {
-		list.add(ws);
+		wmoNumbers.add(ws.getWmoNumber());
 	}
 
 	public void removeFromFavourites(WeatherStation ws) {
-		list.remove(ws);
+		wmoNumbers.remove(ws.getWmoNumber());
 	}
 	
 	private int getSize() {
-		return list.size();
+		return wmoNumbers.size();
+	}
+
+	@Override
+	public Iterator<WeatherStation> iterator() {
+		return wmoNumbers.stream().map(all::getByWmoNumber).iterator();
 	}
 }

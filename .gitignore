@@ -1,11 +1,13 @@
 .classpath
 preferences.json
+*.dat
 .gradle/
 .idea/
 .project
 
 build/
 gradle/
+observations/
 
 bin/
 .settings/
