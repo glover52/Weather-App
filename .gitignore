@@ -4,6 +4,7 @@ preferences.json
 .gradle/
 .idea/
 .project
+*.iml
 
 build/
 gradle/
