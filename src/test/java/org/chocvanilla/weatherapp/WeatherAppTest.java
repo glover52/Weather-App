@@ -59,4 +59,18 @@ public class WeatherAppTest {
         assertEquals(station.getWmoNumber(), 94828);
     }
 
+    @Test
+    public void displayObservations() throws IOException {
+        Favourites fav = new Favourites(db);
+        assertTrue(fav.loadFromFile());
+        WeatherStation station = fav.getFavourite(0);
+        ObservationLoader loader = new ObservationLoader();
+        List<WeatherObservation> observations = loader.load(station);
+        for(WeatherObservation obvs : observations) {
+            String time = obvs.getTimestamp();
+            double temp = obvs.getAirTemperature();
+            System.out.println(time + ":" + temp);
+        }
+    }
+
 }

@@ -21,6 +21,14 @@ public class WeatherStations {
                 .findFirst();
         return result.orElseThrow(()-> new RuntimeException("No station with this wmoNumber"));
     }
+
+    public WeatherStation getByName(String name) {
+        Optional<WeatherStation> result = stations.stream()
+                .filter(station -> station.getName() == name)
+                .findFirst();
+        return result.orElseThrow(()-> new RuntimeException("No station with this name"));
+    }
+
     
     public void load() throws IOException {
         try (BufferedReader reader = Files.newBufferedReader(WEATHER_STATIONS_FILE)) {
