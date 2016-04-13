@@ -40,4 +40,9 @@ public class WeatherStation {
         String productID = formatProductID();
         return String.format(URL_FORMAT, productID, productID, wmoNumber);
     }
+
+    @Override
+    public String toString() {
+        return String.format("%s, %s", name, state);
+    }
 }

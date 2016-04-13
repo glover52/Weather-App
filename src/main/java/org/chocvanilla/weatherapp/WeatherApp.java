@@ -8,37 +8,60 @@ import java.io.IOException;
 
 public class WeatherApp {
     final JFrame mainWindow = new JFrame("Weather App");
-    private final JList<String> favouritesList = new JList<>();
+    
     private final WeatherStations weatherStations;
     private final Favourites favourites;
-    
-    public WeatherApp(WeatherStations stations){
+    private final JTextField searchBox = new JTextField();
+    private final JList<WeatherStation> stationList = new JList<>();
+
+    public WeatherApp(WeatherStations stations) {
+        mainWindow.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+        mainWindow.addWindowListener(new AppListener());
         weatherStations = stations;
         favourites = new Favourites(weatherStations);
-        
+        favourites.loadFromFile();
     }
     
     public void run() {
+        JPanel container = new JPanel();
         
-        favourites.loadFromFile();
-        
-        mainWindow.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-        mainWindow.addWindowListener(new AppListener());
-        
-        DefaultListModel<String> model = new DefaultListModel<>();
-        for (WeatherStation fav : favourites){
-            model.addElement(fav.getName() + " " + fav.getState());
+        JPanel favouritesPanel = new JPanel(new FlowLayout(FlowLayout.LEFT));
+        for (WeatherStation station : favourites){
+            JButton favouriteButton = new JButton(station.toString());
+            favouritesPanel.add(favouriteButton);
         }
-        favouritesList.setModel(model);
+        favouritesPanel.setBorder(BorderFactory.createTitledBorder("Favourites"));
+        favouritesPanel.setMaximumSize(new Dimension(Integer.MAX_VALUE, Integer.MAX_VALUE));
+        container.add(favouritesPanel);
         
-        JPanel container = new JPanel(new FlowLayout());
-        container.add(favouritesList);
+        JPanel searchPanel = new JPanel(new BorderLayout());
+        searchPanel.add(searchBox, BorderLayout.NORTH);
+        
+        DefaultListModel<WeatherStation> model = new DefaultListModel<>();
+        weatherStations.getStations().forEach(model::addElement);
+        stationList.setModel(model);
+
+        GuiHelpers.addChangeListener(searchBox, s -> {
+            model.removeAllElements();
+            weatherStations
+                    .getStations()
+                    .stream()
+                    .filter(x -> x.toString().contains(searchBox.getText().toUpperCase()))
+                    .forEach(model::addElement);
+            }
+        );
+        
+        JScrollPane scrollPane = new JScrollPane(stationList);
+        searchPanel.add(scrollPane, BorderLayout.CENTER);
+        
+        searchPanel.setBorder(BorderFactory.createTitledBorder("Search Weather Stations"));
+        container.add(searchPanel);
+        
+        container.setLayout(new BoxLayout(container, BoxLayout.Y_AXIS));
+
         mainWindow.setContentPane(container);
-        
-        
         mainWindow.pack();
         mainWindow.setVisible(true);
-        
     }
     
     public static void main(String[] args) throws IOException {
@@ -52,4 +75,5 @@ public class WeatherApp {
         WeatherApp instance = new WeatherApp(all);
         instance.run();
     }
+
 }
