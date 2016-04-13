@@ -1,9 +1,12 @@
 package org.chocvanilla.weatherapp;
 
+import org.chocvanilla.weatherapp.chart.Chart;
 import org.chocvanilla.weatherapp.data.*;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.io.IOException;
 
 public class WeatherApp {
@@ -14,7 +17,7 @@ public class WeatherApp {
     private final JTextField searchBox = new JTextField();
     private final JList<WeatherStation> stationList = new JList<>();
 
-    public WeatherApp(WeatherStations stations) {
+    public WeatherApp(WeatherStations stations)  {
         mainWindow.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         mainWindow.addWindowListener(new AppListener());
         weatherStations = stations;
@@ -22,13 +25,22 @@ public class WeatherApp {
         favourites.loadFromFile();
     }
     
-    public void run() {
+    public void run()  {
         JPanel container = new JPanel();
         
         JPanel favouritesPanel = new JPanel(new FlowLayout(FlowLayout.LEFT));
         for (WeatherStation station : favourites){
             JButton favouriteButton = new JButton(station.toString());
             favouritesPanel.add(favouriteButton);
+            favouriteButton.addActionListener(new ActionListener() {
+                public void actionPerformed(ActionEvent e) {
+                    try {
+                        Chart chart = new Chart(station);
+                    } catch (IOException e1) {
+                        e1.printStackTrace();
+                    }
+                }
+            });
         }
         favouritesPanel.setBorder(BorderFactory.createTitledBorder("Favourites"));
         favouritesPanel.setMaximumSize(new Dimension(Integer.MAX_VALUE, Integer.MAX_VALUE));
