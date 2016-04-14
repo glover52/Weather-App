@@ -5,14 +5,15 @@ import org.chocvanilla.weatherapp.data.*;
 import org.jfree.data.xy.XYDataset;
 
 import javax.swing.*;
+import javax.swing.event.ListSelectionEvent;
+import javax.swing.event.ListSelectionListener;
 import java.awt.*;
 import java.io.IOException;
 import java.util.concurrent.*;
 
 public class WeatherApp {
     private final ExecutorService executor = Executors.newCachedThreadPool();
-    final JFrame mainWindow = new JFrame("Weather App");
-    
+    private final JFrame mainWindow = new JFrame("Weather App");
     private final WeatherStations weatherStations;
     private final Favourites favourites;
     private final JTextField searchBox = new JTextField();
@@ -24,20 +25,6 @@ public class WeatherApp {
         weatherStations = stations;
         favourites = new Favourites(weatherStations);
         favourites.loadFromFile();
-    }
-    
-    private void attachChart(JButton favouriteButton, WeatherStation station){
-        FutureTask<XYDataset> task = new FutureTask<>(() -> Chart.createDataSet(station));
-        executor.execute(task);
-        favouriteButton.addActionListener(x -> openChart(station, task));
-    }
-    
-    private void openChart(WeatherStation station, FutureTask<XYDataset> dataSupplier){
-        try {
-            new Chart(station, dataSupplier.get());
-        } catch (InterruptedException | ExecutionException e) {
-            e.printStackTrace();
-        }
     }
     
     public void run()  {
@@ -60,21 +47,36 @@ public class WeatherApp {
         weatherStations.getStations().forEach(model::addElement);
         stationList.setModel(model);
 
-        GuiHelpers.addChangeListener(searchBox, s -> {
-            model.removeAllElements();
-            weatherStations
-                    .getStations()
-                    .stream()
-                    .filter(x -> x.toString().contains(searchBox.getText().toUpperCase()))
-                    .forEach(model::addElement);
-            }
-        );
+        GuiHelpers.addChangeListener(searchBox, s -> listSelectionChanged(model));
+        stationList.addListSelectionListener(this::openChart);        
+
 
         JScrollPane scrollPane = new JScrollPane(stationList);
         searchPanel.add(scrollPane, BorderLayout.CENTER);
 
         searchPanel.setBorder(BorderFactory.createTitledBorder("Search Weather Stations"));
         return searchPanel;
+    }
+
+    private void listSelectionChanged(DefaultListModel<WeatherStation> model) {
+        for (ListSelectionListener l : stationList.getListSelectionListeners()){
+            stationList.removeListSelectionListener(l);
+        }
+        model.removeAllElements();
+        weatherStations
+                .getStations()
+                .stream()
+                .filter(x -> x.toString().contains(searchBox.getText().toUpperCase()))
+                .forEach(model::addElement);
+        stationList.addListSelectionListener(this::openChart);
+    }
+
+    private void openChart(ListSelectionEvent e){        
+        if (!e.getValueIsAdjusting()) {
+            WeatherStation station = stationList.getSelectedValue();
+            FutureTask<XYDataset> task = loadDataAsync(station);
+            openChart(station, task);
+        }
     }
 
     private JPanel buildFavouritesPanel() {
@@ -87,6 +89,25 @@ public class WeatherApp {
         favouritesPanel.setBorder(BorderFactory.createTitledBorder("Favourites"));
         favouritesPanel.setMaximumSize(new Dimension(Integer.MAX_VALUE, Integer.MAX_VALUE));
         return favouritesPanel;
+    }
+    
+    private FutureTask<XYDataset> loadDataAsync(WeatherStation station){
+        FutureTask<XYDataset> task = new FutureTask<>(() -> Chart.createDataSet(station));
+        executor.execute(task);
+        return task;
+    }
+
+    private void attachChart(JButton favouriteButton, WeatherStation station) {
+        FutureTask<XYDataset> task = loadDataAsync(station);
+        favouriteButton.addActionListener(x -> openChart(station, task));
+    }
+
+    private void openChart(WeatherStation station, FutureTask<XYDataset> dataSupplier) {
+        try {
+            new Chart(station, dataSupplier.get());
+        } catch (InterruptedException | ExecutionException e) {
+            e.printStackTrace();
+        }
     }
 
     public static void main(String[] args) throws IOException {
