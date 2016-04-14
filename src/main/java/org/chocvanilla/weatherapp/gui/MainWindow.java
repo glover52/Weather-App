@@ -37,6 +37,7 @@ public class MainWindow {
         frame.setContentPane(container);
         frame.pack();
         frame.setVisible(true);
+        detailedFrame.setLocationRelativeTo(frame);
     }
 
     private JPanel buildSearchPanel() {
@@ -74,6 +75,7 @@ public class MainWindow {
     private void openChart(ListSelectionEvent e){        
         if (!e.getValueIsAdjusting()) {
             WeatherStation station = stationList.getSelectedValue();
+            stationList.clearSelection();
             FutureTask<XYDataset> task = loadDataAsync(station);
             openChart(station, task);
         }
@@ -87,7 +89,6 @@ public class MainWindow {
             attachChart(favouriteButton, station);
         }
         favouritesPanel.setBorder(BorderFactory.createTitledBorder("Favourites"));
-        favouritesPanel.setMaximumSize(new Dimension(Integer.MAX_VALUE, Integer.MAX_VALUE));
         return favouritesPanel;
     }
     
@@ -114,7 +115,6 @@ public class MainWindow {
             detailedFrame.setTitle(station.getName());
             detailedFrame.setContentPane(detailedContainer);
             detailedFrame.pack();
-            detailedFrame.setLocationRelativeTo(frame);
             detailedFrame.setVisible(true);
         } catch (InterruptedException | ExecutionException e) {
             e.printStackTrace();
