@@ -11,19 +11,14 @@ import static org.hamcrest.Matchers.*;
 import static org.junit.Assert.*;
 
 public class WeatherAppTest {
-    private WeatherApp underTest;
-    private final WeatherStations db = new WeatherStations();
+    private WeatherStations db;
+    private ObservationLoader loader;
 
     @Before
     public void setUp() throws Exception {
+        db = new WeatherStations();
         db.load();
-        underTest = new WeatherApp(db);
-    }
-
-    @Test
-    public void windowIsShown() {
-        underTest.run();
-        assertTrue(underTest.mainWindow.isVisible());
+        loader = new ObservationLoader();
     }
     
     @Test
@@ -34,7 +29,6 @@ public class WeatherAppTest {
     @Test
     public void weatherObservationIsLoaded() throws IOException {
         WeatherStation station = db.getByWmoNumber(94828);
-        ObservationLoader loader = new ObservationLoader();
         List<WeatherObservation> observations = loader.load(station);
         assertThat(observations, is(not(empty())));
     }
@@ -64,7 +58,6 @@ public class WeatherAppTest {
         Favourites fav = new Favourites(db);
         assertTrue(fav.loadFromFile());
         WeatherStation station = fav.getFavourite(0);
-        ObservationLoader loader = new ObservationLoader();
         List<WeatherObservation> observations = loader.load(station);
         for(WeatherObservation obvs : observations) {
             String time = obvs.getTimestamp();
