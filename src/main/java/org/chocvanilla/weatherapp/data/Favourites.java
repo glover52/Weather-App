@@ -15,8 +15,7 @@ public class Favourites implements Iterable<WeatherStation>{
 	}
 
 	public boolean saveToFile() {
-		try (BufferedWriter writer = Files.newBufferedWriter(FAVOURITES_PATH)) {
-			PrintWriter pw = new PrintWriter(writer);
+		try (PrintWriter pw = new PrintWriter(Files.newBufferedWriter(FAVOURITES_PATH))) {
 			for (int wmoNumber : wmoNumbers) {
 				String id = Integer.toString(wmoNumber);
 				pw.println(id);
