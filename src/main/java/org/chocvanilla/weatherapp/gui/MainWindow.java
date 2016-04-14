@@ -75,9 +75,11 @@ public class MainWindow {
     private void openChart(ListSelectionEvent e){        
         if (!e.getValueIsAdjusting()) {
             WeatherStation station = stationList.getSelectedValue();
-            stationList.clearSelection();
-            FutureTask<XYDataset> task = loadDataAsync(station);
-            openChart(station, task);
+            if (station != null){
+                FutureTask<XYDataset> task = loadDataAsync(station);
+                openChart(station, task);
+                stationList.clearSelection();                
+            }
         }
     }
 

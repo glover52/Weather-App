@@ -27,7 +27,7 @@ public class ObservationLoader {
             Path path = getPathFor(station);
             Files.copy(in, path, StandardCopyOption.REPLACE_EXISTING);
         }
-        catch (IOException e) { }
+        catch (IOException ignored) { }
     }
     
     private Path getPathFor(WeatherStation station){
