@@ -1,4 +1,4 @@
-package org.chocvanilla.weatherapp;
+package org.chocvanilla.weatherapp.gui;
 
 import com.google.gson.Gson;
 
@@ -23,8 +23,7 @@ public class AppListener extends WindowAdapter {
         super.windowOpened(e);
         loadCoordinates(e.getWindow());
     }
-
-
+    
     private void saveCoordinates(Window window) {
         try (BufferedWriter writer = Files.newBufferedWriter(PREFERENCES_PATH)){
             Rectangle bounds = window.getBounds();

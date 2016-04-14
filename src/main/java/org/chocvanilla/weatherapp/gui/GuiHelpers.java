@@ -1,4 +1,4 @@
-package org.chocvanilla.weatherapp;
+package org.chocvanilla.weatherapp.gui;
 
 import javax.swing.*;
 import javax.swing.event.*;

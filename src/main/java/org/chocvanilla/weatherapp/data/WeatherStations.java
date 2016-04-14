@@ -8,8 +8,13 @@ import java.nio.file.*;
 import java.util.*;
 
 public class WeatherStations {
-    private final Path WEATHER_STATIONS_FILE = Paths.get("weather_stations.json");
+    private static final Path WEATHER_STATIONS_FILE = Paths.get("weather_stations.json");
     private final List<WeatherStation> stations = new ArrayList<>();
+
+    private WeatherStations(WeatherStation... weatherStations) {
+        stations.addAll(Arrays.asList(weatherStations));
+        stations.sort(WeatherStations::compare);
+    }
 
     public List<WeatherStation> getStations() {
         return stations;
@@ -24,17 +29,16 @@ public class WeatherStations {
 
     public WeatherStation getByName(String name) {
         Optional<WeatherStation> result = stations.stream()
-                .filter(station -> station.getName() == name)
+                .filter(station -> station.getName().equals(name))
                 .findFirst();
         return result.orElseThrow(()-> new RuntimeException("No station with this name"));
     }
 
     
-    public void load() throws IOException {
+    public static WeatherStations loadFromFile() throws IOException {
         try (BufferedReader reader = Files.newBufferedReader(WEATHER_STATIONS_FILE)) {
             Gson gson = new Gson();
-            stations.addAll(Arrays.asList(gson.fromJson(reader, WeatherStation[].class)));
-            stations.sort(WeatherStations::compare);
+            return new WeatherStations(gson.fromJson(reader, WeatherStation[].class));
         }
     }
     

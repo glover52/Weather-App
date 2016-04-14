@@ -14,12 +14,13 @@ import static org.junit.Assert.*;
 public class WeatherAppTest {
     private WeatherStations db;
     private ObservationLoader loader;
+    private Favourites fav;
 
     @Before
     public void setUp() throws Exception {
-        db = new WeatherStations();
-        db.load();
+        db = WeatherStations.loadFromFile();
         loader = new ObservationLoader();
+        fav = Favourites.loadFromFile(db);
     }
     
     @Test
@@ -36,7 +37,6 @@ public class WeatherAppTest {
     
     @Test
     public void favouritesAreSaved() throws IOException {
-        Favourites fav = new Favourites(db);
         fav.addToFavourites(db.getByWmoNumber(94828));
         fav.addToFavourites(db.getByWmoNumber(94302));
         fav.addToFavourites(db.getByWmoNumber(95607));
@@ -48,16 +48,12 @@ public class WeatherAppTest {
 
     @Test
     public void favouritesAreLoaded() throws IOException {
-        Favourites fav = new Favourites(db);
-        assertTrue(fav.loadFromFile());
         WeatherStation station = fav.getFavourite(0);
         assertEquals(station.getWmoNumber(), 94828);
     }
 
     @Test
     public void displayObservations() throws IOException {
-        Favourites fav = new Favourites(db);
-        assertTrue(fav.loadFromFile());
         WeatherStation station = fav.getFavourite(0);
         List<WeatherObservation> observations = loader.load(station);
         for(WeatherObservation obvs : observations) {

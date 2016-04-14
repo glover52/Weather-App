@@ -10,7 +10,7 @@ public class Favourites implements Iterable<WeatherStation>{
 	private final WeatherStations all;
 	private ArrayList<Integer> wmoNumbers = new ArrayList<>();
 
-	public Favourites(WeatherStations allStations){
+	private Favourites(WeatherStations allStations){
 		all = allStations;
 	}
 
@@ -25,21 +25,12 @@ public class Favourites implements Iterable<WeatherStation>{
 		return true;
 	}
 
-	public boolean loadFromFile() {
+	public static Favourites loadFromFile(WeatherStations allStations) throws IOException {
+		Favourites favourites = new Favourites(allStations);
 		try (BufferedReader reader = Files.newBufferedReader(FAVOURITES_PATH)){
-			String line;
-			while ((line = reader.readLine()) != null) {
-				int id = Integer.parseInt(line);
-				wmoNumbers.add(id);
-			}
+			reader.lines().map(Integer::valueOf).forEach(favourites.wmoNumbers::add);
 		}
-		catch (FileNotFoundException e) {
-			System.out.println("Could not find file: " + FAVOURITES_PATH);
-			return false;
-		}
-		catch (IOException e) { return false; }
-
-		return true;
+		return favourites;
 	}
 
 	public WeatherStation getFavourite(int i) {
