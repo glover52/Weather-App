@@ -1,14 +1,8 @@
 package org.chocvanilla.weatherapp.chart;
 
-import org.chocvanilla.weatherapp.data.ObservationLoader;
-import org.chocvanilla.weatherapp.data.WeatherObservation;
-import org.chocvanilla.weatherapp.data.WeatherStation;
-import org.jfree.chart.ChartFactory;
-import org.jfree.chart.ChartPanel;
-import org.jfree.chart.JFreeChart;
-import org.jfree.data.time.Hour;
-import org.jfree.data.time.TimeSeries;
-import org.jfree.data.time.TimeSeriesCollection;
+import org.chocvanilla.weatherapp.data.*;
+import org.jfree.chart.*;
+import org.jfree.data.time.*;
 import org.jfree.data.xy.XYDataset;
 
 import javax.swing.*;
@@ -34,13 +28,14 @@ public class Chart {
         TimeSeries series = new TimeSeries("Temperatures");
         ObservationLoader loader = new ObservationLoader();
         List<WeatherObservation> observations = loader.load(station);
-        for(WeatherObservation obvs: observations) {
+        for(WeatherObservation obvs : observations) {
             String timeStamp = obvs.getTimestamp();
             int year = Integer.parseInt(timeStamp.substring(0,4));
             int month = Integer.parseInt(timeStamp.substring(4,6));
             int day = Integer.parseInt(timeStamp.substring(6,8));
-            int hour = Integer.parseInt(timeStamp.substring(8,12));
-            series.addOrUpdate(new Hour(hour, day, month, year), obvs.getAirTemperature());
+            int hour = Integer.parseInt(timeStamp.substring(8,10));
+            int minute = Integer.parseInt(timeStamp.substring(10, 12));
+            series.addOrUpdate(new Minute(minute, hour, day, month, year), obvs.getAirTemperature());
         }
         TimeSeriesCollection dataSet = new TimeSeriesCollection();
         dataSet.addSeries(series);
