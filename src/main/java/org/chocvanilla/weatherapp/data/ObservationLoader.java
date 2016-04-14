@@ -23,10 +23,11 @@ public class ObservationLoader {
     
     private void downloadFile(WeatherStation station){
         try (InputStream in = new URL(station.getUrl()).openStream()) {
-            Files.copy(in, getPathFor(station), StandardCopyOption.REPLACE_EXISTING);
-        } catch (IOException e) {
-            e.printStackTrace();
+            Paths.get(target).toFile().mkdirs();
+            Path path = getPathFor(station);
+            Files.copy(in, path, StandardCopyOption.REPLACE_EXISTING);
         }
+        catch (IOException e) { }
     }
     
     private Path getPathFor(WeatherStation station){

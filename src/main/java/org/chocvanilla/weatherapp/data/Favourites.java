@@ -26,9 +26,12 @@ public class Favourites implements Iterable<WeatherStation>{
 
 	public static Favourites loadFromFile(WeatherStations allStations) throws IOException {
 		Favourites favourites = new Favourites(allStations);
+
 		try (BufferedReader reader = Files.newBufferedReader(FAVOURITES_PATH)){
 			reader.lines().map(Integer::valueOf).forEach(favourites.wmoNumbers::add);
+
 		}
+		catch(NoSuchFileException e) { }
 		return favourites;
 	}
 

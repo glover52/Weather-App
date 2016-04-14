@@ -1,13 +1,14 @@
 .classpath
-preferences.json
 *.dat
-.gradle/
-.idea/
+gradlew
 .project
+preferences.json
 *.iml
 
 build/
+.gradle/
 gradle/
+.idea/
 observations/
 
 bin/
