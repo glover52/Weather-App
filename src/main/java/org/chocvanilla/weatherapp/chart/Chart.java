@@ -29,8 +29,7 @@ public class Chart {
 
         GradientPaint g = new GradientPaint(
                 0.0f, 0.0f, new Color(83, 164,225),
-                //0.0f, 0.0f, new Color(255,255,255),
-                0.0f, 0.0f, new Color(255, 58, 58)
+                0.0f, 0.0f, new Color(255, 70, 70)
         );
         plot.setBackgroundPaint(g);
 
