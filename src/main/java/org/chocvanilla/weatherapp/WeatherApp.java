@@ -42,20 +42,20 @@ public class WeatherApp {
     
     public void run()  {
         JPanel container = new JPanel();
+        container.setLayout(new BoxLayout(container, BoxLayout.Y_AXIS));
         
-        JPanel favouritesPanel = new JPanel(new FlowLayout(FlowLayout.LEFT));
-        for (WeatherStation station : favourites){
-            JButton favouriteButton = new JButton(station.toString());
-            favouritesPanel.add(favouriteButton);
-            attachChart(favouriteButton, station);
-        }
-        favouritesPanel.setBorder(BorderFactory.createTitledBorder("Favourites"));
-        favouritesPanel.setMaximumSize(new Dimension(Integer.MAX_VALUE, Integer.MAX_VALUE));
-        container.add(favouritesPanel);
-        
+        container.add(buildFavouritesPanel());
+        container.add(buildSearchPanel());
+
+        mainWindow.setContentPane(container);
+        mainWindow.pack();
+        mainWindow.setVisible(true);
+    }
+
+    private JPanel buildSearchPanel() {
         JPanel searchPanel = new JPanel(new BorderLayout());
         searchPanel.add(searchBox, BorderLayout.NORTH);
-        
+
         DefaultListModel<WeatherStation> model = new DefaultListModel<>();
         weatherStations.getStations().forEach(model::addElement);
         stationList.setModel(model);
@@ -69,20 +69,26 @@ public class WeatherApp {
                     .forEach(model::addElement);
             }
         );
-        
+
         JScrollPane scrollPane = new JScrollPane(stationList);
         searchPanel.add(scrollPane, BorderLayout.CENTER);
-        
-        searchPanel.setBorder(BorderFactory.createTitledBorder("Search Weather Stations"));
-        container.add(searchPanel);
-        
-        container.setLayout(new BoxLayout(container, BoxLayout.Y_AXIS));
 
-        mainWindow.setContentPane(container);
-        mainWindow.pack();
-        mainWindow.setVisible(true);
+        searchPanel.setBorder(BorderFactory.createTitledBorder("Search Weather Stations"));
+        return searchPanel;
     }
-    
+
+    private JPanel buildFavouritesPanel() {
+        JPanel favouritesPanel = new JPanel(new FlowLayout(FlowLayout.LEFT));
+        for (WeatherStation station : favourites){
+            JButton favouriteButton = new JButton(station.toString());
+            favouritesPanel.add(favouriteButton);
+            attachChart(favouriteButton, station);
+        }
+        favouritesPanel.setBorder(BorderFactory.createTitledBorder("Favourites"));
+        favouritesPanel.setMaximumSize(new Dimension(Integer.MAX_VALUE, Integer.MAX_VALUE));
+        return favouritesPanel;
+    }
+
     public static void main(String[] args) throws IOException {
         try {
             UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
