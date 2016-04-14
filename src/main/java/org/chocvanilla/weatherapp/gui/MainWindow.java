@@ -2,6 +2,7 @@ package org.chocvanilla.weatherapp.gui;
 
 import org.chocvanilla.weatherapp.chart.Chart;
 import org.chocvanilla.weatherapp.data.*;
+import org.jfree.chart.ChartPanel;
 import org.jfree.data.xy.XYDataset;
 
 import javax.swing.*;
@@ -13,6 +14,7 @@ import java.util.concurrent.*;
 public class MainWindow {
     private final ExecutorService executor = Executors.newCachedThreadPool();
     private final JFrame frame = new JFrame("Weather App");
+    private JFrame detailedFrame = new JFrame();
     private final WeatherStations stations;
     private final Favourites favourites;
     private final JTextField searchBox = new JTextField();
@@ -102,7 +104,17 @@ public class MainWindow {
 
     private void openChart(WeatherStation station, FutureTask<XYDataset> dataSupplier) {
         try {
-            new Chart(station, dataSupplier.get());
+            Chart chart = new Chart();
+            JPanel detailedContainer = new JPanel();
+            detailedContainer.setLayout(new BoxLayout(detailedContainer, BoxLayout.Y_AXIS));
+
+            ChartPanel panel = chart.createChart(station, dataSupplier.get());
+
+            detailedContainer.add(panel);
+            detailedFrame.setTitle(station.getName());
+            detailedFrame.setContentPane(detailedContainer);
+            detailedFrame.setVisible(true);
+            detailedFrame.pack();
         } catch (InterruptedException | ExecutionException e) {
             e.printStackTrace();
         }

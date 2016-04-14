@@ -13,10 +13,11 @@ import java.io.IOException;
 import java.util.List;
 
 public class Chart {
-    public Chart(WeatherStation station, XYDataset dataset) {
-        JFrame frame = new JFrame(station.getName());
+    public Chart() {}
+
+    public ChartPanel createChart(WeatherStation station, XYDataset dataset) {
         JFreeChart chart = ChartFactory.createTimeSeriesChart(station.getName(),
-                            "Date", "Degrees Celsius", dataset);
+                "Date", "Degrees Celsius", dataset);
 
         XYLineAndShapeRenderer renderer = new XYLineAndShapeRenderer();
         renderer.setSeriesPaint(0, new Color(0, 0,255));
@@ -35,10 +36,7 @@ public class Chart {
 
         plot.setOutlineVisible(false);
 
-        ChartPanel cp = new ChartPanel(chart);
-        frame.getContentPane().add(cp);
-        frame.setVisible(true);
-        frame.pack();
+        return new ChartPanel(chart);
     }
 
     public static XYDataset createDataSet(WeatherStation station) throws IOException {
