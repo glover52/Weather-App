@@ -2,10 +2,13 @@ package org.chocvanilla.weatherapp.chart;
 
 import org.chocvanilla.weatherapp.data.*;
 import org.jfree.chart.*;
+import org.jfree.chart.plot.XYPlot;
+import org.jfree.chart.renderer.xy.XYLineAndShapeRenderer;
 import org.jfree.data.time.*;
 import org.jfree.data.xy.XYDataset;
 
 import javax.swing.*;
+import java.awt.*;
 import java.io.IOException;
 import java.util.List;
 
@@ -14,6 +17,24 @@ public class Chart {
         JFrame frame = new JFrame(station.getName());
         JFreeChart chart = ChartFactory.createTimeSeriesChart(station.getName(),
                             "Date", "Degrees Celsius", dataset);
+
+        XYLineAndShapeRenderer renderer = new XYLineAndShapeRenderer();
+        renderer.setSeriesPaint(0, new Color(0, 0,255));
+        renderer.setSeriesShapesVisible(0, false);
+
+        XYPlot plot = (XYPlot)chart.getPlot();
+        plot.setDataset(0,dataset);
+        plot.setRenderer(0,renderer);
+
+        GradientPaint g = new GradientPaint(
+                0.0f, 0.0f, new Color(83, 164,225),
+                //0.0f, 0.0f, new Color(255,255,255),
+                0.0f, 0.0f, new Color(255, 58, 58)
+        );
+        plot.setBackgroundPaint(g);
+
+        plot.setOutlineVisible(false);
+
         ChartPanel cp = new ChartPanel(chart);
         frame.getContentPane().add(cp);
         frame.setVisible(true);
