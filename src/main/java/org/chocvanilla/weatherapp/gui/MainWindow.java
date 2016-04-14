@@ -1,6 +1,6 @@
 package org.chocvanilla.weatherapp.gui;
 
-import org.chocvanilla.weatherapp.chart.Chart;
+import org.chocvanilla.weatherapp.chart.ChartHelpers;
 import org.chocvanilla.weatherapp.data.*;
 import org.jfree.chart.ChartPanel;
 import org.jfree.data.xy.XYDataset;
@@ -28,12 +28,10 @@ public class MainWindow {
     }
 
     public void run() {
-        JPanel container = new JPanel();
+        Container container = frame.getContentPane();
         container.setLayout(new BoxLayout(container, BoxLayout.Y_AXIS));
-
         container.add(buildFavouritesPanel());
         container.add(buildSearchPanel());
-
         frame.setContentPane(container);
         frame.pack();
         frame.setVisible(true);
@@ -48,7 +46,7 @@ public class MainWindow {
         stations.getStations().forEach(model::addElement);
         stationList.setModel(model);
 
-        GuiHelpers.addChangeListener(searchBox, s -> listSelectionChanged(model));
+        GuiHelpers.addChangeListener(searchBox, s -> filterStations(model));
         stationList.addListSelectionListener(this::openChart);
 
 
@@ -59,7 +57,7 @@ public class MainWindow {
         return searchPanel;
     }
 
-    private void listSelectionChanged(DefaultListModel<WeatherStation> model) {
+    private void filterStations(DefaultListModel<WeatherStation> model) {
         for (ListSelectionListener l : stationList.getListSelectionListeners()) {
             stationList.removeListSelectionListener(l);
         }
@@ -95,7 +93,7 @@ public class MainWindow {
     }
 
     private FutureTask<XYDataset> loadDataAsync(WeatherStation station) {
-        FutureTask<XYDataset> task = new FutureTask<>(() -> Chart.createDataSet(station));
+        FutureTask<XYDataset> task = new FutureTask<>(() -> ChartHelpers.createDataSet(station));
         executor.execute(task);
         return task;
     }
@@ -107,11 +105,10 @@ public class MainWindow {
 
     private void openChart(WeatherStation station, FutureTask<XYDataset> dataSupplier) {
         try {
-            Chart chart = new Chart();
             JPanel detailedContainer = new JPanel();
             detailedContainer.setLayout(new BoxLayout(detailedContainer, BoxLayout.Y_AXIS));
 
-            ChartPanel panel = chart.createChart(station, dataSupplier.get());
+            ChartPanel panel = ChartHelpers.createChart(station, dataSupplier.get());
 
             detailedContainer.add(panel);
             detailedFrame.setTitle(station.getName());

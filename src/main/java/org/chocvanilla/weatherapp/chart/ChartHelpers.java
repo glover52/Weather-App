@@ -11,8 +11,10 @@ import java.awt.*;
 import java.io.IOException;
 import java.util.List;
 
-public class Chart {
-    public Chart() {
+public class ChartHelpers {
+    
+    private ChartHelpers() {
+        // static class
     }
 
     public static XYDataset createDataSet(WeatherStation station) throws IOException {
@@ -27,7 +29,7 @@ public class Chart {
         return dataSet;
     }
 
-    public ChartPanel createChart(WeatherStation station, XYDataset dataset) {
+    public static ChartPanel createChart(WeatherStation station, XYDataset dataset) {
         JFreeChart chart = ChartFactory.createTimeSeriesChart(station.getName(),
                 "Date", "Degrees Celsius", dataset);
 
