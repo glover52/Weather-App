@@ -5,6 +5,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 import java.io.IOException;
+import java.util.Date;
 import java.util.List;
 
 import static org.hamcrest.Matchers.*;
@@ -60,7 +61,7 @@ public class WeatherAppTest {
         WeatherStation station = fav.getFavourite(0);
         List<WeatherObservation> observations = loader.load(station);
         for(WeatherObservation obvs : observations) {
-            String time = obvs.getTimestamp();
+            Date time = obvs.getTimestamp();
             double temp = obvs.getAirTemperature();
             System.out.println(time + ":" + temp);
         }

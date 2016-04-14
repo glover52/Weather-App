@@ -24,14 +24,8 @@ public class Chart {
         TimeSeries series = new TimeSeries("Temperatures");
         ObservationLoader loader = new ObservationLoader();
         List<WeatherObservation> observations = loader.load(station);
-        for(WeatherObservation obvs : observations) {
-            String timeStamp = obvs.getTimestamp();
-            int year = Integer.parseInt(timeStamp.substring(0,4));
-            int month = Integer.parseInt(timeStamp.substring(4,6));
-            int day = Integer.parseInt(timeStamp.substring(6,8));
-            int hour = Integer.parseInt(timeStamp.substring(8,10));
-            int minute = Integer.parseInt(timeStamp.substring(10, 12));
-            series.addOrUpdate(new Minute(minute, hour, day, month, year), obvs.getAirTemperature());
+        for(WeatherObservation obs : observations) {
+            series.addOrUpdate(new Second(obs.getTimestamp()), obs.getAirTemperature());
         }
         TimeSeriesCollection dataSet = new TimeSeriesCollection();
         dataSet.addSeries(series);
