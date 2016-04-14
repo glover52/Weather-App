@@ -16,38 +16,37 @@ public class WeatherStations {
         stations.sort(WeatherStations::compare);
     }
 
-    public List<WeatherStation> getStations() {
-        return stations;
-    }
-    
-    public WeatherStation getByWmoNumber(int wmoNumber){
-        Optional<WeatherStation> result = stations.stream()
-                .filter(station -> station.getWmoNumber() == wmoNumber)
-                .findFirst();
-        return result.orElseThrow(()-> new RuntimeException("No station with this wmoNumber"));
-    }
-
-    public WeatherStation getByName(String name) {
-        Optional<WeatherStation> result = stations.stream()
-                .filter(station -> station.getName().equals(name))
-                .findFirst();
-        return result.orElseThrow(()-> new RuntimeException("No station with this name"));
-    }
-
-    
     public static WeatherStations loadFromFile() throws IOException {
         try (BufferedReader reader = Files.newBufferedReader(WEATHER_STATIONS_FILE)) {
             Gson gson = new Gson();
             return new WeatherStations(gson.fromJson(reader, WeatherStation[].class));
         }
     }
-    
-    private static int compare(WeatherStation one, WeatherStation two){
+
+    private static int compare(WeatherStation one, WeatherStation two) {
         int result = one.getState().compareTo(two.getState());
-        if (result != 0){
+        if (result != 0) {
             return result;
         }
         return one.getName().compareTo(two.getName());
+    }
+
+    public List<WeatherStation> getStations() {
+        return stations;
+    }
+
+    public WeatherStation getByWmoNumber(int wmoNumber) {
+        Optional<WeatherStation> result = stations.stream()
+                .filter(station -> station.getWmoNumber() == wmoNumber)
+                .findFirst();
+        return result.orElseThrow(() -> new RuntimeException("No station with this wmoNumber"));
+    }
+
+    public WeatherStation getByName(String name) {
+        Optional<WeatherStation> result = stations.stream()
+                .filter(station -> station.getName().equals(name))
+                .findFirst();
+        return result.orElseThrow(() -> new RuntimeException("No station with this name"));
     }
 }
 

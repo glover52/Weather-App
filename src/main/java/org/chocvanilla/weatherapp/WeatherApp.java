@@ -1,6 +1,7 @@
 package org.chocvanilla.weatherapp;
 
-import org.chocvanilla.weatherapp.data.*;
+import org.chocvanilla.weatherapp.data.Favourites;
+import org.chocvanilla.weatherapp.data.WeatherStations;
 import org.chocvanilla.weatherapp.gui.MainWindow;
 
 import javax.swing.*;

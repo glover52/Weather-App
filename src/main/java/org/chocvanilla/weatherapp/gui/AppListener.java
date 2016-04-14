@@ -23,9 +23,9 @@ public class AppListener extends WindowAdapter {
         super.windowOpened(e);
         loadCoordinates(e.getWindow());
     }
-    
+
     private void saveCoordinates(Window window) {
-        try (BufferedWriter writer = Files.newBufferedWriter(PREFERENCES_PATH)){
+        try (BufferedWriter writer = Files.newBufferedWriter(PREFERENCES_PATH)) {
             Rectangle bounds = window.getBounds();
             Gson gson = new Gson();
             gson.toJson(bounds, writer);
@@ -33,17 +33,17 @@ public class AppListener extends WindowAdapter {
             // failed to save coordinates
         }
     }
-    
+
     private void loadCoordinates(Window window) {
-        try  (BufferedReader reader = Files.newBufferedReader(PREFERENCES_PATH)){
+        try (BufferedReader reader = Files.newBufferedReader(PREFERENCES_PATH)) {
             Gson gson = new Gson();
             Rectangle bounds = gson.fromJson(reader, Rectangle.class);
-            window.setBounds(bounds);           
-        } catch (IOException ignored){
+            window.setBounds(bounds);
+        } catch (IOException ignored) {
             window.setSize(DEFAULT_WINDOW_SIZE);
             window.setLocationRelativeTo(null);
         }
- 
+
     }
 
 }

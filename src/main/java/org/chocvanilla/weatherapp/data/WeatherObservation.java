@@ -11,7 +11,7 @@ public class WeatherObservation {
     private String timestamp;
 
     private String name;
-    
+
     @SerializedName("air_temp")
     private double airTemperature;
 

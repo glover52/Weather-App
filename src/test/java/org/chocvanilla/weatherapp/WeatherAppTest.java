@@ -9,7 +9,8 @@ import java.util.Date;
 import java.util.List;
 
 import static org.hamcrest.Matchers.*;
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertThat;
+import static org.junit.Assert.assertTrue;
 
 public class WeatherAppTest {
     private WeatherStations db;
@@ -23,19 +24,19 @@ public class WeatherAppTest {
         loader = new ObservationLoader();
         fav = Favourites.loadFromFile(db);
     }
-    
+
     @Test
     public void weatherStationsAreLoaded() throws IOException {
         assertThat(db.getStations(), is(not(empty())));
     }
-    
+
     @Test
     public void weatherObservationIsLoaded() throws IOException {
         WeatherStation station = db.getByWmoNumber(94828);
         List<WeatherObservation> observations = loader.load(station);
         assertThat(observations, is(not(empty())));
     }
-    
+
     @Test
     public void favouritesAreSaved() throws IOException {
         fav.add(db.getByWmoNumber(94828));
@@ -50,7 +51,7 @@ public class WeatherAppTest {
     @Test
     public void favouritesAreLoaded() throws IOException {
         favouritesAreSaved();
-        
+
         assertTrue(fav.stream().anyMatch(x -> x.getWmoNumber() == 94828));
     }
 
@@ -60,7 +61,7 @@ public class WeatherAppTest {
 
         List<WeatherObservation> observations = loader.load(station);
 
-        for(WeatherObservation obvs : observations) {
+        for (WeatherObservation obvs : observations) {
             Date time = obvs.getTimestamp();
             double temp = obvs.getAirTemperature();
             System.out.println(time + ":" + temp);

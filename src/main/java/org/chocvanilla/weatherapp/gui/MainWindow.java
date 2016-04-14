@@ -20,17 +20,17 @@ public class MainWindow {
     private final JTextField searchBox = new JTextField();
     private final JList<WeatherStation> stationList = new JList<>();
 
-    public MainWindow(WeatherStations weatherStations, Favourites favouriteStations)  {
+    public MainWindow(WeatherStations weatherStations, Favourites favouriteStations) {
         frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         frame.addWindowListener(new AppListener());
         stations = weatherStations;
         favourites = favouriteStations;
     }
-    
-    public void run()  {
+
+    public void run() {
         JPanel container = new JPanel();
         container.setLayout(new BoxLayout(container, BoxLayout.Y_AXIS));
-        
+
         container.add(buildFavouritesPanel());
         container.add(buildSearchPanel());
 
@@ -49,7 +49,7 @@ public class MainWindow {
         stationList.setModel(model);
 
         GuiHelpers.addChangeListener(searchBox, s -> listSelectionChanged(model));
-        stationList.addListSelectionListener(this::openChart);        
+        stationList.addListSelectionListener(this::openChart);
 
 
         JScrollPane scrollPane = new JScrollPane(stationList);
@@ -60,7 +60,7 @@ public class MainWindow {
     }
 
     private void listSelectionChanged(DefaultListModel<WeatherStation> model) {
-        for (ListSelectionListener l : stationList.getListSelectionListeners()){
+        for (ListSelectionListener l : stationList.getListSelectionListeners()) {
             stationList.removeListSelectionListener(l);
         }
         model.removeAllElements();
@@ -72,20 +72,20 @@ public class MainWindow {
         stationList.addListSelectionListener(this::openChart);
     }
 
-    private void openChart(ListSelectionEvent e){        
+    private void openChart(ListSelectionEvent e) {
         if (!e.getValueIsAdjusting()) {
             WeatherStation station = stationList.getSelectedValue();
-            if (station != null){
+            if (station != null) {
                 FutureTask<XYDataset> task = loadDataAsync(station);
                 openChart(station, task);
-                stationList.clearSelection();                
+                stationList.clearSelection();
             }
         }
     }
 
     private JPanel buildFavouritesPanel() {
         JPanel favouritesPanel = new JPanel(new FlowLayout(FlowLayout.LEFT));
-        for (WeatherStation station : favourites){
+        for (WeatherStation station : favourites) {
             JButton favouriteButton = new JButton(station.toString());
             favouritesPanel.add(favouriteButton);
             attachChart(favouriteButton, station);
@@ -93,8 +93,8 @@ public class MainWindow {
         favouritesPanel.setBorder(BorderFactory.createTitledBorder("Favourites"));
         return favouritesPanel;
     }
-    
-    private FutureTask<XYDataset> loadDataAsync(WeatherStation station){
+
+    private FutureTask<XYDataset> loadDataAsync(WeatherStation station) {
         FutureTask<XYDataset> task = new FutureTask<>(() -> Chart.createDataSet(station));
         executor.execute(task);
         return task;
@@ -118,8 +118,7 @@ public class MainWindow {
             detailedFrame.setContentPane(detailedContainer);
             detailedFrame.pack();
             detailedFrame.setVisible(true);
-        } catch (InterruptedException | ExecutionException e) {
-            e.printStackTrace();
+        } catch (InterruptedException | ExecutionException ignored) {
         }
     }
 

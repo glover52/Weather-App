@@ -9,9 +9,6 @@ import java.util.Objects;
 
 public class GuiHelpers {
     /**
-     * From: http://stackoverflow.com/a/27190162/1106367
-     * This code has been released into the public domain by the author.
-     * 
      * Installs a listener to receive notification when the text of any
      * {@code JTextComponent} is changed. Internally, it installs a
      * {@link DocumentListener} on the text component's {@link Document},
@@ -20,12 +17,14 @@ public class GuiHelpers {
      *
      * @param text           any text component, such as a {@link JTextField}
      *                       or {@link JTextArea}
-     * @param changeListener a listener to receieve {@link ChangeEvent}s
+     * @param changeListener a listener to receive {@link ChangeEvent}s
      *                       when the text is changed; the source object for the events
      *                       will be the text component
      * @throws NullPointerException if either parameter is null
      */
     public static void addChangeListener(JTextComponent text, ChangeListener changeListener) {
+        // From: http://stackoverflow.com/a/27190162/1106367
+        // This code has been released into the public domain by the author.
         Objects.requireNonNull(text);
         Objects.requireNonNull(changeListener);
         DocumentListener dl = new DocumentListener() {

@@ -10,7 +10,7 @@ import java.util.List;
 
 public class ObservationLoader {
     private static final String target = "observations";
-    
+
     public List<WeatherObservation> load(WeatherStation station) throws IOException {
         downloadFile(station);
         try (BufferedReader reader = Files.newBufferedReader(getPathFor(station))) {
@@ -20,18 +20,18 @@ public class ObservationLoader {
             return Arrays.asList(gson.fromJson(data, WeatherObservation[].class));
         }
     }
-    
-    private void downloadFile(WeatherStation station){
+
+    private void downloadFile(WeatherStation station) {
         try (InputStream in = new URL(station.getUrl()).openStream()) {
             Paths.get(target).toFile().mkdirs();
             Path path = getPathFor(station);
             Files.copy(in, path, StandardCopyOption.REPLACE_EXISTING);
+        } catch (IOException ignored) {
         }
-        catch (IOException ignored) { }
     }
-    
-    private Path getPathFor(WeatherStation station){
-        return Paths.get(target, String.valueOf(station.getWmoNumber()) + ".json");        
+
+    private Path getPathFor(WeatherStation station) {
+        return Paths.get(target, String.valueOf(station.getWmoNumber()) + ".json");
     }
 }
 
