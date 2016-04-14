@@ -10,21 +10,17 @@ import java.io.IOException;
 import java.util.List;
 
 public class Chart {
-    public Chart(WeatherStation station) throws IOException {
+    public Chart(WeatherStation station, XYDataset dataset) {
         JFrame frame = new JFrame(station.getName());
-
-        frame.setSize(600,400);
-
         JFreeChart chart = ChartFactory.createTimeSeriesChart(station.getName(),
-                            "Date", "Degrees Celsius", createDataSet(station));
-
+                            "Date", "Degrees Celsius", dataset);
         ChartPanel cp = new ChartPanel(chart);
         frame.getContentPane().add(cp);
-
         frame.setVisible(true);
+        frame.pack();
     }
 
-    private XYDataset createDataSet(WeatherStation station) throws IOException {
+    public static XYDataset createDataSet(WeatherStation station) throws IOException {
         TimeSeries series = new TimeSeries("Temperatures");
         ObservationLoader loader = new ObservationLoader();
         List<WeatherObservation> observations = loader.load(station);
