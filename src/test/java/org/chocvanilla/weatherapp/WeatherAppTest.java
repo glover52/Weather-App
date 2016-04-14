@@ -19,6 +19,7 @@ public class WeatherAppTest {
     @Before
     public void setUp() throws Exception {
         db = WeatherStations.loadFromFile();
+
         loader = new ObservationLoader();
         fav = Favourites.loadFromFile(db);
     }
@@ -48,14 +49,19 @@ public class WeatherAppTest {
 
     @Test
     public void favouritesAreLoaded() throws IOException {
+        favouritesAreSaved();
+
         WeatherStation station = fav.getFavourite(0);
+
         assertEquals(station.getWmoNumber(), 94828);
     }
 
     @Test
     public void displayObservations() throws IOException {
-        WeatherStation station = fav.getFavourite(0);
+        WeatherStation station = db.getByWmoNumber(94828);
+
         List<WeatherObservation> observations = loader.load(station);
+
         for(WeatherObservation obvs : observations) {
             Date time = obvs.getTimestamp();
             double temp = obvs.getAirTemperature();
