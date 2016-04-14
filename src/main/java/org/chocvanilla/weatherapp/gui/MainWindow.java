@@ -14,7 +14,7 @@ import java.util.concurrent.*;
 public class MainWindow {
     private final ExecutorService executor = Executors.newCachedThreadPool();
     private final JFrame frame = new JFrame("Weather App");
-    private JFrame detailedFrame = new JFrame();
+    private final JFrame detailedFrame = new JFrame();
     private final WeatherStations stations;
     private final Favourites favourites;
     private final JTextField searchBox = new JTextField();
@@ -113,8 +113,9 @@ public class MainWindow {
             detailedContainer.add(panel);
             detailedFrame.setTitle(station.getName());
             detailedFrame.setContentPane(detailedContainer);
-            detailedFrame.setVisible(true);
             detailedFrame.pack();
+            detailedFrame.setLocationRelativeTo(frame);
+            detailedFrame.setVisible(true);
         } catch (InterruptedException | ExecutionException e) {
             e.printStackTrace();
         }
