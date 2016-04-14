@@ -38,22 +38,20 @@ public class WeatherAppTest {
     
     @Test
     public void favouritesAreSaved() throws IOException {
-        fav.addToFavourites(db.getByWmoNumber(94828));
-        fav.addToFavourites(db.getByWmoNumber(94302));
-        fav.addToFavourites(db.getByWmoNumber(95607));
-        fav.addToFavourites(db.getByWmoNumber(94620));
-        fav.addToFavourites(db.getByWmoNumber(95625));
-        fav.addToFavourites(db.getByWmoNumber(94641));
+        fav.add(db.getByWmoNumber(94828));
+        fav.add(db.getByWmoNumber(94302));
+        fav.add(db.getByWmoNumber(95607));
+        fav.add(db.getByWmoNumber(94620));
+        fav.add(db.getByWmoNumber(95625));
+        fav.add(db.getByWmoNumber(94641));
         assertTrue(fav.saveToFile());
     }
 
     @Test
     public void favouritesAreLoaded() throws IOException {
         favouritesAreSaved();
-
-        WeatherStation station = fav.getFavourite(0);
-
-        assertEquals(station.getWmoNumber(), 94828);
+        
+        assertTrue(fav.stream().anyMatch(x -> x.getWmoNumber() == 94828));
     }
 
     @Test

@@ -11,7 +11,7 @@ public class WeatherApp {
         try {
             UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
         } catch (Exception e) {
-            //ignore
+            // ignore
         }
         WeatherStations all = WeatherStations.loadFromFile();
         Favourites favourites = Favourites.loadFromFile(all);

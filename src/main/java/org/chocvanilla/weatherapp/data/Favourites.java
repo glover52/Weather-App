@@ -2,13 +2,12 @@ package org.chocvanilla.weatherapp.data;
 
 import java.io.*;
 import java.nio.file.*;
-import java.util.ArrayList;
-import java.util.Iterator;
+import java.util.*;
 
-public class Favourites implements Iterable<WeatherStation>{
+public class Favourites extends AbstractCollection<WeatherStation>{
 	private static final Path FAVOURITES_PATH = Paths.get("favourites.dat");
 	private final WeatherStations all;
-	private ArrayList<Integer> wmoNumbers = new ArrayList<>();
+	private Set<Integer> wmoNumbers = new HashSet<>();
 
 	private Favourites(WeatherStations allStations){
 		all = allStations;
@@ -34,25 +33,24 @@ public class Favourites implements Iterable<WeatherStation>{
 		catch(NoSuchFileException e) { }
 		return favourites;
 	}
+    
+    @Override
+	public boolean add(WeatherStation ws) {
+		return wmoNumbers.add(ws.getWmoNumber());
+    }
 
-	public WeatherStation getFavourite(int i) {
-		return all.getByWmoNumber(wmoNumbers.get(i));
-	}
+    @Override
+    public boolean contains(Object o) {
+        return wmoNumbers.contains(o);
+    }
 
-	public void addToFavourites(WeatherStation ws) {
-		wmoNumbers.add(ws.getWmoNumber());
-	}
-
-	public void removeFromFavourites(WeatherStation ws) {
-		wmoNumbers.remove(ws.getWmoNumber());
-	}
-	
-	private int getSize() {
-		return wmoNumbers.size();
-	}
-
-	@Override
+    @Override
 	public Iterator<WeatherStation> iterator() {
 		return wmoNumbers.stream().map(all::getByWmoNumber).iterator();
 	}
+
+    @Override
+    public int size() {
+        return wmoNumbers.size();
+    }
 }
