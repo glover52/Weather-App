@@ -13,7 +13,7 @@ public class WeatherObservation {
     private String name;
 
     @SerializedName("air_temp")
-    private double airTemperature;
+    private float airTemperature;
 
     public Date getTimestamp() {
         try {
@@ -23,8 +23,14 @@ public class WeatherObservation {
         }
     }
 
-    public double getAirTemperature() {
+    public float getAirTemperature() {
         return airTemperature;
+    }
+
+    @Override
+    public String toString() {
+        return String.format("WeatherObservation{timestamp='%s', name='%s', airTemperature=%s}", 
+                timestamp, name, airTemperature);
     }
 }
 

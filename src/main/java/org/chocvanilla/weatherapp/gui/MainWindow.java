@@ -29,10 +29,8 @@ public class MainWindow {
 
     public void run() {
         Container container = frame.getContentPane();
-        container.setLayout(new BoxLayout(container, BoxLayout.Y_AXIS));
-        container.add(buildFavouritesPanel());
-        container.add(buildSearchPanel());
-        frame.setContentPane(container);
+        container.add(buildFavouritesPanel(), BorderLayout.CENTER);
+        container.add(buildSearchPanel(), BorderLayout.WEST);
         frame.pack();
         frame.setVisible(true);
         detailedFrame.setLocationRelativeTo(frame);
