@@ -10,7 +10,6 @@ import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
 import java.awt.*;
 import java.io.IOException;
-import java.lang.reflect.Field;
 import java.util.concurrent.*;
 
 public class MainWindow {
