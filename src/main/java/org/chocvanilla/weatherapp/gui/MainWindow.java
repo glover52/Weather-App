@@ -9,6 +9,8 @@ import javax.swing.*;
 import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
 import java.awt.*;
+import java.io.IOException;
+import java.lang.reflect.Field;
 import java.util.concurrent.*;
 
 public class MainWindow {
@@ -103,18 +105,61 @@ public class MainWindow {
 
     private void openChart(WeatherStation station, FutureTask<XYDataset> dataSupplier) {
         try {
-            JPanel detailedContainer = new JPanel();
-            detailedContainer.setLayout(new BoxLayout(detailedContainer, BoxLayout.Y_AXIS));
-
+            // Chart
+            JPanel chartContainer = new JPanel();
+            chartContainer.setLayout(new BoxLayout(chartContainer, BoxLayout.Y_AXIS));
             ChartPanel panel = ChartHelpers.createChart(station, dataSupplier.get());
+            panel.setBorder(BorderFactory.createTitledBorder("Temperature History"));
 
-            detailedContainer.add(panel);
+            // Details
+            // Get latest observations
+            // FIXME: Observation loader make more sense to be static.
+            ObservationLoader ol = new ObservationLoader();
+            WeatherObservation ob = null;
+            try {
+                ob = ol.load(station).get(0);
+            } catch (IOException e) {
+                //TODO: handle this
+            }
+            // Chance of NPE
+            JPanel detailedContainer = new JPanel();
+            detailedContainer.add(buildDetails(ob));
+            detailedContainer.setBorder(BorderFactory.createTitledBorder("Latest Observations"));
+
+
+            chartContainer.add(panel);
             detailedFrame.setTitle(station.getName());
-            detailedFrame.setContentPane(detailedContainer);
+            detailedFrame.setContentPane(chartContainer);
+            detailedFrame.add(detailedContainer);
             detailedFrame.pack();
             detailedFrame.setVisible(true);
         } catch (InterruptedException | ExecutionException ignored) {
         }
+
+    }
+    private JPanel buildDetails (WeatherObservation observation){
+        JPanel details = new JPanel();
+        details.setLayout(new FlowLayout());
+
+        details.add(fieldToLabel("AIR TEMP", observation.getAirTemperature()));
+        details.add(fieldToLabel("APPARENT TEMP", observation.getApparentTemprature()));
+        details.add(fieldToLabel("GUST", observation.getGustKm()));
+        details.add(fieldToLabel("WIND SPEED", observation.getWindSpdKm()));
+        details.add(fieldToLabel("WIND DIRECTION", observation.getWindDir()));
+        details.add(fieldToLabel("RAIN", observation.getRain()));
+        details.add(fieldToLabel("DEW POINT", observation.getDewPt()));
+
+        return details;
+    }
+
+    private JPanel fieldToLabel(String label, Object data) {
+        JPanel entry = new JPanel();
+        entry.setLayout(new BoxLayout(entry, BoxLayout.Y_AXIS));
+
+        entry.add(new JLabel(label));
+        entry.add(new JLabel(String.valueOf(data)));
+
+        return entry;
     }
 
 }
