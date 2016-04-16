@@ -22,8 +22,9 @@ public class MainWindow {
     private final JList<WeatherStation> stationList = new JList<>();
 
     public MainWindow(WeatherStations weatherStations, Favourites favouriteStations) {
+        frame.setName("MainWindow");
         frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-        frame.addWindowListener(new AppListener());
+        frame.addWindowListener(new WindowLocationManager(new Rectangle(800, 600), null));
         stations = weatherStations;
         favourites = favouriteStations;
     }
@@ -34,7 +35,7 @@ public class MainWindow {
         container.add(buildSearchPanel(), BorderLayout.WEST);
         frame.pack();
         frame.setVisible(true);
-        detailedFrame.setLocationRelativeTo(frame);
+        detailedFrame.addWindowListener(new WindowLocationManager(null, frame));
     }
 
     private JPanel buildSearchPanel() {
@@ -130,6 +131,7 @@ public class MainWindow {
             detailedFrame.setTitle(station.getName());
             detailedFrame.setContentPane(chartContainer);
             detailedFrame.add(detailedContainer);
+            detailedFrame.setName("DetailWindow");
             detailedFrame.pack();
             detailedFrame.setVisible(true);
         } catch (InterruptedException | ExecutionException ignored) {

@@ -44,7 +44,7 @@ public class WeatherAppTest {
         fav.add(db.getByWmoNumber(94620));
         fav.add(db.getByWmoNumber(95625));
         fav.add(db.getByWmoNumber(94641));
-        assertTrue(fav.saveToFile());
+        fav.saveToFile(); // fails on exception
     }
 
     @Test

@@ -2,8 +2,10 @@
 *.dat
 gradlew
 .project
-preferences.json
 *.iml
+
+DetailWindow.json
+MainWindow.json
 
 build/
 .gradle/

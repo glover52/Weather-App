@@ -17,6 +17,13 @@ public class ChartHelpers {
         // static class
     }
 
+    /**
+     * Create a data set suitable for graphing using data obtained by loading all 
+     * {@link WeatherObservation}s for the specified {@link WeatherStation}. 
+     * @param station the source of weather data for this data set
+     * @return a data set containing the time series of weather observations
+     * @throws IOException if the data could not be downloaded
+     */
     public static XYDataset createDataSet(WeatherStation station) throws IOException {
         TimeSeries series = new TimeSeries("Temperatures");
         ObservationLoader loader = new ObservationLoader();
@@ -29,6 +36,12 @@ public class ChartHelpers {
         return dataSet;
     }
 
+    /**
+     * Create a temperature chart which can be added to a graphical user interface.
+     * @param station the weather station this chart is based on
+     * @param dataset the data set to display
+     * @return a displayable {@link ChartPanel}
+     */
     public static ChartPanel createChart(WeatherStation station, XYDataset dataset) {
         JFreeChart chart = ChartFactory.createTimeSeriesChart(station.getName(),
                 "Date", "Degrees Celsius", dataset);
