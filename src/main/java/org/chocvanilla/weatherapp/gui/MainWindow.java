@@ -142,23 +142,30 @@ public class MainWindow {
         JPanel details = new JPanel();
         details.setLayout(new FlowLayout());
 
-        details.add(fieldToLabel("AIR TEMP", observation.getAirTemperature()));
-        details.add(fieldToLabel("APPARENT TEMP", observation.getApparentTemprature()));
-        details.add(fieldToLabel("GUST", observation.getGustKm()));
-        details.add(fieldToLabel("WIND SPEED", observation.getWindSpdKm()));
-        details.add(fieldToLabel("WIND DIRECTION", observation.getWindDir()));
-        details.add(fieldToLabel("RAIN", observation.getRain()));
-        details.add(fieldToLabel("DEW POINT", observation.getDewPt()));
+        details.add(fieldToLabel("Air Temp", observation.getAirTemperature(), details));
+        details.add(fieldToLabel("Apparent Temp", observation.getApparentTemprature(), details));
+        details.add(fieldToLabel("Gust", observation.getGustKm(), details));
+        details.add(fieldToLabel("Wind Speed", observation.getWindSpdKm(), details));
+        details.add(fieldToLabel("Wind Direction", observation.getWindDir(), details));
+        details.add(fieldToLabel("Rain", observation.getRain(), details));
+        details.add(fieldToLabel("Dew point", observation.getDewPt(), details));
 
         return details;
     }
 
-    private JPanel fieldToLabel(String label, Object data) {
+    private JPanel fieldToLabel(String label, Object data, JPanel parent) {
         JPanel entry = new JPanel();
-        entry.setLayout(new BoxLayout(entry, BoxLayout.Y_AXIS));
-
-        entry.add(new JLabel(label));
-        entry.add(new JLabel(String.valueOf(data)));
+        entry.setLayout(new GridBagLayout());
+        GridBagConstraints c = new GridBagConstraints();
+        // Put label on top
+        c.gridx = 0;
+        c.gridy = 0;
+        entry.add(new JLabel("<html><b>"+label+"</b></html>"), c);
+        // Put data on bottom
+        c.gridy = 1;
+        entry.add(new JLabel(String.valueOf(data)), c);
+        // spacers
+        parent.add(new JSeparator(SwingConstants.VERTICAL));
 
         return entry;
     }
