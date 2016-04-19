@@ -126,7 +126,6 @@ public class MainWindow {
             detailedContainer.add(buildDetails(ob));
             detailedContainer.setBorder(BorderFactory.createTitledBorder("Latest Observations"));
 
-
             chartContainer.add(panel);
             detailedFrame.setTitle(station.getName());
             detailedFrame.setContentPane(chartContainer);
@@ -142,12 +141,12 @@ public class MainWindow {
         JPanel details = new JPanel();
         details.setLayout(new FlowLayout());
 
-        details.add(fieldToLabel("Air Temp", observation.getAirTemperature(), details));
-        details.add(fieldToLabel("Apparent Temp", observation.getApparentTemprature(), details));
-        details.add(fieldToLabel("Gust", observation.getGustKm(), details));
-        details.add(fieldToLabel("Wind Speed", observation.getWindSpdKm(), details));
+        details.add(fieldToLabel("Air Temp", String.format("%.1f°C", observation.getAirTemperature()), details));
+        details.add(fieldToLabel("Apparent Temp", String.format("%.1f°C",observation.getApparentTemprature()), details));
+        details.add(fieldToLabel("Gust", String.format("%.1fk m/h", observation.getGustKm()), details));
+        details.add(fieldToLabel("Wind Speed", String.format("%.1f km/h", observation.getWindSpdKm()), details));
         details.add(fieldToLabel("Wind Direction", observation.getWindDir(), details));
-        details.add(fieldToLabel("Rain", observation.getRain(), details));
+        details.add(fieldToLabel("Rain", String.format("%.1f mm",observation.getRain()), details));
         details.add(fieldToLabel("Dew point", observation.getDewPt(), details));
 
         return details;

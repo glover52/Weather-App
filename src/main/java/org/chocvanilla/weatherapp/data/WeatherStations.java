@@ -8,7 +8,7 @@ import java.nio.file.*;
 import java.util.*;
 
 public class WeatherStations {
-    private static final Path WEATHER_STATIONS_FILE = Paths.get("weather_stations.json");
+    private static final Path WEATHER_STATIONS_FILE = Paths.get(".weather_stations.json");
     private final List<WeatherStation> stations = new ArrayList<>();
 
     private WeatherStations(WeatherStation... weatherStations) {

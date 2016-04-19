@@ -8,7 +8,7 @@ import java.util.*;
  * A {@link Collection<WeatherStation>} containing the favourite stations of the current user.
  */
 public class Favourites extends AbstractCollection<WeatherStation> {
-    private static final Path FAVOURITES_PATH = Paths.get("favourites.dat");
+    private static final Path FAVOURITES_PATH = Paths.get(".favourites.dat");
     private final WeatherStations all;
     private Set<Integer> wmoNumbers = new HashSet<>();
     

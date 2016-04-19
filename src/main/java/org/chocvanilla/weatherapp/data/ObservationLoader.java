@@ -9,7 +9,7 @@ import java.util.Arrays;
 import java.util.List;
 
 public class ObservationLoader {
-    private static final String target = "observations";
+    private static final String target = ".observations";
 
     public List<WeatherObservation> load(WeatherStation station) throws IOException {
         downloadFile(station);

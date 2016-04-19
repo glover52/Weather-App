@@ -62,7 +62,7 @@ public class WindowLocationManager extends WindowAdapter {
     }
     
     private static Path getPathFor(Window window){
-        return Paths.get(window.getName() + ".json");
+        return Paths.get("." + window.getName() + ".json");
     }
 
 }
