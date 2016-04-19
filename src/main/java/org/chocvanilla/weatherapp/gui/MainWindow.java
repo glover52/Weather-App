@@ -141,13 +141,15 @@ public class MainWindow {
         JPanel details = new JPanel();
         details.setLayout(new FlowLayout());
 
-        details.add(fieldToLabel("Air Temp", String.format("%.1f°C", observation.getAirTemperature()), details));
-        details.add(fieldToLabel("Apparent Temp", String.format("%.1f°C",observation.getApparentTemprature()), details));
-        details.add(fieldToLabel("Gust", String.format("%.1fk m/h", observation.getGustKm()), details));
-        details.add(fieldToLabel("Wind Speed", String.format("%.1f km/h", observation.getWindSpdKm()), details));
+        final String DEG_C = "%.1f°C";
+        final String KM_H = "%.1f km/h";
+        details.add(fieldToLabel("Air Temp", String.format(DEG_C, observation.getAirTemperature()), details));
+        details.add(fieldToLabel("Apparent Temp", String.format(DEG_C,observation.getApparentTemprature()), details));
+        details.add(fieldToLabel("Gust", String.format(KM_H, observation.getGustKm()), details));
+        details.add(fieldToLabel("Wind Speed", String.format(KM_H, observation.getWindSpdKm()), details));
         details.add(fieldToLabel("Wind Direction", observation.getWindDir(), details));
         details.add(fieldToLabel("Rain", String.format("%.1f mm",observation.getRain()), details));
-        details.add(fieldToLabel("Dew point", observation.getDewPt(), details));
+        details.add(fieldToLabel("Dew point", String.format(DEG_C, observation.getDewPt()), details));
 
         return details;
     }
