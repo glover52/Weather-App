@@ -132,7 +132,7 @@ public class MainWindow {
         JPanel details = new JPanel();
         details.setLayout(new FlowLayout());
 
-        final String DEG_C = "%.1f°C";
+        final String DEG_C = "%.1f °C";
         final String KM_H = "%.1f km/h";
         details.add(fieldToLabel("Air Temp", String.format(DEG_C, observation.getAirTemperature()), details));
         details.add(fieldToLabel("Apparent Temp", String.format(DEG_C,observation.getApparentTemprature()), details));
