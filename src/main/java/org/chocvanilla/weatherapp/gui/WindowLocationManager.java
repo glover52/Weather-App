@@ -13,8 +13,8 @@ import java.nio.file.*;
  * to a JSON file when the Window is closed, and restores them when it is re-opened. 
  */
 public class WindowLocationManager extends WindowAdapter {
-    private Rectangle defaultBounds;
-    private Window parent;
+    private final Rectangle defaultBounds;
+    private final Window parent;
 
     /**
      * Initialises a new WindowLocation manager with the specified values.

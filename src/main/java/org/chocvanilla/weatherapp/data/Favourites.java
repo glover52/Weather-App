@@ -10,7 +10,7 @@ import java.util.*;
 public class Favourites extends AbstractCollection<WeatherStation> {
     private static final Path FAVOURITES_PATH = Paths.get(".favourites.dat");
     private final WeatherStations all;
-    private Set<Integer> wmoNumbers = new HashSet<>();
+    private final Set<Integer> wmoNumbers = new HashSet<>();
     
     private Favourites(WeatherStations allStations) {
         all = allStations;

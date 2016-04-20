@@ -14,7 +14,7 @@ public class WeatherObservation {
     private String name;
 
     @SerializedName("apparent_t")
-    private float apparentTemprature;
+    private float apparentTemperature;
 
     @SerializedName("gust_kmh")
     private float gustKm;
@@ -48,12 +48,12 @@ public class WeatherObservation {
         }
     }
 
-    public String getName(){
+    public String getName() {
         return name;
     }
 
-    public float getApparentTemprature() {
-        return apparentTemprature;
+    public float getApparentTemperature() {
+        return apparentTemperature;
     }
 
     public float getGustKm() {
@@ -90,8 +90,11 @@ public class WeatherObservation {
 
     @Override
     public String toString() {
-        return String.format("WeatherObservation{timestamp='%s', name='%s', airTemperature=%s}", 
-                timestamp, name, airTemperature);
+        return String.format("WeatherObservation{timestamp='%s', name='%s', " + 
+                "apparentTemperature=%s, gustKm=%s, gustKt=%s, airTemperature=%s, " +
+                "dewPt=%s, rain=%s, windDir='%s', windSpdKm=%s, windSpdKt=%s}", 
+                timestamp, name, apparentTemperature, gustKm, gustKt, 
+                airTemperature, dewPt, rain, windDir, windSpdKm, windSpdKt);
     }
 }
 

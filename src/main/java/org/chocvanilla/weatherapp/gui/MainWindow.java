@@ -135,7 +135,7 @@ public class MainWindow {
         final String DEG_C = "%.1f °C";
         final String KM_H = "%.1f km/h";
         details.add(fieldToLabel("Air Temp", String.format(DEG_C, observation.getAirTemperature()), details));
-        details.add(fieldToLabel("Apparent Temp", String.format(DEG_C,observation.getApparentTemprature()), details));
+        details.add(fieldToLabel("Apparent Temp", String.format(DEG_C,observation.getApparentTemperature()), details));
         details.add(fieldToLabel("Gust", String.format(KM_H, observation.getGustKm()), details));
         details.add(fieldToLabel("Wind Speed", String.format(KM_H, observation.getWindSpdKm()), details));
         details.add(fieldToLabel("Wind Direction", observation.getWindDir(), details));
