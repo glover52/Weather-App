@@ -16,10 +16,12 @@ public class WeatherStations {
         stations.sort(WeatherStations::compare);
     }
 
-    public static WeatherStations loadFromFile() throws IOException {
+    public static WeatherStations loadFromFile() {
         try (BufferedReader reader = Files.newBufferedReader(WEATHER_STATIONS_FILE)) {
             Gson gson = new Gson();
             return new WeatherStations(gson.fromJson(reader, WeatherStation[].class));
+        } catch (IOException error) {
+            return new WeatherStations();
         }
     }
 
@@ -48,5 +50,7 @@ public class WeatherStations {
                 .findFirst();
         return result.orElseThrow(() -> new RuntimeException("No station with this name"));
     }
+
+    
 }
 

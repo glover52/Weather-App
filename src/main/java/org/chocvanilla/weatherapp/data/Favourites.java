@@ -21,15 +21,17 @@ public class Favourites extends AbstractCollection<WeatherStation> {
      * Load the current user's favourites from disk.
      * @param allStations all available weather stations
      * @return the loaded Favourites
-     * @throws IOException if the Favourites could not be loaded from disk
      */
-    public static Favourites loadFromFile(WeatherStations allStations) throws IOException {
+    public static Favourites loadFromFile(WeatherStations allStations) {
         Favourites favourites = new Favourites(allStations);
 
         try (BufferedReader reader = Files.newBufferedReader(FAVOURITES_PATH)) {
             // parse each line as an integer and add it to the list of station numbers
-            reader.lines().map(Integer::valueOf).forEach(favourites.wmoNumbers::add);
-        } catch (NoSuchFileException ignored) {
+            reader.lines().map(Integer::valueOf)
+                          .filter(wmoNumber -> allStations.getStations().stream()
+                                  .anyMatch(station -> wmoNumber == station.getWmoNumber()))
+                          .forEach(favourites.wmoNumbers::add);
+        } catch (IOException ignored) {
             // no favourites yet
         }
         return favourites;
