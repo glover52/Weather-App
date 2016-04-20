@@ -20,14 +20,11 @@ public class ChartHelpers {
     /**
      * Create a data set suitable for graphing using data obtained by loading all 
      * {@link WeatherObservation}s for the specified {@link WeatherStation}. 
-     * @param station the source of weather data for this data set
+     * @param observations the source of weather data for this data set
      * @return a data set containing the time series of weather observations
-     * @throws IOException if the data could not be downloaded
      */
-    public static XYDataset createDataSet(WeatherStation station) throws IOException {
+    public static XYDataset createDataSet(List<WeatherObservation> observations) {
         TimeSeries series = new TimeSeries("Temperatures");
-        ObservationLoader loader = new ObservationLoader();
-        List<WeatherObservation> observations = loader.load(station);
         for (WeatherObservation obs : observations) {
             series.addOrUpdate(new Second(obs.getTimestamp()), obs.getAirTemperature());
         }
@@ -36,13 +33,29 @@ public class ChartHelpers {
         return dataSet;
     }
 
+
+    /**
+     * Download all available weather observations from the specified station.
+     * @param station the source of the weather observations
+     * @return a list of observations
+     * @throws IOException if an error occurred while attempting the download
+     */
+    public static List<WeatherObservation> loadObservations(WeatherStation station) throws IOException {
+        ObservationLoader loader = new ObservationLoader();
+        return loader.load(station);
+    }
+    
+    
+
     /**
      * Create a temperature chart which can be added to a graphical user interface.
      * @param station the weather station this chart is based on
-     * @param dataset the data set to display
+     * @param observations the observations to display
      * @return a displayable {@link ChartPanel}
      */
-    public static ChartPanel createChart(WeatherStation station, XYDataset dataset) {
+    public static ChartPanel createChart(WeatherStation station, List<WeatherObservation> observations) {
+        XYDataset dataset = createDataSet(observations);
+        
         JFreeChart chart = ChartFactory.createTimeSeriesChart(station.getName(),
                 "Date", "Degrees Celsius", dataset);
 

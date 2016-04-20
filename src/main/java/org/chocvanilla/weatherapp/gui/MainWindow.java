@@ -3,13 +3,12 @@ package org.chocvanilla.weatherapp.gui;
 import org.chocvanilla.weatherapp.chart.ChartHelpers;
 import org.chocvanilla.weatherapp.data.*;
 import org.jfree.chart.ChartPanel;
-import org.jfree.data.xy.XYDataset;
 
 import javax.swing.*;
 import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
 import java.awt.*;
-import java.io.IOException;
+import java.util.List;
 import java.util.concurrent.*;
 
 public class MainWindow {
@@ -74,7 +73,7 @@ public class MainWindow {
         if (!e.getValueIsAdjusting()) {
             WeatherStation station = stationList.getSelectedValue();
             if (station != null) {
-                FutureTask<XYDataset> task = loadDataAsync(station);
+                FutureTask<List<WeatherObservation>> task = loadDataAsync(station);
                 openChart(station, task);
                 stationList.clearSelection();
             }
@@ -92,36 +91,28 @@ public class MainWindow {
         return favouritesPanel;
     }
 
-    private FutureTask<XYDataset> loadDataAsync(WeatherStation station) {
-        FutureTask<XYDataset> task = new FutureTask<>(() -> ChartHelpers.createDataSet(station));
+    private FutureTask<List<WeatherObservation>> loadDataAsync(WeatherStation station) {
+        FutureTask<List<WeatherObservation>> task = new FutureTask<>(() -> ChartHelpers.loadObservations(station));
         executor.execute(task);
         return task;
     }
 
     private void attachChart(JButton favouriteButton, WeatherStation station) {
-        FutureTask<XYDataset> task = loadDataAsync(station);
+        FutureTask<List<WeatherObservation>> task = loadDataAsync(station);
         favouriteButton.addActionListener(x -> openChart(station, task));
     }
 
-    private void openChart(WeatherStation station, FutureTask<XYDataset> dataSupplier) {
+    private void openChart(WeatherStation station, FutureTask<List<WeatherObservation>> dataSupplier) {
         try {
             // Chart
             JPanel chartContainer = new JPanel();
             chartContainer.setLayout(new BoxLayout(chartContainer, BoxLayout.Y_AXIS));
-            ChartPanel panel = ChartHelpers.createChart(station, dataSupplier.get());
+            List<WeatherObservation> observations = dataSupplier.get();
+            ChartPanel panel = ChartHelpers.createChart(station, observations);
             panel.setBorder(BorderFactory.createTitledBorder("Temperature History"));
 
             // Details
-            // Get latest observations
-            // FIXME: Observation loader make more sense to be static.
-            ObservationLoader ol = new ObservationLoader();
-            WeatherObservation ob = null;
-            try {
-                ob = ol.load(station).get(0);
-            } catch (IOException e) {
-                //TODO: handle this
-            }
-            // Chance of NPE
+            WeatherObservation ob = observations.get(0);
             JPanel detailedContainer = new JPanel();
             detailedContainer.add(buildDetails(ob));
             detailedContainer.setBorder(BorderFactory.createTitledBorder("Latest Observations"));
@@ -155,8 +146,7 @@ public class MainWindow {
     }
 
     private JPanel fieldToLabel(String label, Object data, JPanel parent) {
-        JPanel entry = new JPanel();
-        entry.setLayout(new GridBagLayout());
+        JPanel entry = new JPanel(new GridBagLayout());
         GridBagConstraints c = new GridBagConstraints();
         // Put label on top
         c.gridx = 0;
@@ -164,7 +154,7 @@ public class MainWindow {
         entry.add(new JLabel("<html><b>"+label+"</b></html>"), c);
         // Put data on bottom
         c.gridy = 1;
-        entry.add(new JLabel(String.valueOf(data)), c);
+        entry.add(new JLabel(data.toString()), c);
         // spacers
         parent.add(new JSeparator(SwingConstants.VERTICAL));
 
