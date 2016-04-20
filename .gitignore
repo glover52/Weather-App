@@ -11,7 +11,7 @@ build/
 .gradle/
 gradle/
 .idea/
-observations/
+.observations/
 
 bin/
 .settings/
