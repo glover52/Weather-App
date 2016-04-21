@@ -18,14 +18,13 @@ public class DetailWindow extends JFrame {
     private static final String REMOVE_FROM_FAVOURITES = "★ Unfavourite";
     private final Favourites favourites;
     private final FavouritesUpdatedListener favouritesUpdatedListener;
-    private JFrame detailFrame = new JFrame();
-    private JPanel latestObsContainer = new JPanel();
-    private JPanel chartContainer = new JPanel();
-    private JPanel buttonContainer = new JPanel();
+    private final JFrame detailFrame = new JFrame();
+    private final JPanel latestObsContainer = new JPanel();
+    private final JPanel chartContainer = new JPanel();
+    private final JPanel buttonContainer = new JPanel();
+    private final JLabel refreshStatusLabel = new JLabel();
     private ChartPanel chartPanel = null;
-    private JLabel refreshStatusLabel = new JLabel();
-
-
+    
     public DetailWindow(WindowLocationManager locationManager, FavouritesUpdatedListener listener,
                         Favourites favourites) {
         favouritesUpdatedListener = listener;
