@@ -13,8 +13,9 @@ import java.util.concurrent.*;
 import static org.chocvanilla.weatherapp.gui.GuiHelpers.fieldToLabel;
 
 public class DetailWindow extends JFrame {
-    private static final String ADD_TO_FAVOURITES = "Add to Favourites";
-    private static final String REMOVE_FROM_FAVOURITES = "Remove from Favourites";
+    public static final String REFRESH = "↻ Refresh";
+    private static final String ADD_TO_FAVOURITES = "☆ Favourite";
+    private static final String REMOVE_FROM_FAVOURITES = "★ Unfavourite";
     private final Favourites favourites;
     private final FavouritesUpdatedListener favouritesUpdatedListener;
     private JFrame detailFrame = new JFrame();
@@ -51,6 +52,7 @@ public class DetailWindow extends JFrame {
 
     public void display(WeatherStation station, FutureTask<List<WeatherObservation>> dataSupplier) {
         try {
+            
             List<WeatherObservation> observations = dataSupplier.get();
             
             long elapsed = ObservationLoader.msSinceLastRefresh(station);
@@ -85,7 +87,7 @@ public class DetailWindow extends JFrame {
     }
 
     private JButton buildRefreshButton(WeatherStation station) {
-        JButton refresh = new JButton("↻");
+        JButton refresh = new JButton(REFRESH);
         refresh.addActionListener(x -> display(station, ObservationLoader.loadAsync(station)));
         return refresh;
     }
