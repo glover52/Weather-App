@@ -1,6 +1,7 @@
 package org.chocvanilla.weatherapp.chart;
 
-import org.chocvanilla.weatherapp.data.*;
+import org.chocvanilla.weatherapp.data.WeatherObservation;
+import org.chocvanilla.weatherapp.data.WeatherStation;
 import org.jfree.chart.*;
 import org.jfree.chart.plot.XYPlot;
 import org.jfree.chart.renderer.xy.XYLineAndShapeRenderer;
@@ -8,7 +9,6 @@ import org.jfree.data.time.*;
 import org.jfree.data.xy.XYDataset;
 
 import java.awt.*;
-import java.io.IOException;
 import java.util.List;
 
 public class ChartHelpers {
@@ -33,19 +33,6 @@ public class ChartHelpers {
         return dataSet;
     }
 
-
-    /**
-     * Download all available weather observations from the specified station.
-     * @param station the source of the weather observations
-     * @return a list of observations
-     * @throws IOException if an error occurred while attempting the download
-     */
-    public static List<WeatherObservation> loadObservations(WeatherStation station) throws IOException {
-        ObservationLoader loader = new ObservationLoader();
-        return loader.load(station);
-    }
-    
-    
 
     /**
      * Create a temperature chart which can be added to a graphical user interface.
