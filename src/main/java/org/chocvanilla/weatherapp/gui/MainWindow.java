@@ -20,11 +20,12 @@ public class MainWindow {
     private final JList<WeatherStation> stationList = new JList<>();
 
     public MainWindow(WeatherStations weatherStations, Favourites favouriteStations) {
+        stations = weatherStations;
+        favourites = favouriteStations;
         frame.setName("MainWindow");
         frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         frame.addWindowListener(new WindowLocationManager(new Rectangle(800, 600), null));
-        stations = weatherStations;
-        favourites = favouriteStations;
+        frame.addWindowListener(new FavouritesManager(favourites));
     }
 
     public void run() {
