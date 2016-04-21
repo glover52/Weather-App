@@ -8,7 +8,8 @@ import java.util.*;
  * A {@link Collection<WeatherStation>} containing the favourite stations of the current user.
  */
 public class Favourites extends AbstractCollection<WeatherStation> {
-    private static final Path FAVOURITES_PATH = Paths.get(".favourites.dat");
+    private static final Path FAVOURITES_PATH = Paths.get(".preferences/favourites.dat");
+    private static final String TARGET = ".preferences";
     private final WeatherStations all;
     private final Set<Integer> wmoNumbers = new HashSet<>();
     
@@ -42,6 +43,7 @@ public class Favourites extends AbstractCollection<WeatherStation> {
      * @throws IOException
      */
     public void saveToFile() throws IOException {
+        Paths.get(TARGET).toFile().mkdirs();
         try (PrintWriter pw = new PrintWriter(Files.newBufferedWriter(FAVOURITES_PATH))) {
             // print each station number on a new line
             wmoNumbers.forEach(pw::println);

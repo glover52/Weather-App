@@ -6,6 +6,7 @@ import java.awt.*;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 import java.io.*;
+import java.lang.annotation.Target;
 import java.nio.file.*;
 
 /**
@@ -15,6 +16,7 @@ import java.nio.file.*;
 public class WindowLocationManager extends WindowAdapter {
     private final Rectangle defaultBounds;
     private final Window parent;
+    private static final String TARGET = ".preferences";
 
     /**
      * Initialises a new WindowLocation manager with the specified values.
@@ -49,6 +51,7 @@ public class WindowLocationManager extends WindowAdapter {
     }
 
     private void loadCoordinates(Window window) {
+        Paths.get(TARGET).toFile().mkdirs();
         try (BufferedReader reader = Files.newBufferedReader(getPathFor(window))) {
             Gson gson = new Gson();
             Rectangle bounds = gson.fromJson(reader, Rectangle.class);
@@ -62,7 +65,7 @@ public class WindowLocationManager extends WindowAdapter {
     }
     
     private static Path getPathFor(Window window){
-        return Paths.get("." + window.getName() + ".json");
+        return Paths.get(TARGET, window.getName() + ".json");
     }
 
 }
