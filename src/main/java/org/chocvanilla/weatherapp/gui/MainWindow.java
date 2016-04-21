@@ -2,7 +2,6 @@ package org.chocvanilla.weatherapp.gui;
 
 import org.chocvanilla.weatherapp.chart.ChartHelpers;
 import org.chocvanilla.weatherapp.data.*;
-import org.jfree.chart.ChartPanel;
 
 import javax.swing.*;
 import javax.swing.event.ListSelectionEvent;
@@ -14,7 +13,7 @@ import java.util.concurrent.*;
 public class MainWindow {
     private final ExecutorService executor = Executors.newCachedThreadPool();
     private final JFrame frame = new JFrame("Weather App");
-    private final JFrame detailedFrame = new JFrame();
+    private final DetailWindow detailWindow = new DetailWindow(new WindowLocationManager(null, frame));
     private final WeatherStations stations;
     private final Favourites favourites;
     private final JTextField searchBox = new JTextField();
@@ -34,7 +33,6 @@ public class MainWindow {
         container.add(buildSearchPanel(), BorderLayout.WEST);
         frame.pack();
         frame.setVisible(true);
-        detailedFrame.addWindowListener(new WindowLocationManager(null, frame));
     }
 
     private JPanel buildSearchPanel() {
@@ -103,62 +101,7 @@ public class MainWindow {
     }
 
     private void openChart(WeatherStation station, FutureTask<List<WeatherObservation>> dataSupplier) {
-        try {
-            // Chart
-            JPanel chartContainer = new JPanel();
-            chartContainer.setLayout(new BoxLayout(chartContainer, BoxLayout.Y_AXIS));
-            List<WeatherObservation> observations = dataSupplier.get();
-            ChartPanel panel = ChartHelpers.createChart(station, observations);
-            panel.setBorder(BorderFactory.createTitledBorder("Temperature History"));
-
-            // Details
-            WeatherObservation ob = observations.get(0);
-            JPanel detailedContainer = new JPanel();
-            detailedContainer.add(buildDetails(ob));
-            detailedContainer.setBorder(BorderFactory.createTitledBorder("Latest Observations"));
-
-            chartContainer.add(panel);
-            detailedFrame.setTitle(station.getName());
-            detailedFrame.setContentPane(chartContainer);
-            detailedFrame.add(detailedContainer);
-            detailedFrame.setName("DetailWindow");
-            detailedFrame.pack();
-            detailedFrame.setVisible(true);
-        } catch (InterruptedException | ExecutionException ignored) {
-        }
-
-    }
-    private JPanel buildDetails (WeatherObservation observation){
-        JPanel details = new JPanel();
-        details.setLayout(new FlowLayout());
-
-        final String DEG_C = "%.1f °C";
-        final String KM_H = "%.1f km/h";
-        details.add(fieldToLabel("Air Temp", String.format(DEG_C, observation.getAirTemperature()), details));
-        details.add(fieldToLabel("Apparent Temp", String.format(DEG_C,observation.getApparentTemperature()), details));
-        details.add(fieldToLabel("Gust", String.format(KM_H, observation.getGustKm()), details));
-        details.add(fieldToLabel("Wind Speed", String.format(KM_H, observation.getWindSpdKm()), details));
-        details.add(fieldToLabel("Wind Direction", observation.getWindDir(), details));
-        details.add(fieldToLabel("Rain", String.format("%.1f mm",observation.getRain()), details));
-        details.add(fieldToLabel("Dew point", String.format(DEG_C, observation.getDewPt()), details));
-
-        return details;
-    }
-
-    private JPanel fieldToLabel(String label, Object data, JPanel parent) {
-        JPanel entry = new JPanel(new GridBagLayout());
-        GridBagConstraints c = new GridBagConstraints();
-        // Put label on top
-        c.gridx = 0;
-        c.gridy = 0;
-        entry.add(new JLabel("<html><b>"+label+"</b></html>"), c);
-        // Put data on bottom
-        c.gridy = 1;
-        entry.add(new JLabel(data.toString()), c);
-        // spacers
-        parent.add(new JSeparator(SwingConstants.VERTICAL));
-
-        return entry;
+        detailWindow.display(station, dataSupplier);
     }
 
 }
