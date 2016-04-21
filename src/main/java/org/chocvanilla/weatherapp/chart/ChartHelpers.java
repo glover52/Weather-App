@@ -53,7 +53,7 @@ public class ChartHelpers {
      * @param observations the observations to display
      * @return a displayable {@link ChartPanel}
      */
-    public static ChartPanel createChart(WeatherStation station, List<WeatherObservation> observations) {
+    public static JFreeChart createChart(WeatherStation station, List<WeatherObservation> observations) {
         XYDataset dataset = createDataSet(observations);
         
         JFreeChart chart = ChartFactory.createTimeSeriesChart(station.getName(),
@@ -74,6 +74,6 @@ public class ChartHelpers {
         plot.setBackgroundPaint(g);
         plot.setOutlineVisible(false);
         chart.setBackgroundPaint(null);
-        return new ChartPanel(chart);
+        return chart;
     }
 }

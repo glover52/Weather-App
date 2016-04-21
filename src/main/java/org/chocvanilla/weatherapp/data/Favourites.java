@@ -54,9 +54,22 @@ public class Favourites extends AbstractCollection<WeatherStation> {
     }
 
     @Override
-    public boolean contains(Object o) {
-        return wmoNumbers.contains(o);
+    public boolean remove(Object o) {
+        return remove((WeatherStation)o);
     }
+
+    public boolean remove(WeatherStation ws) {return  wmoNumbers.remove(ws.getWmoNumber());}
+
+    @Override
+    public boolean contains(Object o) {
+        return contains((WeatherStation)o);
+    }
+
+
+    public boolean contains(WeatherStation station) {
+        return wmoNumbers.contains(station.getWmoNumber());
+    }
+
 
     @Override
     public Iterator<WeatherStation> iterator() {

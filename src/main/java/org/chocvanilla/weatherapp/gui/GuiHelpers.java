@@ -4,6 +4,7 @@ import javax.swing.*;
 import javax.swing.event.*;
 import javax.swing.text.Document;
 import javax.swing.text.JTextComponent;
+import java.awt.*;
 import java.beans.PropertyChangeEvent;
 import java.util.Objects;
 
@@ -60,5 +61,20 @@ public class GuiHelpers {
         });
         Document d = text.getDocument();
         if (d != null) d.addDocumentListener(dl);
+    }
+
+    public static JPanel fieldToLabel(String label, Object data) {
+        JPanel entry = new JPanel(new GridBagLayout());
+        GridBagConstraints c = new GridBagConstraints();
+        // Put label on top
+        c.gridx = 0;
+        c.gridy = 0;
+        JLabel title = new JLabel(label);
+        title.setFont(title.getFont().deriveFont(Font.BOLD));
+        entry.add(title, c);
+        // Put data on bottom
+        c.gridy = 1;
+        entry.add(new JLabel(data.toString()), c);
+        return entry;
     }
 }
