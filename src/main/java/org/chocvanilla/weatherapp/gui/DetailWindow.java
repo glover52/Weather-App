@@ -86,8 +86,9 @@ public class DetailWindow extends JFrame {
             c.fill = GridBagConstraints.BOTH;
             c.weightx = 1;
             c.weighty = 0;
-
+            tableContainer.removeAll();
             tableContainer.add(new JScrollPane(buildTable(observations)), c);
+
             detailFrame.setTitle(station.getName());
             detailFrame.pack();
             detailFrame.setVisible(true);
