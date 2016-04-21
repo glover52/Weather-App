@@ -1,6 +1,7 @@
 # Software Engineering: Process & Tools
 
 ## Team Members
+
  - Adam Thalhammer (s3544305)
  - Utsav 'Raj' Adhikari (s3542303)
  - Rhys Van Orsouw (s3542173)
@@ -9,6 +10,7 @@
 ## Contribution
 ##### Adam Thalhammer (25%)
 Worked on:
+
 - GUI windows
 - Recommended Gradle
 - Weather station search
@@ -21,6 +23,7 @@ As a team member, Adam worked together with Raj and completed a vast majority of
 
 ##### Utsav Adhikari (25%)
 Worked on:
+
 - Retreiving data from BoM website
 - Weather observation table
 - Weather station search
@@ -31,6 +34,7 @@ Raj worked mainly on the back end of the project with some aspects of design in 
  
 ##### Rhys Van Orsouw (25%)
 Worked on:
+
 - Created graph
 - Favourites
 - Favourites button (For addition and removal)
@@ -41,6 +45,7 @@ Rhys worked solo on the presentation of the graph, not only that, he constructed
  
 ##### Kyle Glover (25%)
 Worked on:
+
 - Drawn the first initial GUI layout
 - Jira setup
 - Managed Jira
