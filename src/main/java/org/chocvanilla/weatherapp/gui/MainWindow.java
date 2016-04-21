@@ -80,6 +80,9 @@ public class MainWindow {
 
     private JPanel buildFavouritesPanel() {
         JPanel favouritesPanel = new JPanel(new FlowLayout(FlowLayout.LEFT));
+        if (favourites.isEmpty()){
+            favouritesPanel.add(new JLabel("You have no favorites! Open a station and click the favorites button to see it here."));
+        }
         for (WeatherStation station : favourites) {
             JButton favouriteButton = new JButton(station.toString());
             favouritesPanel.add(favouriteButton);
