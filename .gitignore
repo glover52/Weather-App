@@ -9,6 +9,7 @@ build/
 gradle/
 .idea/
 .observations/
+.preferences/
 
 bin/
 .settings/
