@@ -4,9 +4,6 @@ gradlew
 .project
 *.iml
 
-.DetailWindow.json
-.MainWindow.json
-
 build/
 .gradle/
 gradle/
