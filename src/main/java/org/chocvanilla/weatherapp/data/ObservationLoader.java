@@ -5,14 +5,13 @@ import com.google.gson.*;
 import java.io.*;
 import java.net.URL;
 import java.nio.file.*;
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
 import java.util.concurrent.*;
 
 public class ObservationLoader {
     private static final ExecutorService executor = Executors.newCachedThreadPool();
     private static final String target = ".observations";
-
+    private static final Map<Integer, Long> cache = new HashMap<>();
 
     /**
      * Download all available weather observations from the specified station.
@@ -33,7 +32,11 @@ public class ObservationLoader {
     }
 
     public List<WeatherObservation> load(WeatherStation station) throws IOException {
-        downloadFile(station);
+        long elapsedMinutes = TimeUnit.MILLISECONDS.toMinutes(msSinceLastRefresh(station));
+        if (elapsedMinutes > 5) {
+            downloadFile(station);
+            cache.put(station.getWmoNumber(), System.currentTimeMillis());
+        }
         try (BufferedReader reader = Files.newBufferedReader(getPathFor(station))) {
             JsonObject object = (JsonObject) new JsonParser().parse(reader);
             JsonElement data = object.get("observations").getAsJsonObject().get("data");
@@ -41,9 +44,17 @@ public class ObservationLoader {
             return Arrays.asList(gson.fromJson(data, WeatherObservation[].class));
         }
     }
+    
+    public static long msSinceLastRefresh(WeatherStation station) {
+        Long lastRefresh = cache.getOrDefault(station.getWmoNumber(), null);
+        if (lastRefresh == null) {
+            return Long.MAX_VALUE;
+        }
+        long now = System.currentTimeMillis();
+        return now - lastRefresh;
+    }
 
     private void downloadFile(WeatherStation station) {
-
         try (InputStream in = new URL(station.getUrl()).openStream()) {
             Paths.get(target).toFile().mkdirs();
             Path path = getPathFor(station);

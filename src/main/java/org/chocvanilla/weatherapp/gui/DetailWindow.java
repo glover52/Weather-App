@@ -8,8 +8,7 @@ import org.jfree.chart.JFreeChart;
 import javax.swing.*;
 import java.awt.*;
 import java.util.List;
-import java.util.concurrent.ExecutionException;
-import java.util.concurrent.FutureTask;
+import java.util.concurrent.*;
 
 import static org.chocvanilla.weatherapp.gui.GuiHelpers.fieldToLabel;
 
@@ -23,6 +22,7 @@ public class DetailWindow extends JFrame {
     private JPanel chartContainer = new JPanel();
     private JPanel buttonContainer = new JPanel();
     private ChartPanel chartPanel = null;
+    private JLabel refreshStatusLabel = new JLabel();
 
 
     public DetailWindow(WindowLocationManager locationManager, FavouritesUpdatedListener listener,
@@ -52,11 +52,21 @@ public class DetailWindow extends JFrame {
     public void display(WeatherStation station, FutureTask<List<WeatherObservation>> dataSupplier) {
         try {
             List<WeatherObservation> observations = dataSupplier.get();
+            
+            long elapsed = ObservationLoader.msSinceLastRefresh(station);
+            refreshStatusLabel.setText(String.format("Last refresh: %d seconds ago.", 
+                    TimeUnit.MILLISECONDS.toSeconds(elapsed)));
+            
+            Timer timer = new Timer(1000, x -> refreshStatusLabel.setText(""));
+            timer.setRepeats(false);
+            timer.start();
+            
             latestObsContainer.removeAll();
             latestObsContainer.add(buildDetails(observations.get(0)));
             buttonContainer.removeAll();
             buttonContainer.add(buildFavouritesButton(station, favourites));
             buttonContainer.add(buildRefreshButton(station));
+            buttonContainer.add(refreshStatusLabel);
 
             // Need to revalidate to avoid artifacts from previous button
             buttonContainer.revalidate();
