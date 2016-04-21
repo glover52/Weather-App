@@ -40,7 +40,8 @@ public class ObservationLoader {
         try (BufferedReader reader = Files.newBufferedReader(getPathFor(station))) {
             JsonObject object = (JsonObject) new JsonParser().parse(reader);
             JsonElement data = object.get("observations").getAsJsonObject().get("data");
-            Gson gson = new Gson();
+            Gson gson = new GsonBuilder().registerTypeAdapter(Float.class, 
+                    new OptionalDeserializer<>(Float::valueOf, 0.0f)).create();
             return Arrays.asList(gson.fromJson(data, WeatherObservation[].class));
         }
     }

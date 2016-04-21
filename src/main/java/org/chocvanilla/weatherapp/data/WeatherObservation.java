@@ -14,28 +14,28 @@ public class WeatherObservation {
     private String name;
 
     @SerializedName("apparent_t")
-    private float apparentTemperature;
+    private Float apparentTemperature;
 
     @SerializedName("gust_kmh")
-    private float gustKm;
+    private Float gustKm;
 
     @SerializedName("gust_kt")
-    private float gustKt;
+    private Float gustKt;
 
     @SerializedName("air_temp")
-    private float airTemperature;
+    private Float airTemperature;
 
     @SerializedName("dewpt")
-    private float dewPt;
+    private Float dewPt;
 
     @SerializedName("rain_trace")
-    private float rain;
+    private Float rain;
 
     @SerializedName("wind_dir")
     private String windDir;
 
     @SerializedName("wind_spd_kmh")
-    private float windSpdKm;
+    private Float windSpdKm;
 
     @SerializedName("wind_spd_kt")
     private float windSpdKt;
@@ -52,23 +52,23 @@ public class WeatherObservation {
         return name;
     }
 
-    public float getApparentTemperature() {
+    public Float getApparentTemperature() {
         return apparentTemperature;
     }
 
-    public float getGustKm() {
+    public Float getGustKm() {
         return gustKm;
     }
 
-    public float getGustKt() {
+    public Float getGustKt() {
         return gustKt;
     }
 
-    public float getDewPt() {
+    public Float getDewPt() {
         return dewPt;
     }
 
-    public float getRain() {
+    public Float getRain() {
         return rain;
     }
 
@@ -76,15 +76,15 @@ public class WeatherObservation {
         return windDir;
     }
 
-    public float getWindSpdKm() {
+    public Float getWindSpdKm() {
         return windSpdKm;
     }
 
-    public float getWindSpdKt() {
+    public Float getWindSpdKt() {
         return windSpdKt;
     }
 
-    public float getAirTemperature() {
+    public Float getAirTemperature() {
         return airTemperature;
     }
 
