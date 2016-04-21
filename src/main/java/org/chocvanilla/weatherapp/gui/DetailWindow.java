@@ -22,7 +22,8 @@ public class DetailWindow extends JFrame {
     private JPanel buttonContainer = new JPanel();
     private ChartPanel chartPanel = null;
     private final FavouritesUpdatedListener favouritesUpdatedListener;
-
+    private final String ADD_TO_FAVOURITES = "Add to Favourites";
+    private final String REMOVE_FROM_FAVOURITES = "Remove from Favourites";
     public DetailWindow(WindowLocationManager locationManager, FavouritesUpdatedListener listener) {
         favouritesUpdatedListener = listener;
         
@@ -88,9 +89,9 @@ public class DetailWindow extends JFrame {
     private JButton addFavouriteButton(WeatherStation station, Favourites favourites) {
         JButton addRemoveFavourite = new JButton();
         if (favourites.contains(station)) {
-            addRemoveFavourite.setText("Remove from Favourites");
+            addRemoveFavourite.setText(REMOVE_FROM_FAVOURITES);
         } else {
-            addRemoveFavourite.setText("Add to Favourites");
+            addRemoveFavourite.setText(ADD_TO_FAVOURITES);
         }
         addRemoveFavourite.addActionListener(x -> toggleFavourites(station, addRemoveFavourite, favourites));
         return addRemoveFavourite;
@@ -99,10 +100,10 @@ public class DetailWindow extends JFrame {
     private void toggleFavourites(WeatherStation station, JButton button, Favourites favourites){
         if (favourites.contains(station)) {
             favourites.remove(station);
-            button.setText("Add to Favourites");
+            button.setText(ADD_TO_FAVOURITES);
         }
         else {
-            button.setText("Remove from Favourites");
+            button.setText(REMOVE_FROM_FAVOURITES);
             favourites.add(station);
         }
         favouritesUpdatedListener.update();
