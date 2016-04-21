@@ -1,6 +1,5 @@
 package org.chocvanilla.weatherapp.gui;
 
-import org.chocvanilla.weatherapp.chart.ChartHelpers;
 import org.chocvanilla.weatherapp.data.*;
 
 import javax.swing.*;
@@ -11,13 +10,12 @@ import java.util.List;
 import java.util.concurrent.*;
 
 public class MainWindow {
-    private final ExecutorService executor = Executors.newCachedThreadPool();
+
     private final JFrame frame = new JFrame("Weather App");
-    private final DetailWindow detailWindow = new DetailWindow(
-            new WindowLocationManager(null, frame),
-            this::updateFavouritesButtons);
     private final WeatherStations stations;
     private final Favourites favourites;
+    private final DetailWindow detailWindow;
+
     private final JTextField searchBox = new JTextField();
     private final JList<WeatherStation> stationList = new JList<>();
     private JPanel favouritesPanel;
@@ -26,6 +24,9 @@ public class MainWindow {
         stations = weatherStations;
         favourites = favouriteStations;
         frame.setName("MainWindow");
+        detailWindow = new DetailWindow(new WindowLocationManager(null, frame), 
+                this::updateFavouritesButtons,
+                favourites);
         frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         frame.addWindowListener(new WindowLocationManager(new Rectangle(800, 600), null));
         frame.addWindowListener(new FavouritesManager(favourites));
@@ -75,7 +76,7 @@ public class MainWindow {
         if (!e.getValueIsAdjusting()) {
             WeatherStation station = stationList.getSelectedValue();
             if (station != null) {
-                FutureTask<List<WeatherObservation>> task = loadDataAsync(station);
+                FutureTask<List<WeatherObservation>> task = ObservationLoader.loadAsync(station);
                 openChart(station, task);
                 stationList.clearSelection();
             }
@@ -103,24 +104,15 @@ public class MainWindow {
         favouritesPanel.repaint();
     }
 
-    private FutureTask<List<WeatherObservation>> loadDataAsync(WeatherStation station) {
-        FutureTask<List<WeatherObservation>> task = new FutureTask<>(() -> ChartHelpers.loadObservations(station));
-        executor.execute(task);
-        return task;
-    }
-
     private void attachChart(JButton favouriteButton, WeatherStation station) {
-        FutureTask<List<WeatherObservation>> task = loadDataAsync(station);
+        FutureTask<List<WeatherObservation>> task = ObservationLoader.loadAsync(station);
         favouriteButton.addActionListener(x -> openChart(station, task));
     }
 
     private void openChart(WeatherStation station, FutureTask<List<WeatherObservation>> dataSupplier) {
-        detailWindow.display(station, dataSupplier, favourites);
+        detailWindow.display(station, dataSupplier);
     }
 
 }
 
 
-interface FavouritesUpdatedListener {
-    public void update();
-}

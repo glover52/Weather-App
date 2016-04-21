@@ -1,9 +1,7 @@
 package org.chocvanilla.weatherapp.gui;
 
 import org.chocvanilla.weatherapp.chart.ChartHelpers;
-import org.chocvanilla.weatherapp.data.Favourites;
-import org.chocvanilla.weatherapp.data.WeatherObservation;
-import org.chocvanilla.weatherapp.data.WeatherStation;
+import org.chocvanilla.weatherapp.data.*;
 import org.jfree.chart.ChartPanel;
 import org.jfree.chart.JFreeChart;
 
@@ -16,6 +14,7 @@ import java.util.concurrent.FutureTask;
 import static org.chocvanilla.weatherapp.gui.GuiHelpers.fieldToLabel;
 
 public class DetailWindow extends JFrame {
+    private final Favourites favourites;
     private JFrame detailFrame = new JFrame();
     private JPanel latestObsContainer = new JPanel();
     private JPanel chartContainer = new JPanel();
@@ -24,8 +23,12 @@ public class DetailWindow extends JFrame {
     private final FavouritesUpdatedListener favouritesUpdatedListener;
     private final String ADD_TO_FAVOURITES = "Add to Favourites";
     private final String REMOVE_FROM_FAVOURITES = "Remove from Favourites";
-    public DetailWindow(WindowLocationManager locationManager, FavouritesUpdatedListener listener) {
+    
+   
+    public DetailWindow(WindowLocationManager locationManager, FavouritesUpdatedListener listener,
+                        Favourites favourites) {
         favouritesUpdatedListener = listener;
+        this.favourites = favourites;
         
         detailFrame.setName("DetailWindow");
         detailFrame.addWindowListener(locationManager);
@@ -44,14 +47,14 @@ public class DetailWindow extends JFrame {
     }
 
 
-    public void display(WeatherStation station, FutureTask<List<WeatherObservation>> dataSupplier,
-                        Favourites favourites) {
+    public void display(WeatherStation station, FutureTask<List<WeatherObservation>> dataSupplier) {
         try {
             List<WeatherObservation> observations = dataSupplier.get();
             latestObsContainer.removeAll();
             latestObsContainer.add(buildDetails(observations.get(0)));
             buttonContainer.removeAll();
-            buttonContainer.add(addFavouriteButton(station, favourites));
+            buttonContainer.add(buildFavouritesButton(station, favourites));
+            buttonContainer.add(buildRefreshButton(station));
             
             // Need to revalidate to avoid artifacts from previous button
             buttonContainer.revalidate();
@@ -65,6 +68,12 @@ public class DetailWindow extends JFrame {
         } catch (InterruptedException | ExecutionException ignored) {
             // Can't get data, so don't display chart
         }
+    }
+
+    private JButton buildRefreshButton(WeatherStation station) {
+        JButton refresh = new JButton("↻");
+        refresh.addActionListener(x -> display(station, ObservationLoader.loadAsync(station)));
+        return refresh;
     }
 
     private void updateChart(JFreeChart chart) {
@@ -86,7 +95,7 @@ public class DetailWindow extends JFrame {
         return details;
     }
 
-    private JButton addFavouriteButton(WeatherStation station, Favourites favourites) {
+    private JButton buildFavouritesButton(WeatherStation station, Favourites favourites) {
         JButton addRemoveFavourite = new JButton();
         if (favourites.contains(station)) {
             addRemoveFavourite.setText(REMOVE_FROM_FAVOURITES);

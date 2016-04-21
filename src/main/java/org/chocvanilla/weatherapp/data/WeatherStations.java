@@ -51,6 +51,7 @@ public class WeatherStations {
         return result.orElseThrow(() -> new RuntimeException("No station with this name"));
     }
 
-    
+
+
 }
 
