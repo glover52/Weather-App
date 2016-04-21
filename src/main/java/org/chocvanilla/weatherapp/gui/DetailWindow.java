@@ -10,6 +10,8 @@ import java.awt.*;
 import java.util.List;
 import java.util.concurrent.*;
 
+import javax.swing.table.TableColumnModel;
+
 import static org.chocvanilla.weatherapp.gui.GuiHelpers.fieldToLabel;
 
 public class DetailWindow extends JFrame {
@@ -105,13 +107,16 @@ public class DetailWindow extends JFrame {
         String[] columnNames = {"Time","Air Temp", "Apparent Temp", "Gust (km/h)", "Gust (kt)",
                 "Wind Direction", "Wind Speed (km/h)", "Wind Speed (kt)",
                 "Dew Point", "Rain (mm)"};
-        // FIXME: auto resize column width
+
         JTable table = new JTable(data, columnNames){
             // Disable editing
             public boolean isCellEditable(int row, int column) {
                 return false;
             }
         };
+        TableColumnModel tcm = table.getColumnModel();
+        tcm.getColumn(0).setPreferredWidth(230);
+
         return table;
     }
 
@@ -170,7 +175,7 @@ public class DetailWindow extends JFrame {
     }
 
     private  Object[][] ObservationHistory(List<WeatherObservation> observations){
-        Object[][] data = new Object[observations.size()][11];
+        Object[][] data = new Object[observations.size()][10];
 
         for (int i = 0; i < observations.size(); i++ ) {
             data[i][0] =  observations.get(i).getTimestamp();
@@ -183,7 +188,6 @@ public class DetailWindow extends JFrame {
             data[i][7] =  observations.get(i).getWindSpdKt();
             data[i][8] =  observations.get(i).getDewPt();
             data[i][9] =  observations.get(i).getRain();
-            data[i][10] = observations.get(i).getTimestamp();
         }
         return data;
     }

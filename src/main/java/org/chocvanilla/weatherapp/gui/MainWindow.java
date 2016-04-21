@@ -19,6 +19,8 @@ public class MainWindow {
     private final JTextField searchBox = new JTextField();
     private final JList<WeatherStation> stationList = new JList<>();
     private JPanel favouritesPanel;
+    private final String noFavoritesPrompt =
+            "You have no favorites! Open a station and click the favorites button to see it here.";
 
     public MainWindow(WeatherStations weatherStations, Favourites favouriteStations) {
         stations = weatherStations;
@@ -93,7 +95,7 @@ public class MainWindow {
     private void updateFavouritesButtons() {
         favouritesPanel.removeAll();
         if (favourites.isEmpty()) {
-            favouritesPanel.add(new JLabel("You have no favorites! Open a station and click the favorites button to see it here."));
+            favouritesPanel.add(new JLabel(noFavoritesPrompt));
         }
         for (WeatherStation station : favourites) {
             JButton favouriteButton = new JButton(station.toString());
