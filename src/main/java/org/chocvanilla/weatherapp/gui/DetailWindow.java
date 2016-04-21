@@ -21,9 +21,11 @@ public class DetailWindow extends JFrame {
     private JPanel chartContainer = new JPanel();
     private JPanel buttonContainer = new JPanel();
     private ChartPanel chartPanel = null;
+    private final FavouritesUpdatedListener favouritesUpdatedListener;
 
-
-    public DetailWindow(WindowLocationManager locationManager) {
+    public DetailWindow(WindowLocationManager locationManager, FavouritesUpdatedListener listener) {
+        favouritesUpdatedListener = listener;
+        
         detailFrame.setName("DetailWindow");
         detailFrame.addWindowListener(locationManager);
         JPanel container = new JPanel();
@@ -49,6 +51,11 @@ public class DetailWindow extends JFrame {
             latestObsContainer.add(buildDetails(observations.get(0)));
             buttonContainer.removeAll();
             buttonContainer.add(addFavouriteButton(station, favourites));
+            
+            // Need to revalidate to avoid artifacts from previous button
+            buttonContainer.revalidate();
+            buttonContainer.repaint();
+            
             JFreeChart chart = ChartHelpers.createChart(station, observations);
             updateChart(chart);
             detailFrame.setTitle(station.getName());
@@ -98,6 +105,7 @@ public class DetailWindow extends JFrame {
             button.setText("Remove from Favourites");
             favourites.add(station);
         }
+        favouritesUpdatedListener.update();
     }
 }
 
