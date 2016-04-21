@@ -66,6 +66,30 @@ public class ObservationLoader {
     private Path getPathFor(WeatherStation station) {
         return Paths.get(target, String.valueOf(station.getWmoNumber()) + ".json");
     }
+
+    /**
+     * Transforms a list of observations into a multidimensional array of objects
+     *
+     * @param observations A list of weather observations
+     * @return an array of observations
+     */
+    public static Object[][] ObservationHistory(List<WeatherObservation> observations){
+        Object[][] data = new Object[observations.size()][10];
+
+        for (int i = 0; i < observations.size(); i++ ) {
+            data[i][0] =  observations.get(i).getTimestamp();
+            data[i][1] =  observations.get(i).getAirTemperature();
+            data[i][2] =  observations.get(i).getApparentTemperature();
+            data[i][3] =  observations.get(i).getGustKm();
+            data[i][4] =  observations.get(i).getGustKt();
+            data[i][5] =  observations.get(i).getWindDir();
+            data[i][6] =  observations.get(i).getWindSpdKm();
+            data[i][7] =  observations.get(i).getWindSpdKt();
+            data[i][8] =  observations.get(i).getDewPt();
+            data[i][9] =  observations.get(i).getRain();
+        }
+        return data;
+    }
 }
 
 

@@ -4,12 +4,16 @@ import org.chocvanilla.weatherapp.chart.ChartHelpers;
 import org.chocvanilla.weatherapp.data.*;
 import org.jfree.chart.ChartPanel;
 import org.jfree.chart.JFreeChart;
+import org.chocvanilla.weatherapp.data.ObservationLoader;
 
 import javax.swing.*;
 import java.awt.*;
 import java.util.List;
 import java.util.concurrent.*;
 
+import javax.swing.table.TableColumnModel;
+
+import static org.chocvanilla.weatherapp.data.ObservationLoader.ObservationHistory;
 import static org.chocvanilla.weatherapp.gui.GuiHelpers.fieldToLabel;
 
 public class DetailWindow extends JFrame {
@@ -18,13 +22,16 @@ public class DetailWindow extends JFrame {
     private static final String REMOVE_FROM_FAVOURITES = "★ Unfavourite";
     private final Favourites favourites;
     private final FavouritesUpdatedListener favouritesUpdatedListener;
-    private final JFrame detailFrame = new JFrame();
-    private final JPanel latestObsContainer = new JPanel();
-    private final JPanel chartContainer = new JPanel();
-    private final JPanel buttonContainer = new JPanel();
-    private final JLabel refreshStatusLabel = new JLabel();
+    private JFrame detailFrame = new JFrame();
+    private JPanel latestObsContainer = new JPanel();
+    private JPanel chartContainer = new JPanel();
+    private JPanel tableContainer = new JPanel();
+    private JPanel buttonContainer = new JPanel();
+    private JTabbedPane historyContainer = new JTabbedPane();
     private ChartPanel chartPanel = null;
-    
+    private JLabel refreshStatusLabel = new JLabel();
+
+
     public DetailWindow(WindowLocationManager locationManager, FavouritesUpdatedListener listener,
                         Favourites favourites) {
         favouritesUpdatedListener = listener;
@@ -34,36 +41,41 @@ public class DetailWindow extends JFrame {
         detailFrame.addWindowListener(locationManager);
         JPanel container = new JPanel();
         detailFrame.setContentPane(container);
+        detailFrame.setMinimumSize(new Dimension(700, 635));
 
         container.setLayout(new BoxLayout(container, BoxLayout.Y_AXIS));
         buttonContainer.setLayout(new FlowLayout(FlowLayout.LEFT, 10, 10));
 
-        chartContainer.setBorder(BorderFactory.createTitledBorder("Temperature History"));
+        historyContainer.setBorder(BorderFactory.createTitledBorder("Observation History"));
         latestObsContainer.setBorder(BorderFactory.createTitledBorder("Latest Observations"));
 
+        historyContainer.addTab("Chart", chartContainer);
+        historyContainer.addTab("Table", tableContainer);
 
+        tableContainer.setLayout(new GridBagLayout());
 
         container.add(buttonContainer);
-        container.add(chartContainer);
         container.add(latestObsContainer);
+        container.add(historyContainer);
     }
 
 
     public void display(WeatherStation station, FutureTask<List<WeatherObservation>> dataSupplier) {
         try {
-            
+
             List<WeatherObservation> observations = dataSupplier.get();
-            
+
             long elapsed = ObservationLoader.msSinceLastRefresh(station);
-            refreshStatusLabel.setText(String.format("Last refresh: %d seconds ago.", 
+            refreshStatusLabel.setText(String.format("Last refresh: %d seconds ago.",
                     TimeUnit.MILLISECONDS.toSeconds(elapsed)));
-            
+
             Timer timer = new Timer(1000, x -> refreshStatusLabel.setText(""));
             timer.setRepeats(false);
             timer.start();
-            
+
             latestObsContainer.removeAll();
             latestObsContainer.add(buildDetails(observations.get(0)));
+            // Add to favorites
             buttonContainer.removeAll();
             buttonContainer.add(buildFavouritesButton(station, favourites));
             buttonContainer.add(buildRefreshButton(station));
@@ -72,17 +84,42 @@ public class DetailWindow extends JFrame {
             // Need to revalidate to avoid artifacts from previous button
             buttonContainer.revalidate();
             buttonContainer.repaint();
-
-
-
+            // Chart
             JFreeChart chart = ChartHelpers.createChart(station, observations);
             updateChart(chart);
+
+            // Table
+            GridBagConstraints c = new GridBagConstraints();
+            c.fill = GridBagConstraints.BOTH;
+            c.weightx = 1;
+            c.weighty = 0;
+            tableContainer.removeAll();
+            tableContainer.add(new JScrollPane(buildTable(observations)), c);
+
             detailFrame.setTitle(station.getName());
             detailFrame.pack();
             detailFrame.setVisible(true);
         } catch (InterruptedException | ExecutionException ignored) {
             // Can't get data, so don't display chart
         }
+    }
+
+    private JTable buildTable(List<WeatherObservation> observations) {
+        Object[][] data = ObservationHistory(observations);
+        String[] columnNames = {"Time","Air Temp", "Apparent Temp", "Gust (km/h)", "Gust (kt)",
+                "Wind Direction", "Wind Speed (km/h)", "Wind Speed (kt)",
+                "Dew Point", "Rain (mm)"};
+
+        JTable table = new JTable(data, columnNames){
+            // Disable editing
+            public boolean isCellEditable(int row, int column) {
+                return false;
+            }
+        };
+        TableColumnModel tcm = table.getColumnModel();
+        tcm.getColumn(0).setPreferredWidth(230);
+
+        return table;
     }
 
     private JButton buildRefreshButton(WeatherStation station) {
