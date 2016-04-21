@@ -4,6 +4,7 @@ import org.chocvanilla.weatherapp.chart.ChartHelpers;
 import org.chocvanilla.weatherapp.data.*;
 import org.jfree.chart.ChartPanel;
 import org.jfree.chart.JFreeChart;
+import org.chocvanilla.weatherapp.data.ObservationLoader;
 
 import javax.swing.*;
 import java.awt.*;
@@ -12,6 +13,7 @@ import java.util.concurrent.*;
 
 import javax.swing.table.TableColumnModel;
 
+import static org.chocvanilla.weatherapp.data.ObservationLoader.ObservationHistory;
 import static org.chocvanilla.weatherapp.gui.GuiHelpers.fieldToLabel;
 
 public class DetailWindow extends JFrame {
@@ -174,23 +176,6 @@ public class DetailWindow extends JFrame {
         favouritesUpdatedListener.update();
     }
 
-    private  Object[][] ObservationHistory(List<WeatherObservation> observations){
-        Object[][] data = new Object[observations.size()][10];
-
-        for (int i = 0; i < observations.size(); i++ ) {
-            data[i][0] =  observations.get(i).getTimestamp();
-            data[i][1] =  observations.get(i).getAirTemperature();
-            data[i][2] =  observations.get(i).getApparentTemperature();
-            data[i][3] =  observations.get(i).getGustKm();
-            data[i][4] =  observations.get(i).getGustKt();
-            data[i][5] =  observations.get(i).getWindDir();
-            data[i][6] =  observations.get(i).getWindSpdKm();
-            data[i][7] =  observations.get(i).getWindSpdKt();
-            data[i][8] =  observations.get(i).getDewPt();
-            data[i][9] =  observations.get(i).getRain();
-        }
-        return data;
-    }
 }
 
 
