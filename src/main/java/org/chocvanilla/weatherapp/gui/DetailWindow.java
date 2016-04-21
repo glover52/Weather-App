@@ -64,15 +64,12 @@ public class DetailWindow extends JFrame {
     private JPanel buildDetails(WeatherObservation observation) {
         JPanel details = new JPanel();
         details.setLayout(new FlowLayout());
-        final String DEG_C = "%.1f °C";
-        final String KM_H = "%.1f km/h";
-        details.add(fieldToLabel("Air Temp", String.format(DEG_C, observation.getAirTemperature())));
-        details.add(fieldToLabel("Apparent Temp", String.format(DEG_C, observation.getApparentTemperature())));
-        details.add(fieldToLabel("Gust", String.format(KM_H, observation.getGustKm())));
-        details.add(fieldToLabel("Wind Speed", String.format(KM_H, observation.getWindSpdKm())));
-        details.add(fieldToLabel("Wind Direction", observation.getWindDir()));
-        details.add(fieldToLabel("Rain", String.format("%.1f mm", observation.getRain())));
-        details.add(fieldToLabel("Dew point", String.format(DEG_C, observation.getDewPt())));
+        for (ObservationDescription o : ObservationDescription.forObservation(observation)){
+            details.add(fieldToLabel(o.getLabel(), o.getValue()));
+            details.add(new JSeparator(SwingConstants.VERTICAL));
+        }
         return details;
     }
 }
+
+

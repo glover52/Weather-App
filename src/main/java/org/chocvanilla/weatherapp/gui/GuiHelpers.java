@@ -69,11 +69,12 @@ public class GuiHelpers {
         // Put label on top
         c.gridx = 0;
         c.gridy = 0;
-        entry.add(new JLabel("<html><b>"+label+"</b></html>"), c);
+        JLabel title = new JLabel(label);
+        title.setFont(title.getFont().deriveFont(Font.BOLD));
+        entry.add(title, c);
         // Put data on bottom
         c.gridy = 1;
         entry.add(new JLabel(data.toString()), c);
-
         return entry;
     }
 }
