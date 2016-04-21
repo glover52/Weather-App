@@ -7,9 +7,9 @@ import java.util.List;
 import java.util.function.Supplier;
 
 public class ObservationDescription {
-    private String label;
-    private String format;
-    private Supplier<?> source;
+    private final String label;
+    private final String format;
+    private final Supplier<?> source;
 
     public ObservationDescription(String labelText, String format, Supplier<?> source) {
         label = labelText;
