@@ -73,7 +73,7 @@ public class ChartHelpers {
         );
         plot.setBackgroundPaint(g);
         plot.setOutlineVisible(false);
-        chart.setBackgroundPaint(new Color(255, 255, 255, 0));
+        chart.setBackgroundPaint(null);
         return new ChartPanel(chart);
     }
 }
