@@ -43,8 +43,12 @@ public class DetailWindow extends JFrame {
         historyContainer.setBorder(BorderFactory.createTitledBorder("Observation History"));
         latestObsContainer.setBorder(BorderFactory.createTitledBorder("Latest Observations"));
 
+        historyContainer.addTab("Chart", chartContainer);
+        historyContainer.addTab("Table", tableContainer);
+
+        tableContainer.setLayout(new GridBagLayout());
+
         container.add(buttonContainer);
-        container.add(chartContainer);
         container.add(latestObsContainer);
         container.add(historyContainer);
     }
