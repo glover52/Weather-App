@@ -1,6 +1,7 @@
 package org.chocvanilla.weatherapp.gui;
 
 import org.chocvanilla.weatherapp.chart.ChartHelpers;
+import org.chocvanilla.weatherapp.data.Favourites;
 import org.chocvanilla.weatherapp.data.WeatherObservation;
 import org.chocvanilla.weatherapp.data.WeatherStation;
 import org.jfree.chart.ChartPanel;
@@ -18,6 +19,7 @@ public class DetailWindow extends JFrame {
     private JFrame detailFrame = new JFrame();
     private JPanel latestObsContainer = new JPanel();
     private JPanel chartContainer = new JPanel();
+    private JPanel buttonContainer = new JPanel();
     private ChartPanel chartPanel = null;
 
 
@@ -28,20 +30,25 @@ public class DetailWindow extends JFrame {
         detailFrame.setContentPane(container);
 
         container.setLayout(new BoxLayout(container, BoxLayout.Y_AXIS));
+        buttonContainer.setLayout(new FlowLayout(FlowLayout.LEFT, 10, 10));
 
         chartContainer.setBorder(BorderFactory.createTitledBorder("Temperature History"));
         latestObsContainer.setBorder(BorderFactory.createTitledBorder("Latest Observations"));
 
+        container.add(buttonContainer);
         container.add(chartContainer);
         container.add(latestObsContainer);
     }
 
 
-    public void display(WeatherStation station, FutureTask<List<WeatherObservation>> dataSupplier) {
+    public void display(WeatherStation station, FutureTask<List<WeatherObservation>> dataSupplier,
+                        Favourites favourites) {
         try {
             List<WeatherObservation> observations = dataSupplier.get();
             latestObsContainer.removeAll();
             latestObsContainer.add(buildDetails(observations.get(0)));
+            buttonContainer.removeAll();
+            buttonContainer.add(addFavouriteButton(station, favourites));
             JFreeChart chart = ChartHelpers.createChart(station, observations);
             updateChart(chart);
             detailFrame.setTitle(station.getName());
@@ -69,6 +76,28 @@ public class DetailWindow extends JFrame {
             details.add(new JSeparator(SwingConstants.VERTICAL));
         }
         return details;
+    }
+
+    private JButton addFavouriteButton(WeatherStation station, Favourites favourites) {
+        JButton addRemoveFavourite = new JButton();
+        if (favourites.contains(station)) {
+            addRemoveFavourite.setText("Remove from Favourites");
+        } else {
+            addRemoveFavourite.setText("Add to Favourites");
+        }
+        addRemoveFavourite.addActionListener(x -> toggleFavourites(station, addRemoveFavourite, favourites));
+        return addRemoveFavourite;
+    }
+
+    private void toggleFavourites(WeatherStation station, JButton button, Favourites favourites){
+        if (favourites.contains(station)) {
+            favourites.remove(station);
+            button.setText("Add to Favourites");
+        }
+        else {
+            button.setText("Remove from Favourites");
+            favourites.add(station);
+        }
     }
 }
 

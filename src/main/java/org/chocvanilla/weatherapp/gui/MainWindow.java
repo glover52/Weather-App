@@ -7,6 +7,8 @@ import javax.swing.*;
 import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.util.List;
 import java.util.concurrent.*;
 
@@ -105,7 +107,7 @@ public class MainWindow {
     }
 
     private void openChart(WeatherStation station, FutureTask<List<WeatherObservation>> dataSupplier) {
-        detailWindow.display(station, dataSupplier);
+        detailWindow.display(station, dataSupplier, favourites);
     }
 
 }
