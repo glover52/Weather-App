@@ -36,6 +36,7 @@ public class DetailWindow extends JFrame {
         detailFrame.addWindowListener(locationManager);
         JPanel container = new JPanel();
         detailFrame.setContentPane(container);
+        detailFrame.setMinimumSize(new Dimension(700, 635));
 
         container.setLayout(new BoxLayout(container, BoxLayout.Y_AXIS));
         buttonContainer.setLayout(new FlowLayout(FlowLayout.LEFT, 10, 10));
@@ -102,7 +103,7 @@ public class DetailWindow extends JFrame {
         String[] columnNames = {"Time","Air Temp", "Apparent Temp", "Gust (km/h)", "Gust (kt)",
                 "Wind Direction", "Wind Speed (km/h)", "Wind Speed (kt)",
                 "Dew Point", "Rain (mm)"};
-
+        // FIXME: auto resize column width
         JTable table = new JTable(data, columnNames){
             // Disable editing
             public boolean isCellEditable(int row, int column) {
