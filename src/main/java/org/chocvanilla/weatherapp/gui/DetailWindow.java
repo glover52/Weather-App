@@ -41,6 +41,8 @@ public class DetailWindow extends JFrame {
         chartContainer.setBorder(BorderFactory.createTitledBorder("Temperature History"));
         latestObsContainer.setBorder(BorderFactory.createTitledBorder("Latest Observations"));
 
+
+
         container.add(buttonContainer);
         container.add(chartContainer);
         container.add(latestObsContainer);
@@ -59,6 +61,8 @@ public class DetailWindow extends JFrame {
             // Need to revalidate to avoid artifacts from previous button
             buttonContainer.revalidate();
             buttonContainer.repaint();
+
+
 
             JFreeChart chart = ChartHelpers.createChart(station, observations);
             updateChart(chart);
@@ -83,6 +87,13 @@ public class DetailWindow extends JFrame {
         } else {
             chartPanel.setChart(chart);
         }
+        setChartPanelAttributes(chartPanel);
+    }
+
+    private void setChartPanelAttributes(ChartPanel chartPanel) {
+        chartPanel.setDomainZoomable(false);
+        chartPanel.setRangeZoomable(false);
+        chartPanel.setPopupMenu(null);
     }
 
     private JPanel buildDetails(WeatherObservation observation) {
