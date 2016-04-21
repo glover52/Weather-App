@@ -12,7 +12,7 @@ public class Favourites extends AbstractCollection<WeatherStation> {
     private static final String TARGET = ".preferences";
     private final WeatherStations all;
     private final Set<Integer> wmoNumbers = new HashSet<>();
-    
+
     private Favourites(WeatherStations allStations) {
         all = allStations;
     }
@@ -20,6 +20,7 @@ public class Favourites extends AbstractCollection<WeatherStation> {
 
     /**
      * Load the current user's favourites from disk.
+     *
      * @param allStations all available weather stations
      * @return the loaded Favourites
      */
@@ -29,9 +30,9 @@ public class Favourites extends AbstractCollection<WeatherStation> {
         try (BufferedReader reader = Files.newBufferedReader(FAVOURITES_PATH)) {
             // parse each line as an integer and add it to the list of station numbers
             reader.lines().map(Integer::valueOf)
-                          .filter(wmoNumber -> allStations.getStations().stream()
-                                  .anyMatch(station -> wmoNumber == station.getWmoNumber()))
-                          .forEach(favourites.wmoNumbers::add);
+                    .filter(wmoNumber -> allStations.getStations().stream()
+                            .anyMatch(station -> wmoNumber == station.getWmoNumber()))
+                    .forEach(favourites.wmoNumbers::add);
         } catch (IOException ignored) {
             // no favourites yet
         }
@@ -40,6 +41,7 @@ public class Favourites extends AbstractCollection<WeatherStation> {
 
     /**
      * Saves the current user's favourites to disk.
+     *
      * @throws IOException
      */
     public void saveToFile() throws IOException {
@@ -49,7 +51,7 @@ public class Favourites extends AbstractCollection<WeatherStation> {
             wmoNumbers.forEach(pw::println);
         }
     }
-    
+
     @Override
     public boolean add(WeatherStation ws) {
         return wmoNumbers.add(ws.getWmoNumber());
@@ -57,14 +59,16 @@ public class Favourites extends AbstractCollection<WeatherStation> {
 
     @Override
     public boolean remove(Object o) {
-        return remove((WeatherStation)o);
+        return remove((WeatherStation) o);
     }
 
-    public boolean remove(WeatherStation ws) {return  wmoNumbers.remove(ws.getWmoNumber());}
+    public boolean remove(WeatherStation ws) {
+        return wmoNumbers.remove(ws.getWmoNumber());
+    }
 
     @Override
     public boolean contains(Object o) {
-        return contains((WeatherStation)o);
+        return contains((WeatherStation) o);
     }
 
 

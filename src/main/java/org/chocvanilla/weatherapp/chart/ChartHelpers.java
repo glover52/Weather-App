@@ -12,14 +12,15 @@ import java.awt.*;
 import java.util.List;
 
 public class ChartHelpers {
-    
+
     private ChartHelpers() {
         // static class
     }
 
     /**
-     * Create a data set suitable for graphing using data obtained by loading all 
-     * {@link WeatherObservation}s for the specified {@link WeatherStation}. 
+     * Create a data set suitable for graphing using data obtained by loading all
+     * {@link WeatherObservation}s for the specified {@link WeatherStation}.
+     *
      * @param observations the source of weather data for this data set
      * @return a data set containing the time series of weather observations
      */
@@ -36,13 +37,14 @@ public class ChartHelpers {
 
     /**
      * Create a temperature chart which can be added to a graphical user interface.
-     * @param station the weather station this chart is based on
+     *
+     * @param station      the weather station this chart is based on
      * @param observations the observations to display
      * @return a displayable {@link ChartPanel}
      */
     public static JFreeChart createChart(WeatherStation station, List<WeatherObservation> observations) {
         XYDataset dataset = createDataSet(observations);
-        
+
         JFreeChart chart = ChartFactory.createTimeSeriesChart(station.getName(),
                 "Date", "Degrees Celsius", dataset);
 

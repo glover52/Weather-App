@@ -14,22 +14,22 @@ import java.util.concurrent.FutureTask;
 import static org.chocvanilla.weatherapp.gui.GuiHelpers.fieldToLabel;
 
 public class DetailWindow extends JFrame {
+    private static final String ADD_TO_FAVOURITES = "Add to Favourites";
+    private static final String REMOVE_FROM_FAVOURITES = "Remove from Favourites";
     private final Favourites favourites;
+    private final FavouritesUpdatedListener favouritesUpdatedListener;
     private JFrame detailFrame = new JFrame();
     private JPanel latestObsContainer = new JPanel();
     private JPanel chartContainer = new JPanel();
     private JPanel buttonContainer = new JPanel();
     private ChartPanel chartPanel = null;
-    private final FavouritesUpdatedListener favouritesUpdatedListener;
-    private final String ADD_TO_FAVOURITES = "Add to Favourites";
-    private final String REMOVE_FROM_FAVOURITES = "Remove from Favourites";
-    
-   
+
+
     public DetailWindow(WindowLocationManager locationManager, FavouritesUpdatedListener listener,
                         Favourites favourites) {
         favouritesUpdatedListener = listener;
         this.favourites = favourites;
-        
+
         detailFrame.setName("DetailWindow");
         detailFrame.addWindowListener(locationManager);
         JPanel container = new JPanel();
@@ -55,11 +55,11 @@ public class DetailWindow extends JFrame {
             buttonContainer.removeAll();
             buttonContainer.add(buildFavouritesButton(station, favourites));
             buttonContainer.add(buildRefreshButton(station));
-            
+
             // Need to revalidate to avoid artifacts from previous button
             buttonContainer.revalidate();
             buttonContainer.repaint();
-            
+
             JFreeChart chart = ChartHelpers.createChart(station, observations);
             updateChart(chart);
             detailFrame.setTitle(station.getName());
@@ -88,7 +88,7 @@ public class DetailWindow extends JFrame {
     private JPanel buildDetails(WeatherObservation observation) {
         JPanel details = new JPanel();
         details.setLayout(new FlowLayout());
-        for (ObservationDescription o : ObservationDescription.forObservation(observation)){
+        for (ObservationDescription o : ObservationDescription.forObservation(observation)) {
             details.add(fieldToLabel(o.getLabel(), o.getValue()));
             details.add(new JSeparator(SwingConstants.VERTICAL));
         }
@@ -106,12 +106,11 @@ public class DetailWindow extends JFrame {
         return addRemoveFavourite;
     }
 
-    private void toggleFavourites(WeatherStation station, JButton button, Favourites favourites){
+    private void toggleFavourites(WeatherStation station, JButton button, Favourites favourites) {
         if (favourites.contains(station)) {
             favourites.remove(station);
             button.setText(ADD_TO_FAVOURITES);
-        }
-        else {
+        } else {
             button.setText(REMOVE_FROM_FAVOURITES);
             favourites.add(station);
         }

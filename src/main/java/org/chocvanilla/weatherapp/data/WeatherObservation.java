@@ -90,10 +90,10 @@ public class WeatherObservation {
 
     @Override
     public String toString() {
-        return String.format("WeatherObservation{timestamp='%s', name='%s', " + 
-                "apparentTemperature=%s, gustKm=%s, gustKt=%s, airTemperature=%s, " +
-                "dewPt=%s, rain=%s, windDir='%s', windSpdKm=%s, windSpdKt=%s}", 
-                timestamp, name, apparentTemperature, gustKm, gustKt, 
+        return String.format("WeatherObservation{timestamp='%s', name='%s', " +
+                        "apparentTemperature=%s, gustKm=%s, gustKt=%s, airTemperature=%s, " +
+                        "dewPt=%s, rain=%s, windDir='%s', windSpdKm=%s, windSpdKt=%s}",
+                timestamp, name, apparentTemperature, gustKm, gustKt,
                 airTemperature, dewPt, rain, windDir, windSpdKm, windSpdKt);
     }
 }

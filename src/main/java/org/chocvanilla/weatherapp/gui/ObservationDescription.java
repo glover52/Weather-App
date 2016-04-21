@@ -10,8 +10,14 @@ public class ObservationDescription {
     private String label;
     private String format;
     private Supplier<?> source;
-    
-    public static List<ObservationDescription> forObservation(WeatherObservation observation){
+
+    public ObservationDescription(String labelText, String format, Supplier<?> source) {
+        label = labelText;
+        this.source = source;
+        this.format = format;
+    }
+
+    public static List<ObservationDescription> forObservation(WeatherObservation observation) {
         final String DEG_C = "%.1f °C";
         final String KM_H = "%.1f km/h";
         List<ObservationDescription> list = new ArrayList<>();
@@ -24,18 +30,12 @@ public class ObservationDescription {
         list.add(new ObservationDescription("Dew point", DEG_C, observation::getDewPt));
         return list;
     }
-    
-    public ObservationDescription(String labelText, String format, Supplier<?> source){
-        label = labelText;
-        this.source = source;
-        this.format = format;
-    }
-    
-    public String getLabel(){
+
+    public String getLabel() {
         return label;
     }
-    
-    public String getValue(){
+
+    public String getValue() {
         return String.format(format, source.get());
     }
 }

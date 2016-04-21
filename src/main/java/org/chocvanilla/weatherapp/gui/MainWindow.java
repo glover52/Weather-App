@@ -7,7 +7,7 @@ import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
 import java.awt.*;
 import java.util.List;
-import java.util.concurrent.*;
+import java.util.concurrent.FutureTask;
 
 public class MainWindow {
 
@@ -24,7 +24,7 @@ public class MainWindow {
         stations = weatherStations;
         favourites = favouriteStations;
         frame.setName("MainWindow");
-        detailWindow = new DetailWindow(new WindowLocationManager(null, frame), 
+        detailWindow = new DetailWindow(new WindowLocationManager(null, frame),
                 this::updateFavouritesButtons,
                 favourites);
         frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
