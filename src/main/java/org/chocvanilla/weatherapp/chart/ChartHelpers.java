@@ -72,9 +72,8 @@ public class ChartHelpers {
                 0.0f, 0.0f, new Color(255, 70, 70)
         );
         plot.setBackgroundPaint(g);
-
         plot.setOutlineVisible(false);
-
+        chart.setBackgroundPaint(new Color(255, 255, 255, 0));
         return new ChartPanel(chart);
     }
 }
