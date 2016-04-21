@@ -10,6 +10,8 @@ import java.awt.*;
 import java.util.List;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.FutureTask;
+import javax.swing.table.TableColumn;
+import javax.swing.table.DefaultTableCellRenderer;
 
 import static org.chocvanilla.weatherapp.gui.GuiHelpers.fieldToLabel;
 
@@ -18,18 +20,20 @@ public class DetailWindow extends JFrame {
     private JFrame detailFrame = new JFrame();
     private JPanel latestObsContainer = new JPanel();
     private JPanel chartContainer = new JPanel();
+    private JPanel tableContainer = new JPanel();
     private JPanel buttonContainer = new JPanel();
+    private JTabbedPane historyContainer = new JTabbedPane();
     private ChartPanel chartPanel = null;
     private final FavouritesUpdatedListener favouritesUpdatedListener;
     private final String ADD_TO_FAVOURITES = "Add to Favourites";
     private final String REMOVE_FROM_FAVOURITES = "Remove from Favourites";
-    
-   
+
+
     public DetailWindow(WindowLocationManager locationManager, FavouritesUpdatedListener listener,
                         Favourites favourites) {
         favouritesUpdatedListener = listener;
         this.favourites = favourites;
-        
+
         detailFrame.setName("DetailWindow");
         detailFrame.addWindowListener(locationManager);
         JPanel container = new JPanel();
@@ -38,36 +42,65 @@ public class DetailWindow extends JFrame {
         container.setLayout(new BoxLayout(container, BoxLayout.Y_AXIS));
         buttonContainer.setLayout(new FlowLayout(FlowLayout.LEFT, 10, 10));
 
-        chartContainer.setBorder(BorderFactory.createTitledBorder("Temperature History"));
+        historyContainer.setBorder(BorderFactory.createTitledBorder("Observation History"));
         latestObsContainer.setBorder(BorderFactory.createTitledBorder("Latest Observations"));
 
+        historyContainer.addTab("Chart", chartContainer);
+        historyContainer.addTab("Table", tableContainer);
+
+        tableContainer.setLayout(new GridBagLayout());
+
         container.add(buttonContainer);
-        container.add(chartContainer);
         container.add(latestObsContainer);
+        container.add(historyContainer);
     }
 
 
     public void display(WeatherStation station, FutureTask<List<WeatherObservation>> dataSupplier) {
         try {
             List<WeatherObservation> observations = dataSupplier.get();
+            // Details
             latestObsContainer.removeAll();
             latestObsContainer.add(buildDetails(observations.get(0)));
+            // Add to favorites
             buttonContainer.removeAll();
             buttonContainer.add(buildFavouritesButton(station, favourites));
             buttonContainer.add(buildRefreshButton(station));
-            
             // Need to revalidate to avoid artifacts from previous button
             buttonContainer.revalidate();
             buttonContainer.repaint();
-            
+            // Chart
             JFreeChart chart = ChartHelpers.createChart(station, observations);
             updateChart(chart);
+            // Table
+            GridBagConstraints c = new GridBagConstraints();
+            c.fill = GridBagConstraints.BOTH;
+            c.weightx = 1;
+            c.weighty = 0;
+
+            tableContainer.add(new JScrollPane(buildTable(observations)), c);
+
             detailFrame.setTitle(station.getName());
             detailFrame.pack();
             detailFrame.setVisible(true);
         } catch (InterruptedException | ExecutionException ignored) {
             // Can't get data, so don't display chart
         }
+    }
+
+    private JTable buildTable(List<WeatherObservation> observations) {
+        Object[][] data = ObservationHistory(observations);
+        String[] columnNames = {"Time","Air Temp", "Apparent Temp", "Gust (km/h)", "Gust (kt)",
+                "Wind Direction", "Wind Speed (km/h)", "Wind Speed (kt)",
+                "Dew Point", "Rain (mm)"};
+
+        JTable table = new JTable(data, columnNames){
+            // Disable editing
+            public boolean isCellEditable(int row, int column) {
+                return false;
+            }
+        };
+        return table;
     }
 
     private JButton buildRefreshButton(WeatherStation station) {
@@ -116,6 +149,25 @@ public class DetailWindow extends JFrame {
             favourites.add(station);
         }
         favouritesUpdatedListener.update();
+    }
+
+    private  Object[][] ObservationHistory(List<WeatherObservation> observations){
+        Object[][] data = new Object[observations.size()][11];
+
+        for (int i = 0; i < observations.size(); i++ ) {
+            data[i][0] =  observations.get(i).getTimestamp();
+            data[i][1] =  observations.get(i).getAirTemperature();
+            data[i][2] =  observations.get(i).getApparentTemperature();
+            data[i][3] =  observations.get(i).getGustKm();
+            data[i][4] =  observations.get(i).getGustKt();
+            data[i][5] =  observations.get(i).getWindDir();
+            data[i][6] =  observations.get(i).getWindSpdKm();
+            data[i][7] =  observations.get(i).getWindSpdKt();
+            data[i][8] =  observations.get(i).getDewPt();
+            data[i][9] =  observations.get(i).getRain();
+            data[i][10] = observations.get(i).getTimestamp();
+        }
+        return data;
     }
 }
 
