@@ -19,7 +19,7 @@ public class MainWindow {
     private final JTextField searchBox = new JTextField();
     private final JList<WeatherStation> stationList = new JList<>();
     private JPanel favouritesPanel;
-    private final String NO_FAVOURITES = 
+    private static final String NO_FAVOURITES =
             "You have no favorites! Open a station and click the favorites button to see it here.";
 
     public MainWindow(WeatherStations weatherStations, Favourites favouriteStations) {
