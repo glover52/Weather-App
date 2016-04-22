@@ -13,7 +13,9 @@ To use this only as an application, the user only needs to run the supplied "Wea
 ![main_window_labeled](main_window_labeled.png)
 
 1) **Search bar** - A search bar to filter the station list
+
 2) **Station list** -  A list that shows all the known weather stations by default.
+
 3) **Favorites panel** - You favorite stations will appear here for easy access.
 
 #####*Details Window:*
