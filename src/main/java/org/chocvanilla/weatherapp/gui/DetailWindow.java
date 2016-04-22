@@ -31,7 +31,14 @@ public class DetailWindow extends JFrame {
     private ChartPanel chartPanel = null;
     private JLabel refreshStatusLabel = new JLabel();
 
-
+    /**
+     *  Create a new window, in which a chart with the most recent temperatures is displayed, both as a chart, and in a
+     *  table. View is modelled in tabs.
+     *
+     * @param locationManager  saves previous window location, opens window to last location
+     * @param listener  an interface for updating the favourites list instantly both on screen, and in program
+     * @param favourites  the current working list of favourites
+     */
     public DetailWindow(WindowLocationManager locationManager, FavouritesUpdatedListener listener,
                         Favourites favourites) {
         favouritesUpdatedListener = listener;
@@ -59,7 +66,12 @@ public class DetailWindow extends JFrame {
         container.add(historyContainer);
     }
 
-
+    /**
+     * The method that deals with the Java Swing context. All containers are cleared and populated with fresh data.
+     * @param station  The {@link WeatherStation} for which data is displayed
+     * @param dataSupplier  An asynchronous way of retireiving the {@link WeatherObservation} data, via
+     *                     threading.
+     */
     public void display(WeatherStation station, FutureTask<List<WeatherObservation>> dataSupplier) {
         try {
 
@@ -104,6 +116,11 @@ public class DetailWindow extends JFrame {
         }
     }
 
+    /**
+     * Takes the {@link WeatherObservation} object, and creates and populates a JTable with the most recent data.
+     * @param observations  The iterable list of weather observations.
+     * @return the populated table, which is added to the appropriate JPanel.
+     */
     private JTable buildTable(List<WeatherObservation> observations) {
         Object[][] data = observationHistory(observations);
         String[] columnNames = {"Time", "Air Temp", "Apparent Temp", "Gust (km/h)", "Gust (kt)",
@@ -122,12 +139,23 @@ public class DetailWindow extends JFrame {
         return table;
     }
 
+    /**
+     * Create button to check if the current data is the most recent available.
+     *
+     * @param station the {@link WeatherStation} object, provides handle on object.
+     * @return button which is then added to the correct JPanel
+     */
     private JButton buildRefreshButton(WeatherStation station) {
         JButton refresh = new JButton(REFRESH);
         refresh.addActionListener(x -> display(station, ObservationLoader.loadAsync(station)));
         return refresh;
     }
 
+    /**
+     * Checks if chart has been initialised. Avoids Null Pointer Exceptions.
+     *
+     * @param chart the chart object, used for graphically displaying the data
+     */
     private void updateChart(JFreeChart chart) {
         if (chartPanel == null) {
             chartPanel = new ChartPanel(chart);
@@ -138,12 +166,23 @@ public class DetailWindow extends JFrame {
         setChartPanelAttributes(chartPanel);
     }
 
+    /**
+     * Method of disabling non-applicable functions from JFreeChart.
+     *
+     * @param chartPanel the chart equivalent of a JPanel, for use with JFrame.
+     */
     private void setChartPanelAttributes(ChartPanel chartPanel) {
         chartPanel.setDomainZoomable(false);
         chartPanel.setRangeZoomable(false);
         chartPanel.setPopupMenu(null);
     }
 
+    /**
+     * Method of taking the most recent observations, and adding them to the returned JPanel
+     *
+     * @param observation the most recent observation.
+     * @return New JPanel, added to DetailedWindow.
+     */
     private JPanel buildDetails(WeatherObservation observation) {
         JPanel details = new JPanel();
         details.setLayout(new FlowLayout());
@@ -154,6 +193,14 @@ public class DetailWindow extends JFrame {
         return details;
     }
 
+    /**
+     * Method to create the button to add or remove from the favourites list. Dynamically creates the label for the
+     * button depending on the stations existence in the favourites list.
+     *
+     * @param station handle on the station object being operated on
+     * @param favourites the current working favourites list.
+     * @return new JButton to add or remove from favourites.
+     */
     private JButton buildFavouritesButton(WeatherStation station, Favourites favourites) {
         JButton addRemoveFavourite = new JButton();
         if (favourites.contains(station)) {
@@ -165,6 +212,14 @@ public class DetailWindow extends JFrame {
         return addRemoveFavourite;
     }
 
+    /**
+     * Method for toggling the favourites button between either Adding to Favourites, or Removing from Favourites.
+     * Makes us of the {@link FavouritesUpdatedListener} to dynamically update the favourites list in the Main Window
+     *
+     * @param station handle on the station object being operated on.
+     * @param button handle on the favourite button
+     * @param favourites the current favourites list.
+     */
     private void toggleFavourites(WeatherStation station, JButton button, Favourites favourites) {
         if (favourites.contains(station)) {
             favourites.remove(station);
