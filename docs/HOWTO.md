@@ -49,7 +49,7 @@ Weather stations objects in [.weather_stations.json](../.weather_stations.json) 
   }
 ```
 
-To add a weather station, insert it the appropriate object into file:
+To add a weather station, insert the appropriate object into file:
 
 ```json
 [
