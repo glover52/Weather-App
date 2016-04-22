@@ -74,7 +74,7 @@ public class ObservationLoader {
      * @param observations A list of weather observations
      * @return an array of observations
      */
-    public static Object[][] ObservationHistory(List<WeatherObservation> observations){
+    public static Object[][] observationHistory(List<WeatherObservation> observations){
         Object[][] data = new Object[observations.size()][10];
 
         for (int i = 0; i < observations.size(); i++ ) {

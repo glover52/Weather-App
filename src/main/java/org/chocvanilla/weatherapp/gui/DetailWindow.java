@@ -13,11 +13,11 @@ import java.util.concurrent.*;
 
 import javax.swing.table.TableColumnModel;
 
-import static org.chocvanilla.weatherapp.data.ObservationLoader.ObservationHistory;
+import static org.chocvanilla.weatherapp.data.ObservationLoader.observationHistory;
 import static org.chocvanilla.weatherapp.gui.GuiHelpers.fieldToLabel;
 
 public class DetailWindow extends JFrame {
-    public static final String REFRESH = "↻ Refresh";
+    private static final String REFRESH = "↻ Refresh";
     private static final String ADD_TO_FAVOURITES = "☆ Favourite";
     private static final String REMOVE_FROM_FAVOURITES = "★ Unfavourite";
     private final Favourites favourites;
@@ -105,7 +105,7 @@ public class DetailWindow extends JFrame {
     }
 
     private JTable buildTable(List<WeatherObservation> observations) {
-        Object[][] data = ObservationHistory(observations);
+        Object[][] data = observationHistory(observations);
         String[] columnNames = {"Time","Air Temp", "Apparent Temp", "Gust (km/h)", "Gust (kt)",
                 "Wind Direction", "Wind Speed (km/h)", "Wind Speed (kt)",
                 "Dew Point", "Rain (mm)"};
