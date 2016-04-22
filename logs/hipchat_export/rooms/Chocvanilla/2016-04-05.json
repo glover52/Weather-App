@@ -1,0 +1,42 @@
+[
+  {
+    "date":"2016-04-05T07:31:34+0000",
+    "from":{
+      "name":"Bitbucket",
+      "user_id":"api"
+    },
+    "message":"<img src=\"https:\/\/hipbucket.bitbucketconnect.com\/icons\/commits-blue.png\" alt=\"\" height=\"16\" width=\"13\" \/> 2 commits pushed to branch <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\/branch\/master\"><strong>master<\/strong><\/a> by <a href=\"https:\/\/bitbucket.org\/s3544305\/\"><strong>Adam Thalhammer<\/strong><\/a> in <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\"><strong>chocvanilla\/weather-app<\/strong><\/a><br \/>- loading of weather observations\\n \u00b7 <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\/commits\/dcf12c81f73515402b21a07ebdb916d643831cd1\">dcf12c8<\/a><br \/>- Load weather stations from weather_stations.json; test; added hamcr... \u00b7 <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\/commits\/3b15ade1094f301d350125a025bb529ceac19447\">3b15ade<\/a>"
+  },
+  {
+    "date":"2016-04-05T07:31:34+0000",
+    "from":{
+      "name":"Bitbucket",
+      "user_id":"api"
+    },
+    "message":"<img src=\"https:\/\/hipbucket.bitbucketconnect.com\/icons\/commits-blue.png\" alt=\"\" height=\"16\" width=\"13\" \/> 2 commits pushed to branch <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\/branch\/skeletonCode\"><strong>skeletonCode<\/strong><\/a> by <a href=\"https:\/\/bitbucket.org\/s3544305\/\"><strong>Adam Thalhammer<\/strong><\/a> in <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\"><strong>chocvanilla\/weather-app<\/strong><\/a><br \/>- Fixed importing gradle .settings\\n \u00b7 <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\/commits\/c387e08e00d1ef8106ec239a66c1d0de114f9337\">c387e08<\/a><br \/>- Added .settings to .gitignore\\n \u00b7 <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\/commits\/7bdcba4cd8c55e1be3f84882e83b0304b6e746de\">7bdcba4<\/a>"
+  },
+  {
+    "date":"2016-04-05T08:27:41+0000",
+    "from":{
+      "name":"Bitbucket",
+      "user_id":"api"
+    },
+    "message":"<img src=\"https:\/\/hipbucket.bitbucketconnect.com\/icons\/commits-blue.png\" alt=\"\" height=\"16\" width=\"13\" \/> 3 commits pushed to branch <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\/branch\/gui\"><strong>gui<\/strong><\/a> by <a href=\"https:\/\/bitbucket.org\/glover52\/\"><strong>Kyle Glover<\/strong><\/a> in <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\"><strong>chocvanilla\/weather-app<\/strong><\/a><br \/>- Random commit\\n \u00b7 <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\/commits\/59487654ec62639d08fcc389149164c58167bc05\">5948765<\/a><br \/>- loading of weather observations\\n \u00b7 <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\/commits\/dcf12c81f73515402b21a07ebdb916d643831cd1\">dcf12c8<\/a><br \/>- Load weather stations from weather_stations.json; test; added hamcr... \u00b7 <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\/commits\/3b15ade1094f301d350125a025bb529ceac19447\">3b15ade<\/a>"
+  },
+  {
+    "date":"2016-04-05T08:52:25+0000",
+    "from":{
+      "name":"Bitbucket",
+      "user_id":"api"
+    },
+    "message":"<img src=\"https:\/\/hipbucket.bitbucketconnect.com\/icons\/commits-blue.png\" alt=\"\" height=\"16\" width=\"13\" \/> One commit pushed to branch <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\/branch\/data_retrieval\"><strong>data_retrieval<\/strong><\/a> by <a href=\"https:\/\/bitbucket.org\/s3544305\/\"><strong>Adam Thalhammer<\/strong><\/a> in <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\"><strong>chocvanilla\/weather-app<\/strong><\/a><br \/>- loading of weather observations\\n \u00b7 <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\/commits\/00b710d1b885c3e17bfb8330c58b54e3c1873ef0\">00b710d<\/a>"
+  },
+  {
+    "date":"2016-04-05T09:22:41+0000",
+    "from":{
+      "name":"Bitbucket",
+      "user_id":"api"
+    },
+    "message":"<img src=\"https:\/\/hipbucket.bitbucketconnect.com\/icons\/commits-blue.png\" alt=\"\" height=\"16\" width=\"13\" \/> One commit pushed to branch <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\/branch\/gui\"><strong>gui<\/strong><\/a> by <a href=\"https:\/\/bitbucket.org\/glover52\/\"><strong>Kyle Glover<\/strong><\/a> in <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\"><strong>chocvanilla\/weather-app<\/strong><\/a><br \/>- Added favourites class\\n \u00b7 <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\/commits\/b9323bec5ed3b6f8d8d8a4931fcaae436d0166c1\">b9323be<\/a>"
+  }
+]

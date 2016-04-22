@@ -1,0 +1,743 @@
+[
+  {
+    "date":"2016-04-14T01:10:30+0000",
+    "from":{
+      "name":"Adam Thalhammer",
+      "user_id":3634594
+    },
+    "message":"@RhysVanOrsouw I fixed the graph bug. looks great now!"
+  },
+  {
+    "date":"2016-04-14T01:11:49+0000",
+    "from":{
+      "name":"Adam Thalhammer",
+      "user_id":3634594
+    },
+    "message":"we were parsing 1100 as the hour instead of 11 ;)"
+  },
+  {
+    "date":"2016-04-14T01:12:32+0000",
+    "from":{
+      "name":"Adam Thalhammer",
+      "user_id":3634594
+    },
+    "message":"@all assignment deadline extended to april 22."
+  },
+  {
+    "date":"2016-04-14T01:14:23+0000",
+    "from":{
+      "name":"Bitbucket",
+      "user_id":"api"
+    },
+    "message":"<img src=\"https:\/\/hipbucket.bitbucketconnect.com\/icons\/commits-blue.png\" alt=\"\" height=\"16\" width=\"13\" \/> 4 commits pushed to branch <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\/branch\/master\"><strong>master<\/strong><\/a> by <a href=\"https:\/\/bitbucket.org\/s3544305\/\"><strong>Adam Thalhammer<\/strong><\/a> in <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\"><strong>chocvanilla\/weather-app<\/strong><\/a><br \/>- fixed bug where hours were not correctly parsed...\\n \u00b7 <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\/commits\/b23bc9eaca72e089c0387911016a4c6839bd1606\">b23bc9e<\/a><br \/>- Basic framework for chart temperature for favourite stations.\\n \u00b7 <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\/commits\/cac4232396cf85eb4c1f8657b1a456ef01f8d20e\">cac4232<\/a><br \/>- Basic framework for chart temperature for favourite stations.\\n \u00b7 <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\/commits\/e07bbc5cbb0a1c08932e7c8ba269c19440a21ae6\">e07bbc5<\/a><br \/>- added basic gui with search box and list of weather stations and fa... \u00b7 <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\/commits\/e5d500b1c7d6e83bc99418f8fb63cb646f75c07f\">e5d500b<\/a>"
+  },
+  {
+    "date":"2016-04-14T01:15:27+0000",
+    "from":{
+      "name":"Rhys Van Orsouw",
+      "user_id":3634053
+    },
+    "message":"Ahh i thought it was in 24 hour time"
+  },
+  {
+    "date":"2016-04-14T01:15:31+0000",
+    "from":{
+      "name":"Rhys Van Orsouw",
+      "user_id":3634053
+    },
+    "message":"ill have a look now"
+  },
+  {
+    "date":"2016-04-14T01:15:37+0000",
+    "from":{
+      "name":"Rhys Van Orsouw",
+      "user_id":3634053
+    },
+    "message":"did you fix the gradlew file problem?"
+  },
+  {
+    "date":"2016-04-14T01:16:01+0000",
+    "from":{
+      "name":"Adam Thalhammer",
+      "user_id":3634594
+    },
+    "message":"don't worry about it, unless it breaks the build for someone we can leave it in. it still works fine on my system"
+  },
+  {
+    "date":"2016-04-14T01:18:18+0000",
+    "from":{
+      "name":"Bitbucket",
+      "user_id":"api"
+    },
+    "message":"<img src=\"https:\/\/hipbucket.bitbucketconnect.com\/icons\/commits-blue.png\" alt=\"\" height=\"16\" width=\"13\" \/> 4 commits pushed to branch <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\/branch\/master\"><strong>master<\/strong><\/a> by <a href=\"https:\/\/bitbucket.org\/s3544305\/\"><strong>Adam Thalhammer<\/strong><\/a> in <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\"><strong>chocvanilla\/weather-app<\/strong><\/a><br \/>- fixed bug where hours were not correctly parsed...\\n \u00b7 <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\/commits\/b23bc9eaca72e089c0387911016a4c6839bd1606\">b23bc9e<\/a><br \/>- Basic framework for chart temperature for favourite stations.\\n \u00b7 <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\/commits\/cac4232396cf85eb4c1f8657b1a456ef01f8d20e\">cac4232<\/a><br \/>- Basic framework for chart temperature for favourite stations.\\n \u00b7 <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\/commits\/e07bbc5cbb0a1c08932e7c8ba269c19440a21ae6\">e07bbc5<\/a><br \/>- added basic gui with search box and list of weather stations and fa... \u00b7 <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\/commits\/e5d500b1c7d6e83bc99418f8fb63cb646f75c07f\">e5d500b<\/a>"
+  },
+  {
+    "date":"2016-04-14T01:35:28+0000",
+    "from":{
+      "name":"Rhys Van Orsouw",
+      "user_id":3634053
+    },
+    "message":"Looks great now haha"
+  },
+  {
+    "date":"2016-04-14T01:35:53+0000",
+    "from":{
+      "name":"Rhys Van Orsouw",
+      "user_id":3634053
+    },
+    "message":"I didnt realise JFreeChart had a Minute object too, otherwise i would have used it"
+  },
+  {
+    "date":"2016-04-14T01:36:04+0000",
+    "from":{
+      "name":"Rhys Van Orsouw",
+      "user_id":3634053
+    },
+    "message":"I assumed the json was in 24 hour time"
+  },
+  {
+    "date":"2016-04-14T01:36:53+0000",
+    "from":{
+      "name":"Adam Thalhammer",
+      "user_id":3634594
+    },
+    "message":"yeah, I think the time string is actually has seconds too (YYYY MM DD HH MM SS) so technically we could do seconds. Though I doubt that would be useful"
+  },
+  {
+    "date":"2016-04-14T01:36:55+0000",
+    "from":{
+      "name":"Rhys Van Orsouw",
+      "user_id":3634053
+    },
+    "message":"Ill start making the chart prettier i pormise"
+  },
+  {
+    "date":"2016-04-14T01:37:10+0000",
+    "from":{
+      "name":"Rhys Van Orsouw",
+      "user_id":3634053
+    },
+    "message":"I think its safe to assume we dont need seconds"
+  },
+  {
+    "date":"2016-04-14T01:37:19+0000",
+    "from":{
+      "name":"Adam Thalhammer",
+      "user_id":3634594
+    },
+    "message":"yeah agreed"
+  },
+  {
+    "date":"2016-04-14T01:37:45+0000",
+    "from":{
+      "name":"Adam Thalhammer",
+      "user_id":3634594
+    },
+    "message":" I am looking into multithreading. because the download delays the opening of the chart. so if we can download async in the background we can get rid of the delay"
+  },
+  {
+    "date":"2016-04-14T01:38:16+0000",
+    "from":{
+      "name":"Kyle Glover",
+      "user_id":3646818
+    },
+    "message":"It doesn't seem like it delays it that much?"
+  },
+  {
+    "date":"2016-04-14T01:38:28+0000",
+    "from":{
+      "name":"Rhys Van Orsouw",
+      "user_id":3634053
+    },
+    "message":"It could definitley be quicker"
+  },
+  {
+    "date":"2016-04-14T01:40:11+0000",
+    "from":{
+      "name":"Rhys Van Orsouw",
+      "user_id":3634053
+    },
+    "message":"Are either you or raj coming in early today?"
+  },
+  {
+    "date":"2016-04-14T01:50:16+0000",
+    "from":{
+      "name":"Bitbucket",
+      "user_id":"api"
+    },
+    "message":"<img src=\"https:\/\/hipbucket.bitbucketconnect.com\/icons\/commits-blue.png\" alt=\"\" height=\"16\" width=\"13\" \/> One commit pushed to branch <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\/branch\/master\"><strong>master<\/strong><\/a> by <a href=\"https:\/\/bitbucket.org\/s3544305\/\"><strong>Adam Thalhammer<\/strong><\/a> in <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\"><strong>chocvanilla\/weather-app<\/strong><\/a><br \/>- async chart loading to eliminate delay on opening chart\\n \u00b7 <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\/commits\/33fd281c44a817ee036dceecb0fad6a8f74d7cf1\">33fd281<\/a>"
+  },
+  {
+    "date":"2016-04-14T01:50:31+0000",
+    "from":{
+      "name":"Adam Thalhammer",
+      "user_id":3634594
+    },
+    "message":"delay eliminated."
+  },
+  {
+    "date":"2016-04-14T01:51:08+0000",
+    "from":{
+      "name":"Bitbucket",
+      "user_id":"api"
+    },
+    "message":"<img src=\"https:\/\/hipbucket.bitbucketconnect.com\/icons\/commits-blue.png\" alt=\"\" height=\"16\" width=\"13\" \/> One commit pushed to branch <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\/branch\/gui\"><strong>gui<\/strong><\/a> by <a href=\"https:\/\/bitbucket.org\/s3544305\/\"><strong>Adam Thalhammer<\/strong><\/a> in <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\"><strong>chocvanilla\/weather-app<\/strong><\/a><br \/>- async chart loading to eliminate delay on opening chart\\n \u00b7 <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\/commits\/33fd281c44a817ee036dceecb0fad6a8f74d7cf1\">33fd281<\/a>"
+  },
+  {
+    "date":"2016-04-14T01:54:56+0000",
+    "from":{
+      "name":"Adam Thalhammer",
+      "user_id":3634594
+    },
+    "message":"it turned out to be quite easy. the nice thing is that since it uses a thread pool, it will load all favourites at once (in parallel) so no matter which one you click, it's already been downloaded."
+  },
+  {
+    "date":"2016-04-14T01:55:13+0000",
+    "from":{
+      "name":"Rhys Van Orsouw",
+      "user_id":3634053
+    },
+    "message":"Thats pretty cool"
+  },
+  {
+    "date":"2016-04-14T01:55:28+0000",
+    "from":{
+      "name":"Rhys Van Orsouw",
+      "user_id":3634053
+    },
+    "message":"are we going to display a loading buffer so users dont click the buttons until the backend is loaded?"
+  },
+  {
+    "date":"2016-04-14T01:56:25+0000",
+    "from":{
+      "name":"Adam Thalhammer",
+      "user_id":3634594
+    },
+    "message":"it's okay because when users click the buttons before it's loaded, the chart will still open it will just take a second or so longer.... but yeah, when a random weather station (not a favourite) is opened we will need to deal with the delay"
+  },
+  {
+    "date":"2016-04-14T01:56:58+0000",
+    "from":{
+      "name":"Kyle Glover",
+      "user_id":3646818
+    },
+    "message":"Tbh, that's really a given"
+  },
+  {
+    "date":"2016-04-14T01:57:28+0000",
+    "from":{
+      "name":"Kyle Glover",
+      "user_id":3646818
+    },
+    "message":"The only way to technically 'remove' the delay, is to move it to smoewhere else, ie when the program is loaded"
+  },
+  {
+    "date":"2016-04-14T01:57:38+0000",
+    "from":{
+      "name":"Adam Thalhammer",
+      "user_id":3634594
+    },
+    "message":"sure. so when we open the new jframe with the chart and data is still being downloaded, we can just display \"loading\"... i recon that will do"
+  },
+  {
+    "date":"2016-04-14T01:57:54+0000",
+    "from":{
+      "name":"Kyle Glover",
+      "user_id":3646818
+    },
+    "message":"Yeah"
+  },
+  {
+    "date":"2016-04-14T01:57:55+0000",
+    "from":{
+      "name":"Rhys Van Orsouw",
+      "user_id":3634053
+    },
+    "message":"I think that will suffice perfectly"
+  },
+  {
+    "date":"2016-04-14T01:58:21+0000",
+    "from":{
+      "name":"Rhys Van Orsouw",
+      "user_id":3634053
+    },
+    "message":"the gui frame creating will need to be move from chart eventually, when we decide to do that section"
+  },
+  {
+    "date":"2016-04-14T01:58:30+0000",
+    "from":{
+      "name":"Rhys Van Orsouw",
+      "user_id":3634053
+    },
+    "message":"window creating really doesnt belong htere"
+  },
+  {
+    "date":"2016-04-14T02:20:52+0000",
+    "from":{
+      "name":"Bitbucket",
+      "user_id":"api"
+    },
+    "message":"<img src=\"https:\/\/hipbucket.bitbucketconnect.com\/icons\/commits-blue.png\" alt=\"\" height=\"16\" width=\"13\" \/> One commit pushed to branch <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\/branch\/master\"><strong>master<\/strong><\/a> by <a href=\"https:\/\/bitbucket.org\/s3544305\/\"><strong>Adam Thalhammer<\/strong><\/a> in <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\"><strong>chocvanilla\/weather-app<\/strong><\/a><br \/>- fixed failing test\\n \u00b7 <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\/commits\/1abf01e06c069f975ac142af89cd63928926bc7c\">1abf01e<\/a>"
+  },
+  {
+    "date":"2016-04-14T02:21:21+0000",
+    "from":{
+      "name":"Bitbucket",
+      "user_id":"api"
+    },
+    "message":"<img src=\"https:\/\/hipbucket.bitbucketconnect.com\/icons\/commits-blue.png\" alt=\"\" height=\"16\" width=\"13\" \/> One commit pushed to branch <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\/branch\/gui\"><strong>gui<\/strong><\/a> by <a href=\"https:\/\/bitbucket.org\/s3544305\/\"><strong>Adam Thalhammer<\/strong><\/a> in <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\"><strong>chocvanilla\/weather-app<\/strong><\/a><br \/>- fixed failing test\\n \u00b7 <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\/commits\/1abf01e06c069f975ac142af89cd63928926bc7c\">1abf01e<\/a>"
+  },
+  {
+    "date":"2016-04-14T02:26:36+0000",
+    "from":{
+      "name":"Adam Thalhammer",
+      "user_id":3634594
+    },
+    "message":"by the way guys, I have my security in computing lecture now but can join afterwards (14.11 study room?)"
+  },
+  {
+    "date":"2016-04-14T02:27:30+0000",
+    "from":{
+      "name":"Adam Thalhammer",
+      "user_id":3634594
+    },
+    "message":"however this lecture is so boring that I'll keep working on stuff. if you don't mind I will write the code to open a chart when a weather station is selected from the search list"
+  },
+  {
+    "date":"2016-04-14T02:29:02+0000",
+    "from":{
+      "name":"Kyle Glover",
+      "user_id":3646818
+    },
+    "message":"sounds good, were stopping for lunch. we just finished our database tute"
+  },
+  {
+    "date":"2016-04-14T02:32:34+0000",
+    "from":{
+      "name":"Bitbucket",
+      "user_id":"api"
+    },
+    "message":"<img src=\"https:\/\/hipbucket.bitbucketconnect.com\/icons\/commits-blue.png\" alt=\"\" height=\"16\" width=\"13\" \/> One commit pushed to branch <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\/branch\/gui\"><strong>gui<\/strong><\/a> by <a href=\"https:\/\/bitbucket.org\/s3544305\/\"><strong>Adam Thalhammer<\/strong><\/a> in <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\"><strong>chocvanilla\/weather-app<\/strong><\/a><br \/>- refactored swing component creation\\n \u00b7 <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\/commits\/e776202ec4a36a86e661972b42627882ac6d123c\">e776202<\/a>"
+  },
+  {
+    "date":"2016-04-14T03:22:15+0000",
+    "from":{
+      "name":"Rhys Van Orsouw",
+      "user_id":3634053
+    },
+    "message":"looks much cleaner now, thanks adam"
+  },
+  {
+    "date":"2016-04-14T03:22:50+0000",
+    "from":{
+      "name":"Rhys Van Orsouw",
+      "user_id":3634053
+    },
+    "message":"we are next to the 14.11 study room. its opposite, and full of computers that only run fedora"
+  },
+  {
+    "date":"2016-04-14T03:23:27+0000",
+    "from":{
+      "name":"Adam Thalhammer",
+      "user_id":3634594
+    },
+    "message":"ok I'll push my experimental \"chart opening on list selection\" code...."
+  },
+  {
+    "date":"2016-04-14T03:24:01+0000",
+    "from":{
+      "name":"Rhys Van Orsouw",
+      "user_id":3634053
+    },
+    "message":"no problem"
+  },
+  {
+    "date":"2016-04-14T03:24:59+0000",
+    "from":{
+      "name":"Bitbucket",
+      "user_id":"api"
+    },
+    "message":"<img src=\"https:\/\/hipbucket.bitbucketconnect.com\/icons\/commits-blue.png\" alt=\"\" height=\"16\" width=\"13\" \/> One commit pushed to branch <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\/branch\/gui\"><strong>gui<\/strong><\/a> by <a href=\"https:\/\/bitbucket.org\/s3544305\/\"><strong>Adam Thalhammer<\/strong><\/a> in <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\"><strong>chocvanilla\/weather-app<\/strong><\/a><br \/>- experimental: open chart on list selection\\n \u00b7 <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\/commits\/e8f67c116c87101eb3c5263fe6a8b1b21990da41\">e8f67c1<\/a>"
+  },
+  {
+    "date":"2016-04-14T03:44:06+0000",
+    "from":{
+      "name":"Bitbucket",
+      "user_id":"api"
+    },
+    "message":"<img src=\"https:\/\/hipbucket.bitbucketconnect.com\/icons\/commits-blue.png\" alt=\"\" height=\"16\" width=\"13\" \/> One commit pushed to branch <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\/branch\/gui\"><strong>gui<\/strong><\/a> by <a href=\"https:\/\/bitbucket.org\/s3544305\/\"><strong>Adam Thalhammer<\/strong><\/a> in <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\"><strong>chocvanilla\/weather-app<\/strong><\/a><br \/>- Streamlined date parsing\\n \u00b7 <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\/commits\/634005bf517eaa2a69710dde78847bb5669216e2\">634005b<\/a>"
+  },
+  {
+    "date":"2016-04-14T03:48:28+0000",
+    "from":{
+      "name":"Adam Thalhammer",
+      "user_id":3634594
+    },
+    "message":"guys what part should I look at next? "
+  },
+  {
+    "date":"2016-04-14T03:48:43+0000",
+    "from":{
+      "name":"Rhys Van Orsouw",
+      "user_id":3634053
+    },
+    "message":"haha well you fixed mine right up"
+  },
+  {
+    "date":"2016-04-14T03:48:43+0000",
+    "from":{
+      "name":"Adam Thalhammer",
+      "user_id":3634594
+    },
+    "message":"we still need to add the ability to look at a table of weather data right? "
+  },
+  {
+    "date":"2016-04-14T03:48:45+0000",
+    "from":{
+      "name":"Rhys Van Orsouw",
+      "user_id":3634053
+    },
+    "message":"im not 100% sure yet"
+  },
+  {
+    "date":"2016-04-14T03:48:50+0000",
+    "from":{
+      "name":"Rhys Van Orsouw",
+      "user_id":3634053
+    },
+    "message":"most probably"
+  },
+  {
+    "date":"2016-04-14T03:49:33+0000",
+    "from":{
+      "name":"Rhys Van Orsouw",
+      "user_id":3634053
+    },
+    "message":"i think next step is to refactor the window creating in chart to a different class where we create the window for the favourite, add the chart, add table data, current temp etc "
+  },
+  {
+    "date":"2016-04-14T03:49:39+0000",
+    "from":{
+      "name":"Rhys Van Orsouw",
+      "user_id":3634053
+    },
+    "message":"what time does your lecture finish?"
+  },
+  {
+    "date":"2016-04-14T03:49:51+0000",
+    "from":{
+      "name":"Adam Thalhammer",
+      "user_id":3634594
+    },
+    "message":"sounds good"
+  },
+  {
+    "date":"2016-04-14T03:49:54+0000",
+    "from":{
+      "name":"Adam Thalhammer",
+      "user_id":3634594
+    },
+    "message":"finishes in half an hour"
+  },
+  {
+    "date":"2016-04-14T03:49:59+0000",
+    "from":{
+      "name":"Rhys Van Orsouw",
+      "user_id":3634053
+    },
+    "message":"okay cool"
+  },
+  {
+    "date":"2016-04-14T03:50:12+0000",
+    "from":{
+      "name":"Adam Thalhammer",
+      "user_id":3634594
+    },
+    "message":"but I haven't had lunch haa"
+  },
+  {
+    "date":"2016-04-14T03:50:14+0000",
+    "from":{
+      "name":"Adam Thalhammer",
+      "user_id":3634594
+    },
+    "message":"*haha"
+  },
+  {
+    "date":"2016-04-14T03:50:15+0000",
+    "from":{
+      "name":"Rhys Van Orsouw",
+      "user_id":3634053
+    },
+    "message":"im looking to different way of doing the charts colors etc"
+  },
+  {
+    "date":"2016-04-14T03:50:21+0000",
+    "from":{
+      "name":"Rhys Van Orsouw",
+      "user_id":3634053
+    },
+    "message":"look your welcome to get lunch first"
+  },
+  {
+    "date":"2016-04-14T03:50:27+0000",
+    "from":{
+      "name":"Rhys Van Orsouw",
+      "user_id":3634053
+    },
+    "message":"or just leave the lecture early :p"
+  },
+  {
+    "date":"2016-04-14T03:50:56+0000",
+    "from":{
+      "name":"Adam Thalhammer",
+      "user_id":3634594
+    },
+    "message":"weblearn test next week. I feel like I should at least sit here and pretend to listen"
+  },
+  {
+    "date":"2016-04-14T03:51:10+0000",
+    "from":{
+      "name":"Rhys Van Orsouw",
+      "user_id":3634053
+    },
+    "message":"if it makes your feel better :p"
+  },
+  {
+    "date":"2016-04-14T03:51:59+0000",
+    "from":{
+      "name":"Adam Thalhammer",
+      "user_id":3634594
+    },
+    "message":"ok so do you want me to extract the new window creation while you look at the graph colors? or is someone else working on that right now"
+  },
+  {
+    "date":"2016-04-14T03:52:25+0000",
+    "from":{
+      "name":"Rhys Van Orsouw",
+      "user_id":3634053
+    },
+    "message":"Kyle is trying to set up inteliJ corectly with gradle"
+  },
+  {
+    "date":"2016-04-14T03:52:31+0000",
+    "from":{
+      "name":"Rhys Van Orsouw",
+      "user_id":3634053
+    },
+    "message":"but is not having much luck"
+  },
+  {
+    "date":"2016-04-14T03:53:28+0000",
+    "from":{
+      "name":"Adam Thalhammer",
+      "user_id":3634594
+    },
+    "message":"oh no :S @kyle I recommend file -> new -> project from version control -> git"
+  },
+  {
+    "date":"2016-04-14T03:53:37+0000",
+    "from":{
+      "name":"Rhys Van Orsouw",
+      "user_id":3634053
+    },
+    "message":"we did that"
+  },
+  {
+    "date":"2016-04-14T03:53:49+0000",
+    "from":{
+      "name":"Rhys Van Orsouw",
+      "user_id":3634053
+    },
+    "message":"its currently downloading the mavern repo stuff"
+  },
+  {
+    "date":"2016-04-14T03:54:00+0000",
+    "from":{
+      "name":"Rhys Van Orsouw",
+      "user_id":3634053
+    },
+    "message":"and its set to default gradle wrapper"
+  },
+  {
+    "date":"2016-04-14T03:54:07+0000",
+    "from":{
+      "name":"Rhys Van Orsouw",
+      "user_id":3634053
+    },
+    "message":"trying to make sure he has the same settings as me"
+  },
+  {
+    "date":"2016-04-14T04:20:21+0000",
+    "from":{
+      "name":"Bitbucket",
+      "user_id":"api"
+    },
+    "message":"<img src=\"https:\/\/hipbucket.bitbucketconnect.com\/icons\/commits-blue.png\" alt=\"\" height=\"16\" width=\"13\" \/> One commit pushed to branch <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\/branch\/gui\"><strong>gui<\/strong><\/a> by <a href=\"https:\/\/bitbucket.org\/rhysvo\/\"><strong>Rhys  Van Orsouw<\/strong><\/a> in <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\"><strong>chocvanilla\/weather-app<\/strong><\/a><br \/>- Started PLaying around with color background of chart and line\\n \u00b7 <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\/commits\/1483d4a16bf9a1ad32ea11e09dadd970a4e4a643\">1483d4a<\/a>"
+  },
+  {
+    "date":"2016-04-14T04:21:36+0000",
+    "from":{
+      "name":"Rhys Van Orsouw",
+      "user_id":3634053
+    },
+    "message":"So I've started playing around with coloring of the chart"
+  },
+  {
+    "date":"2016-04-14T04:21:54+0000",
+    "from":{
+      "name":"Adam Thalhammer",
+      "user_id":3634594
+    },
+    "message":"just finished my lecture. coming over"
+  },
+  {
+    "date":"2016-04-14T04:22:17+0000",
+    "from":{
+      "name":"Rhys Van Orsouw",
+      "user_id":3634053
+    },
+    "message":"Eventually, if we get time, id like to make it dynamic, so it colors the line based on the temp, and teh background is colored to night and day"
+  },
+  {
+    "date":"2016-04-14T04:22:22+0000",
+    "from":{
+      "name":"Rhys Van Orsouw",
+      "user_id":3634053
+    },
+    "message":"but thats if i get time"
+  },
+  {
+    "date":"2016-04-14T04:32:57+0000",
+    "from":{
+      "name":"Bitbucket",
+      "user_id":"api"
+    },
+    "message":"<img src=\"https:\/\/hipbucket.bitbucketconnect.com\/icons\/commits-blue.png\" alt=\"\" height=\"16\" width=\"13\" \/> 2 commits pushed to branch <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\/branch\/gui\"><strong>gui<\/strong><\/a> by <a href=\"https:\/\/bitbucket.org\/s3544305\/\"><strong>Adam Thalhammer<\/strong><\/a> in <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\"><strong>chocvanilla\/weather-app<\/strong><\/a><br \/>- Merge remote-tracking branch 'origin\/gui' into gui\\n \u00b7 <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\/commits\/003cd440f9ca075da3e4eaf7dc0967a059566a98\">003cd44<\/a><br \/>- separated main window from application runner, ensured that data ha... \u00b7 <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\/commits\/5c2425924d1d83df54a2f6f0a2700ee18a5ab03e\">5c24259<\/a>"
+  },
+  {
+    "date":"2016-04-14T04:43:26+0000",
+    "from":{
+      "name":"Bitbucket",
+      "user_id":"api"
+    },
+    "message":"<img src=\"https:\/\/hipbucket.bitbucketconnect.com\/icons\/commits-blue.png\" alt=\"\" height=\"16\" width=\"13\" \/> One commit pushed to branch <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\/branch\/gui\"><strong>gui<\/strong><\/a> by <a href=\"https:\/\/bitbucket.org\/s3544305\/\"><strong>Adam Thalhammer<\/strong><\/a> in <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\"><strong>chocvanilla\/weather-app<\/strong><\/a><br \/>- separated main window from application runner, ensured that data ha... \u00b7 <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\/commits\/d2027df28f942a80a137d51919826d6a4a69b004\">d2027df<\/a>"
+  },
+  {
+    "date":"2016-04-14T05:15:09+0000",
+    "from":{
+      "name":"Bitbucket",
+      "user_id":"api"
+    },
+    "message":"<img src=\"https:\/\/hipbucket.bitbucketconnect.com\/icons\/commits-blue.png\" alt=\"\" height=\"16\" width=\"13\" \/> One commit pushed to branch <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\/branch\/gui\"><strong>gui<\/strong><\/a> by <a href=\"https:\/\/bitbucket.org\/glover52\/\"><strong>Kyle Glover<\/strong><\/a> in <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\"><strong>chocvanilla\/weather-app<\/strong><\/a><br \/>- Fixed FileNotFound errors when first starting\\n \u00b7 <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\/commits\/1a5c0975f5aee00290d3f8ce35f5781f861dc770\">1a5c097<\/a>"
+  },
+  {
+    "date":"2016-04-14T05:16:42+0000",
+    "from":{
+      "name":"Bitbucket",
+      "user_id":"api"
+    },
+    "message":"<img src=\"https:\/\/hipbucket.bitbucketconnect.com\/icons\/commits-blue.png\" alt=\"\" height=\"16\" width=\"13\" \/> One commit pushed to branch <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\/branch\/gui\"><strong>gui<\/strong><\/a> by <a href=\"https:\/\/bitbucket.org\/rhysvo\/\"><strong>Rhys  Van Orsouw<\/strong><\/a> in <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\"><strong>chocvanilla\/weather-app<\/strong><\/a><br \/>- Moved JFrame creation to MainWindow\\n \u00b7 <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\/commits\/98b99978a4495d5c01a95c09cfafffb1beb9c1e6\">98b9997<\/a>"
+  },
+  {
+    "date":"2016-04-14T05:44:33+0000",
+    "from":{
+      "name":"Bitbucket",
+      "user_id":"api"
+    },
+    "message":"<img src=\"https:\/\/hipbucket.bitbucketconnect.com\/icons\/commits-blue.png\" alt=\"\" height=\"16\" width=\"13\" \/> One commit pushed to branch <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\/branch\/gui\"><strong>gui<\/strong><\/a> by <a href=\"https:\/\/bitbucket.org\/glover52\/\"><strong>Kyle Glover<\/strong><\/a> in <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\"><strong>chocvanilla\/weather-app<\/strong><\/a><br \/>- Fixed test errors with favourites\\n \u00b7 <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\/commits\/648e16f5d89c410c6d3c47b4c19f4faa16e3afd1\">648e16f<\/a>"
+  },
+  {
+    "date":"2016-04-14T05:46:03+0000",
+    "from":{
+      "name":"Bitbucket",
+      "user_id":"api"
+    },
+    "message":"<img src=\"https:\/\/hipbucket.bitbucketconnect.com\/icons\/commits-blue.png\" alt=\"\" height=\"16\" width=\"13\" \/> One commit pushed to branch <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\/branch\/gui\"><strong>gui<\/strong><\/a> by <a href=\"https:\/\/bitbucket.org\/rhysvo\/\"><strong>Rhys  Van Orsouw<\/strong><\/a> in <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\"><strong>chocvanilla\/weather-app<\/strong><\/a><br \/>- Deleted commented out line in Chart\\n \u00b7 <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\/commits\/7a9765e925eefbc6aaca49cff2e353c63c2dce54\">7a9765e<\/a>"
+  },
+  {
+    "date":"2016-04-14T05:47:54+0000",
+    "from":{
+      "name":"Rhys Van Orsouw",
+      "user_id":3634053
+    },
+    "message":"SO MANY COMMITS"
+  },
+  {
+    "date":"2016-04-14T05:51:35+0000",
+    "from":{
+      "name":"Bitbucket",
+      "user_id":"api"
+    },
+    "message":"<img src=\"https:\/\/hipbucket.bitbucketconnect.com\/icons\/commits-blue.png\" alt=\"\" height=\"16\" width=\"13\" \/> 2 commits pushed to branch <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\/branch\/gui\"><strong>gui<\/strong><\/a> by <a href=\"https:\/\/bitbucket.org\/s3544305\/\"><strong>Adam Thalhammer<\/strong><\/a> in <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\"><strong>chocvanilla\/weather-app<\/strong><\/a><br \/>- Merge remote-tracking branch 'origin\/gui' into gui\\n \u00b7 <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\/commits\/5a783070fddbb232c23a6e32f4e157f70c03a79c\">5a78307<\/a><br \/>- changed favourites to avoid duplication. favourites now implements ... \u00b7 <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\/commits\/01d5ddee46b02e825183afd9686d384950183d6f\">01d5dde<\/a>"
+  },
+  {
+    "date":"2016-04-14T06:00:35+0000",
+    "from":{
+      "name":"Bitbucket",
+      "user_id":"api"
+    },
+    "message":"<img src=\"https:\/\/hipbucket.bitbucketconnect.com\/icons\/commits-blue.png\" alt=\"\" height=\"16\" width=\"13\" \/> One commit pushed to branch <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\/branch\/gui\"><strong>gui<\/strong><\/a> by <a href=\"https:\/\/bitbucket.org\/glover52\/\"><strong>Kyle Glover<\/strong><\/a> in <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\"><strong>chocvanilla\/weather-app<\/strong><\/a><br \/>- Added favourite star + Credit\\n \u00b7 <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\/commits\/e079589015f46f32c361daabdfcebeb4a6942c65\">e079589<\/a>"
+  },
+  {
+    "date":"2016-04-14T06:01:20+0000",
+    "from":{
+      "name":"Bitbucket",
+      "user_id":"api"
+    },
+    "message":"<img src=\"https:\/\/hipbucket.bitbucketconnect.com\/icons\/commits-blue.png\" alt=\"\" height=\"16\" width=\"13\" \/> 2 commits pushed to branch <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\/branch\/gui\"><strong>gui<\/strong><\/a> by <a href=\"https:\/\/bitbucket.org\/s3544305\/\"><strong>Adam Thalhammer<\/strong><\/a> in <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\"><strong>chocvanilla\/weather-app<\/strong><\/a><br \/>- Merge remote-tracking branch 'origin\/gui' into gui\\n \u00b7 <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\/commits\/6c93744ff94e1d43b132e203a22c49e80a3fd1a9\">6c93744<\/a><br \/>- open details view relative to main window\\n \u00b7 <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\/commits\/d67e8e5fe154dd0ceb31d942ecda73f7d8371909\">d67e8e5<\/a>"
+  },
+  {
+    "date":"2016-04-14T06:03:09+0000",
+    "from":{
+      "name":"Kyle Glover",
+      "user_id":3646818
+    },
+    "file":{
+      "name":"favourite_on.png",
+      "size":2424,
+      "url":"http:\/\/uploads.hipchat.com\/544027\/3646818\/yjsGJAduyCxnMDH\/favourite_on.png"
+    },
+    "message":""
+  },
+  {
+    "date":"2016-04-14T06:27:55+0000",
+    "from":{
+      "name":"Bitbucket",
+      "user_id":"api"
+    },
+    "message":"<img src=\"https:\/\/hipbucket.bitbucketconnect.com\/icons\/commits-blue.png\" alt=\"\" height=\"16\" width=\"13\" \/> One commit pushed to branch <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\/branch\/gui\"><strong>gui<\/strong><\/a> by <a href=\"https:\/\/bitbucket.org\/s3544305\/\"><strong>Adam Thalhammer<\/strong><\/a> in <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\"><strong>chocvanilla\/weather-app<\/strong><\/a><br \/>- open details view relative to main window. clear selection when det... \u00b7 <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\/commits\/8c3207c06d018f54fb0c0058fb8b4485d3c90d6b\">8c3207c<\/a>"
+  },
+  {
+    "date":"2016-04-14T11:42:47+0000",
+    "from":{
+      "name":"Bitbucket",
+      "user_id":"api"
+    },
+    "message":"<img src=\"https:\/\/hipbucket.bitbucketconnect.com\/icons\/commits-blue.png\" alt=\"\" height=\"16\" width=\"13\" \/> One commit pushed to branch <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\/branch\/gui\"><strong>gui<\/strong><\/a> by <a href=\"https:\/\/bitbucket.org\/s3544305\/\"><strong>Adam Thalhammer<\/strong><\/a> in <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\"><strong>chocvanilla\/weather-app<\/strong><\/a><br \/>- prevent null pointer exception when selected index is null\\n \u00b7 <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\/commits\/c13f9b38734868212197076b5e34e638c65758b8\">c13f9b3<\/a>"
+  },
+  {
+    "date":"2016-04-14T11:48:21+0000",
+    "from":{
+      "name":"Bitbucket",
+      "user_id":"api"
+    },
+    "message":"<img src=\"https:\/\/hipbucket.bitbucketconnect.com\/icons\/commits-blue.png\" alt=\"\" height=\"16\" width=\"13\" \/> One commit pushed to branch <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\/branch\/gui\"><strong>gui<\/strong><\/a> by <a href=\"https:\/\/bitbucket.org\/s3544305\/\"><strong>Adam Thalhammer<\/strong><\/a> in <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\"><strong>chocvanilla\/weather-app<\/strong><\/a><br \/>- auto format code\\n \u00b7 <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\/commits\/4a0391005776944d56f00ededc8863492ae8ebbc\">4a03910<\/a>"
+  },
+  {
+    "date":"2016-04-14T11:50:08+0000",
+    "from":{
+      "name":"Bitbucket",
+      "user_id":"api"
+    },
+    "message":"<img src=\"https:\/\/hipbucket.bitbucketconnect.com\/icons\/commits-blue.png\" alt=\"\" height=\"16\" width=\"13\" \/> One commit pushed to branch <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\/branch\/gui\"><strong>gui<\/strong><\/a> by <a href=\"https:\/\/bitbucket.org\/s3544305\/\"><strong>Adam Thalhammer<\/strong><\/a> in <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\"><strong>chocvanilla\/weather-app<\/strong><\/a><br \/>- moved images to standard resources directory\\n \u00b7 <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\/commits\/b0692e15646081644c4e1395c0f854ba2a16eb68\">b0692e1<\/a>"
+  },
+  {
+    "date":"2016-04-14T12:56:55+0000",
+    "from":{
+      "name":"Bitbucket",
+      "user_id":"api"
+    },
+    "message":"<img src=\"https:\/\/hipbucket.bitbucketconnect.com\/icons\/commits-blue.png\" alt=\"\" height=\"16\" width=\"13\" \/> One commit pushed to branch <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\/branch\/gui\"><strong>gui<\/strong><\/a> by <a href=\"https:\/\/bitbucket.org\/s3544305\/\"><strong>Adam Thalhammer<\/strong><\/a> in <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\"><strong>chocvanilla\/weather-app<\/strong><\/a><br \/>- renamed for clarity\\n \u00b7 <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\/commits\/961cfa667a59255663910737f2cf0549975aca12\">961cfa6<\/a>"
+  }
+]

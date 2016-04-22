@@ -1,0 +1,1239 @@
+[
+  {
+    "date":"2016-03-10T00:06:48+0000",
+    "from":{
+      "name":"HipChat",
+      "user_id":"api"
+    },
+    "message":"Hi @KyleGlover! Welcome to Hipchat. You can @-mention me by typing @HipChat and I'll tell you what HipChat can do!"
+  },
+  [
+    
+  ],
+  {
+    "date":"2016-03-10T00:06:59+0000",
+    "from":{
+      "name":"Rhys Van Orsouw",
+      "user_id":3634053
+    },
+    "message":"Welcome, my young Padiwan"
+  },
+  {
+    "date":"2016-03-10T00:07:11+0000",
+    "from":{
+      "name":"Utsav Adhikari",
+      "user_id":3634595
+    },
+    "message":"lol"
+  },
+  {
+    "date":"2016-03-10T00:07:48+0000",
+    "from":{
+      "name":"Rhys Van Orsouw",
+      "user_id":3634053
+    },
+    "message":"So lets sort out what each of us are going to explain next week."
+  },
+  {
+    "date":"2016-03-10T00:08:12+0000",
+    "from":{
+      "name":"Utsav Adhikari",
+      "user_id":3634595
+    },
+    "message":"It doesn't have to be a tool that we are using."
+  },
+  {
+    "date":"2016-03-10T00:09:08+0000",
+    "from":{
+      "name":"Utsav Adhikari",
+      "user_id":3634595
+    },
+    "message":"so we could do things like Viso or something if you wanted"
+  },
+  {
+    "date":"2016-03-10T00:09:49+0000",
+    "from":{
+      "name":"Rhys Van Orsouw",
+      "user_id":3634053
+    },
+    "message":"Really? I asked the tutor and he basically just said you have to explain it to the whole class, as if they had no expereince with computers haha"
+  },
+  {
+    "date":"2016-03-10T00:10:05+0000",
+    "from":{
+      "name":"Utsav Adhikari",
+      "user_id":3634595
+    },
+    "message":"You do"
+  },
+  {
+    "date":"2016-03-10T00:10:30+0000",
+    "from":{
+      "name":"Kyle Glover",
+      "user_id":3646818
+    },
+    "message":"2ez"
+  },
+  {
+    "date":"2016-03-10T00:14:40+0000",
+    "from":{
+      "name":"Kyle Glover",
+      "user_id":3646818
+    },
+    "message":"http:\/\/gradle.org\/"
+  },
+  {
+    "date":"2016-03-10T00:14:40+0000",
+    "from":{
+      "name":"Link",
+      "user_id":"api"
+    },
+    "message":"\\n\\n\\n<p><b><a href=\"http:\/\/gradle.org\/\">Gradle l Modern Open-Source Enterprise Build Automation - Gradle<\/a><\/b><\/p>\\n\\n\\n<p>Emerge from Build Hell today through Gradle, the modern open source polyglot build automation system. Automate and integrate your DevOps toolchain with a concise and expressive build programming language. End long build times. End code freezes. End build script chaos. End deathmarches. End bug\u2026<\/p>\\n\\n"
+  },
+  {
+    "date":"2016-03-10T00:14:41+0000",
+    "from":{
+      "name":"Kyle Glover",
+      "user_id":3646818
+    },
+    "message":"https:\/\/bitbucket.org\/"
+  },
+  {
+    "date":"2016-03-10T00:14:41+0000",
+    "from":{
+      "name":"Link",
+      "user_id":"api"
+    },
+    "message":"\\n\\n\\n<p><b><a href=\"https:\/\/bitbucket.org\/\">Bitbucket \u2014 The Git solution for professional teams<\/a><\/b><\/p>\\n\\n\\n<p>Bitbucket is the Git solution for professional teams. Collaborate on code with inline comments and pull requests. Manage and share your Git repositories to build and ship software, as a team.<\/p>\\n\\n"
+  },
+  {
+    "date":"2016-03-10T00:15:58+0000",
+    "from":{
+      "name":"Kyle Glover",
+      "user_id":3646818
+    },
+    "message":"soz, just posting for permanent links up the top right corner (thumbsup) "
+  },
+  {
+    "date":"2016-03-10T00:40:41+0000",
+    "from":{
+      "name":"Kyle Glover",
+      "user_id":3646818
+    },
+    "message":"@RhysVanOrsouw see"
+  },
+  {
+    "date":"2016-03-10T05:44:45+0000",
+    "from":{
+      "name":"Kyle Glover",
+      "user_id":3646818
+    },
+    "message":"@RhysVanOrsouw says he wanted to explain HipChat"
+  },
+  {
+    "date":"2016-03-10T05:45:01+0000",
+    "from":{
+      "name":"Rhys Van Orsouw",
+      "user_id":3634053
+    },
+    "message":"@RhysVanOrsouw is king"
+  },
+  {
+    "date":"2016-03-10T05:45:19+0000",
+    "from":{
+      "name":"Kyle Glover",
+      "user_id":3646818
+    },
+    "message":"I would love to do BitBucket (git) seeing as I use it all the time :P"
+  },
+  {
+    "date":"2016-03-10T05:45:38+0000",
+    "from":{
+      "name":"Rhys Van Orsouw",
+      "user_id":3634053
+    },
+    "message":"I'd be happy to do hipchat, or any of them tbh, It's pretty simples"
+  },
+  {
+    "date":"2016-03-10T05:47:26+0000",
+    "from":{
+      "name":"Kyle Glover",
+      "user_id":3646818
+    },
+    "message":"Adam, since you pushed the project to bitbucket, you can do BitBucket if you want, and I can do HipChat if @RhysVanOrsouw  doesn't want to :P"
+  },
+  {
+    "date":"2016-03-10T05:48:12+0000",
+    "from":{
+      "name":"Adam Thalhammer",
+      "user_id":3634594
+    },
+    "message":"sure! happy to do this. or if you prefer to do bitbucket I can explain something else :)"
+  },
+  {
+    "date":"2016-03-10T05:48:31+0000",
+    "from":{
+      "name":"Rhys Van Orsouw",
+      "user_id":3634053
+    },
+    "message":"Would you feel comfortable explaining Gradle?"
+  },
+  {
+    "date":"2016-03-10T05:48:47+0000",
+    "from":{
+      "name":"Adam Thalhammer",
+      "user_id":3634594
+    },
+    "message":"I can make myself comfortable with it :p"
+  },
+  {
+    "date":"2016-03-10T05:49:17+0000",
+    "from":{
+      "name":"Adam Thalhammer",
+      "user_id":3634594
+    },
+    "message":"but does it fit the definition for the kind of tool we have to explain?"
+  },
+  {
+    "date":"2016-03-10T05:50:50+0000",
+    "from":{
+      "name":"Rhys Van Orsouw",
+      "user_id":3634053
+    },
+    "message":"Not sure actually, Raj thinks it can be any tool"
+  },
+  {
+    "date":"2016-03-10T05:50:58+0000",
+    "from":{
+      "name":"Adam Thalhammer",
+      "user_id":3634594
+    },
+    "message":"sure then I'll do gradle"
+  },
+  {
+    "date":"2016-03-10T05:51:00+0000",
+    "from":{
+      "name":"Rhys Van Orsouw",
+      "user_id":3634053
+    },
+    "message":"but it is a tool we are using, so it may be acceptable"
+  },
+  {
+    "date":"2016-03-10T05:51:13+0000",
+    "from":{
+      "name":"Kyle Glover",
+      "user_id":3646818
+    },
+    "message":"seems reasonable"
+  },
+  {
+    "date":"2016-03-10T05:51:37+0000",
+    "from":{
+      "name":"Kyle Glover",
+      "user_id":3646818
+    },
+    "message":"I would classify it as an acceptable tool as long as we ARE using it"
+  },
+  {
+    "date":"2016-03-10T05:52:31+0000",
+    "from":{
+      "name":"Rhys Van Orsouw",
+      "user_id":3634053
+    },
+    "message":"Yeah we'll go over that when we get a chance"
+  },
+  {
+    "date":"2016-03-10T05:52:39+0000",
+    "from":{
+      "name":"Adam Thalhammer",
+      "user_id":3634594
+    },
+    "message":"looking back at the lecture slides from last week it looks like gradle will be perfectly acceptable. so I'll do it"
+  },
+  {
+    "date":"2016-03-10T05:52:58+0000",
+    "from":{
+      "name":"Kyle Glover",
+      "user_id":3646818
+    },
+    "message":"Alright, I'll do BitBucket then"
+  },
+  {
+    "date":"2016-03-10T05:53:11+0000",
+    "from":{
+      "name":"Adam Thalhammer",
+      "user_id":3634594
+    },
+    "message":"(thumbsup) "
+  },
+  {
+    "date":"2016-03-10T05:53:22+0000",
+    "from":{
+      "name":"Kyle Glover",
+      "user_id":3646818
+    },
+    "message":"Raj, are you present?"
+  },
+  {
+    "date":"2016-03-10T05:53:29+0000",
+    "from":{
+      "name":"Rhys Van Orsouw",
+      "user_id":3634053
+    },
+    "message":"@UtsavAdhikari can do what ever he feels like doing, when he comes on haha."
+  },
+  {
+    "date":"2016-03-10T05:53:39+0000",
+    "from":{
+      "name":"Kyle Glover",
+      "user_id":3646818
+    },
+    "message":"It says he's online"
+  },
+  {
+    "date":"2016-03-10T05:53:48+0000",
+    "from":{
+      "name":"Rhys Van Orsouw",
+      "user_id":3634053
+    },
+    "message":"It always says hes online"
+  },
+  {
+    "date":"2016-03-10T05:53:54+0000",
+    "from":{
+      "name":"Adam Thalhammer",
+      "user_id":3634594
+    },
+    "message":"(itsatrap) "
+  },
+  {
+    "date":"2016-03-10T05:53:55+0000",
+    "from":{
+      "name":"Rhys Van Orsouw",
+      "user_id":3634053
+    },
+    "message":"I pm'd him, no reply"
+  },
+  {
+    "date":"2016-03-10T05:53:56+0000",
+    "from":{
+      "name":"Kyle Glover",
+      "user_id":3646818
+    },
+    "message":"#24\/7Coding"
+  },
+  {
+    "date":"2016-03-10T05:55:25+0000",
+    "from":{
+      "name":"Rhys Van Orsouw",
+      "user_id":3634053
+    },
+    "message":"(catchemall) "
+  },
+  {
+    "date":"2016-03-10T05:57:05+0000",
+    "from":{
+      "name":"Rhys Van Orsouw",
+      "user_id":3634053
+    },
+    "message":"(kyle)"
+  },
+  [
+    
+  ],
+  {
+    "date":"2016-03-10T05:58:08+0000",
+    "from":{
+      "name":"Adam Thalhammer",
+      "user_id":3634594
+    },
+    "message":"ding dong"
+  },
+  [
+    
+  ],
+  {
+    "date":"2016-03-10T05:59:35+0000",
+    "from":{
+      "name":"Adam Thalhammer",
+      "user_id":3634594
+    },
+    "message":"(nothingtodohere) "
+  },
+  {
+    "date":"2016-03-10T05:59:54+0000",
+    "from":{
+      "name":"Kyle Glover",
+      "user_id":3646818
+    },
+    "message":"(wutt)"
+  },
+  {
+    "date":"2016-03-10T05:59:56+0000",
+    "from":{
+      "name":"Adam Thalhammer",
+      "user_id":3634594
+    },
+    "message":"how is this a tool for work? too many distractions"
+  },
+  {
+    "date":"2016-03-10T06:00:00+0000",
+    "from":{
+      "name":"Kyle Glover",
+      "user_id":3646818
+    },
+    "message":"(milliman)"
+  },
+  {
+    "date":"2016-03-10T06:00:06+0000",
+    "from":{
+      "name":"Kyle Glover",
+      "user_id":3646818
+    },
+    "message":"(miliman) "
+  },
+  {
+    "date":"2016-03-10T06:00:20+0000",
+    "from":{
+      "name":"Kyle Glover",
+      "user_id":3646818
+    },
+    "message":"(dolancry) "
+  },
+  {
+    "date":"2016-03-10T06:00:43+0000",
+    "from":{
+      "name":"Rhys Van Orsouw",
+      "user_id":3634053
+    },
+    "message":"(raj)"
+  },
+  {
+    "date":"2016-03-10T06:02:02+0000",
+    "from":{
+      "name":"Rhys Van Orsouw",
+      "user_id":3634053
+    },
+    "message":"(celeryman) "
+  },
+  {
+    "date":"2016-03-10T06:02:11+0000",
+    "from":{
+      "name":"Rhys Van Orsouw",
+      "user_id":3634053
+    },
+    "message":"(giggity) "
+  },
+  {
+    "date":"2016-03-10T06:03:00+0000",
+    "from":{
+      "name":"Rhys Van Orsouw",
+      "user_id":3634053
+    },
+    "message":"(orly) "
+  },
+  {
+    "date":"2016-03-10T06:03:07+0000",
+    "from":{
+      "name":"Rhys Van Orsouw",
+      "user_id":3634053
+    },
+    "message":"(badtime) "
+  },
+  [
+    
+  ],
+  {
+    "date":"2016-03-10T06:03:17+0000",
+    "from":{
+      "name":"Rhys Van Orsouw",
+      "user_id":3634053
+    },
+    "message":"(tableflip) "
+  },
+  [
+    
+  ],
+  {
+    "date":"2016-03-10T06:03:33+0000",
+    "from":{
+      "name":"Rhys Van Orsouw",
+      "user_id":3634053
+    },
+    "message":"(notbad) "
+  },
+  [
+    
+  ],
+  {
+    "date":"2016-03-10T06:04:23+0000",
+    "from":{
+      "name":"Utsav Adhikari",
+      "user_id":3634595
+    },
+    "message":"It appears I have been summoned"
+  },
+  {
+    "date":"2016-03-10T06:04:29+0000",
+    "from":{
+      "name":"Rhys Van Orsouw",
+      "user_id":3634053
+    },
+    "message":"hahahahahahhaha"
+  },
+  {
+    "date":"2016-03-10T06:04:47+0000",
+    "from":{
+      "name":"Rhys Van Orsouw",
+      "user_id":3634053
+    },
+    "message":"I see we got your attention (raj)"
+  },
+  {
+    "date":"2016-03-10T06:05:01+0000",
+    "from":{
+      "name":"Utsav Adhikari",
+      "user_id":3634595
+    },
+    "message":"Indeed"
+  },
+  {
+    "date":"2016-03-10T06:05:14+0000",
+    "from":{
+      "name":"Kyle Glover",
+      "user_id":3646818
+    },
+    "message":"What are ou going to explain in the assignment next week?"
+  },
+  {
+    "date":"2016-03-10T06:05:52+0000",
+    "from":{
+      "name":"Utsav Adhikari",
+      "user_id":3634595
+    },
+    "message":"I'm not fussed with what I do"
+  },
+  {
+    "date":"2016-03-10T06:05:58+0000",
+    "from":{
+      "name":"Utsav Adhikari",
+      "user_id":3634595
+    },
+    "message":"What have you guys chosen?"
+  },
+  {
+    "date":"2016-03-10T06:06:40+0000",
+    "from":{
+      "name":"Rhys Van Orsouw",
+      "user_id":3634053
+    },
+    "message":"I'm happy to do HipChat"
+  },
+  {
+    "date":"2016-03-10T06:07:06+0000",
+    "from":{
+      "name":"Adam Thalhammer",
+      "user_id":3634594
+    },
+    "message":"I'm doing gradle"
+  },
+  {
+    "date":"2016-03-10T06:07:41+0000",
+    "from":{
+      "name":"Kyle Glover",
+      "user_id":3646818
+    },
+    "message":"I'm doing BitBucket"
+  },
+  {
+    "date":"2016-03-10T06:07:45+0000",
+    "from":{
+      "name":"Utsav Adhikari",
+      "user_id":3634595
+    },
+    "message":"sweet"
+  },
+  {
+    "date":"2016-03-10T06:08:08+0000",
+    "from":{
+      "name":"Utsav Adhikari",
+      "user_id":3634595
+    },
+    "message":"I'll take a quick look right now and report back on my tool"
+  },
+  {
+    "date":"2016-03-10T06:08:20+0000",
+    "from":{
+      "name":"Adam Thalhammer",
+      "user_id":3634594
+    },
+    "message":"too much information"
+  },
+  {
+    "date":"2016-03-10T06:09:22+0000",
+    "from":{
+      "name":"Adam Thalhammer",
+      "user_id":3634594
+    },
+    "message":"(wtf) "
+  },
+  [
+    
+  ],
+  {
+    "date":"2016-03-10T06:12:23+0000",
+    "from":{
+      "name":"Adam Thalhammer",
+      "user_id":3634594
+    },
+    "message":"from the atlassian license request form: \"This application is not valid for our hosted offerings\""
+  },
+  {
+    "date":"2016-03-10T06:12:37+0000",
+    "from":{
+      "name":"Adam Thalhammer",
+      "user_id":3634594
+    },
+    "message":"so they gave us all the licenses we asked for but the catch is they are for the self-hosted server applications"
+  },
+  {
+    "date":"2016-03-10T06:12:41+0000",
+    "from":{
+      "name":"Rhys Van Orsouw",
+      "user_id":3634053
+    },
+    "message":"I guess they don't give resources away for free"
+  },
+  {
+    "date":"2016-03-10T06:12:46+0000",
+    "from":{
+      "name":"Adam Thalhammer",
+      "user_id":3634594
+    },
+    "message":"fair enough.."
+  },
+  {
+    "date":"2016-03-10T06:12:47+0000",
+    "from":{
+      "name":"Utsav Adhikari",
+      "user_id":3634595
+    },
+    "message":"rip"
+  },
+  {
+    "date":"2016-03-10T06:13:15+0000",
+    "from":{
+      "name":"Utsav Adhikari",
+      "user_id":3634595
+    },
+    "message":"so is JIRA a no go for us?"
+  },
+  {
+    "date":"2016-03-10T06:13:26+0000",
+    "from":{
+      "name":"Adam Thalhammer",
+      "user_id":3634594
+    },
+    "message":"I will look through the requirements for running these. maybe the $100 free digitalocean credit can be put to good use!"
+  },
+  {
+    "date":"2016-03-10T06:13:36+0000",
+    "from":{
+      "name":"Adam Thalhammer",
+      "user_id":3634594
+    },
+    "message":"from the github student dev pack"
+  },
+  {
+    "date":"2016-03-10T06:13:44+0000",
+    "from":{
+      "name":"Kyle Glover",
+      "user_id":3646818
+    },
+    "message":"maybe"
+  },
+  {
+    "date":"2016-03-10T06:13:52+0000",
+    "from":{
+      "name":"Rhys Van Orsouw",
+      "user_id":3634053
+    },
+    "message":"$100 goes a long way"
+  },
+  {
+    "date":"2016-03-10T06:14:00+0000",
+    "from":{
+      "name":"Kyle Glover",
+      "user_id":3646818
+    },
+    "message":"Don't wna to be ooking around too much though"
+  },
+  {
+    "date":"2016-03-10T06:14:01+0000",
+    "from":{
+      "name":"Adam Thalhammer",
+      "user_id":3634594
+    },
+    "message":"yeah basically a year or so of a cheap instance"
+  },
+  {
+    "date":"2016-03-10T06:14:06+0000",
+    "from":{
+      "name":"Kyle Glover",
+      "user_id":3646818
+    },
+    "message":"(johntravolta) "
+  },
+  {
+    "date":"2016-03-10T06:14:23+0000",
+    "from":{
+      "name":"Utsav Adhikari",
+      "user_id":3634595
+    },
+    "message":"these emotes though."
+  },
+  {
+    "date":"2016-03-10T06:14:39+0000",
+    "from":{
+      "name":"Kyle Glover",
+      "user_id":3646818
+    },
+    "message":"Sorry"
+  },
+  {
+    "date":"2016-03-10T06:14:47+0000",
+    "from":{
+      "name":"Adam Thalhammer",
+      "user_id":3634594
+    },
+    "message":"e.g. http:\/\/blog.akelesconsulting.com\/2013\/11\/a-review-on-hosting-jira-on-the-free-amazon-ec2-micro-instance\/"
+  },
+  {
+    "date":"2016-03-10T06:14:50+0000",
+    "from":{
+      "name":"Link",
+      "user_id":"api"
+    },
+    "message":"\\n\\n\\n<p><b><a href=\"http:\/\/blog.akelesconsulting.com\/2013\/11\/a-review-on-hosting-jira-on-the-free-amazon-ec2-micro-instance\/\">A review on hosting JIRA on the free Amazon EC2 Micro Instance<\/a><\/b><\/p>\\n\\n\\n<p>[u'Recently, we received an inquiry on whether it is possible to run Atlassian JIRA on Amazon EC2 Micro Instance. The free tier allows up to 75', u'Recently, we received an inquiry on whether it is possible to run Atlassian JIRA on Amazon EC2 Micro Instance. The free tier allows up to 750 hours of\u2026<\/p>\\n\\n"
+  },
+  {
+    "date":"2016-03-10T06:14:58+0000",
+    "from":{
+      "name":"Utsav Adhikari",
+      "user_id":3634595
+    },
+    "message":"Nah I mean, I'm amazed they have so many"
+  },
+  {
+    "date":"2016-03-10T06:15:06+0000",
+    "from":{
+      "name":"Rhys Van Orsouw",
+      "user_id":3634053
+    },
+    "message":"So good"
+  },
+  {
+    "date":"2016-03-10T06:15:12+0000",
+    "from":{
+      "name":"Rhys Van Orsouw",
+      "user_id":3634053
+    },
+    "message":"I think custom emotes are amazing"
+  },
+  [
+    
+  ],
+  [
+    
+  ],
+  [
+    
+  ],
+  [
+    
+  ],
+  {
+    "date":"2016-03-10T06:16:00+0000",
+    "from":{
+      "name":"Kyle Glover",
+      "user_id":3646818
+    },
+    "message":"please don't give me a bad review (dolancry) "
+  },
+  {
+    "date":"2016-03-10T06:16:20+0000",
+    "from":{
+      "name":"Utsav Adhikari",
+      "user_id":3634595
+    },
+    "message":"I never wanted to take the picture"
+  },
+  {
+    "date":"2016-03-10T06:16:27+0000",
+    "from":{
+      "name":"Utsav Adhikari",
+      "user_id":3634595
+    },
+    "message":"My worst fear has been realised"
+  },
+  {
+    "date":"2016-03-10T06:16:38+0000",
+    "from":{
+      "name":"Kyle Glover",
+      "user_id":3646818
+    },
+    "message":"Yes"
+  },
+  {
+    "date":"2016-03-10T06:16:52+0000",
+    "from":{
+      "name":"Rhys Van Orsouw",
+      "user_id":3634053
+    },
+    "message":"Look I can undo this monstrosity"
+  },
+  {
+    "date":"2016-03-10T06:16:57+0000",
+    "from":{
+      "name":"Kyle Glover",
+      "user_id":3646818
+    },
+    "message":"avaliable for 3 people at an extremely low quality :P"
+  },
+  [
+    
+  ],
+  [
+    
+  ],
+  {
+    "date":"2016-03-10T06:17:19+0000",
+    "from":{
+      "name":"Rhys Van Orsouw",
+      "user_id":3634053
+    },
+    "message":"i deleted it haha"
+  },
+  {
+    "date":"2016-03-10T06:17:21+0000",
+    "from":{
+      "name":"Utsav Adhikari",
+      "user_id":3634595
+    },
+    "message":"haha"
+  },
+  {
+    "date":"2016-03-10T06:17:33+0000",
+    "from":{
+      "name":"Rhys Van Orsouw",
+      "user_id":3634053
+    },
+    "message":"next time you load hipchat it shouldnt be there"
+  },
+  {
+    "date":"2016-03-10T06:17:45+0000",
+    "from":{
+      "name":"Utsav Adhikari",
+      "user_id":3634595
+    },
+    "message":"I guess I've been immortalized. "
+  },
+  {
+    "date":"2016-03-10T06:18:15+0000",
+    "from":{
+      "name":"Rhys Van Orsouw",
+      "user_id":3634053
+    },
+    "message":"Yeah next time the app loads, its gone"
+  },
+  {
+    "date":"2016-03-10T06:18:15+0000",
+    "from":{
+      "name":"Kyle Glover",
+      "user_id":3646818
+    },
+    "message":"Don't worry raj, I got your back (rhys)"
+  },
+  [
+    
+  ],
+  {
+    "date":"2016-03-10T06:18:27+0000",
+    "from":{
+      "name":"Rhys Van Orsouw",
+      "user_id":3634053
+    },
+    "message":"damn"
+  },
+  [
+    
+  ],
+  {
+    "date":"2016-03-10T06:18:32+0000",
+    "from":{
+      "name":"Rhys Van Orsouw",
+      "user_id":3634053
+    },
+    "message":"thats one hot emoticon"
+  },
+  {
+    "date":"2016-03-10T06:18:40+0000",
+    "from":{
+      "name":"Kyle Glover",
+      "user_id":3646818
+    },
+    "message":"thanks man"
+  },
+  {
+    "date":"2016-03-10T06:19:10+0000",
+    "from":{
+      "name":"Utsav Adhikari",
+      "user_id":3634595
+    },
+    "message":"I hope we are submitting chat logs."
+  },
+  {
+    "date":"2016-03-10T06:19:16+0000",
+    "from":{
+      "name":"Kyle Glover",
+      "user_id":3646818
+    },
+    "message":"oh god"
+  },
+  {
+    "date":"2016-03-10T06:19:19+0000",
+    "from":{
+      "name":"Kyle Glover",
+      "user_id":3646818
+    },
+    "message":"Hope not"
+  },
+  {
+    "date":"2016-03-10T06:19:20+0000",
+    "from":{
+      "name":"Utsav Adhikari",
+      "user_id":3634595
+    },
+    "message":"haha"
+  },
+  {
+    "date":"2016-03-10T06:19:28+0000",
+    "from":{
+      "name":"Rhys Van Orsouw",
+      "user_id":3634053
+    },
+    "message":"We are"
+  },
+  {
+    "date":"2016-03-10T06:19:34+0000",
+    "from":{
+      "name":"Rhys Van Orsouw",
+      "user_id":3634053
+    },
+    "message":"but I've already scrubbed them :p"
+  },
+  {
+    "date":"2016-03-10T06:19:44+0000",
+    "from":{
+      "name":"Kyle Glover",
+      "user_id":3646818
+    },
+    "message":"U scrub"
+  },
+  {
+    "date":"2016-03-10T06:19:59+0000",
+    "from":{
+      "name":"Kyle Glover",
+      "user_id":3646818
+    },
+    "message":"He's adding another emote, brace yourself"
+  },
+  {
+    "date":"2016-03-10T06:20:18+0000",
+    "from":{
+      "name":"Kyle Glover",
+      "user_id":3646818
+    },
+    "message":"Oh no hedeleted them all"
+  },
+  {
+    "date":"2016-03-10T06:20:27+0000",
+    "from":{
+      "name":"Kyle Glover",
+      "user_id":3646818
+    },
+    "message":"all g"
+  },
+  {
+    "date":"2016-03-10T06:23:57+0000",
+    "from":{
+      "name":"Rhys Van Orsouw",
+      "user_id":3634053
+    },
+    "message":"Better"
+  },
+  {
+    "date":"2016-03-10T06:25:38+0000",
+    "from":{
+      "name":"Kyle Glover",
+      "user_id":3646818
+    },
+    "message":"Rhys isn't Jira like trello?"
+  },
+  {
+    "date":"2016-03-10T06:25:58+0000",
+    "from":{
+      "name":"Kyle Glover",
+      "user_id":3646818
+    },
+    "message":"https:\/\/www.atlassian.com\/software\/jira"
+  },
+  {
+    "date":"2016-03-10T06:25:58+0000",
+    "from":{
+      "name":"Link",
+      "user_id":"api"
+    },
+    "message":"\\n\\n\\n<p><b><a href=\"https:\/\/www.atlassian.com\/software\/jira\">JIRA Software - Issue &amp; Project Tracking for Software Teams | Atlassian<\/a><\/b><\/p>\\n\\n\\n<p>JIRA Software offers flexible issue and project tracking with best-in-class agile tooling for software teams. Enable your team with the #1 software development tool used by agile teams.<\/p>\\n\\n"
+  },
+  {
+    "date":"2016-03-10T06:26:03+0000",
+    "from":{
+      "name":"Rhys Van Orsouw",
+      "user_id":3634053
+    },
+    "message":"yes"
+  },
+  {
+    "date":"2016-03-10T06:26:06+0000",
+    "from":{
+      "name":"Rhys Van Orsouw",
+      "user_id":3634053
+    },
+    "message":"thats what we want to use"
+  },
+  {
+    "date":"2016-03-10T06:26:11+0000",
+    "from":{
+      "name":"Rhys Van Orsouw",
+      "user_id":3634053
+    },
+    "message":"we just ahve to host it on our own machines"
+  },
+  {
+    "date":"2016-03-10T06:26:28+0000",
+    "from":{
+      "name":"Kyle Glover",
+      "user_id":3646818
+    },
+    "message":"Well... Why not just use our school accounts for trello?"
+  },
+  {
+    "date":"2016-03-10T06:26:37+0000",
+    "from":{
+      "name":"Kyle Glover",
+      "user_id":3646818
+    },
+    "message":"SHouldn't we have it from last year"
+  },
+  {
+    "date":"2016-03-10T06:26:40+0000",
+    "from":{
+      "name":"Utsav Adhikari",
+      "user_id":3634595
+    },
+    "message":"Is hosting it on the coreteaching servers a possibility?"
+  },
+  {
+    "date":"2016-03-10T06:26:52+0000",
+    "from":{
+      "name":"Rhys Van Orsouw",
+      "user_id":3634053
+    },
+    "message":"Depends on RMIT\\n"
+  },
+  {
+    "date":"2016-03-10T06:28:20+0000",
+    "from":{
+      "name":"Kyle Glover",
+      "user_id":3646818
+    },
+    "message":"If it's not it'd probably be easier since we should've all used Trello last year"
+  },
+  {
+    "date":"2016-03-10T06:28:33+0000",
+    "from":{
+      "name":"Kyle Glover",
+      "user_id":3646818
+    },
+    "message":"easier to use Trello*"
+  },
+  {
+    "date":"2016-03-10T06:29:39+0000",
+    "from":{
+      "name":"Utsav Adhikari",
+      "user_id":3634595
+    },
+    "message":"I don't mind, Although I would like to get JIRA working if it is possible."
+  },
+  {
+    "date":"2016-03-10T06:29:58+0000",
+    "from":{
+      "name":"Kyle Glover",
+      "user_id":3646818
+    },
+    "message":"Rhys is doing some research"
+  },
+  {
+    "date":"2016-03-10T06:30:03+0000",
+    "from":{
+      "name":"Rhys Van Orsouw",
+      "user_id":3634053
+    },
+    "message":"https:\/\/confluence.atlassian.com\/jira\/installing-jira-on-linux-191501165.html"
+  },
+  {
+    "date":"2016-03-10T06:30:06+0000",
+    "from":{
+      "name":"Kyle Glover",
+      "user_id":3646818
+    },
+    "message":"If RMIT coreteaching doesn't work"
+  },
+  {
+    "date":"2016-03-10T06:30:10+0000",
+    "from":{
+      "name":"Rhys Van Orsouw",
+      "user_id":3634053
+    },
+    "message":"Might be possible for Kyle to host it"
+  },
+  {
+    "date":"2016-03-10T06:30:14+0000",
+    "from":{
+      "name":"Kyle Glover",
+      "user_id":3646818
+    },
+    "message":"I CAAAAN host it"
+  },
+  {
+    "date":"2016-03-10T06:30:31+0000",
+    "from":{
+      "name":"Kyle Glover",
+      "user_id":3646818
+    },
+    "message":"but don't expect the fastest speeds, nor 24\/7 uptime :P"
+  },
+  {
+    "date":"2016-03-10T06:30:44+0000",
+    "from":{
+      "name":"Adam Thalhammer",
+      "user_id":3634594
+    },
+    "message":"well we can get a free 1gb ram 30gb ssd 2tb transfer instance from digitalocean to run it..."
+  },
+  {
+    "date":"2016-03-10T06:30:47+0000",
+    "from":{
+      "name":"Rhys Van Orsouw",
+      "user_id":3634053
+    },
+    "message":"You probably have the best net and server out of all of us haha"
+  },
+  {
+    "date":"2016-03-10T06:31:18+0000",
+    "from":{
+      "name":"Adam Thalhammer",
+      "user_id":3634594
+    },
+    "message":"latency being not too bad since it can be hosted in singapore"
+  },
+  {
+    "date":"2016-03-10T06:31:53+0000",
+    "from":{
+      "name":"Kyle Glover",
+      "user_id":3646818
+    },
+    "message":"aslong as we don't loose our stuff on it, it should be better in singapore"
+  },
+  {
+    "date":"2016-03-10T06:32:19+0000",
+    "from":{
+      "name":"Adam Thalhammer",
+      "user_id":3634594
+    },
+    "message":"if we do set it up ourselves, we should document everything as part of the project. luckily digitalocean lets us take snapshots so we can have regular backups"
+  },
+  {
+    "date":"2016-03-10T06:33:00+0000",
+    "from":{
+      "name":"Rhys Van Orsouw",
+      "user_id":3634053
+    },
+    "message":"Well considering we have 100$ digital ocean credit, it may be better to just use their servers than hasseling kyle haha"
+  },
+  {
+    "date":"2016-03-10T06:33:11+0000",
+    "from":{
+      "name":"Rhys Van Orsouw",
+      "user_id":3634053
+    },
+    "message":"we'd get 10 months worht of plan out of it"
+  },
+  {
+    "date":"2016-03-10T06:33:14+0000",
+    "from":{
+      "name":"Kyle Glover",
+      "user_id":3646818
+    },
+    "message":"It'd be easier on mynet :P"
+  },
+  {
+    "date":"2016-03-10T06:33:14+0000",
+    "from":{
+      "name":"Kyle Glover",
+      "user_id":3646818
+    },
+    "message":"https:\/\/www.digitalocean.com\/"
+  },
+  {
+    "date":"2016-03-10T06:33:14+0000",
+    "from":{
+      "name":"Link",
+      "user_id":"api"
+    },
+    "message":"\\n\\n\\n<p><b><a href=\"https:\/\/www.digitalocean.com\/\">Simple Cloud Computing for Developers<\/a><\/b><\/p>\\n\\n\\n<p>Spin up an SSD cloud server, with full root access, in under a minute. Pricing starts at $5\/mo for 512MB RAM, 20GB SSD, 1CPU and 1TB transfer.<\/p>\\n\\n"
+  },
+  {
+    "date":"2016-03-10T06:33:19+0000",
+    "from":{
+      "name":"Kyle Glover",
+      "user_id":3646818
+    },
+    "message":"my net*"
+  },
+  {
+    "date":"2016-03-10T06:33:45+0000",
+    "from":{
+      "name":"Adam Thalhammer",
+      "user_id":3634594
+    },
+    "message":"alternatively there is https:\/\/www.vultr.com\/"
+  },
+  {
+    "date":"2016-03-10T06:33:45+0000",
+    "from":{
+      "name":"Link",
+      "user_id":"api"
+    },
+    "message":"\\n\\n\\n<p><b><a href=\"https:\/\/www.vultr.com\/\">SSD VPS Servers, Cloud Servers and Cloud Hosting by Vultr - Vultr.com<\/a><\/b><\/p>\\n\\n\\n<p>VULTR Global Cloud Hosting - Brilliantly Fast SSD VPS Cloud Servers. 100% KVM Virtualization<\/p>\\n\\n"
+  },
+  {
+    "date":"2016-03-10T06:33:58+0000",
+    "from":{
+      "name":"Adam Thalhammer",
+      "user_id":3634594
+    },
+    "message":"I have some free credit there too"
+  }
+]

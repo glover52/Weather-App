@@ -1,0 +1,42 @@
+[
+  {
+    "date":"2016-04-20T00:14:15+0000",
+    "from":{
+      "name":"Bitbucket",
+      "user_id":"api"
+    },
+    "message":"<img src=\"https:\/\/hipbucket.bitbucketconnect.com\/icons\/commits-blue.png\" alt=\"\" height=\"16\" width=\"13\" \/> One commit pushed to branch <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\/branch\/gui\"><strong>gui<\/strong><\/a> by <a href=\"https:\/\/bitbucket.org\/s3544305\/\"><strong>Adam Thalhammer<\/strong><\/a> in <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\"><strong>chocvanilla\/weather-app<\/strong><\/a><br \/>- Fixed bug where weather observations were loaded twice, causing lon... \u00b7 <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\/commits\/f688016d38a231f6dbc3162fe8ba295ee7fdcb32\">f688016<\/a>"
+  },
+  {
+    "date":"2016-04-20T00:18:54+0000",
+    "from":{
+      "name":"Bitbucket",
+      "user_id":"api"
+    },
+    "message":"<img src=\"https:\/\/hipbucket.bitbucketconnect.com\/icons\/commits-blue.png\" alt=\"\" height=\"16\" width=\"13\" \/> One commit pushed to branch <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\/branch\/gui\"><strong>gui<\/strong><\/a> by <a href=\"https:\/\/bitbucket.org\/s3544305\/\"><strong>Adam Thalhammer<\/strong><\/a> in <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\"><strong>chocvanilla\/weather-app<\/strong><\/a><br \/>- space before unit\\n \u00b7 <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\/commits\/0bb485c1e923beffe977c7128649e461a2e9c3c6\">0bb485c<\/a>"
+  },
+  {
+    "date":"2016-04-20T00:20:05+0000",
+    "from":{
+      "name":"Bitbucket",
+      "user_id":"api"
+    },
+    "message":"<img src=\"https:\/\/hipbucket.bitbucketconnect.com\/icons\/commits-blue.png\" alt=\"\" height=\"16\" width=\"13\" \/> One commit pushed to branch <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\/branch\/gui\"><strong>gui<\/strong><\/a> by <a href=\"https:\/\/bitbucket.org\/s3544305\/\"><strong>Adam Thalhammer<\/strong><\/a> in <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\"><strong>chocvanilla\/weather-app<\/strong><\/a><br \/>- ignore new observations folder\\n \u00b7 <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\/commits\/dbdec17a2bcb0d39058c985ff275c468df13cee0\">dbdec17<\/a>"
+  },
+  {
+    "date":"2016-04-20T00:25:43+0000",
+    "from":{
+      "name":"Bitbucket",
+      "user_id":"api"
+    },
+    "message":"<img src=\"https:\/\/hipbucket.bitbucketconnect.com\/icons\/commits-blue.png\" alt=\"\" height=\"16\" width=\"13\" \/> One commit pushed to branch <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\/branch\/gui\"><strong>gui<\/strong><\/a> by <a href=\"https:\/\/bitbucket.org\/s3544305\/\"><strong>Adam Thalhammer<\/strong><\/a> in <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\"><strong>chocvanilla\/weather-app<\/strong><\/a><br \/>- typo fix, add final\\n \u00b7 <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\/commits\/215a82732ad7ee3776144b9019562c36503fab29\">215a827<\/a>"
+  },
+  {
+    "date":"2016-04-20T01:07:15+0000",
+    "from":{
+      "name":"Bitbucket",
+      "user_id":"api"
+    },
+    "message":"<img src=\"https:\/\/hipbucket.bitbucketconnect.com\/icons\/commits-blue.png\" alt=\"\" height=\"16\" width=\"13\" \/> One commit pushed to branch <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\/branch\/gui\"><strong>gui<\/strong><\/a> by <a href=\"https:\/\/bitbucket.org\/s3544305\/\"><strong>Adam Thalhammer<\/strong><\/a> in <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\"><strong>chocvanilla\/weather-app<\/strong><\/a><br \/>- deal with missing files graciously\\n \u00b7 <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\/commits\/b71464233dbea78db990393b5851e1da82a72d72\">b714642<\/a>"
+  }
+]

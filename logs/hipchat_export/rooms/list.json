@@ -1,0 +1,16 @@
+{
+  "rooms":[
+    {
+      "room_id":2518878,
+      "name":"Chocvanilla",
+      "topic":"Welcome! Send this link to coworkers who need accounts: https:\/\/www.hipchat.com\/invite\/544027\/dba5e121570959af516c6637eb86c2bd?utm_campaign=company_room_link",
+      "last_active":1461304219,
+      "created":1457398921,
+      "owner_user_id":3634053,
+      "is_archived":false,
+      "is_private":false,
+      "guest_access_url":null,
+      "xmpp_jid":"544027_chocvanilla@conf.hipchat.com"
+    }
+  ]
+}

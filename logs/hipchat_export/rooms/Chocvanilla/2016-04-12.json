@@ -1,0 +1,34 @@
+[
+  {
+    "date":"2016-04-12T08:57:15+0000",
+    "from":{
+      "name":"Bitbucket",
+      "user_id":"api"
+    },
+    "message":"<img src=\"https:\/\/hipbucket.bitbucketconnect.com\/icons\/commits-blue.png\" alt=\"\" height=\"16\" width=\"13\" \/> One commit pushed to branch <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\/branch\/gui\"><strong>gui<\/strong><\/a> by <a href=\"https:\/\/bitbucket.org\/s3544305\/\"><strong>Adam Thalhammer<\/strong><\/a> in <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\"><strong>chocvanilla\/weather-app<\/strong><\/a><br \/>- implemented saving and loading of favourites; added experimental gu... \u00b7 <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\/commits\/8a3d973da152562a26b72be77b5476ad3e64a900\">8a3d973<\/a>"
+  },
+  {
+    "date":"2016-04-12T09:00:08+0000",
+    "from":{
+      "name":"Bitbucket",
+      "user_id":"api"
+    },
+    "message":"<img src=\"https:\/\/hipbucket.bitbucketconnect.com\/icons\/commits-blue.png\" alt=\"\" height=\"16\" width=\"13\" \/> 5 commits pushed to branch <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\/branch\/master\"><strong>master<\/strong><\/a> by <a href=\"https:\/\/bitbucket.org\/s3544305\/\"><strong>Adam Thalhammer<\/strong><\/a> in <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\"><strong>chocvanilla\/weather-app<\/strong><\/a><br \/>- removed and ignored iml file - should not be in source control\\n \u00b7 <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\/commits\/bdd1853b4752cd338de46acd40da8785c19cf6ad\">bdd1853<\/a><br \/>- implemented saving and loading of favourites; added experimental gu... \u00b7 <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\/commits\/8a3d973da152562a26b72be77b5476ad3e64a900\">8a3d973<\/a><br \/>- Added favourites class\\n \u00b7 <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\/commits\/b9323bec5ed3b6f8d8d8a4931fcaae436d0166c1\">b9323be<\/a><br \/>- Random commit\\n \u00b7 <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\/commits\/59487654ec62639d08fcc389149164c58167bc05\">5948765<\/a><br \/>- Basic gui frame\\n \u00b7 <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\/commits\/c20c011af1298d7d79f69ca0b8063bbc85be105f\">c20c011<\/a>"
+  },
+  {
+    "date":"2016-04-12T09:03:39+0000",
+    "from":{
+      "name":"Adam Thalhammer",
+      "user_id":3634594
+    },
+    "message":"ok guys, I've pushed the changes that Rhys and I made this afternoon. we did a bare-bones implementation of favourites and restructured a bit"
+  },
+  {
+    "date":"2016-04-12T09:06:08+0000",
+    "from":{
+      "name":"Bitbucket",
+      "user_id":"api"
+    },
+    "message":"<img src=\"https:\/\/hipbucket.bitbucketconnect.com\/icons\/commits-blue.png\" alt=\"\" height=\"16\" width=\"13\" \/> One commit pushed to branch <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\/branch\/gui\"><strong>gui<\/strong><\/a> by <a href=\"https:\/\/bitbucket.org\/s3544305\/\"><strong>Adam Thalhammer<\/strong><\/a> in <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\"><strong>chocvanilla\/weather-app<\/strong><\/a><br \/>- removed and ignored iml file - should not be in source control\\n \u00b7 <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\/commits\/bdd1853b4752cd338de46acd40da8785c19cf6ad\">bdd1853<\/a>"
+  }
+]

@@ -1,0 +1,66 @@
+[
+  {
+    "date":"2016-03-14T02:10:00+0000",
+    "from":{
+      "name":"Kyle Glover",
+      "user_id":3646818
+    },
+    "message":"Wow, that's so shady"
+  },
+  {
+    "date":"2016-03-14T02:11:01+0000",
+    "from":{
+      "name":"Kyle Glover",
+      "user_id":3646818
+    },
+    "message":"Digital Ocean"
+  },
+  {
+    "date":"2016-03-14T02:11:09+0000",
+    "from":{
+      "name":"Kyle Glover",
+      "user_id":3646818
+    },
+    "message":"http:\/\/puu.sh\/nFIxm\/492e0367fe.png"
+  },
+  {
+    "date":"2016-03-14T02:11:35+0000",
+    "from":{
+      "name":"Kyle Glover",
+      "user_id":3646818
+    },
+    "message":"Vultr"
+  },
+  {
+    "date":"2016-03-14T02:11:37+0000",
+    "from":{
+      "name":"Kyle Glover",
+      "user_id":3646818
+    },
+    "message":"http:\/\/puu.sh\/nFICg\/d11c987951.png"
+  },
+  {
+    "date":"2016-03-14T02:13:29+0000",
+    "from":{
+      "name":"Kyle Glover",
+      "user_id":3646818
+    },
+    "message":"Adam, do you have an account with any of the servers?"
+  },
+  {
+    "date":"2016-03-14T05:54:38+0000",
+    "from":{
+      "name":"Utsav Adhikari",
+      "user_id":3634595
+    },
+    "message":"Also, a heads up that I'll demo trello in our tute."
+  },
+  {
+    "date":"2016-03-14T06:04:31+0000",
+    "from":{
+      "name":"Kyle Glover",
+      "user_id":3646818
+    },
+    "message":"(thumbsup) "
+  }
+]

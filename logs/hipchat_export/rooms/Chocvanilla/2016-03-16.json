@@ -1,0 +1,34 @@
+[
+  {
+    "date":"2016-03-16T03:25:17+0000",
+    "from":{
+      "name":"Adam Thalhammer",
+      "user_id":3634594
+    },
+    "message":"@rhys do you own the team account on bitbucket? if yes could you follow these steps to connect it with jira?"
+  },
+  {
+    "date":"2016-03-16T03:25:19+0000",
+    "from":{
+      "name":"Adam Thalhammer",
+      "user_id":3634594
+    },
+    "message":"https:\/\/confluence.atlassian.com\/bitbucket\/use-bitbucket-cloud-with-github-815574827.html"
+  },
+  {
+    "date":"2016-03-16T03:34:19+0000",
+    "from":{
+      "name":"Link",
+      "user_id":"api"
+    },
+    "message":"\\n\\n\\n<p><b><a href=\"https:\/\/confluence.atlassian.com\/bitbucket\/use-bitbucket-cloud-with-github-815574827.html\">Use Bitbucket Cloud with GitHub - Atlassian Documentation<\/a><\/b><\/p>\\n\\n\\n<p>When your GtHub account is linked to JIRA Software, your team gets to see their branches, commit messages and pull requests right in the context of the JIRA\u00a0Software issues they're working on. Read more in\u00a0Streamlining your development with JIRA.<\/p>\\n\\n"
+  },
+  {
+    "date":"2016-03-16T04:58:48+0000",
+    "from":{
+      "name":"Utsav Adhikari",
+      "user_id":3634595
+    },
+    "message":"I think we should start laying the groundwork the the program soon. At least some conceptual prototypes or something."
+  }
+]

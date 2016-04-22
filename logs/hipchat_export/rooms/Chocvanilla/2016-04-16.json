@@ -1,0 +1,34 @@
+[
+  {
+    "date":"2016-04-16T10:15:54+0000",
+    "from":{
+      "name":"Adam Thalhammer",
+      "user_id":3634594
+    },
+    "message":"@all guys are we shooting for an early submission (monday 9am) for the extra marks? :P"
+  },
+  {
+    "date":"2016-04-16T13:30:26+0000",
+    "from":{
+      "name":"Utsav Adhikari",
+      "user_id":3634595
+    },
+    "message":"Was about to ask the same thing, I don't mind if we go for Monday or next week."
+  },
+  {
+    "date":"2016-04-16T22:31:53+0000",
+    "from":{
+      "name":"Adam Thalhammer",
+      "user_id":3634594
+    },
+    "message":"well I'm on a road trip today. but happy to help out tonight :)"
+  },
+  {
+    "date":"2016-04-16T22:37:42+0000",
+    "from":{
+      "name":"Bitbucket",
+      "user_id":"api"
+    },
+    "message":"<img src=\"https:\/\/hipbucket.bitbucketconnect.com\/icons\/commits-blue.png\" alt=\"\" height=\"16\" width=\"13\" \/> One commit pushed to branch <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\/branch\/gui\"><strong>gui<\/strong><\/a> by <a href=\"https:\/\/bitbucket.org\/s3544305\/\"><strong>Adam Thalhammer<\/strong><\/a> in <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\"><strong>chocvanilla\/weather-app<\/strong><\/a><br \/>- added saving of detail window coordinates and size; documented code\\n \u00b7 <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\/commits\/a3a02c321a32dda0eae605c3b38f9172a3c70c48\">a3a02c3<\/a>"
+  }
+]

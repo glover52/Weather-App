@@ -1,0 +1,773 @@
+[
+  {
+    "date":"2016-04-22T00:44:25+0000",
+    "from":{
+      "name":"Rhys Van Orsouw",
+      "user_id":3634053
+    },
+    "message":" Okay guys. Final day, let's finish this. "
+  },
+  {
+    "date":"2016-04-22T00:44:57+0000",
+    "from":{
+      "name":"Rhys Van Orsouw",
+      "user_id":3634053
+    },
+    "message":"You've got me til 4pm, then unfortunately I have to go o work. I'll start looking at the docs we have, and checking what we need to submit. "
+  },
+  {
+    "date":"2016-04-22T02:23:56+0000",
+    "from":{
+      "name":"Bitbucket",
+      "user_id":"api"
+    },
+    "message":"<img src=\"https:\/\/hipbucket.bitbucketconnect.com\/icons\/commits-blue.png\" alt=\"\" height=\"16\" width=\"13\" \/> One commit pushed to branch <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\/branch\/master\"><strong>master<\/strong><\/a> by <a href=\"https:\/\/bitbucket.org\/rhysvo\/\"><strong>Rhys  Van Orsouw<\/strong><\/a> in <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\"><strong>chocvanilla\/weather-app<\/strong><\/a><br \/>- Added a few small test cases. Added to HOWTO.md\\n \u00b7 <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\/commits\/ba7769a24fdf37be0c8e95ceaf3769595b822c3c\">ba7769a<\/a>"
+  },
+  {
+    "date":"2016-04-22T02:24:59+0000",
+    "from":{
+      "name":"Utsav Adhikari",
+      "user_id":3634595
+    },
+    "message":"haha you literally just updated HOWTO.md as soon as I did"
+  },
+  {
+    "date":"2016-04-22T02:25:05+0000",
+    "from":{
+      "name":"Utsav Adhikari",
+      "user_id":3634595
+    },
+    "message":"spooky"
+  },
+  {
+    "date":"2016-04-22T02:25:35+0000",
+    "from":{
+      "name":"Bitbucket",
+      "user_id":"api"
+    },
+    "message":"<img src=\"https:\/\/hipbucket.bitbucketconnect.com\/icons\/commits-blue.png\" alt=\"\" height=\"16\" width=\"13\" \/> 2 commits pushed to branch <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\/branch\/master\"><strong>master<\/strong><\/a> by <a href=\"https:\/\/bitbucket.org\/RajRMIT\/\"><strong>Raj Adhikari<\/strong><\/a> in <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\"><strong>chocvanilla\/weather-app<\/strong><\/a><br \/>- Merge remote-tracking branch 'origin\/master'\\n \u00b7 <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\/commits\/37d2d50ca469b37cc774bd27de627cb9e34bae01\">37d2d50<\/a><br \/>- Added User Interface section in HOWTO with pictures.\\n \u00b7 <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\/commits\/f1674423ebc38744235e74b950e1c336c4d28a65\">f167442<\/a>"
+  },
+  {
+    "date":"2016-04-22T02:28:24+0000",
+    "from":{
+      "name":"Bitbucket",
+      "user_id":"api"
+    },
+    "message":"<img src=\"https:\/\/hipbucket.bitbucketconnect.com\/icons\/commits-blue.png\" alt=\"\" height=\"16\" width=\"13\" \/> One commit pushed to branch <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\/branch\/master\"><strong>master<\/strong><\/a> by <a href=\"https:\/\/bitbucket.org\/RajRMIT\/\"><strong>Raj Adhikari<\/strong><\/a> in <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\"><strong>chocvanilla\/weather-app<\/strong><\/a><br \/>- Added whitespace before and after lists\\n \u00b7 <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\/commits\/67ab6f07399bbf49ad25c7906d4086d356848046\">67ab6f0<\/a>"
+  },
+  {
+    "date":"2016-04-22T02:32:18+0000",
+    "from":{
+      "name":"Bitbucket",
+      "user_id":"api"
+    },
+    "message":"<img src=\"https:\/\/hipbucket.bitbucketconnect.com\/icons\/commits-blue.png\" alt=\"\" height=\"16\" width=\"13\" \/> One commit pushed to branch <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\/branch\/master\"><strong>master<\/strong><\/a> by <a href=\"https:\/\/bitbucket.org\/RajRMIT\/\"><strong>Raj Adhikari<\/strong><\/a> in <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\"><strong>chocvanilla\/weather-app<\/strong><\/a><br \/>- Changed ordered list in hopes of not breaking numbers when displaye... \u00b7 <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\/commits\/164f6f30c95e9b777ea8a82bc113c0d469778768\">164f6f3<\/a>"
+  },
+  {
+    "date":"2016-04-22T02:33:38+0000",
+    "from":{
+      "name":"Bitbucket",
+      "user_id":"api"
+    },
+    "message":"<img src=\"https:\/\/hipbucket.bitbucketconnect.com\/icons\/commits-blue.png\" alt=\"\" height=\"16\" width=\"13\" \/> One commit pushed to branch <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\/branch\/master\"><strong>master<\/strong><\/a> by <a href=\"https:\/\/bitbucket.org\/RajRMIT\/\"><strong>Raj Adhikari<\/strong><\/a> in <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\"><strong>chocvanilla\/weather-app<\/strong><\/a><br \/>- added some white space to display list properly\\n \u00b7 <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\/commits\/e43e4bc07c38f1712ef4c62e7fc813fa1000a982\">e43e4bc<\/a>"
+  },
+  {
+    "date":"2016-04-22T02:44:46+0000",
+    "from":{
+      "name":"Bitbucket",
+      "user_id":"api"
+    },
+    "message":"<img src=\"https:\/\/hipbucket.bitbucketconnect.com\/icons\/commits-blue.png\" alt=\"\" height=\"16\" width=\"13\" \/> One commit pushed to branch <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\/branch\/master\"><strong>master<\/strong><\/a> by <a href=\"https:\/\/bitbucket.org\/rhysvo\/\"><strong>Rhys  Van Orsouw<\/strong><\/a> in <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\"><strong>chocvanilla\/weather-app<\/strong><\/a><br \/>- README.md edited online with Bitbucket \u00b7 <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\/commits\/a36f616c097baf2cfaa24872b4af26bfb88bee84\">a36f616<\/a>"
+  },
+  {
+    "date":"2016-04-22T02:45:48+0000",
+    "from":{
+      "name":"Bitbucket",
+      "user_id":"api"
+    },
+    "message":"<img src=\"https:\/\/hipbucket.bitbucketconnect.com\/icons\/commits-blue.png\" alt=\"\" height=\"16\" width=\"13\" \/> One commit pushed to branch <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\/branch\/master\"><strong>master<\/strong><\/a> by <a href=\"https:\/\/bitbucket.org\/rhysvo\/\"><strong>Rhys  Van Orsouw<\/strong><\/a> in <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\"><strong>chocvanilla\/weather-app<\/strong><\/a><br \/>- README.md edited online with Bitbucket \u00b7 <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\/commits\/d90bdaf94cf12c176a388004ba59dfefcd1d04bc\">d90bdaf<\/a>"
+  },
+  [
+    
+  ],
+  [
+    
+  ],
+  {
+    "date":"2016-04-22T02:46:18+0000",
+    "from":{
+      "name":"Rhys Van Orsouw",
+      "user_id":3634053
+    },
+    "message":"so i had to use the bitbucket editor haha"
+  },
+  {
+    "date":"2016-04-22T02:46:24+0000",
+    "from":{
+      "name":"Utsav Adhikari",
+      "user_id":3634595
+    },
+    "message":"haha"
+  },
+  {
+    "date":"2016-04-22T02:48:28+0000",
+    "from":{
+      "name":"Rhys Van Orsouw",
+      "user_id":3634053
+    },
+    "message":"HOWTO looks good"
+  },
+  {
+    "date":"2016-04-22T02:48:53+0000",
+    "from":{
+      "name":"Rhys Van Orsouw",
+      "user_id":3634053
+    },
+    "message":"I looked at the link Kyle posted for the user doc"
+  },
+  {
+    "date":"2016-04-22T02:49:01+0000",
+    "from":{
+      "name":"Rhys Van Orsouw",
+      "user_id":3634053
+    },
+    "message":"pretty sure it just says \"hehe\" lol"
+  },
+  {
+    "date":"2016-04-22T02:49:17+0000",
+    "from":{
+      "name":"Utsav Adhikari",
+      "user_id":3634595
+    },
+    "message":"Last time I checked it was empty"
+  },
+  {
+    "date":"2016-04-22T02:49:24+0000",
+    "from":{
+      "name":"Utsav Adhikari",
+      "user_id":3634595
+    },
+    "message":"I hope I didnt dupe anything"
+  },
+  {
+    "date":"2016-04-22T02:49:33+0000",
+    "from":{
+      "name":"Utsav Adhikari",
+      "user_id":3634595
+    },
+    "message":"lol yep"
+  },
+  {
+    "date":"2016-04-22T02:49:37+0000",
+    "from":{
+      "name":"Utsav Adhikari",
+      "user_id":3634595
+    },
+    "message":"just \"hehe\""
+  },
+  [
+    
+  ],
+  [
+    
+  ],
+  [
+    
+  ],
+  [
+    
+  ],
+  [
+    
+  ],
+  {
+    "date":"2016-04-22T02:52:05+0000",
+    "from":{
+      "name":"Rhys Van Orsouw",
+      "user_id":3634053
+    },
+    "message":"So any ideas on what we can do next Raj?"
+  },
+  {
+    "date":"2016-04-22T02:52:24+0000",
+    "from":{
+      "name":"Rhys Van Orsouw",
+      "user_id":3634053
+    },
+    "message":"I feel like we should wait to make sure Kyle hasnt done something separate on the user man"
+  },
+  {
+    "date":"2016-04-22T02:53:13+0000",
+    "from":{
+      "name":"Rhys Van Orsouw",
+      "user_id":3634053
+    },
+    "message":"Any testing you can think of?"
+  },
+  {
+    "date":"2016-04-22T02:53:24+0000",
+    "from":{
+      "name":"Utsav Adhikari",
+      "user_id":3634595
+    },
+    "message":"hmm"
+  },
+  {
+    "date":"2016-04-22T02:54:59+0000",
+    "from":{
+      "name":"Utsav Adhikari",
+      "user_id":3634595
+    },
+    "message":"I think some exception testing would be good"
+  },
+  {
+    "date":"2016-04-22T02:55:03+0000",
+    "from":{
+      "name":"Utsav Adhikari",
+      "user_id":3634595
+    },
+    "message":"is that what its called?"
+  },
+  {
+    "date":"2016-04-22T02:55:10+0000",
+    "from":{
+      "name":"Rhys Van Orsouw",
+      "user_id":3634053
+    },
+    "message":"I've thrown one in there haha"
+  },
+  {
+    "date":"2016-04-22T02:55:16+0000",
+    "from":{
+      "name":"Rhys Van Orsouw",
+      "user_id":3634053
+    },
+    "message":"did you oull my changes?"
+  },
+  {
+    "date":"2016-04-22T02:55:31+0000",
+    "from":{
+      "name":"Utsav Adhikari",
+      "user_id":3634595
+    },
+    "message":"To see if we gracefully handle missing files\/bad connection etc"
+  },
+  {
+    "date":"2016-04-22T02:55:44+0000",
+    "from":{
+      "name":"Rhys Van Orsouw",
+      "user_id":3634053
+    },
+    "message":"Well we do for missing files I think"
+  },
+  {
+    "date":"2016-04-22T02:56:04+0000",
+    "from":{
+      "name":"Rhys Van Orsouw",
+      "user_id":3634053
+    },
+    "message":"the exception i tested for was for loading ovservations from an empty weather stations object"
+  },
+  {
+    "date":"2016-04-22T02:57:14+0000",
+    "from":{
+      "name":"Rhys Van Orsouw",
+      "user_id":3634053
+    },
+    "message":"I'll start going through find bugs and ironing out those"
+  },
+  {
+    "date":"2016-04-22T02:57:16+0000",
+    "from":{
+      "name":"Utsav Adhikari",
+      "user_id":3634595
+    },
+    "message":"hmm yeah can't really think of much in the way of testing."
+  },
+  {
+    "date":"2016-04-22T03:05:30+0000",
+    "from":{
+      "name":"Bitbucket",
+      "user_id":"api"
+    },
+    "message":"<img src=\"https:\/\/hipbucket.bitbucketconnect.com\/icons\/commits-blue.png\" alt=\"\" height=\"16\" width=\"13\" \/> 4 commits pushed to branch <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\/branch\/master\"><strong>master<\/strong><\/a> by <a href=\"https:\/\/bitbucket.org\/rhysvo\/\"><strong>Rhys  Van Orsouw<\/strong><\/a> in <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\"><strong>chocvanilla\/weather-app<\/strong><\/a><br \/>- Added a few small test cases. Added to HOWTO.md\\n \u00b7 <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\/commits\/784c292572c1e14581b514f502e53c0635478f32\">784c292<\/a><br \/>- Merge remote-tracking branch 'origin\/master'\\n\\nConflicts:\\n\tREADME.md\\n \u00b7 <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\/commits\/5a286505563de85414248d10794aabbed9942c4f\">5a28650<\/a><br \/>- Merge remote-tracking branch 'origin\/master'\\n \u00b7 <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\/commits\/89fcd74335715067616500acc00d2449b679a7ed\">89fcd74<\/a><br \/>- Edited README.md\\n \u00b7 <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\/commits\/6cf9af66443766a680e6609056fa2d2074aa303a\">6cf9af6<\/a>"
+  },
+  {
+    "date":"2016-04-22T03:06:54+0000",
+    "from":{
+      "name":"Rhys Van Orsouw",
+      "user_id":3634053
+    },
+    "message":"I got a few errors out the way"
+  },
+  {
+    "date":"2016-04-22T03:07:01+0000",
+    "from":{
+      "name":"Rhys Van Orsouw",
+      "user_id":3634053
+    },
+    "message":"pretty scared of screwing it all up haha"
+  },
+  {
+    "date":"2016-04-22T03:07:13+0000",
+    "from":{
+      "name":"Rhys Van Orsouw",
+      "user_id":3634053
+    },
+    "message":"I also managed to lose my gradlew file lel"
+  },
+  {
+    "date":"2016-04-22T03:07:20+0000",
+    "from":{
+      "name":"Utsav Adhikari",
+      "user_id":3634595
+    },
+    "message":"bahaha"
+  },
+  {
+    "date":"2016-04-22T03:07:27+0000",
+    "from":{
+      "name":"Utsav Adhikari",
+      "user_id":3634595
+    },
+    "message":"I swear you can't catch a break with gradle"
+  },
+  {
+    "date":"2016-04-22T03:07:33+0000",
+    "from":{
+      "name":"Rhys Van Orsouw",
+      "user_id":3634053
+    },
+    "message":"Its tough"
+  },
+  {
+    "date":"2016-04-22T03:07:55+0000",
+    "from":{
+      "name":"Rhys Van Orsouw",
+      "user_id":3634053
+    },
+    "message":"but i cant imagine doing a large project with a heap of dependencies without it"
+  },
+  {
+    "date":"2016-04-22T03:08:11+0000",
+    "from":{
+      "name":"Utsav Adhikari",
+      "user_id":3634595
+    },
+    "message":"Yep, I can see why build systems are a thing"
+  },
+  {
+    "date":"2016-04-22T03:09:07+0000",
+    "from":{
+      "name":"Bitbucket",
+      "user_id":"api"
+    },
+    "message":"<img src=\"https:\/\/hipbucket.bitbucketconnect.com\/icons\/commits-blue.png\" alt=\"\" height=\"16\" width=\"13\" \/> 2 commits pushed to branch <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\/branch\/master\"><strong>master<\/strong><\/a> by <a href=\"https:\/\/bitbucket.org\/RajRMIT\/\"><strong>Raj Adhikari<\/strong><\/a> in <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\"><strong>chocvanilla\/weather-app<\/strong><\/a><br \/>- Merge remote-tracking branch 'origin\/master'\\n \u00b7 <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\/commits\/d2926afdfe9f096d3c9e24cbfe0cdd43a642320d\">d2926af<\/a><br \/>- Added updating weather stations section\\n \u00b7 <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\/commits\/762dcaa4a1ff2090fc1919f0dec278d772fba466\">762dcaa<\/a>"
+  },
+  {
+    "date":"2016-04-22T03:14:25+0000",
+    "from":{
+      "name":"Bitbucket",
+      "user_id":"api"
+    },
+    "message":"<img src=\"https:\/\/hipbucket.bitbucketconnect.com\/icons\/commits-blue.png\" alt=\"\" height=\"16\" width=\"13\" \/> One commit pushed to branch <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\/branch\/master\"><strong>master<\/strong><\/a> by <a href=\"https:\/\/bitbucket.org\/RajRMIT\/\"><strong>Raj Adhikari<\/strong><\/a> in <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\"><strong>chocvanilla\/weather-app<\/strong><\/a><br \/>- Removed broken link\\n \u00b7 <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\/commits\/f26b0f5c6e3589274a8f4a93ca7a4b34c468ea87\">f26b0f5<\/a>"
+  },
+  {
+    "date":"2016-04-22T03:19:47+0000",
+    "from":{
+      "name":"Bitbucket",
+      "user_id":"api"
+    },
+    "message":"<img src=\"https:\/\/hipbucket.bitbucketconnect.com\/icons\/commits-blue.png\" alt=\"\" height=\"16\" width=\"13\" \/> 2 commits pushed to branch <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\/branch\/master\"><strong>master<\/strong><\/a> by <a href=\"https:\/\/bitbucket.org\/RajRMIT\/\"><strong>Raj Adhikari<\/strong><\/a> in <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\"><strong>chocvanilla\/weather-app<\/strong><\/a><br \/>- White space and stuff.\\n \u00b7 <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\/commits\/6b3ca3f001c18e9e3c11123ac28d720c289fd3b6\">6b3ca3f<\/a><br \/>- Accidentally a word\\n \u00b7 <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\/commits\/17fb0af0013df1cf2ebee6963558121928a4f266\">17fb0af<\/a>"
+  },
+  {
+    "date":"2016-04-22T03:29:15+0000",
+    "from":{
+      "name":"Utsav Adhikari",
+      "user_id":3634595
+    },
+    "message":"Ok, I think I'll go around adding some error dialogs in the app, and introduce a trouble shooting section."
+  },
+  {
+    "date":"2016-04-22T03:29:37+0000",
+    "from":{
+      "name":"Rhys Van Orsouw",
+      "user_id":3634053
+    },
+    "message":"sounds great!"
+  },
+  {
+    "date":"2016-04-22T03:31:57+0000",
+    "from":{
+      "name":"Utsav Adhikari",
+      "user_id":3634595
+    },
+    "message":"I hope I'm not making some sort of anti-pattern, the classes in data package shouldn't be creating dialogs on their own should they?"
+  },
+  {
+    "date":"2016-04-22T03:32:43+0000",
+    "from":{
+      "name":"Rhys Van Orsouw",
+      "user_id":3634053
+    },
+    "message":"If we want to keep it separate, then i'd say no"
+  },
+  {
+    "date":"2016-04-22T03:33:02+0000",
+    "from":{
+      "name":"Utsav Adhikari",
+      "user_id":3634595
+    },
+    "message":"Alright, I'll work something out"
+  },
+  {
+    "date":"2016-04-22T03:55:18+0000",
+    "from":{
+      "name":"Bitbucket",
+      "user_id":"api"
+    },
+    "message":"<img src=\"https:\/\/hipbucket.bitbucketconnect.com\/icons\/commits-blue.png\" alt=\"\" height=\"16\" width=\"13\" \/> One commit pushed to branch <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\/branch\/master\"><strong>master<\/strong><\/a> by <a href=\"https:\/\/bitbucket.org\/rhysvo\/\"><strong>Rhys  Van Orsouw<\/strong><\/a> in <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\"><strong>chocvanilla\/weather-app<\/strong><\/a><br \/>- Quick code clean up\\n \u00b7 <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\/commits\/82b9302c9d7b2da01b249c801cb33839d9469f78\">82b9302<\/a>"
+  },
+  {
+    "date":"2016-04-22T04:24:36+0000",
+    "from":{
+      "name":"Bitbucket",
+      "user_id":"api"
+    },
+    "message":"<img src=\"https:\/\/hipbucket.bitbucketconnect.com\/icons\/commits-blue.png\" alt=\"\" height=\"16\" width=\"13\" \/> 2 commits pushed to branch <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\/branch\/master\"><strong>master<\/strong><\/a> by <a href=\"https:\/\/bitbucket.org\/RajRMIT\/\"><strong>Raj Adhikari<\/strong><\/a> in <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\"><strong>chocvanilla\/weather-app<\/strong><\/a><br \/>- Merge remote-tracking branch 'origin\/master'\\n \u00b7 <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\/commits\/d58a59f0f1ae5563bced815fbb7c14c937691301\">d58a59f<\/a><br \/>- Added error message dialogs; moved ObservationDescription to data p... \u00b7 <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\/commits\/711de00217cc56ff3fda4a3aa484c3dfa810410d\">711de00<\/a>"
+  },
+  {
+    "date":"2016-04-22T04:35:41+0000",
+    "from":{
+      "name":"Bitbucket",
+      "user_id":"api"
+    },
+    "message":"<img src=\"https:\/\/hipbucket.bitbucketconnect.com\/icons\/commits-blue.png\" alt=\"\" height=\"16\" width=\"13\" \/> One commit pushed to branch <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\/branch\/master\"><strong>master<\/strong><\/a> by <a href=\"https:\/\/bitbucket.org\/RajRMIT\/\"><strong>Raj Adhikari<\/strong><\/a> in <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\"><strong>chocvanilla\/weather-app<\/strong><\/a><br \/>- Added troubleshooting section\\n \u00b7 <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\/commits\/d63befaa926f0b21b9e405c0bb7220cbd28c37be\">d63befa<\/a>"
+  },
+  {
+    "date":"2016-04-22T04:36:11+0000",
+    "from":{
+      "name":"Utsav Adhikari",
+      "user_id":3634595
+    },
+    "message":"Alright, I think the HOWTO is almost in its final form"
+  },
+  {
+    "date":"2016-04-22T04:52:16+0000",
+    "from":{
+      "name":"Utsav Adhikari",
+      "user_id":3634595
+    },
+    "message":"What would you guys suppose the architecture is for this? I'm thinking monolithic"
+  },
+  {
+    "date":"2016-04-22T04:52:39+0000",
+    "from":{
+      "name":"Rhys Van Orsouw",
+      "user_id":3634053
+    },
+    "message":"Its looking pretty mono lithic"
+  },
+  {
+    "date":"2016-04-22T04:52:48+0000",
+    "from":{
+      "name":"Rhys Van Orsouw",
+      "user_id":3634053
+    },
+    "message":"but in some ways its a little mvc"
+  },
+  {
+    "date":"2016-04-22T04:53:01+0000",
+    "from":{
+      "name":"Rhys Van Orsouw",
+      "user_id":3634053
+    },
+    "message":"i mean it is separated into gui\/data packages"
+  },
+  {
+    "date":"2016-04-22T04:53:08+0000",
+    "from":{
+      "name":"Rhys Van Orsouw",
+      "user_id":3634053
+    },
+    "message":"actually its not mvc at all"
+  },
+  {
+    "date":"2016-04-22T04:53:09+0000",
+    "from":{
+      "name":"Rhys Van Orsouw",
+      "user_id":3634053
+    },
+    "message":"lol"
+  },
+  {
+    "date":"2016-04-22T04:53:16+0000",
+    "from":{
+      "name":"Utsav Adhikari",
+      "user_id":3634595
+    },
+    "message":"yeah hah"
+  },
+  {
+    "date":"2016-04-22T04:53:32+0000",
+    "from":{
+      "name":"Rhys Van Orsouw",
+      "user_id":3634053
+    },
+    "message":"hmmmm"
+  },
+  {
+    "date":"2016-04-22T04:53:40+0000",
+    "from":{
+      "name":"Rhys Van Orsouw",
+      "user_id":3634053
+    },
+    "message":"its layered in a sense"
+  },
+  {
+    "date":"2016-04-22T04:54:21+0000",
+    "from":{
+      "name":"Rhys Van Orsouw",
+      "user_id":3634053
+    },
+    "message":"loadData->UI->manipulateData"
+  },
+  {
+    "date":"2016-04-22T04:54:30+0000",
+    "from":{
+      "name":"Utsav Adhikari",
+      "user_id":3634595
+    },
+    "message":"Is our design omnidirectional?"
+  },
+  {
+    "date":"2016-04-22T04:54:41+0000",
+    "from":{
+      "name":"Rhys Van Orsouw",
+      "user_id":3634053
+    },
+    "message":"well I would say so"
+  },
+  {
+    "date":"2016-04-22T04:54:46+0000",
+    "from":{
+      "name":"Utsav Adhikari",
+      "user_id":3634595
+    },
+    "message":"Yeah"
+  },
+  {
+    "date":"2016-04-22T04:54:48+0000",
+    "from":{
+      "name":"Rhys Van Orsouw",
+      "user_id":3634053
+    },
+    "message":"once you have a list is observations, thats it"
+  },
+  {
+    "date":"2016-04-22T04:55:07+0000",
+    "from":{
+      "name":"Rhys Van Orsouw",
+      "user_id":3634053
+    },
+    "message":"you can request data refresh's (kind of)"
+  },
+  {
+    "date":"2016-04-22T04:55:16+0000",
+    "from":{
+      "name":"Rhys Van Orsouw",
+      "user_id":3634053
+    },
+    "message":"hmm"
+  },
+  {
+    "date":"2016-04-22T04:55:32+0000",
+    "from":{
+      "name":"Rhys Van Orsouw",
+      "user_id":3634053
+    },
+    "message":"Adam will most likely be most in touch with data flow"
+  },
+  {
+    "date":"2016-04-22T04:55:38+0000",
+    "from":{
+      "name":"Rhys Van Orsouw",
+      "user_id":3634053
+    },
+    "message":"I have a semi decent grip"
+  },
+  {
+    "date":"2016-04-22T04:55:55+0000",
+    "from":{
+      "name":"Utsav Adhikari",
+      "user_id":3634595
+    },
+    "message":"I'll draw some things and see if it makes sense."
+  },
+  {
+    "date":"2016-04-22T04:57:06+0000",
+    "from":{
+      "name":"Utsav Adhikari",
+      "user_id":3634595
+    },
+    "message":"Also, turns out we didn't really need a class diagram."
+  },
+  {
+    "date":"2016-04-22T04:57:15+0000",
+    "from":{
+      "name":"Rhys Van Orsouw",
+      "user_id":3634053
+    },
+    "message":"We kinda do"
+  },
+  {
+    "date":"2016-04-22T04:57:21+0000",
+    "from":{
+      "name":"Utsav Adhikari",
+      "user_id":3634595
+    },
+    "message":"do we?"
+  },
+  {
+    "date":"2016-04-22T04:57:37+0000",
+    "from":{
+      "name":"Rhys Van Orsouw",
+      "user_id":3634053
+    },
+    "message":"http:\/\/puu.sh\/orltu\/b35ac6fcb0.png"
+  },
+  {
+    "date":"2016-04-22T04:57:39+0000",
+    "from":{
+      "name":"Rhys Van Orsouw",
+      "user_id":3634053
+    },
+    "message":"from specs"
+  },
+  {
+    "date":"2016-04-22T04:57:43+0000",
+    "from":{
+      "name":"Rhys Van Orsouw",
+      "user_id":3634053
+    },
+    "message":"but slightly outdated"
+  },
+  {
+    "date":"2016-04-22T04:57:47+0000",
+    "from":{
+      "name":"Utsav Adhikari",
+      "user_id":3634595
+    },
+    "message":"Ahh"
+  },
+  {
+    "date":"2016-04-22T04:58:01+0000",
+    "from":{
+      "name":"Kyle Glover",
+      "user_id":3646818
+    },
+    "message":"Oi boys"
+  },
+  {
+    "date":"2016-04-22T04:58:03+0000",
+    "from":{
+      "name":"Kyle Glover",
+      "user_id":3646818
+    },
+    "message":"https:\/\/discord.gg\/0pltPngQhmurCeHH"
+  },
+  {
+    "date":"2016-04-22T04:58:05+0000",
+    "from":{
+      "name":"Utsav Adhikari",
+      "user_id":3634595
+    },
+    "message":"yep, Ill get on that then"
+  },
+  {
+    "date":"2016-04-22T04:58:06+0000",
+    "from":{
+      "name":"Kyle Glover",
+      "user_id":3646818
+    },
+    "message":"join that shit"
+  },
+  {
+    "date":"2016-04-22T04:58:15+0000",
+    "from":{
+      "name":"Kyle Glover",
+      "user_id":3646818
+    },
+    "message":"we can chat using voice"
+  },
+  {
+    "date":"2016-04-22T04:59:02+0000",
+    "from":{
+      "name":"Kyle Glover",
+      "user_id":3646818
+    },
+    "message":"double click on  RMIT-SEF"
+  },
+  {
+    "date":"2016-04-22T04:59:13+0000",
+    "from":{
+      "name":"Utsav Adhikari",
+      "user_id":3634595
+    },
+    "message":"no premission"
+  },
+  {
+    "date":"2016-04-22T04:59:28+0000",
+    "from":{
+      "name":"Kyle Glover",
+      "user_id":3646818
+    },
+    "message":"try now"
+  },
+  {
+    "date":"2016-04-22T05:03:03+0000",
+    "from":{
+      "name":"Bitbucket",
+      "user_id":"api"
+    },
+    "message":"<img src=\"https:\/\/hipbucket.bitbucketconnect.com\/icons\/commits-blue.png\" alt=\"\" height=\"16\" width=\"13\" \/> One commit pushed to branch <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\/branch\/master\"><strong>master<\/strong><\/a> by <a href=\"https:\/\/bitbucket.org\/rhysvo\/\"><strong>Rhys  Van Orsouw<\/strong><\/a> in <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\"><strong>chocvanilla\/weather-app<\/strong><\/a><br \/>- Quick code clean up\\n \u00b7 <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\/commits\/8a4834e5e10a1cc9650602ec967159d31ad20816\">8a4834e<\/a>"
+  },
+  {
+    "date":"2016-04-22T05:03:21+0000",
+    "from":{
+      "name":"Bitbucket",
+      "user_id":"api"
+    },
+    "message":"<img src=\"https:\/\/hipbucket.bitbucketconnect.com\/icons\/commits-blue.png\" alt=\"\" height=\"16\" width=\"13\" \/> One commit pushed to branch <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\/branch\/master\"><strong>master<\/strong><\/a> by <a href=\"https:\/\/bitbucket.org\/rhysvo\/\"><strong>Rhys  Van Orsouw<\/strong><\/a> in <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\"><strong>chocvanilla\/weather-app<\/strong><\/a><br \/>- Quick code clean up\\n \u00b7 <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\/commits\/3bbc7498c3cf6cacadcad47bbed477be7e223c0c\">3bbc749<\/a>"
+  },
+  {
+    "date":"2016-04-22T05:08:50+0000",
+    "from":{
+      "name":"Utsav Adhikari",
+      "user_id":3634595
+    },
+    "message":"@RhysVanOrsouw  https:\/\/puu.sh\/orlUz\/b08f2b4dba.png"
+  },
+  {
+    "date":"2016-04-22T05:09:32+0000",
+    "from":{
+      "name":"Rhys Van Orsouw",
+      "user_id":3634053
+    },
+    "message":"http:\/\/puu.sh\/orlYL\/333444c7e2.png"
+  },
+  {
+    "date":"2016-04-22T05:40:09+0000",
+    "from":{
+      "name":"Bitbucket",
+      "user_id":"api"
+    },
+    "message":"<img src=\"https:\/\/hipbucket.bitbucketconnect.com\/icons\/commits-blue.png\" alt=\"\" height=\"16\" width=\"13\" \/> One commit pushed to branch <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\/branch\/master\"><strong>master<\/strong><\/a> by <a href=\"https:\/\/bitbucket.org\/rhysvo\/\"><strong>Rhys  Van Orsouw<\/strong><\/a> in <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\"><strong>chocvanilla\/weather-app<\/strong><\/a><br \/>- Added Javadocs for DetailWindow.java\\n \u00b7 <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\/commits\/03bae48f941acebe3a6c01f09852f7baaae47fb3\">03bae48<\/a>"
+  },
+  [
+    
+  ],
+  [
+    
+  ]
+]

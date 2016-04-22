@@ -1,0 +1,58 @@
+[
+  {
+    "date":"2016-04-19T00:36:24+0000",
+    "from":{
+      "name":"Rhys Van Orsouw",
+      "user_id":3634053
+    },
+    "message":"Sorry I didnt look at hipchat guys"
+  },
+  {
+    "date":"2016-04-19T00:36:33+0000",
+    "from":{
+      "name":"Rhys Van Orsouw",
+      "user_id":3634053
+    },
+    "message":"was studying up a storm for algorithims, as you know"
+  },
+  {
+    "date":"2016-04-19T00:36:42+0000",
+    "from":{
+      "name":"Rhys Van Orsouw",
+      "user_id":3634053
+    },
+    "message":"The changes look really good"
+  },
+  {
+    "date":"2016-04-19T00:37:05+0000",
+    "from":{
+      "name":"Rhys Van Orsouw",
+      "user_id":3634053
+    },
+    "message":"I think the next functional requirement is an add\/remove favourites button when a chart panel is openec"
+  },
+  {
+    "date":"2016-04-19T00:37:07+0000",
+    "from":{
+      "name":"Rhys Van Orsouw",
+      "user_id":3634053
+    },
+    "message":"opened"
+  },
+  {
+    "date":"2016-04-19T08:23:08+0000",
+    "from":{
+      "name":"Bitbucket",
+      "user_id":"api"
+    },
+    "message":"<img src=\"https:\/\/hipbucket.bitbucketconnect.com\/icons\/commits-blue.png\" alt=\"\" height=\"16\" width=\"13\" \/> One commit pushed to branch <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\/branch\/gui\"><strong>gui<\/strong><\/a> by <a href=\"https:\/\/bitbucket.org\/RajRMIT\/\"><strong>Raj Adhikari<\/strong><\/a> in <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\"><strong>chocvanilla\/weather-app<\/strong><\/a><br \/>- configuration\/data files and directories are now hidden\\nDetails pan... \u00b7 <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\/commits\/29f84f3540a8d02a409c68b644f422534649d84d\">29f84f3<\/a>"
+  },
+  {
+    "date":"2016-04-19T23:27:14+0000",
+    "from":{
+      "name":"Bitbucket",
+      "user_id":"api"
+    },
+    "message":"<img src=\"https:\/\/hipbucket.bitbucketconnect.com\/icons\/commits-blue.png\" alt=\"\" height=\"16\" width=\"13\" \/> One commit pushed to branch <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\/branch\/gui\"><strong>gui<\/strong><\/a> by <a href=\"https:\/\/bitbucket.org\/s3544305\/\"><strong>Adam Thalhammer<\/strong><\/a> in <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\"><strong>chocvanilla\/weather-app<\/strong><\/a><br \/>- add constants for temp units; add unit to last field\\n \u00b7 <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\/commits\/e6ad03720b38c9e7640a1fe5fcf01e76167f23b4\">e6ad037<\/a>"
+  }
+]

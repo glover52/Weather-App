@@ -1,0 +1,642 @@
+[
+  {
+    "date":"2016-03-17T01:52:04+0000",
+    "from":{
+      "name":"Adam Thalhammer",
+      "user_id":3634594
+    },
+    "message":"definitely. plus entering user stories into jira, then they can be assigned to people and we can start working through what needs to be done"
+  },
+  {
+    "date":"2016-03-17T05:38:06+0000",
+    "from":{
+      "name":"Adam Thalhammer",
+      "user_id":3634594
+    },
+    "message":"lol."
+  },
+  {
+    "date":"2016-03-17T05:39:09+0000",
+    "from":{
+      "name":"Rhys Van Orsouw",
+      "user_id":3634053
+    },
+    "message":"My bad guys, hadnt checked hipchat"
+  },
+  {
+    "date":"2016-03-17T05:39:14+0000",
+    "from":{
+      "name":"Rhys Van Orsouw",
+      "user_id":3634053
+    },
+    "message":"ill get into the habit of checking back"
+  },
+  {
+    "date":"2016-03-17T05:39:40+0000",
+    "from":{
+      "name":"Rhys Van Orsouw",
+      "user_id":3634053
+    },
+    "message":"ill look into connecting bitbucket to jira now"
+  },
+  {
+    "date":"2016-03-17T05:39:52+0000",
+    "from":{
+      "name":"Adam Thalhammer",
+      "user_id":3634594
+    },
+    "message":"that's fine :) it's a nice-to-have.."
+  },
+  {
+    "date":"2016-03-17T05:40:12+0000",
+    "from":{
+      "name":"Adam Thalhammer",
+      "user_id":3634594
+    },
+    "message":"I'm not sure how the integration works exactly haha... "
+  },
+  {
+    "date":"2016-03-17T05:40:19+0000",
+    "from":{
+      "name":"Adam Thalhammer",
+      "user_id":3634594
+    },
+    "message":"at least it seems to be running stable now?"
+  },
+  {
+    "date":"2016-03-17T05:47:08+0000",
+    "from":{
+      "name":"Rhys Van Orsouw",
+      "user_id":3634053
+    },
+    "message":"I feel this owuld be a lot easier if we were using a cloud hosted environment"
+  },
+  {
+    "date":"2016-03-17T05:48:53+0000",
+    "from":{
+      "name":"Adam Thalhammer",
+      "user_id":3634594
+    },
+    "message":"it is cloud hosted >P"
+  },
+  {
+    "date":"2016-03-17T05:48:55+0000",
+    "from":{
+      "name":"Adam Thalhammer",
+      "user_id":3634594
+    },
+    "message":":P"
+  },
+  {
+    "date":"2016-03-17T05:48:59+0000",
+    "from":{
+      "name":"Adam Thalhammer",
+      "user_id":3634594
+    },
+    "message":"on our own cloud"
+  },
+  {
+    "date":"2016-03-17T05:49:04+0000",
+    "from":{
+      "name":"Rhys Van Orsouw",
+      "user_id":3634053
+    },
+    "message":"A bit different"
+  },
+  {
+    "date":"2016-03-17T05:49:13+0000",
+    "from":{
+      "name":"Rhys Van Orsouw",
+      "user_id":3634053
+    },
+    "message":"We need to create our own OAuth keys"
+  },
+  {
+    "date":"2016-03-17T05:49:16+0000",
+    "from":{
+      "name":"Rhys Van Orsouw",
+      "user_id":3634053
+    },
+    "message":"not too heard"
+  },
+  {
+    "date":"2016-03-17T05:49:18+0000",
+    "from":{
+      "name":"Rhys Van Orsouw",
+      "user_id":3634053
+    },
+    "message":"hard"
+  },
+  {
+    "date":"2016-03-17T05:49:26+0000",
+    "from":{
+      "name":"Rhys Van Orsouw",
+      "user_id":3634053
+    },
+    "message":"ill need a server account and admin access though"
+  },
+  {
+    "date":"2016-03-17T05:50:23+0000",
+    "from":{
+      "name":"Adam Thalhammer",
+      "user_id":3634594
+    },
+    "message":"sure! I already gave everyone full admin access inside of jira and happy to set up access to the server too :)"
+  },
+  {
+    "date":"2016-03-17T05:50:34+0000",
+    "from":{
+      "name":"Rhys Van Orsouw",
+      "user_id":3634053
+    },
+    "message":"cool that'd be great haha"
+  },
+  {
+    "date":"2016-03-17T05:50:45+0000",
+    "from":{
+      "name":"Rhys Van Orsouw",
+      "user_id":3634053
+    },
+    "message":"I just tried to ssh and got rejected"
+  },
+  {
+    "date":"2016-03-17T05:52:04+0000",
+    "from":{
+      "name":"Rhys Van Orsouw",
+      "user_id":3634053
+    },
+    "message":"actually I dont think i need ssh permissions"
+  },
+  {
+    "date":"2016-03-17T05:52:10+0000",
+    "from":{
+      "name":"Rhys Van Orsouw",
+      "user_id":3634053
+    },
+    "message":"i can do it through the JIRA dashboard"
+  },
+  {
+    "date":"2016-03-17T05:52:13+0000",
+    "from":{
+      "name":"Adam Thalhammer",
+      "user_id":3634594
+    },
+    "message":"yeah setting it up now I'll make your username rhys, do you have a public ssh key for me? or do you prefer password login"
+  },
+  {
+    "date":"2016-03-17T05:52:19+0000",
+    "from":{
+      "name":"Adam Thalhammer",
+      "user_id":3634594
+    },
+    "message":"but still you should have access :)"
+  },
+  {
+    "date":"2016-03-17T05:53:01+0000",
+    "from":{
+      "name":"Rhys Van Orsouw",
+      "user_id":3634053
+    },
+    "message":"Ill go password"
+  },
+  {
+    "date":"2016-03-17T05:53:10+0000",
+    "from":{
+      "name":"Rhys Van Orsouw",
+      "user_id":3634053
+    },
+    "message":"Just Make it Rhys123"
+  },
+  {
+    "date":"2016-03-17T05:53:49+0000",
+    "from":{
+      "name":"Rhys Van Orsouw",
+      "user_id":3634053
+    },
+    "message":"is the server up and running?"
+  },
+  {
+    "date":"2016-03-17T05:53:55+0000",
+    "from":{
+      "name":"Adam Thalhammer",
+      "user_id":3634594
+    },
+    "message":"yup."
+  },
+  {
+    "date":"2016-03-17T05:53:57+0000",
+    "from":{
+      "name":"Adam Thalhammer",
+      "user_id":3634594
+    },
+    "message":"just set up your account"
+  },
+  {
+    "date":"2016-03-17T05:54:20+0000",
+    "from":{
+      "name":"Adam Thalhammer",
+      "user_id":3634594
+    },
+    "message":"you can login with ssh rhys@128.199.247.266"
+  },
+  {
+    "date":"2016-03-17T05:54:23+0000",
+    "from":{
+      "name":"Adam Thalhammer",
+      "user_id":3634594
+    },
+    "message":"oh sorry"
+  },
+  {
+    "date":"2016-03-17T05:54:24+0000",
+    "from":{
+      "name":"Adam Thalhammer",
+      "user_id":3634594
+    },
+    "message":"hang on"
+  },
+  {
+    "date":"2016-03-17T05:54:28+0000",
+    "from":{
+      "name":"Rhys Van Orsouw",
+      "user_id":3634053
+    },
+    "message":"its up"
+  },
+  {
+    "date":"2016-03-17T05:54:35+0000",
+    "from":{
+      "name":"Adam Thalhammer",
+      "user_id":3634594
+    },
+    "message":"rhys@128.199.147.226"
+  },
+  {
+    "date":"2016-03-17T05:57:59+0000",
+    "from":{
+      "name":"Adam Thalhammer",
+      "user_id":3634594
+    },
+    "message":"@all I've set up a sample user story to get us started (in jira). will write some tests for this and implement the functionality to see if our setup works... if everyone is happy with that :D"
+  },
+  {
+    "date":"2016-03-17T06:00:29+0000",
+    "from":{
+      "name":"Rhys Van Orsouw",
+      "user_id":3634053
+    },
+    "message":"bitbucket is linked :)"
+  },
+  {
+    "date":"2016-03-17T06:01:17+0000",
+    "from":{
+      "name":"Rhys Van Orsouw",
+      "user_id":3634053
+    },
+    "message":"https:\/\/confluence.atlassian.com\/bitbucket\/linking-bitbucket-cloud-and-github-accounts-to-jira-software-300814271.html"
+  },
+  {
+    "date":"2016-03-17T06:01:20+0000",
+    "from":{
+      "name":"Link",
+      "user_id":"api"
+    },
+    "message":"\\n\\n\\n<p><b><a href=\"https:\/\/confluence.atlassian.com\/bitbucket\/connect-bitbucket-cloud-to-jira-cloud-applications-814190686.html\">Connect Bitbucket Cloud to JIRA Cloud applications - Atlassian Documentation<\/a><\/b><\/p>\\n\\n\\n<p>When you\u00a0connect your Bitbucket Cloud accounts with JIRA Cloud your team enjoys the seamless integration of issues and code:<\/p>\\n\\n"
+  },
+  {
+    "date":"2016-03-17T06:01:20+0000",
+    "from":{
+      "name":"Rhys Van Orsouw",
+      "user_id":3634053
+    },
+    "message":"have a look through that"
+  },
+  {
+    "date":"2016-03-17T06:01:25+0000",
+    "from":{
+      "name":"Adam Thalhammer",
+      "user_id":3634594
+    },
+    "message":"awesome!"
+  },
+  {
+    "date":"2016-03-17T06:01:27+0000",
+    "from":{
+      "name":"Adam Thalhammer",
+      "user_id":3634594
+    },
+    "message":"thanks!!"
+  },
+  {
+    "date":"2016-03-17T06:01:45+0000",
+    "from":{
+      "name":"Rhys Van Orsouw",
+      "user_id":3634053
+    },
+    "message":"it has some information on how to write commits to add JIRA software issues keys"
+  },
+  {
+    "date":"2016-03-17T06:03:32+0000",
+    "from":{
+      "name":"Adam Thalhammer",
+      "user_id":3634594
+    },
+    "message":"oh cool, this is very useful"
+  },
+  {
+    "date":"2016-03-17T06:03:37+0000",
+    "from":{
+      "name":"Adam Thalhammer",
+      "user_id":3634594
+    },
+    "message":"more details here: https:\/\/confluence.atlassian.com\/bitbucket\/processing-jira-software-issues-with-smart-commit-messages-298979931.html"
+  },
+  {
+    "date":"2016-03-17T06:06:36+0000",
+    "from":{
+      "name":"Rhys Van Orsouw",
+      "user_id":3634053
+    },
+    "message":"Smart commits are properly set up"
+  },
+  {
+    "date":"2016-03-17T06:08:08+0000",
+    "from":{
+      "name":"Rhys Van Orsouw",
+      "user_id":3634053
+    },
+    "message":"I think it would be a good idea to use these codes from now on to associate all commits with its JIRA issue "
+  },
+  {
+    "date":"2016-03-17T06:10:21+0000",
+    "from":{
+      "name":"Adam Thalhammer",
+      "user_id":3634594
+    },
+    "message":"sounds good. time to come up with all the user stories... (allthethings)"
+  },
+  {
+    "date":"2016-03-17T06:11:07+0000",
+    "from":{
+      "name":"Adam Thalhammer",
+      "user_id":3634594
+    },
+    "message":"but also one of us should be scrum master (not me, I'm too disorganised haha)"
+  },
+  {
+    "date":"2016-03-17T06:11:28+0000",
+    "from":{
+      "name":"Adam Thalhammer",
+      "user_id":3634594
+    },
+    "message":"and we should set a sprint length and whatever else it is that people using scrum doo"
+  },
+  {
+    "date":"2016-03-17T06:11:37+0000",
+    "from":{
+      "name":"Adam Thalhammer",
+      "user_id":3634594
+    },
+    "message":"(doge) do."
+  },
+  {
+    "date":"2016-03-17T06:13:23+0000",
+    "from":{
+      "name":"Rhys Van Orsouw",
+      "user_id":3634053
+    },
+    "message":"I'm not too fussed"
+  },
+  {
+    "date":"2016-03-17T06:13:40+0000",
+    "from":{
+      "name":"Rhys Van Orsouw",
+      "user_id":3634053
+    },
+    "message":"I can start getting organised to do it and look up proper SCRUM techniques etc"
+  },
+  {
+    "date":"2016-03-17T06:14:10+0000",
+    "from":{
+      "name":"Rhys Van Orsouw",
+      "user_id":3634053
+    },
+    "message":"But now thatUtsav has appeared in the lecture, he can have an opinion :p"
+  },
+  {
+    "date":"2016-03-17T06:17:28+0000",
+    "from":{
+      "name":"Rhys Van Orsouw",
+      "user_id":3634053
+    },
+    "message":"As for organisation, I'd say we need to have User Stories and requirments done preferably before the weekend begins"
+  },
+  {
+    "date":"2016-03-17T06:17:50+0000",
+    "from":{
+      "name":"Rhys Van Orsouw",
+      "user_id":3634053
+    },
+    "message":"Maybe plan a Sprint at the start of next week, and have a Sprint over the Holidays?"
+  },
+  {
+    "date":"2016-03-17T06:18:07+0000",
+    "from":{
+      "name":"Adam Thalhammer",
+      "user_id":3634594
+    },
+    "message":"sounds good"
+  },
+  {
+    "date":"2016-03-17T06:19:07+0000",
+    "from":{
+      "name":"Rhys Van Orsouw",
+      "user_id":3634053
+    },
+    "message":"So over the next four days we need to get a handle on exactly what the assignment is asking, agree on the organisation, and make a start"
+  },
+  {
+    "date":"2016-03-17T06:24:52+0000",
+    "from":{
+      "name":"Rhys Van Orsouw",
+      "user_id":3634053
+    },
+    "message":"Its due Monday the 18th of April, at 9am"
+  },
+  {
+    "date":"2016-03-17T06:26:35+0000",
+    "from":{
+      "name":"Rhys Van Orsouw",
+      "user_id":3634053
+    },
+    "message":"I'm not sure what the assessment will be in week 5, which is slightly worrying, but we can only assume it will have something to do with the progress of our assigment"
+  },
+  {
+    "date":"2016-03-17T06:27:15+0000",
+    "from":{
+      "name":"Rhys Van Orsouw",
+      "user_id":3634053
+    },
+    "message":"So that will be on the 5th of April for us"
+  },
+  {
+    "date":"2016-03-17T06:27:51+0000",
+    "from":{
+      "name":"Rhys Van Orsouw",
+      "user_id":3634053
+    },
+    "message":"Logically, I would aim to have our first sprint completed by this stage, and be preparing to commence our second after this assessment."
+  },
+  {
+    "date":"2016-03-17T06:31:44+0000",
+    "from":{
+      "name":"Rhys Van Orsouw",
+      "user_id":3634053
+    },
+    "message":"Considering the assignment spec has been updated so that we are allowed to use plugins and libraries for the graphs\/chart, a super quick google leaves JFreeChart looking to be the easiest plugin to use"
+  },
+  {
+    "date":"2016-03-17T06:31:45+0000",
+    "from":{
+      "name":"Rhys Van Orsouw",
+      "user_id":3634053
+    },
+    "message":"http:\/\/www.jfree.org\/jfreechart\/"
+  },
+  {
+    "date":"2016-03-17T06:31:46+0000",
+    "from":{
+      "name":"Link",
+      "user_id":"api"
+    },
+    "message":"\\n\\n\\n<p><b><a href=\"http:\/\/www.jfree.org\/jfreechart\/\">JFreeChart<\/a><\/b><\/p>\\n\\n\\n<p>The official home page of the JFreeChart project.<\/p>\\n\\n"
+  },
+  {
+    "date":"2016-03-17T06:32:53+0000",
+    "from":{
+      "name":"Rhys Van Orsouw",
+      "user_id":3634053
+    },
+    "message":"It was last updated 31st of July, 2014, to support Java FX, which may make our lives easier for the GUI portion"
+  },
+  {
+    "date":"2016-03-17T06:34:20+0000",
+    "from":{
+      "name":"Adam Thalhammer",
+      "user_id":3634594
+    },
+    "message":"sure, I'll add it to the gradle dependencies?"
+  },
+  {
+    "date":"2016-03-17T06:35:01+0000",
+    "from":{
+      "name":"Rhys Van Orsouw",
+      "user_id":3634053
+    },
+    "message":"If you like, but we can iron out requirments and stories first, and organise who is working on what first if you guys like?"
+  },
+  {
+    "date":"2016-03-17T06:35:34+0000",
+    "from":{
+      "name":"Adam Thalhammer",
+      "user_id":3634594
+    },
+    "message":"it's just one line in the gradle build. we can easily remove it if we change direction, but I agree we need to focus on the requirements."
+  },
+  {
+    "date":"2016-03-17T06:35:49+0000",
+    "from":{
+      "name":"Rhys Van Orsouw",
+      "user_id":3634053
+    },
+    "message":"sounds good"
+  },
+  {
+    "date":"2016-03-17T06:37:32+0000",
+    "from":{
+      "name":"Bitbucket",
+      "user_id":"api"
+    },
+    "message":"<img src=\"https:\/\/hipbucket.bitbucketconnect.com\/icons\/commits-blue.png\" alt=\"\" height=\"16\" width=\"13\" \/> One commit pushed to branch <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\/branch\/master\"><strong>master<\/strong><\/a> by <a href=\"https:\/\/bitbucket.org\/s3544305\/\"><strong>Adam Thalhammer<\/strong><\/a> in <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\"><strong>chocvanilla\/weather-app<\/strong><\/a><br \/>- added jfreechart to gradle build\\n \u00b7 <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\/commits\/c7f97cf9209766b67afb5368af8b64f7aae26a0d\">c7f97cf<\/a>"
+  },
+  {
+    "date":"2016-03-17T06:38:19+0000",
+    "from":{
+      "name":"Rhys Van Orsouw",
+      "user_id":3634053
+    },
+    "message":"for future reference, JFree look to have a few nice libraries that we could use for the GUI in general "
+  },
+  {
+    "date":"2016-03-17T06:39:41+0000",
+    "from":{
+      "name":"Rhys Van Orsouw",
+      "user_id":3634053
+    },
+    "message":"But these kind of plugins do restrict us to using java8, and im not sure whether they are being tested on the coreteaching servers or school computers"
+  },
+  {
+    "date":"2016-03-17T06:42:49+0000",
+    "from":{
+      "name":"Utsav Adhikari",
+      "user_id":3634595
+    },
+    "message":"it looks like java 1.8 is what is installed on the coreteaching servers"
+  },
+  {
+    "date":"2016-03-17T06:42:53+0000",
+    "from":{
+      "name":"Utsav Adhikari",
+      "user_id":3634595
+    },
+    "message":"So I tihnk we are o"
+  },
+  {
+    "date":"2016-03-17T06:42:53+0000",
+    "from":{
+      "name":"Utsav Adhikari",
+      "user_id":3634595
+    },
+    "message":"ok"
+  },
+  {
+    "date":"2016-03-17T06:43:04+0000",
+    "from":{
+      "name":"Adam Thalhammer",
+      "user_id":3634594
+    },
+    "message":"^_^ yay!"
+  },
+  {
+    "date":"2016-03-17T06:43:19+0000",
+    "from":{
+      "name":"Rhys Van Orsouw",
+      "user_id":3634053
+    },
+    "message":"Cool beans"
+  },
+  {
+    "date":"2016-03-17T06:43:33+0000",
+    "from":{
+      "name":"Rhys Van Orsouw",
+      "user_id":3634053
+    },
+    "message":"Last year all the lab computers only had java"
+  },
+  {
+    "date":"2016-03-17T06:43:34+0000",
+    "from":{
+      "name":"Rhys Van Orsouw",
+      "user_id":3634053
+    },
+    "message":"7"
+  },
+  {
+    "date":"2016-03-17T06:43:41+0000",
+    "from":{
+      "name":"Rhys Van Orsouw",
+      "user_id":3634053
+    },
+    "message":"which was quite annoying"
+  }
+]

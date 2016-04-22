@@ -1,0 +1,250 @@
+[
+  {
+    "date":"2016-04-13T01:36:13+0000",
+    "from":{
+      "name":"Rhys Van Orsouw",
+      "user_id":3634053
+    },
+    "message":"So, we need to get organised"
+  },
+  {
+    "date":"2016-04-13T01:36:28+0000",
+    "from":{
+      "name":"Rhys Van Orsouw",
+      "user_id":3634053
+    },
+    "message":"more than anything, we need a direction"
+  },
+  {
+    "date":"2016-04-13T01:37:00+0000",
+    "from":{
+      "name":"Rhys Van Orsouw",
+      "user_id":3634053
+    },
+    "message":"so that we can actually individually work on independent modules to get a nice product together "
+  },
+  {
+    "date":"2016-04-13T01:38:10+0000",
+    "from":{
+      "name":"Rhys Van Orsouw",
+      "user_id":3634053
+    },
+    "message":"I sound like a douche, hahaha"
+  },
+  {
+    "date":"2016-04-13T01:38:12+0000",
+    "from":{
+      "name":"Rhys Van Orsouw",
+      "user_id":3634053
+    },
+    "message":"but its true"
+  },
+  {
+    "date":"2016-04-13T01:38:52+0000",
+    "from":{
+      "name":"Rhys Van Orsouw",
+      "user_id":3634053
+    },
+    "message":"I think the worst thing we could do is just start doing random things independently, which would basically defeat the purpose of the project"
+  },
+  {
+    "date":"2016-04-13T01:56:59+0000",
+    "from":{
+      "name":"Bitbucket",
+      "user_id":"api"
+    },
+    "message":"<img src=\"https:\/\/hipbucket.bitbucketconnect.com\/icons\/commits-blue.png\" alt=\"\" height=\"16\" width=\"13\" \/> One commit pushed to branch <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\/branch\/gui\"><strong>gui<\/strong><\/a> by <a href=\"https:\/\/bitbucket.org\/s3544305\/\"><strong>Adam Thalhammer<\/strong><\/a> in <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\"><strong>chocvanilla\/weather-app<\/strong><\/a><br \/>- added basic gui with search box and list of weather stations and fa... \u00b7 <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\/commits\/e5d500b1c7d6e83bc99418f8fb63cb646f75c07f\">e5d500b<\/a>"
+  },
+  {
+    "date":"2016-04-13T01:59:49+0000",
+    "from":{
+      "name":"Adam Thalhammer",
+      "user_id":3634594
+    },
+    "message":"agreed with everything you said. so to the process going I expanded on the work we did yesterday by adding a searchable list of weather stations. pull and try it out (run WeatherApp.main). If everyone is happy we can move forward and build on this (e.g. add action listeners to the buttons, opening a new window with a chart). "
+  },
+  {
+    "date":"2016-04-13T02:00:22+0000",
+    "from":{
+      "name":"Rhys Van Orsouw",
+      "user_id":3634053
+    },
+    "message":"okay cool cool, just had a look actually"
+  },
+  {
+    "date":"2016-04-13T02:00:26+0000",
+    "from":{
+      "name":"Rhys Van Orsouw",
+      "user_id":3634053
+    },
+    "message":"great framework so far"
+  },
+  {
+    "date":"2016-04-13T02:01:17+0000",
+    "from":{
+      "name":"Rhys Van Orsouw",
+      "user_id":3634053
+    },
+    "message":"ill start playing around with the charting tool, so that eventually a button click calls a method, which takes the station as a parameter and charts the past temps form that"
+  },
+  {
+    "date":"2016-04-13T02:02:02+0000",
+    "from":{
+      "name":"Rhys Van Orsouw",
+      "user_id":3634053
+    },
+    "message":"i wont make the button, and ill try my best to stick to the chart package and work with the infrastructure we alreayd have"
+  },
+  {
+    "date":"2016-04-13T02:03:21+0000",
+    "from":{
+      "name":"Adam Thalhammer",
+      "user_id":3634594
+    },
+    "message":"sounds good. I am at work all day but happy to help out tonight. cheers"
+  },
+  {
+    "date":"2016-04-13T02:03:38+0000",
+    "from":{
+      "name":"Rhys Van Orsouw",
+      "user_id":3634053
+    },
+    "message":"no problem at all, thanks heaps for all the work you've already done :)."
+  },
+  {
+    "date":"2016-04-13T02:04:02+0000",
+    "from":{
+      "name":"Rhys Van Orsouw",
+      "user_id":3634053
+    },
+    "message":"I personally suggest celebratory beers once this is handed in"
+  },
+  {
+    "date":"2016-04-13T07:24:08+0000",
+    "from":{
+      "name":"Utsav Adhikari",
+      "user_id":3634595
+    },
+    "message":"Just pulled the gui branch"
+  },
+  {
+    "date":"2016-04-13T07:24:26+0000",
+    "from":{
+      "name":"Utsav Adhikari",
+      "user_id":3634595
+    },
+    "message":"Really like the way the search behaves!"
+  },
+  {
+    "date":"2016-04-13T07:39:35+0000",
+    "from":{
+      "name":"Rhys Van Orsouw",
+      "user_id":3634053
+    },
+    "message":"ive benn gone a bit, ill be continuing some work after dinner, and some alcohol :p"
+  },
+  {
+    "date":"2016-04-13T11:53:58+0000",
+    "from":{
+      "name":"Rhys Van Orsouw",
+      "user_id":3634053
+    },
+    "message":"So i've put together an incredibly rough start to charting. It may or may not throw an exception here or there, and for some odd reason it doesnt even chart them in order"
+  },
+  {
+    "date":"2016-04-13T11:54:23+0000",
+    "from":{
+      "name":"Rhys Van Orsouw",
+      "user_id":3634053
+    },
+    "message":"So i'll commit it for nw incase you guys wish to have a look"
+  },
+  {
+    "date":"2016-04-13T11:55:05+0000",
+    "from":{
+      "name":"Rhys Van Orsouw",
+      "user_id":3634053
+    },
+    "message":"also, Kyle and I have a large break from 12:30-4:30 tomorrow, so if you guys are around, we'll most probably be in building 14 on level 11, working on the assignment :)"
+  },
+  {
+    "date":"2016-04-13T11:56:36+0000",
+    "from":{
+      "name":"Bitbucket",
+      "user_id":"api"
+    },
+    "message":"<img src=\"https:\/\/hipbucket.bitbucketconnect.com\/icons\/commits-blue.png\" alt=\"\" height=\"16\" width=\"13\" \/> One commit pushed to branch <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\/branch\/gui\"><strong>gui<\/strong><\/a> by <a href=\"https:\/\/bitbucket.org\/rhysvo\/\"><strong>Rhys  Van Orsouw<\/strong><\/a> in <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\"><strong>chocvanilla\/weather-app<\/strong><\/a><br \/>- Basic framework for chart temperature for favourite stations.\\n \u00b7 <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\/commits\/e07bbc5cbb0a1c08932e7c8ba269c19440a21ae6\">e07bbc5<\/a>"
+  },
+  {
+    "date":"2016-04-13T11:57:54+0000",
+    "from":{
+      "name":"Bitbucket",
+      "user_id":"api"
+    },
+    "message":"<img src=\"https:\/\/hipbucket.bitbucketconnect.com\/icons\/commits-blue.png\" alt=\"\" height=\"16\" width=\"13\" \/> One commit pushed to branch <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\/branch\/gui\"><strong>gui<\/strong><\/a> by <a href=\"https:\/\/bitbucket.org\/rhysvo\/\"><strong>Rhys  Van Orsouw<\/strong><\/a> in <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\"><strong>chocvanilla\/weather-app<\/strong><\/a><br \/>- Basic framework for chart temperature for favourite stations.\\n \u00b7 <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\/commits\/cac4232396cf85eb4c1f8657b1a456ef01f8d20e\">cac4232<\/a>"
+  },
+  {
+    "date":"2016-04-13T11:59:22+0000",
+    "from":{
+      "name":"Rhys Van Orsouw",
+      "user_id":3634053
+    },
+    "message":"Before you pull my changes, for some reason my gradle file deleted and changed a few lines"
+  },
+  {
+    "date":"2016-04-13T11:59:44+0000",
+    "from":{
+      "name":"Rhys Van Orsouw",
+      "user_id":3634053
+    },
+    "message":"so it may need to be rolled back, and i wont lie, im not exactly sure how"
+  },
+  {
+    "date":"2016-04-13T12:00:39+0000",
+    "from":{
+      "name":"Rhys Van Orsouw",
+      "user_id":3634053
+    },
+    "message":"IntelliJ is very strange to commit with"
+  },
+  {
+    "date":"2016-04-13T14:17:03+0000",
+    "from":{
+      "name":"Utsav Adhikari",
+      "user_id":3634595
+    },
+    "message":"@AdamThalhammer, so many lambda expressions haha."
+  },
+  {
+    "date":"2016-04-13T14:36:42+0000",
+    "from":{
+      "name":"Adam Thalhammer",
+      "user_id":3634594
+    },
+    "message":"@utsav yeah haha... it was the quickest way to get something to happen "
+  },
+  {
+    "date":"2016-04-13T14:36:59+0000",
+    "from":{
+      "name":"Adam Thalhammer",
+      "user_id":3634594
+    },
+    "message":"nice work @Rhys loving the charts. so artistic"
+  },
+  {
+    "date":"2016-04-13T14:37:16+0000",
+    "from":{
+      "name":"Adam Thalhammer",
+      "user_id":3634594
+    },
+    "message":"kidding aside, I think it's a great start. our app does something! see you at uni tomorrow guys"
+  },
+  {
+    "date":"2016-04-13T14:37:18+0000",
+    "from":{
+      "name":"Adam Thalhammer",
+      "user_id":3634594
+    },
+    "message":"good night"
+  }
+]
