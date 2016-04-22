@@ -8,7 +8,6 @@ import org.junit.Before;
 import org.junit.Test;
 
 import javax.swing.*;
-import java.awt.*;
 import java.io.IOException;
 import java.util.List;
 
