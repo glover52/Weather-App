@@ -116,21 +116,27 @@ $ ./grawdlew init
 ```
 This will set up the gradle project.
 
-To resolve dependencies run
+To resolve dependencies, run
 
 ```bash
 $ ./gradlew dependencies
 ```
 
-Once the gradle wrapper has been initialized, to build the project simply run
+Once the gradle wrapper has been initialized, to build the project, simply run
 ```bash
 $ ./gradlew build
 ```
 
-If the project has already been built, to execute the application run
+If the project has already been built, to execute the application, run
 ```bash
 $ ./gradlew run
 ```
+
+To assemble a standalone .jar in an archive with weather stations, run
+
+ ```bash
+ $ ./gradlew realseZip
+ ```
 
 ###Testing:
 

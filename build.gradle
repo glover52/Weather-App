@@ -45,3 +45,18 @@ task fatJar(type: Jar) {
     from { configurations.compile.collect { it.isDirectory() ? it : zipTree(it) } }
     with jar
 }
+
+task releaseZip(type: Zip){
+    File jar = file('build/libs/' + project.name + "-" + version + ".jar")
+    File stations = file('.weather_stations.json')
+    println(jar)
+    println(stations)
+    from ('build/libs/')
+    include '*.jar'
+    from ('/')
+    include '*.json'
+
+    destinationDir file('build/releases')
+}
+
+releaseZip.dependsOn fatJar

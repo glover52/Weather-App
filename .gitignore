@@ -1,6 +1,6 @@
 .classpath
 *.dat
-gradlew
+
 .project
 *.iml
 
