@@ -79,6 +79,17 @@ To add a weather station, insert the appropriate object into file:
 
 To remove, simply delete the specific object from the file.
 
+###Troubleshooting
+
+#####ERROR: Weather Stations file could not be loaded!
+Weather station file missing or corrupt. The most likley cause for this is a missing [.weather_stations.json](../.weather_stations.json) file.
+
+#####ERROR: Unable to establish connection to BOM
+Program is unable to connect to the BOM website. Please check that your internet connection is active, and that the program is not being blocked by a firewall or other software.
+
+#####ERROR: Unable to save to favorites
+May happen if the program is in a protected directory, ensure that you have file write permissions.
+
 ##Building:
 This project requires java 1.8 or later to build.
 
