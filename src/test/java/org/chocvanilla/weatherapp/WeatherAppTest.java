@@ -1,13 +1,23 @@
 package org.chocvanilla.weatherapp;
 
 import org.chocvanilla.weatherapp.data.*;
+import org.chocvanilla.weatherapp.chart.*;
+import org.chocvanilla.weatherapp.gui.*;
+import org.chocvanilla.weatherapp.gui.MainWindow;
+import org.jfree.chart.ChartPanel;
+import org.jfree.chart.JFreeChart;
 import org.junit.Before;
 import org.junit.Test;
 
+import javax.swing.*;
+import java.awt.*;
 import java.io.IOException;
 import java.util.List;
 
+import static javax.swing.JFrame.EXIT_ON_CLOSE;
+import static org.chocvanilla.weatherapp.chart.ChartHelpers.createChart;
 import static org.hamcrest.Matchers.*;
+import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertThat;
 import static org.junit.Assert.assertTrue;
 
@@ -16,6 +26,10 @@ public class WeatherAppTest {
     private ObservationLoader loader;
     private Favourites fav;
 
+    /*
+        Initialisation of some necessary functions to be run before any test. Populates a list of weather stations
+        from the .weather_stations.json file, and loads any favourites stored to file.
+     */
     @Before
     public void setUp() throws Exception {
         db = WeatherStations.loadFromFile();
@@ -36,6 +50,12 @@ public class WeatherAppTest {
         assertThat(observations, is(not(empty())));
     }
 
+    @Test(expected = IllegalArgumentException.class)
+    public void loadObservationFromNullStation() throws IOException {
+        WeatherStation station = new WeatherStation();
+        List<WeatherObservation> observations = loader.load(station);
+    }
+
     @Test
     public void favouritesAreSaved() throws IOException {
         fav.add(db.getByWmoNumber(94828));
@@ -54,13 +74,39 @@ public class WeatherAppTest {
         assertTrue(fav.stream().anyMatch(x -> x.getWmoNumber() == 94828));
     }
 
+    /*
+        Testing of GUI elements
+     */
+
     @Test
-    public void displayObservations() throws IOException {
+    public void makeWindow() {
+        MainWindow frame = new MainWindow(db, fav);
+        frame.run();
+    }
+
+    /*
+        Testing of chart interfaces.
+     */
+    @Test
+    public void canCreateChart() throws IOException {
         WeatherStation station = db.getByWmoNumber(94828);
-
+        assertNotNull(station);
         List<WeatherObservation> observations = loader.load(station);
+        JFreeChart testChart = createChart(station, observations);
+        JFrame frame = setUpTestWindow();
+        ChartPanel panel = new ChartPanel(testChart);
+        frame.add(panel);
+        frame.setVisible(true);
+        assertTrue(frame.isVisible());
+        assertTrue(panel.isVisible());
+    }
 
-        observations.forEach(System.out::println);
+    private JFrame setUpTestWindow() {
+        JFrame frame = new JFrame();
+        frame.setTitle("Test Window");
+        frame.setSize(800, 600);
+
+        return frame;
     }
 
 }

@@ -1,7 +1,10 @@
 #HOWTO
 
 ##Installation
-Notes
+To install and compile this software, a plugin called "Gradle" must be used. They way in which this plugin works changes
+between IDE's. Notes on how to do this are contained below.
+
+To use this only as an application, the user only needs to run the supplied "Weather-Application" JAR file.
 
 ##Usage
 
@@ -50,7 +53,7 @@ to build the project.
 
 ##Testing:
 
-Tests can be ran with
+Tests can be run with
 ```bash
 $ ./gradlew test
 ```
