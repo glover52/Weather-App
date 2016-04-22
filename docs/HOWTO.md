@@ -21,7 +21,7 @@ $ java -jar weather-app-0.1.jar
 
 ###The Interface
 #####*Main Window:*
-![main_window_labeled](main_window_labeled.png)
+![main_window_labeled](resources/main_window_labeled.png)
 
 1) **Search bar** - A search bar to filter the station list
 
@@ -31,7 +31,7 @@ $ java -jar weather-app-0.1.jar
 
 #####*Details Window:*
 
-![details_window_chart_labeled](details_window_chart_labeled.png)
+![details_window_chart_labeled](resources/details_window_chart_labeled.png)
 
 4) **Favorite and refresh buttons** - Buttons to add the current station to favorites, or to refresh the observation data.
 
@@ -39,7 +39,7 @@ $ java -jar weather-app-0.1.jar
 
 6) **Temperature history chart** - A simple plot of the temperature change over time.
 
-![details_window_table_labeled](details_window_table_labeled.png)
+![details_window_table_labeled](resources/details_window_table_labeled.png)
 
 7) **Observation history table** -  A table containing detailed observation history for that station.
 
