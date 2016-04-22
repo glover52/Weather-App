@@ -1,12 +1,23 @@
 #HOWTO
 
 ##Installation
-To install and compile this software, a plugin called "Gradle" must be used. They way in which this plugin works changes
-between IDE's. See **Building** for more details
+To install and compile this software see **Building** for details.
 
+Release versions of weather app are distributed in a zip file named weather-app-\<version number>.zip.
 To use this only as an application, the user only needs to run the supplied "Weather-Application" JAR file.
 
+
+```bash
+$ mkdir ~/weather-app
+$ unzip ~/Downloads/weather-app-0.1.zip -d ~/weather-app/
+$ cd weather-app
+$ java -jar weather-app-0.1.jar
+```
+
+
 ##Usage
+
+ This is a basic overview. Please consult the [User Manual](User Manual.pdf) for a detailed explanation of the program.
 
 ###The Interface
 #####*Main Window:*
