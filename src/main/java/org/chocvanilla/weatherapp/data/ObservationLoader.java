@@ -8,6 +8,8 @@ import java.nio.file.*;
 import java.util.*;
 import java.util.concurrent.*;
 
+import static org.chocvanilla.weatherapp.gui.MessageDialog.messageBox;
+
 public class ObservationLoader {
     private static final ExecutorService executor = Executors.newCachedThreadPool();
     private static final String target = ".observations";
@@ -61,6 +63,7 @@ public class ObservationLoader {
             Path path = getPathFor(station);
             Files.copy(in, path, StandardCopyOption.REPLACE_EXISTING);
         } catch (IOException ignored) {
+            messageBox("ERROR: Unable to establish connection to BOM", "ERROR!");
         }
     }
 

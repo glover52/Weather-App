@@ -45,6 +45,7 @@ public class Favourites extends AbstractCollection<WeatherStation> {
      * @throws IOException
      */
     public void saveToFile() throws IOException {
+        //noinspection ResultOfMethodCallIgnored
         Paths.get(TARGET).toFile().mkdirs();
         try (PrintWriter pw = new PrintWriter(Files.newBufferedWriter(FAVOURITES_PATH))) {
             // print each station number on a new line

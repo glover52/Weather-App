@@ -7,6 +7,8 @@ import java.io.IOException;
 import java.nio.file.*;
 import java.util.*;
 
+import static org.chocvanilla.weatherapp.gui.MessageDialog.messageBox;
+
 public class WeatherStations {
     private static final Path WEATHER_STATIONS_FILE = Paths.get(".weather_stations.json");
     private final List<WeatherStation> stations = new ArrayList<>();
@@ -21,6 +23,7 @@ public class WeatherStations {
             Gson gson = new Gson();
             return new WeatherStations(gson.fromJson(reader, WeatherStation[].class));
         } catch (IOException error) {
+            messageBox("ERROR: Weather Stations file could not be loaded!", "ERROR!");
             return new WeatherStations();
         }
     }

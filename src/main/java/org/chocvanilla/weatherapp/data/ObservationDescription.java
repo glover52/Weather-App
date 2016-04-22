@@ -1,6 +1,4 @@
-package org.chocvanilla.weatherapp.gui;
-
-import org.chocvanilla.weatherapp.data.WeatherObservation;
+package org.chocvanilla.weatherapp.data;
 
 import java.util.ArrayList;
 import java.util.List;
