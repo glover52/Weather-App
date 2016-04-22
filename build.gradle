@@ -56,7 +56,7 @@ task releaseZip(type: Zip){
     from ('/')
     include '*.json'
 
-    destinationDir file('build/releases')
+    destinationDir file('/releases')
 }
 
 releaseZip.dependsOn fatJar
