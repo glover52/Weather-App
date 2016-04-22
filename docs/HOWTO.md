@@ -2,7 +2,7 @@
 
 ##Installation
 To install and compile this software, a plugin called "Gradle" must be used. They way in which this plugin works changes
-between IDE's. Notes on how to do this are contained below.
+between IDE's. See [Building](#build) for more details
 
 To use this only as an application, the user only needs to run the supplied "Weather-Application" JAR file.
 
@@ -32,8 +32,56 @@ To use this only as an application, the user only needs to run the supplied "Wea
 
 7) **Observation history table** -  A table containing detailed observation history for that station.
 
-##Building:
-Project requires java 1.8 or later to build.
+###Updating stations:
+Weather station information is stored in [.weather_stations.json](../.weather_stations.json) as an array of weather station objects.
+
+If you wish to edit the weather stations known by the program, simply edit the [.weather_stations.json](../.weather_stations.json) file. This file should be located in the same directory as the jar file, or the root directory of the project.
+
+####Adding a weather station
+Weather stations objects in [.weather_stations.json](../.weather_stations.json) adhere to the following format:
+```json
+  {
+    "stationID": 85072,
+    "wmoNumber": 94907,
+    "name": "EAST SALE AIRPORT",
+    "state": "VIC",
+    "code": "V"
+  }
+```
+
+To add a weather station, insert it the appropriate object into file:
+
+```json
+[
+  {
+    "stationID": 58198,
+    "wmoNumber": 94596,
+    "name": "BALLINA AIRPORT AWS",
+    "state": "NSW",
+    "code": "N"
+  },
+  {
+    "stationID": 88109,
+    "wmoNumber": 94874,
+    "name": "MANGALORE AIRPORT",
+    "state": "VIC",
+    "code": "V"
+  },
+  {
+    "stationID": 85072,
+    "wmoNumber": 94907,
+    "name": "EAST SALE AIRPORT",
+    "state": "VIC",
+    "code": "V"
+  }
+]
+```
+
+To remove, simply delete the specific object from the file.
+
+
+##Building: <a name="build"></a>
+This project requires java 1.8 or later to build.
 
 ###Dependencies:
 - [GSON](https://github.com/google/gson)
@@ -45,20 +93,25 @@ If gradle has not been set up, run
 ```bash
 $ ./grawdlew init
 ```
-This will set up the gradle project. if you do not have the required dependencies installed run
+This will set up the gradle project.
+
+To resolve dependencies run
 
 ```bash
 $ ./gradlew dependencies
 ```
 
-
-Once the gradle wrapper has been initialized simply run
+Once the gradle wrapper has been initialized, to build the project simply run
 ```bash
 $ ./gradlew build
 ```
-to build the project.
 
-##Testing:
+If the project has already been built, to execute the application run
+```bash
+$ ./gradlew run
+```
+
+###Testing:
 
 Tests can be run with
 ```bash
