@@ -106,11 +106,11 @@ public class DetailWindow extends JFrame {
 
     private JTable buildTable(List<WeatherObservation> observations) {
         Object[][] data = observationHistory(observations);
-        String[] columnNames = {"Time","Air Temp", "Apparent Temp", "Gust (km/h)", "Gust (kt)",
+        String[] columnNames = {"Time", "Air Temp", "Apparent Temp", "Gust (km/h)", "Gust (kt)",
                 "Wind Direction", "Wind Speed (km/h)", "Wind Speed (kt)",
                 "Dew Point", "Rain (mm)"};
 
-        JTable table = new JTable(data, columnNames){
+        JTable table = new JTable(data, columnNames) {
             // Disable editing
             public boolean isCellEditable(int row, int column) {
                 return false;
