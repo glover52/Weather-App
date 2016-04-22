@@ -65,4 +65,4 @@ Worked on:
 
 Kyle worked in conjunction with Adam in setting up the dedicated JIRA server, and continued to maintain the server,
 while also keeping the group organised, and managing the JIRA tasks and sprints. Kyle also helped in assigning tasks to
-other members, and helped fixed many mistakes made in the GIT version control.
+other members, and assited in fixing many mistakes made in the GIT version control.
