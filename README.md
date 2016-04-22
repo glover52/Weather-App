@@ -1,6 +1,6 @@
 # Software Engineering: Process & Tools
 
-[Bitbucket URL](https://bitbucket.org/chocvanilla/weather-app)
+[WeatherApp on Bitbucket](https://bitbucket.org/chocvanilla/weather-app)
 
 ## Team Members
 
@@ -13,24 +13,26 @@
 ##### Adam Thalhammer (25%)
 Worked on:
 
-- GUI windows
-- Recommended Gradle
+- GUI implementation using Swing
+- Recommended and set up Gradle
 - Weather station search
 - Refactored favourites
-- Jira setup
+- JIRA setup
 - Conducted main portion of testing
 - IntelliJ recommendation
+- Multi-threading 
  
 As a team member, Adam worked together with Raj and completed a vast majority of the backend of the project. Adam also
 conducted most of the major testing and was the first person to suggest applications/software to use for the project.
-The use of the Gradle build dependency control was Adams idea, and he provided assistance consistently in the use and
-maintenance of this complicated software.Furthermore, Adam worked well in tandem with Kyle by organising a virtual
-server, using student credit to pay for it, and set up the Centos virtual server.
+The use of Gradle for build automation and dependency management was Adam's idea, and he provided assistance consistently in the use and
+maintenance of this useful tool. Furthermore, Adam worked well in tandem with Kyle to organise a virtual server, using student credit to pay for it, 
+and set up the Centos server to run JIRA.
 
 ##### Utsav Adhikari (25%)
 Worked on:
 
-- Retreiving data from BoM website
+- Retrieving data from the Bureau of Meteorology website
+
 - Weather observation table
 - Weather station search
 - GUI layout
@@ -51,20 +53,20 @@ Worked on:
 - Managed HipChat
 
 Rhys worked solo on the presentation of the graph, not only that, he constructed many aspects of the GUI and had a large
-stake in how it became presented to the user. Also as the manager of the group chat, Rhys also made sure that the group
-was behaving themselves in order to create a very streamlined creation process for the assignment.
+stake in how it is presented to the user. Also as the manager of the group chat, Rhys also made sure that the group members 
+were behaving themselves in order to create a very streamlined collaborative process for the assignment.
  
 ##### Kyle Glover (25%)
 Worked on:
 
-- Drawn the first initial GUI layout
-- Jira setup
-- Managed Jira
-- Managed group Git repositories (branches, .gitignore, etc)
+- Sketched out the initial GUI layout
+- JIRA setup
+- Managed JIRA
+- Managed group Git repositories (branches, .gitignore, etc.)
 - Created documentation
 - First initial work on favourites class
 - Fixed basic test errors from JUnit + Gradle
 
 Kyle worked in conjunction with Adam in setting up the dedicated JIRA server, and continued to maintain the server,
 while also keeping the group organised, and managing the JIRA tasks and sprints. Kyle also helped in assigning tasks to
-other members, and assited in fixing many mistakes made in the GIT version control.
+other members, and assisted in fixing many mistakes made in the GIT version control.
