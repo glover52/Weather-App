@@ -5,7 +5,7 @@ import java.nio.file.*;
 import java.util.*;
 
 /**
- * A {@link Collection<WeatherStation>} containing the favourite stations of the current user.
+ * A Collection containing the favourite stations of the current user.
  */
 public class Favourites extends AbstractCollection<WeatherStation> {
     private static final Path FAVOURITES_PATH = Paths.get(".preferences/favourites.dat");
