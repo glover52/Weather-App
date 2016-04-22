@@ -8,7 +8,7 @@ To use this only as an application, the user only needs to run the supplied "Wea
 
 ##Usage
 
-###The Interface:
+###The Interface
 #####*Main Window:*
 ![main_window_labeled](main_window_labeled.png)
 
@@ -78,7 +78,6 @@ To add a weather station, insert the appropriate object into file:
 ```
 
 To remove, simply delete the specific object from the file.
-
 
 ##Building:
 This project requires java 1.8 or later to build.
