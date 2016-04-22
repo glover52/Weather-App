@@ -2,7 +2,7 @@
 
 ##Installation
 To install and compile this software, a plugin called "Gradle" must be used. They way in which this plugin works changes
-between IDE's. See [Building](#build) for more details
+between IDE's. See **Building** for more details
 
 To use this only as an application, the user only needs to run the supplied "Weather-Application" JAR file.
 
@@ -80,7 +80,7 @@ To add a weather station, insert it the appropriate object into file:
 To remove, simply delete the specific object from the file.
 
 
-##Building: <a name="build"></a>
+##Building:
 This project requires java 1.8 or later to build.
 
 ###Dependencies:
