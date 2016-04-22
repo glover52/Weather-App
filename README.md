@@ -1,6 +1,8 @@
 # Software Engineering: Process & Tools
 
 [WeatherApp on Bitbucket](https://bitbucket.org/chocvanilla/weather-app)
+This repository is private to help prevent plagiarism.
+For access, please send an email to one of the team members listed below.
 
 ## Team Members
 

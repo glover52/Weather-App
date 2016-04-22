@@ -22,9 +22,9 @@ public class WeatherAppTest {
     private ObservationLoader loader;
     private Favourites fav;
 
-    /*
-        Initialisation of some necessary functions to be run before any test. Populates a list of weather stations
-        from the .weather_stations.json file, and loads any favourites stored to file.
+    /**
+     * Initialisation of some necessary functions to be run before any test. Populates a list of weather stations
+     * from the .weather_stations.json file, and loads any favourites stored to file.
      */
     @Before
     public void setUp() throws Exception {
@@ -80,8 +80,8 @@ public class WeatherAppTest {
         frame.run();
     }
 
-    /*
-        Testing of chart interfaces.
+    /**
+     * Testing of chart interfaces.
      */
     @Test
     public void canCreateChart() throws IOException {
