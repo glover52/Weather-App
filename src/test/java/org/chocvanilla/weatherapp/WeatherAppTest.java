@@ -1,8 +1,6 @@
 package org.chocvanilla.weatherapp;
 
 import org.chocvanilla.weatherapp.data.*;
-import org.chocvanilla.weatherapp.chart.*;
-import org.chocvanilla.weatherapp.gui.*;
 import org.chocvanilla.weatherapp.gui.MainWindow;
 import org.jfree.chart.ChartPanel;
 import org.jfree.chart.JFreeChart;
@@ -14,7 +12,6 @@ import java.awt.*;
 import java.io.IOException;
 import java.util.List;
 
-import static javax.swing.JFrame.EXIT_ON_CLOSE;
 import static org.chocvanilla.weatherapp.chart.ChartHelpers.createChart;
 import static org.hamcrest.Matchers.*;
 import static org.junit.Assert.assertNotNull;
