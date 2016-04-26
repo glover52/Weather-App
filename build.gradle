@@ -37,7 +37,7 @@ tasks.withType(FindBugs) {
 
 task fatJar(type: Jar) {
     manifest {
-        attributes 'Implementation-Title': 'Gradle Jar File Example',
+        attributes 'Implementation-Title': 'WeatherApp',
                 'Implementation-Version': version,
                 'Main-Class': mainClassName
     }
@@ -47,10 +47,6 @@ task fatJar(type: Jar) {
 }
 
 task releaseZip(type: Zip){
-    File jar = file('build/libs/' + project.name + "-" + version + ".jar")
-    File stations = file('.weather_stations.json')
-    println(jar)
-    println(stations)
     from ('build/libs/')
     include '*.jar'
     from ('/')
