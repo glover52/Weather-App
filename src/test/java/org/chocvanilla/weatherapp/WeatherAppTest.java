@@ -7,14 +7,14 @@ import org.jfree.chart.JFreeChart;
 import org.junit.*;
 
 import javax.swing.*;
+import java.awt.*;
 import java.io.IOException;
 import java.util.List;
 
 import static org.chocvanilla.weatherapp.chart.ChartHelpers.createChart;
 import static org.hamcrest.Matchers.*;
-import static org.junit.Assert.assertNotNull;
-import static org.junit.Assert.assertThat;
-import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.*;
+import static org.junit.Assume.assumeFalse;
 
 public class WeatherAppTest {
     private WeatherStations db;
@@ -76,6 +76,7 @@ public class WeatherAppTest {
     @Test
     @Ignore
     public void makeWindow() {
+        assumeFalse(GraphicsEnvironment.getLocalGraphicsEnvironment().isHeadlessInstance());
         MainWindow frame = new MainWindow(db, fav);
         frame.run();
     }
@@ -85,6 +86,7 @@ public class WeatherAppTest {
      */
     @Test
     public void canCreateChart() throws IOException {
+        assumeFalse(GraphicsEnvironment.getLocalGraphicsEnvironment().isHeadlessInstance());
         WeatherStation station = db.getByWmoNumber(94828);
         assertNotNull(station);
         List<WeatherObservation> observations = loader.load(station);
