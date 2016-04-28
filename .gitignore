@@ -6,7 +6,6 @@
 
 build/
 .gradle/
-gradle/
 .idea/
 .observations/
 .preferences/

@@ -2,7 +2,6 @@ group 'chocvanilla'
 version '0.1'
 
 apply plugin: 'application'
-apply plugin: 'findbugs'
 apply plugin: 'java'
 
 sourceCompatibility = 1.8
@@ -28,13 +27,6 @@ jar {
     }
 }
 
-tasks.withType(FindBugs) {
-    reports {
-        xml.enabled = false
-        html.enabled = true
-    }
-}
-
 task fatJar(type: Jar) {
     manifest {
         attributes 'Implementation-Title': 'WeatherApp',
@@ -52,7 +44,6 @@ task releaseZip(type: Zip){
     from ('/')
     include '*.json'
 
-    destinationDir file('/releases')
+    destinationDir file('build/releases')
+    dependsOn fatJar
 }
-
-releaseZip.dependsOn fatJar
