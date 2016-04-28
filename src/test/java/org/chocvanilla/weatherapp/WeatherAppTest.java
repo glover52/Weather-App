@@ -4,8 +4,7 @@ import org.chocvanilla.weatherapp.data.*;
 import org.chocvanilla.weatherapp.gui.MainWindow;
 import org.jfree.chart.ChartPanel;
 import org.jfree.chart.JFreeChart;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.*;
 
 import javax.swing.*;
 import java.io.IOException;
@@ -75,6 +74,7 @@ public class WeatherAppTest {
      */
 
     @Test
+    @Ignore
     public void makeWindow() {
         MainWindow frame = new MainWindow(db, fav);
         frame.run();
