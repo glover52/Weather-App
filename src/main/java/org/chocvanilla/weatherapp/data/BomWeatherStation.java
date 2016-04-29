@@ -1,7 +1,7 @@
 package org.chocvanilla.weatherapp.data;
 
 
-public class WeatherStation {
+public class BomWeatherStation {
     private static final String URL_FORMAT = "http://www.bom.gov.au/fwo/%s/%s.%d.json";
     private static final String PRODUCT_ID = "ID%c60801";
 

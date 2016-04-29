@@ -10,6 +10,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.io.IOException;
 import java.util.List;
+import java.util.Optional;
 
 import static org.chocvanilla.weatherapp.chart.ChartHelpers.createChart;
 import static org.hamcrest.Matchers.*;
@@ -40,26 +41,32 @@ public class WeatherAppTest {
 
     @Test
     public void weatherObservationIsLoaded() throws IOException {
-        WeatherStation station = db.getByWmoNumber(94828);
-        List<WeatherObservation> observations = loader.load(station);
+        Optional<BomWeatherStation> station = db.firstMatch(x -> hasWmoNumber(x, 94828));
+        assertTrue(station.isPresent());
+        List<WeatherObservation> observations = loader.load(station.get());
         assertThat(observations, is(not(empty())));
     }
 
     @Test(expected = IllegalArgumentException.class)
     public void loadObservationFromNullStation() throws IOException {
-        WeatherStation station = new WeatherStation();
+        BomWeatherStation station = new BomWeatherStation();
         List<WeatherObservation> observations = loader.load(station);
     }
 
     @Test
     public void favouritesAreSaved() throws IOException {
-        fav.add(db.getByWmoNumber(94828));
-        fav.add(db.getByWmoNumber(94302));
-        fav.add(db.getByWmoNumber(95607));
-        fav.add(db.getByWmoNumber(94620));
-        fav.add(db.getByWmoNumber(95625));
-        fav.add(db.getByWmoNumber(94641));
+        int[] wmoNumbers = {94828, 94302, 95607, 94620, 95625, 94641,};
+        
+        for (int wmo : wmoNumbers) {
+            db.firstMatch(x -> hasWmoNumber(x, wmo))
+              .ifPresent(fav::add);
+        }
+        
         fav.saveToFile(); // fails on exception
+    }
+    
+    private boolean hasWmoNumber(BomWeatherStation station, int wmo) {
+        return station.getWmoNumber() == wmo;
     }
 
     @Test
@@ -87,8 +94,9 @@ public class WeatherAppTest {
     @Test
     public void canCreateChart() throws IOException {
         assumeFalse(GraphicsEnvironment.getLocalGraphicsEnvironment().isHeadlessInstance());
-        WeatherStation station = db.getByWmoNumber(94828);
-        assertNotNull(station);
+        Optional<BomWeatherStation> maybe = db.firstMatch(x -> hasWmoNumber(x, 94828));
+        assertTrue(maybe.isPresent());
+        BomWeatherStation station = maybe.get();
         List<WeatherObservation> observations = loader.load(station);
         JFreeChart testChart = createChart(station, observations);
         JFrame frame = setUpTestWindow();

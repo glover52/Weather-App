@@ -1,7 +1,7 @@
 package org.chocvanilla.weatherapp.chart;
 
 import org.chocvanilla.weatherapp.data.WeatherObservation;
-import org.chocvanilla.weatherapp.data.WeatherStation;
+import org.chocvanilla.weatherapp.data.BomWeatherStation;
 import org.jfree.chart.*;
 import org.jfree.chart.plot.XYPlot;
 import org.jfree.chart.renderer.xy.XYLineAndShapeRenderer;
@@ -19,7 +19,7 @@ public class ChartHelpers {
 
     /**
      * Create a data set suitable for graphing using data obtained by loading all
-     * {@link WeatherObservation}s for the specified {@link WeatherStation}.
+     * {@link WeatherObservation}s for the specified {@link BomWeatherStation}.
      *
      * @param observations the source of weather data for this data set
      * @return a data set containing the time series of weather observations
@@ -42,7 +42,7 @@ public class ChartHelpers {
      * @param observations the observations to display
      * @return a displayable {@link ChartPanel}
      */
-    public static JFreeChart createChart(WeatherStation station, List<WeatherObservation> observations) {
+    public static JFreeChart createChart(BomWeatherStation station, List<WeatherObservation> observations) {
         XYDataset dataset = createDataSet(observations);
 
         JFreeChart chart = ChartFactory.createTimeSeriesChart(station.getName() + ", " + station.getState(),

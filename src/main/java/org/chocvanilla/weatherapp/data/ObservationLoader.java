@@ -22,18 +22,18 @@ public class ObservationLoader {
      * @return a list of observations
      * @throws IOException if an error occurred while attempting the download
      */
-    public static List<WeatherObservation> loadObservations(WeatherStation station) throws IOException {
+    public static List<WeatherObservation> loadObservations(BomWeatherStation station) throws IOException {
         ObservationLoader loader = new ObservationLoader();
         return loader.load(station);
     }
 
-    public static FutureTask<List<WeatherObservation>> loadAsync(WeatherStation station) {
+    public static FutureTask<List<WeatherObservation>> loadAsync(BomWeatherStation station) {
         FutureTask<List<WeatherObservation>> task = new FutureTask<>(() -> loadObservations(station));
         executor.execute(task);
         return task;
     }
 
-    public List<WeatherObservation> load(WeatherStation station) throws IOException {
+    public List<WeatherObservation> load(BomWeatherStation station) throws IOException {
         long elapsedMinutes = TimeUnit.MILLISECONDS.toMinutes(msSinceLastRefresh(station));
         if (elapsedMinutes > 5) {
             downloadFile(station);
@@ -48,7 +48,7 @@ public class ObservationLoader {
         }
     }
 
-    public static long msSinceLastRefresh(WeatherStation station) {
+    public static long msSinceLastRefresh(BomWeatherStation station) {
         Long lastRefresh = cache.getOrDefault(station.getWmoNumber(), null);
         if (lastRefresh == null) {
             return Long.MAX_VALUE;
@@ -57,7 +57,7 @@ public class ObservationLoader {
         return now - lastRefresh;
     }
 
-    private void downloadFile(WeatherStation station) {
+    private void downloadFile(BomWeatherStation station) {
         try (InputStream in = new URL(station.getUrl()).openStream()) {
             Paths.get(target).toFile().mkdirs();
             Path path = getPathFor(station);
@@ -67,7 +67,7 @@ public class ObservationLoader {
         }
     }
 
-    private Path getPathFor(WeatherStation station) {
+    private Path getPathFor(BomWeatherStation station) {
         return Paths.get(target, String.valueOf(station.getWmoNumber()) + ".json");
     }
 

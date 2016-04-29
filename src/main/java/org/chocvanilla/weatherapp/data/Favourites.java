@@ -7,7 +7,7 @@ import java.util.*;
 /**
  * A Collection containing the favourite stations of the current user.
  */
-public class Favourites extends AbstractCollection<WeatherStation> {
+public class Favourites extends AbstractCollection<BomWeatherStation> {
     private static final Path FAVOURITES_PATH = Paths.get(".preferences/favourites.dat");
     private static final String TARGET = ".preferences";
     private final WeatherStations all;
@@ -54,34 +54,37 @@ public class Favourites extends AbstractCollection<WeatherStation> {
     }
 
     @Override
-    public boolean add(WeatherStation ws) {
+    public boolean add(BomWeatherStation ws) {
         return wmoNumbers.add(ws.getWmoNumber());
     }
 
     @Override
     public boolean remove(Object o) {
-        return remove((WeatherStation) o);
+        return remove((BomWeatherStation) o);
     }
 
-    public boolean remove(WeatherStation ws) {
+    public boolean remove(BomWeatherStation ws) {
         return wmoNumbers.remove(ws.getWmoNumber());
     }
 
     @Override
     public boolean contains(Object o) {
-        return contains((WeatherStation) o);
+        return contains((BomWeatherStation) o);
     }
 
 
-    public boolean contains(WeatherStation station) {
+    public boolean contains(BomWeatherStation station) {
         return wmoNumbers.contains(station.getWmoNumber());
     }
 
 
     @Override
-    public Iterator<WeatherStation> iterator() {
+    public Iterator<BomWeatherStation> iterator() {
         // for each wmoNumber, obtain the corresponding WeatherStation
-        return wmoNumbers.stream().map(all::getByWmoNumber).iterator();
+        return wmoNumbers.stream()
+                .map(x -> all.firstMatch(y -> y.getWmoNumber()==x))
+                .filter(Optional::isPresent)
+                .map(Optional::get).iterator();
     }
 
     @Override

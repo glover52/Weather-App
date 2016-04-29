@@ -17,7 +17,7 @@ public class MainWindow {
     private final DetailWindow detailWindow;
 
     private final JTextField searchBox = new JTextField();
-    private final JList<WeatherStation> stationList = new JList<>();
+    private final JList<BomWeatherStation> stationList = new JList<>();
     private JPanel favouritesPanel;
     private static final String NO_FAVOURITES =
             "You have no favorites! Open a station and click the favorites button to see it here.";
@@ -46,7 +46,7 @@ public class MainWindow {
         JPanel searchPanel = new JPanel(new BorderLayout());
         searchPanel.add(searchBox, BorderLayout.NORTH);
 
-        DefaultListModel<WeatherStation> model = new DefaultListModel<>();
+        DefaultListModel<BomWeatherStation> model = new DefaultListModel<>();
         stations.getStations().forEach(model::addElement);
         stationList.setModel(model);
 
@@ -61,7 +61,7 @@ public class MainWindow {
         return searchPanel;
     }
 
-    private void filterStations(DefaultListModel<WeatherStation> model) {
+    private void filterStations(DefaultListModel<BomWeatherStation> model) {
         for (ListSelectionListener l : stationList.getListSelectionListeners()) {
             stationList.removeListSelectionListener(l);
         }
@@ -76,7 +76,7 @@ public class MainWindow {
 
     private void openChart(ListSelectionEvent e) {
         if (!e.getValueIsAdjusting()) {
-            WeatherStation station = stationList.getSelectedValue();
+            BomWeatherStation station = stationList.getSelectedValue();
             if (station != null) {
                 FutureTask<List<WeatherObservation>> task = ObservationLoader.loadAsync(station);
                 openChart(station, task);
@@ -97,7 +97,7 @@ public class MainWindow {
         if (favourites.isEmpty()) {
             favouritesPanel.add(new JLabel(NO_FAVOURITES));
         }
-        for (WeatherStation station : favourites) {
+        for (BomWeatherStation station : favourites) {
             JButton favouriteButton = new JButton(station.toString());
             favouritesPanel.add(favouriteButton);
             attachChart(favouriteButton, station);
@@ -106,12 +106,12 @@ public class MainWindow {
         favouritesPanel.repaint();
     }
 
-    private void attachChart(JButton favouriteButton, WeatherStation station) {
+    private void attachChart(JButton favouriteButton, BomWeatherStation station) {
         FutureTask<List<WeatherObservation>> task = ObservationLoader.loadAsync(station);
         favouriteButton.addActionListener(x -> openChart(station, task));
     }
 
-    private void openChart(WeatherStation station, FutureTask<List<WeatherObservation>> dataSupplier) {
+    private void openChart(BomWeatherStation station, FutureTask<List<WeatherObservation>> dataSupplier) {
         detailWindow.display(station, dataSupplier);
     }
 

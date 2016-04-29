@@ -68,11 +68,11 @@ public class DetailWindow extends JFrame {
 
     /**
      * The method that deals with the Java Swing context. All containers are cleared and populated with fresh data.
-     * @param station  The {@link WeatherStation} for which data is displayed
+     * @param station  The {@link BomWeatherStation} for which data is displayed
      * @param dataSupplier  An asynchronous way of retireiving the {@link WeatherObservation} data, via
      *                     threading.
      */
-    public void display(WeatherStation station, FutureTask<List<WeatherObservation>> dataSupplier) {
+    public void display(BomWeatherStation station, FutureTask<List<WeatherObservation>> dataSupplier) {
         try {
 
             List<WeatherObservation> observations = dataSupplier.get();
@@ -142,10 +142,10 @@ public class DetailWindow extends JFrame {
     /**
      * Create button to check if the current data is the most recent available.
      *
-     * @param station the {@link WeatherStation} object, provides handle on object.
+     * @param station the {@link BomWeatherStation} object, provides handle on object.
      * @return button which is then added to the correct JPanel
      */
-    private JButton buildRefreshButton(WeatherStation station) {
+    private JButton buildRefreshButton(BomWeatherStation station) {
         JButton refresh = new JButton(REFRESH);
         refresh.addActionListener(x -> display(station, ObservationLoader.loadAsync(station)));
         return refresh;
@@ -201,7 +201,7 @@ public class DetailWindow extends JFrame {
      * @param favourites the current working favourites list.
      * @return new JButton to add or remove from favourites.
      */
-    private JButton buildFavouritesButton(WeatherStation station, Favourites favourites) {
+    private JButton buildFavouritesButton(BomWeatherStation station, Favourites favourites) {
         JButton addRemoveFavourite = new JButton();
         if (favourites.contains(station)) {
             addRemoveFavourite.setText(REMOVE_FROM_FAVOURITES);
@@ -220,7 +220,7 @@ public class DetailWindow extends JFrame {
      * @param button handle on the favourite button
      * @param favourites the current favourites list.
      */
-    private void toggleFavourites(WeatherStation station, JButton button, Favourites favourites) {
+    private void toggleFavourites(BomWeatherStation station, JButton button, Favourites favourites) {
         if (favourites.contains(station)) {
             favourites.remove(station);
             button.setText(ADD_TO_FAVOURITES);
