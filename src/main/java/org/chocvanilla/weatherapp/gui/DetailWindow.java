@@ -4,14 +4,12 @@ import org.chocvanilla.weatherapp.chart.ChartHelpers;
 import org.chocvanilla.weatherapp.data.*;
 import org.jfree.chart.ChartPanel;
 import org.jfree.chart.JFreeChart;
-import org.chocvanilla.weatherapp.data.ObservationLoader;
 
 import javax.swing.*;
+import javax.swing.table.TableColumnModel;
 import java.awt.*;
 import java.util.List;
 import java.util.concurrent.*;
-
-import javax.swing.table.TableColumnModel;
 
 import static org.chocvanilla.weatherapp.data.ObservationLoader.observationHistory;
 import static org.chocvanilla.weatherapp.gui.GuiHelpers.fieldToLabel;
@@ -20,7 +18,6 @@ public class DetailWindow extends JFrame {
     private static final String REFRESH = "↻ Refresh";
     private static final String ADD_TO_FAVOURITES = "☆ Favourite";
     private static final String REMOVE_FROM_FAVOURITES = "★ Unfavourite";
-    private final Favourites favourites;
     private final FavouritesUpdatedListener favouritesUpdatedListener;
     private JFrame detailFrame = new JFrame();
     private JPanel latestObsContainer = new JPanel();
@@ -37,12 +34,9 @@ public class DetailWindow extends JFrame {
      *
      * @param locationManager  saves previous window location, opens window to last location
      * @param listener  an interface for updating the favourites list instantly both on screen, and in program
-     * @param favourites  the current working list of favourites
      */
-    public DetailWindow(WindowLocationManager locationManager, FavouritesUpdatedListener listener,
-                        Favourites favourites) {
+    public DetailWindow(WindowLocationManager locationManager, FavouritesUpdatedListener listener) {
         favouritesUpdatedListener = listener;
-        this.favourites = favourites;
 
         detailFrame.setName("DetailWindow");
         detailFrame.addWindowListener(locationManager);
@@ -89,7 +83,7 @@ public class DetailWindow extends JFrame {
             latestObsContainer.add(buildDetails(observations.get(0)));
             // Add to favorites
             buttonContainer.removeAll();
-            buttonContainer.add(buildFavouritesButton(station, favourites));
+            buttonContainer.add(buildFavouritesButton(station));
             buttonContainer.add(buildRefreshButton(station));
             buttonContainer.add(refreshStatusLabel);
 
@@ -198,17 +192,16 @@ public class DetailWindow extends JFrame {
      * button depending on the stations existence in the favourites list.
      *
      * @param station handle on the station object being operated on
-     * @param favourites the current working favourites list.
      * @return new JButton to add or remove from favourites.
      */
-    private JButton buildFavouritesButton(BomWeatherStation station, Favourites favourites) {
+    private JButton buildFavouritesButton(BomWeatherStation station) {
         JButton addRemoveFavourite = new JButton();
-        if (favourites.contains(station)) {
+        if (station.isFavourite()) {
             addRemoveFavourite.setText(REMOVE_FROM_FAVOURITES);
         } else {
             addRemoveFavourite.setText(ADD_TO_FAVOURITES);
         }
-        addRemoveFavourite.addActionListener(x -> toggleFavourites(station, addRemoveFavourite, favourites));
+        addRemoveFavourite.addActionListener(x -> toggleFavourites(station, addRemoveFavourite));
         return addRemoveFavourite;
     }
 
@@ -218,15 +211,14 @@ public class DetailWindow extends JFrame {
      *
      * @param station handle on the station object being operated on.
      * @param button handle on the favourite button
-     * @param favourites the current favourites list.
      */
-    private void toggleFavourites(BomWeatherStation station, JButton button, Favourites favourites) {
-        if (favourites.contains(station)) {
-            favourites.remove(station);
+    private void toggleFavourites(BomWeatherStation station, JButton button) {
+        if (station.isFavourite()) {
+            station.setFavourite(false);
             button.setText(ADD_TO_FAVOURITES);
         } else {
             button.setText(REMOVE_FROM_FAVOURITES);
-            favourites.add(station);
+            station.setFavourite(true);
         }
         favouritesUpdatedListener.update();
     }

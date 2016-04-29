@@ -1,6 +1,7 @@
 package org.chocvanilla.weatherapp.data;
 
 import com.google.gson.*;
+import org.chocvanilla.weatherapp.io.OptionalDeserializer;
 
 import java.io.*;
 import java.net.URL;

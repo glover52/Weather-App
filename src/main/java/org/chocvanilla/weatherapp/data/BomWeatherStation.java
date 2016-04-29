@@ -10,6 +10,8 @@ public class BomWeatherStation {
     private String name;
     private String state;
     private char code;
+    
+    private boolean favourite;
 
     public int getStationID() {
         return stationID;
@@ -44,5 +46,13 @@ public class BomWeatherStation {
     @Override
     public String toString() {
         return String.format("%s, %s", name, state);
+    }
+
+    public boolean isFavourite() {
+        return favourite;
+    }
+
+    public void setFavourite(boolean favourite) {
+        this.favourite = favourite;
     }
 }

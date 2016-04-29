@@ -13,7 +13,6 @@ public class MainWindow {
 
     private final JFrame frame = new JFrame("Weather App");
     private final WeatherStations stations;
-    private final Favourites favourites;
     private final DetailWindow detailWindow;
 
     private final JTextField searchBox = new JTextField();
@@ -22,16 +21,14 @@ public class MainWindow {
     private static final String NO_FAVOURITES =
             "You have no favorites! Open a station and click the favorites button to see it here.";
 
-    public MainWindow(WeatherStations weatherStations, Favourites favouriteStations) {
+    public MainWindow(WeatherStations weatherStations) {
         stations = weatherStations;
-        favourites = favouriteStations;
         frame.setName("MainWindow");
         detailWindow = new DetailWindow(new WindowLocationManager(null, frame),
-                this::updateFavouritesButtons,
-                favourites);
+                this::updateFavouritesButtons);
         frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         frame.addWindowListener(new WindowLocationManager(new Rectangle(800, 600), null));
-        frame.addWindowListener(new FavouritesManager(favourites));
+        frame.addWindowListener(new FavouritesManager(weatherStations));
     }
 
     public void run() {
@@ -94,13 +91,16 @@ public class MainWindow {
 
     private void updateFavouritesButtons() {
         favouritesPanel.removeAll();
-        if (favourites.isEmpty()) {
-            favouritesPanel.add(new JLabel(NO_FAVOURITES));
-        }
+        Iterable<BomWeatherStation> favourites = () -> stations.getFavourites().iterator();
+        boolean hasFavourites = false;
         for (BomWeatherStation station : favourites) {
+            hasFavourites = true;
             JButton favouriteButton = new JButton(station.toString());
             favouritesPanel.add(favouriteButton);
             attachChart(favouriteButton, station);
+        }
+        if (!hasFavourites) {
+            favouritesPanel.add(new JLabel(NO_FAVOURITES));
         }
         favouritesPanel.revalidate();
         favouritesPanel.repaint();

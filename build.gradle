@@ -1,11 +1,13 @@
+plugins {
+    id 'java'
+    id 'application'
+    id 'com.github.johnrengelman.shadow' version '1.2.3'
+}
+
 group 'chocvanilla'
-version '0.1'
-
-apply plugin: 'application'
-apply plugin: 'java'
-
+version '1.0'
+mainClassName = 'org.chocvanilla.weatherapp.WeatherApp'
 sourceCompatibility = 1.8
-
 compileJava.options.encoding = 'UTF-8'
 
 repositories {
@@ -19,25 +21,6 @@ dependencies {
     testCompile 'org.hamcrest:hamcrest-all:1.3'
 }
 
-mainClassName = 'org.chocvanilla.weatherapp.WeatherApp'
-
-jar {
-    manifest {
-        attributes 'Main-Class': mainClassName
-    }
-}
-
-task fatJar(type: Jar) {
-    manifest {
-        attributes 'Implementation-Title': 'WeatherApp',
-                'Implementation-Version': version,
-                'Main-Class': mainClassName
-    }
-    baseName = project.name
-    from { configurations.compile.collect { it.isDirectory() ? it : zipTree(it) } }
-    with jar
-}
-
 task releaseZip(type: Zip){
     from ('build/libs/')
     include '*.jar'
@@ -45,5 +28,5 @@ task releaseZip(type: Zip){
     include '*.json'
 
     destinationDir file('build/releases')
-    dependsOn fatJar
+    dependsOn shadowJar
 }

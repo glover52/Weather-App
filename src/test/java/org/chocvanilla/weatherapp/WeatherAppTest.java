@@ -2,6 +2,7 @@ package org.chocvanilla.weatherapp;
 
 import org.chocvanilla.weatherapp.data.*;
 import org.chocvanilla.weatherapp.gui.MainWindow;
+import org.chocvanilla.weatherapp.io.WeatherStationsJSONFile;
 import org.jfree.chart.ChartPanel;
 import org.jfree.chart.JFreeChart;
 import org.junit.*;
@@ -20,7 +21,6 @@ import static org.junit.Assume.assumeFalse;
 public class WeatherAppTest {
     private WeatherStations db;
     private ObservationLoader loader;
-    private Favourites fav;
 
     /**
      * Initialisation of some necessary functions to be run before any test. Populates a list of weather stations
@@ -28,10 +28,8 @@ public class WeatherAppTest {
      */
     @Before
     public void setUp() throws Exception {
-        db = WeatherStations.loadFromFile();
-
+        db = new WeatherStations(new WeatherStationsJSONFile());
         loader = new ObservationLoader();
-        fav = Favourites.loadFromFile(db);
     }
 
     @Test
@@ -59,10 +57,10 @@ public class WeatherAppTest {
         
         for (int wmo : wmoNumbers) {
             db.firstMatch(x -> hasWmoNumber(x, wmo))
-              .ifPresent(fav::add);
+              .ifPresent(x -> x.setFavourite(true));
         }
         
-        fav.saveToFile(); // fails on exception
+        db.save(); // fails on exception
     }
     
     private boolean hasWmoNumber(BomWeatherStation station, int wmo) {
@@ -73,7 +71,10 @@ public class WeatherAppTest {
     public void favouritesAreLoaded() throws IOException {
         favouritesAreSaved();
 
-        assertTrue(fav.stream().anyMatch(x -> x.getWmoNumber() == 94828));
+
+        Optional<BomWeatherStation> station = db.firstMatch(x -> x.getWmoNumber() == 94828);
+        assertTrue(station.isPresent());
+        assertTrue(station.get().isFavourite());
     }
 
     /*
@@ -84,7 +85,7 @@ public class WeatherAppTest {
     @Ignore
     public void makeWindow() {
         assumeFalse(GraphicsEnvironment.getLocalGraphicsEnvironment().isHeadlessInstance());
-        MainWindow frame = new MainWindow(db, fav);
+        MainWindow frame = new MainWindow(db);
         frame.run();
     }
 
