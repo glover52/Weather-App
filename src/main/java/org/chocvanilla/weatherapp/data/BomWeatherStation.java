@@ -11,8 +11,6 @@ import java.nio.file.*;
 import java.util.concurrent.FutureTask;
 import java.util.concurrent.TimeUnit;
 
-import static org.chocvanilla.weatherapp.gui.MessageDialog.messageBox;
-
 // fields are auto-set by Gson
 @SuppressWarnings("unused") 
 public class BomWeatherStation implements WeatherStation {
@@ -109,13 +107,11 @@ public class BomWeatherStation implements WeatherStation {
         return loader.loadAsync();
     }
 
-    private void downloadFile() {
+    private void downloadFile() throws IOException {
         try (InputStream in = new URL(getUrl()).openStream()) {
             Paths.get(target).toFile().mkdirs();
             Path path = getPath();
             Files.copy(in, path, StandardCopyOption.REPLACE_EXISTING);
-        } catch (IOException ignored) {
-            messageBox("ERROR: Unable to establish connection to BOM", "ERROR!");
         }
     }
 

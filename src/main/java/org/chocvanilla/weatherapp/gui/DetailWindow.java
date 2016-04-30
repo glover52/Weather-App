@@ -12,6 +12,7 @@ import java.util.concurrent.*;
 
 import static org.chocvanilla.weatherapp.chart.ChartHelpers.observationHistory;
 import static org.chocvanilla.weatherapp.gui.GuiHelpers.fieldToLabel;
+import static org.chocvanilla.weatherapp.gui.MessageDialog.messageBox;
 
 public class DetailWindow extends JFrame {
     private static final String REFRESH = "↻ Refresh";
@@ -67,7 +68,6 @@ public class DetailWindow extends JFrame {
      */
     public void display(WeatherStation station, FutureTask<WeatherObservations> dataSupplier) {
         try {
-
             WeatherObservations observations = dataSupplier.get();
 
             long elapsed = station.msSinceLastRefresh();
@@ -106,6 +106,7 @@ public class DetailWindow extends JFrame {
             detailFrame.setVisible(true);
         } catch (InterruptedException | ExecutionException ignored) {
             // Can't get data, so don't display chart
+            messageBox("ERROR: Unable to establish connection to BOM", "ERROR!");
         }
     }
 

@@ -69,7 +69,7 @@ public class WeatherAppTest {
     @Test
     public void favouritesAreLoaded() throws IOException {
         favouritesAreSaved();
-        
+
         Optional<BomWeatherStation> station = db.firstMatch(x -> x.getWmoNumber() == 94828);
         assertTrue(station.isPresent());
         assertTrue(station.get().isFavourite());

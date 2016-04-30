@@ -14,7 +14,7 @@ public interface WeatherObservation {
 
     Float getGustKm();
 
-    Float getWindSpdKm();
+    Float getWindSpdKmh();
 
     String getWindDir();
 

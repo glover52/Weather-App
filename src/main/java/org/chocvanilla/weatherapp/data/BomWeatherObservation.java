@@ -37,7 +37,7 @@ public class BomWeatherObservation implements WeatherObservation {
     private String windDir;
 
     @SerializedName("wind_spd_kmh")
-    private Float windSpdKm;
+    private Float windSpdKmh;
 
     @SerializedName("wind_spd_kt")
     private float windSpdKt;
@@ -50,7 +50,7 @@ public class BomWeatherObservation implements WeatherObservation {
                 getGustKm(),
                 getGustKt(),
                 getWindDir(),
-                getWindSpdKm(),
+                getWindSpdKmh(),
                 getWindSpdKt(),
                 getDewPt(),
                 getRain(),
@@ -93,8 +93,8 @@ public class BomWeatherObservation implements WeatherObservation {
         return windDir;
     }
 
-    public Float getWindSpdKm() {
-        return windSpdKm;
+    public Float getWindSpdKmh() {
+        return windSpdKmh;
     }
 
     public Float getWindSpdKt() {

@@ -22,7 +22,7 @@ public class ObservationDescription {
         list.add(new ObservationDescription("Air Temp", DEG_C, observation::getAirTemperature));
         list.add(new ObservationDescription("Apparent Temp", DEG_C, observation::getApparentTemperature));
         list.add(new ObservationDescription("Gust", KM_H, observation::getGustKm));
-        list.add(new ObservationDescription("Wind Speed", KM_H, observation::getWindSpdKm));
+        list.add(new ObservationDescription("Wind Speed", KM_H, observation::getWindSpdKmh));
         list.add(new ObservationDescription("Wind Direction", "%s", observation::getWindDir));
         list.add(new ObservationDescription("Rain", "%.1f mm", observation::getRain));
         list.add(new ObservationDescription("Dew point", DEG_C, observation::getDewPt));
