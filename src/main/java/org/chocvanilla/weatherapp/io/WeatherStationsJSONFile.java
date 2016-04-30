@@ -41,7 +41,7 @@ public class WeatherStationsJSONFile implements WeatherStationLoader {
     public void save(WeatherStations stations) {
         try (PrintWriter favouritesWriter = new PrintWriter(Files.newBufferedWriter(FAVOURITES_PATH))) {
             stations.getFavourites()
-                    .map(BomWeatherStation::getWmoNumber)
+                    .map(WeatherStation::getUniqueID)
                     .forEach(favouritesWriter::println);
         } catch (IOException error) {
             messageBox("ERROR: Weather stations file could not be saved!", "ERROR!");

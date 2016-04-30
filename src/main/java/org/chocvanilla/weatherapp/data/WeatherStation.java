@@ -3,7 +3,7 @@ package org.chocvanilla.weatherapp.data;
 import java.io.IOException;
 import java.util.concurrent.FutureTask;
 
-public interface WeatherStation {
+public interface WeatherStation extends Comparable<WeatherStation> {
     WeatherObservations load() throws IOException;
 
     FutureTask<WeatherObservations> loadAsync();
@@ -17,4 +17,6 @@ public interface WeatherStation {
     void setFavourite(boolean favourite);
 
     long msSinceLastRefresh();
+    
+    String getUniqueID();
 }

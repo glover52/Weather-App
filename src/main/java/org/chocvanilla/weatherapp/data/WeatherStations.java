@@ -7,39 +7,31 @@ import java.util.function.Predicate;
 import java.util.stream.Stream;
 
 public class WeatherStations {
-    private final List<BomWeatherStation> stations = new ArrayList<>();
+    private final List<WeatherStation> stations = new ArrayList<>();
     private final WeatherStationLoader stationLoader;
 
     public WeatherStations(WeatherStationLoader loader) {
         stationLoader = loader;
         stations.addAll(loader.load());
-        stations.sort(WeatherStations::compare);
-    }
-
-    private static int compare(BomWeatherStation one, BomWeatherStation two) {
-        int result = one.getState().compareTo(two.getState());
-        if (result != 0) {
-            return result;
-        }
-        return one.getName().compareTo(two.getName());
+        stations.sort(WeatherStation::compareTo);
     }
 
     public void save() {
         stationLoader.save(this);
     }
 
-    public List<BomWeatherStation> getStations() {
+    public List<WeatherStation> getStations() {
         return stations;
     }
 
-    public Optional<BomWeatherStation> firstMatch(Predicate<BomWeatherStation> condition) {
+    public Optional<WeatherStation> firstMatch(Predicate<WeatherStation> condition) {
         return stations.stream()
                 .filter(condition)
                 .findFirst();
     }
 
-    public Stream<BomWeatherStation> getFavourites() {
-        return stations.stream().filter(BomWeatherStation::isFavourite);
+    public Stream<WeatherStation> getFavourites() {
+        return stations.stream().filter(WeatherStation::isFavourite);
     }
 }
 

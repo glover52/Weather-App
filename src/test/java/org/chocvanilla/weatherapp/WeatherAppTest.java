@@ -38,7 +38,7 @@ public class WeatherAppTest {
 
     @Test
     public void weatherObservationIsLoaded() throws IOException {
-        Optional<BomWeatherStation> station = db.firstMatch(x -> hasWmoNumber(x, 94828));
+        Optional<WeatherStation> station = db.firstMatch(x -> hasWmoNumber(x, 94828));
         assertTrue(station.isPresent());
         WeatherObservations observations = station.get().load();
         assertThat(observations, is(not(empty())));
@@ -62,15 +62,15 @@ public class WeatherAppTest {
         db.save(); // fails on exception
     }
 
-    private boolean hasWmoNumber(BomWeatherStation station, int wmo) {
-        return station.getWmoNumber() == wmo;
+    private boolean hasWmoNumber(WeatherStation station, int wmo) {
+        return station.getUniqueID().equals(String.valueOf(wmo));
     }
 
     @Test
     public void favouritesAreLoaded() throws IOException {
         favouritesAreSaved();
 
-        Optional<BomWeatherStation> station = db.firstMatch(x -> x.getWmoNumber() == 94828);
+        Optional<WeatherStation> station = db.firstMatch(x -> hasWmoNumber(x, 94828));
         assertTrue(station.isPresent());
         assertTrue(station.get().isFavourite());
     }
@@ -81,9 +81,9 @@ public class WeatherAppTest {
     @Test
     public void canCreateChart() throws IOException {
         assumeFalse(GraphicsEnvironment.getLocalGraphicsEnvironment().isHeadlessInstance());
-        Optional<BomWeatherStation> maybe = db.firstMatch(x -> hasWmoNumber(x, 94828));
+        Optional<WeatherStation> maybe = db.firstMatch(x -> hasWmoNumber(x, 94828));
         assertTrue(maybe.isPresent());
-        BomWeatherStation station = maybe.get();
+        WeatherStation station = maybe.get();
         WeatherObservations observations = station.load();
         JFreeChart testChart = createChart(station, observations);
         JFrame frame = setUpTestWindow();

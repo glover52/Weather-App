@@ -33,6 +33,15 @@ public class BomWeatherStation implements WeatherStation {
      */
     private transient long lastRefreshed;
 
+    @Override
+    public int compareTo(WeatherStation two) {
+        int result = getState().compareTo(two.getState());
+        if (result != 0) {
+            return result;
+        }
+        return getName().compareTo(two.getName());
+    }
+
 
     public int getStationID() {
         return stationID;
@@ -81,7 +90,12 @@ public class BomWeatherStation implements WeatherStation {
     public long msSinceLastRefresh() {
         return System.currentTimeMillis() - lastRefreshed;
     }
-    
+
+    @Override
+    public String getUniqueID() {
+        return String.valueOf(wmoNumber);
+    }
+
     /**
      * Download all available weather observations from this station.
      *

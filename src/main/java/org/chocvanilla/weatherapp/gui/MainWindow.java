@@ -18,7 +18,7 @@ public class MainWindow {
     private final WeatherStations stations;
     private final DetailWindow detailWindow;
     private final JTextField searchBox = new JTextField();
-    private final JList<BomWeatherStation> stationList = new JList<>();
+    private final JList<WeatherStation> stationList = new JList<>();
     private JPanel favouritesPanel;
 
     public MainWindow(Gson gson, WeatherStations weatherStations) {
@@ -44,7 +44,7 @@ public class MainWindow {
         JPanel searchPanel = new JPanel(new BorderLayout());
         searchPanel.add(searchBox, BorderLayout.NORTH);
 
-        DefaultListModel<BomWeatherStation> model = new DefaultListModel<>();
+        DefaultListModel<WeatherStation> model = new DefaultListModel<>();
         stations.getStations().forEach(model::addElement);
         stationList.setModel(model);
 
@@ -59,7 +59,7 @@ public class MainWindow {
         return searchPanel;
     }
 
-    private void filterStations(DefaultListModel<BomWeatherStation> model) {
+    private void filterStations(DefaultListModel<WeatherStation> model) {
         for (ListSelectionListener l : stationList.getListSelectionListeners()) {
             stationList.removeListSelectionListener(l);
         }
@@ -74,7 +74,7 @@ public class MainWindow {
 
     private void openChart(ListSelectionEvent e) {
         if (!e.getValueIsAdjusting()) {
-            BomWeatherStation station = stationList.getSelectedValue();
+            WeatherStation station = stationList.getSelectedValue();
             if (station != null) {
                 openChart(station, station.loadAsync());
                 stationList.clearSelection();
@@ -91,9 +91,9 @@ public class MainWindow {
 
     private void updateFavouritesButtons() {
         favouritesPanel.removeAll();
-        Iterable<BomWeatherStation> favourites = () -> stations.getFavourites().iterator();
+        Iterable<WeatherStation> favourites = () -> stations.getFavourites().iterator();
         boolean hasFavourites = false;
-        for (BomWeatherStation station : favourites) {
+        for (WeatherStation station : favourites) {
             hasFavourites = true;
             JButton favouriteButton = new JButton(station.toString());
             favouritesPanel.add(favouriteButton);
@@ -106,11 +106,11 @@ public class MainWindow {
         favouritesPanel.repaint();
     }
 
-    private void attachChart(JButton favouriteButton, BomWeatherStation station) {
+    private void attachChart(JButton favouriteButton, WeatherStation station) {
         favouriteButton.addActionListener(x -> openChart(station, station.loadAsync()));
     }
 
-    private void openChart(BomWeatherStation station, FutureTask<WeatherObservations> dataSupplier) {
+    private void openChart(WeatherStation station, FutureTask<WeatherObservations> dataSupplier) {
         detailWindow.display(station, dataSupplier);
     }
 
