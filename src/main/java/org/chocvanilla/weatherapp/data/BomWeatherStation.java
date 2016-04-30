@@ -2,15 +2,12 @@ package org.chocvanilla.weatherapp.data;
 
 
 import com.google.gson.*;
+import org.chocvanilla.weatherapp.chart.DataHelpers;
 import org.chocvanilla.weatherapp.io.AsyncLoader;
 
 import java.io.*;
-import java.lang.reflect.Type;
 import java.net.URL;
 import java.nio.file.*;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
 import java.util.concurrent.FutureTask;
 import java.util.concurrent.TimeUnit;
 
@@ -20,6 +17,7 @@ public class BomWeatherStation implements WeatherStation {
     public static final String target = ".observations";
     private static final String URL_FORMAT = "http://www.bom.gov.au/fwo/%s/%s.%d.json";
     private static final String PRODUCT_ID = "ID%c60801";
+    public static final long CACHE_EXPIRY_MILLIS = TimeUnit.SECONDS.toMillis(5);
 
     private final AsyncLoader loader = new AsyncLoader(this);
     
@@ -106,21 +104,15 @@ public class BomWeatherStation implements WeatherStation {
      * @throws IOException if an error occurred while attempting the download
      */
     public WeatherObservations load() throws IOException {
-        long elapsedMinutes = TimeUnit.MILLISECONDS.toMinutes(msSinceLastRefresh());
-        if (elapsedMinutes > 5) {
+        if (msSinceLastRefresh() > CACHE_EXPIRY_MILLIS) {
             downloadFile();
             lastRefreshed = System.currentTimeMillis();
         }
         try (BufferedReader reader = Files.newBufferedReader(getPath())) {
             JsonObject object = (JsonObject) new JsonParser().parse(reader);
             JsonElement data = object.get("observations").getAsJsonObject().get("data");
-            Gson gson = new GsonBuilder()
-                    .registerTypeAdapter(Float.class,
-                    (JsonDeserializer<Float>) BomWeatherStation::deserializeFloat)
-                    .registerTypeAdapter(Date.class,
-                    (JsonDeserializer<Date>) BomWeatherStation::deserializeDate)
-                    .create();
-            return new BomWeatherObservations(gson.fromJson(data, BomWeatherObservation[].class));
+            Gson gson = DataHelpers.observationsGson();
+            return new WeatherObservations(gson.fromJson(data, BomWeatherObservation[].class));
         }
     }
     
@@ -138,27 +130,6 @@ public class BomWeatherStation implements WeatherStation {
 
     private Path getPath() {
         return Paths.get(target, String.valueOf(wmoNumber) + ".json");
-    }
-
-    /**
-     * Deserialize a float value. If absent or invalid, 0.0f is returned.
-     * Needed to cope with missing Bureau of Meteorology data.
-     * See {@link JsonDeserializer} for usage.
-     */
-    private static Float deserializeFloat(JsonElement json, Type t, JsonDeserializationContext c) {
-        try {
-            return json.getAsFloat();
-        } catch (Exception e) {
-            return 0.0f;
-        }
-    }
-
-    private static Date deserializeDate(JsonElement element, Type t, JsonDeserializationContext c) {
-        try {
-            return new SimpleDateFormat("yyyyMMddHHmmss").parse(element.getAsString());
-        } catch (ParseException e) {
-            return null;
-        }
     }
 
 }

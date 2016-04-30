@@ -74,10 +74,21 @@ public class ChartHelpers {
      * @return an array of observations
      */
     public static Object[][] observationHistory(WeatherObservations observations) {
-        Object[][] data = new Object[observations.size()][10];
+        Object[][] data = new Object[observations.size()][];
         int i = 0;
         for (WeatherObservation o : observations) {
-            data[i++] = o.fieldsAsTableRow();
+            data[i++] = new Object[]{
+                    o.getTimestamp(),
+                    o.getAirTemperature(),
+                    o.getApparentTemperature(),
+                    o.getGustKm(),
+                    o.getGustKt(),
+                    o.getWindDir(),
+                    o.getWindSpdKmh(),
+                    o.getWindSpdKt(),
+                    o.getDewPt(),
+                    o.getRain(),
+            };
         }
         return data;
     }

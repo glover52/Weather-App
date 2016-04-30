@@ -40,21 +40,6 @@ public class BomWeatherObservation implements WeatherObservation {
     @SerializedName("wind_spd_kt")
     private float windSpdKt;
 
-    public Object[] fieldsAsTableRow() {
-        return new Object[]{
-                getTimestamp(),
-                getAirTemperature(),
-                getApparentTemperature(),
-                getGustKm(),
-                getGustKt(),
-                getWindDir(),
-                getWindSpdKmh(),
-                getWindSpdKt(),
-                getDewPt(),
-                getRain(),
-        };
-    }
-
     public Date getTimestamp() {
         return timestamp;
     }

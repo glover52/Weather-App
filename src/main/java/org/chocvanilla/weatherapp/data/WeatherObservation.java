@@ -4,8 +4,6 @@ import java.util.Date;
 
 public interface WeatherObservation {
 
-    Object[] fieldsAsTableRow();
-
     Float getAirTemperature();
 
     Date getTimestamp();
@@ -21,4 +19,8 @@ public interface WeatherObservation {
     Float getRain();
 
     Float getDewPt();
+
+    Float getGustKt();
+
+    Float getWindSpdKt();
 }
