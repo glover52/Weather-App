@@ -2,13 +2,13 @@ package org.chocvanilla.weatherapp.io;
 
 import com.google.gson.Gson;
 import org.chocvanilla.weatherapp.data.*;
+import org.chocvanilla.weatherapp.gui.MessageBox;
 
 import java.io.*;
 import java.nio.file.*;
 import java.util.*;
 import java.util.stream.Collectors;
 
-import static org.chocvanilla.weatherapp.gui.MessageDialog.messageBox;
 import static org.chocvanilla.weatherapp.io.FileSystemHelpers.getResource;
 
 public class WeatherStationsJSONFile implements WeatherStationSource {
@@ -20,20 +20,21 @@ public class WeatherStationsJSONFile implements WeatherStationSource {
         this.gson = gson;
     }
 
-    public List<WeatherStation> load() {
-        try (BufferedReader stationsReader = getResource(getClass(), STATIONS_PATH);
-             BufferedReader favouritesReader = Files.newBufferedReader(FAVOURITES_PATH)) {
+    public List<WeatherStation> load() throws IOException {
+        try (BufferedReader favouritesReader = Files.newBufferedReader(FAVOURITES_PATH);
+             BufferedReader stationsReader = getResource(getClass(), STATIONS_PATH)) {
+            
             Set<String> favourites = favouritesReader.lines()
                     .collect(Collectors.toCollection(HashSet::new));
+            
             List<WeatherStation> result =
                     Arrays.asList(gson.fromJson(stationsReader, BomWeatherStation[].class));
+            
             result.stream()
                     .filter(x -> favourites.contains(x.getUniqueID()))
                     .forEach(station -> station.setFavourite(true));
+            
             return result;
-        } catch (IOException error) {
-            messageBox("ERROR: Weather stations file could not be loaded!", "ERROR!");
-            return Collections.emptyList();
         }
     }
 
@@ -43,7 +44,7 @@ public class WeatherStationsJSONFile implements WeatherStationSource {
                     .map(WeatherStation::getUniqueID)
                     .forEach(favouritesWriter::println);
         } catch (IOException error) {
-            messageBox("ERROR: Weather stations file could not be saved!", "ERROR!");
+            MessageBox.show("ERROR: Weather stations file could not be saved!", "ERROR!");
         }
     }
 }

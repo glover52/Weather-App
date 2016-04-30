@@ -8,6 +8,9 @@ import java.io.*;
 import java.lang.reflect.Type;
 import java.net.URL;
 import java.nio.file.*;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.concurrent.FutureTask;
 import java.util.concurrent.TimeUnit;
 
@@ -111,8 +114,12 @@ public class BomWeatherStation implements WeatherStation {
         try (BufferedReader reader = Files.newBufferedReader(getPath())) {
             JsonObject object = (JsonObject) new JsonParser().parse(reader);
             JsonElement data = object.get("observations").getAsJsonObject().get("data");
-            Gson gson = new GsonBuilder().registerTypeAdapter(Float.class,
-                    (JsonDeserializer<Float>) BomWeatherStation::deserialize).create();
+            Gson gson = new GsonBuilder()
+                    .registerTypeAdapter(Float.class,
+                    (JsonDeserializer<Float>) BomWeatherStation::deserializeFloat)
+                    .registerTypeAdapter(Date.class,
+                    (JsonDeserializer<Date>) BomWeatherStation::deserializeDate)
+                    .create();
             return new BomWeatherObservations(gson.fromJson(data, BomWeatherObservation[].class));
         }
     }
@@ -138,11 +145,20 @@ public class BomWeatherStation implements WeatherStation {
      * Needed to cope with missing Bureau of Meteorology data.
      * See {@link JsonDeserializer} for usage.
      */
-    private static Float deserialize(JsonElement json, Type t, JsonDeserializationContext context) {
+    private static Float deserializeFloat(JsonElement json, Type t, JsonDeserializationContext c) {
         try {
             return json.getAsFloat();
         } catch (Exception e) {
             return 0.0f;
         }
     }
+
+    private static Date deserializeDate(JsonElement element, Type t, JsonDeserializationContext c) {
+        try {
+            return new SimpleDateFormat("yyyyMMddHHmmss").parse(element.getAsString());
+        } catch (ParseException e) {
+            return null;
+        }
+    }
+
 }

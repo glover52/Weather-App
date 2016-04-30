@@ -2,15 +2,13 @@ package org.chocvanilla.weatherapp.data;
 
 import com.google.gson.annotations.SerializedName;
 
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
 import java.util.Date;
 
 // fields are auto-set by Gson
 @SuppressWarnings("unused")
 public class BomWeatherObservation implements WeatherObservation {
     @SerializedName("local_date_time_full")
-    private String timestamp;
+    private Date timestamp;
 
     @SerializedName("name")
     private String name;
@@ -58,11 +56,7 @@ public class BomWeatherObservation implements WeatherObservation {
     }
 
     public Date getTimestamp() {
-        try {
-            return new SimpleDateFormat("yyyyMMddHHmmss").parse(timestamp);
-        } catch (ParseException e) {
-            return null;
-        }
+        return timestamp;
     }
 
     public String getName() {

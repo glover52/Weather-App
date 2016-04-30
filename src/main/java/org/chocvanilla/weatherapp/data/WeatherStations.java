@@ -2,36 +2,41 @@ package org.chocvanilla.weatherapp.data;
 
 import org.chocvanilla.weatherapp.io.WeatherStationSource;
 
+import java.io.IOException;
 import java.util.*;
-import java.util.function.Predicate;
 import java.util.stream.Stream;
 
-public class WeatherStations {
+public class WeatherStations extends AbstractCollection<WeatherStation> {
     private final List<WeatherStation> stations = new ArrayList<>();
-    private final WeatherStationSource stationLoader;
+    private final WeatherStationSource dataSource;
 
-    public WeatherStations(WeatherStationSource loader) {
-        stationLoader = loader;
-        stations.addAll(loader.load());
-        stations.sort(null);
+    private WeatherStations(WeatherStationSource source) {
+        dataSource = source;
+    }
+
+    public static WeatherStations loadFrom(WeatherStationSource source) throws IOException {
+        WeatherStations result = new WeatherStations(source);
+        result.stations.addAll(source.load());
+        result.stations.sort(null);
+        return result;
     }
 
     public void save() {
-        stationLoader.save(this);
-    }
-
-    public List<WeatherStation> getStations() {
-        return stations;
-    }
-
-    public Optional<WeatherStation> firstMatch(Predicate<WeatherStation> condition) {
-        return stations.stream()
-                .filter(condition)
-                .findFirst();
+        dataSource.save(this);
     }
 
     public Stream<WeatherStation> getFavourites() {
         return stations.stream().filter(WeatherStation::isFavourite);
+    }
+
+    @Override
+    public Iterator<WeatherStation> iterator() {
+        return stations.iterator();
+    }
+
+    @Override
+    public int size() {
+        return stations.size();
     }
 }
 

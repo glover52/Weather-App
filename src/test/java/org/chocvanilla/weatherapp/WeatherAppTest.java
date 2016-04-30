@@ -12,6 +12,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.io.IOException;
 import java.util.Optional;
+import java.util.function.Predicate;
 
 import static org.chocvanilla.weatherapp.chart.ChartHelpers.createChart;
 import static org.hamcrest.Matchers.*;
@@ -28,17 +29,21 @@ public class WeatherAppTest {
      */
     @Before
     public void setUp() throws Exception {
-        db = new WeatherStations(new WeatherStationsJSONFile(new Gson()));
+        db = WeatherStations.loadFrom(new WeatherStationsJSONFile(new Gson()));
     }
 
     @Test
     public void weatherStationsAreLoaded() throws IOException {
-        assertThat(db.getStations(), is(not(empty())));
+        assertThat(db, is(not(empty())));
+    }
+    
+    private Optional<WeatherStation> firstMatch(Predicate<WeatherStation> condition) {
+        return db.stream().filter(condition).findFirst();
     }
 
     @Test
     public void weatherObservationIsLoaded() throws IOException {
-        Optional<WeatherStation> station = db.firstMatch(x -> hasWmoNumber(x, 94828));
+        Optional<WeatherStation> station = firstMatch(x -> hasWmoNumber(x, 94828));
         assertTrue(station.isPresent());
         WeatherObservations observations = station.get().load();
         assertThat(observations, is(not(empty())));
@@ -55,8 +60,7 @@ public class WeatherAppTest {
         int[] wmoNumbers = {94828, 94302, 95607, 94620, 95625, 94641,};
 
         for (int wmo : wmoNumbers) {
-            db.firstMatch(x -> hasWmoNumber(x, wmo))
-                    .ifPresent(x -> x.setFavourite(true));
+            firstMatch(x -> hasWmoNumber(x, wmo)).ifPresent(x -> x.setFavourite(true));
         }
 
         db.save(); // fails on exception
@@ -70,7 +74,7 @@ public class WeatherAppTest {
     public void favouritesAreLoaded() throws IOException {
         favouritesAreSaved();
 
-        Optional<WeatherStation> station = db.firstMatch(x -> hasWmoNumber(x, 94828));
+        Optional<WeatherStation> station = firstMatch(x -> hasWmoNumber(x, 94828));
         assertTrue(station.isPresent());
         assertTrue(station.get().isFavourite());
     }
@@ -81,7 +85,7 @@ public class WeatherAppTest {
     @Test
     public void canCreateChart() throws IOException {
         assumeFalse(GraphicsEnvironment.getLocalGraphicsEnvironment().isHeadlessInstance());
-        Optional<WeatherStation> maybe = db.firstMatch(x -> hasWmoNumber(x, 94828));
+        Optional<WeatherStation> maybe = firstMatch(x -> hasWmoNumber(x, 94828));
         assertTrue(maybe.isPresent());
         WeatherStation station = maybe.get();
         WeatherObservations observations = station.load();

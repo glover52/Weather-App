@@ -45,7 +45,7 @@ public class MainWindow {
         searchPanel.add(searchBox, BorderLayout.NORTH);
 
         DefaultListModel<WeatherStation> model = new DefaultListModel<>();
-        stations.getStations().forEach(model::addElement);
+        stations.forEach(model::addElement);
         stationList.setModel(model);
 
         GuiHelpers.addChangeListener(searchBox, s -> filterStations(model));
@@ -64,9 +64,7 @@ public class MainWindow {
             stationList.removeListSelectionListener(l);
         }
         model.removeAllElements();
-        stations
-                .getStations()
-                .stream()
+        stations.stream()
                 .filter(x -> x.toString().contains(searchBox.getText().toUpperCase()))
                 .forEach(model::addElement);
         stationList.addListSelectionListener(this::openChart);
