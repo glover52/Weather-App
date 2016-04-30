@@ -5,7 +5,7 @@ import org.chocvanilla.weatherapp.data.WeatherStations;
 
 import java.util.List;
 
-public interface WeatherStationLoader {
+public interface WeatherStationSource {
     List<WeatherStation> load();
 
     void save(WeatherStations stations);

@@ -11,7 +11,7 @@ import java.util.stream.Collectors;
 import static org.chocvanilla.weatherapp.gui.MessageDialog.messageBox;
 import static org.chocvanilla.weatherapp.io.FileSystemHelpers.getResource;
 
-public class WeatherStationsJSONFile implements WeatherStationLoader {
+public class WeatherStationsJSONFile implements WeatherStationSource {
     private static final String STATIONS_PATH = "/.weather_stations.json";
     private static final Path FAVOURITES_PATH = Paths.get(".preferences", "favourites.dat");
     private final Gson gson;

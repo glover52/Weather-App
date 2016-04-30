@@ -1,6 +1,6 @@
 package org.chocvanilla.weatherapp.data;
 
-import org.chocvanilla.weatherapp.io.WeatherStationLoader;
+import org.chocvanilla.weatherapp.io.WeatherStationSource;
 
 import java.util.*;
 import java.util.function.Predicate;
@@ -8,12 +8,12 @@ import java.util.stream.Stream;
 
 public class WeatherStations {
     private final List<WeatherStation> stations = new ArrayList<>();
-    private final WeatherStationLoader stationLoader;
+    private final WeatherStationSource stationLoader;
 
-    public WeatherStations(WeatherStationLoader loader) {
+    public WeatherStations(WeatherStationSource loader) {
         stationLoader = loader;
         stations.addAll(loader.load());
-        stations.sort(WeatherStation::compareTo);
+        stations.sort(null);
     }
 
     public void save() {
