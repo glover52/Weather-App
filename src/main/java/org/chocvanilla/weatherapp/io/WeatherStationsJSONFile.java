@@ -7,7 +7,6 @@ import org.chocvanilla.weatherapp.gui.MessageBox;
 import java.io.*;
 import java.nio.file.*;
 import java.util.*;
-import java.util.stream.Collectors;
 
 import static org.chocvanilla.weatherapp.io.FileSystemHelpers.getResource;
 
@@ -21,12 +20,12 @@ public class WeatherStationsJSONFile implements WeatherStationSource {
     }
 
     public List<WeatherStation> load() throws IOException {
-        try (BufferedReader favouritesReader = Files.newBufferedReader(FAVOURITES_PATH);
-             BufferedReader stationsReader = getResource(getClass(), STATIONS_PATH)) {
-            
-            Set<String> favourites = favouritesReader.lines()
-                    .collect(Collectors.toCollection(HashSet::new));
-            
+        Set<String> favourites = new HashSet<>();
+        try (BufferedReader favouritesReader = Files.newBufferedReader(FAVOURITES_PATH)) {
+            favouritesReader.lines().forEach(favourites::add);
+        }
+        
+        try (BufferedReader stationsReader = getResource(getClass(), STATIONS_PATH)) {
             List<WeatherStation> result =
                     Arrays.asList(gson.fromJson(stationsReader, BomWeatherStation[].class));
             
