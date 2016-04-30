@@ -1,4 +1,4 @@
-package org.chocvanilla.weatherapp.chart;
+package org.chocvanilla.weatherapp.data;
 
 import com.google.gson.*;
 
