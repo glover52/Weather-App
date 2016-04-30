@@ -2,6 +2,7 @@ package org.chocvanilla.weatherapp.gui;
 
 import com.google.gson.Gson;
 
+import javax.swing.*;
 import java.awt.*;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
@@ -16,16 +17,20 @@ public class WindowLocationManager extends WindowAdapter {
     private static final String TARGET = ".preferences";
     private final Rectangle defaultBounds;
     private final Window parent;
+    private final Gson gson;
 
-    /**
-     * Initialises a new WindowLocation manager with the specified values.
-     *
-     * @param defaultBounds the initial size and location of the Window
-     * @param parent        the parent window
-     */
-    public WindowLocationManager(Rectangle defaultBounds, Window parent) {
+    public WindowLocationManager(Gson gson, Rectangle defaultBounds, Window parent) {
         this.defaultBounds = defaultBounds;
         this.parent = parent;
+        this.gson = gson;
+    }
+
+    public WindowLocationManager(Gson gson, Rectangle defaultBounds) {
+        this(gson, defaultBounds, null);
+    }
+
+    public WindowLocationManager(Gson gson, JFrame parent) {
+        this(gson, null, parent);
     }
 
     private static Path getPathFor(Window window) {
@@ -47,7 +52,6 @@ public class WindowLocationManager extends WindowAdapter {
     private void saveCoordinates(Window window) {
         try (BufferedWriter writer = Files.newBufferedWriter(getPathFor(window))) {
             Rectangle bounds = window.getBounds();
-            Gson gson = new Gson();
             gson.toJson(bounds, writer);
         } catch (IOException e) {
             // failed to save coordinates
@@ -57,7 +61,6 @@ public class WindowLocationManager extends WindowAdapter {
     private void loadCoordinates(Window window) {
         Paths.get(TARGET).toFile().mkdirs();
         try (BufferedReader reader = Files.newBufferedReader(getPathFor(window))) {
-            Gson gson = new Gson();
             Rectangle bounds = gson.fromJson(reader, Rectangle.class);
             window.setBounds(bounds);
         } catch (IOException ignored) {

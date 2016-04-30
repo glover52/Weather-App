@@ -12,8 +12,8 @@ import static org.chocvanilla.weatherapp.gui.MessageDialog.messageBox;
 import static org.chocvanilla.weatherapp.io.FileSystemHelpers.getResource;
 
 public class WeatherStationsJSONFile implements WeatherStationLoader {
-    private static final String WEATHER_STATIONS_FILE = "/.weather_stations.json";
-    private static final Path FAVOURITES_FILE = Paths.get(".preferences", "favourites.dat");
+    private static final String STATIONS_PATH = "/.weather_stations.json";
+    private static final Path FAVOURITES_PATH = Paths.get(".preferences", "favourites.dat");
     private final Gson gson;
 
     public WeatherStationsJSONFile(Gson gson) {
@@ -21,8 +21,8 @@ public class WeatherStationsJSONFile implements WeatherStationLoader {
     }
 
     public List<BomWeatherStation> load() {
-        try (BufferedReader stationsReader = getResource(getClass(), WEATHER_STATIONS_FILE);
-             BufferedReader favouritesReader = Files.newBufferedReader(FAVOURITES_FILE)) {
+        try (BufferedReader stationsReader = getResource(getClass(), STATIONS_PATH);
+             BufferedReader favouritesReader = Files.newBufferedReader(FAVOURITES_PATH)) {
             Set<Integer> favourites = favouritesReader.lines()
                     .map(Integer::parseInt)
                     .collect(Collectors.toCollection(HashSet::new));
@@ -39,7 +39,7 @@ public class WeatherStationsJSONFile implements WeatherStationLoader {
     }
 
     public void save(WeatherStations stations) {
-        try (PrintWriter favouritesWriter = new PrintWriter(Files.newBufferedWriter(FAVOURITES_FILE))) {
+        try (PrintWriter favouritesWriter = new PrintWriter(Files.newBufferedWriter(FAVOURITES_PATH))) {
             stations.getFavourites()
                     .map(BomWeatherStation::getWmoNumber)
                     .forEach(favouritesWriter::println);

@@ -1,5 +1,6 @@
 package org.chocvanilla.weatherapp.gui;
 
+import com.google.gson.Gson;
 import org.chocvanilla.weatherapp.data.*;
 
 import javax.swing.*;
@@ -20,13 +21,14 @@ public class MainWindow {
     private final JList<BomWeatherStation> stationList = new JList<>();
     private JPanel favouritesPanel;
 
-    public MainWindow(WeatherStations weatherStations) {
+    public MainWindow(Gson gson, WeatherStations weatherStations) {
         stations = weatherStations;
         frame.setName("MainWindow");
-        detailWindow = new DetailWindow(new WindowLocationManager(null, frame),
+        detailWindow = new DetailWindow(
+                new WindowLocationManager(gson, frame),
                 this::updateFavouritesButtons);
         frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-        frame.addWindowListener(new WindowLocationManager(new Rectangle(800, 600), null));
+        frame.addWindowListener(new WindowLocationManager(gson, new Rectangle(800, 600)));
         frame.addWindowListener(new FavouritesManager(weatherStations));
     }
 

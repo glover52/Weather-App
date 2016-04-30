@@ -77,4 +77,12 @@ public class GuiHelpers {
         entry.add(new JLabel(data.toString()), c);
         return entry;
     }
+
+    public static void setLookAndFeel() {
+        try {
+            UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
+        } catch (Exception ignored) {
+            // ignore
+        }
+    }
 }
