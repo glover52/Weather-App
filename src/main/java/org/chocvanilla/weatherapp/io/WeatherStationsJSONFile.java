@@ -20,16 +20,15 @@ public class WeatherStationsJSONFile implements WeatherStationLoader {
         this.gson = gson;
     }
 
-    public List<BomWeatherStation> load() {
+    public List<WeatherStation> load() {
         try (BufferedReader stationsReader = getResource(getClass(), STATIONS_PATH);
              BufferedReader favouritesReader = Files.newBufferedReader(FAVOURITES_PATH)) {
-            Set<Integer> favourites = favouritesReader.lines()
-                    .map(Integer::parseInt)
+            Set<String> favourites = favouritesReader.lines()
                     .collect(Collectors.toCollection(HashSet::new));
-            List<BomWeatherStation> result =
+            List<WeatherStation> result =
                     Arrays.asList(gson.fromJson(stationsReader, BomWeatherStation[].class));
             result.stream()
-                    .filter(x -> favourites.contains(x.getWmoNumber()))
+                    .filter(x -> favourites.contains(x.getUniqueID()))
                     .forEach(station -> station.setFavourite(true));
             return result;
         } catch (IOException error) {

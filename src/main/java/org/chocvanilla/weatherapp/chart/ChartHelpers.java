@@ -16,8 +16,7 @@ public class ChartHelpers {
     }
 
     /**
-     * Create a data set suitable for graphing using data obtained by loading all
-     * {@link BomWeatherObservation}s for the specified {@link BomWeatherStation}.
+     * Create a data set suitable for graphing.
      *
      * @param observations the source of weather data for this data set
      * @return a data set containing the time series of weather observations

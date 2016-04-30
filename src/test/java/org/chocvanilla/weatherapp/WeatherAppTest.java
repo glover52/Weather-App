@@ -46,7 +46,7 @@ public class WeatherAppTest {
 
     @Test(expected = IllegalArgumentException.class)
     public void loadObservationFromNullStation() throws IOException {
-        BomWeatherStation station = new BomWeatherStation();
+        WeatherStation station = new BomWeatherStation();
         WeatherObservations observations = station.load();
     }
 

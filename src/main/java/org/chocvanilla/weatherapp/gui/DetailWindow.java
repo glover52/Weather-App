@@ -62,7 +62,7 @@ public class DetailWindow extends JFrame {
     /**
      * The method that deals with the Java Swing context. All containers are cleared and populated with fresh data.
      *
-     * @param station      The {@link BomWeatherStation} for which data is displayed
+     * @param station      The {@link WeatherStation} for which data is displayed
      * @param dataSupplier An asynchronous way of retireiving the {@link WeatherObservation} data, via
      */
     public void display(WeatherStation station, FutureTask<WeatherObservations> dataSupplier) {
@@ -136,7 +136,7 @@ public class DetailWindow extends JFrame {
     /**
      * Create button to check if the current data is the most recent available.
      *
-     * @param station the {@link BomWeatherStation} object, provides handle on object.
+     * @param station the {@link WeatherStation} object, provides handle on object.
      * @return button which is then added to the correct JPanel
      */
     private JButton buildRefreshButton(WeatherStation station) {
