@@ -23,6 +23,8 @@ public class WeatherStationsJSONFile implements WeatherStationSource {
         Set<String> favourites = new HashSet<>();
         try (BufferedReader favouritesReader = Files.newBufferedReader(FAVOURITES_PATH)) {
             favouritesReader.lines().forEach(favourites::add);
+        } catch  (IOException ignored) {
+            // no favourites yet
         }
         
         try (BufferedReader stationsReader = getResource(getClass(), STATIONS_PATH)) {
