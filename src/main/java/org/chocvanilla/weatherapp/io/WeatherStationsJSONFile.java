@@ -14,6 +14,11 @@ import static org.chocvanilla.weatherapp.gui.MessageDialog.messageBox;
 public class WeatherStationsJSONFile implements WeatherStationLoader {
     private static final String WEATHER_STATIONS_FILE = "/.weather_stations.json";
     private static final Path FAVOURITES_FILE = Paths.get(".preferences", "favourites.dat");
+    private final Gson gson;
+    
+    public WeatherStationsJSONFile(Gson gson){
+        this.gson = gson;
+    }
     
     public List<BomWeatherStation> load() {
         try (BufferedReader stationsReader = getResource(getClass(), WEATHER_STATIONS_FILE);
@@ -21,7 +26,6 @@ public class WeatherStationsJSONFile implements WeatherStationLoader {
             Set<Integer> favourites = favouritesReader.lines()
                     .map(Integer::parseInt)
                     .collect(Collectors.toCollection(HashSet::new));
-            Gson gson = new Gson();
             List<BomWeatherStation> result = 
                     Arrays.asList(gson.fromJson(stationsReader, BomWeatherStation[].class));
             result.stream()

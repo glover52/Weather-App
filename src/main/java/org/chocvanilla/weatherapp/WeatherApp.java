@@ -1,8 +1,9 @@
 package org.chocvanilla.weatherapp;
 
+import com.google.gson.Gson;
 import org.chocvanilla.weatherapp.data.WeatherStations;
-import org.chocvanilla.weatherapp.io.WeatherStationsJSONFile;
 import org.chocvanilla.weatherapp.gui.MainWindow;
+import org.chocvanilla.weatherapp.io.WeatherStationsJSONFile;
 
 import javax.swing.*;
 
@@ -13,7 +14,10 @@ public class WeatherApp {
         } catch (Exception ignored) {
             // ignore
         }
-        MainWindow instance = new MainWindow(new WeatherStations(new WeatherStationsJSONFile()));
+        Gson gson = new Gson();
+        WeatherStationsJSONFile file = new WeatherStationsJSONFile(gson);
+        WeatherStations stations = new WeatherStations(file);
+        MainWindow instance = new MainWindow(stations);
         instance.run();
     }
 }

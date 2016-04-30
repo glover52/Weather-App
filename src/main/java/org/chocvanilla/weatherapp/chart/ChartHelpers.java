@@ -1,7 +1,8 @@
 package org.chocvanilla.weatherapp.chart;
 
+import org.chocvanilla.weatherapp.data.*;
 import org.chocvanilla.weatherapp.data.WeatherObservation;
-import org.chocvanilla.weatherapp.data.BomWeatherStation;
+import org.chocvanilla.weatherapp.data.WeatherObservations;
 import org.jfree.chart.*;
 import org.jfree.chart.plot.XYPlot;
 import org.jfree.chart.renderer.xy.XYLineAndShapeRenderer;
@@ -9,7 +10,6 @@ import org.jfree.data.time.*;
 import org.jfree.data.xy.XYDataset;
 
 import java.awt.*;
-import java.util.List;
 
 public class ChartHelpers {
 
@@ -19,12 +19,12 @@ public class ChartHelpers {
 
     /**
      * Create a data set suitable for graphing using data obtained by loading all
-     * {@link WeatherObservation}s for the specified {@link BomWeatherStation}.
+     * {@link BomWeatherObservation}s for the specified {@link BomWeatherStation}.
      *
      * @param observations the source of weather data for this data set
      * @return a data set containing the time series of weather observations
      */
-    public static XYDataset createDataSet(List<WeatherObservation> observations) {
+    public static XYDataset createDataSet(WeatherObservations observations) {
         TimeSeries series = new TimeSeries("Temperature");
         for (WeatherObservation obs : observations) {
             series.addOrUpdate(new Second(obs.getTimestamp()), obs.getAirTemperature());
@@ -42,7 +42,7 @@ public class ChartHelpers {
      * @param observations the observations to display
      * @return a displayable {@link ChartPanel}
      */
-    public static JFreeChart createChart(BomWeatherStation station, List<WeatherObservation> observations) {
+    public static JFreeChart createChart(WeatherStation station, WeatherObservations observations) {
         XYDataset dataset = createDataSet(observations);
 
         JFreeChart chart = ChartFactory.createTimeSeriesChart(station.getName() + ", " + station.getState(),
@@ -69,4 +69,21 @@ public class ChartHelpers {
         chart.setBackgroundPaint(null);
         return chart;
     }
+
+    /**
+     * Transforms a list of observations into a multidimensional array of objects
+     *
+     * @param observations A list of weather observations
+     * @return an array of observations
+     */
+    public static Object[][] observationHistory(WeatherObservations observations) {
+        Object[][] data = new Object[observations.size()][10];
+        int i = 0;
+        for (WeatherObservation o : observations){
+            data[i++] = o.fieldsAsTableRow();
+        }
+        return data;
+    }
+
+
 }

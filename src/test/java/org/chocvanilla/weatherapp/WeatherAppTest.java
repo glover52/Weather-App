@@ -1,26 +1,28 @@
 package org.chocvanilla.weatherapp;
 
-import org.chocvanilla.weatherapp.data.*;
-import org.chocvanilla.weatherapp.gui.MainWindow;
+import com.google.gson.Gson;
+import org.chocvanilla.weatherapp.data.BomWeatherStation;
+import org.chocvanilla.weatherapp.data.WeatherStations;
+import org.chocvanilla.weatherapp.data.WeatherObservations;
 import org.chocvanilla.weatherapp.io.WeatherStationsJSONFile;
 import org.jfree.chart.ChartPanel;
 import org.jfree.chart.JFreeChart;
-import org.junit.*;
+import org.junit.Before;
+import org.junit.Test;
 
 import javax.swing.*;
 import java.awt.*;
 import java.io.IOException;
-import java.util.List;
 import java.util.Optional;
 
 import static org.chocvanilla.weatherapp.chart.ChartHelpers.createChart;
 import static org.hamcrest.Matchers.*;
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertThat;
+import static org.junit.Assert.assertTrue;
 import static org.junit.Assume.assumeFalse;
 
 public class WeatherAppTest {
     private WeatherStations db;
-    private ObservationLoader loader;
 
     /**
      * Initialisation of some necessary functions to be run before any test. Populates a list of weather stations
@@ -28,8 +30,7 @@ public class WeatherAppTest {
      */
     @Before
     public void setUp() throws Exception {
-        db = new WeatherStations(new WeatherStationsJSONFile());
-        loader = new ObservationLoader();
+        db = new WeatherStations(new WeatherStationsJSONFile(new Gson()));
     }
 
     @Test
@@ -41,14 +42,14 @@ public class WeatherAppTest {
     public void weatherObservationIsLoaded() throws IOException {
         Optional<BomWeatherStation> station = db.firstMatch(x -> hasWmoNumber(x, 94828));
         assertTrue(station.isPresent());
-        List<WeatherObservation> observations = loader.load(station.get());
+        WeatherObservations observations = station.get().load();
         assertThat(observations, is(not(empty())));
     }
 
     @Test(expected = IllegalArgumentException.class)
     public void loadObservationFromNullStation() throws IOException {
         BomWeatherStation station = new BomWeatherStation();
-        List<WeatherObservation> observations = loader.load(station);
+        WeatherObservations observations = station.load();
     }
 
     @Test
@@ -77,18 +78,6 @@ public class WeatherAppTest {
         assertTrue(station.get().isFavourite());
     }
 
-    /*
-        Testing of GUI elements
-     */
-
-    @Test
-    @Ignore
-    public void makeWindow() {
-        assumeFalse(GraphicsEnvironment.getLocalGraphicsEnvironment().isHeadlessInstance());
-        MainWindow frame = new MainWindow(db);
-        frame.run();
-    }
-
     /**
      * Testing of chart interfaces.
      */
@@ -98,7 +87,7 @@ public class WeatherAppTest {
         Optional<BomWeatherStation> maybe = db.firstMatch(x -> hasWmoNumber(x, 94828));
         assertTrue(maybe.isPresent());
         BomWeatherStation station = maybe.get();
-        List<WeatherObservation> observations = loader.load(station);
+        WeatherObservations observations = station.load();
         JFreeChart testChart = createChart(station, observations);
         JFrame frame = setUpTestWindow();
         ChartPanel panel = new ChartPanel(testChart);

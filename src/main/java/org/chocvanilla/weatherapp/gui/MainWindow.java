@@ -6,8 +6,8 @@ import javax.swing.*;
 import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
 import java.awt.*;
-import java.util.List;
 import java.util.concurrent.FutureTask;
+
 
 public class MainWindow {
 
@@ -75,8 +75,7 @@ public class MainWindow {
         if (!e.getValueIsAdjusting()) {
             BomWeatherStation station = stationList.getSelectedValue();
             if (station != null) {
-                FutureTask<List<WeatherObservation>> task = ObservationLoader.loadAsync(station);
-                openChart(station, task);
+                openChart(station, station.loadAsync());
                 stationList.clearSelection();
             }
         }
@@ -107,11 +106,10 @@ public class MainWindow {
     }
 
     private void attachChart(JButton favouriteButton, BomWeatherStation station) {
-        FutureTask<List<WeatherObservation>> task = ObservationLoader.loadAsync(station);
-        favouriteButton.addActionListener(x -> openChart(station, task));
+        favouriteButton.addActionListener(x -> openChart(station, station.loadAsync()));
     }
 
-    private void openChart(BomWeatherStation station, FutureTask<List<WeatherObservation>> dataSupplier) {
+    private void openChart(BomWeatherStation station, FutureTask<WeatherObservations> dataSupplier) {
         detailWindow.display(station, dataSupplier);
     }
 

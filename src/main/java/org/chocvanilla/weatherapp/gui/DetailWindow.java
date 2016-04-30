@@ -8,10 +8,9 @@ import org.jfree.chart.JFreeChart;
 import javax.swing.*;
 import javax.swing.table.TableColumnModel;
 import java.awt.*;
-import java.util.List;
 import java.util.concurrent.*;
 
-import static org.chocvanilla.weatherapp.data.ObservationLoader.observationHistory;
+import static org.chocvanilla.weatherapp.chart.ChartHelpers.observationHistory;
 import static org.chocvanilla.weatherapp.gui.GuiHelpers.fieldToLabel;
 
 public class DetailWindow extends JFrame {
@@ -64,14 +63,13 @@ public class DetailWindow extends JFrame {
      * The method that deals with the Java Swing context. All containers are cleared and populated with fresh data.
      * @param station  The {@link BomWeatherStation} for which data is displayed
      * @param dataSupplier  An asynchronous way of retireiving the {@link WeatherObservation} data, via
-     *                     threading.
      */
-    public void display(BomWeatherStation station, FutureTask<List<WeatherObservation>> dataSupplier) {
+    public void display(WeatherStation station, FutureTask<WeatherObservations> dataSupplier) {
         try {
 
-            List<WeatherObservation> observations = dataSupplier.get();
+            WeatherObservations observations = dataSupplier.get();
 
-            long elapsed = ObservationLoader.msSinceLastRefresh(station);
+            long elapsed = station.msSinceLastRefresh();
             refreshStatusLabel.setText(String.format("Last refresh: %d seconds ago.",
                     TimeUnit.MILLISECONDS.toSeconds(elapsed)));
 
@@ -80,7 +78,7 @@ public class DetailWindow extends JFrame {
             timer.start();
 
             latestObsContainer.removeAll();
-            latestObsContainer.add(buildDetails(observations.get(0)));
+            latestObsContainer.add(buildDetails(observations.iterator().next()));
             // Add to favorites
             buttonContainer.removeAll();
             buttonContainer.add(buildFavouritesButton(station));
@@ -115,7 +113,7 @@ public class DetailWindow extends JFrame {
      * @param observations  The iterable list of weather observations.
      * @return the populated table, which is added to the appropriate JPanel.
      */
-    private JTable buildTable(List<WeatherObservation> observations) {
+    private JTable buildTable(WeatherObservations observations) {
         Object[][] data = observationHistory(observations);
         String[] columnNames = {"Time", "Air Temp", "Apparent Temp", "Gust (km/h)", "Gust (kt)",
                 "Wind Direction", "Wind Speed (km/h)", "Wind Speed (kt)",
@@ -139,9 +137,9 @@ public class DetailWindow extends JFrame {
      * @param station the {@link BomWeatherStation} object, provides handle on object.
      * @return button which is then added to the correct JPanel
      */
-    private JButton buildRefreshButton(BomWeatherStation station) {
+    private JButton buildRefreshButton(WeatherStation station) {
         JButton refresh = new JButton(REFRESH);
-        refresh.addActionListener(x -> display(station, ObservationLoader.loadAsync(station)));
+        refresh.addActionListener(x -> display(station, station.loadAsync()));
         return refresh;
     }
 
@@ -194,7 +192,7 @@ public class DetailWindow extends JFrame {
      * @param station handle on the station object being operated on
      * @return new JButton to add or remove from favourites.
      */
-    private JButton buildFavouritesButton(BomWeatherStation station) {
+    private JButton buildFavouritesButton(WeatherStation station) {
         JButton addRemoveFavourite = new JButton();
         if (station.isFavourite()) {
             addRemoveFavourite.setText(REMOVE_FROM_FAVOURITES);
@@ -212,7 +210,7 @@ public class DetailWindow extends JFrame {
      * @param station handle on the station object being operated on.
      * @param button handle on the favourite button
      */
-    private void toggleFavourites(BomWeatherStation station, JButton button) {
+    private void toggleFavourites(WeatherStation station, JButton button) {
         if (station.isFavourite()) {
             station.setFavourite(false);
             button.setText(ADD_TO_FAVOURITES);
