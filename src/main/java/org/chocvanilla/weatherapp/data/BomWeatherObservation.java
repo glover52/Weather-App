@@ -6,6 +6,8 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+// fields are auto-set by Gson
+@SuppressWarnings("unused")
 public class BomWeatherObservation implements WeatherObservation {
     @SerializedName("local_date_time_full")
     private String timestamp;

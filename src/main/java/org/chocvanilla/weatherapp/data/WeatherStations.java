@@ -1,5 +1,7 @@
 package org.chocvanilla.weatherapp.data;
 
+import org.chocvanilla.weatherapp.io.WeatherStationLoader;
+
 import java.util.*;
 import java.util.function.Predicate;
 import java.util.stream.Stream;

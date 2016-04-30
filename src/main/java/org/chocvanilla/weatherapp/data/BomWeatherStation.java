@@ -2,6 +2,7 @@ package org.chocvanilla.weatherapp.data;
 
 
 import com.google.gson.*;
+import org.chocvanilla.weatherapp.io.AsyncLoader;
 
 import java.io.*;
 import java.lang.reflect.Type;
