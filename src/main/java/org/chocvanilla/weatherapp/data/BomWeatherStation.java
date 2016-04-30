@@ -16,7 +16,7 @@ public class BomWeatherStation implements WeatherStation {
     public static final String target = ".observations";
     private static final String URL_FORMAT = "http://www.bom.gov.au/fwo/%s/%s.%d.json";
     private static final String PRODUCT_ID = "ID%c60801";
-    
+
     private final AsyncLoader loader = new AsyncLoader(this);
 
     private int stationID;
@@ -24,7 +24,7 @@ public class BomWeatherStation implements WeatherStation {
     private String name;
     private String state;
     private char code;
-    
+
     private boolean favourite;
 
     /**
@@ -102,8 +102,8 @@ public class BomWeatherStation implements WeatherStation {
             return new BomWeatherObservations(gson.fromJson(data, BomWeatherObservation[].class));
         }
     }
-    
-    public FutureTask<WeatherObservations> loadAsync(){
+
+    public FutureTask<WeatherObservations> loadAsync() {
         return loader.loadAsync();
     }
 

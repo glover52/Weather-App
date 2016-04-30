@@ -1,8 +1,6 @@
 package org.chocvanilla.weatherapp.chart;
 
 import org.chocvanilla.weatherapp.data.*;
-import org.chocvanilla.weatherapp.data.WeatherObservation;
-import org.chocvanilla.weatherapp.data.WeatherObservations;
 import org.jfree.chart.*;
 import org.jfree.chart.plot.XYPlot;
 import org.jfree.chart.renderer.xy.XYLineAndShapeRenderer;
@@ -79,7 +77,7 @@ public class ChartHelpers {
     public static Object[][] observationHistory(WeatherObservations observations) {
         Object[][] data = new Object[observations.size()][10];
         int i = 0;
-        for (WeatherObservation o : observations){
+        for (WeatherObservation o : observations) {
             data[i++] = o.fieldsAsTableRow();
         }
         return data;

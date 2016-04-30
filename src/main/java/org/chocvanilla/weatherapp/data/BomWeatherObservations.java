@@ -1,8 +1,5 @@
 package org.chocvanilla.weatherapp.data;
 
-import org.chocvanilla.weatherapp.data.WeatherObservation;
-import org.chocvanilla.weatherapp.data.WeatherObservations;
-
 import java.util.*;
 
 public class BomWeatherObservations extends AbstractCollection<WeatherObservation> implements WeatherObservations {

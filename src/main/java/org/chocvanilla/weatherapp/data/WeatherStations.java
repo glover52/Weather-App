@@ -7,13 +7,21 @@ import java.util.stream.Stream;
 public class WeatherStations {
     private final List<BomWeatherStation> stations = new ArrayList<>();
     private final WeatherStationLoader stationLoader;
-    
-    public WeatherStations(WeatherStationLoader loader){
+
+    public WeatherStations(WeatherStationLoader loader) {
         stationLoader = loader;
         stations.addAll(loader.load());
         stations.sort(WeatherStations::compare);
     }
-    
+
+    private static int compare(BomWeatherStation one, BomWeatherStation two) {
+        int result = one.getState().compareTo(two.getState());
+        if (result != 0) {
+            return result;
+        }
+        return one.getName().compareTo(two.getName());
+    }
+
     public void save() {
         stationLoader.save(this);
     }
@@ -30,14 +38,6 @@ public class WeatherStations {
 
     public Stream<BomWeatherStation> getFavourites() {
         return stations.stream().filter(BomWeatherStation::isFavourite);
-    }
-
-    private static int compare(BomWeatherStation one, BomWeatherStation two) {
-        int result = one.getState().compareTo(two.getState());
-        if (result != 0) {
-            return result;
-        }
-        return one.getName().compareTo(two.getName());
     }
 }
 

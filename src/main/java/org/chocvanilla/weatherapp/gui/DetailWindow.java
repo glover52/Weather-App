@@ -28,11 +28,11 @@ public class DetailWindow extends JFrame {
     private JLabel refreshStatusLabel = new JLabel();
 
     /**
-     *  Create a new window, in which a chart with the most recent temperatures is displayed, both as a chart, and in a
-     *  table. View is modelled in tabs.
+     * Create a new window, in which a chart with the most recent temperatures is displayed, both as a chart, and in a
+     * table. View is modelled in tabs.
      *
-     * @param locationManager  saves previous window location, opens window to last location
-     * @param listener  an interface for updating the favourites list instantly both on screen, and in program
+     * @param locationManager saves previous window location, opens window to last location
+     * @param listener        an interface for updating the favourites list instantly both on screen, and in program
      */
     public DetailWindow(WindowLocationManager locationManager, FavouritesUpdatedListener listener) {
         favouritesUpdatedListener = listener;
@@ -61,8 +61,9 @@ public class DetailWindow extends JFrame {
 
     /**
      * The method that deals with the Java Swing context. All containers are cleared and populated with fresh data.
-     * @param station  The {@link BomWeatherStation} for which data is displayed
-     * @param dataSupplier  An asynchronous way of retireiving the {@link WeatherObservation} data, via
+     *
+     * @param station      The {@link BomWeatherStation} for which data is displayed
+     * @param dataSupplier An asynchronous way of retireiving the {@link WeatherObservation} data, via
      */
     public void display(WeatherStation station, FutureTask<WeatherObservations> dataSupplier) {
         try {
@@ -110,7 +111,8 @@ public class DetailWindow extends JFrame {
 
     /**
      * Takes the {@link WeatherObservation} object, and creates and populates a JTable with the most recent data.
-     * @param observations  The iterable list of weather observations.
+     *
+     * @param observations The iterable list of weather observations.
      * @return the populated table, which is added to the appropriate JPanel.
      */
     private JTable buildTable(WeatherObservations observations) {
@@ -208,7 +210,7 @@ public class DetailWindow extends JFrame {
      * Makes us of the {@link FavouritesUpdatedListener} to dynamically update the favourites list in the Main Window
      *
      * @param station handle on the station object being operated on.
-     * @param button handle on the favourite button
+     * @param button  handle on the favourite button
      */
     private void toggleFavourites(WeatherStation station, JButton button) {
         if (station.isFavourite()) {

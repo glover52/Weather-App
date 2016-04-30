@@ -11,15 +11,14 @@ import java.util.concurrent.FutureTask;
 
 public class MainWindow {
 
+    private static final String NO_FAVOURITES =
+            "You have no favorites! Open a station and click the favorites button to see it here.";
     private final JFrame frame = new JFrame("Weather App");
     private final WeatherStations stations;
     private final DetailWindow detailWindow;
-
     private final JTextField searchBox = new JTextField();
     private final JList<BomWeatherStation> stationList = new JList<>();
     private JPanel favouritesPanel;
-    private static final String NO_FAVOURITES =
-            "You have no favorites! Open a station and click the favorites button to see it here.";
 
     public MainWindow(WeatherStations weatherStations) {
         stations = weatherStations;
