@@ -43,18 +43,18 @@ public class BomWeatherObservation implements WeatherObservation {
     private float windSpdKt;
 
     public Object[] fieldsAsTableRow() {
-        Object[] data = new Object[10];
-        data[0] = getTimestamp();
-        data[1] = getAirTemperature();
-        data[2] = getApparentTemperature();
-        data[3] = getGustKm();
-        data[4] = getGustKt();
-        data[5] = getWindDir();
-        data[6] = getWindSpdKm();
-        data[7] = getWindSpdKt();
-        data[8] = getDewPt();
-        data[9] = getRain();
-        return data;
+        return new Object[]{
+                getTimestamp(),
+                getAirTemperature(),
+                getApparentTemperature(),
+                getGustKm(),
+                getGustKt(),
+                getWindDir(),
+                getWindSpdKm(),
+                getWindSpdKt(),
+                getDewPt(),
+                getRain(),
+        };
     }
 
     public Date getTimestamp() {
@@ -103,15 +103,6 @@ public class BomWeatherObservation implements WeatherObservation {
 
     public Float getAirTemperature() {
         return airTemperature;
-    }
-
-    @Override
-    public String toString() {
-        return String.format("WeatherObservation{timestamp='%s', name='%s', " +
-                        "apparentTemperature=%s, gustKm=%s, gustKt=%s, airTemperature=%s, " +
-                        "dewPt=%s, rain=%s, windDir='%s', windSpdKm=%s, windSpdKt=%s}",
-                timestamp, name, apparentTemperature, gustKm, gustKt,
-                airTemperature, dewPt, rain, windDir, windSpdKm, windSpdKt);
     }
 }
 

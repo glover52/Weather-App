@@ -1,9 +1,7 @@
 package org.chocvanilla.weatherapp;
 
 import com.google.gson.Gson;
-import org.chocvanilla.weatherapp.data.BomWeatherStation;
-import org.chocvanilla.weatherapp.data.WeatherStations;
-import org.chocvanilla.weatherapp.data.WeatherObservations;
+import org.chocvanilla.weatherapp.data.*;
 import org.chocvanilla.weatherapp.io.WeatherStationsJSONFile;
 import org.jfree.chart.ChartPanel;
 import org.jfree.chart.JFreeChart;
@@ -55,15 +53,15 @@ public class WeatherAppTest {
     @Test
     public void favouritesAreSaved() throws IOException {
         int[] wmoNumbers = {94828, 94302, 95607, 94620, 95625, 94641,};
-        
+
         for (int wmo : wmoNumbers) {
             db.firstMatch(x -> hasWmoNumber(x, wmo))
-              .ifPresent(x -> x.setFavourite(true));
+                    .ifPresent(x -> x.setFavourite(true));
         }
-        
+
         db.save(); // fails on exception
     }
-    
+
     private boolean hasWmoNumber(BomWeatherStation station, int wmo) {
         return station.getWmoNumber() == wmo;
     }
@@ -71,8 +69,7 @@ public class WeatherAppTest {
     @Test
     public void favouritesAreLoaded() throws IOException {
         favouritesAreSaved();
-
-
+        
         Optional<BomWeatherStation> station = db.firstMatch(x -> x.getWmoNumber() == 94828);
         assertTrue(station.isPresent());
         assertTrue(station.get().isFavourite());
