@@ -18,14 +18,14 @@ public class DetailWindow extends JFrame {
     private static final String ADD_TO_FAVOURITES = "☆ Favourite";
     private static final String REMOVE_FROM_FAVOURITES = "★ Unfavourite";
     private final FavouritesUpdatedListener favouritesUpdatedListener;
-    private JFrame detailFrame = new JFrame();
-    private JPanel latestObsContainer = new JPanel();
-    private JPanel chartContainer = new JPanel();
-    private JPanel tableContainer = new JPanel();
-    private JPanel buttonContainer = new JPanel();
-    private JTabbedPane historyContainer = new JTabbedPane();
+    private final JFrame detailFrame = new JFrame();
+    private final JPanel latestObsContainer = new JPanel();
+    private final JPanel chartContainer = new JPanel();
+    private final JPanel tableContainer = new JPanel();
+    private final JPanel buttonContainer = new JPanel();
+    private final JTabbedPane historyContainer = new JTabbedPane();
     private ChartPanel chartPanel = null;
-    private JLabel refreshStatusLabel = new JLabel();
+    private final JLabel refreshStatusLabel = new JLabel();
 
     /**
      * Create a new window, in which a chart with the most recent temperatures is displayed, both as a chart, and in a

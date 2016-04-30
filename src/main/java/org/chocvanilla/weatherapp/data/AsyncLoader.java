@@ -5,7 +5,7 @@ import java.util.concurrent.*;
 public class AsyncLoader {
     private static final ExecutorService executor = Executors.newCachedThreadPool();
 
-    private WeatherStation weatherStation;
+    private final WeatherStation weatherStation;
 
     public AsyncLoader(WeatherStation station) {
         weatherStation = station;
