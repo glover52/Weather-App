@@ -166,8 +166,6 @@ public class DetailWindow extends JFrame {
      * @param chartPanel the chart equivalent of a JPanel, for use with JFrame.
      */
     private void setChartPanelAttributes(ChartPanel chartPanel) {
-        chartPanel.setDomainZoomable(false);
-        chartPanel.setRangeZoomable(false);
         chartPanel.setPopupMenu(null);
     }
 
