@@ -30,14 +30,58 @@ public class MainWindow {
         frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         frame.addWindowListener(new WindowLocationManager(gson, new Rectangle(800, 600)));
         frame.addWindowListener(new FavouritesManager(weatherStations));
+
+        buildContainerLayout();
     }
 
     public void run() {
-        Container container = frame.getContentPane();
-        container.add(buildFavouritesPanel(), BorderLayout.CENTER);
-        container.add(buildSearchPanel(), BorderLayout.WEST);
         frame.pack();
         frame.setVisible(true);
+    }
+
+    private void buildContainerLayout() {
+        Container container = frame.getContentPane();
+        container.setLayout(new GridBagLayout());
+        GridBagConstraints constraints = new GridBagConstraints();
+        constraints.fill = GridBagConstraints.BOTH;
+        constraints.gridx = 0;
+        constraints.weighty = 1;
+
+        container.add(buildFavouritesPanel(), constraints);
+        constraints.gridx = 1;
+
+        container.add(buildSearchPanel(), constraints);
+
+        constraints.weightx = 1;
+        constraints.gridx = 2;
+        container.add(buildTownPanel(), constraints);
+    }
+
+    private JPanel buildTownPanel() {
+        JPanel townPanel = new JPanel(new BorderLayout());
+
+        JPanel buttonPanel = new JPanel(new FlowLayout());
+        JButton showForecast = new JButton("Forecast");
+        JButton showObservation = new JButton("Observations");
+
+        showForecast.addActionListener(x -> openForecast());
+        showObservation.addActionListener(x -> openObservations());
+
+        buttonPanel.add(showForecast);
+        buttonPanel.add(showObservation);
+
+        townPanel.add(new JLabel("No Town Selected"), BorderLayout.NORTH);
+        townPanel.add(buttonPanel, BorderLayout.SOUTH);
+
+        return townPanel;
+    }
+
+    private void openObservations() {
+        //open past observations using town object.
+    }
+
+    private void openForecast() {
+        //open forecast using town object
     }
 
     private JPanel buildSearchPanel() {
@@ -81,7 +125,8 @@ public class MainWindow {
     }
 
     private JPanel buildFavouritesPanel() {
-        favouritesPanel = new JPanel(new FlowLayout(FlowLayout.LEFT));
+        favouritesPanel = new JPanel();
+        favouritesPanel.setLayout(new GridBagLayout());
         updateFavouritesButtons();
         favouritesPanel.setBorder(BorderFactory.createTitledBorder("Favourites"));
         return favouritesPanel;
@@ -89,12 +134,18 @@ public class MainWindow {
 
     private void updateFavouritesButtons() {
         favouritesPanel.removeAll();
+        GridBagConstraints constraints = new GridBagConstraints();
+        constraints.fill = GridBagConstraints.HORIZONTAL;
+        constraints.anchor = GridBagConstraints.NORTH;
+        constraints.weightx = 1;
+        constraints.weighty = 1;
+        constraints.gridx = 0;
         Iterable<WeatherStation> favourites = () -> stations.getFavourites().iterator();
         boolean hasFavourites = false;
         for (WeatherStation station : favourites) {
             hasFavourites = true;
             JButton favouriteButton = new JButton(station.toString());
-            favouritesPanel.add(favouriteButton);
+            favouritesPanel.add(favouriteButton, constraints);
             attachChart(favouriteButton, station);
         }
         if (!hasFavourites) {
