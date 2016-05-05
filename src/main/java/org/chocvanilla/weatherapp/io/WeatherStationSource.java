@@ -1,7 +1,7 @@
 package org.chocvanilla.weatherapp.io;
 
-import org.chocvanilla.weatherapp.data.WeatherStation;
-import org.chocvanilla.weatherapp.data.WeatherStations;
+import org.chocvanilla.weatherapp.data.stations.WeatherStation;
+import org.chocvanilla.weatherapp.data.stations.WeatherStations;
 
 import java.io.IOException;
 import java.util.List;

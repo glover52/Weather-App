@@ -1,7 +1,8 @@
 package org.chocvanilla.weatherapp.gui;
 
 import org.chocvanilla.weatherapp.chart.ChartHelpers;
-import org.chocvanilla.weatherapp.data.*;
+import org.chocvanilla.weatherapp.data.observations.*;
+import org.chocvanilla.weatherapp.data.stations.WeatherStation;
 import org.jfree.chart.ChartPanel;
 import org.jfree.chart.JFreeChart;
 

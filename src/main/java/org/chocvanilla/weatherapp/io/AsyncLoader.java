@@ -1,7 +1,7 @@
 package org.chocvanilla.weatherapp.io;
 
-import org.chocvanilla.weatherapp.data.WeatherObservations;
-import org.chocvanilla.weatherapp.data.WeatherStation;
+import org.chocvanilla.weatherapp.data.observations.WeatherObservations;
+import org.chocvanilla.weatherapp.data.stations.WeatherStation;
 
 import java.util.concurrent.*;
 

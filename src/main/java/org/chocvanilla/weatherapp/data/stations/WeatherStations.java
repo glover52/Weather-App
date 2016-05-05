@@ -1,4 +1,4 @@
-package org.chocvanilla.weatherapp.data;
+package org.chocvanilla.weatherapp.data.stations;
 
 import org.chocvanilla.weatherapp.io.WeatherStationSource;
 

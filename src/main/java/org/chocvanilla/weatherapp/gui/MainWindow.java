@@ -1,7 +1,9 @@
 package org.chocvanilla.weatherapp.gui;
 
 import com.google.gson.Gson;
-import org.chocvanilla.weatherapp.data.*;
+import org.chocvanilla.weatherapp.data.observations.WeatherObservations;
+import org.chocvanilla.weatherapp.data.stations.WeatherStation;
+import org.chocvanilla.weatherapp.data.stations.WeatherStations;
 
 import javax.swing.*;
 import javax.swing.event.ListSelectionEvent;

@@ -1,6 +1,8 @@
 package org.chocvanilla.weatherapp.chart;
 
-import org.chocvanilla.weatherapp.data.*;
+import org.chocvanilla.weatherapp.data.observations.WeatherObservation;
+import org.chocvanilla.weatherapp.data.observations.WeatherObservations;
+import org.chocvanilla.weatherapp.data.stations.WeatherStation;
 import org.jfree.chart.*;
 import org.jfree.chart.plot.XYPlot;
 import org.jfree.chart.renderer.xy.XYLineAndShapeRenderer;

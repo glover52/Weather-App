@@ -1,7 +1,7 @@
 package org.chocvanilla.weatherapp.io;
 
 import com.google.gson.Gson;
-import org.chocvanilla.weatherapp.data.*;
+import org.chocvanilla.weatherapp.data.stations.*;
 import org.chocvanilla.weatherapp.gui.MessageBox;
 
 import java.io.*;

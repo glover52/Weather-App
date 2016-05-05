@@ -1,4 +1,4 @@
-package org.chocvanilla.weatherapp.data;
+package org.chocvanilla.weatherapp.data.observations;
 
 import com.google.gson.annotations.SerializedName;
 

@@ -1,6 +1,6 @@
 package org.chocvanilla.weatherapp.gui;
 
-import org.chocvanilla.weatherapp.data.WeatherStations;
+import org.chocvanilla.weatherapp.data.stations.WeatherStations;
 
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;

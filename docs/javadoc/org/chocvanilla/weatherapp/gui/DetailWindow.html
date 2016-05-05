@@ -330,20 +330,20 @@ extends javax.swing.JFrame</pre>
 </tr>
 <tr id="i0" class="altColor">
 <td class="colFirst"><code>private javax.swing.JPanel</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../org/chocvanilla/weatherapp/gui/DetailWindow.html#buildDetails-org.chocvanilla.weatherapp.data.WeatherObservation-">buildDetails</a></span>(<a href="../../../../org/chocvanilla/weatherapp/data/WeatherObservation.html" title="class in org.chocvanilla.weatherapp.data">WeatherObservation</a>&nbsp;observation)</code>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../org/chocvanilla/weatherapp/gui/DetailWindow.html#buildDetails-org.chocvanilla.weatherapp.data.observations.WeatherObservation-">buildDetails</a></span>(<a href="../../../../org/chocvanilla/weatherapp/data/WeatherObservation.html" title="class in org.chocvanilla.weatherapp.data">WeatherObservation</a>&nbsp;observation)</code>
 <div class="block">Method of taking the most recent observations, and adding them to the returned JPanel</div>
 </td>
 </tr>
 <tr id="i1" class="rowColor">
 <td class="colFirst"><code>private javax.swing.JButton</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../org/chocvanilla/weatherapp/gui/DetailWindow.html#buildFavouritesButton-org.chocvanilla.weatherapp.data.WeatherStation-org.chocvanilla.weatherapp.data.Favourites-">buildFavouritesButton</a></span>(<a href="../../../../org/chocvanilla/weatherapp/data/WeatherStation.html" title="class in org.chocvanilla.weatherapp.data">WeatherStation</a>&nbsp;station,
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../org/chocvanilla/weatherapp/gui/DetailWindow.html#buildFavouritesButton-org.chocvanilla.weatherapp.data.stations.WeatherStation-org.chocvanilla.weatherapp.data.Favourites-">buildFavouritesButton</a></span>(<a href="../../../../org/chocvanilla/weatherapp/data/WeatherStation.html" title="class in org.chocvanilla.weatherapp.data">WeatherStation</a>&nbsp;station,
                      <a href="../../../../org/chocvanilla/weatherapp/data/Favourites.html" title="class in org.chocvanilla.weatherapp.data">Favourites</a>&nbsp;favourites)</code>
 <div class="block">Method to create the button to add or remove from the favourites list.</div>
 </td>
 </tr>
 <tr id="i2" class="altColor">
 <td class="colFirst"><code>private javax.swing.JButton</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../org/chocvanilla/weatherapp/gui/DetailWindow.html#buildRefreshButton-org.chocvanilla.weatherapp.data.WeatherStation-">buildRefreshButton</a></span>(<a href="../../../../org/chocvanilla/weatherapp/data/WeatherStation.html" title="class in org.chocvanilla.weatherapp.data">WeatherStation</a>&nbsp;station)</code>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../org/chocvanilla/weatherapp/gui/DetailWindow.html#buildRefreshButton-org.chocvanilla.weatherapp.data.stations.WeatherStation-">buildRefreshButton</a></span>(<a href="../../../../org/chocvanilla/weatherapp/data/WeatherStation.html" title="class in org.chocvanilla.weatherapp.data">WeatherStation</a>&nbsp;station)</code>
 <div class="block">Create button to check if the current data is the most recent available.</div>
 </td>
 </tr>
@@ -355,7 +355,7 @@ extends javax.swing.JFrame</pre>
 </tr>
 <tr id="i4" class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../org/chocvanilla/weatherapp/gui/DetailWindow.html#display-org.chocvanilla.weatherapp.data.WeatherStation-java.util.concurrent.FutureTask-">display</a></span>(<a href="../../../../org/chocvanilla/weatherapp/data/WeatherStation.html" title="class in org.chocvanilla.weatherapp.data">WeatherStation</a>&nbsp;station,
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../org/chocvanilla/weatherapp/gui/DetailWindow.html#display-org.chocvanilla.weatherapp.data.stations.WeatherStation-java.util.concurrent.FutureTask-">display</a></span>(<a href="../../../../org/chocvanilla/weatherapp/data/WeatherStation.html" title="class in org.chocvanilla.weatherapp.data">WeatherStation</a>&nbsp;station,
        java.util.concurrent.FutureTask&lt;java.util.List&lt;<a href="../../../../org/chocvanilla/weatherapp/data/WeatherObservation.html" title="class in org.chocvanilla.weatherapp.data">WeatherObservation</a>&gt;&gt;&nbsp;dataSupplier)</code>
 <div class="block">The method that deals with the Java Swing context.</div>
 </td>
@@ -368,7 +368,7 @@ extends javax.swing.JFrame</pre>
 </tr>
 <tr id="i6" class="altColor">
 <td class="colFirst"><code>private void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../org/chocvanilla/weatherapp/gui/DetailWindow.html#toggleFavourites-org.chocvanilla.weatherapp.data.WeatherStation-javax.swing.JButton-org.chocvanilla.weatherapp.data.Favourites-">toggleFavourites</a></span>(<a href="../../../../org/chocvanilla/weatherapp/data/WeatherStation.html" title="class in org.chocvanilla.weatherapp.data">WeatherStation</a>&nbsp;station,
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../org/chocvanilla/weatherapp/gui/DetailWindow.html#toggleFavourites-org.chocvanilla.weatherapp.data.stations.WeatherStation-javax.swing.JButton-org.chocvanilla.weatherapp.data.Favourites-">toggleFavourites</a></span>(<a href="../../../../org/chocvanilla/weatherapp/data/WeatherStation.html" title="class in org.chocvanilla.weatherapp.data">WeatherStation</a>&nbsp;station,
                 javax.swing.JButton&nbsp;button,
                 <a href="../../../../org/chocvanilla/weatherapp/data/Favourites.html" title="class in org.chocvanilla.weatherapp.data">Favourites</a>&nbsp;favourites)</code>
 <div class="block">Method for toggling the favourites button between either Adding to Favourites, or Removing from Favourites.</div>
@@ -608,7 +608,7 @@ extends javax.swing.JFrame</pre>
 <!--   -->
 </a>
 <h3>Method Detail</h3>
-<a name="display-org.chocvanilla.weatherapp.data.WeatherStation-java.util.concurrent.FutureTask-">
+<a name="display-org.chocvanilla.weatherapp.data.stations.WeatherStation-java.util.concurrent.FutureTask-">
 <!--   -->
 </a>
 <ul class="blockList">
@@ -641,7 +641,7 @@ extends javax.swing.JFrame</pre>
 </dl>
 </li>
 </ul>
-<a name="buildRefreshButton-org.chocvanilla.weatherapp.data.WeatherStation-">
+<a name="buildRefreshButton-org.chocvanilla.weatherapp.data.stations.WeatherStation-">
 <!--   -->
 </a>
 <ul class="blockList">
@@ -685,7 +685,7 @@ extends javax.swing.JFrame</pre>
 </dl>
 </li>
 </ul>
-<a name="buildDetails-org.chocvanilla.weatherapp.data.WeatherObservation-">
+<a name="buildDetails-org.chocvanilla.weatherapp.data.observations.WeatherObservation-">
 <!--   -->
 </a>
 <ul class="blockList">
@@ -701,7 +701,7 @@ extends javax.swing.JFrame</pre>
 </dl>
 </li>
 </ul>
-<a name="buildFavouritesButton-org.chocvanilla.weatherapp.data.WeatherStation-org.chocvanilla.weatherapp.data.Favourites-">
+<a name="buildFavouritesButton-org.chocvanilla.weatherapp.data.stations.WeatherStation-org.chocvanilla.weatherapp.data.Favourites-">
 <!--   -->
 </a>
 <ul class="blockList">
@@ -720,7 +720,7 @@ extends javax.swing.JFrame</pre>
 </dl>
 </li>
 </ul>
-<a name="toggleFavourites-org.chocvanilla.weatherapp.data.WeatherStation-javax.swing.JButton-org.chocvanilla.weatherapp.data.Favourites-">
+<a name="toggleFavourites-org.chocvanilla.weatherapp.data.stations.WeatherStation-javax.swing.JButton-org.chocvanilla.weatherapp.data.Favourites-">
 <!--   -->
 </a>
 <ul class="blockListLast">

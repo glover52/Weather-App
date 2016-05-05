@@ -1,7 +1,10 @@
-package org.chocvanilla.weatherapp.data;
+package org.chocvanilla.weatherapp.data.stations;
 
 
 import com.google.gson.*;
+import org.chocvanilla.weatherapp.data.DataHelpers;
+import org.chocvanilla.weatherapp.data.observations.BomWeatherObservation;
+import org.chocvanilla.weatherapp.data.observations.WeatherObservations;
 import org.chocvanilla.weatherapp.io.AsyncLoader;
 
 import java.io.*;

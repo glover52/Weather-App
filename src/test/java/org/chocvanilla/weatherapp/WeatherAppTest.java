@@ -1,7 +1,8 @@
 package org.chocvanilla.weatherapp;
 
 import com.google.gson.Gson;
-import org.chocvanilla.weatherapp.data.*;
+import org.chocvanilla.weatherapp.data.observations.WeatherObservations;
+import org.chocvanilla.weatherapp.data.stations.*;
 import org.chocvanilla.weatherapp.io.WeatherStationsJSONFile;
 import org.jfree.chart.ChartPanel;
 import org.jfree.chart.JFreeChart;
