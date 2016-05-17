@@ -9,6 +9,7 @@ import java.beans.PropertyChangeEvent;
 import java.util.Objects;
 
 public class GuiHelpers {
+       
     /**
      * Installs a listener to receive notification when the text of any
      * {@code JTextComponent} is changed. Internally, it installs a
@@ -78,11 +79,4 @@ public class GuiHelpers {
         return entry;
     }
 
-    public static void setLookAndFeel() {
-        try {
-            UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
-        } catch (Exception ignored) {
-            // ignore
-        }
-    }
 }

@@ -36,7 +36,7 @@ public class MainWindow {
         buildContainerLayout();
     }
 
-    public void run() {
+    public void show() {
         frame.pack();
         frame.setVisible(true);
     }

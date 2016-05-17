@@ -25,7 +25,7 @@ public class WeatherAppTest {
     private WeatherStations db;
 
     /**
-     * Initialisation of some necessary functions to be run before any test. Populates a list of weather stations
+     * Initialisation of some necessary functions to be show before any test. Populates a list of weather stations
      * from the .weather_stations.json file, and loads any favourites stored to file.
      */
     @Before
