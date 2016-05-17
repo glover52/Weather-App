@@ -3,7 +3,8 @@ package org.chocvanilla.weatherapp.data.stations;
 
 import com.google.gson.*;
 import org.chocvanilla.weatherapp.data.DataHelpers;
-import org.chocvanilla.weatherapp.data.observations.*;
+import org.chocvanilla.weatherapp.data.observations.BomWeatherObservation;
+import org.chocvanilla.weatherapp.data.observations.WeatherObservations;
 import org.chocvanilla.weatherapp.io.AsyncLoader;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -106,9 +107,8 @@ public class BomWeatherStation implements WeatherStation {
      * Download all available weather observations from this station.
      *
      * @return a list of observations
-     * @throws IOException if an error occurred while attempting the download
      */
-    public WeatherObservations load() throws IOException {
+    public WeatherObservations load()  {
         if (msSinceLastRefresh() > CACHE_EXPIRY_MILLIS) {
             log.trace("Attempting to download weather observations for '{}'", this);
             downloadFile();
@@ -122,6 +122,9 @@ public class BomWeatherStation implements WeatherStation {
             WeatherObservations result = new WeatherObservations(gson.fromJson(data, BomWeatherObservation[].class));
             log.debug("Parsed {} observations from '{}'", result.size(), this);
             return result;
+        } catch (IOException e) {
+            log.error("Unable to parse observations for '{}'", this);
+            return new WeatherObservations();
         }
     }
     
@@ -129,11 +132,13 @@ public class BomWeatherStation implements WeatherStation {
         return loader.loadAsync();
     }
 
-    private void downloadFile() throws IOException {
+    private void downloadFile() {
         try (InputStream in = new URL(getUrl()).openStream()) {
             Paths.get(target).toFile().mkdirs();
             Path path = getPath();
             Files.copy(in, path, StandardCopyOption.REPLACE_EXISTING);
+        } catch (IOException e) {
+            log.error("Unable to download JSON from '{}' to '{}'", getUrl(), getPath());
         }
     }
 

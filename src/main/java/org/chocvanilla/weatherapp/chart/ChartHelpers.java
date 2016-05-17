@@ -44,7 +44,7 @@ public class ChartHelpers {
     public static JFreeChart createChart(WeatherStation station, WeatherObservations observations) {
         XYDataset dataset = createDataSet(observations);
 
-        JFreeChart chart = ChartFactory.createTimeSeriesChart(station.getName() + ", " + station.getState(),
+        JFreeChart chart = ChartFactory.createTimeSeriesChart(station.toString(),
                 "Date", "Degrees Celsius", dataset);
 
         XYLineAndShapeRenderer renderer = new XYLineAndShapeRenderer();
