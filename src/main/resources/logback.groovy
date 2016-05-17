@@ -3,7 +3,6 @@ import ch.qos.logback.core.ConsoleAppender
 import ch.qos.logback.core.FileAppender
 
 import static ch.qos.logback.classic.Level.DEBUG
-import static ch.qos.logback.classic.Level.INFO
 
 CONSOLE = "CONSOLE"
 FILE = "FILE"
@@ -22,5 +21,4 @@ appender(FILE, FileAppender) {
     }
 }
 
-logger("com.javacodegeeks.examples.logbackexample.beans", INFO)
 root(DEBUG, [CONSOLE, FILE])
