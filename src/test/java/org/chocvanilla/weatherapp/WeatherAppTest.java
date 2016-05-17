@@ -3,6 +3,7 @@ package org.chocvanilla.weatherapp;
 import com.google.gson.Gson;
 import org.chocvanilla.weatherapp.data.observations.WeatherObservations;
 import org.chocvanilla.weatherapp.data.stations.*;
+import org.chocvanilla.weatherapp.io.WeatherStationSource;
 import org.chocvanilla.weatherapp.io.WeatherStationsJSONFile;
 import org.jfree.chart.ChartPanel;
 import org.jfree.chart.JFreeChart;
@@ -106,5 +107,11 @@ public class WeatherAppTest {
 
         return frame;
     }
-
+    
+    @Test
+    public void weatherStationsJSONFileIsPresent() throws IOException {
+        WeatherStationSource source = new WeatherStationsJSONFile(new Gson());
+        WeatherStations stations = WeatherStations.loadFrom(source);
+        assertThat(stations, is(not(empty())));
+    }
 }
