@@ -25,7 +25,9 @@ public class WeatherApp {
             MainWindow window = new MainWindow(gson, stations);
             window.show();
         } catch (IOException e) {
-            MessageBox.showNow("ERROR: Weather stations file could not be loaded.", "ERROR!");
+            String message = "Weather stations file could not be loaded.";
+            MessageBox.showNow("ERROR: " + message, "ERROR!");
+            log.error(message, e);
             System.exit(-1);
         }        
     }
