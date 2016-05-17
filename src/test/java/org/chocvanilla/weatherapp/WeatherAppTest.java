@@ -1,6 +1,7 @@
 package org.chocvanilla.weatherapp;
 
 import com.google.gson.Gson;
+import org.chocvanilla.weatherapp.data.observations.Field;
 import org.chocvanilla.weatherapp.data.observations.WeatherObservations;
 import org.chocvanilla.weatherapp.data.stations.*;
 import org.chocvanilla.weatherapp.io.WeatherStationSource;
@@ -13,6 +14,8 @@ import org.junit.Test;
 import javax.swing.*;
 import java.awt.*;
 import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.GregorianCalendar;
 import java.util.Optional;
 import java.util.function.Predicate;
 
@@ -113,5 +116,18 @@ public class WeatherAppTest {
         WeatherStationSource source = new WeatherStationsJSONFile(new Gson());
         WeatherStations stations = WeatherStations.loadFrom(source);
         assertThat(stations, is(not(empty())));
+    }
+    
+    @Test
+    public void fieldShouldContainFormattedInformation() {
+        Field f = new Field("Test", "%.2f mm", 42.4242);
+        assertThat(f.toString(), containsString("42.42 mm"));
+    }
+    
+    @Test
+    public void fieldShouldContainDateInformation() {
+        SimpleDateFormat format = new SimpleDateFormat("dd");
+        Field f2 = new Field("Test2", format::format, new GregorianCalendar(2016, 1, 20).getTime());
+        assertThat(f2.toString(), containsString("20"));
     }
 }

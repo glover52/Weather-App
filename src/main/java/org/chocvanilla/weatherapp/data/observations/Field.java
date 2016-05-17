@@ -22,4 +22,9 @@ public class Field {
     public String getFormattedValue() {
         return value;
     }
+
+    @Override
+    public String toString() {
+        return String.format("%s: %s", getLabel(), getFormattedValue());
+    }
 }
