@@ -1,5 +1,6 @@
 .classpath
 *.dat
+*.log
 
 .project
 *.iml
