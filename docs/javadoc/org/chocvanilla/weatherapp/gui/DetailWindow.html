@@ -226,7 +226,7 @@ extends javax.swing.JFrame</pre>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>private <a href="../../../../org/chocvanilla/weatherapp/data/Favourites.html" title="class in org.chocvanilla.weatherapp.data">Favourites</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../org/chocvanilla/weatherapp/gui/DetailWindow.html#favourites">favourites</a></span></code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../org/chocvanilla/weatherapp/gui/DetailWindow.html#allStations">allStations</a></span></code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>private <a href="../../../../org/chocvanilla/weatherapp/gui/FavouritesUpdatedListener.html" title="interface in org.chocvanilla.weatherapp.gui">FavouritesUpdatedListener</a></code></td>
@@ -308,7 +308,7 @@ extends javax.swing.JFrame</pre>
 <tr class="altColor">
 <td class="colOne"><code><span class="memberNameLink"><a href="../../../../org/chocvanilla/weatherapp/gui/DetailWindow.html#DetailWindow-org.chocvanilla.weatherapp.gui.WindowLocationManager-org.chocvanilla.weatherapp.gui.FavouritesUpdatedListener-org.chocvanilla.weatherapp.data.Favourites-">DetailWindow</a></span>(<a href="../../../../org/chocvanilla/weatherapp/gui/WindowLocationManager.html" title="class in org.chocvanilla.weatherapp.gui">WindowLocationManager</a>&nbsp;locationManager,
             <a href="../../../../org/chocvanilla/weatherapp/gui/FavouritesUpdatedListener.html" title="interface in org.chocvanilla.weatherapp.gui">FavouritesUpdatedListener</a>&nbsp;listener,
-            <a href="../../../../org/chocvanilla/weatherapp/data/Favourites.html" title="class in org.chocvanilla.weatherapp.data">Favourites</a>&nbsp;favourites)</code>
+            <a href="../../../../org/chocvanilla/weatherapp/data/Favourites.html" title="class in org.chocvanilla.weatherapp.data">Favourites</a>&nbsp;allStations)</code>
 <div class="block">Create a new window, in which a chart with the most recent temperatures is displayed, both as a chart, and in a
   table.</div>
 </td>
@@ -337,8 +337,8 @@ extends javax.swing.JFrame</pre>
 <tr id="i1" class="rowColor">
 <td class="colFirst"><code>private javax.swing.JButton</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../org/chocvanilla/weatherapp/gui/DetailWindow.html#buildFavouritesButton-org.chocvanilla.weatherapp.data.stations.WeatherStation-org.chocvanilla.weatherapp.data.Favourites-">buildFavouritesButton</a></span>(<a href="../../../../org/chocvanilla/weatherapp/data/WeatherStation.html" title="class in org.chocvanilla.weatherapp.data">WeatherStation</a>&nbsp;station,
-                     <a href="../../../../org/chocvanilla/weatherapp/data/Favourites.html" title="class in org.chocvanilla.weatherapp.data">Favourites</a>&nbsp;favourites)</code>
-<div class="block">Method to create the button to add or remove from the favourites list.</div>
+                     <a href="../../../../org/chocvanilla/weatherapp/data/Favourites.html" title="class in org.chocvanilla.weatherapp.data">Favourites</a>&nbsp;allStations)</code>
+<div class="block">Method to create the button to add or remove from the allStations list.</div>
 </td>
 </tr>
 <tr id="i2" class="altColor">
@@ -370,8 +370,8 @@ extends javax.swing.JFrame</pre>
 <td class="colFirst"><code>private void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../org/chocvanilla/weatherapp/gui/DetailWindow.html#toggleFavourites-org.chocvanilla.weatherapp.data.stations.WeatherStation-javax.swing.JButton-org.chocvanilla.weatherapp.data.Favourites-">toggleFavourites</a></span>(<a href="../../../../org/chocvanilla/weatherapp/data/WeatherStation.html" title="class in org.chocvanilla.weatherapp.data">WeatherStation</a>&nbsp;station,
                 javax.swing.JButton&nbsp;button,
-                <a href="../../../../org/chocvanilla/weatherapp/data/Favourites.html" title="class in org.chocvanilla.weatherapp.data">Favourites</a>&nbsp;favourites)</code>
-<div class="block">Method for toggling the favourites button between either Adding to Favourites, or Removing from Favourites.</div>
+                <a href="../../../../org/chocvanilla/weatherapp/data/Favourites.html" title="class in org.chocvanilla.weatherapp.data">Favourites</a>&nbsp;allStations)</code>
+<div class="block">Method for toggling the allStations button between either Adding to Favourites, or Removing from Favourites.</div>
 </td>
 </tr>
 <tr id="i7" class="rowColor">
@@ -483,13 +483,13 @@ extends javax.swing.JFrame</pre>
 </dl>
 </li>
 </ul>
-<a name="favourites">
+<a name="allStations">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
-<h4>favourites</h4>
-<pre>private final&nbsp;<a href="../../../../org/chocvanilla/weatherapp/data/Favourites.html" title="class in org.chocvanilla.weatherapp.data">Favourites</a> favourites</pre>
+<h4>allStations</h4>
+<pre>private final&nbsp;<a href="../../../../org/chocvanilla/weatherapp/data/Favourites.html" title="class in org.chocvanilla.weatherapp.data">Favourites</a> allStations</pre>
 </li>
 </ul>
 <a name="favouritesUpdatedListener">
@@ -589,14 +589,14 @@ extends javax.swing.JFrame</pre>
 <h4>DetailWindow</h4>
 <pre>public&nbsp;DetailWindow(<a href="../../../../org/chocvanilla/weatherapp/gui/WindowLocationManager.html" title="class in org.chocvanilla.weatherapp.gui">WindowLocationManager</a>&nbsp;locationManager,
                     <a href="../../../../org/chocvanilla/weatherapp/gui/FavouritesUpdatedListener.html" title="interface in org.chocvanilla.weatherapp.gui">FavouritesUpdatedListener</a>&nbsp;listener,
-                    <a href="../../../../org/chocvanilla/weatherapp/data/Favourites.html" title="class in org.chocvanilla.weatherapp.data">Favourites</a>&nbsp;favourites)</pre>
+                    <a href="../../../../org/chocvanilla/weatherapp/data/Favourites.html" title="class in org.chocvanilla.weatherapp.data">Favourites</a>&nbsp;allStations)</pre>
 <div class="block">Create a new window, in which a chart with the most recent temperatures is displayed, both as a chart, and in a
   table. View is modelled in tabs.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>locationManager</code> - saves previous window location, opens window to last location</dd>
-<dd><code>listener</code> - an interface for updating the favourites list instantly both on screen, and in program</dd>
-<dd><code>favourites</code> - the current working list of favourites</dd>
+<dd><code>listener</code> - an interface for updating the allStations list instantly both on screen, and in program</dd>
+<dd><code>allStations</code> - the current working list of allStations</dd>
 </dl>
 </li>
 </ul>
@@ -708,15 +708,15 @@ extends javax.swing.JFrame</pre>
 <li class="blockList">
 <h4>buildFavouritesButton</h4>
 <pre>private&nbsp;javax.swing.JButton&nbsp;buildFavouritesButton(<a href="../../../../org/chocvanilla/weatherapp/data/WeatherStation.html" title="class in org.chocvanilla.weatherapp.data">WeatherStation</a>&nbsp;station,
-                                                  <a href="../../../../org/chocvanilla/weatherapp/data/Favourites.html" title="class in org.chocvanilla.weatherapp.data">Favourites</a>&nbsp;favourites)</pre>
-<div class="block">Method to create the button to add or remove from the favourites list. Dynamically creates the label for the
- button depending on the stations existence in the favourites list.</div>
+                                                  <a href="../../../../org/chocvanilla/weatherapp/data/Favourites.html" title="class in org.chocvanilla.weatherapp.data">Favourites</a>&nbsp;allStations)</pre>
+<div class="block">Method to create the button to add or remove from the allStations list. Dynamically creates the label for the
+ button depending on the stations existence in the allStations list.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>station</code> - handle on the station object being operated on</dd>
-<dd><code>favourites</code> - the current working favourites list.</dd>
+<dd><code>allStations</code> - the current working allStations list.</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>new JButton to add or remove from favourites.</dd>
+<dd>new JButton to add or remove from allStations.</dd>
 </dl>
 </li>
 </ul>
@@ -728,14 +728,14 @@ extends javax.swing.JFrame</pre>
 <h4>toggleFavourites</h4>
 <pre>private&nbsp;void&nbsp;toggleFavourites(<a href="../../../../org/chocvanilla/weatherapp/data/WeatherStation.html" title="class in org.chocvanilla.weatherapp.data">WeatherStation</a>&nbsp;station,
                               javax.swing.JButton&nbsp;button,
-                              <a href="../../../../org/chocvanilla/weatherapp/data/Favourites.html" title="class in org.chocvanilla.weatherapp.data">Favourites</a>&nbsp;favourites)</pre>
-<div class="block">Method for toggling the favourites button between either Adding to Favourites, or Removing from Favourites.
- Makes us of the <a href="../../../../org/chocvanilla/weatherapp/gui/FavouritesUpdatedListener.html" title="interface in org.chocvanilla.weatherapp.gui"><code>FavouritesUpdatedListener</code></a> to dynamically update the favourites list in the Main Window</div>
+                              <a href="../../../../org/chocvanilla/weatherapp/data/Favourites.html" title="class in org.chocvanilla.weatherapp.data">Favourites</a>&nbsp;allStations)</pre>
+<div class="block">Method for toggling the allStations button between either Adding to Favourites, or Removing from Favourites.
+ Makes us of the <a href="../../../../org/chocvanilla/weatherapp/gui/FavouritesUpdatedListener.html" title="interface in org.chocvanilla.weatherapp.gui"><code>FavouritesUpdatedListener</code></a> to dynamically update the allStations list in the Main Window</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>station</code> - handle on the station object being operated on.</dd>
 <dd><code>button</code> - handle on the favourite button</dd>
-<dd><code>favourites</code> - the current favourites list.</dd>
+<dd><code>allStations</code> - the current allStations list.</dd>
 </dl>
 </li>
 </ul>

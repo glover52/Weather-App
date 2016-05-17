@@ -10,7 +10,7 @@ FILE = "FILE"
 
 appender(CONSOLE, ConsoleAppender) {
     encoder(PatternLayoutEncoder) {
-        pattern = "%d{HH:mm:ss.SSS} [%thread] %-5level %logger{20} - %msg%n"
+        pattern = "%d{HH:mm:ss.SSS} [%thread] %-5level %logger{10}: %msg%n"
     }
 }
 
@@ -18,7 +18,7 @@ appender(FILE, FileAppender) {
     file = "weather-app.log"
     append = false
     encoder(PatternLayoutEncoder) {
-        pattern = "%d{HH:mm:ss.SSS} [%thread] %-5level %logger{50} - %msg%n"
+        pattern = "%d{HH:mm:ss.SSS} [%thread] %-5level %logger{50}: %msg%n"
     }
 }
 

@@ -38,7 +38,7 @@ public class ChartHelpers {
      * Create a temperature chart which can be added to a graphical user interface.
      *
      * @param station      the weather station this chart is based on
-     * @param observations the observations to display
+     * @param observations the observations to show
      * @return a displayable {@link ChartPanel}
      */
     public static JFreeChart createChart(WeatherStation station, WeatherObservations observations) {

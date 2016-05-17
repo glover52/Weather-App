@@ -3,9 +3,10 @@ package org.chocvanilla.weatherapp.data.stations;
 
 import com.google.gson.*;
 import org.chocvanilla.weatherapp.data.DataHelpers;
-import org.chocvanilla.weatherapp.data.observations.BomWeatherObservation;
-import org.chocvanilla.weatherapp.data.observations.WeatherObservations;
+import org.chocvanilla.weatherapp.data.observations.*;
 import org.chocvanilla.weatherapp.io.AsyncLoader;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.io.*;
 import java.net.URL;
@@ -16,10 +17,12 @@ import java.util.concurrent.TimeUnit;
 // fields are auto-set by Gson
 @SuppressWarnings("unused") 
 public class BomWeatherStation implements WeatherStation {
-    public static final String target = ".observations";
+    protected final Logger log = LoggerFactory.getLogger(getClass());
+    
+    private static final String target = ".observations";
     private static final String URL_FORMAT = "http://www.bom.gov.au/fwo/%s/%s.%d.json";
     private static final String PRODUCT_ID = "ID%c60801";
-    public static final long CACHE_EXPIRY_MILLIS = TimeUnit.SECONDS.toMillis(5);
+    private static final long CACHE_EXPIRY_MILLIS = TimeUnit.SECONDS.toMillis(5);
 
     private final AsyncLoader loader = new AsyncLoader(this);
     
@@ -107,14 +110,18 @@ public class BomWeatherStation implements WeatherStation {
      */
     public WeatherObservations load() throws IOException {
         if (msSinceLastRefresh() > CACHE_EXPIRY_MILLIS) {
+            log.trace("Attempting to download weather observations for '{}'", this);
             downloadFile();
             lastRefreshed = System.currentTimeMillis();
         }
+        log.trace("Attempting to parse downloaded JSON for '{}'", this);
         try (BufferedReader reader = Files.newBufferedReader(getPath())) {
             JsonObject object = (JsonObject) new JsonParser().parse(reader);
             JsonElement data = object.get("observations").getAsJsonObject().get("data");
             Gson gson = DataHelpers.observationsGson();
-            return new WeatherObservations(gson.fromJson(data, BomWeatherObservation[].class));
+            WeatherObservations result = new WeatherObservations(gson.fromJson(data, BomWeatherObservation[].class));
+            log.debug("Parsed {} observations from '{}'", result.size(), this);
+            return result;
         }
     }
     

@@ -4,6 +4,8 @@ import com.google.gson.Gson;
 import org.chocvanilla.weatherapp.data.observations.WeatherObservations;
 import org.chocvanilla.weatherapp.data.stations.WeatherStation;
 import org.chocvanilla.weatherapp.data.stations.WeatherStations;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import javax.swing.*;
 import javax.swing.event.ListSelectionEvent;
@@ -13,7 +15,7 @@ import java.util.concurrent.FutureTask;
 
 
 public class MainWindow {
-
+    protected final Logger log = LoggerFactory.getLogger(getClass());
     private static final String NO_FAVOURITES =
             "You have no favorites! Open a station and click the favorites button to see it here.";
     private final JFrame frame = new JFrame("Weather App");
@@ -26,13 +28,13 @@ public class MainWindow {
     public MainWindow(Gson gson, WeatherStations weatherStations) {
         stations = weatherStations;
         frame.setName("MainWindow");
+        log.debug("{} created with {} weather stations", frame.getName(), weatherStations.size());
         detailWindow = new DetailWindow(
                 new WindowLocationManager(gson, frame),
                 this::updateFavouritesButtons);
         frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         frame.addWindowListener(new WindowLocationManager(gson, new Rectangle(800, 600)));
         frame.addWindowListener(new FavouritesManager(weatherStations));
-
         buildContainerLayout();
     }
 
@@ -162,7 +164,7 @@ public class MainWindow {
     }
 
     private void openChart(WeatherStation station, FutureTask<WeatherObservations> dataSupplier) {
-        detailWindow.display(station, dataSupplier);
+        detailWindow.show(station, dataSupplier);
     }
 
 }

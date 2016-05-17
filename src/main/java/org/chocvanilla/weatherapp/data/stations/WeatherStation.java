@@ -6,6 +6,7 @@ import java.io.IOException;
 import java.util.concurrent.FutureTask;
 
 public interface WeatherStation extends Comparable<WeatherStation> {
+    
     WeatherObservations load() throws IOException;
 
     FutureTask<WeatherObservations> loadAsync();

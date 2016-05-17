@@ -5,6 +5,8 @@ import org.chocvanilla.weatherapp.data.observations.*;
 import org.chocvanilla.weatherapp.data.stations.WeatherStation;
 import org.jfree.chart.ChartPanel;
 import org.jfree.chart.JFreeChart;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import javax.swing.*;
 import javax.swing.table.TableColumnModel;
@@ -13,7 +15,8 @@ import java.util.concurrent.*;
 
 import static org.chocvanilla.weatherapp.gui.GuiHelpers.fieldToLabel;
 
-public class DetailWindow extends JFrame {
+public class DetailWindow {
+    protected final Logger log = LoggerFactory.getLogger(getClass());
     private static final String REFRESH = "↻ Refresh";
     private static final String ADD_TO_FAVOURITES = "☆ Favourite";
     private static final String REMOVE_FROM_FAVOURITES = "★ Unfavourite";
@@ -38,6 +41,7 @@ public class DetailWindow extends JFrame {
         favouritesUpdatedListener = listener;
 
         detailFrame.setName("DetailWindow");
+        log.debug("{} created", detailFrame.getName());
         detailFrame.addWindowListener(locationManager);
         JPanel container = new JPanel();
         detailFrame.setContentPane(container);
@@ -65,48 +69,50 @@ public class DetailWindow extends JFrame {
      * @param station      The {@link WeatherStation} for which data is displayed
      * @param dataSupplier An asynchronous way of retireiving the {@link WeatherObservation} data, via
      */
-    public void display(WeatherStation station, FutureTask<WeatherObservations> dataSupplier) {
+    public void show(WeatherStation station, FutureTask<WeatherObservations> dataSupplier) {
         try {
-
             WeatherObservations observations = dataSupplier.get();
-
-            long elapsed = station.msSinceLastRefresh();
-            refreshStatusLabel.setText(String.format("Last refresh: %d seconds ago.",
-                    TimeUnit.MILLISECONDS.toSeconds(elapsed)));
-
-            Timer timer = new Timer(1000, x -> refreshStatusLabel.setText(""));
-            timer.setRepeats(false);
-            timer.start();
-
-            latestObsContainer.removeAll();
-            latestObsContainer.add(buildDetails(observations.iterator().next()));
-            // Add to favorites
-            buttonContainer.removeAll();
-            buttonContainer.add(buildFavouritesButton(station));
-            buttonContainer.add(buildRefreshButton(station));
-            buttonContainer.add(refreshStatusLabel);
-
-            // Need to revalidate to avoid artifacts from previous button
-            buttonContainer.revalidate();
-            buttonContainer.repaint();
-            // Chart
-            JFreeChart chart = ChartHelpers.createChart(station, observations);
-            updateChart(chart);
-
-            // Table
-            GridBagConstraints c = new GridBagConstraints();
-            c.fill = GridBagConstraints.BOTH;
-            c.weightx = 1;
-            c.weighty = 0;
-            tableContainer.removeAll();
-            tableContainer.add(new JScrollPane(buildTable(observations)), c);
-
-            detailFrame.setTitle(station.getName());
-            detailFrame.pack();
-            detailFrame.setVisible(true);
-        } catch (InterruptedException | ExecutionException ignored) {
-            // Can't get data, so don't display chart
+            updateDataFrom(station, observations);
+        } catch (InterruptedException | ExecutionException e) {
+            log.error("Failed to load observations from '{}'", station.getName(), e);
         }
+    }
+
+    private void updateDataFrom(WeatherStation station, WeatherObservations observations) {
+        long elapsed = station.msSinceLastRefresh();
+        refreshStatusLabel.setText(String.format("Last refresh: %d seconds ago.",
+                TimeUnit.MILLISECONDS.toSeconds(elapsed)));
+
+        Timer timer = new Timer(1000, x -> refreshStatusLabel.setText(""));
+        timer.setRepeats(false);
+        timer.start();
+
+        latestObsContainer.removeAll();
+        latestObsContainer.add(buildDetails(observations.iterator().next()));
+        // Add to favorites
+        buttonContainer.removeAll();
+        buttonContainer.add(buildFavouritesButton(station));
+        buttonContainer.add(buildRefreshButton(station));
+        buttonContainer.add(refreshStatusLabel);
+
+        // Need to revalidate to avoid artifacts from previous button
+        buttonContainer.revalidate();
+        buttonContainer.repaint();
+        // Chart
+        JFreeChart chart = ChartHelpers.createChart(station, observations);
+        updateChart(chart);
+
+        // Table
+        GridBagConstraints c = new GridBagConstraints();
+        c.fill = GridBagConstraints.BOTH;
+        c.weightx = 1;
+        c.weighty = 0;
+        tableContainer.removeAll();
+        tableContainer.add(new JScrollPane(buildTable(observations)), c);
+
+        detailFrame.setTitle(station.getName());
+        detailFrame.pack();
+        detailFrame.setVisible(true);
     }
 
     /**
@@ -132,7 +138,7 @@ public class DetailWindow extends JFrame {
      */
     private JButton buildRefreshButton(WeatherStation station) {
         JButton refresh = new JButton(REFRESH);
-        refresh.addActionListener(x -> display(station, station.loadAsync()));
+        refresh.addActionListener(x -> show(station, station.loadAsync()));
         return refresh;
     }
 
