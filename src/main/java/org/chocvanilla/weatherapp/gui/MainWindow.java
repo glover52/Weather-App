@@ -25,6 +25,8 @@ public class MainWindow {
     private final JList<WeatherStation> stationList = new JList<>();
     private JPanel favouritesPanel;
 
+    private Dimension d = new Dimension(800, 600);
+
     public MainWindow(Gson gson, WeatherStations weatherStations) {
         stations = weatherStations;
         frame.setName("MainWindow");
@@ -35,6 +37,7 @@ public class MainWindow {
         frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         frame.addWindowListener(new WindowLocationManager(gson, new Rectangle(800, 600)));
         frame.addWindowListener(new FavouritesManager(weatherStations));
+        frame.setMinimumSize(d);
         buildContainerLayout();
     }
 
