@@ -11,7 +11,6 @@ import javax.swing.table.TableColumnModel;
 import java.awt.*;
 import java.util.concurrent.*;
 
-import static org.chocvanilla.weatherapp.chart.ChartHelpers.observationHistory;
 import static org.chocvanilla.weatherapp.gui.GuiHelpers.fieldToLabel;
 
 public class DetailWindow extends JFrame {
@@ -117,17 +116,8 @@ public class DetailWindow extends JFrame {
      * @return the populated table, which is added to the appropriate JPanel.
      */
     private JTable buildTable(WeatherObservations observations) {
-        Object[][] data = observationHistory(observations);
-        String[] columnNames = {"Time", "Air Temp", "Apparent Temp", "Gust (km/h)", "Gust (kt)",
-                "Wind Direction", "Wind Speed (km/h)", "Wind Speed (kt)",
-                "Dew Point", "Rain (mm)"};
 
-        JTable table = new JTable(data, columnNames) {
-            // Disable editing
-            public boolean isCellEditable(int row, int column) {
-                return false;
-            }
-        };
+        JTable table = new JTable(new WeatherObservationTableModel(observations));
         TableColumnModel tcm = table.getColumnModel();
         tcm.getColumn(0).setPreferredWidth(230);
 
@@ -179,8 +169,8 @@ public class DetailWindow extends JFrame {
     private JPanel buildDetails(WeatherObservation observation) {
         JPanel details = new JPanel();
         details.setLayout(new FlowLayout());
-        for (ObservationDescription o : ObservationDescription.forObservation(observation)) {
-            details.add(fieldToLabel(o.getLabel(), o.getValue()));
+        for (Field field : observation.getFields()) {
+            details.add(fieldToLabel(field.getLabel(), field.getFormattedValue()));
             details.add(new JSeparator(SwingConstants.VERTICAL));
         }
         return details;
@@ -222,5 +212,4 @@ public class DetailWindow extends JFrame {
         favouritesUpdatedListener.update();
     }
 }
-
 

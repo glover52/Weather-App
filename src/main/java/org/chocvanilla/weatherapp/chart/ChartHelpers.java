@@ -68,32 +68,4 @@ public class ChartHelpers {
         chart.setBackgroundPaint(null);
         return chart;
     }
-
-    /**
-     * Transforms a list of observations into a multidimensional array of objects
-     *
-     * @param observations A list of weather observations
-     * @return an array of observations
-     */
-    public static Object[][] observationHistory(WeatherObservations observations) {
-        Object[][] data = new Object[observations.size()][];
-        int i = 0;
-        for (WeatherObservation o : observations) {
-            data[i++] = new Object[]{
-                    o.getTimestamp(),
-                    o.getAirTemperature(),
-                    o.getApparentTemperature(),
-                    o.getGustKm(),
-                    o.getGustKt(),
-                    o.getWindDir(),
-                    o.getWindSpdKmh(),
-                    o.getWindSpdKt(),
-                    o.getDewPt(),
-                    o.getRain(),
-            };
-        }
-        return data;
-    }
-
-
 }
