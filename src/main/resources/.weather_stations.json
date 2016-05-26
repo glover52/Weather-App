@@ -1,4118 +1,4714 @@
 [
   {
-    "stationID": 58216,
-    "wmoNumber": 94599,
-    "name": "CAPE BYRON AWS",
-    "state": "NSW",
-    "code": "N"
-  },
-  {
-    "stationID": 58214,
-    "wmoNumber": 94572,
-    "name": "LISMORE AIRPORT AWS",
-    "state": "NSW",
-    "code": "N"
-  },
-  {
-    "stationID": 58198,
-    "wmoNumber": 94596,
-    "name": "BALLINA AIRPORT AWS",
-    "state": "NSW",
-    "code": "N"
-  },
-  {
-    "stationID": 58208,
-    "wmoNumber": 94573,
-    "name": "CASINO AIRPORT AWS",
-    "state": "NSW",
-    "code": "N"
-  },
-  {
-    "stationID": 58212,
-    "wmoNumber": 94598,
-    "name": "EVANS HEAD RAAF BOMBING RANGE AWS",
-    "state": "NSW",
-    "code": "N"
-  },
-  {
-    "stationID": 58012,
-    "wmoNumber": 94589,
-    "name": "YAMBA PILOT STATION",
-    "state": "NSW",
-    "code": "N"
-  },
-  {
-    "stationID": 58077,
-    "wmoNumber": 95571,
-    "name": "GRAFTON RESEARCH STN",
-    "state": "NSW",
-    "code": "N"
-  },
-  {
-    "stationID": 58161,
-    "wmoNumber": 95570,
-    "name": "GRAFTON AIRPORT AWS",
-    "state": "NSW",
-    "code": "N"
-  },
-  {
-    "stationID": 56243,
-    "wmoNumber": 94588,
-    "name": "GLEN INNES AIRPORT AWS",
-    "state": "NSW",
-    "code": "N"
-  },
-  {
-    "stationID": 59040,
-    "wmoNumber": 94791,
-    "name": "COFFS HARBOUR MO",
-    "state": "NSW",
-    "code": "N"
-  },
-  {
-    "stationID": 56018,
-    "wmoNumber": 94541,
-    "name": "INVERELL RESEARCH CENTRE",
-    "state": "NSW",
-    "code": "N"
-  },
-  {
-    "stationID": 56238,
-    "wmoNumber": 95773,
-    "name": "ARMIDALE AIRPORT AWS",
-    "state": "NSW",
-    "code": "N"
-  },
-  {
-    "stationID": 59007,
-    "wmoNumber": 94785,
-    "name": "KEMPSEY AIRPORT AWS",
-    "state": "NSW",
-    "code": "N"
-  },
-  {
-    "stationID": 53115,
-    "wmoNumber": 95527,
-    "name": "MOREE AERO",
-    "state": "NSW",
-    "code": "N"
-  },
-  {
-    "stationID": 60139,
-    "wmoNumber": 94786,
-    "name": "PORT MACQUARIE AIRPORT AWS",
-    "state": "NSW",
-    "code": "N"
-  },
-  {
-    "stationID": 55325,
-    "wmoNumber": 95762,
-    "name": "TAMWORTH AIRPORT AWS",
-    "state": "NSW",
-    "code": "N"
-  },
-  {
-    "stationID": 54038,
-    "wmoNumber": 95734,
-    "name": "NARRABRI AIRPORT AWS",
-    "state": "NSW",
-    "code": "N"
-  },
-  {
-    "stationID": 60141,
-    "wmoNumber": 95784,
-    "name": "TAREE AIRPORT AWS",
-    "state": "NSW",
-    "code": "N"
-  },
-  {
-    "stationID": 55202,
-    "wmoNumber": 95740,
-    "name": "GUNNEDAH AIRPORT AWS",
-    "state": "NSW",
-    "code": "N"
-  },
-  {
-    "stationID": 61392,
-    "wmoNumber": 95747,
-    "name": "MURRURUNDI GAP AWS",
-    "state": "NSW",
-    "code": "N"
-  },
-  {
-    "stationID": 61363,
-    "wmoNumber": 95758,
-    "name": "SCONE AIRPORT AWS",
-    "state": "NSW",
-    "code": "N"
-  },
-  {
-    "stationID": 64017,
-    "wmoNumber": 95728,
-    "name": "COONABARABRAN AIRPORT AWS",
-    "state": "NSW",
-    "code": "N"
-  },
-  {
-    "stationID": 61250,
-    "wmoNumber": 94775,
-    "name": "TOCAL AWS",
-    "state": "NSW",
-    "code": "N"
-  },
-  {
-    "stationID": 52088,
-    "wmoNumber": 95715,
-    "name": "WALGETT AIRPORT AWS",
-    "state": "NSW",
-    "code": "N"
-  },
-  {
-    "stationID": 61078,
-    "wmoNumber": 94776,
-    "name": "WILLIAMTOWN RAAF",
-    "state": "NSW",
-    "code": "N"
-  },
-  {
-    "stationID": 61287,
-    "wmoNumber": 95754,
-    "name": "MERRIWA (ROSCOMMON)",
-    "state": "NSW",
-    "code": "N"
-  },
-  {
-    "stationID": 61260,
-    "wmoNumber": 95771,
-    "name": "CESSNOCK AIRPORT AWS",
-    "state": "NSW",
-    "code": "N"
-  },
-  {
-    "stationID": 61055,
-    "wmoNumber": 94774,
-    "name": "NEWCASTLE NOBBYS SIGNAL STATION AWS",
-    "state": "NSW",
-    "code": "N"
-  },
-  {
-    "stationID": 51161,
-    "wmoNumber": 95718,
-    "name": "COONAMBLE AIRPORT AWS",
-    "state": "NSW",
-    "code": "N"
-  },
-  {
-    "stationID": 61412,
-    "wmoNumber": 95767,
-    "name": "LAKE MACQUARIE AWS",
-    "state": "NSW",
-    "code": "N"
-  },
-  {
-    "stationID": 62100,
-    "wmoNumber": 94754,
-    "name": "NULLO MOUNTAIN AWS",
-    "state": "NSW",
-    "code": "N"
-  },
-  {
-    "stationID": 61366,
-    "wmoNumber": 95770,
-    "name": "NORAH HEAD AWS",
-    "state": "NSW",
-    "code": "N"
-  },
-  {
-    "stationID": 62101,
-    "wmoNumber": 94727,
-    "name": "MUDGEE AIRPORT AWS",
-    "state": "NSW",
-    "code": "N"
-  },
-  {
-    "stationID": 61375,
-    "wmoNumber": 95774,
-    "name": "MANGROVE MOUNTAIN AWS",
-    "state": "NSW",
-    "code": "N"
-  },
-  {
-    "stationID": 61087,
-    "wmoNumber": 94777,
-    "name": "GOSFORD (NARARA RESEARCH STATION) AWS",
-    "state": "NSW",
-    "code": "N"
-  },
-  {
-    "stationID": 65070,
-    "wmoNumber": 95719,
-    "name": "DUBBO AIRPORT AWS",
-    "state": "NSW",
-    "code": "N"
-  },
-  {
-    "stationID": 66059,
-    "wmoNumber": 94759,
-    "name": "TERREY HILLS AWS",
-    "state": "NSW",
-    "code": "N"
-  },
-  {
-    "stationID": 67105,
-    "wmoNumber": 95753,
-    "name": "RICHMOND RAAF",
-    "state": "NSW",
-    "code": "N"
-  },
-  {
-    "stationID": 200715,
-    "wmoNumber": 95995,
-    "name": "LORD HOWE ISLAND WINDY POINT",
-    "state": "NSW",
-    "code": "N"
-  },
-  {
-    "stationID": 200839,
-    "wmoNumber": 94995,
-    "name": "LORD HOWE ISLAND AERO",
-    "state": "NSW",
-    "code": "N"
-  },
-  {
-    "stationID": 66197,
-    "wmoNumber": 95768,
-    "name": "NORTH HEAD",
-    "state": "NSW",
-    "code": "N"
-  },
-  {
-    "stationID": 66196,
-    "wmoNumber": 95766,
-    "name": "WEDDING CAKE WEST",
-    "state": "NSW",
-    "code": "N"
-  },
-  {
-    "stationID": 51049,
-    "wmoNumber": 95710,
-    "name": "TRANGIE RESEARCH STATION AWS",
-    "state": "NSW",
-    "code": "N"
-  },
-  {
-    "stationID": 66022,
-    "wmoNumber": 94769,
-    "name": "FORT DENISON",
-    "state": "NSW",
-    "code": "N"
-  },
-  {
-    "stationID": 66062,
-    "wmoNumber": 94768,
-    "name": "SYDNEY (OBSERVATORY HILL)",
-    "state": "NSW",
-    "code": "N"
-  },
-  {
-    "stationID": 66212,
-    "wmoNumber": 95765,
-    "name": "SYDNEY OLYMPIC PARK AWS (ARCHERY CENTRE)",
-    "state": "NSW",
-    "code": "N"
-  },
-  {
-    "stationID": 67113,
-    "wmoNumber": 94763,
-    "name": "PENRITH LAKES AWS",
-    "state": "NSW",
-    "code": "N"
-  },
-  {
-    "stationID": 63292,
-    "wmoNumber": 94743,
-    "name": "MOUNT BOYCE AWS",
-    "state": "NSW",
-    "code": "N"
-  },
-  {
-    "stationID": 66194,
-    "wmoNumber": 94766,
-    "name": "CANTERBURY RACECOURSE AWS",
-    "state": "NSW",
-    "code": "N"
-  },
-  {
-    "stationID": 67119,
-    "wmoNumber": 94760,
-    "name": "HORSLEY PARK EQUESTRIAN CENTRE AWS",
-    "state": "NSW",
-    "code": "N"
-  },
-  {
-    "stationID": 66037,
-    "wmoNumber": 94767,
-    "name": "SYDNEY AIRPORT AMO",
-    "state": "NSW",
-    "code": "N"
-  },
-  {
-    "stationID": 66051,
-    "wmoNumber": 94780,
-    "name": "LITTLE BAY (THE COAST GOLF CLUB)",
-    "state": "NSW",
-    "code": "N"
-  },
-  {
-    "stationID": 66137,
-    "wmoNumber": 94765,
-    "name": "BANKSTOWN AIRPORT AWS",
-    "state": "NSW",
-    "code": "N"
-  },
-  {
-    "stationID": 66100,
-    "wmoNumber": 99766,
-    "name": "MOLINEUX POINT AWS",
-    "state": "NSW",
-    "code": "N"
-  },
-  {
-    "stationID": 63291,
-    "wmoNumber": 94729,
-    "name": "BATHURST AIRPORT AWS",
-    "state": "NSW",
-    "code": "N"
-  },
-  {
-    "stationID": 66043,
-    "wmoNumber": 95756,
-    "name": "KURNELL AWS",
-    "state": "NSW",
-    "code": "N"
-  },
-  {
-    "stationID": 67108,
-    "wmoNumber": 94752,
-    "name": "BADGERYS CREEK AWS",
-    "state": "NSW",
-    "code": "N"
-  },
-  {
-    "stationID": 67117,
-    "wmoNumber": 94762,
-    "name": "HOLSWORTHY CONTROL RANGE",
-    "state": "NSW",
-    "code": "N"
-  },
-  {
-    "stationID": 66023,
-    "wmoNumber": 95757,
-    "name": "LUCAS HEIGHTS AWS",
-    "state": "NSW",
-    "code": "N"
-  },
-  {
-    "stationID": 66208,
-    "wmoNumber": 95752,
-    "name": "WATTAMOLLA AWS",
-    "state": "NSW",
-    "code": "N"
-  },
-  {
-    "stationID": 68257,
-    "wmoNumber": 94757,
-    "name": "CAMPBELLTOWN (MOUNT ANNAN)",
-    "state": "NSW",
-    "code": "N"
-  },
-  {
-    "stationID": 68192,
-    "wmoNumber": 94755,
-    "name": "CAMDEN AIRPORT AWS",
-    "state": "NSW",
-    "code": "N"
-  },
-  {
-    "stationID": 63303,
-    "wmoNumber": 95726,
-    "name": "ORANGE AIRPORT AWS",
-    "state": "NSW",
-    "code": "N"
-  },
-  {
-    "stationID": 68228,
-    "wmoNumber": 94749,
-    "name": "BELLAMBI AWS",
-    "state": "NSW",
-    "code": "N"
-  },
-  {
-    "stationID": 48245,
-    "wmoNumber": 94703,
-    "name": "BOURKE AIRPORT AWS",
-    "state": "NSW",
-    "code": "N"
-  },
-  {
-    "stationID": 65068,
-    "wmoNumber": 95717,
-    "name": "PARKES AIRPORT AWS",
-    "state": "NSW",
-    "code": "N"
-  },
-  {
-    "stationID": 68241,
-    "wmoNumber": 95748,
-    "name": "WOLLONGONG AIRPORT",
-    "state": "NSW",
-    "code": "N"
-  },
-  {
-    "stationID": 68242,
-    "wmoNumber": 95749,
-    "name": "KIAMA (BOMBO HEADLAND)",
-    "state": "NSW",
-    "code": "N"
-  },
-  {
-    "stationID": 68239,
-    "wmoNumber": 94746,
-    "name": "MOSS VALE AWS",
-    "state": "NSW",
-    "code": "N"
-  },
-  {
-    "stationID": 65111,
-    "wmoNumber": 95721,
-    "name": "COWRA AIRPORT AWS",
-    "state": "NSW",
-    "code": "N"
-  },
-  {
-    "stationID": 65103,
-    "wmoNumber": 94715,
-    "name": "FORBES AIRPORT AWS",
-    "state": "NSW",
-    "code": "N"
-  },
-  {
-    "stationID": 50137,
-    "wmoNumber": 95708,
-    "name": "CONDOBOLIN AIRPORT AWS",
-    "state": "NSW",
-    "code": "N"
-  },
-  {
-    "stationID": 68072,
-    "wmoNumber": 94750,
-    "name": "NOWRA RAN AIR STATION AWS",
-    "state": "NSW",
-    "code": "N"
-  },
-  {
-    "stationID": 48027,
-    "wmoNumber": 94711,
-    "name": "COBAR MO",
-    "state": "NSW",
-    "code": "N"
-  },
-  {
-    "stationID": 48237,
-    "wmoNumber": 94710,
-    "name": "COBAR AIRPORT AWS",
-    "state": "NSW",
-    "code": "N"
-  },
-  {
-    "stationID": 68151,
-    "wmoNumber": 95940,
-    "name": "POINT PERPENDICULAR AWS",
-    "state": "NSW",
-    "code": "N"
-  },
-  {
-    "stationID": 70330,
-    "wmoNumber": 95716,
-    "name": "GOULBURN AIRPORT AWS",
-    "state": "NSW",
-    "code": "N"
-  },
-  {
-    "stationID": 73138,
-    "wmoNumber": 94712,
-    "name": "YOUNG AIRPORT",
-    "state": "NSW",
-    "code": "N"
-  },
-  {
-    "stationID": 69138,
-    "wmoNumber": 94938,
-    "name": "ULLADULLA AWS",
-    "state": "NSW",
-    "code": "N"
-  },
-  {
-    "stationID": 50017,
-    "wmoNumber": 95709,
-    "name": "WEST WYALONG AIRPORT AWS",
-    "state": "NSW",
-    "code": "N"
-  },
-  {
-    "stationID": 69132,
-    "wmoNumber": 94927,
-    "name": "BRAIDWOOD RACECOURSE AWS",
-    "state": "NSW",
-    "code": "N"
-  },
-  {
-    "stationID": 70351,
-    "wmoNumber": 94926,
-    "name": "CANBERRA AIRPORT",
-    "state": "NSW",
-    "code": "N"
-  },
-  {
-    "stationID": 73151,
-    "wmoNumber": 95722,
-    "name": "TEMORA AIRPORT",
-    "state": "NSW",
-    "code": "N"
-  },
-  {
-    "stationID": 70339,
-    "wmoNumber": 94925,
-    "name": "TUGGERANONG (ISABELLA PLAINS) AWS",
-    "state": "NSW",
-    "code": "N"
-  },
-  {
-    "stationID": 69148,
-    "wmoNumber": 95937,
-    "name": "MORUYA AIRPORT AWS",
-    "state": "NSW",
-    "code": "N"
-  },
-  {
-    "stationID": 70349,
-    "wmoNumber": 95925,
-    "name": "MOUNT GININI AWS",
-    "state": "NSW",
-    "code": "N"
-  },
-  {
-    "stationID": 69017,
-    "wmoNumber": 94939,
-    "name": "MONTAGUE ISLAND LIGHTHOUSE",
-    "state": "NSW",
-    "code": "N"
-  },
-  {
-    "stationID": 72150,
-    "wmoNumber": 94910,
-    "name": "WAGGA WAGGA AMO",
-    "state": "NSW",
-    "code": "N"
-  },
-  {
-    "stationID": 75041,
-    "wmoNumber": 95704,
-    "name": "GRIFFITH AIRPORT AWS",
-    "state": "NSW",
-    "code": "N"
-  },
-  {
-    "stationID": 74037,
-    "wmoNumber": 95705,
-    "name": "YANCO AGRICULTURAL INSTITUTE",
-    "state": "NSW",
-    "code": "N"
-  },
-  {
-    "stationID": 74148,
-    "wmoNumber": 95706,
-    "name": "NARRANDERA AIRPORT",
-    "state": "NSW",
-    "code": "N"
-  },
-  {
-    "stationID": 72161,
-    "wmoNumber": 95916,
-    "name": "CABRAMURRA SMHEA AWS",
-    "state": "NSW",
-    "code": "N"
-  },
-  {
-    "stationID": 70217,
-    "wmoNumber": 94921,
-    "name": "COOMA AIRPORT AWS",
-    "state": "NSW",
-    "code": "N"
-  },
-  {
-    "stationID": 49000,
-    "wmoNumber": 95697,
-    "name": "IVANHOE AERODROME AWS",
-    "state": "NSW",
-    "code": "N"
-  },
-  {
-    "stationID": 69139,
-    "wmoNumber": 95931,
-    "name": "BEGA AWS",
-    "state": "NSW",
-    "code": "N"
-  },
-  {
-    "stationID": 46012,
-    "wmoNumber": 95695,
-    "name": "WILCANNIA AERODROME AWS",
-    "state": "NSW",
-    "code": "N"
-  },
-  {
-    "stationID": 72162,
-    "wmoNumber": 94919,
-    "name": "KHANCOBAN AWS",
-    "state": "NSW",
-    "code": "N"
-  },
-  {
-    "stationID": 46129,
-    "wmoNumber": 95699,
-    "name": "WHITE CLIFFS AWS",
-    "state": "NSW",
-    "code": "N"
-  },
-  {
-    "stationID": 69147,
-    "wmoNumber": 95929,
-    "name": "MERIMBULA AIRPORT AWS",
-    "state": "NSW",
-    "code": "N"
-  },
-  {
-    "stationID": 71075,
-    "wmoNumber": 94915,
-    "name": "PERISHER VALLEY AWS",
-    "state": "NSW",
-    "code": "N"
-  },
-  {
-    "stationID": 71032,
-    "wmoNumber": 95909,
-    "name": "THREDBO AWS",
-    "state": "NSW",
-    "code": "N"
-  },
-  {
-    "stationID": 70328,
-    "wmoNumber": 94929,
-    "name": "BOMBALA AWS",
-    "state": "NSW",
-    "code": "N"
-  },
-  {
-    "stationID": 69137,
-    "wmoNumber": 94934,
-    "name": "GREEN CAPE AWS",
-    "state": "NSW",
-    "code": "N"
-  },
-  {
-    "stationID": 72160,
-    "wmoNumber": 95896,
-    "name": "ALBURY AIRPORT AWS",
-    "state": "NSW",
-    "code": "N"
-  },
-  {
-    "stationID": 75019,
-    "wmoNumber": 94702,
-    "name": "HAY AIRPORT AWS",
-    "state": "NSW",
-    "code": "N"
-  },
-  {
-    "stationID": 46126,
-    "wmoNumber": 95485,
-    "name": "TIBOOBURRA AIRPORT",
-    "state": "NSW",
-    "code": "N"
-  },
-  {
-    "stationID": 74258,
-    "wmoNumber": 95869,
-    "name": "DENILIQUIN AIRPORT AWS",
-    "state": "NSW",
-    "code": "N"
-  },
-  {
-    "stationID": 46128,
-    "wmoNumber": 94686,
-    "name": "FOWLERS GAP AWS",
-    "state": "NSW",
-    "code": "N"
-  },
-  {
-    "stationID": 47048,
-    "wmoNumber": 94691,
-    "name": "BROKEN HILL AIRPORT AWS",
-    "state": "NSW",
-    "code": "N"
-  },
-  {
-    "stationID": 200288,
-    "wmoNumber": 94996,
-    "name": "NORFOLK ISLAND AERO",
-    "state": "NSW",
-    "code": "N"
-  },
-  {
-    "stationID": 15602,
-    "wmoNumber": 94327,
-    "name": "JERVOIS",
-    "state": "NT",
-    "code": "D"
-  },
-  {
-    "stationID": 15590,
-    "wmoNumber": 94326,
-    "name": "ALICE SPRINGS AIRPORT",
-    "state": "NT",
-    "code": "D"
-  },
-  {
-    "stationID": 15643,
-    "wmoNumber": 94328,
-    "name": "TERRITORY GRAPE FARM",
-    "state": "NT",
-    "code": "D"
-  },
-  {
-    "stationID": 15135,
-    "wmoNumber": 94238,
-    "name": "TENNANT CREEK AIRPORT",
-    "state": "NT",
-    "code": "D"
-  },
-  {
-    "stationID": 14703,
-    "wmoNumber": 94248,
-    "name": "CENTRE ISLAND",
-    "state": "NT",
-    "code": "D"
-  },
-  {
-    "stationID": 14704,
-    "wmoNumber": 94239,
-    "name": "MCARTHUR RIVER MINE",
-    "state": "NT",
-    "code": "D"
-  },
-  {
-    "stationID": 14723,
-    "wmoNumber": 94152,
-    "name": "BORROLOOLA",
-    "state": "NT",
-    "code": "D"
-  },
-  {
-    "stationID": 15635,
-    "wmoNumber": 94462,
-    "name": "YULARA AERO",
-    "state": "NT",
-    "code": "D"
-  },
-  {
-    "stationID": 200782,
-    "wmoNumber": 94151,
-    "name": "NORTH EAST ISLAND",
-    "state": "NT",
-    "code": "D"
-  },
-  {
-    "stationID": 14518,
-    "wmoNumber": 94153,
-    "name": "GROOTE EYLANDT AIRPORT AWS",
-    "state": "NT",
-    "code": "D"
-  },
-  {
-    "stationID": 14626,
-    "wmoNumber": 94234,
-    "name": "DALY WATERS AWS",
-    "state": "NT",
-    "code": "D"
-  },
-  {
-    "stationID": 14508,
-    "wmoNumber": 94150,
-    "name": "GOVE AIRPORT",
-    "state": "NT",
-    "code": "D"
-  },
-  {
-    "stationID": 15664,
-    "wmoNumber": 94321,
-    "name": "WALUNGURRU",
-    "state": "NT",
-    "code": "D"
-  },
-  {
-    "stationID": 15666,
-    "wmoNumber": 95322,
-    "name": "RABBIT FLAT",
-    "state": "NT",
-    "code": "D"
-  },
-  {
-    "stationID": 14627,
-    "wmoNumber": 94143,
-    "name": "BULMAN AWS",
-    "state": "NT",
-    "code": "D"
-  },
-  {
-    "stationID": 14829,
-    "wmoNumber": 94231,
-    "name": "LAJAMANU",
-    "state": "NT",
-    "code": "D"
-  },
-  {
-    "stationID": 200786,
-    "wmoNumber": 94147,
-    "name": "CAPE WESSEL",
-    "state": "NT",
-    "code": "D"
-  },
-  {
-    "stationID": 14517,
-    "wmoNumber": 95146,
-    "name": "NGAYAWILI",
-    "state": "NT",
-    "code": "D"
-  },
-  {
-    "stationID": 14949,
-    "wmoNumber": 94225,
-    "name": "DELAMERE WEAPONS RANGE",
-    "state": "NT",
-    "code": "D"
-  },
-  {
-    "stationID": 14404,
-    "wmoNumber": 94140,
-    "name": "MILINGIMBI AWS",
-    "state": "NT",
-    "code": "D"
-  },
-  {
-    "stationID": 14825,
-    "wmoNumber": 94232,
-    "name": "VICTORIA RIVER DOWNS",
-    "state": "NT",
-    "code": "D"
-  },
-  {
-    "stationID": 14932,
-    "wmoNumber": 94131,
-    "name": "TINDAL RAAF",
-    "state": "NT",
-    "code": "D"
-  },
-  {
-    "stationID": 14909,
-    "wmoNumber": 94141,
-    "name": "CENTRAL ARNHEM PLATEAU",
-    "state": "NT",
-    "code": "D"
-  },
-  {
-    "stationID": 14405,
-    "wmoNumber": 95142,
-    "name": "MANINGRIDA AERO",
-    "state": "NT",
-    "code": "D"
-  },
-  {
-    "stationID": 14198,
-    "wmoNumber": 94137,
-    "name": "JABIRU AIRPORT",
-    "state": "NT",
-    "code": "D"
-  },
-  {
-    "stationID": 14954,
-    "wmoNumber": 94130,
-    "name": "BRADSHAW",
-    "state": "NT",
-    "code": "D"
-  },
-  {
-    "stationID": 14401,
-    "wmoNumber": 94139,
-    "name": "WARRUWI",
-    "state": "NT",
-    "code": "D"
-  },
-  {
-    "stationID": 14901,
-    "wmoNumber": 94128,
-    "name": "DOUGLAS RIVER",
-    "state": "NT",
-    "code": "D"
-  },
-  {
-    "stationID": 14254,
-    "wmoNumber": 94127,
-    "name": "POINT STUART AWS",
-    "state": "NT",
-    "code": "D"
-  },
-  {
-    "stationID": 14274,
-    "wmoNumber": 94135,
-    "name": "MCCLUER ISLAND",
-    "state": "NT",
-    "code": "D"
-  },
-  {
-    "stationID": 14272,
-    "wmoNumber": 94125,
-    "name": "BATCHELOR AERO",
-    "state": "NT",
-    "code": "D"
-  },
-  {
-    "stationID": 14041,
-    "wmoNumber": 95121,
-    "name": "MIDDLE POINT AWS",
-    "state": "NT",
-    "code": "D"
-  },
-  {
-    "stationID": 14046,
-    "wmoNumber": 99504,
-    "name": "NOONAMAH AWS",
-    "state": "NT",
-    "code": "D"
-  },
-  {
-    "stationID": 14948,
-    "wmoNumber": 95111,
-    "name": "PORT KEATS AERO",
-    "state": "NT",
-    "code": "D"
-  },
-  {
-    "stationID": 14023,
-    "wmoNumber": 99501,
-    "name": "GUNN POINT",
-    "state": "NT",
-    "code": "D"
-  },
-  {
-    "stationID": 14015,
-    "wmoNumber": 94120,
-    "name": "DARWIN AIRPORT",
-    "state": "NT",
-    "code": "D"
-  },
-  {
-    "stationID": 14245,
-    "wmoNumber": 94129,
-    "name": "CAPE DON",
-    "state": "NT",
-    "code": "D"
-  },
-  {
-    "stationID": 14031,
-    "wmoNumber": 99510,
-    "name": "CHARLES POINT AWS",
-    "state": "NT",
-    "code": "D"
-  },
-  {
-    "stationID": 14277,
-    "wmoNumber": 94116,
-    "name": "DUM IN MIRRIE AWS",
-    "state": "NT",
-    "code": "D"
-  },
-  {
-    "stationID": 14056,
-    "wmoNumber": 94114,
-    "name": "FISH REEF MARINE AWS",
-    "state": "NT",
-    "code": "D"
-  },
-  {
-    "stationID": 200852,
-    "wmoNumber": 92044,
-    "name": "MANUS ARCS-1",
-    "state": "NT",
-    "code": "D"
-  },
-  {
-    "stationID": 14142,
-    "wmoNumber": 94119,
-    "name": "PIRLANGIMPI",
-    "state": "NT",
-    "code": "D"
-  },
-  {
-    "stationID": 200731,
-    "wmoNumber": 94122,
-    "name": "POINT FAWCETT",
-    "state": "NT",
-    "code": "D"
-  },
-  {
-    "stationID": 1020,
-    "wmoNumber": 95101,
-    "name": "TRUSCOTT",
-    "state": "NT",
-    "code": "D"
-  },
-  {
-    "stationID": 1007,
-    "wmoNumber": 94102,
-    "name": "TROUGHTON ISLAND",
-    "state": "NT",
-    "code": "D"
-  },
-  {
-    "stationID": 200851,
-    "wmoNumber": 91532,
-    "name": "NAURU ARCS-2",
-    "state": "NT",
-    "code": "D"
-  },
-  {
-    "stationID": 200212,
-    "wmoNumber": 95100,
-    "name": "NORTHERN ENDEAVOUR",
-    "state": "NT",
-    "code": "D"
-  },
-  {
-    "stationID": 200872,
-    "wmoNumber": 97390,
-    "name": "COMORO AIRPORT",
-    "state": "NT",
-    "code": "D"
-  },
-  {
     "stationID": 40764,
     "wmoNumber": 94580,
     "name": "GOLD COAST SEAWAY",
     "state": "QLD",
-    "code": "Q"
+    "latitude": -27.939,
+    "longitude": 153.4283
   },
   {
     "stationID": 40717,
     "wmoNumber": 94592,
     "name": "COOLANGATTA",
     "state": "QLD",
-    "code": "Q"
+    "latitude": -28.1681,
+    "longitude": 153.5053
   },
   {
     "stationID": 40983,
     "wmoNumber": 95575,
     "name": "BEAUDESERT DRUMLEY STREET",
     "state": "QLD",
-    "code": "Q"
+    "latitude": -27.9707,
+    "longitude": 152.9898
   },
   {
     "stationID": 40925,
     "wmoNumber": 94591,
     "name": "BANANA BANK NORTH BEACON",
     "state": "QLD",
-    "code": "Q"
+    "latitude": -27.5327,
+    "longitude": 153.3333
   },
   {
     "stationID": 40211,
     "wmoNumber": 94575,
     "name": "ARCHERFIELD AIRPORT",
     "state": "QLD",
-    "code": "Q"
+    "latitude": -27.5717,
+    "longitude": 153.0078
   },
   {
     "stationID": 40913,
     "wmoNumber": 94576,
     "name": "BRISBANE",
     "state": "QLD",
-    "code": "Q"
+    "latitude": -27.4808,
+    "longitude": 153.0389
   },
   {
     "stationID": 40842,
     "wmoNumber": 94578,
     "name": "BRISBANE AERO",
     "state": "QLD",
-    "code": "Q"
+    "latitude": -27.3917,
+    "longitude": 153.1292
   },
   {
     "stationID": 40004,
     "wmoNumber": 94568,
     "name": "AMBERLEY AMO",
     "state": "QLD",
-    "code": "Q"
+    "latitude": -27.6297,
+    "longitude": 152.7111
   },
   {
     "stationID": 40926,
     "wmoNumber": 94590,
     "name": "INNER RECIPROCAL MARKER",
     "state": "QLD",
-    "code": "Q"
+    "latitude": -27.2637,
+    "longitude": 153.2417
   },
   {
     "stationID": 40959,
     "wmoNumber": 95592,
     "name": "REDCLIFFE JETTY",
     "state": "QLD",
-    "code": "Q"
+    "latitude": -27.2261,
+    "longitude": 153.1172
   },
   {
     "stationID": 40958,
     "wmoNumber": 95591,
     "name": "REDCLIFFE",
     "state": "QLD",
-    "code": "Q"
+    "latitude": -27.2169,
+    "longitude": 153.0922
+  },
+  {
+    "stationID": 58216,
+    "wmoNumber": 94599,
+    "name": "CAPE BYRON AWS",
+    "state": "NSW",
+    "latitude": -28.6399,
+    "longitude": 153.6358
   },
   {
     "stationID": 40927,
     "wmoNumber": 94581,
     "name": "SPITFIRE CHANNEL BEACON",
     "state": "QLD",
-    "code": "Q"
+    "latitude": -27.0481,
+    "longitude": 153.2664
   },
   {
     "stationID": 40043,
     "wmoNumber": 94594,
     "name": "CAPE MORETON LIGHTHOUSE",
     "state": "QLD",
-    "code": "Q"
+    "latitude": -27.0314,
+    "longitude": 153.4661
+  },
+  {
+    "stationID": 58214,
+    "wmoNumber": 94572,
+    "name": "LISMORE AIRPORT AWS",
+    "state": "NSW",
+    "latitude": -28.8305,
+    "longitude": 153.2601
+  },
+  {
+    "stationID": 58198,
+    "wmoNumber": 94596,
+    "name": "BALLINA AIRPORT AWS",
+    "state": "NSW",
+    "latitude": -28.8353,
+    "longitude": 153.5585
   },
   {
     "stationID": 40082,
     "wmoNumber": 94562,
     "name": "UNIVERSITY OF QUEENSLAND GATTON",
     "state": "QLD",
-    "code": "Q"
+    "latitude": -27.5436,
+    "longitude": 152.3375
+  },
+  {
+    "stationID": 58208,
+    "wmoNumber": 94573,
+    "name": "CASINO AIRPORT AWS",
+    "state": "NSW",
+    "latitude": -28.8775,
+    "longitude": 153.052
   },
   {
     "stationID": 40284,
     "wmoNumber": 95566,
     "name": "BEERBURRUM FOREST STATION",
     "state": "QLD",
-    "code": "Q"
+    "latitude": -26.9586,
+    "longitude": 152.9619
   },
   {
     "stationID": 41525,
     "wmoNumber": 94555,
     "name": "WARWICK",
     "state": "QLD",
-    "code": "Q"
+    "latitude": -28.2061,
+    "longitude": 152.1003
+  },
+  {
+    "stationID": 58212,
+    "wmoNumber": 94598,
+    "name": "EVANS HEAD RAAF BOMBING RANGE AWS",
+    "state": "NSW",
+    "latitude": -29.183,
+    "longitude": 153.3964
   },
   {
     "stationID": 40988,
     "wmoNumber": 95572,
     "name": "NAMBOUR DPI - HILLSIDE",
     "state": "QLD",
-    "code": "Q"
+    "latitude": -26.6442,
+    "longitude": 152.9383
   },
   {
     "stationID": 41529,
     "wmoNumber": 95551,
     "name": "TOOWOOMBA AIRPORT",
     "state": "QLD",
-    "code": "Q"
+    "latitude": -27.5425,
+    "longitude": 151.9134
   },
   {
     "stationID": 40861,
     "wmoNumber": 94569,
     "name": "SUNSHINE COAST AIRPORT",
     "state": "QLD",
-    "code": "Q"
+    "latitude": -26.6006,
+    "longitude": 153.0903
   },
   {
     "stationID": 41175,
     "wmoNumber": 94553,
     "name": "APPLETHORPE",
     "state": "QLD",
-    "code": "Q"
+    "latitude": -28.6217,
+    "longitude": 151.9533
   },
   {
     "stationID": 40651,
     "wmoNumber": 94557,
     "name": "JIMNA FORESTRY",
     "state": "QLD",
-    "code": "Q"
+    "latitude": -26.6644,
+    "longitude": 152.4606
   },
   {
     "stationID": 41359,
     "wmoNumber": 94552,
     "name": "OAKEY AERO",
     "state": "QLD",
-    "code": "Q"
+    "latitude": -27.4034,
+    "longitude": 151.7413
+  },
+  {
+    "stationID": 58012,
+    "wmoNumber": 94589,
+    "name": "YAMBA PILOT STATION",
+    "state": "NSW",
+    "latitude": -29.4333,
+    "longitude": 153.3633
   },
   {
     "stationID": 40908,
     "wmoNumber": 94570,
     "name": "TEWANTIN RSL PARK",
     "state": "QLD",
-    "code": "Q"
+    "latitude": -26.3911,
+    "longitude": 153.0403
+  },
+  {
+    "stationID": 58077,
+    "wmoNumber": 95571,
+    "name": "GRAFTON RESEARCH STN",
+    "state": "NSW",
+    "latitude": -29.6224,
+    "longitude": 152.9605
   },
   {
     "stationID": 40093,
     "wmoNumber": 94566,
     "name": "GYMPIE",
     "state": "QLD",
-    "code": "Q"
+    "latitude": -26.1831,
+    "longitude": 152.6414
+  },
+  {
+    "stationID": 58161,
+    "wmoNumber": 95570,
+    "name": "GRAFTON AIRPORT AWS",
+    "state": "NSW",
+    "latitude": -29.7583,
+    "longitude": 153.0297
   },
   {
     "stationID": 40922,
     "wmoNumber": 94549,
     "name": "KINGAROY AIRPORT",
     "state": "QLD",
-    "code": "Q"
+    "latitude": -26.5737,
+    "longitude": 151.8398
   },
   {
     "stationID": 40068,
     "wmoNumber": 94584,
     "name": "DOUBLE ISLAND POINT LIGHTHOUSE",
     "state": "QLD",
-    "code": "Q"
+    "latitude": -25.9319,
+    "longitude": 153.1906
   },
   {
     "stationID": 40555,
     "wmoNumber": 94558,
     "name": "TOOLARA (KELLY)",
     "state": "QLD",
-    "code": "Q"
+    "latitude": -25.9713,
+    "longitude": 152.8609
   },
   {
     "stationID": 41522,
     "wmoNumber": 94542,
     "name": "DALBY AIRPORT",
     "state": "QLD",
-    "code": "Q"
+    "latitude": -27.1605,
+    "longitude": 151.2634
   },
   {
     "stationID": 41097,
     "wmoNumber": 95573,
     "name": "INGLEWOOD FOREST",
     "state": "QLD",
-    "code": "Q"
+    "latitude": -28.3429,
+    "longitude": 150.9363
+  },
+  {
+    "stationID": 56243,
+    "wmoNumber": 94588,
+    "name": "GLEN INNES AIRPORT AWS",
+    "state": "NSW",
+    "latitude": -29.678,
+    "longitude": 151.694
+  },
+  {
+    "stationID": 59040,
+    "wmoNumber": 94791,
+    "name": "COFFS HARBOUR MO",
+    "state": "NSW",
+    "latitude": -30.3107,
+    "longitude": 153.1187
   },
   {
     "stationID": 40126,
     "wmoNumber": 94567,
     "name": "MARYBOROUGH",
     "state": "QLD",
-    "code": "Q"
+    "latitude": -25.5161,
+    "longitude": 152.7156
   },
   {
     "stationID": 40405,
     "wmoNumber": 95565,
     "name": "HERVEY BAY AIRPORT",
     "state": "QLD",
-    "code": "Q"
+    "latitude": -25.322,
+    "longitude": 152.8817
+  },
+  {
+    "stationID": 56018,
+    "wmoNumber": 94541,
+    "name": "INVERELL RESEARCH CENTRE",
+    "state": "NSW",
+    "latitude": -29.7752,
+    "longitude": 151.0819
   },
   {
     "stationID": 39066,
     "wmoNumber": 95543,
     "name": "GAYNDAH AIRPORT",
     "state": "QLD",
-    "code": "Q"
+    "latitude": -25.6167,
+    "longitude": 151.6156
+  },
+  {
+    "stationID": 56238,
+    "wmoNumber": 95773,
+    "name": "ARMIDALE AIRPORT AWS",
+    "state": "NSW",
+    "latitude": -30.5273,
+    "longitude": 151.6158
   },
   {
     "stationID": 42112,
     "wmoNumber": 95529,
     "name": "MILES CONSTANCE STREET",
     "state": "QLD",
-    "code": "Q"
+    "latitude": -26.6569,
+    "longitude": 150.1819
   },
   {
     "stationID": 39128,
     "wmoNumber": 94387,
     "name": "BUNDABERG AERO",
     "state": "QLD",
-    "code": "Q"
+    "latitude": -24.9069,
+    "longitude": 152.323
+  },
+  {
+    "stationID": 59007,
+    "wmoNumber": 94785,
+    "name": "KEMPSEY AIRPORT AWS",
+    "state": "NSW",
+    "latitude": -31.0711,
+    "longitude": 152.7717
+  },
+  {
+    "stationID": 53115,
+    "wmoNumber": 95527,
+    "name": "MOREE AERO",
+    "state": "NSW",
+    "latitude": -29.4898,
+    "longitude": 149.8471
+  },
+  {
+    "stationID": 60139,
+    "wmoNumber": 94786,
+    "name": "PORT MACQUARIE AIRPORT AWS",
+    "state": "NSW",
+    "latitude": -31.4336,
+    "longitude": 152.8655
   },
   {
     "stationID": 39059,
     "wmoNumber": 94388,
     "name": "LADY ELLIOT ISLAND",
     "state": "QLD",
-    "code": "Q"
+    "latitude": -24.1116,
+    "longitude": 152.7161
+  },
+  {
+    "stationID": 55325,
+    "wmoNumber": 95762,
+    "name": "TAMWORTH AIRPORT AWS",
+    "state": "NSW",
+    "latitude": -31.0742,
+    "longitude": 150.8362
+  },
+  {
+    "stationID": 54038,
+    "wmoNumber": 95734,
+    "name": "NARRABRI AIRPORT AWS",
+    "state": "NSW",
+    "latitude": -30.3154,
+    "longitude": 149.8302
+  },
+  {
+    "stationID": 60141,
+    "wmoNumber": 95784,
+    "name": "TAREE AIRPORT AWS",
+    "state": "NSW",
+    "latitude": -31.8896,
+    "longitude": 152.512
+  },
+  {
+    "stationID": 55202,
+    "wmoNumber": 95740,
+    "name": "GUNNEDAH AIRPORT AWS",
+    "state": "NSW",
+    "latitude": -30.9537,
+    "longitude": 150.2494
   },
   {
     "stationID": 43109,
     "wmoNumber": 94517,
     "name": "ST GEORGE AIRPORT",
     "state": "QLD",
-    "code": "Q"
+    "latitude": -28.0489,
+    "longitude": 148.5942
   },
   {
     "stationID": 39089,
     "wmoNumber": 94376,
     "name": "THANGOOL AIRPORT",
     "state": "QLD",
-    "code": "Q"
+    "latitude": -24.4935,
+    "longitude": 150.5709
   },
   {
     "stationID": 43091,
     "wmoNumber": 94515,
     "name": "ROMA AIRPORT",
     "state": "QLD",
-    "code": "Q"
+    "latitude": -26.5474,
+    "longitude": 148.7716
+  },
+  {
+    "stationID": 61392,
+    "wmoNumber": 95747,
+    "name": "MURRURUNDI GAP AWS",
+    "state": "NSW",
+    "latitude": -31.7416,
+    "longitude": 150.7937
   },
   {
     "stationID": 39123,
     "wmoNumber": 94380,
     "name": "GLADSTONE RADAR",
     "state": "QLD",
-    "code": "Q"
+    "latitude": -23.8553,
+    "longitude": 151.2628
   },
   {
     "stationID": 39326,
     "wmoNumber": 94381,
     "name": "GLADSTONE AIRPORT",
     "state": "QLD",
-    "code": "Q"
+    "latitude": -23.8697,
+    "longitude": 151.2214
   },
   {
     "stationID": 39122,
     "wmoNumber": 94386,
     "name": "HERON ISLAND RES STN",
     "state": "QLD",
-    "code": "Q"
+    "latitude": -23.4422,
+    "longitude": 151.9131
+  },
+  {
+    "stationID": 61363,
+    "wmoNumber": 95758,
+    "name": "SCONE AIRPORT AWS",
+    "state": "NSW",
+    "latitude": -32.0335,
+    "longitude": 150.8264
   },
   {
     "stationID": 39322,
     "wmoNumber": 94378,
     "name": "RUNDLE ISLAND",
     "state": "QLD",
-    "code": "Q"
+    "latitude": -23.5293,
+    "longitude": 151.2763
+  },
+  {
+    "stationID": 64017,
+    "wmoNumber": 95728,
+    "name": "COONABARABRAN AIRPORT AWS",
+    "state": "NSW",
+    "latitude": -31.3304,
+    "longitude": 149.2699
+  },
+  {
+    "stationID": 61250,
+    "wmoNumber": 94775,
+    "name": "TOCAL AWS",
+    "state": "NSW",
+    "latitude": -32.6296,
+    "longitude": 151.5919
+  },
+  {
+    "stationID": 52088,
+    "wmoNumber": 95715,
+    "name": "WALGETT AIRPORT AWS",
+    "state": "NSW",
+    "latitude": -30.0372,
+    "longitude": 148.1223
+  },
+  {
+    "stationID": 61078,
+    "wmoNumber": 94776,
+    "name": "WILLIAMTOWN RAAF",
+    "state": "NSW",
+    "latitude": -32.7932,
+    "longitude": 151.8359
   },
   {
     "stationID": 200601,
     "wmoNumber": 94394,
     "name": "CATO ISLAND",
     "state": "QLD",
-    "code": "Q"
+    "latitude": -23.2503,
+    "longitude": 155.542
+  },
+  {
+    "stationID": 61287,
+    "wmoNumber": 95754,
+    "name": "MERRIWA (ROSCOMMON)",
+    "state": "NSW",
+    "latitude": -32.1852,
+    "longitude": 150.1737
+  },
+  {
+    "stationID": 61260,
+    "wmoNumber": 95771,
+    "name": "CESSNOCK AIRPORT AWS",
+    "state": "NSW",
+    "latitude": -32.7886,
+    "longitude": 151.3377
+  },
+  {
+    "stationID": 61055,
+    "wmoNumber": 94774,
+    "name": "NEWCASTLE NOBBYS SIGNAL STATION AWS",
+    "state": "NSW",
+    "latitude": -32.9184,
+    "longitude": 151.7985
   },
   {
     "stationID": 39083,
     "wmoNumber": 94374,
     "name": "ROCKHAMPTON AERO",
     "state": "QLD",
-    "code": "Q"
-  },
-  {
-    "stationID": 33294,
-    "wmoNumber": 94373,
-    "name": "YEPPOON THE ESPLANADE",
-    "state": "QLD",
-    "code": "Q"
-  },
-  {
-    "stationID": 35129,
-    "wmoNumber": 94396,
-    "name": "ROLLESTON AIRPORT",
-    "state": "QLD",
-    "code": "Q"
-  },
-  {
-    "stationID": 33308,
-    "wmoNumber": 94370,
-    "name": "SAMUEL HILL AERO",
-    "state": "QLD",
-    "code": "Q"
-  },
-  {
-    "stationID": 200831,
-    "wmoNumber": 94379,
-    "name": "GANNET CAY",
-    "state": "QLD",
-    "code": "Q"
-  },
-  {
-    "stationID": 33195,
-    "wmoNumber": 95370,
-    "name": "WILLIAMSON",
-    "state": "QLD",
-    "code": "Q"
-  },
-  {
-    "stationID": 35264,
-    "wmoNumber": 94363,
-    "name": "EMERALD AIRPORT",
-    "state": "QLD",
-    "code": "Q"
-  },
-  {
-    "stationID": 44021,
-    "wmoNumber": 94510,
-    "name": "CHARLEVILLE AERO",
-    "state": "QLD",
-    "code": "Q"
-  },
-  {
-    "stationID": 33210,
-    "wmoNumber": 95369,
-    "name": "ST LAWRENCE",
-    "state": "QLD",
-    "code": "Q"
-  },
-  {
-    "stationID": 35139,
-    "wmoNumber": 94399,
-    "name": "LOCHINGTON",
-    "state": "QLD",
-    "code": "Q"
-  },
-  {
-    "stationID": 200001,
-    "wmoNumber": 94372,
-    "name": "MIDDLE PERCY ISLAND",
-    "state": "QLD",
-    "code": "Q"
-  },
-  {
-    "stationID": 200701,
-    "wmoNumber": 94393,
-    "name": "FREDERICK REEF",
-    "state": "QLD",
-    "code": "Q"
-  },
-  {
-    "stationID": 35124,
-    "wmoNumber": 94395,
-    "name": "CLERMONT AIRPORT",
-    "state": "QLD",
-    "code": "Q"
-  },
-  {
-    "stationID": 34035,
-    "wmoNumber": 94397,
-    "name": "MORANBAH AIRPORT",
-    "state": "QLD",
-    "code": "Q"
-  },
-  {
-    "stationID": 33317,
-    "wmoNumber": 99367,
-    "name": "HAY POINT",
-    "state": "QLD",
-    "code": "Q"
-  },
-  {
-    "stationID": 33045,
-    "wmoNumber": 95367,
-    "name": "MACKAY AERO",
-    "state": "QLD",
-    "code": "Q"
-  },
-  {
-    "stationID": 33119,
-    "wmoNumber": 94367,
-    "name": "MACKAY M.O",
-    "state": "QLD",
-    "code": "Q"
-  },
-  {
-    "stationID": 200736,
-    "wmoNumber": 94371,
-    "name": "CREAL REEF",
-    "state": "QLD",
-    "code": "Q"
-  },
-  {
-    "stationID": 36034,
-    "wmoNumber": 95351,
-    "name": "BLACKALL AIRPORT",
-    "state": "QLD",
-    "code": "Q"
-  },
-  {
-    "stationID": 45025,
-    "wmoNumber": 95492,
-    "name": "THARGOMINDAH AIRPORT",
-    "state": "QLD",
-    "code": "Q"
-  },
-  {
-    "stationID": 33106,
-    "wmoNumber": 94368,
-    "name": "HAMILTON ISLAND AIRPORT",
-    "state": "QLD",
-    "code": "Q"
-  },
-  {
-    "stationID": 33247,
-    "wmoNumber": 94365,
-    "name": "PROSERPINE AIRPORT",
-    "state": "QLD",
-    "code": "Q"
-  },
-  {
-    "stationID": 200704,
-    "wmoNumber": 94298,
-    "name": "MARION REEF",
-    "state": "QLD",
-    "code": "Q"
-  },
-  {
-    "stationID": 36031,
-    "wmoNumber": 94346,
-    "name": "LONGREACH AERO",
-    "state": "QLD",
-    "code": "Q"
-  },
-  {
-    "stationID": 33002,
-    "wmoNumber": 95295,
-    "name": "AYR DPI RESEARCH STN",
-    "state": "QLD",
-    "code": "Q"
-  },
-  {
-    "stationID": 33295,
-    "wmoNumber": 95296,
-    "name": "ALVA BEACH",
-    "state": "QLD",
-    "code": "Q"
-  },
-  {
-    "stationID": 45009,
-    "wmoNumber": 95487,
-    "name": "BALLERA GAS FIELD",
-    "state": "QLD",
-    "code": "Q"
-  },
-  {
-    "stationID": 33307,
-    "wmoNumber": 95293,
-    "name": "WOOLSHED",
-    "state": "QLD",
-    "code": "Q"
-  },
-  {
-    "stationID": 32040,
-    "wmoNumber": 94294,
-    "name": "TOWNSVILLE AERO",
-    "state": "QLD",
-    "code": "Q"
-  },
-  {
-    "stationID": 37039,
-    "wmoNumber": 94342,
-    "name": "WINTON AIRPORT",
-    "state": "QLD",
-    "code": "Q"
-  },
-  {
-    "stationID": 200727,
-    "wmoNumber": 94296,
-    "name": "LIHOU REEF",
-    "state": "QLD",
-    "code": "Q"
-  },
-  {
-    "stationID": 30022,
-    "wmoNumber": 94343,
-    "name": "HUGHENDEN AIRPORT",
-    "state": "QLD",
-    "code": "Q"
-  },
-  {
-    "stationID": 200783,
-    "wmoNumber": 94290,
-    "name": "FLINDERS REEF",
-    "state": "QLD",
-    "code": "Q"
-  },
-  {
-    "stationID": 30161,
-    "wmoNumber": 94341,
-    "name": "RICHMOND AIRPORT",
-    "state": "QLD",
-    "code": "Q"
-  },
-  {
-    "stationID": 200283,
-    "wmoNumber": 94299,
-    "name": "WILLIS ISLAND",
-    "state": "QLD",
-    "code": "Q"
-  },
-  {
-    "stationID": 32037,
-    "wmoNumber": 95292,
-    "name": "SOUTH JOHNSTONE EXP STN",
-    "state": "QLD",
-    "code": "Q"
-  },
-  {
-    "stationID": 200732,
-    "wmoNumber": 94289,
-    "name": "HOLMES REEF",
-    "state": "QLD",
-    "code": "Q"
-  },
-  {
-    "stationID": 38026,
-    "wmoNumber": 95482,
-    "name": "BIRDSVILLE AIRPORT",
-    "state": "QLD",
-    "code": "Q"
-  },
-  {
-    "stationID": 37036,
-    "wmoNumber": 94338,
-    "name": "TREPELL AIRPORT",
-    "state": "QLD",
-    "code": "Q"
-  },
-  {
-    "stationID": 29058,
-    "wmoNumber": 94337,
-    "name": "JULIA CREEK AIRPORT",
-    "state": "QLD",
-    "code": "Q"
-  },
-  {
-    "stationID": 200879,
-    "wmoNumber": 94284,
-    "name": "ARLINGTON REEF",
-    "state": "QLD",
-    "code": "Q"
-  },
-  {
-    "stationID": 31210,
-    "wmoNumber": 95286,
-    "name": "MAREEBA AIRPORT",
-    "state": "QLD",
-    "code": "Q"
-  },
-  {
-    "stationID": 31011,
-    "wmoNumber": 94287,
-    "name": "CAIRNS AERO",
-    "state": "QLD",
-    "code": "Q"
-  },
-  {
-    "stationID": 30124,
-    "wmoNumber": 94274,
-    "name": "GEORGETOWN AIRPORT",
-    "state": "QLD",
-    "code": "Q"
-  },
-  {
-    "stationID": 31037,
-    "wmoNumber": 94285,
-    "name": "LOW ISLES LIGHTHOUSE",
-    "state": "QLD",
-    "code": "Q"
-  },
-  {
-    "stationID": 37034,
-    "wmoNumber": 94336,
-    "name": "THE MONUMENT AIRPORT",
-    "state": "QLD",
-    "code": "Q"
-  },
-  {
-    "stationID": 200840,
-    "wmoNumber": 95288,
-    "name": "BOUGAINVILLE REEF",
-    "state": "QLD",
-    "code": "Q"
-  },
-  {
-    "stationID": 29141,
-    "wmoNumber": 94335,
-    "name": "CLONCURRY AIRPORT",
-    "state": "QLD",
-    "code": "Q"
-  },
-  {
-    "stationID": 29127,
-    "wmoNumber": 94332,
-    "name": "MOUNT ISA AERO",
-    "state": "QLD",
-    "code": "Q"
-  },
-  {
-    "stationID": 31209,
-    "wmoNumber": 95283,
-    "name": "COOKTOWN AIRPORT",
-    "state": "QLD",
-    "code": "Q"
-  },
-  {
-    "stationID": 28004,
-    "wmoNumber": 94276,
-    "name": "PALMERVILLE",
-    "state": "QLD",
-    "code": "Q"
-  },
-  {
-    "stationID": 31213,
-    "wmoNumber": 94188,
-    "name": "CAPE FLATTERY",
-    "state": "QLD",
-    "code": "Q"
-  },
-  {
-    "stationID": 29063,
-    "wmoNumber": 94266,
-    "name": "NORMANTON AIRPORT",
-    "state": "QLD",
-    "code": "Q"
-  },
-  {
-    "stationID": 37010,
-    "wmoNumber": 94255,
-    "name": "CAMOOWEAL TOWNSHIP",
-    "state": "QLD",
-    "code": "Q"
-  },
-  {
-    "stationID": 29167,
-    "wmoNumber": 94261,
-    "name": "CENTURY MINE",
-    "state": "QLD",
-    "code": "Q"
-  },
-  {
-    "stationID": 29077,
-    "wmoNumber": 94260,
-    "name": "BURKETOWN AIRPORT",
-    "state": "QLD",
-    "code": "Q"
-  },
-  {
-    "stationID": 29038,
-    "wmoNumber": 94268,
-    "name": "KOWANYAMA AIRPORT",
-    "state": "QLD",
-    "code": "Q"
-  },
-  {
-    "stationID": 27073,
-    "wmoNumber": 94183,
-    "name": "COEN AIRPORT",
-    "state": "QLD",
-    "code": "Q"
-  },
-  {
-    "stationID": 29039,
-    "wmoNumber": 94256,
-    "name": "MORNINGTON ISLAND",
-    "state": "QLD",
-    "code": "Q"
-  },
-  {
-    "stationID": 28008,
-    "wmoNumber": 94186,
-    "name": "LOCKHART RIVER AIRPORT",
-    "state": "QLD",
-    "code": "Q"
-  },
-  {
-    "stationID": 27075,
-    "wmoNumber": 94171,
-    "name": "SCHERGER RAAF",
-    "state": "QLD",
-    "code": "Q"
-  },
-  {
-    "stationID": 27045,
-    "wmoNumber": 94170,
-    "name": "WEIPA AERO",
-    "state": "QLD",
-    "code": "Q"
-  },
-  {
-    "stationID": 27058,
-    "wmoNumber": 94174,
-    "name": "HORN ISLAND",
-    "state": "QLD",
-    "code": "Q"
-  },
-  {
-    "stationID": 27054,
-    "wmoNumber": 94182,
-    "name": "COCONUT ISLAND",
-    "state": "QLD",
-    "code": "Q"
+    "latitude": -23.3753,
+    "longitude": 150.4775
   },
   {
     "stationID": 33208,
     "wmoNumber": 95298,
     "name": "ROSSLYN BAY NTC AWS",
     "state": "SA",
-    "code": "S"
+    "latitude": -23.161,
+    "longitude": 150.7901
+  },
+  {
+    "stationID": 51161,
+    "wmoNumber": 95718,
+    "name": "COONAMBLE AIRPORT AWS",
+    "state": "NSW",
+    "latitude": -30.9776,
+    "longitude": 148.3798
+  },
+  {
+    "stationID": 33294,
+    "wmoNumber": 94373,
+    "name": "YEPPOON THE ESPLANADE",
+    "state": "QLD",
+    "latitude": -23.1364,
+    "longitude": 150.7506
+  },
+  {
+    "stationID": 61412,
+    "wmoNumber": 95767,
+    "name": "LAKE MACQUARIE AWS",
+    "state": "NSW",
+    "latitude": -33.0887,
+    "longitude": 151.4636
+  },
+  {
+    "stationID": 35129,
+    "wmoNumber": 94396,
+    "name": "ROLLESTON AIRPORT",
+    "state": "QLD",
+    "latitude": -24.4617,
+    "longitude": 148.6264
+  },
+  {
+    "stationID": 62100,
+    "wmoNumber": 94754,
+    "name": "NULLO MOUNTAIN AWS",
+    "state": "NSW",
+    "latitude": -32.7244,
+    "longitude": 150.229
+  },
+  {
+    "stationID": 61366,
+    "wmoNumber": 95770,
+    "name": "NORAH HEAD AWS",
+    "state": "NSW",
+    "latitude": -33.2815,
+    "longitude": 151.5766
+  },
+  {
+    "stationID": 62101,
+    "wmoNumber": 94727,
+    "name": "MUDGEE AIRPORT AWS",
+    "state": "NSW",
+    "latitude": -32.5628,
+    "longitude": 149.6149
+  },
+  {
+    "stationID": 61375,
+    "wmoNumber": 95774,
+    "name": "MANGROVE MOUNTAIN AWS",
+    "state": "NSW",
+    "latitude": -33.2894,
+    "longitude": 151.2107
+  },
+  {
+    "stationID": 33308,
+    "wmoNumber": 94370,
+    "name": "SAMUEL HILL AERO",
+    "state": "QLD",
+    "latitude": -22.7433,
+    "longitude": 150.6578
+  },
+  {
+    "stationID": 61087,
+    "wmoNumber": 94777,
+    "name": "GOSFORD (NARARA RESEARCH STATION) AWS",
+    "state": "NSW",
+    "latitude": -33.3949,
+    "longitude": 151.3289
+  },
+  {
+    "stationID": 65070,
+    "wmoNumber": 95719,
+    "name": "DUBBO AIRPORT AWS",
+    "state": "NSW",
+    "latitude": -32.2206,
+    "longitude": 148.5753
+  },
+  {
+    "stationID": 200831,
+    "wmoNumber": 94379,
+    "name": "GANNET CAY",
+    "state": "QLD",
+    "latitude": -21.9769,
+    "longitude": 152.4707
+  },
+  {
+    "stationID": 66059,
+    "wmoNumber": 94759,
+    "name": "TERREY HILLS AWS",
+    "state": "NSW",
+    "latitude": -33.6908,
+    "longitude": 151.2253
+  },
+  {
+    "stationID": 67105,
+    "wmoNumber": 95753,
+    "name": "RICHMOND RAAF",
+    "state": "NSW",
+    "latitude": -33.6004,
+    "longitude": 150.7761
+  },
+  {
+    "stationID": 33195,
+    "wmoNumber": 95370,
+    "name": "WILLIAMSON",
+    "state": "QLD",
+    "latitude": -22.4703,
+    "longitude": 150.1786
+  },
+  {
+    "stationID": 200715,
+    "wmoNumber": 95995,
+    "name": "LORD HOWE ISLAND WINDY POINT",
+    "state": "NSW",
+    "latitude": -31.5381,
+    "longitude": 159.0733
+  },
+  {
+    "stationID": 200839,
+    "wmoNumber": 94995,
+    "name": "LORD HOWE ISLAND AERO",
+    "state": "NSW",
+    "latitude": -31.5421,
+    "longitude": 159.0786
+  },
+  {
+    "stationID": 66197,
+    "wmoNumber": 95768,
+    "name": "NORTH HEAD",
+    "state": "NSW",
+    "latitude": -33.8152,
+    "longitude": 151.2986
+  },
+  {
+    "stationID": 66196,
+    "wmoNumber": 95766,
+    "name": "WEDDING CAKE WEST",
+    "state": "NSW",
+    "latitude": -33.8405,
+    "longitude": 151.2643
+  },
+  {
+    "stationID": 51049,
+    "wmoNumber": 95710,
+    "name": "TRANGIE RESEARCH STATION AWS",
+    "state": "NSW",
+    "latitude": -31.9861,
+    "longitude": 147.9489
+  },
+  {
+    "stationID": 66022,
+    "wmoNumber": 94769,
+    "name": "FORT DENISON",
+    "state": "NSW",
+    "latitude": -33.8551,
+    "longitude": 151.2254
+  },
+  {
+    "stationID": 66062,
+    "wmoNumber": 94768,
+    "name": "SYDNEY (OBSERVATORY HILL)",
+    "state": "NSW",
+    "latitude": -33.8607,
+    "longitude": 151.205
+  },
+  {
+    "stationID": 66212,
+    "wmoNumber": 95765,
+    "name": "SYDNEY OLYMPIC PARK AWS (ARCHERY CENTRE)",
+    "state": "NSW",
+    "latitude": -33.8338,
+    "longitude": 151.0718
+  },
+  {
+    "stationID": 67113,
+    "wmoNumber": 94763,
+    "name": "PENRITH LAKES AWS",
+    "state": "NSW",
+    "latitude": -33.7195,
+    "longitude": 150.6783
+  },
+  {
+    "stationID": 63292,
+    "wmoNumber": 94743,
+    "name": "MOUNT BOYCE AWS",
+    "state": "NSW",
+    "latitude": -33.6185,
+    "longitude": 150.2741
+  },
+  {
+    "stationID": 66194,
+    "wmoNumber": 94766,
+    "name": "CANTERBURY RACECOURSE AWS",
+    "state": "NSW",
+    "latitude": -33.9057,
+    "longitude": 151.1134
+  },
+  {
+    "stationID": 67119,
+    "wmoNumber": 94760,
+    "name": "HORSLEY PARK EQUESTRIAN CENTRE AWS",
+    "state": "NSW",
+    "latitude": -33.8511,
+    "longitude": 150.8567
+  },
+  {
+    "stationID": 66037,
+    "wmoNumber": 94767,
+    "name": "SYDNEY AIRPORT AMO",
+    "state": "NSW",
+    "latitude": -33.9465,
+    "longitude": 151.1731
+  },
+  {
+    "stationID": 66051,
+    "wmoNumber": 94780,
+    "name": "LITTLE BAY (THE COAST GOLF CLUB)",
+    "state": "NSW",
+    "latitude": -33.9829,
+    "longitude": 151.2502
+  },
+  {
+    "stationID": 66137,
+    "wmoNumber": 94765,
+    "name": "BANKSTOWN AIRPORT AWS",
+    "state": "NSW",
+    "latitude": -33.9181,
+    "longitude": 150.9864
+  },
+  {
+    "stationID": 66100,
+    "wmoNumber": 99766,
+    "name": "MOLINEUX POINT AWS",
+    "state": "NSW",
+    "latitude": -33.9819,
+    "longitude": 151.2092
+  },
+  {
+    "stationID": 63291,
+    "wmoNumber": 94729,
+    "name": "BATHURST AIRPORT AWS",
+    "state": "NSW",
+    "latitude": -33.412,
+    "longitude": 149.654
+  },
+  {
+    "stationID": 66043,
+    "wmoNumber": 95756,
+    "name": "KURNELL AWS",
+    "state": "NSW",
+    "latitude": -34.0039,
+    "longitude": 151.2111
+  },
+  {
+    "stationID": 35264,
+    "wmoNumber": 94363,
+    "name": "EMERALD AIRPORT",
+    "state": "QLD",
+    "latitude": -23.5694,
+    "longitude": 148.1756
+  },
+  {
+    "stationID": 67108,
+    "wmoNumber": 94752,
+    "name": "BADGERYS CREEK AWS",
+    "state": "NSW",
+    "latitude": -33.8969,
+    "longitude": 150.7281
+  },
+  {
+    "stationID": 67117,
+    "wmoNumber": 94762,
+    "name": "HOLSWORTHY CONTROL RANGE",
+    "state": "NSW",
+    "latitude": -33.9795,
+    "longitude": 150.9254
+  },
+  {
+    "stationID": 66023,
+    "wmoNumber": 95757,
+    "name": "LUCAS HEIGHTS AWS",
+    "state": "NSW",
+    "latitude": -34.0514,
+    "longitude": 150.98
+  },
+  {
+    "stationID": 44021,
+    "wmoNumber": 94510,
+    "name": "CHARLEVILLE AERO",
+    "state": "QLD",
+    "latitude": -26.4139,
+    "longitude": 146.2558
+  },
+  {
+    "stationID": 66208,
+    "wmoNumber": 95752,
+    "name": "WATTAMOLLA AWS",
+    "state": "NSW",
+    "latitude": -34.1407,
+    "longitude": 151.1185
+  },
+  {
+    "stationID": 68257,
+    "wmoNumber": 94757,
+    "name": "CAMPBELLTOWN (MOUNT ANNAN)",
+    "state": "NSW",
+    "latitude": -34.0615,
+    "longitude": 150.7735
+  },
+  {
+    "stationID": 68192,
+    "wmoNumber": 94755,
+    "name": "CAMDEN AIRPORT AWS",
+    "state": "NSW",
+    "latitude": -34.0391,
+    "longitude": 150.689
+  },
+  {
+    "stationID": 33210,
+    "wmoNumber": 95369,
+    "name": "ST LAWRENCE",
+    "state": "QLD",
+    "latitude": -22.3472,
+    "longitude": 149.5242
+  },
+  {
+    "stationID": 63303,
+    "wmoNumber": 95726,
+    "name": "ORANGE AIRPORT AWS",
+    "state": "NSW",
+    "latitude": -33.3813,
+    "longitude": 149.127
+  },
+  {
+    "stationID": 35139,
+    "wmoNumber": 94399,
+    "name": "LOCHINGTON",
+    "state": "QLD",
+    "latitude": -23.9424,
+    "longitude": 147.525
+  },
+  {
+    "stationID": 68228,
+    "wmoNumber": 94749,
+    "name": "BELLAMBI AWS",
+    "state": "NSW",
+    "latitude": -34.3691,
+    "longitude": 150.9291
+  },
+  {
+    "stationID": 48245,
+    "wmoNumber": 94703,
+    "name": "BOURKE AIRPORT AWS",
+    "state": "NSW",
+    "latitude": -30.0362,
+    "longitude": 145.9521
+  },
+  {
+    "stationID": 65068,
+    "wmoNumber": 95717,
+    "name": "PARKES AIRPORT AWS",
+    "state": "NSW",
+    "latitude": -33.1281,
+    "longitude": 148.2428
+  },
+  {
+    "stationID": 200001,
+    "wmoNumber": 94372,
+    "name": "MIDDLE PERCY ISLAND",
+    "state": "QLD",
+    "latitude": -21.6628,
+    "longitude": 150.2711
   },
   {
     "stationID": 68253,
     "wmoNumber": 95745,
     "name": "PORT KEMBLA NTC AWS",
     "state": "SA",
-    "code": "S"
+    "latitude": -34.4734,
+    "longitude": 150.9118
   },
   {
-    "stationID": 32182,
-    "wmoNumber": 94297,
-    "name": "CAPE FERGUSON NTC AWS",
-    "state": "SA",
-    "code": "S"
+    "stationID": 68241,
+    "wmoNumber": 95748,
+    "name": "WOLLONGONG AIRPORT",
+    "state": "NSW",
+    "latitude": -34.5638,
+    "longitude": 150.79
   },
   {
-    "stationID": 17123,
-    "wmoNumber": 95481,
-    "name": "MOOMBA AIRPORT",
-    "state": "SA",
-    "code": "S"
+    "stationID": 200701,
+    "wmoNumber": 94393,
+    "name": "FREDERICK REEF",
+    "state": "QLD",
+    "latitude": -20.9375,
+    "longitude": 154.4019
   },
   {
-    "stationID": 24048,
-    "wmoNumber": 95687,
-    "name": "RENMARK AERO",
-    "state": "SA",
-    "code": "S"
+    "stationID": 68242,
+    "wmoNumber": 95749,
+    "name": "KIAMA (BOMBO HEADLAND)",
+    "state": "NSW",
+    "latitude": -34.6532,
+    "longitude": 150.8609
   },
   {
-    "stationID": 24024,
-    "wmoNumber": 94682,
-    "name": "LOXTON RESEARCH CENTRE",
-    "state": "SA",
-    "code": "S"
+    "stationID": 68239,
+    "wmoNumber": 94746,
+    "name": "MOSS VALE AWS",
+    "state": "NSW",
+    "latitude": -34.5253,
+    "longitude": 150.4217
   },
   {
-    "stationID": 20062,
-    "wmoNumber": 94684,
-    "name": "YUNTA AIRSTRIP",
-    "state": "SA",
-    "code": "S"
+    "stationID": 65111,
+    "wmoNumber": 95721,
+    "name": "COWRA AIRPORT AWS",
+    "state": "NSW",
+    "latitude": -33.8449,
+    "longitude": 148.6497
   },
   {
-    "stationID": 25562,
-    "wmoNumber": 94690,
-    "name": "AUSTIN PLAINS",
-    "state": "SA",
-    "code": "S"
+    "stationID": 65103,
+    "wmoNumber": 94715,
+    "name": "FORBES AIRPORT AWS",
+    "state": "NSW",
+    "latitude": -33.3627,
+    "longitude": 147.9205
   },
   {
-    "stationID": 17110,
-    "wmoNumber": 94674,
-    "name": "LEIGH CREEK AIRPORT",
-    "state": "SA",
-    "code": "S"
+    "stationID": 35124,
+    "wmoNumber": 94395,
+    "name": "CLERMONT AIRPORT",
+    "state": "QLD",
+    "latitude": -22.7756,
+    "longitude": 147.6217
   },
   {
-    "stationID": 17126,
-    "wmoNumber": 95480,
-    "name": "MARREE AERO",
-    "state": "SA",
-    "code": "S"
+    "stationID": 50137,
+    "wmoNumber": 95708,
+    "name": "CONDOBOLIN AIRPORT AWS",
+    "state": "NSW",
+    "latitude": -33.0682,
+    "longitude": 147.2133
   },
   {
-    "stationID": 25557,
-    "wmoNumber": 95815,
-    "name": "MUNKORA",
-    "state": "SA",
-    "code": "S"
+    "stationID": 68072,
+    "wmoNumber": 94750,
+    "name": "NOWRA RAN AIR STATION AWS",
+    "state": "NSW",
+    "latitude": -34.9469,
+    "longitude": 150.5353
   },
   {
-    "stationID": 23373,
-    "wmoNumber": 94681,
-    "name": "NURIOOTPA VITICULTURAL",
-    "state": "SA",
-    "code": "S"
+    "stationID": 48027,
+    "wmoNumber": 94711,
+    "name": "COBAR MO",
+    "state": "NSW",
+    "latitude": -31.484,
+    "longitude": 145.8294
   },
   {
-    "stationID": 26100,
-    "wmoNumber": 95823,
-    "name": "PADTHAWAY SOUTH",
-    "state": "SA",
-    "code": "S"
+    "stationID": 48237,
+    "wmoNumber": 94710,
+    "name": "COBAR AIRPORT AWS",
+    "state": "NSW",
+    "latitude": -31.5388,
+    "longitude": 145.7964
   },
   {
-    "stationID": 21131,
-    "wmoNumber": 95667,
-    "name": "CLARE HIGH SCHOOL",
-    "state": "SA",
-    "code": "S"
+    "stationID": 68151,
+    "wmoNumber": 95940,
+    "name": "POINT PERPENDICULAR AWS",
+    "state": "NSW",
+    "latitude": -35.0936,
+    "longitude": 150.8049
   },
   {
-    "stationID": 26099,
-    "wmoNumber": 94820,
-    "name": "NARACOORTE AERODROME",
-    "state": "SA",
-    "code": "S"
-  },
-  {
-    "stationID": 24584,
-    "wmoNumber": 95818,
-    "name": "PALLAMANA AERODROME",
-    "state": "SA",
-    "code": "S"
-  },
-  {
-    "stationID": 23878,
-    "wmoNumber": 94678,
-    "name": "MT CRAWFORD AWS",
-    "state": "SA",
-    "code": "S"
-  },
-  {
-    "stationID": 26091,
-    "wmoNumber": 94817,
-    "name": "COONAWARRA",
-    "state": "SA",
-    "code": "S"
-  },
-  {
-    "stationID": 23122,
-    "wmoNumber": 95671,
-    "name": "ROSEWORTHY AWS",
-    "state": "SA",
-    "code": "S"
-  },
-  {
-    "stationID": 21133,
-    "wmoNumber": 95670,
-    "name": "RAYVILLE PARK",
-    "state": "SA",
-    "code": "S"
-  },
-  {
-    "stationID": 18201,
-    "wmoNumber": 95666,
-    "name": "PORT AUGUSTA AERO",
-    "state": "SA",
-    "code": "S"
-  },
-  {
-    "stationID": 23083,
-    "wmoNumber": 95676,
-    "name": "EDINBURGH RAAF",
-    "state": "SA",
-    "code": "S"
-  },
-  {
-    "stationID": 90192,
-    "wmoNumber": 95826,
-    "name": "PORTLAND NTC AWS",
-    "state": "SA",
-    "code": "S"
-  },
-  {
-    "stationID": 23013,
-    "wmoNumber": 95677,
-    "name": "PARAFIELD AIRPORT",
-    "state": "SA",
-    "code": "S"
-  },
-  {
-    "stationID": 24580,
-    "wmoNumber": 94814,
-    "name": "STRATHALBYN RACECOURSE",
-    "state": "SA",
-    "code": "S"
-  },
-  {
-    "stationID": 23842,
-    "wmoNumber": 95678,
-    "name": "MOUNT LOFTY",
-    "state": "SA",
-    "code": "S"
-  },
-  {
-    "stationID": 23090,
-    "wmoNumber": 94675,
-    "name": "KENT TOWN",
-    "state": "SA",
-    "code": "S"
-  },
-  {
-    "stationID": 23052,
-    "wmoNumber": 95675,
-    "name": "BLACK POLE",
-    "state": "SA",
-    "code": "S"
-  },
-  {
-    "stationID": 26021,
-    "wmoNumber": 94821,
-    "name": "MOUNT GAMBIER AERO",
-    "state": "SA",
-    "code": "S"
-  },
-  {
-    "stationID": 23123,
-    "wmoNumber": 99673,
-    "name": "ADELAIDE AIRPORT (ANEMOMETER NORTHEAST)",
-    "state": "SA",
-    "code": "S"
-  },
-  {
-    "stationID": 23887,
-    "wmoNumber": 94683,
-    "name": "KUITPO FOREST RESERVE",
-    "state": "SA",
-    "code": "S"
-  },
-  {
-    "stationID": 23124,
-    "wmoNumber": 99674,
-    "name": "ADELAIDE AIRPORT (ANEMOMETER NORTHWEST",
-    "state": "SA",
-    "code": "S"
-  },
-  {
-    "stationID": 23034,
-    "wmoNumber": 94672,
-    "name": "ADELAIDE AIRPORT",
-    "state": "SA",
-    "code": "S"
-  },
-  {
-    "stationID": 23109,
-    "wmoNumber": 99672,
-    "name": "ADELAIDE AIRPORT (ANEMOMETER SOUTH WEST)",
-    "state": "SA",
-    "code": "S"
-  },
-  {
-    "stationID": 91344,
-    "wmoNumber": 95963,
-    "name": "BURNIE NTC AWS",
-    "state": "SA",
-    "code": "S"
-  },
-  {
-    "stationID": 23894,
-    "wmoNumber": 94677,
-    "name": "HINDMARSH ISLAND AWS",
-    "state": "SA",
-    "code": "S"
-  },
-  {
-    "stationID": 23885,
-    "wmoNumber": 94808,
-    "name": "NOARLUNGA",
-    "state": "SA",
-    "code": "S"
-  },
-  {
-    "stationID": 18120,
-    "wmoNumber": 95664,
-    "name": "WHYALLA AERO",
-    "state": "SA",
-    "code": "S"
-  },
-  {
-    "stationID": 16096,
-    "wmoNumber": 95658,
-    "name": "OLYMPIC DAM AERODROME",
-    "state": "SA",
-    "code": "S"
-  },
-  {
-    "stationID": 26095,
-    "wmoNumber": 94813,
-    "name": "THE LIMESTONE",
-    "state": "SA",
-    "code": "S"
-  },
-  {
-    "stationID": 23886,
-    "wmoNumber": 95679,
-    "name": "MOUNT TERRIBLE RADAR",
-    "state": "SA",
-    "code": "S"
-  },
-  {
-    "stationID": 26105,
-    "wmoNumber": 95816,
-    "name": "ROBE AIRFIELD",
-    "state": "SA",
-    "code": "S"
-  },
-  {
-    "stationID": 22050,
-    "wmoNumber": 94685,
-    "name": "KADINA AWS",
-    "state": "SA",
-    "code": "S"
-  },
-  {
-    "stationID": 16001,
-    "wmoNumber": 94659,
-    "name": "WOOMERA AERODROME",
-    "state": "SA",
-    "code": "S"
-  },
-  {
-    "stationID": 22053,
-    "wmoNumber": 94666,
-    "name": "WARBURTO POINT",
-    "state": "SA",
-    "code": "S"
-  },
-  {
-    "stationID": 23875,
-    "wmoNumber": 94811,
-    "name": "SECOND VALLEY FOREST AWS",
-    "state": "SA",
-    "code": "S"
-  },
-  {
-    "stationID": 22046,
-    "wmoNumber": 94809,
-    "name": "EDITHBURGH",
-    "state": "SA",
-    "code": "S"
-  },
-  {
-    "stationID": 22031,
-    "wmoNumber": 95659,
-    "name": "MINLATON AERO",
-    "state": "SA",
-    "code": "S"
-  },
-  {
-    "stationID": 22803,
-    "wmoNumber": 94822,
-    "name": "CAPE WILLOUGHBY",
-    "state": "SA",
-    "code": "S"
-  },
-  {
-    "stationID": 92133,
-    "wmoNumber": 95987,
-    "name": "SPRING BAY NTC AWS",
-    "state": "SA",
-    "code": "S"
-  },
-  {
-    "stationID": 22841,
-    "wmoNumber": 95807,
-    "name": "KINGSCOTE AERO",
-    "state": "SA",
-    "code": "S"
-  },
-  {
-    "stationID": 18116,
-    "wmoNumber": 94662,
-    "name": "CLEVE AERODROME",
-    "state": "SA",
-    "code": "S"
-  },
-  {
-    "stationID": 22843,
-    "wmoNumber": 94807,
-    "name": "PARNDANA CFS AWS",
-    "state": "SA",
-    "code": "S"
-  },
-  {
-    "stationID": 22049,
-    "wmoNumber": 95806,
-    "name": "STENHOUSE BAY",
-    "state": "SA",
-    "code": "S"
-  },
-  {
-    "stationID": 17043,
-    "wmoNumber": 94476,
-    "name": "OODNADATTA AIRPORT",
-    "state": "SA",
-    "code": "S"
-  },
-  {
-    "stationID": 22823,
-    "wmoNumber": 95805,
-    "name": "CAPE BORDA",
-    "state": "SA",
-    "code": "S"
-  },
-  {
-    "stationID": 18083,
-    "wmoNumber": 95654,
-    "name": "WUDINNA AERO",
-    "state": "SA",
-    "code": "S"
-  },
-  {
-    "stationID": 18192,
-    "wmoNumber": 95661,
-    "name": "PORT LINCOLN AWS",
-    "state": "SA",
-    "code": "S"
-  },
-  {
-    "stationID": 18217,
-    "wmoNumber": 95663,
-    "name": "CUMMINS AERO",
-    "state": "SA",
-    "code": "S"
-  },
-  {
-    "stationID": 16090,
-    "wmoNumber": 95458,
-    "name": "COOBER PEDY AIRPORT",
-    "state": "SA",
-    "code": "S"
-  },
-  {
-    "stationID": 18115,
-    "wmoNumber": 94804,
-    "name": "NEPTUNE ISLAND",
-    "state": "SA",
-    "code": "S"
-  },
-  {
-    "stationID": 18195,
-    "wmoNumber": 95662,
-    "name": "MINNIPA PIRSA",
-    "state": "SA",
-    "code": "S"
-  },
-  {
-    "stationID": 16098,
-    "wmoNumber": 94655,
-    "name": "TARCOOLA AERO",
-    "state": "SA",
-    "code": "S"
-  },
-  {
-    "stationID": 18191,
-    "wmoNumber": 94658,
-    "name": "COLES POINT",
-    "state": "SA",
-    "code": "S"
-  },
-  {
-    "stationID": 200857,
-    "wmoNumber": 91559,
-    "name": "VANUATU NTC AWS",
-    "state": "SA",
-    "code": "S"
-  },
-  {
-    "stationID": 18012,
-    "wmoNumber": 94653,
-    "name": "CEDUNA AMO",
-    "state": "SA",
-    "code": "S"
-  },
-  {
-    "stationID": 18207,
-    "wmoNumber": 95652,
-    "name": "THEVENARD NTC AWS",
-    "state": "SA",
-    "code": "S"
-  },
-  {
-    "stationID": 18200,
-    "wmoNumber": 95653,
-    "name": "THEVENARD WIND",
-    "state": "SA",
-    "code": "S"
-  },
-  {
-    "stationID": 16097,
-    "wmoNumber": 94474,
-    "name": "PUKATJA",
-    "state": "SA",
-    "code": "S"
-  },
-  {
-    "stationID": 200859,
-    "wmoNumber": 91519,
-    "name": "SOLOMON IS. NTC AWS",
-    "state": "SA",
-    "code": "S"
-  },
-  {
-    "stationID": 18106,
-    "wmoNumber": 94651,
-    "name": "NULLARBOR",
-    "state": "SA",
-    "code": "S"
-  },
-  {
-    "stationID": 200866,
-    "wmoNumber": 93713,
-    "name": "JACKSON BAY NTC AWS",
-    "state": "SA",
-    "code": "S"
-  },
-  {
-    "stationID": 14406,
-    "wmoNumber": 94154,
-    "name": "GROOTE EYLANDT NTC AWS",
-    "state": "SA",
-    "code": "S"
-  },
-  {
-    "stationID": 13017,
-    "wmoNumber": 94461,
-    "name": "GILES METEOROLOGICAL OFFICE",
-    "state": "SA",
-    "code": "S"
-  },
-  {
-    "stationID": 200856,
-    "wmoNumber": 91679,
-    "name": "LAUTOKA NTC AWS",
-    "state": "SA",
-    "code": "S"
-  },
-  {
-    "stationID": 200863,
-    "wmoNumber": 91689,
-    "name": "SUVA NTC AWS",
-    "state": "SA",
-    "code": "S"
-  },
-  {
-    "stationID": 14072,
-    "wmoNumber": 95122,
-    "name": "DARWIN NTC AWS",
-    "state": "SA",
-    "code": "S"
-  },
-  {
-    "stationID": 200862,
-    "wmoNumber": 92036,
-    "name": "PNG NTC AWS",
-    "state": "SA",
-    "code": "S"
-  },
-  {
-    "stationID": 109504,
-    "wmoNumber": 95648,
-    "name": "ESPERANCE NTC AWS",
-    "state": "SA",
-    "code": "S"
-  },
-  {
-    "stationID": 200861,
-    "wmoNumber": 91789,
-    "name": "TONGA NTC AWS",
-    "state": "SA",
-    "code": "S"
-  },
-  {
-    "stationID": 3102,
-    "wmoNumber": 95202,
-    "name": "BROOME NTC AWS",
-    "state": "SA",
-    "code": "S"
-  },
-  {
-    "stationID": 200858,
-    "wmoNumber": 91531,
-    "name": "NAURU NTC AWS",
-    "state": "SA",
-    "code": "S"
-  },
-  {
-    "stationID": 200860,
-    "wmoNumber": 91642,
-    "name": "TUVALU NTC AWS",
-    "state": "SA",
-    "code": "S"
-  },
-  {
-    "stationID": 9265,
-    "wmoNumber": 95605,
-    "name": "HILLARYS BOAT HARBOUR NTC AWS",
-    "state": "SA",
-    "code": "S"
-  },
-  {
-    "stationID": 200299,
-    "wmoNumber": 91611,
-    "name": "KIRIBATI NTC AWS",
-    "state": "SA",
-    "code": "S"
-  },
-  {
-    "stationID": 200864,
-    "wmoNumber": 91349,
-    "name": "FSM NTC AWS",
-    "state": "SA",
-    "code": "S"
-  },
-  {
-    "stationID": 200814,
-    "wmoNumber": 91756,
-    "name": "SAMOA NTC AWS",
-    "state": "SA",
-    "code": "S"
-  },
-  {
-    "stationID": 200832,
-    "wmoNumber": 91375,
-    "name": "MARSHALL ISLANDS NTC AWS",
-    "state": "SA",
-    "code": "S"
-  },
-  {
-    "stationID": 200855,
-    "wmoNumber": 91844,
-    "name": "COOK ISLANDS NTC AWS",
-    "state": "SA",
-    "code": "S"
-  },
-  {
-    "stationID": 200865,
-    "wmoNumber": 96997,
-    "name": "COCOS ISLAND NTC AWS",
-    "state": "SA",
-    "code": "S"
-  },
-  {
-    "stationID": 99005,
-    "wmoNumber": 94980,
-    "name": "FLINDERS ISLAND AIRPORT",
-    "state": "TAS/ANT",
-    "code": "T"
-  },
-  {
-    "stationID": 92123,
-    "wmoNumber": 95985,
-    "name": "SWAN ISLAND",
-    "state": "TAS/ANT",
-    "code": "T"
-  },
-  {
-    "stationID": 92045,
-    "wmoNumber": 94983,
-    "name": "EDDYSTONE POINT",
-    "state": "TAS/ANT",
-    "code": "T"
-  },
-  {
-    "stationID": 92120,
-    "wmoNumber": 95981,
-    "name": "ST HELENS AERODROME",
-    "state": "TAS/ANT",
-    "code": "T"
-  },
-  {
-    "stationID": 91219,
-    "wmoNumber": 94972,
-    "name": "SCOTTSDALE (WEST MINSTONE ROAD)",
-    "state": "TAS/ANT",
-    "code": "T"
-  },
-  {
-    "stationID": 91293,
-    "wmoNumber": 95964,
-    "name": "LOW HEAD",
-    "state": "TAS/ANT",
-    "code": "T"
-  },
-  {
-    "stationID": 98017,
-    "wmoNumber": 94850,
-    "name": "KING ISLAND AIRPORT",
-    "state": "TAS/ANT",
-    "code": "T"
-  },
-  {
-    "stationID": 92012,
-    "wmoNumber": 95974,
-    "name": "FINGAL (LEGGE STREET)",
-    "state": "TAS/ANT",
-    "code": "T"
-  },
-  {
-    "stationID": 91126,
-    "wmoNumber": 95960,
-    "name": "DEVONPORT AIRPORT",
-    "state": "TAS/ANT",
-    "code": "T"
-  },
-  {
-    "stationID": 91237,
-    "wmoNumber": 94969,
-    "name": "LAUNCESTON (TI TREE BEND)",
-    "state": "TAS/ANT",
-    "code": "T"
-  },
-  {
-    "stationID": 91107,
-    "wmoNumber": 95957,
-    "name": "WYNYARD AIRPORT",
-    "state": "TAS/ANT",
-    "code": "T"
-  },
-  {
-    "stationID": 91311,
-    "wmoNumber": 95966,
-    "name": "LAUNCESTON AIRPORT",
-    "state": "TAS/ANT",
-    "code": "T"
-  },
-  {
-    "stationID": 91292,
-    "wmoNumber": 94953,
-    "name": "SMITHTON AERODROME",
-    "state": "TAS/ANT",
-    "code": "T"
-  },
-  {
-    "stationID": 91331,
-    "wmoNumber": 95954,
-    "name": "CAPE GRIM",
-    "state": "TAS/ANT",
-    "code": "T"
-  },
-  {
-    "stationID": 91245,
-    "wmoNumber": 94954,
-    "name": "CAPE GRIM BAPS (COMPARISON)",
-    "state": "TAS/ANT",
-    "code": "T"
-  },
-  {
-    "stationID": 91291,
-    "wmoNumber": 94955,
-    "name": "SHEFFIELD SCHOOL FARM",
-    "state": "TAS/ANT",
-    "code": "T"
-  },
-  {
-    "stationID": 92114,
-    "wmoNumber": 94987,
-    "name": "FRIENDLY BEACHES",
-    "state": "TAS/ANT",
-    "code": "T"
-  },
-  {
-    "stationID": 91306,
-    "wmoNumber": 95969,
-    "name": "CRESSY RESEARCH STATION",
-    "state": "TAS/ANT",
-    "code": "T"
-  },
-  {
-    "stationID": 91259,
-    "wmoNumber": 95956,
-    "name": "LUNCHEON HILL (FORESTRY)",
-    "state": "TAS/ANT",
-    "code": "T"
-  },
-  {
-    "stationID": 96033,
-    "wmoNumber": 95959,
-    "name": "LIAWENEE",
-    "state": "TAS/ANT",
-    "code": "T"
-  },
-  {
-    "stationID": 94195,
-    "wmoNumber": 94960,
-    "name": "TUNNACK FIRE STATION",
-    "state": "TAS/ANT",
-    "code": "T"
-  },
-  {
-    "stationID": 97085,
-    "wmoNumber": 95952,
-    "name": "MOUNT READ",
-    "state": "TAS/ANT",
-    "code": "T"
-  },
-  {
-    "stationID": 92124,
-    "wmoNumber": 95988,
-    "name": "MARIA ISLAND (POINT LESUEUR)",
-    "state": "TAS/ANT",
-    "code": "T"
-  },
-  {
-    "stationID": 96003,
-    "wmoNumber": 94959,
-    "name": "BUTLERS GORGE",
-    "state": "TAS/ANT",
-    "code": "T"
-  },
-  {
-    "stationID": 94212,
-    "wmoNumber": 95972,
-    "name": "CAMPANIA (KINCORA)",
-    "state": "TAS/ANT",
-    "code": "T"
-  },
-  {
-    "stationID": 95048,
-    "wmoNumber": 94957,
-    "name": "OUSE FIRE STATION",
-    "state": "TAS/ANT",
-    "code": "T"
-  },
-  {
-    "stationID": 94254,
-    "wmoNumber": 94951,
-    "name": "DUNALLEY (STROUD POINT)",
-    "state": "TAS/ANT",
-    "code": "T"
-  },
-  {
-    "stationID": 94008,
-    "wmoNumber": 94975,
-    "name": "HOBART AIRPORT",
-    "state": "TAS/ANT",
-    "code": "T"
-  },
-  {
-    "stationID": 97072,
-    "wmoNumber": 94956,
-    "name": "STRAHAN AERODROME",
-    "state": "TAS/ANT",
-    "code": "T"
-  },
-  {
-    "stationID": 95003,
-    "wmoNumber": 94964,
-    "name": "BUSHY PARK (BUSHY PARK ESTATES)",
-    "state": "TAS/ANT",
-    "code": "T"
-  },
-  {
-    "stationID": 94029,
-    "wmoNumber": 94970,
-    "name": "HOBART (ELLERSLIE ROAD)",
-    "state": "TAS/ANT",
-    "code": "T"
-  },
-  {
-    "stationID": 97000,
-    "wmoNumber": 94974,
-    "name": "CAPE SORELL",
-    "state": "TAS/ANT",
-    "code": "T"
-  },
-  {
-    "stationID": 94087,
-    "wmoNumber": 95979,
-    "name": "MOUNT WELLINGTON",
-    "state": "TAS/ANT",
-    "code": "T"
-  },
-  {
-    "stationID": 94220,
-    "wmoNumber": 95977,
-    "name": "GROVE (RESEARCH STATION)",
-    "state": "TAS/ANT",
-    "code": "T"
-  },
-  {
-    "stationID": 94155,
-    "wmoNumber": 95986,
-    "name": "TASMAN ISLAND",
-    "state": "TAS/ANT",
-    "code": "T"
-  },
-  {
-    "stationID": 97024,
-    "wmoNumber": 95962,
-    "name": "WARRA",
-    "state": "TAS/ANT",
-    "code": "T"
-  },
-  {
-    "stationID": 97083,
-    "wmoNumber": 95958,
-    "name": "SCOTTS PEAK DAM",
-    "state": "TAS/ANT",
-    "code": "T"
-  },
-  {
-    "stationID": 94191,
-    "wmoNumber": 94977,
-    "name": "HARTZ MOUNTAIN (KEOGHS PIMPLE)",
-    "state": "TAS/ANT",
-    "code": "T"
-  },
-  {
-    "stationID": 97080,
-    "wmoNumber": 95961,
-    "name": "LOW ROCKY POINT",
-    "state": "TAS/ANT",
-    "code": "T"
-  },
-  {
-    "stationID": 94198,
-    "wmoNumber": 95967,
-    "name": "CAPE BRUNY (CAPE BRUNY)",
-    "state": "TAS/ANT",
-    "code": "T"
-  },
-  {
-    "stationID": 94041,
-    "wmoNumber": 94962,
-    "name": "MAATSUYKER ISLAND LIGHTHOUSE",
-    "state": "TAS/ANT",
-    "code": "T"
-  },
-  {
-    "stationID": 300004,
-    "wmoNumber": 94998,
-    "name": "MACQUARIE ISLAND",
-    "state": "TAS/ANT",
-    "code": "T"
-  },
-  {
-    "stationID": 300046,
-    "wmoNumber": 89610,
-    "name": "CAPE POINSETT",
-    "state": "TAS/ANT",
-    "code": "T"
-  },
-  {
-    "stationID": 300022,
-    "wmoNumber": 89811,
-    "name": "LAW DOME SUMMIT",
-    "state": "TAS/ANT",
-    "code": "T"
-  },
-  {
-    "stationID": 300050,
-    "wmoNumber": 89615,
-    "name": "WILKINS RUNWAY EAST",
-    "state": "TAS/ANT",
-    "code": "T"
-  },
-  {
-    "stationID": 300048,
-    "wmoNumber": 89614,
-    "name": "WILKINS RUNWAY WEST",
-    "state": "TAS/ANT",
-    "code": "T"
-  },
-  {
-    "stationID": 300060,
-    "wmoNumber": 89809,
-    "name": "CASEY SKIWAY SOUTH",
-    "state": "TAS/ANT",
-    "code": "T"
-  },
-  {
-    "stationID": 300017,
-    "wmoNumber": 89611,
-    "name": "CASEY",
-    "state": "TAS/ANT",
-    "code": "T"
-  },
-  {
-    "stationID": 300012,
-    "wmoNumber": 89815,
-    "name": "HAUPT NUNATAK",
-    "state": "TAS/ANT",
-    "code": "T"
-  },
-  {
-    "stationID": 300033,
-    "wmoNumber": 89807,
-    "name": "SNYDER ROCKS",
-    "state": "TAS/ANT",
-    "code": "T"
-  },
-  {
-    "stationID": 300038,
-    "wmoNumber": 89586,
-    "name": "MOUNT BROWN",
-    "state": "TAS/ANT",
-    "code": "T"
-  },
-  {
-    "stationID": 300055,
-    "wmoNumber": 89570,
-    "name": "DAVIS (WHOOP WHOOP)",
-    "state": "TAS/ANT",
-    "code": "T"
-  },
-  {
-    "stationID": 300000,
-    "wmoNumber": 89571,
-    "name": "DAVIS",
-    "state": "TAS/ANT",
-    "code": "T"
-  },
-  {
-    "stationID": 300052,
-    "wmoNumber": 89578,
-    "name": "EAGLE",
-    "state": "TAS/ANT",
-    "code": "T"
-  },
-  {
-    "stationID": 300051,
-    "wmoNumber": 89577,
-    "name": "DOME A",
-    "state": "TAS/ANT",
-    "code": "T"
-  },
-  {
-    "stationID": 300039,
-    "wmoNumber": 89767,
-    "name": "G3",
-    "state": "TAS/ANT",
-    "code": "T"
-  },
-  {
-    "stationID": 300028,
-    "wmoNumber": 94997,
-    "name": "HEARD ISLAND (THE SPIT)",
-    "state": "TAS/ANT",
-    "code": "T"
-  },
-  {
-    "stationID": 300005,
-    "wmoNumber": 95997,
-    "name": "HEARD ISLAND (ATLAS COVE)",
-    "state": "TAS/ANT",
-    "code": "T"
-  },
-  {
-    "stationID": 300001,
-    "wmoNumber": 89564,
-    "name": "MAWSON",
-    "state": "TAS/ANT",
-    "code": "T"
+    "stationID": 34035,
+    "wmoNumber": 94397,
+    "name": "MORANBAH AIRPORT",
+    "state": "QLD",
+    "latitude": -22.0644,
+    "longitude": 148.0761
+  },
+  {
+    "stationID": 70330,
+    "wmoNumber": 95716,
+    "name": "GOULBURN AIRPORT AWS",
+    "state": "NSW",
+    "latitude": -34.8085,
+    "longitude": 149.7312
+  },
+  {
+    "stationID": 33317,
+    "wmoNumber": 99367,
+    "name": "HAY POINT",
+    "state": "QLD",
+    "latitude": -21.2894,
+    "longitude": 149.3008
+  },
+  {
+    "stationID": 73138,
+    "wmoNumber": 94712,
+    "name": "YOUNG AIRPORT",
+    "state": "NSW",
+    "latitude": -34.2493,
+    "longitude": 148.2475
+  },
+  {
+    "stationID": 33045,
+    "wmoNumber": 95367,
+    "name": "MACKAY AERO",
+    "state": "QLD",
+    "latitude": -21.1706,
+    "longitude": 149.1794
+  },
+  {
+    "stationID": 33119,
+    "wmoNumber": 94367,
+    "name": "MACKAY M.O",
+    "state": "QLD",
+    "latitude": -21.1172,
+    "longitude": 149.2169
+  },
+  {
+    "stationID": 69138,
+    "wmoNumber": 94938,
+    "name": "ULLADULLA AWS",
+    "state": "NSW",
+    "latitude": -35.3635,
+    "longitude": 150.4827
+  },
+  {
+    "stationID": 200736,
+    "wmoNumber": 94371,
+    "name": "CREAL REEF",
+    "state": "QLD",
+    "latitude": -20.5303,
+    "longitude": 150.3773
+  },
+  {
+    "stationID": 36034,
+    "wmoNumber": 95351,
+    "name": "BLACKALL AIRPORT",
+    "state": "QLD",
+    "latitude": -24.4303,
+    "longitude": 145.4306
+  },
+  {
+    "stationID": 50017,
+    "wmoNumber": 95709,
+    "name": "WEST WYALONG AIRPORT AWS",
+    "state": "NSW",
+    "latitude": -33.9382,
+    "longitude": 147.1962
+  },
+  {
+    "stationID": 69132,
+    "wmoNumber": 94927,
+    "name": "BRAIDWOOD RACECOURSE AWS",
+    "state": "NSW",
+    "latitude": -35.4253,
+    "longitude": 149.7835
+  },
+  {
+    "stationID": 70351,
+    "wmoNumber": 94926,
+    "name": "CANBERRA AIRPORT",
+    "state": "NSW",
+    "latitude": -35.3088,
+    "longitude": 149.2003
+  },
+  {
+    "stationID": 73151,
+    "wmoNumber": 95722,
+    "name": "TEMORA AIRPORT",
+    "state": "NSW",
+    "latitude": -34.4292,
+    "longitude": 147.5111
+  },
+  {
+    "stationID": 70339,
+    "wmoNumber": 94925,
+    "name": "TUGGERANONG (ISABELLA PLAINS) AWS",
+    "state": "NSW",
+    "latitude": -35.4184,
+    "longitude": 149.0937
+  },
+  {
+    "stationID": 45025,
+    "wmoNumber": 95492,
+    "name": "THARGOMINDAH AIRPORT",
+    "state": "QLD",
+    "latitude": -27.9867,
+    "longitude": 143.815
+  },
+  {
+    "stationID": 69148,
+    "wmoNumber": 95937,
+    "name": "MORUYA AIRPORT AWS",
+    "state": "NSW",
+    "latitude": -35.9004,
+    "longitude": 150.1437
+  },
+  {
+    "stationID": 33106,
+    "wmoNumber": 94368,
+    "name": "HAMILTON ISLAND AIRPORT",
+    "state": "QLD",
+    "latitude": -20.3658,
+    "longitude": 148.9536
+  },
+  {
+    "stationID": 70349,
+    "wmoNumber": 95925,
+    "name": "MOUNT GININI AWS",
+    "state": "NSW",
+    "latitude": -35.5293,
+    "longitude": 148.7721
+  },
+  {
+    "stationID": 33247,
+    "wmoNumber": 94365,
+    "name": "PROSERPINE AIRPORT",
+    "state": "QLD",
+    "latitude": -20.4925,
+    "longitude": 148.555
+  },
+  {
+    "stationID": 69017,
+    "wmoNumber": 94939,
+    "name": "MONTAGUE ISLAND LIGHTHOUSE",
+    "state": "NSW",
+    "latitude": -36.2519,
+    "longitude": 150.2275
+  },
+  {
+    "stationID": 72150,
+    "wmoNumber": 94910,
+    "name": "WAGGA WAGGA AMO",
+    "state": "NSW",
+    "latitude": -35.1583,
+    "longitude": 147.4575
+  },
+  {
+    "stationID": 200704,
+    "wmoNumber": 94298,
+    "name": "MARION REEF",
+    "state": "QLD",
+    "latitude": -19.0964,
+    "longitude": 152.3892
+  },
+  {
+    "stationID": 75041,
+    "wmoNumber": 95704,
+    "name": "GRIFFITH AIRPORT AWS",
+    "state": "NSW",
+    "latitude": -34.2487,
+    "longitude": 146.0695
+  },
+  {
+    "stationID": 75041,
+    "wmoNumber": 95704,
+    "name": "GRIFFITH AIRPORT AWS",
+    "state": "NSW",
+    "latitude": -34.2487,
+    "longitude": 146.0695
+  },
+  {
+    "stationID": 74037,
+    "wmoNumber": 95705,
+    "name": "YANCO AGRICULTURAL INSTITUTE",
+    "state": "NSW",
+    "latitude": -34.6222,
+    "longitude": 146.4326
+  },
+  {
+    "stationID": 74148,
+    "wmoNumber": 95706,
+    "name": "NARRANDERA AIRPORT",
+    "state": "NSW",
+    "latitude": -34.705,
+    "longitude": 146.514
+  },
+  {
+    "stationID": 72161,
+    "wmoNumber": 95916,
+    "name": "CABRAMURRA SMHEA AWS",
+    "state": "NSW",
+    "latitude": -35.9371,
+    "longitude": 148.3779
+  },
+  {
+    "stationID": 70217,
+    "wmoNumber": 94921,
+    "name": "COOMA AIRPORT AWS",
+    "state": "NSW",
+    "latitude": -36.2939,
+    "longitude": 148.9725
+  },
+  {
+    "stationID": 49000,
+    "wmoNumber": 95697,
+    "name": "IVANHOE AERODROME AWS",
+    "state": "NSW",
+    "latitude": -32.8831,
+    "longitude": 144.3088
+  },
+  {
+    "stationID": 69139,
+    "wmoNumber": 95931,
+    "name": "BEGA AWS",
+    "state": "NSW",
+    "latitude": -36.6722,
+    "longitude": 149.8191
+  },
+  {
+    "stationID": 36031,
+    "wmoNumber": 94346,
+    "name": "LONGREACH AERO",
+    "state": "QLD",
+    "latitude": -23.4372,
+    "longitude": 144.2769
+  },
+  {
+    "stationID": 46012,
+    "wmoNumber": 95695,
+    "name": "WILCANNIA AERODROME AWS",
+    "state": "NSW",
+    "latitude": -31.5194,
+    "longitude": 143.385
+  },
+  {
+    "stationID": 72162,
+    "wmoNumber": 94919,
+    "name": "KHANCOBAN AWS",
+    "state": "NSW",
+    "latitude": -36.2304,
+    "longitude": 148.1405
+  },
+  {
+    "stationID": 46129,
+    "wmoNumber": 95699,
+    "name": "WHITE CLIFFS AWS",
+    "state": "NSW",
+    "latitude": -30.8517,
+    "longitude": 143.0742
+  },
+  {
+    "stationID": 69147,
+    "wmoNumber": 95929,
+    "name": "MERIMBULA AIRPORT AWS",
+    "state": "NSW",
+    "latitude": -36.9077,
+    "longitude": 149.8989
+  },
+  {
+    "stationID": 71075,
+    "wmoNumber": 94915,
+    "name": "PERISHER VALLEY AWS",
+    "state": "NSW",
+    "latitude": -36.4069,
+    "longitude": 148.4055
+  },
+  {
+    "stationID": 71032,
+    "wmoNumber": 95909,
+    "name": "THREDBO AWS",
+    "state": "NSW",
+    "latitude": -36.4917,
+    "longitude": 148.2859
   },
   {
     "stationID": 82139,
     "wmoNumber": 94878,
     "name": "HUNTERS HILL",
     "state": "VIC",
-    "code": "V"
+    "latitude": -36.2136,
+    "longitude": 147.5394
+  },
+  {
+    "stationID": 70328,
+    "wmoNumber": 94929,
+    "name": "BOMBALA AWS",
+    "state": "NSW",
+    "latitude": -37.0016,
+    "longitude": 149.2336
+  },
+  {
+    "stationID": 69137,
+    "wmoNumber": 94934,
+    "name": "GREEN CAPE AWS",
+    "state": "NSW",
+    "latitude": -37.2622,
+    "longitude": 150.0504
+  },
+  {
+    "stationID": 72160,
+    "wmoNumber": 95896,
+    "name": "ALBURY AIRPORT AWS",
+    "state": "NSW",
+    "latitude": -36.069,
+    "longitude": 146.9509
+  },
+  {
+    "stationID": 75019,
+    "wmoNumber": 94702,
+    "name": "HAY AIRPORT AWS",
+    "state": "NSW",
+    "latitude": -34.5412,
+    "longitude": 144.8345
+  },
+  {
+    "stationID": 33002,
+    "wmoNumber": 95295,
+    "name": "AYR DPI RESEARCH STN",
+    "state": "QLD",
+    "latitude": -19.6169,
+    "longitude": 147.3758
+  },
+  {
+    "stationID": 33295,
+    "wmoNumber": 95296,
+    "name": "ALVA BEACH",
+    "state": "QLD",
+    "latitude": -19.4569,
+    "longitude": 147.4833
+  },
+  {
+    "stationID": 46126,
+    "wmoNumber": 95485,
+    "name": "TIBOOBURRA AIRPORT",
+    "state": "NSW",
+    "latitude": -29.4448,
+    "longitude": 142.0567
   },
   {
     "stationID": 82039,
     "wmoNumber": 95837,
     "name": "RUTHERGLEN RESEARCH",
     "state": "VIC",
-    "code": "V"
+    "latitude": -36.1047,
+    "longitude": 146.5094
   },
   {
     "stationID": 84016,
     "wmoNumber": 94933,
     "name": "GABO ISLAND LIGHTHOUSE",
     "state": "VIC",
-    "code": "V"
+    "latitude": -37.5679,
+    "longitude": 149.9158
   },
   {
     "stationID": 84143,
     "wmoNumber": 94914,
     "name": "COMBIENBAR AWS",
     "state": "VIC",
-    "code": "V"
+    "latitude": -37.3417,
+    "longitude": 149.0228
   },
   {
     "stationID": 84084,
     "wmoNumber": 94935,
     "name": "MALLACOOTA",
     "state": "VIC",
-    "code": "V"
+    "latitude": -37.5976,
+    "longitude": 149.7289
   },
   {
     "stationID": 81124,
     "wmoNumber": 94862,
     "name": "YARRAWONGA",
     "state": "VIC",
-    "code": "V"
+    "latitude": -36.0294,
+    "longitude": 146.0306
+  },
+  {
+    "stationID": 45009,
+    "wmoNumber": 95487,
+    "name": "BALLERA GAS FIELD",
+    "state": "QLD",
+    "latitude": -27.4008,
+    "longitude": 141.8114
   },
   {
     "stationID": 84142,
     "wmoNumber": 94913,
     "name": "GELANTIPY",
     "state": "VIC",
-    "code": "V"
+    "latitude": -37.22,
+    "longitude": 148.2625
   },
   {
     "stationID": 83084,
     "wmoNumber": 94903,
     "name": "FALLS CREEK",
     "state": "VIC",
-    "code": "V"
+    "latitude": -36.8708,
+    "longitude": 147.2755
+  },
+  {
+    "stationID": 32182,
+    "wmoNumber": 94297,
+    "name": "CAPE FERGUSON NTC AWS",
+    "state": "SA",
+    "latitude": -19.2774,
+    "longitude": 147.0586
   },
   {
     "stationID": 82138,
     "wmoNumber": 94889,
     "name": "WANGARATTA AERO",
     "state": "VIC",
-    "code": "V"
+    "latitude": -36.4206,
+    "longitude": 146.3056
   },
   {
     "stationID": 83090,
     "wmoNumber": 94908,
     "name": "OMEO",
     "state": "VIC",
-    "code": "V"
+    "latitude": -37.1017,
+    "longitude": 147.6008
   },
   {
     "stationID": 83055,
     "wmoNumber": 94905,
     "name": "MOUNT HOTHAM AIRPORT",
     "state": "VIC",
-    "code": "V"
+    "latitude": -37.0491,
+    "longitude": 147.3347
+  },
+  {
+    "stationID": 74258,
+    "wmoNumber": 95869,
+    "name": "DENILIQUIN AIRPORT AWS",
+    "state": "NSW",
+    "latitude": -35.5575,
+    "longitude": 144.9458
   },
   {
     "stationID": 83085,
     "wmoNumber": 94906,
     "name": "MOUNT HOTHAM",
     "state": "VIC",
-    "code": "V"
+    "latitude": -36.9767,
+    "longitude": 147.1342
+  },
+  {
+    "stationID": 33307,
+    "wmoNumber": 95293,
+    "name": "WOOLSHED",
+    "state": "QLD",
+    "latitude": -19.4167,
+    "longitude": 146.5364
+  },
+  {
+    "stationID": 32040,
+    "wmoNumber": 94294,
+    "name": "TOWNSVILLE AERO",
+    "state": "QLD",
+    "latitude": -19.2483,
+    "longitude": 146.7661
   },
   {
     "stationID": 84145,
     "wmoNumber": 95918,
     "name": "ORBOST",
     "state": "VIC",
-    "code": "V"
+    "latitude": -37.6922,
+    "longitude": 148.4667
+  },
+  {
+    "stationID": 46128,
+    "wmoNumber": 94686,
+    "name": "FOWLERS GAP AWS",
+    "state": "NSW",
+    "latitude": -31.0867,
+    "longitude": 141.7017
   },
   {
     "stationID": 84144,
     "wmoNumber": 94930,
     "name": "MOUNT NOWA NOWA",
     "state": "VIC",
-    "code": "V"
+    "latitude": -37.6924,
+    "longitude": 148.0908
+  },
+  {
+    "stationID": 37039,
+    "wmoNumber": 94342,
+    "name": "WINTON AIRPORT",
+    "state": "QLD",
+    "latitude": -22.3617,
+    "longitude": 143.0836
   },
   {
     "stationID": 81125,
     "wmoNumber": 94875,
     "name": "SHEPPARTON AIRPORT",
     "state": "VIC",
-    "code": "V"
+    "latitude": -36.4289,
+    "longitude": 145.3947
+  },
+  {
+    "stationID": 200727,
+    "wmoNumber": 94296,
+    "name": "LIHOU REEF",
+    "state": "QLD",
+    "latitude": -17.1166,
+    "longitude": 152.004
+  },
+  {
+    "stationID": 30022,
+    "wmoNumber": 94343,
+    "name": "HUGHENDEN AIRPORT",
+    "state": "QLD",
+    "latitude": -20.8192,
+    "longitude": 144.2333
   },
   {
     "stationID": 83024,
     "wmoNumber": 94894,
     "name": "MOUNT BULLER",
     "state": "VIC",
-    "code": "V"
+    "latitude": -37.145,
+    "longitude": 146.4394
   },
   {
     "stationID": 81049,
     "wmoNumber": 95836,
     "name": "TATURA INST SUSTAINABLE AG",
     "state": "VIC",
-    "code": "V"
+    "latitude": -36.4378,
+    "longitude": 145.2672
   },
   {
     "stationID": 80091,
     "wmoNumber": 95833,
     "name": "KYABRAM",
     "state": "VIC",
-    "code": "V"
+    "latitude": -36.335,
+    "longitude": 145.0638
+  },
+  {
+    "stationID": 47048,
+    "wmoNumber": 94691,
+    "name": "BROKEN HILL AIRPORT AWS",
+    "state": "NSW",
+    "latitude": -32.0012,
+    "longitude": 141.4694
   },
   {
     "stationID": 85279,
     "wmoNumber": 94912,
     "name": "BAIRNSDALE AIRPORT",
     "state": "VIC",
-    "code": "V"
+    "latitude": -37.8817,
+    "longitude": 147.5669
   },
   {
     "stationID": 85296,
     "wmoNumber": 95913,
     "name": "MOUNT MOORNAPA",
     "state": "VIC",
-    "code": "V"
+    "latitude": -37.7481,
+    "longitude": 147.1428
+  },
+  {
+    "stationID": 200783,
+    "wmoNumber": 94290,
+    "name": "FLINDERS REEF",
+    "state": "QLD",
+    "latitude": -17.7195,
+    "longitude": 148.4478
   },
   {
     "stationID": 77094,
     "wmoNumber": 94843,
     "name": "SWAN HILL AERODROME",
     "state": "VIC",
-    "code": "V"
+    "latitude": -35.3766,
+    "longitude": 143.5416
   },
   {
     "stationID": 88164,
     "wmoNumber": 94881,
     "name": "EILDON FIRE TOWER",
     "state": "VIC",
-    "code": "V"
+    "latitude": -37.2091,
+    "longitude": 145.8423
   },
   {
     "stationID": 88109,
     "wmoNumber": 94874,
     "name": "MANGALORE AIRPORT",
     "state": "VIC",
-    "code": "V"
+    "latitude": -36.8886,
+    "longitude": 145.1859
   },
   {
     "stationID": 85072,
     "wmoNumber": 94907,
     "name": "EAST SALE AIRPORT",
     "state": "VIC",
-    "code": "V"
+    "latitude": -38.1156,
+    "longitude": 147.1322
   },
   {
     "stationID": 76031,
     "wmoNumber": 94693,
     "name": "MILDURA AIRPORT",
     "state": "VIC",
-    "code": "V"
+    "latitude": -34.2358,
+    "longitude": 142.0867
   },
   {
     "stationID": 85291,
     "wmoNumber": 95901,
     "name": "MOUNT BAW BAW",
     "state": "VIC",
-    "code": "V"
+    "latitude": -37.8383,
+    "longitude": 146.2747
+  },
+  {
+    "stationID": 17123,
+    "wmoNumber": 95481,
+    "name": "MOOMBA AIRPORT",
+    "state": "SA",
+    "latitude": -28.0997,
+    "longitude": 140.1956
   },
   {
     "stationID": 81123,
     "wmoNumber": 94855,
     "name": "BENDIGO AIRPORT",
     "state": "VIC",
-    "code": "V"
+    "latitude": -36.7395,
+    "longitude": 144.3266
   },
   {
     "stationID": 88051,
     "wmoNumber": 94859,
     "name": "REDESDALE",
     "state": "VIC",
-    "code": "V"
+    "latitude": -37.0194,
+    "longitude": 144.5203
+  },
+  {
+    "stationID": 30161,
+    "wmoNumber": 94341,
+    "name": "RICHMOND AIRPORT",
+    "state": "QLD",
+    "latitude": -20.7017,
+    "longitude": 143.1167
   },
   {
     "stationID": 85280,
     "wmoNumber": 94891,
     "name": "LATROBE VALLEY AIRPORT",
     "state": "VIC",
-    "code": "V"
+    "latitude": -38.2094,
+    "longitude": 146.4747
   },
   {
     "stationID": 88162,
     "wmoNumber": 94860,
     "name": "KILMORE GAP",
     "state": "VIC",
-    "code": "V"
+    "latitude": -37.3807,
+    "longitude": 144.9654
   },
   {
     "stationID": 86320,
     "wmoNumber": 94869,
     "name": "COLDSTREAM COMPARISON",
     "state": "VIC",
-    "code": "V"
+    "latitude": -37.7239,
+    "longitude": 145.4092
   },
   {
     "stationID": 86383,
     "wmoNumber": 94864,
     "name": "COLDSTREAM",
     "state": "VIC",
-    "code": "V"
+    "latitude": -37.7239,
+    "longitude": 145.4092
   },
   {
     "stationID": 80128,
     "wmoNumber": 94839,
     "name": "CHARLTON",
     "state": "VIC",
-    "code": "V"
+    "latitude": -36.2847,
+    "longitude": 143.3341
   },
   {
     "stationID": 85151,
     "wmoNumber": 95890,
     "name": "YARRAM AIRPORT",
     "state": "VIC",
-    "code": "V"
+    "latitude": -38.5647,
+    "longitude": 146.7479
   },
   {
     "stationID": 86266,
     "wmoNumber": 94872,
     "name": "FERNY CREEK",
     "state": "VIC",
-    "code": "V"
+    "latitude": -37.8748,
+    "longitude": 145.3496
   },
   {
     "stationID": 86068,
     "wmoNumber": 95874,
     "name": "VIEWBANK",
     "state": "VIC",
-    "code": "V"
+    "latitude": -37.7408,
+    "longitude": 145.0972
+  },
+  {
+    "stationID": 200283,
+    "wmoNumber": 94299,
+    "name": "WILLIS ISLAND",
+    "state": "QLD",
+    "latitude": -16.2878,
+    "longitude": 149.9652
   },
   {
     "stationID": 86104,
     "wmoNumber": 95867,
     "name": "SCORESBY RESEARCH INSTITUTE",
     "state": "VIC",
-    "code": "V"
+    "latitude": -37.871,
+    "longitude": 145.2561
   },
   {
     "stationID": 76064,
     "wmoNumber": 95831,
     "name": "WALPEUP RESEARCH",
     "state": "VIC",
-    "code": "V"
+    "latitude": -35.1201,
+    "longitude": 142.004
   },
   {
     "stationID": 86282,
     "wmoNumber": 94866,
     "name": "MELBOURNE AIRPORT",
     "state": "VIC",
-    "code": "V"
+    "latitude": -37.6655,
+    "longitude": 144.8321
   },
   {
     "stationID": 86282,
     "wmoNumber": 94866,
     "name": "MELBOURNE AIRPORT",
     "state": "VIC",
-    "code": "V"
+    "latitude": -37.6655,
+    "longitude": 144.8321
   },
   {
     "stationID": 86038,
     "wmoNumber": 95866,
     "name": "ESSENDON AIRPORT",
     "state": "VIC",
-    "code": "V"
+    "latitude": -37.7276,
+    "longitude": 144.9066
   },
   {
     "stationID": 86071,
     "wmoNumber": 94868,
     "name": "MELBOURNE REGIONAL OFFICE",
     "state": "VIC",
-    "code": "V"
+    "latitude": -37.8075,
+    "longitude": 144.97
   },
   {
     "stationID": 77010,
     "wmoNumber": 94838,
     "name": "HOPETOUN AIRPORT",
     "state": "VIC",
-    "code": "V"
+    "latitude": -35.7151,
+    "longitude": 142.3569
   },
   {
     "stationID": 86220,
     "wmoNumber": 95864,
     "name": "ST KILDA HARBOUR - RMYS",
     "state": "VIC",
-    "code": "V"
+    "latitude": -37.8642,
+    "longitude": 144.9639
   },
   {
     "stationID": 86077,
     "wmoNumber": 94870,
     "name": "MOORABBIN AIRPORT",
     "state": "VIC",
-    "code": "V"
+    "latitude": -37.98,
+    "longitude": 145.0964
   },
   {
     "stationID": 86376,
     "wmoNumber": 95872,
     "name": "FAWKNER BEACON",
     "state": "VIC",
-    "code": "V"
+    "latitude": -37.95,
+    "longitude": 144.9258
   },
   {
     "stationID": 87031,
     "wmoNumber": 94865,
     "name": "LAVERTON RAAF",
     "state": "VIC",
-    "code": "V"
+    "latitude": -37.8565,
+    "longitude": 144.7566
+  },
+  {
+    "stationID": 32037,
+    "wmoNumber": 95292,
+    "name": "SOUTH JOHNSTONE EXP STN",
+    "state": "QLD",
+    "latitude": -17.6053,
+    "longitude": 145.9972
   },
   {
     "stationID": 86371,
     "wmoNumber": 94871,
     "name": "FRANKSTON AWS",
     "state": "VIC",
-    "code": "V"
+    "latitude": -38.1481,
+    "longitude": 145.1156
   },
   {
     "stationID": 85099,
     "wmoNumber": 94886,
     "name": "POUND CREEK",
     "state": "VIC",
-    "code": "V"
+    "latitude": -38.6297,
+    "longitude": 145.8107
   },
   {
     "stationID": 86361,
     "wmoNumber": 94898,
     "name": "CERBERUS",
     "state": "VIC",
-    "code": "V"
+    "latitude": -38.3646,
+    "longitude": 145.1785
   },
   {
     "stationID": 200838,
     "wmoNumber": 94949,
     "name": "HOGAN ISLAND",
     "state": "VIC",
-    "code": "V"
+    "latitude": -39.2225,
+    "longitude": 146.9841
   },
   {
     "stationID": 86373,
     "wmoNumber": 94892,
     "name": "RHYLL",
     "state": "VIC",
-    "code": "V"
+    "latitude": -38.4612,
+    "longitude": 145.3101
+  },
+  {
+    "stationID": 200732,
+    "wmoNumber": 94289,
+    "name": "HOLMES REEF",
+    "state": "QLD",
+    "latitude": -16.4683,
+    "longitude": 147.8734
   },
   {
     "stationID": 89002,
     "wmoNumber": 94852,
     "name": "BALLARAT AERODROME",
     "state": "VIC",
-    "code": "V"
+    "latitude": -37.5127,
+    "longitude": 143.7911
+  },
+  {
+    "stationID": 24048,
+    "wmoNumber": 95687,
+    "name": "RENMARK AERO",
+    "state": "SA",
+    "latitude": -34.1983,
+    "longitude": 140.6766
   },
   {
     "stationID": 87113,
     "wmoNumber": 94854,
     "name": "AVALON AIRPORT",
     "state": "VIC",
-    "code": "V"
+    "latitude": -38.0287,
+    "longitude": 144.4783
   },
   {
     "stationID": 87166,
     "wmoNumber": 94847,
     "name": "POINT WILSON",
     "state": "VIC",
-    "code": "V"
+    "latitude": -38.0958,
+    "longitude": 144.5361
   },
   {
     "stationID": 85096,
     "wmoNumber": 94893,
     "name": "WILSONS PROMONTORY LIGHTHOUSE",
     "state": "VIC",
-    "code": "V"
+    "latitude": -39.1297,
+    "longitude": 146.4244
   },
   {
     "stationID": 86344,
     "wmoNumber": 94853,
     "name": "SOUTH CHANNEL ISLAND",
     "state": "VIC",
-    "code": "V"
+    "latitude": -38.3065,
+    "longitude": 144.8016
   },
   {
     "stationID": 87168,
     "wmoNumber": 94863,
     "name": "SHEOAKS",
     "state": "VIC",
-    "code": "V"
+    "latitude": -37.9075,
+    "longitude": 144.1303
   },
   {
     "stationID": 79101,
     "wmoNumber": 94835,
     "name": "BEN NEVIS",
     "state": "VIC",
-    "code": "V"
+    "latitude": -37.2281,
+    "longitude": 143.2006
+  },
+  {
+    "stationID": 38026,
+    "wmoNumber": 95482,
+    "name": "BIRDSVILLE AIRPORT",
+    "state": "QLD",
+    "latitude": -25.8975,
+    "longitude": 139.3472
+  },
+  {
+    "stationID": 24024,
+    "wmoNumber": 94682,
+    "name": "LOXTON RESEARCH CENTRE",
+    "state": "SA",
+    "latitude": -34.439,
+    "longitude": 140.5978
   },
   {
     "stationID": 87184,
     "wmoNumber": 94857,
     "name": "GEELONG RACECOURSE",
     "state": "VIC",
-    "code": "V"
+    "latitude": -38.1737,
+    "longitude": 144.3765
+  },
+  {
+    "stationID": 20062,
+    "wmoNumber": 94684,
+    "name": "YUNTA AIRSTRIP",
+    "state": "SA",
+    "latitude": -32.5707,
+    "longitude": 139.5645
   },
   {
     "stationID": 79105,
     "wmoNumber": 94836,
     "name": "STAWELL AERODROME",
     "state": "VIC",
-    "code": "V"
+    "latitude": -37.072,
+    "longitude": 142.7402
   },
   {
     "stationID": 79028,
     "wmoNumber": 95835,
     "name": "LONGERENONG",
     "state": "VIC",
-    "code": "V"
+    "latitude": -36.6722,
+    "longitude": 142.2991
+  },
+  {
+    "stationID": 37036,
+    "wmoNumber": 94338,
+    "name": "TREPELL AIRPORT",
+    "state": "QLD",
+    "latitude": -21.84,
+    "longitude": 140.8925
+  },
+  {
+    "stationID": 29058,
+    "wmoNumber": 94337,
+    "name": "JULIA CREEK AIRPORT",
+    "state": "QLD",
+    "latitude": -20.6672,
+    "longitude": 141.7214
+  },
+  {
+    "stationID": 200288,
+    "wmoNumber": 94996,
+    "name": "NORFOLK ISLAND AERO",
+    "state": "NSW",
+    "latitude": -29.0389,
+    "longitude": 167.9408
   },
   {
     "stationID": 79100,
     "wmoNumber": 95839,
     "name": "HORSHAM AERODROME",
     "state": "VIC",
-    "code": "V"
+    "latitude": -36.6697,
+    "longitude": 142.1731
+  },
+  {
+    "stationID": 99005,
+    "wmoNumber": 94980,
+    "name": "FLINDERS ISLAND AIRPORT",
+    "state": "TAS/ANT",
+    "latitude": -40.0911,
+    "longitude": 148.0024
   },
   {
     "stationID": 78015,
     "wmoNumber": 94827,
     "name": "NHILL AERODROME",
     "state": "VIC",
-    "code": "V"
+    "latitude": -36.3092,
+    "longitude": 141.6486
   },
   {
     "stationID": 79103,
     "wmoNumber": 94833,
     "name": "MOUNT WILLIAM",
     "state": "VIC",
-    "code": "V"
+    "latitude": -37.295,
+    "longitude": 142.6039
+  },
+  {
+    "stationID": 200879,
+    "wmoNumber": 94284,
+    "name": "ARLINGTON REEF",
+    "state": "QLD",
+    "latitude": -16.7226,
+    "longitude": 146.1124
   },
   {
     "stationID": 90035,
     "wmoNumber": 95845,
     "name": "MOUNT GELLIBRAND",
     "state": "VIC",
-    "code": "V"
+    "latitude": -38.2333,
+    "longitude": 143.7925
+  },
+  {
+    "stationID": 31210,
+    "wmoNumber": 95286,
+    "name": "MAREEBA AIRPORT",
+    "state": "QLD",
+    "latitude": -17.0672,
+    "longitude": 145.4283
   },
   {
     "stationID": 90180,
     "wmoNumber": 94846,
     "name": "AIREYS INLET",
     "state": "VIC",
-    "code": "V"
+    "latitude": -38.4583,
+    "longitude": 144.0883
+  },
+  {
+    "stationID": 31011,
+    "wmoNumber": 94287,
+    "name": "CAIRNS AERO",
+    "state": "QLD",
+    "latitude": -16.8736,
+    "longitude": 145.7458
   },
   {
     "stationID": 89112,
     "wmoNumber": 95840,
     "name": "WESTMERE",
     "state": "VIC",
-    "code": "V"
+    "latitude": -37.7067,
+    "longitude": 142.9378
+  },
+  {
+    "stationID": 30124,
+    "wmoNumber": 94274,
+    "name": "GEORGETOWN AIRPORT",
+    "state": "QLD",
+    "latitude": -18.3039,
+    "longitude": 143.5306
+  },
+  {
+    "stationID": 25562,
+    "wmoNumber": 94690,
+    "name": "AUSTIN PLAINS",
+    "state": "SA",
+    "latitude": -35.3778,
+    "longitude": 140.5378
+  },
+  {
+    "stationID": 17110,
+    "wmoNumber": 94674,
+    "name": "LEIGH CREEK AIRPORT",
+    "state": "SA",
+    "latitude": -30.5963,
+    "longitude": 138.4219
   },
   {
     "stationID": 79097,
     "wmoNumber": 95827,
     "name": "KANAGULK",
     "state": "VIC",
-    "code": "V"
+    "latitude": -37.1169,
+    "longitude": 141.8031
   },
   {
     "stationID": 90176,
     "wmoNumber": 94840,
     "name": "MORTLAKE RACECOURSE",
     "state": "VIC",
-    "code": "V"
+    "latitude": -38.0737,
+    "longitude": 142.7744
+  },
+  {
+    "stationID": 17126,
+    "wmoNumber": 95480,
+    "name": "MARREE AERO",
+    "state": "SA",
+    "latitude": -29.6587,
+    "longitude": 138.0684
+  },
+  {
+    "stationID": 92123,
+    "wmoNumber": 95985,
+    "name": "SWAN ISLAND",
+    "state": "TAS/ANT",
+    "latitude": -40.7292,
+    "longitude": 148.125
   },
   {
     "stationID": 90173,
     "wmoNumber": 94829,
     "name": "HAMILTON AIRPORT",
     "state": "VIC",
-    "code": "V"
+    "latitude": -37.6486,
+    "longitude": 142.0636
+  },
+  {
+    "stationID": 31037,
+    "wmoNumber": 94285,
+    "name": "LOW ISLES LIGHTHOUSE",
+    "state": "QLD",
+    "latitude": -16.3842,
+    "longitude": 145.5592
+  },
+  {
+    "stationID": 37034,
+    "wmoNumber": 94336,
+    "name": "THE MONUMENT AIRPORT",
+    "state": "QLD",
+    "latitude": -21.8125,
+    "longitude": 139.9267
   },
   {
     "stationID": 79099,
     "wmoNumber": 95832,
     "name": "EDENHOPE AIRPORT",
     "state": "VIC",
-    "code": "V"
+    "latitude": -37.0222,
+    "longitude": 141.2657
   },
   {
     "stationID": 90015,
     "wmoNumber": 94842,
     "name": "CAPE OTWAY LIGHTHOUSE",
     "state": "VIC",
-    "code": "V"
+    "latitude": -38.8556,
+    "longitude": 143.5128
+  },
+  {
+    "stationID": 200840,
+    "wmoNumber": 95288,
+    "name": "BOUGAINVILLE REEF",
+    "state": "QLD",
+    "latitude": -15.4877,
+    "longitude": 147.1183
+  },
+  {
+    "stationID": 92045,
+    "wmoNumber": 94983,
+    "name": "EDDYSTONE POINT",
+    "state": "TAS/ANT",
+    "latitude": -40.9928,
+    "longitude": 148.3467
+  },
+  {
+    "stationID": 25557,
+    "wmoNumber": 95815,
+    "name": "MUNKORA",
+    "state": "SA",
+    "latitude": -36.1058,
+    "longitude": 140.3273
+  },
+  {
+    "stationID": 29141,
+    "wmoNumber": 94335,
+    "name": "CLONCURRY AIRPORT",
+    "state": "QLD",
+    "latitude": -20.6664,
+    "longitude": 140.505
   },
   {
     "stationID": 90186,
     "wmoNumber": 94837,
     "name": "WARRNAMBOOL AIRPORT NDB",
     "state": "VIC",
-    "code": "V"
+    "latitude": -38.2867,
+    "longitude": 142.4522
+  },
+  {
+    "stationID": 23373,
+    "wmoNumber": 94681,
+    "name": "NURIOOTPA VITICULTURAL",
+    "state": "SA",
+    "latitude": -34.4761,
+    "longitude": 139.0056
+  },
+  {
+    "stationID": 26100,
+    "wmoNumber": 95823,
+    "name": "PADTHAWAY SOUTH",
+    "state": "SA",
+    "latitude": -36.6539,
+    "longitude": 140.5212
+  },
+  {
+    "stationID": 21131,
+    "wmoNumber": 95667,
+    "name": "CLARE HIGH SCHOOL",
+    "state": "SA",
+    "latitude": -33.8226,
+    "longitude": 138.5933
   },
   {
     "stationID": 90182,
     "wmoNumber": 95825,
     "name": "CASTERTON",
     "state": "VIC",
-    "code": "V"
+    "latitude": -37.583,
+    "longitude": 141.3339
+  },
+  {
+    "stationID": 26099,
+    "wmoNumber": 94820,
+    "name": "NARACOORTE AERODROME",
+    "state": "SA",
+    "latitude": -36.9813,
+    "longitude": 140.727
+  },
+  {
+    "stationID": 24584,
+    "wmoNumber": 95818,
+    "name": "PALLAMANA AERODROME",
+    "state": "SA",
+    "latitude": -35.065,
+    "longitude": 139.2273
   },
   {
     "stationID": 90175,
     "wmoNumber": 94830,
     "name": "PORT FAIRY AWS",
     "state": "VIC",
-    "code": "V"
+    "latitude": -38.3906,
+    "longitude": 142.2347
+  },
+  {
+    "stationID": 92120,
+    "wmoNumber": 95981,
+    "name": "ST HELENS AERODROME",
+    "state": "TAS/ANT",
+    "latitude": -41.3381,
+    "longitude": 148.2792
+  },
+  {
+    "stationID": 23878,
+    "wmoNumber": 94678,
+    "name": "MT CRAWFORD AWS",
+    "state": "SA",
+    "latitude": -34.7253,
+    "longitude": 138.9273
+  },
+  {
+    "stationID": 26091,
+    "wmoNumber": 94817,
+    "name": "COONAWARRA",
+    "state": "SA",
+    "latitude": -37.2906,
+    "longitude": 140.8254
+  },
+  {
+    "stationID": 91219,
+    "wmoNumber": 94972,
+    "name": "SCOTTSDALE (WEST MINSTONE ROAD)",
+    "state": "TAS/ANT",
+    "latitude": -41.1708,
+    "longitude": 147.4883
+  },
+  {
+    "stationID": 23122,
+    "wmoNumber": 95671,
+    "name": "ROSEWORTHY AWS",
+    "state": "SA",
+    "latitude": -34.5106,
+    "longitude": 138.6763
+  },
+  {
+    "stationID": 91293,
+    "wmoNumber": 95964,
+    "name": "LOW HEAD",
+    "state": "TAS/ANT",
+    "latitude": -41.0547,
+    "longitude": 146.7874
   },
   {
     "stationID": 90194,
     "wmoNumber": 95822,
     "name": "DARTMOOR",
     "state": "VIC",
-    "code": "V"
+    "latitude": -37.9222,
+    "longitude": 141.2614
+  },
+  {
+    "stationID": 21133,
+    "wmoNumber": 95670,
+    "name": "RAYVILLE PARK",
+    "state": "SA",
+    "latitude": -33.7676,
+    "longitude": 138.2182
+  },
+  {
+    "stationID": 18201,
+    "wmoNumber": 95666,
+    "name": "PORT AUGUSTA AERO",
+    "state": "SA",
+    "latitude": -32.5089,
+    "longitude": 137.714
+  },
+  {
+    "stationID": 23083,
+    "wmoNumber": 95676,
+    "name": "EDINBURGH RAAF",
+    "state": "SA",
+    "latitude": -34.7111,
+    "longitude": 138.6222
+  },
+  {
+    "stationID": 98017,
+    "wmoNumber": 94850,
+    "name": "KING ISLAND AIRPORT",
+    "state": "TAS/ANT",
+    "latitude": -39.8801,
+    "longitude": 143.8829
+  },
+  {
+    "stationID": 90192,
+    "wmoNumber": 95826,
+    "name": "PORTLAND NTC AWS",
+    "state": "SA",
+    "latitude": -38.3439,
+    "longitude": 141.6136
+  },
+  {
+    "stationID": 23013,
+    "wmoNumber": 95677,
+    "name": "PARAFIELD AIRPORT",
+    "state": "SA",
+    "latitude": -34.7977,
+    "longitude": 138.6281
+  },
+  {
+    "stationID": 24580,
+    "wmoNumber": 94814,
+    "name": "STRATHALBYN RACECOURSE",
+    "state": "SA",
+    "latitude": -35.2836,
+    "longitude": 138.8934
+  },
+  {
+    "stationID": 23842,
+    "wmoNumber": 95678,
+    "name": "MOUNT LOFTY",
+    "state": "SA",
+    "latitude": -34.9784,
+    "longitude": 138.7088
+  },
+  {
+    "stationID": 23090,
+    "wmoNumber": 94675,
+    "name": "KENT TOWN",
+    "state": "SA",
+    "latitude": -34.9211,
+    "longitude": 138.6216
   },
   {
     "stationID": 90171,
     "wmoNumber": 94828,
     "name": "CASHMORE AIRPORT",
     "state": "VIC",
-    "code": "V"
+    "latitude": -38.3148,
+    "longitude": 141.4705
+  },
+  {
+    "stationID": 23052,
+    "wmoNumber": 95675,
+    "name": "BLACK POLE",
+    "state": "SA",
+    "latitude": -34.7343,
+    "longitude": 138.4654
   },
   {
     "stationID": 90184,
     "wmoNumber": 94826,
     "name": "CAPE NELSON LIGHTHOUSE",
     "state": "VIC",
-    "code": "V"
+    "latitude": -38.4306,
+    "longitude": 141.5437
+  },
+  {
+    "stationID": 26021,
+    "wmoNumber": 94821,
+    "name": "MOUNT GAMBIER AERO",
+    "state": "SA",
+    "latitude": -37.7473,
+    "longitude": 140.7739
+  },
+  {
+    "stationID": 92012,
+    "wmoNumber": 95974,
+    "name": "FINGAL (LEGGE STREET)",
+    "state": "TAS/ANT",
+    "latitude": -41.6428,
+    "longitude": 147.9664
+  },
+  {
+    "stationID": 91126,
+    "wmoNumber": 95960,
+    "name": "DEVONPORT AIRPORT",
+    "state": "TAS/ANT",
+    "latitude": -41.1701,
+    "longitude": 146.4289
+  },
+  {
+    "stationID": 23123,
+    "wmoNumber": 99673,
+    "name": "ADELAIDE AIRPORT (ANEMOMETER NORTHEAST)",
+    "state": "SA",
+    "latitude": -34.9382,
+    "longitude": 138.5435
+  },
+  {
+    "stationID": 23887,
+    "wmoNumber": 94683,
+    "name": "KUITPO FOREST RESERVE",
+    "state": "SA",
+    "latitude": -35.1712,
+    "longitude": 138.6783
+  },
+  {
+    "stationID": 91237,
+    "wmoNumber": 94969,
+    "name": "LAUNCESTON (TI TREE BEND)",
+    "state": "TAS/ANT",
+    "latitude": -41.4194,
+    "longitude": 147.1222
+  },
+  {
+    "stationID": 23124,
+    "wmoNumber": 99674,
+    "name": "ADELAIDE AIRPORT (ANEMOMETER NORTHWEST",
+    "state": "SA",
+    "latitude": -34.9435,
+    "longitude": 138.5232
+  },
+  {
+    "stationID": 23034,
+    "wmoNumber": 94672,
+    "name": "ADELAIDE AIRPORT",
+    "state": "SA",
+    "latitude": -34.9524,
+    "longitude": 138.5204
+  },
+  {
+    "stationID": 23109,
+    "wmoNumber": 99672,
+    "name": "ADELAIDE AIRPORT (ANEMOMETER SOUTH WEST)",
+    "state": "SA",
+    "latitude": -34.9573,
+    "longitude": 138.5152
+  },
+  {
+    "stationID": 91344,
+    "wmoNumber": 95963,
+    "name": "BURNIE NTC AWS",
+    "state": "SA",
+    "latitude": -41.05,
+    "longitude": 145.9149
+  },
+  {
+    "stationID": 23894,
+    "wmoNumber": 94677,
+    "name": "HINDMARSH ISLAND AWS",
+    "state": "SA",
+    "latitude": -35.5194,
+    "longitude": 138.8177
+  },
+  {
+    "stationID": 91107,
+    "wmoNumber": 95957,
+    "name": "WYNYARD AIRPORT",
+    "state": "TAS/ANT",
+    "latitude": -40.9964,
+    "longitude": 145.7311
+  },
+  {
+    "stationID": 91311,
+    "wmoNumber": 95966,
+    "name": "LAUNCESTON AIRPORT",
+    "state": "TAS/ANT",
+    "latitude": -41.5492,
+    "longitude": 147.2144
+  },
+  {
+    "stationID": 29127,
+    "wmoNumber": 94332,
+    "name": "MOUNT ISA AERO",
+    "state": "QLD",
+    "latitude": -20.6778,
+    "longitude": 139.4875
+  },
+  {
+    "stationID": 23885,
+    "wmoNumber": 94808,
+    "name": "NOARLUNGA",
+    "state": "SA",
+    "latitude": -35.1586,
+    "longitude": 138.5057
+  },
+  {
+    "stationID": 18120,
+    "wmoNumber": 95664,
+    "name": "WHYALLA AERO",
+    "state": "SA",
+    "latitude": -33.0539,
+    "longitude": 137.5205
+  },
+  {
+    "stationID": 31209,
+    "wmoNumber": 95283,
+    "name": "COOKTOWN AIRPORT",
+    "state": "QLD",
+    "latitude": -15.4461,
+    "longitude": 145.1861
+  },
+  {
+    "stationID": 16096,
+    "wmoNumber": 95658,
+    "name": "OLYMPIC DAM AERODROME",
+    "state": "SA",
+    "latitude": -30.4829,
+    "longitude": 136.8772
+  },
+  {
+    "stationID": 91292,
+    "wmoNumber": 94953,
+    "name": "SMITHTON AERODROME",
+    "state": "TAS/ANT",
+    "latitude": -40.8347,
+    "longitude": 145.0847
+  },
+  {
+    "stationID": 91331,
+    "wmoNumber": 95954,
+    "name": "CAPE GRIM",
+    "state": "TAS/ANT",
+    "latitude": -40.6764,
+    "longitude": 144.6922
+  },
+  {
+    "stationID": 26095,
+    "wmoNumber": 94813,
+    "name": "THE LIMESTONE",
+    "state": "SA",
+    "latitude": -36.9655,
+    "longitude": 139.7164
+  },
+  {
+    "stationID": 91245,
+    "wmoNumber": 94954,
+    "name": "CAPE GRIM BAPS (COMPARISON)",
+    "state": "TAS/ANT",
+    "latitude": -40.6828,
+    "longitude": 144.69
+  },
+  {
+    "stationID": 23886,
+    "wmoNumber": 95679,
+    "name": "MOUNT TERRIBLE RADAR",
+    "state": "SA",
+    "latitude": -35.3294,
+    "longitude": 138.5019
+  },
+  {
+    "stationID": 91291,
+    "wmoNumber": 94955,
+    "name": "SHEFFIELD SCHOOL FARM",
+    "state": "TAS/ANT",
+    "latitude": -41.3886,
+    "longitude": 146.3219
+  },
+  {
+    "stationID": 28004,
+    "wmoNumber": 94276,
+    "name": "PALMERVILLE",
+    "state": "QLD",
+    "latitude": -16.0008,
+    "longitude": 144.0758
+  },
+  {
+    "stationID": 26105,
+    "wmoNumber": 95816,
+    "name": "ROBE AIRFIELD",
+    "state": "SA",
+    "latitude": -37.1776,
+    "longitude": 139.8054
+  },
+  {
+    "stationID": 92114,
+    "wmoNumber": 94987,
+    "name": "FRIENDLY BEACHES",
+    "state": "TAS/ANT",
+    "latitude": -41.9953,
+    "longitude": 148.2794
+  },
+  {
+    "stationID": 91306,
+    "wmoNumber": 95969,
+    "name": "CRESSY RESEARCH STATION",
+    "state": "TAS/ANT",
+    "latitude": -41.7256,
+    "longitude": 147.0794
+  },
+  {
+    "stationID": 22050,
+    "wmoNumber": 94685,
+    "name": "KADINA AWS",
+    "state": "SA",
+    "latitude": -33.9703,
+    "longitude": 137.6628
+  },
+  {
+    "stationID": 16001,
+    "wmoNumber": 94659,
+    "name": "WOOMERA AERODROME",
+    "state": "SA",
+    "latitude": -31.1558,
+    "longitude": 136.8054
+  },
+  {
+    "stationID": 91259,
+    "wmoNumber": 95956,
+    "name": "LUNCHEON HILL (FORESTRY)",
+    "state": "TAS/ANT",
+    "latitude": -41.1492,
+    "longitude": 145.1517
+  },
+  {
+    "stationID": 22053,
+    "wmoNumber": 94666,
+    "name": "WARBURTO POINT",
+    "state": "SA",
+    "latitude": -34.0041,
+    "longitude": 137.528
+  },
+  {
+    "stationID": 23875,
+    "wmoNumber": 94811,
+    "name": "SECOND VALLEY FOREST AWS",
+    "state": "SA",
+    "latitude": -35.5695,
+    "longitude": 138.2864
+  },
+  {
+    "stationID": 31213,
+    "wmoNumber": 94188,
+    "name": "CAPE FLATTERY",
+    "state": "QLD",
+    "latitude": -14.9672,
+    "longitude": 145.3106
+  },
+  {
+    "stationID": 96033,
+    "wmoNumber": 95959,
+    "name": "LIAWENEE",
+    "state": "TAS/ANT",
+    "latitude": -41.8997,
+    "longitude": 146.6694
+  },
+  {
+    "stationID": 22046,
+    "wmoNumber": 94809,
+    "name": "EDITHBURGH",
+    "state": "SA",
+    "latitude": -35.1121,
+    "longitude": 137.7395
+  },
+  {
+    "stationID": 22031,
+    "wmoNumber": 95659,
+    "name": "MINLATON AERO",
+    "state": "SA",
+    "latitude": -34.748,
+    "longitude": 137.5276
+  },
+  {
+    "stationID": 22803,
+    "wmoNumber": 94822,
+    "name": "CAPE WILLOUGHBY",
+    "state": "SA",
+    "latitude": -35.8426,
+    "longitude": 138.1327
+  },
+  {
+    "stationID": 29063,
+    "wmoNumber": 94266,
+    "name": "NORMANTON AIRPORT",
+    "state": "QLD",
+    "latitude": -17.6872,
+    "longitude": 141.0733
+  },
+  {
+    "stationID": 92133,
+    "wmoNumber": 95987,
+    "name": "SPRING BAY NTC AWS",
+    "state": "SA",
+    "latitude": -42.5464,
+    "longitude": 147.9308
+  },
+  {
+    "stationID": 94195,
+    "wmoNumber": 94960,
+    "name": "TUNNACK FIRE STATION",
+    "state": "TAS/ANT",
+    "latitude": -42.4543,
+    "longitude": 147.4612
+  },
+  {
+    "stationID": 97085,
+    "wmoNumber": 95952,
+    "name": "MOUNT READ",
+    "state": "TAS/ANT",
+    "latitude": -41.8444,
+    "longitude": 145.5417
+  },
+  {
+    "stationID": 92124,
+    "wmoNumber": 95988,
+    "name": "MARIA ISLAND (POINT LESUEUR)",
+    "state": "TAS/ANT",
+    "latitude": -42.6621,
+    "longitude": 148.0179
+  },
+  {
+    "stationID": 96003,
+    "wmoNumber": 94959,
+    "name": "BUTLERS GORGE",
+    "state": "TAS/ANT",
+    "latitude": -42.2753,
+    "longitude": 146.2758
+  },
+  {
+    "stationID": 22841,
+    "wmoNumber": 95807,
+    "name": "KINGSCOTE AERO",
+    "state": "SA",
+    "latitude": -35.7114,
+    "longitude": 137.5231
+  },
+  {
+    "stationID": 94212,
+    "wmoNumber": 95972,
+    "name": "CAMPANIA (KINCORA)",
+    "state": "TAS/ANT",
+    "latitude": -42.6867,
+    "longitude": 147.4258
+  },
+  {
+    "stationID": 95048,
+    "wmoNumber": 94957,
+    "name": "OUSE FIRE STATION",
+    "state": "TAS/ANT",
+    "latitude": -42.4842,
+    "longitude": 146.7106
+  },
+  {
+    "stationID": 18116,
+    "wmoNumber": 94662,
+    "name": "CLEVE AERODROME",
+    "state": "SA",
+    "latitude": -33.7081,
+    "longitude": 136.5026
+  },
+  {
+    "stationID": 94254,
+    "wmoNumber": 94951,
+    "name": "DUNALLEY (STROUD POINT)",
+    "state": "TAS/ANT",
+    "latitude": -42.9017,
+    "longitude": 147.7894
+  },
+  {
+    "stationID": 94008,
+    "wmoNumber": 94975,
+    "name": "HOBART AIRPORT",
+    "state": "TAS/ANT",
+    "latitude": -42.8339,
+    "longitude": 147.5033
+  },
+  {
+    "stationID": 97072,
+    "wmoNumber": 94956,
+    "name": "STRAHAN AERODROME",
+    "state": "TAS/ANT",
+    "latitude": -42.155,
+    "longitude": 145.2908
+  },
+  {
+    "stationID": 95003,
+    "wmoNumber": 94964,
+    "name": "BUSHY PARK (BUSHY PARK ESTATES)",
+    "state": "TAS/ANT",
+    "latitude": -42.7097,
+    "longitude": 146.8983
+  },
+  {
+    "stationID": 94029,
+    "wmoNumber": 94970,
+    "name": "HOBART (ELLERSLIE ROAD)",
+    "state": "TAS/ANT",
+    "latitude": -42.8897,
+    "longitude": 147.3278
+  },
+  {
+    "stationID": 22843,
+    "wmoNumber": 94807,
+    "name": "PARNDANA CFS AWS",
+    "state": "SA",
+    "latitude": -35.7917,
+    "longitude": 137.2487
+  },
+  {
+    "stationID": 97000,
+    "wmoNumber": 94974,
+    "name": "CAPE SORELL",
+    "state": "TAS/ANT",
+    "latitude": -42.1986,
+    "longitude": 145.17
+  },
+  {
+    "stationID": 22049,
+    "wmoNumber": 95806,
+    "name": "STENHOUSE BAY",
+    "state": "SA",
+    "latitude": -35.2795,
+    "longitude": 136.9392
+  },
+  {
+    "stationID": 94087,
+    "wmoNumber": 95979,
+    "name": "MOUNT WELLINGTON",
+    "state": "TAS/ANT",
+    "latitude": -42.8967,
+    "longitude": 147.235
+  },
+  {
+    "stationID": 17043,
+    "wmoNumber": 94476,
+    "name": "OODNADATTA AIRPORT",
+    "state": "SA",
+    "latitude": -27.5553,
+    "longitude": 135.4456
+  },
+  {
+    "stationID": 94220,
+    "wmoNumber": 95977,
+    "name": "GROVE (RESEARCH STATION)",
+    "state": "TAS/ANT",
+    "latitude": -42.9858,
+    "longitude": 147.0742
+  },
+  {
+    "stationID": 94155,
+    "wmoNumber": 95986,
+    "name": "TASMAN ISLAND",
+    "state": "TAS/ANT",
+    "latitude": -43.2397,
+    "longitude": 148.0025
+  },
+  {
+    "stationID": 37010,
+    "wmoNumber": 94255,
+    "name": "CAMOOWEAL TOWNSHIP",
+    "state": "QLD",
+    "latitude": -19.9225,
+    "longitude": 138.1214
+  },
+  {
+    "stationID": 97024,
+    "wmoNumber": 95962,
+    "name": "WARRA",
+    "state": "TAS/ANT",
+    "latitude": -43.0609,
+    "longitude": 146.704
+  },
+  {
+    "stationID": 97083,
+    "wmoNumber": 95958,
+    "name": "SCOTTS PEAK DAM",
+    "state": "TAS/ANT",
+    "latitude": -43.0425,
+    "longitude": 146.2722
+  },
+  {
+    "stationID": 94191,
+    "wmoNumber": 94977,
+    "name": "HARTZ MOUNTAIN (KEOGHS PIMPLE)",
+    "state": "TAS/ANT",
+    "latitude": -43.2006,
+    "longitude": 146.7683
+  },
+  {
+    "stationID": 22823,
+    "wmoNumber": 95805,
+    "name": "CAPE BORDA",
+    "state": "SA",
+    "latitude": -35.7549,
+    "longitude": 136.5959
+  },
+  {
+    "stationID": 18083,
+    "wmoNumber": 95654,
+    "name": "WUDINNA AERO",
+    "state": "SA",
+    "latitude": -33.043,
+    "longitude": 135.4519
+  },
+  {
+    "stationID": 29167,
+    "wmoNumber": 94261,
+    "name": "CENTURY MINE",
+    "state": "QLD",
+    "latitude": -18.7569,
+    "longitude": 138.7056
+  },
+  {
+    "stationID": 29077,
+    "wmoNumber": 94260,
+    "name": "BURKETOWN AIRPORT",
+    "state": "QLD",
+    "latitude": -17.7483,
+    "longitude": 139.5356
+  },
+  {
+    "stationID": 15602,
+    "wmoNumber": 94327,
+    "name": "JERVOIS",
+    "state": "NT",
+    "latitude": -22.9494,
+    "longitude": 136.1442
+  },
+  {
+    "stationID": 18192,
+    "wmoNumber": 95661,
+    "name": "PORT LINCOLN AWS",
+    "state": "SA",
+    "latitude": -34.5993,
+    "longitude": 135.8784
+  },
+  {
+    "stationID": 18217,
+    "wmoNumber": 95663,
+    "name": "CUMMINS AERO",
+    "state": "SA",
+    "latitude": -34.2524,
+    "longitude": 135.7135
+  },
+  {
+    "stationID": 97080,
+    "wmoNumber": 95961,
+    "name": "LOW ROCKY POINT",
+    "state": "TAS/ANT",
+    "latitude": -42.9831,
+    "longitude": 145.5025
+  },
+  {
+    "stationID": 94198,
+    "wmoNumber": 95967,
+    "name": "CAPE BRUNY (CAPE BRUNY)",
+    "state": "TAS/ANT",
+    "latitude": -43.4886,
+    "longitude": 147.1444
+  },
+  {
+    "stationID": 16090,
+    "wmoNumber": 95458,
+    "name": "COOBER PEDY AIRPORT",
+    "state": "SA",
+    "latitude": -29.0347,
+    "longitude": 134.7222
+  },
+  {
+    "stationID": 18115,
+    "wmoNumber": 94804,
+    "name": "NEPTUNE ISLAND",
+    "state": "SA",
+    "latitude": -35.3365,
+    "longitude": 136.1174
+  },
+  {
+    "stationID": 29038,
+    "wmoNumber": 94268,
+    "name": "KOWANYAMA AIRPORT",
+    "state": "QLD",
+    "latitude": -15.4818,
+    "longitude": 141.7483
+  },
+  {
+    "stationID": 18195,
+    "wmoNumber": 95662,
+    "name": "MINNIPA PIRSA",
+    "state": "SA",
+    "latitude": -32.8427,
+    "longitude": 135.1515
+  },
+  {
+    "stationID": 16098,
+    "wmoNumber": 94655,
+    "name": "TARCOOLA AERO",
+    "state": "SA",
+    "latitude": -30.7051,
+    "longitude": 134.5786
+  },
+  {
+    "stationID": 18191,
+    "wmoNumber": 94658,
+    "name": "COLES POINT",
+    "state": "SA",
+    "latitude": -34.3749,
+    "longitude": 135.3741
+  },
+  {
+    "stationID": 94041,
+    "wmoNumber": 94962,
+    "name": "MAATSUYKER ISLAND LIGHTHOUSE",
+    "state": "TAS/ANT",
+    "latitude": -43.6578,
+    "longitude": 146.2711
+  },
+  {
+    "stationID": 27073,
+    "wmoNumber": 94183,
+    "name": "COEN AIRPORT",
+    "state": "QLD",
+    "latitude": -13.7606,
+    "longitude": 143.1183
+  },
+  {
+    "stationID": 200857,
+    "wmoNumber": 91559,
+    "name": "VANUATU NTC AWS",
+    "state": "SA",
+    "latitude": -17.7569,
+    "longitude": 168.3002
+  },
+  {
+    "stationID": 29039,
+    "wmoNumber": 94256,
+    "name": "MORNINGTON ISLAND",
+    "state": "QLD",
+    "latitude": -16.664,
+    "longitude": 139.1837
+  },
+  {
+    "stationID": 18012,
+    "wmoNumber": 94653,
+    "name": "CEDUNA AMO",
+    "state": "SA",
+    "latitude": -32.1297,
+    "longitude": 133.6976
+  },
+  {
+    "stationID": 18207,
+    "wmoNumber": 95652,
+    "name": "THEVENARD NTC AWS",
+    "state": "SA",
+    "latitude": -32.149,
+    "longitude": 133.6416
+  },
+  {
+    "stationID": 18200,
+    "wmoNumber": 95653,
+    "name": "THEVENARD WIND",
+    "state": "SA",
+    "latitude": -32.1803,
+    "longitude": 133.6343
+  },
+  {
+    "stationID": 28008,
+    "wmoNumber": 94186,
+    "name": "LOCKHART RIVER AIRPORT",
+    "state": "QLD",
+    "latitude": -12.785,
+    "longitude": 143.3047
+  },
+  {
+    "stationID": 15590,
+    "wmoNumber": 94326,
+    "name": "ALICE SPRINGS AIRPORT",
+    "state": "NT",
+    "latitude": -23.7951,
+    "longitude": 133.889
+  },
+  {
+    "stationID": 27075,
+    "wmoNumber": 94171,
+    "name": "SCHERGER RAAF",
+    "state": "QLD",
+    "latitude": -12.6167,
+    "longitude": 142.0869
+  },
+  {
+    "stationID": 27045,
+    "wmoNumber": 94170,
+    "name": "WEIPA AERO",
+    "state": "QLD",
+    "latitude": -12.6778,
+    "longitude": 141.9208
+  },
+  {
+    "stationID": 15643,
+    "wmoNumber": 94328,
+    "name": "TERRITORY GRAPE FARM",
+    "state": "NT",
+    "latitude": -22.4518,
+    "longitude": 133.6377
+  },
+  {
+    "stationID": 16097,
+    "wmoNumber": 94474,
+    "name": "PUKATJA",
+    "state": "SA",
+    "latitude": -26.2635,
+    "longitude": 132.1771
+  },
+  {
+    "stationID": 15135,
+    "wmoNumber": 94238,
+    "name": "TENNANT CREEK AIRPORT",
+    "state": "NT",
+    "latitude": -19.6423,
+    "longitude": 134.1833
+  },
+  {
+    "stationID": 200859,
+    "wmoNumber": 91519,
+    "name": "SOLOMON IS. NTC AWS",
+    "state": "SA",
+    "latitude": -9.4289,
+    "longitude": 159.9555
+  },
+  {
+    "stationID": 14703,
+    "wmoNumber": 94248,
+    "name": "CENTRE ISLAND",
+    "state": "NT",
+    "latitude": -15.7426,
+    "longitude": 136.8192
+  },
+  {
+    "stationID": 14704,
+    "wmoNumber": 94239,
+    "name": "MCARTHUR RIVER MINE",
+    "state": "NT",
+    "latitude": -16.4423,
+    "longitude": 136.076
+  },
+  {
+    "stationID": 14723,
+    "wmoNumber": 94152,
+    "name": "BORROLOOLA",
+    "state": "NT",
+    "latitude": -16.0757,
+    "longitude": 136.3041
+  },
+  {
+    "stationID": 18106,
+    "wmoNumber": 94651,
+    "name": "NULLARBOR",
+    "state": "SA",
+    "latitude": -31.4492,
+    "longitude": 130.8976
+  },
+  {
+    "stationID": 15635,
+    "wmoNumber": 94462,
+    "name": "YULARA AERO",
+    "state": "NT",
+    "latitude": -25.1896,
+    "longitude": 130.9737
+  },
+  {
+    "stationID": 200866,
+    "wmoNumber": 93713,
+    "name": "JACKSON BAY NTC AWS",
+    "state": "SA",
+    "latitude": -43.9733,
+    "longitude": 168.616
+  },
+  {
+    "stationID": 27058,
+    "wmoNumber": 94174,
+    "name": "HORN ISLAND",
+    "state": "QLD",
+    "latitude": -10.5844,
+    "longitude": 142.29
+  },
+  {
+    "stationID": 27054,
+    "wmoNumber": 94182,
+    "name": "COCONUT ISLAND",
+    "state": "QLD",
+    "latitude": -10.0511,
+    "longitude": 143.0686
+  },
+  {
+    "stationID": 200782,
+    "wmoNumber": 94151,
+    "name": "NORTH EAST ISLAND",
+    "state": "NT",
+    "latitude": -13.6449,
+    "longitude": 136.9445
+  },
+  {
+    "stationID": 14518,
+    "wmoNumber": 94153,
+    "name": "GROOTE EYLANDT AIRPORT AWS",
+    "state": "NT",
+    "latitude": -13.9747,
+    "longitude": 136.4631
+  },
+  {
+    "stationID": 14406,
+    "wmoNumber": 94154,
+    "name": "GROOTE EYLANDT NTC AWS",
+    "state": "SA",
+    "latitude": -13.86,
+    "longitude": 136.4158
   },
   {
     "stationID": 11003,
     "wmoNumber": 94647,
     "name": "EUCLA",
     "state": "WA",
-    "code": "W"
+    "latitude": -31.6797,
+    "longitude": 128.8792
+  },
+  {
+    "stationID": 14626,
+    "wmoNumber": 94234,
+    "name": "DALY WATERS AWS",
+    "state": "NT",
+    "latitude": -16.2636,
+    "longitude": 133.3782
+  },
+  {
+    "stationID": 14508,
+    "wmoNumber": 94150,
+    "name": "GOVE AIRPORT",
+    "state": "NT",
+    "latitude": -12.2741,
+    "longitude": 136.8203
+  },
+  {
+    "stationID": 15664,
+    "wmoNumber": 94321,
+    "name": "WALUNGURRU",
+    "state": "NT",
+    "latitude": -23.2656,
+    "longitude": 129.3844
   },
   {
     "stationID": 11052,
     "wmoNumber": 95646,
     "name": "FORREST",
     "state": "WA",
-    "code": "W"
+    "latitude": -30.8453,
+    "longitude": 128.1092
+  },
+  {
+    "stationID": 13017,
+    "wmoNumber": 94461,
+    "name": "GILES METEOROLOGICAL OFFICE",
+    "state": "SA",
+    "latitude": -25.0341,
+    "longitude": 128.301
+  },
+  {
+    "stationID": 15666,
+    "wmoNumber": 95322,
+    "name": "RABBIT FLAT",
+    "state": "NT",
+    "latitude": -20.1824,
+    "longitude": 130.0148
   },
   {
     "stationID": 11053,
     "wmoNumber": 94644,
     "name": "RED ROCKS POINT",
     "state": "WA",
-    "code": "W"
+    "latitude": -32.2028,
+    "longitude": 127.5297
+  },
+  {
+    "stationID": 14627,
+    "wmoNumber": 94143,
+    "name": "BULMAN AWS",
+    "state": "NT",
+    "latitude": -13.6714,
+    "longitude": 134.3414
+  },
+  {
+    "stationID": 14829,
+    "wmoNumber": 94231,
+    "name": "LAJAMANU",
+    "state": "NT",
+    "latitude": -18.3325,
+    "longitude": 130.6358
+  },
+  {
+    "stationID": 200786,
+    "wmoNumber": 94147,
+    "name": "CAPE WESSEL",
+    "state": "NT",
+    "latitude": -11.0045,
+    "longitude": 136.7588
+  },
+  {
+    "stationID": 14517,
+    "wmoNumber": 95146,
+    "name": "NGAYAWILI",
+    "state": "NT",
+    "latitude": -11.9971,
+    "longitude": 135.5726
+  },
+  {
+    "stationID": 14949,
+    "wmoNumber": 94225,
+    "name": "DELAMERE WEAPONS RANGE",
+    "state": "NT",
+    "latitude": -15.7442,
+    "longitude": 131.9182
+  },
+  {
+    "stationID": 14404,
+    "wmoNumber": 94140,
+    "name": "MILINGIMBI AWS",
+    "state": "NT",
+    "latitude": -12.0931,
+    "longitude": 134.8919
+  },
+  {
+    "stationID": 14825,
+    "wmoNumber": 94232,
+    "name": "VICTORIA RIVER DOWNS",
+    "state": "NT",
+    "latitude": -16.403,
+    "longitude": 131.0145
+  },
+  {
+    "stationID": 14932,
+    "wmoNumber": 94131,
+    "name": "TINDAL RAAF",
+    "state": "NT",
+    "latitude": -14.5229,
+    "longitude": 132.3826
+  },
+  {
+    "stationID": 14909,
+    "wmoNumber": 94141,
+    "name": "CENTRAL ARNHEM PLATEAU",
+    "state": "NT",
+    "latitude": -13.3275,
+    "longitude": 133.0861
   },
   {
     "stationID": 13011,
     "wmoNumber": 94457,
     "name": "WARBURTON AIRFIELD",
     "state": "WA",
-    "code": "W"
+    "latitude": -26.1317,
+    "longitude": 126.5839
+  },
+  {
+    "stationID": 14405,
+    "wmoNumber": 95142,
+    "name": "MANINGRIDA AERO",
+    "state": "NT",
+    "latitude": -12.0569,
+    "longitude": 134.2339
+  },
+  {
+    "stationID": 200856,
+    "wmoNumber": 91679,
+    "name": "LAUTOKA NTC AWS",
+    "state": "SA",
+    "latitude": -17.6053,
+    "longitude": 177.4381
   },
   {
     "stationID": 11023,
     "wmoNumber": 95645,
     "name": "CAIGUNA ASA",
     "state": "WA",
-    "code": "W"
+    "latitude": -32.2653,
+    "longitude": 125.4894
+  },
+  {
+    "stationID": 14198,
+    "wmoNumber": 94137,
+    "name": "JABIRU AIRPORT",
+    "state": "NT",
+    "latitude": -12.6594,
+    "longitude": 132.8939
+  },
+  {
+    "stationID": 14954,
+    "wmoNumber": 94130,
+    "name": "BRADSHAW",
+    "state": "NT",
+    "latitude": -14.9408,
+    "longitude": 130.8092
+  },
+  {
+    "stationID": 14401,
+    "wmoNumber": 94139,
+    "name": "WARRUWI",
+    "state": "NT",
+    "latitude": -11.6502,
+    "longitude": 133.3796
+  },
+  {
+    "stationID": 14901,
+    "wmoNumber": 94128,
+    "name": "DOUGLAS RIVER",
+    "state": "NT",
+    "latitude": -13.8345,
+    "longitude": 131.1872
+  },
+  {
+    "stationID": 200863,
+    "wmoNumber": 91689,
+    "name": "SUVA NTC AWS",
+    "state": "SA",
+    "latitude": -18.1325,
+    "longitude": 178.4275
+  },
+  {
+    "stationID": 14254,
+    "wmoNumber": 94127,
+    "name": "POINT STUART AWS",
+    "state": "NT",
+    "latitude": -12.2397,
+    "longitude": 131.8791
   },
   {
     "stationID": 2012,
     "wmoNumber": 94212,
     "name": "HALLS CREEK AIRPORT",
     "state": "WA",
-    "code": "W"
+    "latitude": -18.2292,
+    "longitude": 127.6636
+  },
+  {
+    "stationID": 14274,
+    "wmoNumber": 94135,
+    "name": "MCCLUER ISLAND",
+    "state": "NT",
+    "latitude": -11.0468,
+    "longitude": 132.9791
+  },
+  {
+    "stationID": 14272,
+    "wmoNumber": 94125,
+    "name": "BATCHELOR AERO",
+    "state": "NT",
+    "latitude": -13.0545,
+    "longitude": 131.0252
   },
   {
     "stationID": 2064,
     "wmoNumber": 94217,
     "name": "ARGYLE AERODROME",
     "state": "WA",
-    "code": "W"
+    "latitude": -16.6381,
+    "longitude": 128.4517
+  },
+  {
+    "stationID": 14041,
+    "wmoNumber": 95121,
+    "name": "MIDDLE POINT AWS",
+    "state": "NT",
+    "latitude": -12.605,
+    "longitude": 131.2988
+  },
+  {
+    "stationID": 14046,
+    "wmoNumber": 99504,
+    "name": "NOONAMAH AWS",
+    "state": "NT",
+    "latitude": -12.6365,
+    "longitude": 131.0714
   },
   {
     "stationID": 2056,
     "wmoNumber": 94216,
     "name": "KUNUNURRA AERO",
     "state": "WA",
-    "code": "W"
+    "latitude": -15.7814,
+    "longitude": 128.71
+  },
+  {
+    "stationID": 14948,
+    "wmoNumber": 95111,
+    "name": "PORT KEATS AERO",
+    "state": "NT",
+    "latitude": -14.2495,
+    "longitude": 129.5282
+  },
+  {
+    "stationID": 14023,
+    "wmoNumber": 99501,
+    "name": "GUNN POINT",
+    "state": "NT",
+    "latitude": -12.2488,
+    "longitude": 131.0453
+  },
+  {
+    "stationID": 14015,
+    "wmoNumber": 94120,
+    "name": "DARWIN AIRPORT",
+    "state": "NT",
+    "latitude": -12.4239,
+    "longitude": 130.8925
+  },
+  {
+    "stationID": 14072,
+    "wmoNumber": 95122,
+    "name": "DARWIN NTC AWS",
+    "state": "SA",
+    "latitude": -12.4719,
+    "longitude": 130.8458
+  },
+  {
+    "stationID": 14245,
+    "wmoNumber": 94129,
+    "name": "CAPE DON",
+    "state": "NT",
+    "latitude": -11.3081,
+    "longitude": 131.7651
+  },
+  {
+    "stationID": 14031,
+    "wmoNumber": 99510,
+    "name": "CHARLES POINT AWS",
+    "state": "NT",
+    "latitude": -12.389,
+    "longitude": 130.6309
+  },
+  {
+    "stationID": 14277,
+    "wmoNumber": 94116,
+    "name": "DUM IN MIRRIE AWS",
+    "state": "NT",
+    "latitude": -12.635,
+    "longitude": 130.3725
+  },
+  {
+    "stationID": 14056,
+    "wmoNumber": 94114,
+    "name": "FISH REEF MARINE AWS",
+    "state": "NT",
+    "latitude": -12.4322,
+    "longitude": 130.4428
   },
   {
     "stationID": 1006,
     "wmoNumber": 95214,
     "name": "WYNDHAM AERO",
     "state": "WA",
-    "code": "W"
+    "latitude": -15.51,
+    "longitude": 128.1503
+  },
+  {
+    "stationID": 200852,
+    "wmoNumber": 92044,
+    "name": "MANUS ARCS-1",
+    "state": "NT",
+    "latitude": -2.0578,
+    "longitude": 147.4253
+  },
+  {
+    "stationID": 200862,
+    "wmoNumber": 92036,
+    "name": "PNG NTC AWS",
+    "state": "SA",
+    "latitude": -2.042,
+    "longitude": 147.3737
+  },
+  {
+    "stationID": 300004,
+    "wmoNumber": 94998,
+    "name": "MACQUARIE ISLAND",
+    "state": "TAS/ANT",
+    "latitude": -54.4994,
+    "longitude": 158.9369
+  },
+  {
+    "stationID": 14142,
+    "wmoNumber": 94119,
+    "name": "PIRLANGIMPI",
+    "state": "NT",
+    "latitude": -11.4022,
+    "longitude": 130.4217
+  },
+  {
+    "stationID": 200731,
+    "wmoNumber": 94122,
+    "name": "POINT FAWCETT",
+    "state": "NT",
+    "latitude": -11.7628,
+    "longitude": 130.03
   },
   {
     "stationID": 12305,
     "wmoNumber": 94449,
     "name": "LAVERTON AERO",
     "state": "WA",
-    "code": "W"
+    "latitude": -28.6133,
+    "longitude": 122.4236
   },
   {
     "stationID": 3093,
     "wmoNumber": 94206,
     "name": "FITZROY CROSSING AERO",
     "state": "WA",
-    "code": "W"
+    "latitude": -18.1814,
+    "longitude": 125.5619
+  },
+  {
+    "stationID": 109504,
+    "wmoNumber": 95648,
+    "name": "ESPERANCE NTC AWS",
+    "state": "SA",
+    "latitude": -33.8707,
+    "longitude": 121.8971
   },
   {
     "stationID": 9789,
     "wmoNumber": 94638,
     "name": "ESPERANCE",
     "state": "WA",
-    "code": "W"
+    "latitude": -33.83,
+    "longitude": 121.8925
   },
   {
     "stationID": 9542,
     "wmoNumber": 95638,
     "name": "ESPERANCE AERO",
     "state": "WA",
-    "code": "W"
+    "latitude": -33.6825,
+    "longitude": 121.8275
   },
   {
     "stationID": 12009,
     "wmoNumber": 95642,
     "name": "NORSEMAN AERO",
     "state": "WA",
-    "code": "W"
+    "latitude": -32.2147,
+    "longitude": 121.7547
   },
   {
     "stationID": 12071,
     "wmoNumber": 95639,
     "name": "SALMON GUMS RES.STN.",
     "state": "WA",
-    "code": "W"
+    "latitude": -32.9869,
+    "longitude": 121.6239
   },
   {
     "stationID": 12038,
     "wmoNumber": 94637,
     "name": "KALGOORLIE-BOULDER AIRPORT",
     "state": "WA",
-    "code": "W"
+    "latitude": -30.7847,
+    "longitude": 121.4533
   },
   {
     "stationID": 12241,
     "wmoNumber": 94450,
     "name": "LEONORA AERO",
     "state": "WA",
-    "code": "W"
+    "latitude": -28.8789,
+    "longitude": 121.3186
   },
   {
     "stationID": 1019,
     "wmoNumber": 94100,
     "name": "KALUMBURU",
     "state": "WA",
-    "code": "W"
+    "latitude": -14.2964,
+    "longitude": 126.6453
   },
   {
     "stationID": 12044,
     "wmoNumber": 95644,
     "name": "MUNGLINUP WEST",
     "state": "WA",
-    "code": "W"
+    "latitude": -33.5547,
+    "longitude": 120.6997
+  },
+  {
+    "stationID": 1020,
+    "wmoNumber": 95101,
+    "name": "TRUSCOTT",
+    "state": "NT",
+    "latitude": -14.09,
+    "longitude": 126.3867
   },
   {
     "stationID": 12314,
     "wmoNumber": 95448,
     "name": "LEINSTER AERO",
     "state": "WA",
-    "code": "W"
+    "latitude": -27.8386,
+    "longitude": 120.7031
   },
   {
     "stationID": 13030,
     "wmoNumber": 94319,
     "name": "TELFER AERO",
     "state": "WA",
-    "code": "W"
+    "latitude": -21.7125,
+    "longitude": 122.2281
+  },
+  {
+    "stationID": 1007,
+    "wmoNumber": 94102,
+    "name": "TROUGHTON ISLAND",
+    "state": "NT",
+    "latitude": -13.7542,
+    "longitude": 126.1485
   },
   {
     "stationID": 9961,
     "wmoNumber": 95635,
     "name": "HOPETOUN NORTH",
     "state": "WA",
-    "code": "W"
+    "latitude": -33.9306,
+    "longitude": 120.1283
   },
   {
     "stationID": 3080,
     "wmoNumber": 94204,
     "name": "CURTIN AERO",
     "state": "WA",
-    "code": "W"
+    "latitude": -17.5736,
+    "longitude": 123.8217
   },
   {
     "stationID": 3032,
     "wmoNumber": 95205,
     "name": "DERBY AERO",
     "state": "WA",
-    "code": "W"
+    "latitude": -17.3706,
+    "longitude": 123.6611
+  },
+  {
+    "stationID": 200861,
+    "wmoNumber": 91789,
+    "name": "TONGA NTC AWS",
+    "state": "SA",
+    "latitude": -21.138,
+    "longitude": -175.1815
   },
   {
     "stationID": 12320,
     "wmoNumber": 95634,
     "name": "SOUTHERN CROSS AIRFIELD",
     "state": "WA",
-    "code": "W"
+    "latitude": -31.2353,
+    "longitude": 119.3564
   },
   {
     "stationID": 10905,
     "wmoNumber": 95636,
     "name": "JACUP",
     "state": "WA",
-    "code": "W"
+    "latitude": -33.8878,
+    "longitude": 119.1092
   },
   {
     "stationID": 10692,
     "wmoNumber": 94628,
     "name": "NEWDEGATE RESEARCH STATION",
     "state": "WA",
-    "code": "W"
+    "latitude": -33.1131,
+    "longitude": 118.84
   },
   {
     "stationID": 200867,
     "wmoNumber": 99045,
     "name": "BAYU UNDAN",
     "state": "WA",
-    "code": "W"
+    "latitude": -11.0683,
+    "longitude": 126.6139
   },
   {
     "stationID": 3096,
     "wmoNumber": 95204,
     "name": "WEST ROEBUCK",
     "state": "WA",
-    "code": "W"
+    "latitude": -17.8964,
+    "longitude": 122.3122
+  },
+  {
+    "stationID": 3102,
+    "wmoNumber": 95202,
+    "name": "BROOME NTC AWS",
+    "state": "SA",
+    "latitude": -18.0008,
+    "longitude": 122.2183
   },
   {
     "stationID": 3003,
     "wmoNumber": 94203,
     "name": "BROOME AIRPORT",
     "state": "WA",
-    "code": "W"
+    "latitude": -17.9475,
+    "longitude": 122.2353
+  },
+  {
+    "stationID": 200858,
+    "wmoNumber": 91531,
+    "name": "NAURU NTC AWS",
+    "state": "SA",
+    "latitude": -0.5319,
+    "longitude": 166.9092
+  },
+  {
+    "stationID": 200851,
+    "wmoNumber": 91532,
+    "name": "NAURU ARCS-2",
+    "state": "NT",
+    "latitude": -0.5215,
+    "longitude": 166.916
   },
   {
     "stationID": 10911,
     "wmoNumber": 95637,
     "name": "LAKE GRACE",
     "state": "WA",
-    "code": "W"
+    "latitude": -33.1006,
+    "longitude": 118.4647
   },
   {
     "stationID": 7176,
     "wmoNumber": 94317,
     "name": "NEWMAN AERO",
     "state": "WA",
-    "code": "W"
+    "latitude": -23.4169,
+    "longitude": 119.7989
   },
   {
     "stationID": 200735,
     "wmoNumber": 94210,
     "name": "ADELE ISLAND",
     "state": "WA",
-    "code": "W"
+    "latitude": -15.5114,
+    "longitude": 123.1556
   },
   {
     "stationID": 4019,
     "wmoNumber": 94200,
     "name": "MANDORA",
     "state": "WA",
-    "code": "W"
+    "latitude": -19.7419,
+    "longitude": 120.8436
   },
   {
     "stationID": 7045,
     "wmoNumber": 94430,
     "name": "MEEKATHARRA AIRPORT",
     "state": "WA",
-    "code": "W"
+    "latitude": -26.6136,
+    "longitude": 118.5372
   },
   {
     "stationID": 200784,
     "wmoNumber": 94103,
     "name": "BROWSE ISLAND",
     "state": "WA",
-    "code": "W"
+    "latitude": -14.1089,
+    "longitude": 123.5472
+  },
+  {
+    "stationID": 200212,
+    "wmoNumber": 95100,
+    "name": "NORTHERN ENDEAVOUR",
+    "state": "NT",
+    "latitude": -10.6134,
+    "longitude": 125.9843
   },
   {
     "stationID": 9999,
     "wmoNumber": 94802,
     "name": "ALBANY AIRPORT",
     "state": "WA",
-    "code": "W"
+    "latitude": -34.9411,
+    "longitude": 117.8158
   },
   {
     "stationID": 9741,
     "wmoNumber": 95802,
     "name": "ALBANY AIRPORT COMPARISON",
     "state": "WA",
-    "code": "W"
+    "latitude": -34.9414,
+    "longitude": 117.8022
   },
   {
     "stationID": 10916,
     "wmoNumber": 94641,
     "name": "KATANNING",
     "state": "WA",
-    "code": "W"
+    "latitude": -33.6856,
+    "longitude": 117.6064
+  },
+  {
+    "stationID": 200860,
+    "wmoNumber": 91642,
+    "name": "TUVALU NTC AWS",
+    "state": "SA",
+    "latitude": -8.5025,
+    "longitude": 179.1949
   },
   {
     "stationID": 4106,
     "wmoNumber": 95317,
     "name": "MARBLE BAR",
     "state": "WA",
-    "code": "W"
+    "latitude": -21.1756,
+    "longitude": 119.7497
   },
   {
     "stationID": 7600,
     "wmoNumber": 94429,
     "name": "MOUNT MAGNET AERO",
     "state": "WA",
-    "code": "W"
+    "latitude": -28.1156,
+    "longitude": 117.8425
   },
   {
     "stationID": 10286,
     "wmoNumber": 95625,
     "name": "CUNDERDIN AIRFIELD",
     "state": "WA",
-    "code": "W"
+    "latitude": -31.6219,
+    "longitude": 117.2217
   },
   {
     "stationID": 9964,
     "wmoNumber": 94631,
     "name": "ROCKY GULLY",
     "state": "WA",
-    "code": "W"
+    "latitude": -34.5714,
+    "longitude": 117.0106
   },
   {
     "stationID": 9998,
     "wmoNumber": 95647,
     "name": "NORTH WALPOLE",
     "state": "WA",
-    "code": "W"
+    "latitude": -34.9469,
+    "longitude": 116.7222
   },
   {
     "stationID": 10917,
     "wmoNumber": 95640,
     "name": "WANDERING",
     "state": "WA",
-    "code": "W"
+    "latitude": -32.6722,
+    "longitude": 116.6706
   },
   {
     "stationID": 8297,
     "wmoNumber": 95629,
     "name": "DALWALLINU",
     "state": "WA",
-    "code": "W"
+    "latitude": -30.2761,
+    "longitude": 116.6714
   },
   {
     "stationID": 9968,
     "wmoNumber": 95617,
     "name": "SHANNON",
     "state": "WA",
-    "code": "W"
+    "latitude": -34.5683,
+    "longitude": 116.3367
   },
   {
     "stationID": 9994,
     "wmoNumber": 95621,
     "name": "COLLIE EAST",
     "state": "WA",
-    "code": "W"
+    "latitude": -33.3608,
+    "longitude": 116.1717
   },
   {
     "stationID": 9573,
     "wmoNumber": 94617,
     "name": "MANJIMUP",
     "state": "WA",
-    "code": "W"
+    "latitude": -34.2508,
+    "longitude": 116.145
   },
   {
     "stationID": 9617,
     "wmoNumber": 95632,
     "name": "BRIDGETOWN",
     "state": "WA",
-    "code": "W"
+    "latitude": -33.9486,
+    "longitude": 116.1311
   },
   {
     "stationID": 4100,
     "wmoNumber": 94310,
     "name": "BEDOUT ISLAND",
     "state": "WA",
-    "code": "W"
+    "latitude": -19.5886,
+    "longitude": 119.0997
   },
   {
     "stationID": 9240,
     "wmoNumber": 95610,
     "name": "BICKLEY",
     "state": "WA",
-    "code": "W"
+    "latitude": -32.0072,
+    "longitude": 116.1369
   },
   {
     "stationID": 7185,
     "wmoNumber": 94316,
     "name": "PARABURDOO AERO",
     "state": "WA",
-    "code": "W"
+    "latitude": -23.1725,
+    "longitude": 117.7494
   },
   {
     "stationID": 9538,
     "wmoNumber": 94620,
     "name": "DWELLINGUP",
     "state": "WA",
-    "code": "W"
+    "latitude": -32.7103,
+    "longitude": 116.0594
   },
   {
     "stationID": 9204,
     "wmoNumber": 94615,
     "name": "GOOSEBERRY HILL",
     "state": "WA",
-    "code": "W"
+    "latitude": -31.9414,
+    "longitude": 116.0506
   },
   {
     "stationID": 4032,
     "wmoNumber": 94312,
     "name": "PORT HEDLAND AIRPORT",
     "state": "WA",
-    "code": "W"
+    "latitude": -20.3725,
+    "longitude": 118.6317
   },
   {
     "stationID": 9053,
     "wmoNumber": 94612,
     "name": "PEARCE RAAF",
     "state": "WA",
-    "code": "W"
+    "latitude": -31.6669,
+    "longitude": 116.0189
   },
   {
     "stationID": 9021,
     "wmoNumber": 94610,
     "name": "PERTH AIRPORT",
     "state": "WA",
-    "code": "W"
+    "latitude": -31.9275,
+    "longitude": 115.9764
   },
   {
     "stationID": 9172,
     "wmoNumber": 94609,
     "name": "JANDAKOT AERO",
     "state": "WA",
-    "code": "W"
+    "latitude": -32.1011,
+    "longitude": 115.8794
   },
   {
     "stationID": 9225,
     "wmoNumber": 94608,
     "name": "PERTH METRO",
     "state": "WA",
-    "code": "W"
+    "latitude": -31.9192,
+    "longitude": 115.8728
+  },
+  {
+    "stationID": 200872,
+    "wmoNumber": 97390,
+    "name": "COMORO AIRPORT",
+    "state": "NT",
+    "latitude": -8.5494,
+    "longitude": 125.5331
   },
   {
     "stationID": 9091,
     "wmoNumber": 95620,
     "name": "INNER DOLPHIN PYLON",
     "state": "WA",
-    "code": "W"
+    "latitude": -31.9889,
+    "longitude": 115.8311
   },
   {
     "stationID": 9178,
     "wmoNumber": 95612,
     "name": "GINGIN AERO",
     "state": "WA",
-    "code": "W"
+    "latitude": -31.4628,
+    "longitude": 115.8642
   },
   {
     "stationID": 9215,
     "wmoNumber": 94614,
     "name": "SWANBOURNE",
     "state": "WA",
-    "code": "W"
+    "latitude": -31.9558,
+    "longitude": 115.7619
   },
   {
     "stationID": 8296,
     "wmoNumber": 94417,
     "name": "MORAWA AIRPORT",
     "state": "WA",
-    "code": "W"
+    "latitude": -29.2039,
+    "longitude": 116.0247
   },
   {
     "stationID": 9224,
     "wmoNumber": 94618,
     "name": "FREMANTLE PORT",
     "state": "WA",
-    "code": "W"
+    "latitude": -32.0544,
+    "longitude": 115.7414
   },
   {
     "stationID": 9977,
     "wmoNumber": 94605,
     "name": "MANDURAH",
     "state": "WA",
-    "code": "W"
+    "latitude": -32.5219,
+    "longitude": 115.7119
+  },
+  {
+    "stationID": 9265,
+    "wmoNumber": 95605,
+    "name": "HILLARYS BOAT HARBOUR NTC AWS",
+    "state": "SA",
+    "latitude": -31.8256,
+    "longitude": 115.7386
   },
   {
     "stationID": 9214,
     "wmoNumber": 94607,
     "name": "OCEAN REEF",
     "state": "WA",
-    "code": "W"
+    "latitude": -31.7594,
+    "longitude": 115.7278
   },
   {
     "stationID": 9256,
     "wmoNumber": 95607,
     "name": "GARDEN ISLAND HSF",
     "state": "WA",
-    "code": "W"
+    "latitude": -32.2433,
+    "longitude": 115.6839
   },
   {
     "stationID": 9965,
     "wmoNumber": 94604,
     "name": "BUNBURY",
     "state": "WA",
-    "code": "W"
+    "latitude": -33.3567,
+    "longitude": 115.6447
   },
   {
     "stationID": 9193,
     "wmoNumber": 94602,
     "name": "ROTTNEST ISLAND",
     "state": "WA",
-    "code": "W"
+    "latitude": -32.0069,
+    "longitude": 115.5022
   },
   {
     "stationID": 9603,
     "wmoNumber": 95611,
     "name": "BUSSELTON AERO",
     "state": "WA",
-    "code": "W"
+    "latitude": -33.6858,
+    "longitude": 115.4008
   },
   {
     "stationID": 9037,
     "wmoNumber": 94603,
     "name": "BADGINGARRA RESEARCH STN",
     "state": "WA",
-    "code": "W"
+    "latitude": -30.3381,
+    "longitude": 115.5394
   },
   {
     "stationID": 9937,
     "wmoNumber": 95602,
     "name": "BUSSELTON JETTY",
     "state": "WA",
-    "code": "W"
+    "latitude": -33.6311,
+    "longitude": 115.3389
   },
   {
     "stationID": 9518,
     "wmoNumber": 94601,
     "name": "CAPE LEEUWIN",
     "state": "WA",
-    "code": "W"
+    "latitude": -34.3728,
+    "longitude": 115.1358
   },
   {
     "stationID": 9746,
     "wmoNumber": 95641,
     "name": "WITCHCLIFFE",
     "state": "WA",
-    "code": "W"
+    "latitude": -34.0281,
+    "longitude": 115.1042
   },
   {
     "stationID": 9519,
     "wmoNumber": 94600,
     "name": "CAPE NATURALISTE",
     "state": "WA",
-    "code": "W"
+    "latitude": -33.5372,
+    "longitude": 115.0189
   },
   {
     "stationID": 200713,
     "wmoNumber": 94207,
     "name": "ROWLEY SHOALS",
     "state": "WA",
-    "code": "W"
+    "latitude": -17.5217,
+    "longitude": 118.9531
   },
   {
     "stationID": 4090,
     "wmoNumber": 94308,
     "name": "ROEBOURNE AERO",
     "state": "WA",
-    "code": "W"
+    "latitude": -20.7594,
+    "longitude": 117.1583
   },
   {
     "stationID": 8315,
     "wmoNumber": 94403,
     "name": "GERALDTON AIRPORT",
     "state": "WA",
-    "code": "W"
+    "latitude": -28.8047,
+    "longitude": 114.6989
   },
   {
     "stationID": 8051,
     "wmoNumber": 95403,
     "name": "GERALDTON AIRPORT COMPARISON",
     "state": "WA",
-    "code": "W"
+    "latitude": -28.7953,
+    "longitude": 114.6975
   },
   {
     "stationID": 4083,
     "wmoNumber": 95307,
     "name": "KARRATHA AERO",
     "state": "WA",
-    "code": "W"
+    "latitude": -20.7097,
+    "longitude": 116.7742
   },
   {
     "stationID": 4095,
     "wmoNumber": 94307,
     "name": "LEGENDRE ISLAND",
     "state": "WA",
-    "code": "W"
+    "latitude": -20.3583,
+    "longitude": 116.8431
   },
   {
     "stationID": 5008,
     "wmoNumber": 94306,
     "name": "MARDIE",
     "state": "WA",
-    "code": "W"
+    "latitude": -21.1906,
+    "longitude": 115.9797
   },
   {
     "stationID": 6072,
     "wmoNumber": 94318,
     "name": "EMU CREEK STATION",
     "state": "WA",
-    "code": "W"
+    "latitude": -23.0314,
+    "longitude": 115.0414
+  },
+  {
+    "stationID": 200299,
+    "wmoNumber": 91611,
+    "name": "KIRIBATI NTC AWS",
+    "state": "SA",
+    "latitude": 1.3625,
+    "longitude": 172.93
   },
   {
     "stationID": 8290,
     "wmoNumber": 94405,
     "name": "NORTH ISLAND",
     "state": "WA",
-    "code": "W"
+    "latitude": -28.3008,
+    "longitude": 113.5936
   },
   {
     "stationID": 200100,
     "wmoNumber": 95303,
     "name": "VARANUS ISLAND",
     "state": "WA",
-    "code": "W"
+    "latitude": -20.6564,
+    "longitude": 115.5758
   },
   {
     "stationID": 5094,
     "wmoNumber": 95304,
     "name": "BARROW ISLAND AIRPORT",
     "state": "WA",
-    "code": "W"
+    "latitude": -20.875,
+    "longitude": 115.4056
   },
   {
     "stationID": 5017,
     "wmoNumber": 95305,
     "name": "ONSLOW AIRPORT",
     "state": "WA",
-    "code": "W"
+    "latitude": -21.6689,
+    "longitude": 115.1092
+  },
+  {
+    "stationID": 200864,
+    "wmoNumber": 91349,
+    "name": "FSM NTC AWS",
+    "state": "SA",
+    "latitude": 6.9806,
+    "longitude": 158.2001
   },
   {
     "stationID": 5084,
     "wmoNumber": 94303,
     "name": "THEVENARD ISLAND",
     "state": "WA",
-    "code": "W"
+    "latitude": -21.4606,
+    "longitude": 115.0197
+  },
+  {
+    "stationID": 200814,
+    "wmoNumber": 91756,
+    "name": "SAMOA NTC AWS",
+    "state": "SA",
+    "latitude": -13.8267,
+    "longitude": -171.7611
   },
   {
     "stationID": 6105,
     "wmoNumber": 95402,
     "name": "SHARK BAY AIRPORT",
     "state": "WA",
-    "code": "W"
+    "latitude": -25.8925,
+    "longitude": 113.5772
   },
   {
     "stationID": 6011,
     "wmoNumber": 94300,
     "name": "CARNARVON AIRPORT",
     "state": "WA",
-    "code": "W"
+    "latitude": -24.8878,
+    "longitude": 113.67
   },
   {
     "stationID": 5007,
     "wmoNumber": 94302,
     "name": "LEARMONTH AIRPORT",
     "state": "WA",
-    "code": "W"
+    "latitude": -22.2406,
+    "longitude": 114.0967
   },
   {
     "stationID": 6108,
     "wmoNumber": 95301,
     "name": "CAPE CUVIER WHARF",
     "state": "WA",
-    "code": "W"
+    "latitude": -24.2201,
+    "longitude": 113.3975
+  },
+  {
+    "stationID": 200832,
+    "wmoNumber": 91375,
+    "name": "MARSHALL ISLANDS NTC AWS",
+    "state": "SA",
+    "latitude": 7.106,
+    "longitude": 171.3725
+  },
+  {
+    "stationID": 200855,
+    "wmoNumber": 91844,
+    "name": "COOK ISLANDS NTC AWS",
+    "state": "SA",
+    "latitude": -21.2048,
+    "longitude": -159.7853
+  },
+  {
+    "stationID": 300046,
+    "wmoNumber": 89610,
+    "name": "CAPE POINSETT",
+    "state": "TAS/ANT",
+    "latitude": -65.8449,
+    "longitude": 113.0667
+  },
+  {
+    "stationID": 300022,
+    "wmoNumber": 89811,
+    "name": "LAW DOME SUMMIT",
+    "state": "TAS/ANT",
+    "latitude": -66.7296,
+    "longitude": 112.8348
+  },
+  {
+    "stationID": 300050,
+    "wmoNumber": 89615,
+    "name": "WILKINS RUNWAY EAST",
+    "state": "TAS/ANT",
+    "latitude": -66.6831,
+    "longitude": 111.5317
+  },
+  {
+    "stationID": 300048,
+    "wmoNumber": 89614,
+    "name": "WILKINS RUNWAY WEST",
+    "state": "TAS/ANT",
+    "latitude": -66.6931,
+    "longitude": 111.5039
+  },
+  {
+    "stationID": 300060,
+    "wmoNumber": 89809,
+    "name": "CASEY SKIWAY SOUTH",
+    "state": "TAS/ANT",
+    "latitude": -66.2861,
+    "longitude": 110.7633
+  },
+  {
+    "stationID": 300017,
+    "wmoNumber": 89611,
+    "name": "CASEY",
+    "state": "TAS/ANT",
+    "latitude": -66.2825,
+    "longitude": 110.5231
+  },
+  {
+    "stationID": 300012,
+    "wmoNumber": 89815,
+    "name": "HAUPT NUNATAK",
+    "state": "TAS/ANT",
+    "latitude": -66.5819,
+    "longitude": 110.6939
+  },
+  {
+    "stationID": 300033,
+    "wmoNumber": 89807,
+    "name": "SNYDER ROCKS",
+    "state": "TAS/ANT",
+    "latitude": -66.55,
+    "longitude": 107.75
   },
   {
     "stationID": 200790,
     "wmoNumber": 96995,
     "name": "CHRISTMAS ISLAND AERO",
     "state": "WA",
-    "code": "W"
+    "latitude": -10.4528,
+    "longitude": 105.6875
+  },
+  {
+    "stationID": 200865,
+    "wmoNumber": 96997,
+    "name": "COCOS ISLAND NTC AWS",
+    "state": "SA",
+    "latitude": -12.1168,
+    "longitude": 96.8919
   },
   {
     "stationID": 200284,
     "wmoNumber": 96996,
     "name": "COCOS ISLAND AIRPORT",
     "state": "WA",
-    "code": "W"
+    "latitude": -12.1892,
+    "longitude": 96.8344
+  },
+  {
+    "stationID": 300038,
+    "wmoNumber": 89586,
+    "name": "MOUNT BROWN",
+    "state": "TAS/ANT",
+    "latitude": -69.1313,
+    "longitude": 85.9992
+  },
+  {
+    "stationID": 300055,
+    "wmoNumber": 89570,
+    "name": "DAVIS (WHOOP WHOOP)",
+    "state": "TAS/ANT",
+    "latitude": -68.4845,
+    "longitude": 78.8169
+  },
+  {
+    "stationID": 300000,
+    "wmoNumber": 89571,
+    "name": "DAVIS",
+    "state": "TAS/ANT",
+    "latitude": -68.5744,
+    "longitude": 77.9672
+  },
+  {
+    "stationID": 300052,
+    "wmoNumber": 89578,
+    "name": "EAGLE",
+    "state": "TAS/ANT",
+    "latitude": -76.4175,
+    "longitude": 77.0297
+  },
+  {
+    "stationID": 300051,
+    "wmoNumber": 89577,
+    "name": "DOME A",
+    "state": "TAS/ANT",
+    "latitude": -80.3675,
+    "longitude": 77.3739
+  },
+  {
+    "stationID": 300039,
+    "wmoNumber": 89767,
+    "name": "G3",
+    "state": "TAS/ANT",
+    "latitude": -70.8919,
+    "longitude": 69.8725
+  },
+  {
+    "stationID": 300028,
+    "wmoNumber": 94997,
+    "name": "HEARD ISLAND (THE SPIT)",
+    "state": "TAS/ANT",
+    "latitude": -53.1082,
+    "longitude": 73.7225
+  },
+  {
+    "stationID": 300005,
+    "wmoNumber": 95997,
+    "name": "HEARD ISLAND (ATLAS COVE)",
+    "state": "TAS/ANT",
+    "latitude": -53.019,
+    "longitude": 73.3918
+  },
+  {
+    "stationID": 300001,
+    "wmoNumber": 89564,
+    "name": "MAWSON",
+    "state": "TAS/ANT",
+    "latitude": -67.6017,
+    "longitude": 62.8753
   }
 ]
