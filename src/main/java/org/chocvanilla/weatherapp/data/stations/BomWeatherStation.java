@@ -31,7 +31,6 @@ public class BomWeatherStation implements WeatherStation {
     private int wmoNumber;
     private String name;
     private String state;
-    private char code;
 
     private boolean favourite;
 
@@ -68,7 +67,7 @@ public class BomWeatherStation implements WeatherStation {
     }
 
     public char getCode() {
-        return code;
+        return state.charAt(0);
     }
 
     private String formatProductID() {
