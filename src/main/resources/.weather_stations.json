@@ -1848,28 +1848,12 @@
     "longitude": 144.8321
   },
   {
-    "stationID": 86282,
-    "wmoNumber": 94866,
-    "name": "MELBOURNE AIRPORT",
-    "state": "VIC",
-    "latitude": -37.6655,
-    "longitude": 144.8321
-  },
-  {
     "stationID": 86038,
     "wmoNumber": 95866,
     "name": "ESSENDON AIRPORT",
     "state": "VIC",
     "latitude": -37.7276,
     "longitude": 144.9066
-  },
-  {
-    "stationID": 86071,
-    "wmoNumber": 94868,
-    "name": "MELBOURNE REGIONAL OFFICE",
-    "state": "VIC",
-    "latitude": -37.8075,
-    "longitude": 144.97
   },
   {
     "stationID": 77010,
