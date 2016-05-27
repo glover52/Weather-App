@@ -31,7 +31,9 @@ public class BomWeatherStation implements WeatherStation {
     private int wmoNumber;
     private String name;
     private String state;
-    private char code;
+    private double latitude;
+    private double longitude;
+
 
     private boolean favourite;
 
@@ -67,12 +69,8 @@ public class BomWeatherStation implements WeatherStation {
         return state;
     }
 
-    public char getCode() {
-        return code;
-    }
-
     private String formatProductID() {
-        return String.format(PRODUCT_ID, getCode());
+        return String.format(PRODUCT_ID, state.charAt(0));
     }
 
     public String getUrl() {
@@ -101,6 +99,16 @@ public class BomWeatherStation implements WeatherStation {
     @Override
     public String getUniqueID() {
         return String.valueOf(wmoNumber);
+    }
+
+    @Override
+    public double getLatitude() {
+        return latitude;
+    }
+
+    @Override
+    public double getLongitude() {
+        return longitude;
     }
 
     /**

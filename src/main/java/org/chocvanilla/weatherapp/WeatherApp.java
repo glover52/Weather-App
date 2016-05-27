@@ -26,7 +26,7 @@ public class WeatherApp {
             window.show();
         } catch (IOException e) {
             String message = "Weather stations file could not be loaded.";
-            MessageBox.showNow("ERROR: " + message, "ERROR!");
+            MessageBox.showNow(message, "ERROR!");
             log.error(message, e);
             System.exit(-1);
         }        

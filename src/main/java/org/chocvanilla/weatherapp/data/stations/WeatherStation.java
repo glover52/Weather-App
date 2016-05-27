@@ -21,4 +21,8 @@ public interface WeatherStation extends Comparable<WeatherStation> {
     long msSinceLastRefresh();
     
     String getUniqueID();
+
+    double getLatitude();
+    
+    double getLongitude();
 }
