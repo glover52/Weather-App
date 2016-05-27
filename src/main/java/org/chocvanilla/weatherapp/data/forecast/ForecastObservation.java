@@ -4,6 +4,7 @@ import org.chocvanilla.weatherapp.data.observations.Field;
 import org.chocvanilla.weatherapp.data.observations.WeatherObservation;
 
 import java.text.SimpleDateFormat;
+import java.time.Instant;
 import java.util.*;
 
 @SuppressWarnings("unused")
@@ -24,7 +25,7 @@ public class ForecastObservation implements WeatherObservation {
 
     @Override
     public Date getTimestamp() {
-        return new Date(time);
+        return Date.from(Instant.ofEpochSecond(time));
     }
 
     @Override
@@ -38,7 +39,7 @@ public class ForecastObservation implements WeatherObservation {
         final String KM_H = "%.1f km/h";
         final String KT = "%.1f kt";
         final String MM = "%.1f mm";
-        final String PERCENT = "%d%%";
+        final String PERCENT = "%.0f%%";
         
         final SimpleDateFormat DATE = new SimpleDateFormat();
 
@@ -53,7 +54,7 @@ public class ForecastObservation implements WeatherObservation {
                 new Field("Chance of rain (%)", PERCENT, precipProbability * 100),
                 new Field("Humidity (%)", PERCENT, humidity * 100),
                 new Field("Cloud Cover", PERCENT, cloudCover * 100),
-                new Field("Pressure (millibars)", "%f mbar", pressure),
+                new Field("Pressure (millibars)", "%.0f mbar", pressure),
                 new Field("Summary", "%s", summary),
                 new Field("Icon", "%s", icon)
         );

@@ -9,11 +9,9 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import javax.swing.*;
-import javax.swing.Timer;
 import javax.swing.table.TableColumnModel;
 import java.awt.*;
-import java.util.*;
-import java.util.List;
+import java.util.ArrayList;
 import java.util.concurrent.*;
 
 public class DetailWindow {

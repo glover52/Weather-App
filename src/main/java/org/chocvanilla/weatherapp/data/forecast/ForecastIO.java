@@ -18,7 +18,7 @@ public class ForecastIO implements ForecastProvider {
 
     private WeatherObservation[] downloadForecastFor(double latitude, double longitude) {
         String api_key = KeyProvider.getForecastAPIKey();
-        String request = String.format("https://api.forecast.io/forecast/%s/%f,%f", api_key, latitude, longitude);
+        String request = String.format("https://api.forecast.io/forecast/%s/%f,%f?units=ca", api_key, latitude, longitude);
         try (BufferedReader reader = new BufferedReader(new InputStreamReader(new URL(request).openStream()))) {
             JsonObject object = (JsonObject) new JsonParser().parse(reader);
             JsonElement data = object.get("hourly").getAsJsonObject().get("data");

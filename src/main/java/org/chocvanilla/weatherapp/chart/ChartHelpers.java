@@ -11,7 +11,6 @@ import org.jfree.data.time.*;
 import org.jfree.data.xy.XYDataset;
 
 import java.awt.*;
-import java.sql.Time;
 import java.util.ArrayList;
 
 public class ChartHelpers {

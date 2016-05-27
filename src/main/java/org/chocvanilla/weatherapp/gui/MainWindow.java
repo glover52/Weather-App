@@ -1,9 +1,11 @@
 package org.chocvanilla.weatherapp.gui;
 
 import com.google.gson.Gson;
+import org.chocvanilla.weatherapp.data.forecast.ForecastIO;
 import org.chocvanilla.weatherapp.data.observations.WeatherObservations;
 import org.chocvanilla.weatherapp.data.stations.WeatherStation;
 import org.chocvanilla.weatherapp.data.stations.WeatherStations;
+import org.chocvanilla.weatherapp.io.AsyncLoader;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -115,7 +117,7 @@ public class MainWindow {
     }
 
     private void openForecast(WeatherStation station) {
-        //open forecast using town object
+        openChart(station, new AsyncLoader(station).loadForecastAsync(new ForecastIO()));
     }
 
     private JPanel buildSearchPanel() {
