@@ -9,8 +9,11 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import javax.swing.*;
+import javax.swing.Timer;
 import javax.swing.table.TableColumnModel;
 import java.awt.*;
+import java.util.*;
+import java.util.List;
 import java.util.concurrent.*;
 
 public class DetailWindow {
@@ -22,11 +25,13 @@ public class DetailWindow {
     private final JFrame detailFrame = new JFrame();
     private final JPanel latestObsContainer = new JPanel();
     private final JPanel chartContainer = new JPanel();
+    private final JPanel checkBoxContainer = new JPanel();
     private final JPanel tableContainer = new JPanel();
     private final JPanel buttonContainer = new JPanel();
     private final JTabbedPane historyContainer = new JTabbedPane();
     private ChartPanel chartPanel = null;
     private final JLabel refreshStatusLabel = new JLabel();
+    private ArrayList<Field> fieldsToGraph = new ArrayList<>();
 
     /**
      * Create a new window, in which a chart with the most recent temperatures is displayed, both as a chart, and in a
@@ -43,7 +48,7 @@ public class DetailWindow {
         detailFrame.addWindowListener(locationManager);
         JPanel container = new JPanel();
         detailFrame.setContentPane(container);
-        detailFrame.setMinimumSize(new Dimension(700, 635));
+        detailFrame.setMinimumSize(new Dimension(700, 710));
 
         container.setLayout(new BoxLayout(container, BoxLayout.Y_AXIS));
         buttonContainer.setLayout(new FlowLayout(FlowLayout.LEFT, 10, 10));
@@ -55,6 +60,9 @@ public class DetailWindow {
         historyContainer.addTab("Table", tableContainer);
 
         tableContainer.setLayout(new GridBagLayout());
+
+        checkBoxContainer.setLayout(new FlowLayout());
+        checkBoxContainer.setMinimumSize(new Dimension(700, 100));
 
         container.add(buttonContainer);
         container.add(latestObsContainer);
@@ -97,8 +105,15 @@ public class DetailWindow {
         buttonContainer.revalidate();
         buttonContainer.repaint();
         // Chart
-        JFreeChart chart = ChartHelpers.createChart(station, observations);
+        JFreeChart chart = ChartHelpers.createChart(station, observations, fieldsToGraph);
         updateChart(chart);
+
+        addCheckBoxes(observations);
+        checkBoxContainer.revalidate();
+        checkBoxContainer.repaint();
+        chartContainer.add(checkBoxContainer);
+
+
 
         // Table
         GridBagConstraints c = new GridBagConstraints();
@@ -111,6 +126,20 @@ public class DetailWindow {
         detailFrame.setTitle(station.getName());
         detailFrame.pack();
         detailFrame.setVisible(true);
+    }
+
+    private void addCheckBoxes(WeatherObservations observations) {
+        WeatherObservation observation = observations.iterator().next();
+        for(Field field: observation.getFields()) {
+            JCheckBox fieldCheckBox = new JCheckBox(field.getLabel());
+            fieldCheckBox.addActionListener(x -> addToGraph(field));
+            checkBoxContainer.add(fieldCheckBox);
+        }
+    }
+
+    private void addToGraph(Field field) {
+        fieldsToGraph.add(field);
+        log.debug("Field: " + field.getLabel() + " added to the list.");
     }
 
     /**

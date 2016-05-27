@@ -1,5 +1,6 @@
 package org.chocvanilla.weatherapp.chart;
 
+import org.chocvanilla.weatherapp.data.observations.Field;
 import org.chocvanilla.weatherapp.data.observations.WeatherObservation;
 import org.chocvanilla.weatherapp.data.observations.WeatherObservations;
 import org.chocvanilla.weatherapp.data.stations.WeatherStation;
@@ -10,6 +11,8 @@ import org.jfree.data.time.*;
 import org.jfree.data.xy.XYDataset;
 
 import java.awt.*;
+import java.sql.Time;
+import java.util.ArrayList;
 
 public class ChartHelpers {
 
@@ -33,6 +36,17 @@ public class ChartHelpers {
         return dataSet;
     }
 
+    public static ArrayList<XYDataset> createDataSets(WeatherObservations observations,
+                                                      ArrayList<Field> fieldsToGraph) {
+        ArrayList<XYDataset> dataSets = new ArrayList<>();
+        for(Field field : fieldsToGraph) {
+            TimeSeries series = new TimeSeries(field.getLabel());
+            // Important things here!!
+        }
+
+        return dataSets;
+    }
+
 
     /**
      * Create a temperature chart which can be added to a graphical user interface.
@@ -41,8 +55,11 @@ public class ChartHelpers {
      * @param observations the observations to show
      * @return a displayable {@link ChartPanel}
      */
-    public static JFreeChart createChart(WeatherStation station, WeatherObservations observations) {
+    public static JFreeChart createChart(WeatherStation station, WeatherObservations observations,
+                                         ArrayList<Field> fieldsToGraph) {
+        ArrayList<XYDataset> dataSets = new ArrayList<>();
         XYDataset dataset = createDataSet(observations);
+        dataSets = createDataSets(observations, fieldsToGraph);
 
         JFreeChart chart = ChartFactory.createTimeSeriesChart(station.toString(),
                 "Date", "Degrees Celsius", dataset);
