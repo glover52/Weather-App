@@ -13,8 +13,6 @@ import javax.swing.table.TableColumnModel;
 import java.awt.*;
 import java.util.concurrent.*;
 
-import static org.chocvanilla.weatherapp.gui.GuiHelpers.fieldToLabel;
-
 public class DetailWindow {
     protected final Logger log = LoggerFactory.getLogger(getClass());
     private static final String REFRESH = "↻ Refresh";
@@ -88,7 +86,7 @@ public class DetailWindow {
         timer.start();
 
         latestObsContainer.removeAll();
-        latestObsContainer.add(buildDetails(observations.iterator().next()));
+        latestObsContainer.add(GuiHelpers.buildDetails(observations.iterator().next()));
         // Add to favorites
         buttonContainer.removeAll();
         buttonContainer.add(buildFavouritesButton(station));
@@ -164,22 +162,6 @@ public class DetailWindow {
      */
     private void setChartPanelAttributes(ChartPanel chartPanel) {
         chartPanel.setPopupMenu(null);
-    }
-
-    /**
-     * Method of taking the most recent observations, and adding them to the returned JPanel
-     *
-     * @param observation the most recent observation.
-     * @return New JPanel, added to DetailedWindow.
-     */
-    private JPanel buildDetails(WeatherObservation observation) {
-        JPanel details = new JPanel();
-        details.setLayout(new FlowLayout());
-        for (Field field : observation.getFields()) {
-            details.add(fieldToLabel(field.getLabel(), field.getFormattedValue()));
-            details.add(new JSeparator(SwingConstants.VERTICAL));
-        }
-        return details;
     }
 
     /**

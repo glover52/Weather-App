@@ -1,5 +1,8 @@
 package org.chocvanilla.weatherapp.gui;
 
+import org.chocvanilla.weatherapp.data.observations.Field;
+import org.chocvanilla.weatherapp.data.observations.WeatherObservation;
+
 import javax.swing.*;
 import javax.swing.event.*;
 import javax.swing.text.Document;
@@ -79,4 +82,18 @@ public class GuiHelpers {
         return entry;
     }
 
+    /**
+     * Method of taking the most recent observations, and adding them to the returned JPanel
+     *
+     * @param observation the most recent observation.
+     * @return New JPanel.
+     */
+    static JPanel buildDetails(WeatherObservation observation) {
+        JPanel details = new JPanel(new FlowLayout());
+        for (Field field : observation.getFields()) {
+            details.add(fieldToLabel(field.getLabel(), field.getFormattedValue()));
+            details.add(new JSeparator(SwingConstants.VERTICAL));
+        }
+        return details;
+    }
 }
