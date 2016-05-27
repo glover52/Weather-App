@@ -1,6 +1,7 @@
 package org.chocvanilla.weatherapp;
 
 import com.google.gson.Gson;
+import org.chocvanilla.weatherapp.data.FileDownloader;
 import org.chocvanilla.weatherapp.data.observations.Field;
 import org.chocvanilla.weatherapp.data.observations.WeatherObservations;
 import org.chocvanilla.weatherapp.data.stations.*;
@@ -15,8 +16,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
-import java.util.GregorianCalendar;
-import java.util.Optional;
+import java.util.*;
 import java.util.function.Predicate;
 
 import static org.chocvanilla.weatherapp.chart.ChartHelpers.createChart;
@@ -50,14 +50,14 @@ public class WeatherAppTest {
     public void weatherObservationIsLoaded() throws IOException {
         Optional<WeatherStation> station = firstMatch(x -> hasWmoNumber(x, 94828));
         assertTrue(station.isPresent());
-        WeatherObservations observations = station.get().load();
+        WeatherObservations observations = new FileDownloader(station.get()).load();
         assertThat(observations, is(not(empty())));
     }
 
     @Test(expected = IllegalArgumentException.class)
     public void loadObservationFromNullStation() throws IOException {
         WeatherStation station = new BomWeatherStation();
-        WeatherObservations observations = station.load();
+        WeatherObservations observations = new FileDownloader(station).load();
     }
 
     @Test
@@ -93,8 +93,8 @@ public class WeatherAppTest {
         Optional<WeatherStation> maybe = firstMatch(x -> hasWmoNumber(x, 94828));
         assertTrue(maybe.isPresent());
         WeatherStation station = maybe.get();
-        WeatherObservations observations = station.load();
-        JFreeChart testChart = createChart(station, observations);
+        WeatherObservations observations = new FileDownloader(station).load();
+        JFreeChart testChart = createChart(station, observations, new ArrayList<>());
         JFrame frame = setUpTestWindow();
         ChartPanel panel = new ChartPanel(testChart);
         frame.add(panel);

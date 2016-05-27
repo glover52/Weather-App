@@ -84,13 +84,13 @@ public class DetailWindow {
     }
 
     private void updateDataFrom(WeatherStation station, WeatherObservations observations) {
-        long elapsed = station.msSinceLastRefresh();
-        refreshStatusLabel.setText(String.format("Last refresh: %d seconds ago.",
-                TimeUnit.MILLISECONDS.toSeconds(elapsed)));
-
-        Timer timer = new Timer(1000, x -> refreshStatusLabel.setText(""));
-        timer.setRepeats(false);
-        timer.start();
+//        long elapsed = station.msSinceLastRefresh();
+//        refreshStatusLabel.setText(String.format("Last refresh: %d seconds ago.",
+//                TimeUnit.MILLISECONDS.toSeconds(elapsed)));
+//
+//        Timer timer = new Timer(1000, x -> refreshStatusLabel.setText(""));
+//        timer.setRepeats(false);
+//        timer.start();
 
         latestObsContainer.removeAll();
         latestObsContainer.add(GuiHelpers.buildDetails(observations.iterator().next()));
