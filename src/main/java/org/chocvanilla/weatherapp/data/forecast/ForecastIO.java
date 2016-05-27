@@ -5,6 +5,7 @@ import org.chocvanilla.weatherapp.data.observations.WeatherObservation;
 import org.chocvanilla.weatherapp.data.observations.WeatherObservations;
 import org.chocvanilla.weatherapp.data.stations.WeatherStation;
 import org.chocvanilla.weatherapp.io.KeyProvider;
+import org.chocvanilla.weatherapp.io.MissingAPIKeyException;
 
 import java.io.*;
 import java.net.URL;
@@ -12,11 +13,11 @@ import java.net.URL;
 public class ForecastIO implements ForecastProvider {
 
     @Override
-    public WeatherObservations getForecast(WeatherStation station) {
+    public WeatherObservations getForecast(WeatherStation station) throws MissingAPIKeyException {
         return new WeatherObservations(downloadForecastFor(station.getLatitude(), station.getLongitude()));
     }
 
-    private WeatherObservation[] downloadForecastFor(double latitude, double longitude) {
+    private WeatherObservation[] downloadForecastFor(double latitude, double longitude) throws MissingAPIKeyException {
         String api_key = KeyProvider.getForecastAPIKey();
         String request = String.format("https://api.forecast.io/forecast/%s/%f,%f?units=ca", api_key, latitude, longitude);
         try (BufferedReader reader = new BufferedReader(new InputStreamReader(new URL(request).openStream()))) {

@@ -3,6 +3,7 @@ package org.chocvanilla.weatherapp.gui;
 import org.chocvanilla.weatherapp.chart.ChartHelpers;
 import org.chocvanilla.weatherapp.data.observations.*;
 import org.chocvanilla.weatherapp.data.stations.WeatherStation;
+import org.chocvanilla.weatherapp.io.AsyncLoader;
 import org.jfree.chart.ChartPanel;
 import org.jfree.chart.JFreeChart;
 import org.slf4j.Logger;
@@ -163,7 +164,7 @@ public class DetailWindow {
      */
     private JButton buildRefreshButton(WeatherStation station) {
         JButton refresh = new JButton(REFRESH);
-        refresh.addActionListener(x -> show(station, station.loadAsync()));
+        refresh.addActionListener(x -> show(station, new AsyncLoader(station).loadAsync()));
         return refresh;
     }
 

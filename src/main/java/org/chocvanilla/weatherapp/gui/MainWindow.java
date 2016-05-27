@@ -28,6 +28,7 @@ public class MainWindow {
     private final JList<WeatherStation> stationList = new JList<>();
     private JPanel favouritesPanel;
     private JPanel townPanel;
+    
 
     private Dimension d = new Dimension(800, 600);
 
@@ -79,7 +80,7 @@ public class MainWindow {
     private void updateTownPanel(WeatherStation station) {
         townPanel.removeAll();
         
-        SwingUtilities.invokeLater(() -> addCurrentWeatherToTownPanel(station.loadAsync()));
+        SwingUtilities.invokeLater(() -> addCurrentWeatherToTownPanel(new AsyncLoader(station).loadAsync()));
         
         
         JPanel buttonPanel = new JPanel(new FlowLayout());
@@ -112,7 +113,7 @@ public class MainWindow {
 
     private void openObservations(WeatherStation station) {
         if (station != null) {
-            openChart(station, station.loadAsync());
+            openChart(station, new AsyncLoader(station).loadAsync());
         }
     }
 
@@ -162,7 +163,7 @@ public class MainWindow {
         if (!e.getValueIsAdjusting()) {
             WeatherStation station = stationList.getSelectedValue();
             if (station != null) {
-                openChart(station, station.loadAsync());
+                openChart(station, new AsyncLoader(station).loadAsync());
                 stationList.clearSelection();
             }
         }
@@ -200,7 +201,7 @@ public class MainWindow {
     }
 
     private void attachChart(JButton favouriteButton, WeatherStation station) {
-        favouriteButton.addActionListener(x -> openChart(station, station.loadAsync()));
+        favouriteButton.addActionListener(x -> openChart(station, new AsyncLoader(station).loadAsync()));
     }
 
     private void openChart(WeatherStation station, FutureTask<WeatherObservations> dataSupplier) {

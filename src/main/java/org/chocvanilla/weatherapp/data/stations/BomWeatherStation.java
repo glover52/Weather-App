@@ -24,8 +24,6 @@ public class BomWeatherStation implements WeatherStation {
     private static final String URL_FORMAT = "http://www.bom.gov.au/fwo/%s/%s.%d.json";
     private static final String PRODUCT_ID = "ID%c60801";
     private static final long CACHE_EXPIRY_MILLIS = TimeUnit.SECONDS.toMillis(5);
-
-    private final AsyncLoader loader = new AsyncLoader(this);
     
     private int stationID;
     private int wmoNumber;
@@ -134,10 +132,6 @@ public class BomWeatherStation implements WeatherStation {
             log.error("Unable to parse observations for '{}'", this);
             return new WeatherObservations();
         }
-    }
-    
-    public FutureTask<WeatherObservations> loadAsync() {
-        return loader.loadAsync();
     }
 
     private void downloadFile() {
