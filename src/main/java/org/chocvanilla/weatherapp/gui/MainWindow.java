@@ -1,6 +1,8 @@
 package org.chocvanilla.weatherapp.gui;
 
 import com.google.gson.Gson;
+import org.chocvanilla.weatherapp.data.observations.Field;
+import org.chocvanilla.weatherapp.data.observations.WeatherObservation;
 import org.chocvanilla.weatherapp.data.observations.WeatherObservations;
 import org.chocvanilla.weatherapp.data.stations.WeatherStation;
 import org.chocvanilla.weatherapp.data.stations.WeatherStations;
@@ -13,6 +15,8 @@ import javax.swing.event.ListSelectionListener;
 import java.awt.*;
 import java.util.concurrent.FutureTask;
 
+import static org.chocvanilla.weatherapp.gui.GuiHelpers.fieldToLabel;
+
 
 public class MainWindow {
     protected final Logger log = LoggerFactory.getLogger(getClass());
@@ -24,6 +28,7 @@ public class MainWindow {
     private final JTextField searchBox = new JTextField();
     private final JList<WeatherStation> stationList = new JList<>();
     private JPanel favouritesPanel;
+    private JPanel townPanel;
 
     private Dimension d = new Dimension(800, 600);
 
@@ -65,29 +70,41 @@ public class MainWindow {
     }
 
     private JPanel buildTownPanel() {
-        JPanel townPanel = new JPanel(new BorderLayout());
+        townPanel = new JPanel(new BorderLayout());
+
+        townPanel.add(new JLabel("No Town Selected"), BorderLayout.NORTH);
+
+        return townPanel;
+    }
+
+    private void updateTownPanel(WeatherStation station) {
+        townPanel.removeAll();
+        townPanel.add(new JTextField(station.getName()));
 
         JPanel buttonPanel = new JPanel(new FlowLayout());
         JButton showForecast = new JButton("Forecast");
         JButton showObservation = new JButton("Observations");
 
-        showForecast.addActionListener(x -> openForecast());
-        showObservation.addActionListener(x -> openObservations());
+        showForecast.addActionListener(x -> openForecast(station));
+        showObservation.addActionListener(x -> openObservations(station));
 
         buttonPanel.add(showForecast);
         buttonPanel.add(showObservation);
 
-        townPanel.add(new JLabel("No Town Selected"), BorderLayout.NORTH);
+        townPanel.add(new JLabel(station.getName()), BorderLayout.NORTH);
         townPanel.add(buttonPanel, BorderLayout.SOUTH);
 
-        return townPanel;
+        townPanel.revalidate();
+        townPanel.repaint();
     }
 
-    private void openObservations() {
-        //open past observations using town object.
+    private void openObservations(WeatherStation station) {
+        if (station != null) {
+            openChart(station, station.loadAsync());
+        }
     }
 
-    private void openForecast() {
+    private void openForecast(WeatherStation station) {
         //open forecast using town object
     }
 
@@ -100,7 +117,7 @@ public class MainWindow {
         stationList.setModel(model);
 
         GuiHelpers.addChangeListener(searchBox, s -> filterStations(model));
-        stationList.addListSelectionListener(this::openChart);
+        stationList.addListSelectionListener(this::displayStation);
 
 
         JScrollPane scrollPane = new JScrollPane(stationList);
@@ -118,7 +135,15 @@ public class MainWindow {
         stations.stream()
                 .filter(x -> x.toString().contains(searchBox.getText().toUpperCase()))
                 .forEach(model::addElement);
-        stationList.addListSelectionListener(this::openChart);
+        //stationList.addListSelectionListener(this::openChart);
+        stationList.addListSelectionListener(this::displayStation);
+    }
+
+    private void displayStation(ListSelectionEvent e) {
+        if (!e.getValueIsAdjusting()) {
+            WeatherStation station = stationList.getSelectedValue();
+            updateTownPanel(station);
+        }
     }
 
     private void openChart(ListSelectionEvent e) {
@@ -168,6 +193,22 @@ public class MainWindow {
 
     private void openChart(WeatherStation station, FutureTask<WeatherObservations> dataSupplier) {
         detailWindow.show(station, dataSupplier);
+    }
+
+    private JPanel buildLatestObservation(WeatherObservation observation) {
+        JPanel observationPanel = new JPanel();
+        observationPanel.setLayout(new FlowLayout());
+        for (Field field : observation.getFields()) {
+            observationPanel.add(fieldToLabel(field.getLabel(), field.getFormattedValue()));
+            observationPanel.add(new JSeparator(SwingConstants.HORIZONTAL));
+        }
+
+        return observationPanel;
+    }
+
+    private WeatherObservations retrieveObservations(WeatherStation station) {
+        // Adam might not like this!
+        return null;
     }
 
 }
