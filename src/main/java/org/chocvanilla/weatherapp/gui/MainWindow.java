@@ -1,13 +1,12 @@
 package org.chocvanilla.weatherapp.gui;
 
 import com.google.gson.Gson;
-import org.chocvanilla.weatherapp.data.forecast.ForecastIO;
+import org.chocvanilla.weatherapp.data.forecast.ForecastProvider;
 import org.chocvanilla.weatherapp.data.observations.ObservationsProvider;
 import org.chocvanilla.weatherapp.data.observations.WeatherObservations;
 import org.chocvanilla.weatherapp.data.stations.WeatherStation;
 import org.chocvanilla.weatherapp.data.stations.WeatherStations;
 import org.chocvanilla.weatherapp.io.AsyncLoader;
-import org.chocvanilla.weatherapp.io.MissingAPIKeyException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -25,7 +24,8 @@ public class MainWindow {
             "You have no favorites! Open a station and click the favorites button to see it here.";
     private final JFrame frame = new JFrame("Weather App");
     private final WeatherStations stations;
-    private final ObservationsProvider provider;
+    private final ObservationsProvider observationsProvider;
+    private final ForecastProvider forecastProvider;
     private final DetailWindow detailWindow;
     private final JTextField searchBox = new JTextField();
     private final JList<WeatherStation> stationList = new JList<>();
@@ -33,9 +33,13 @@ public class MainWindow {
     private JPanel townPanel;
 
 
-    public MainWindow(Gson gson, WeatherStations weatherStations, ObservationsProvider provider) {
+    public MainWindow(Gson gson, 
+                      WeatherStations weatherStations, 
+                      ObservationsProvider provider, 
+                      ForecastProvider forecastProvider) {
         stations = weatherStations;
-        this.provider = provider;
+        this.observationsProvider = provider;
+        this.forecastProvider = forecastProvider;
         frame.setName("MainWindow");
         log.debug("{} created with {} weather stations", frame.getName(), weatherStations.size());
         detailWindow = new DetailWindow(
@@ -82,7 +86,7 @@ public class MainWindow {
     private void updateTownPanel(WeatherStation station) {
         townPanel.removeAll();
         
-        SwingUtilities.invokeLater(() -> addCurrentWeatherToTownPanel(new AsyncLoader(station).loadAsync(provider)));
+        SwingUtilities.invokeLater(() -> addCurrentWeatherToTownPanel(new AsyncLoader(station).loadAsync(observationsProvider)));
         
         
         JPanel buttonPanel = new JPanel(new FlowLayout());
@@ -115,19 +119,12 @@ public class MainWindow {
 
     private void openObservations(WeatherStation station) {
         if (station != null) {
-            openChart(station, provider);
+            openChart(station, observationsProvider);
         }
     }
 
     private void openForecast(WeatherStation station) {
-        openChart(station, (s) -> {
-            try {
-                return new ForecastIO().loadForecast(s);
-            } catch (MissingAPIKeyException e) {
-                MessageBox.show(e.getMessage(), "API Key Missing!");
-                return new WeatherObservations();
-            }
-        });
+        openChart(station, forecastProvider::loadForecast);
     }
 
     private JPanel buildSearchPanel() {
@@ -200,7 +197,7 @@ public class MainWindow {
     }
 
     private void attachChart(JButton favouriteButton, WeatherStation station) {
-        favouriteButton.addActionListener(x -> openChart(station, provider));
+        favouriteButton.addActionListener(x -> openChart(station, observationsProvider));
     }
 
     private void openChart(WeatherStation station, ObservationsProvider provider) {

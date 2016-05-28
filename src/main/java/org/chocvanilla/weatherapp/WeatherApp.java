@@ -1,6 +1,8 @@
 package org.chocvanilla.weatherapp;
 
 import com.google.gson.Gson;
+import org.chocvanilla.weatherapp.data.forecast.ForecastIO;
+import org.chocvanilla.weatherapp.data.forecast.ForecastProvider;
 import org.chocvanilla.weatherapp.data.observations.BureauOfMeteorology;
 import org.chocvanilla.weatherapp.data.observations.ObservationsProvider;
 import org.chocvanilla.weatherapp.data.stations.WeatherStations;
@@ -22,10 +24,11 @@ public class WeatherApp {
         setLookAndFeel();
         Gson gson = new Gson();
         WeatherStationSource source = new WeatherStationsJSONFile(gson);
-        ObservationsProvider provider = new BureauOfMeteorology();
+        ObservationsProvider observations = new BureauOfMeteorology();
+        ForecastProvider forecast = new ForecastIO();
         try {
             WeatherStations stations = WeatherStations.loadFrom(source);
-            MainWindow window = new MainWindow(gson, stations, provider);
+            MainWindow window = new MainWindow(gson, stations, observations, forecast);
             window.show();
         } catch (IOException e) {
             String message = "Weather stations file could not be loaded.";

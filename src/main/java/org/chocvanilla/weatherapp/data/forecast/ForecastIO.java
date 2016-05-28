@@ -1,6 +1,7 @@
 package org.chocvanilla.weatherapp.data.forecast;
 
 import com.google.gson.*;
+import org.chocvanilla.weatherapp.data.observations.WeatherCache;
 import org.chocvanilla.weatherapp.data.observations.WeatherObservations;
 import org.chocvanilla.weatherapp.data.stations.WeatherStation;
 import org.chocvanilla.weatherapp.io.KeyProvider;
@@ -16,16 +17,23 @@ public class ForecastIO implements ForecastProvider {
     protected final Logger log = LoggerFactory.getLogger(getClass());
 
     @Override
-    public WeatherObservations loadForecast(WeatherStation station) throws MissingAPIKeyException {
+    public WeatherObservations loadForecast(WeatherStation station) {
+        WeatherCache cache = WeatherCache.forecasting(station, this::loadForecastUncached);
+        return cache.get();
+    }
+    
+    public WeatherObservations loadForecastUncached(WeatherStation station){
         try {
             return downloadForecastFor(station.getLatitude(), station.getLongitude());
         } catch (IOException e) {
             log.error("Unable to parse forecast for '{}'", station, e);
-            return new WeatherObservations();
+        } catch (MissingAPIKeyException e) {
+            log.error("ForecastIO API key missing,", e);   
         }
+        return new WeatherObservations();
     }
 
-    private WeatherObservations downloadForecastFor(double latitude, double longitude) throws MissingAPIKeyException, IOException {
+    private WeatherObservations downloadForecastFor(double latitude, double longitude) throws IOException {
         String api_key = KeyProvider.getForecastAPIKey();
         String request = String.format("https://api.forecast.io/forecast/%s/%f,%f?units=ca", api_key, latitude, longitude);
         try (BufferedReader reader = new BufferedReader(new InputStreamReader(new URL(request).openStream()))) {

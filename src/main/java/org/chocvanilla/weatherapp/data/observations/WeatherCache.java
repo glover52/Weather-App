@@ -1,5 +1,6 @@
 package org.chocvanilla.weatherapp.data.observations;
 
+import org.chocvanilla.weatherapp.data.forecast.ForecastProvider;
 import org.chocvanilla.weatherapp.data.stations.WeatherStation;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -8,7 +9,8 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
-public class WeatherObservationsCache {
+public class WeatherCache {
+;
     protected final Logger log = LoggerFactory.getLogger(getClass());
     private static final long CACHE_EXPIRY_MILLIS = TimeUnit.MINUTES.toMillis(5);
     private final WeatherStation station;
@@ -16,14 +18,20 @@ public class WeatherObservationsCache {
     private long lastRefreshed;
     private WeatherObservations observations;
 
-    private static final Map<String, WeatherObservationsCache> caches = new HashMap<>();
+    private static final Map<String, WeatherCache> observationCaches = new HashMap<>();
+    private static final Map<String, WeatherCache> forecastCaches = new HashMap<>();
     
-    public static WeatherObservationsCache forStation(WeatherStation station, ObservationsProvider provider) {
-        return caches.computeIfAbsent(station.getUniqueID(), 
-                id -> new WeatherObservationsCache(station, provider));
+    public static WeatherCache observing(WeatherStation station, ObservationsProvider provider) {
+        return observationCaches.computeIfAbsent(station.getUniqueID(), 
+                id -> new WeatherCache(station, provider));
     }
     
-    public WeatherObservationsCache(WeatherStation station, ObservationsProvider source) {
+    public static WeatherCache forecasting(WeatherStation station, ForecastProvider provider) {
+        return forecastCaches.computeIfAbsent(station.getUniqueID(), 
+                id -> new WeatherCache(station, provider::loadForecast));
+    }
+    
+    public WeatherCache(WeatherStation station, ObservationsProvider source) {
         log.debug("Created cache for '{}'", station);
         this.station = station;
         this.source = source;
@@ -48,6 +56,4 @@ public class WeatherObservationsCache {
     public long msSinceLastRefreshed() {
         return System.currentTimeMillis() - lastRefreshed;
     }
-    
-
 }

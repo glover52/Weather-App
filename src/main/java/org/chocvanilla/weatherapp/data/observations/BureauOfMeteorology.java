@@ -22,7 +22,7 @@ public class BureauOfMeteorology implements ObservationsProvider{
     private final FileDownloader downloader = new FileDownloader();
 
     public WeatherObservations loadObservations(WeatherStation station) {
-        WeatherObservationsCache cache = WeatherObservationsCache.forStation(station, this::loadObservationsUncached);
+        WeatherCache cache = WeatherCache.observing(station, this::loadObservationsUncached);
         return cache.get();
     }
 
