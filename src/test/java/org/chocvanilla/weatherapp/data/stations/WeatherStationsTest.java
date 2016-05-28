@@ -28,10 +28,29 @@ public class WeatherStationsTest {
     }
 
     @Test
-    public void loadFromSource() throws IOException {
+    public void loadFromGoodSource() throws IOException {
         ws = WeatherStations.loadFrom(source);
         assertNotNull(ws);
         assertFalse(ws.isEmpty());
+    }
+
+
+
+     // Testing if IOException correctly propagates through. is this even a test
+    @Test ( expected = IOException.class)
+    public void loadFromBadSource() throws IOException {
+
+        WeatherStationSource badSource = new WeatherStationSource() {
+            @Override
+            public List<WeatherStation> load() throws IOException {
+                throw new IOException();
+            }
+
+            @Override
+            public void save(WeatherStations stations) throws IOException {}
+        };
+
+        ws = WeatherStations.loadFrom(badSource);
     }
 
     @Test
