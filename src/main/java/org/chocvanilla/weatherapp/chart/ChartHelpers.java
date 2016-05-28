@@ -11,7 +11,11 @@ import org.jfree.data.time.*;
 import org.jfree.data.xy.XYDataset;
 
 import java.awt.*;
+import java.sql.Time;
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 public class ChartHelpers {
 
@@ -35,15 +39,39 @@ public class ChartHelpers {
         return dataSet;
     }
 
-    public static ArrayList<XYDataset> createDataSets(WeatherObservations observations,
+    public static XYDataset createDataSets(WeatherObservations observations,
                                                       ArrayList<Field> fieldsToGraph) {
-        ArrayList<XYDataset> dataSets = new ArrayList<>();
+        TimeSeriesCollection seriesCollection = new TimeSeriesCollection();
+        ArrayList<TimeSeries> seriesFields = new ArrayList<>();
+        Map<Field, TimeSeries> seriesMap = new HashMap<>();
         for(Field field : fieldsToGraph) {
             TimeSeries series = new TimeSeries(field.getLabel());
-            // Important things here!!
+            seriesMap.put(field, series);
         }
 
-        return dataSets;
+
+        for (WeatherObservation observation : observations) {
+            List<Field> obsFields = observation.getFields();
+            for(Field field : obsFields) {
+                if(fieldsToGraph.contains(field)) {
+                    seriesMap.put(field, updateSeries(field, seriesMap, observation));
+                }
+            }
+        }
+
+        for(Field field : fieldsToGraph) {
+            seriesCollection.addSeries(seriesMap.get(field));
+        }
+
+        return seriesCollection;
+    }
+
+    private static TimeSeries updateSeries(Field field, Map<Field, TimeSeries> seriesMap,
+                                           WeatherObservation observation) {
+        TimeSeries series = seriesMap.get(field);
+        series.addOrUpdate(new Second(observation.getTimestamp()),
+                Integer.parseInt(field.getFormattedValue()));
+        return series;
     }
 
 
@@ -56,14 +84,14 @@ public class ChartHelpers {
      */
     public static JFreeChart createChart(WeatherStation station, WeatherObservations observations,
                                          ArrayList<Field> fieldsToGraph) {
-        ArrayList<XYDataset> dataSets = new ArrayList<>();
-        XYDataset dataset = createDataSet(observations);
-        dataSets = createDataSets(observations, fieldsToGraph);
+
+        //XYDataset dataset = createDataSet(observations);
+        XYDataset setOffields = createDataSets(observations, fieldsToGraph);
 
         JFreeChart chart = ChartFactory.createTimeSeriesChart(station.toString(),
-                "Date", "Degrees Celsius", dataset);
+                "Date", "Value", setOffields);
 
-        XYLineAndShapeRenderer renderer = new XYLineAndShapeRenderer();
+        /*XYLineAndShapeRenderer renderer = new XYLineAndShapeRenderer();
         renderer.setSeriesPaint(0, new Color(0, 0, 0));
         renderer.setSeriesShapesVisible(0, false);
 
@@ -81,7 +109,7 @@ public class ChartHelpers {
         plot.setDomainGridlinePaint(lineColor);
         plot.setRangeGridlinePaint(lineColor);
         plot.setOutlineVisible(false);
-        chart.setBackgroundPaint(null);
+        chart.setBackgroundPaint(null);*/
         return chart;
     }
 }
