@@ -94,11 +94,11 @@ public class DetailWindow {
         buttonContainer.revalidate();
         buttonContainer.repaint();
         // Chart
-        JFreeChart chart = ChartHelpers.createChart(station, observations, fieldsToGraph);
-        updateChart(chart);
-
         addCheckBoxes(observations);
         chartContainer.add(checkBoxContainer, BorderLayout.EAST);
+
+        JFreeChart chart = ChartHelpers.createChart(station, observations, fieldsToGraph);
+        updateChart(chart);
 
 
         // Table
@@ -128,15 +128,35 @@ public class DetailWindow {
         WeatherObservation observation = observations.iterator().next();
         checkBoxContainer.removeAll();
         for (Field field : observation.getFields()) {
-            JCheckBox fieldCheckBox = new JCheckBox(field.getLabel());
-            fieldCheckBox.addActionListener(x -> addToGraph(field));
-            checkBoxContainer.add(fieldCheckBox);
+            if(fieldsToGraph.size() == 0) {
+                if(field.getLabel() == "Air Temp") {
+                    fieldsToGraph.add(field);
+                }
+            }
+            if(field.getLabel() != "Time") {
+                if(fieldsToGraph.contains(field)) {
+                    JCheckBox fieldCheckBox = new JCheckBox(field.getLabel(), true);
+                    fieldCheckBox.addActionListener(x -> toggleGraph(field));
+                    checkBoxContainer.add(fieldCheckBox);
+                }
+                else {
+                    JCheckBox fieldCheckBox = new JCheckBox(field.getLabel());
+                    fieldCheckBox.addActionListener(x -> toggleGraph(field));
+                    checkBoxContainer.add(fieldCheckBox);
+                }
+            }
         }
     }
 
-    private void addToGraph(Field field) {
-        fieldsToGraph.add(field);
-        log.debug("Field: " + field.getLabel() + " added to the list.");
+    private void toggleGraph(Field field) {
+        if(fieldsToGraph.contains(field)) {
+            fieldsToGraph.remove(field);
+            log.debug("Field: " + field.getLabel() + " removed from list.");
+        }
+        else {
+            fieldsToGraph.add(field);
+            log.debug("Field: " + field.getLabel() + " added to list.");
+        }
     }
 
     /**
