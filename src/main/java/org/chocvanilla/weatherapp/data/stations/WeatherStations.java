@@ -21,7 +21,7 @@ public class WeatherStations extends AbstractCollection<WeatherStation> {
         return result;
     }
 
-    public void save() throws Exception{
+    public void save() throws IOException{
         dataSource.save(this);
     }
 

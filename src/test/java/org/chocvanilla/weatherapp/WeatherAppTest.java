@@ -43,7 +43,7 @@ public class WeatherAppTest {
     public void weatherStationsAreLoaded() throws IOException {
         assertThat(db, is(not(empty())));
     }
-    
+
     private Optional<WeatherStation> firstMatch(Predicate<WeatherStation> condition) {
         return db.stream().filter(condition).findFirst();
     }
@@ -112,20 +112,13 @@ public class WeatherAppTest {
 
         return frame;
     }
-    
-    @Test
-    public void weatherStationsJSONFileIsPresent() throws IOException {
-        WeatherStationSource source = new WeatherStationsJSONFile(new Gson());
-        WeatherStations stations = WeatherStations.loadFrom(source);
-        assertThat(stations, is(not(empty())));
-    }
-    
+
     @Test
     public void fieldShouldContainFormattedInformation() {
         Field f = new Field("Test", "%.2f mm", 42.4242);
         assertThat(f.toString(), containsString("42.42 mm"));
     }
-    
+
     @Test
     public void fieldShouldContainDateInformation() {
         SimpleDateFormat format = new SimpleDateFormat("dd");

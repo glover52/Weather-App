@@ -9,5 +9,5 @@ import java.util.List;
 public interface WeatherStationSource {
     List<WeatherStation> load() throws IOException;
 
-    void save(WeatherStations stations) throws Exception;
+    void save(WeatherStations stations) throws IOException;
 }

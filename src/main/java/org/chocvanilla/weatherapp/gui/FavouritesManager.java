@@ -7,6 +7,7 @@ import org.slf4j.LoggerFactory;
 
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
+import java.io.IOException;
 
 public class FavouritesManager extends WindowAdapter {
     protected final Logger log = LoggerFactory.getLogger(getClass());
@@ -27,7 +28,7 @@ public class FavouritesManager extends WindowAdapter {
     public void windowClosing(WindowEvent event) {
         try {
             allStations.save();
-        } catch (Exception e) {
+        } catch (IOException e) {
             String message = "Favourites file could not be saved!";
             MessageBox.show(message, "ERROR!");
             log.error(message, e);
