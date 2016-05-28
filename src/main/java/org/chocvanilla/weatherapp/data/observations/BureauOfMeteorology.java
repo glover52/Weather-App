@@ -20,13 +20,18 @@ public class BureauOfMeteorology implements ObservationsProvider{
     public static final String PRODUCT_ID = "ID%c60801";
     public static final String target = ".observations";
     private final FileDownloader downloader = new FileDownloader();
-    
-    /**
-     * Download all available weather observations from this station.
-     *
-     * @return a list of observations
-     */
+
     public WeatherObservations loadObservations(WeatherStation station) {
+        WeatherObservationsCache cache = WeatherObservationsCache.forStation(station, this::loadObservationsUncached);
+        return cache.get();
+    }
+
+        /**
+         * Download all available weather observations from this station.
+         *
+         * @return a list of observations
+         */
+    private WeatherObservations loadObservationsUncached(WeatherStation station) {
         try {
             Path path = downloader.downloadFile(buildURL(station), target, station.getUniqueID() + ".json");
             return parseObservations(path);
