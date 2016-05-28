@@ -8,4 +8,3 @@ public interface ForecastProvider {
 
     WeatherObservations loadForecast(WeatherStation station) throws MissingAPIKeyException;
 }
-

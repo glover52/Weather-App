@@ -1,9 +1,7 @@
 package org.chocvanilla.weatherapp;
 
 import com.google.gson.Gson;
-import org.chocvanilla.weatherapp.data.observations.BureauOfMeteorology;
-import org.chocvanilla.weatherapp.data.observations.Field;
-import org.chocvanilla.weatherapp.data.observations.WeatherObservations;
+import org.chocvanilla.weatherapp.data.observations.*;
 import org.chocvanilla.weatherapp.data.stations.*;
 import org.chocvanilla.weatherapp.io.WeatherStationSource;
 import org.chocvanilla.weatherapp.io.WeatherStationsJSONFile;
@@ -27,7 +25,7 @@ import static org.junit.Assume.assumeFalse;
 
 public class WeatherAppTest {
     private WeatherStations db;
-    private BureauOfMeteorology bom;
+    private ObservationsProvider bom;
 
     /**
      * Initialisation of some necessary functions to be show before any test. Populates a list of weather stations

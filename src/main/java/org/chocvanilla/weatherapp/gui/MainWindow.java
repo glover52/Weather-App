@@ -2,10 +2,12 @@ package org.chocvanilla.weatherapp.gui;
 
 import com.google.gson.Gson;
 import org.chocvanilla.weatherapp.data.forecast.ForecastIO;
+import org.chocvanilla.weatherapp.data.observations.ObservationsProvider;
 import org.chocvanilla.weatherapp.data.observations.WeatherObservations;
 import org.chocvanilla.weatherapp.data.stations.WeatherStation;
 import org.chocvanilla.weatherapp.data.stations.WeatherStations;
 import org.chocvanilla.weatherapp.io.AsyncLoader;
+import org.chocvanilla.weatherapp.io.MissingAPIKeyException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -23,17 +25,17 @@ public class MainWindow {
             "You have no favorites! Open a station and click the favorites button to see it here.";
     private final JFrame frame = new JFrame("Weather App");
     private final WeatherStations stations;
+    private final ObservationsProvider provider;
     private final DetailWindow detailWindow;
     private final JTextField searchBox = new JTextField();
     private final JList<WeatherStation> stationList = new JList<>();
     private JPanel favouritesPanel;
     private JPanel townPanel;
-    
 
-    private Dimension d = new Dimension(800, 600);
 
-    public MainWindow(Gson gson, WeatherStations weatherStations) {
+    public MainWindow(Gson gson, WeatherStations weatherStations, ObservationsProvider provider) {
         stations = weatherStations;
+        this.provider = provider;
         frame.setName("MainWindow");
         log.debug("{} created with {} weather stations", frame.getName(), weatherStations.size());
         detailWindow = new DetailWindow(
@@ -41,8 +43,8 @@ public class MainWindow {
                 this::updateFavouritesButtons);
         frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         frame.addWindowListener(new WindowLocationManager(gson, new Rectangle(800, 600)));
-        frame.addWindowListener(new FavouritesManager(weatherStations));
-        frame.setMinimumSize(d);
+        frame.addWindowListener(new FavouritesManager(weatherStations, provider));
+        frame.setMinimumSize(new Dimension(800, 600));
         buildContainerLayout();
     }
 
@@ -80,7 +82,7 @@ public class MainWindow {
     private void updateTownPanel(WeatherStation station) {
         townPanel.removeAll();
         
-        SwingUtilities.invokeLater(() -> addCurrentWeatherToTownPanel(new AsyncLoader(station).loadAsync()));
+        SwingUtilities.invokeLater(() -> addCurrentWeatherToTownPanel(new AsyncLoader(station).loadAsync(provider)));
         
         
         JPanel buttonPanel = new JPanel(new FlowLayout());
@@ -113,12 +115,19 @@ public class MainWindow {
 
     private void openObservations(WeatherStation station) {
         if (station != null) {
-            openChart(station, new AsyncLoader(station).loadAsync());
+            openChart(station, provider);
         }
     }
 
     private void openForecast(WeatherStation station) {
-        openChart(station, new AsyncLoader(station).loadForecastAsync(new ForecastIO()));
+        openChart(station, (s) -> {
+            try {
+                return new ForecastIO().loadForecast(s);
+            } catch (MissingAPIKeyException e) {
+                MessageBox.show(e.getMessage(), "API Key Missing!");
+                return new WeatherObservations();
+            }
+        });
     }
 
     private JPanel buildSearchPanel() {
@@ -159,16 +168,6 @@ public class MainWindow {
         }
     }
 
-    private void openChart(ListSelectionEvent e) {
-        if (!e.getValueIsAdjusting()) {
-            WeatherStation station = stationList.getSelectedValue();
-            if (station != null) {
-                openChart(station, new AsyncLoader(station).loadAsync());
-                stationList.clearSelection();
-            }
-        }
-    }
-
     private JPanel buildFavouritesPanel() {
         favouritesPanel = new JPanel();
         favouritesPanel.setLayout(new GridBagLayout());
@@ -201,11 +200,11 @@ public class MainWindow {
     }
 
     private void attachChart(JButton favouriteButton, WeatherStation station) {
-        favouriteButton.addActionListener(x -> openChart(station, new AsyncLoader(station).loadAsync()));
+        favouriteButton.addActionListener(x -> openChart(station, provider));
     }
 
-    private void openChart(WeatherStation station, FutureTask<WeatherObservations> dataSupplier) {
-        detailWindow.show(station, dataSupplier);
+    private void openChart(WeatherStation station, ObservationsProvider provider) {
+        detailWindow.show(station, provider);
     }   
     
 }

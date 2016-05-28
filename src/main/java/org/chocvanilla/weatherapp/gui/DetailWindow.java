@@ -3,7 +3,6 @@ package org.chocvanilla.weatherapp.gui;
 import org.chocvanilla.weatherapp.chart.ChartHelpers;
 import org.chocvanilla.weatherapp.data.observations.*;
 import org.chocvanilla.weatherapp.data.stations.WeatherStation;
-import org.chocvanilla.weatherapp.io.AsyncLoader;
 import org.jfree.chart.ChartPanel;
 import org.jfree.chart.JFreeChart;
 import org.slf4j.Logger;
@@ -13,7 +12,6 @@ import javax.swing.*;
 import javax.swing.table.TableColumnModel;
 import java.awt.*;
 import java.util.ArrayList;
-import java.util.concurrent.*;
 
 public class DetailWindow {
     protected final Logger log = LoggerFactory.getLogger(getClass());
@@ -72,18 +70,10 @@ public class DetailWindow {
      * The method that deals with the Java Swing context. All containers are cleared and populated with fresh data.
      *
      * @param station      The {@link WeatherStation} for which data is displayed
-     * @param dataSupplier An asynchronous way of retireiving the {@link WeatherObservation} data, via
+     * @param provider     An asynchronous way of retrieving the {@link WeatherObservation} data
      */
-    public void show(WeatherStation station, FutureTask<WeatherObservations> dataSupplier) {
-        try {
-            WeatherObservations observations = dataSupplier.get();
-            updateDataFrom(station, observations);
-        } catch (InterruptedException | ExecutionException e) {
-            log.error("Failed to loadObservations observations from '{}'", station.getName(), e);
-        }
-    }
-
-    private void updateDataFrom(WeatherStation station, WeatherObservations observations) {
+    public void show(WeatherStation station, ObservationsProvider provider) {
+        WeatherObservations observations = provider.loadObservations(station);
 //        long elapsed = station.msSinceLastRefresh();
 //        refreshStatusLabel.setText(String.format("Last refresh: %d seconds ago.",
 //                TimeUnit.MILLISECONDS.toSeconds(elapsed)));
@@ -97,7 +87,7 @@ public class DetailWindow {
         // Add to favorites
         buttonContainer.removeAll();
         buttonContainer.add(buildFavouritesButton(station));
-        buttonContainer.add(buildRefreshButton(station));
+        buttonContainer.add(buildRefreshButton(station, provider));
         buttonContainer.add(refreshStatusLabel);
 
         // Need to revalidate to avoid artifacts from previous button
@@ -162,9 +152,9 @@ public class DetailWindow {
      * @param station the {@link WeatherStation} object, provides handle on object.
      * @return button which is then added to the correct JPanel
      */
-    private JButton buildRefreshButton(WeatherStation station) {
+    private JButton buildRefreshButton(WeatherStation station, ObservationsProvider provider) {
         JButton refresh = new JButton(REFRESH);
-        refresh.addActionListener(x -> show(station, new AsyncLoader(station).loadAsync()));
+        refresh.addActionListener(x -> show(station, provider));
         return refresh;
     }
 

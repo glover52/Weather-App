@@ -1,7 +1,7 @@
 package org.chocvanilla.weatherapp.io;
 
-import org.chocvanilla.weatherapp.data.observations.BureauOfMeteorology;
 import org.chocvanilla.weatherapp.data.forecast.ForecastProvider;
+import org.chocvanilla.weatherapp.data.observations.ObservationsProvider;
 import org.chocvanilla.weatherapp.data.observations.WeatherObservations;
 import org.chocvanilla.weatherapp.data.stations.WeatherStation;
 import org.slf4j.Logger;
@@ -19,9 +19,9 @@ public class AsyncLoader {
         weatherStation = station;
     }
 
-    public FutureTask<WeatherObservations> loadAsync() {
+    public FutureTask<WeatherObservations> loadAsync(ObservationsProvider provider) {
         log.trace("Loading weather observations for station {} asynchronously", weatherStation);
-        FutureTask<WeatherObservations> task = new FutureTask<>(() -> new BureauOfMeteorology().loadObservations(weatherStation));
+        FutureTask<WeatherObservations> task = new FutureTask<>(() -> provider.loadObservations(weatherStation));
         executor.execute(task);
         return task;
     }

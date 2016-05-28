@@ -23,7 +23,7 @@ public class WeatherStationsJSONFile implements WeatherStationSource {
     }
 
     public List<WeatherStation> load() throws IOException {
-        log.debug("Attempting to loadObservations favourites");
+        log.debug("Attempting to lazyLoadObservations favourites");
         Set<String> favourites = new HashSet<>();
         try (BufferedReader favouritesReader = Files.newBufferedReader(FAVOURITES_PATH)) {
             favouritesReader.lines().forEach(favourites::add);
@@ -32,7 +32,7 @@ public class WeatherStationsJSONFile implements WeatherStationSource {
             log.error("Unable to favourites from '{}'", FAVOURITES_PATH, e);
         }
         
-        log.debug("Attempting to loadObservations weather stations");
+        log.debug("Attempting to lazyLoadObservations weather stations");
         try (BufferedReader stationsReader = getResource(getClass(), STATIONS_PATH)) {
             List<WeatherStation> result =
                     Arrays.asList(gson.fromJson(stationsReader, BomWeatherStation[].class));

@@ -1,8 +1,11 @@
 package org.chocvanilla.weatherapp.data.observations;
 
+import org.chocvanilla.weatherapp.data.stations.WeatherStation;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.util.HashMap;
+import java.util.Map;
 import java.util.concurrent.TimeUnit;
 import java.util.function.Supplier;
 
@@ -11,9 +14,15 @@ public class WeatherObservationsCache {
     private static final long CACHE_EXPIRY_MILLIS = TimeUnit.MINUTES.toMillis(5);
     private final Supplier<WeatherObservations> observationsSource;
     private long lastRefreshed;
-    
     private WeatherObservations observations;
 
+    private static final Map<String, WeatherObservationsCache> caches = new HashMap<>();
+    
+    public static WeatherObservationsCache forStation(WeatherStation station, Supplier<WeatherObservations> supplier) {
+        return caches.computeIfAbsent(station.getUniqueID(), 
+                id -> new WeatherObservationsCache(supplier));
+    }
+    
     public WeatherObservationsCache(Supplier<WeatherObservations> source) {
         observationsSource = source;
         refresh();
@@ -25,9 +34,15 @@ public class WeatherObservationsCache {
     }
     
     public WeatherObservations get(){
-        if (System.currentTimeMillis() - lastRefreshed > CACHE_EXPIRY_MILLIS) {
+        if (msSinceLastRefreshed() > CACHE_EXPIRY_MILLIS) {
             refresh();
         }
         return observations;
     }
+    
+    public long msSinceLastRefreshed() {
+        return System.currentTimeMillis() - lastRefreshed;
+    }
+    
+
 }
