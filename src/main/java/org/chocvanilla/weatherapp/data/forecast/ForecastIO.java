@@ -13,8 +13,12 @@ import java.io.*;
 import java.net.URL;
 
 public class ForecastIO implements ForecastProvider {
-    private final Gson gson = new Gson();
+    private final Gson gson;
     protected final Logger log = LoggerFactory.getLogger(getClass());
+
+    public ForecastIO(Gson gson) {
+        this.gson = gson;
+    }
 
     @Override
     public WeatherObservations loadForecast(WeatherStation station) {

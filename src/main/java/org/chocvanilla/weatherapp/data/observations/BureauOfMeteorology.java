@@ -1,7 +1,6 @@
 package org.chocvanilla.weatherapp.data.observations;
 
 import com.google.gson.*;
-import org.chocvanilla.weatherapp.data.DataHelpers;
 import org.chocvanilla.weatherapp.data.stations.WeatherStation;
 import org.chocvanilla.weatherapp.io.FileDownloader;
 import org.slf4j.Logger;
@@ -20,6 +19,11 @@ public class BureauOfMeteorology implements ObservationsProvider{
     public static final String PRODUCT_ID = "ID%c60801";
     public static final String target = ".observations";
     private final FileDownloader downloader = new FileDownloader();
+    private final Gson gson;
+
+    public BureauOfMeteorology(Gson gson) {
+        this.gson = gson;
+    }
 
     public WeatherObservations loadObservations(WeatherStation station) {
         if (station.getUniqueID() == null) {
@@ -51,7 +55,6 @@ public class BureauOfMeteorology implements ObservationsProvider{
         try (BufferedReader reader = Files.newBufferedReader(path)) {
             JsonObject object = (JsonObject) new JsonParser().parse(reader);
             JsonElement data = object.get("observations").getAsJsonObject().get("data");
-            Gson gson = DataHelpers.observationsGson();
             WeatherObservations result = new WeatherObservations(gson.fromJson(data, BomWeatherObservation[].class));
             log.debug("Parsed {} observations from '{}'", result.size(), path);
             return result;

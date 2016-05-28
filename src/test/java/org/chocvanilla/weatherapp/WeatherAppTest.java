@@ -34,7 +34,7 @@ public class WeatherAppTest {
     @Before
     public void setUp() throws Exception {
         db = WeatherStations.loadFrom(new WeatherStationsJSONFile(new Gson()));
-        bom = new BureauOfMeteorology();
+        bom = new BureauOfMeteorology(gson);
     }
 
     @Test

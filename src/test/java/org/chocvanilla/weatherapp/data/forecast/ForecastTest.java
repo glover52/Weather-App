@@ -21,8 +21,9 @@ public class ForecastTest {
     
     @Before
     public void setUp() throws IOException {
-        provider = new ForecastIO();
-        station = new WeatherStationsJSONFile(new Gson()).load().get(0);
+        Gson gson = new Gson();
+        provider = new ForecastIO(gson);
+        station = new WeatherStationsJSONFile(gson).load().get(0);
     }
     
     @Test

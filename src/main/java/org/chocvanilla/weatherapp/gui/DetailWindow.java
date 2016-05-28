@@ -11,66 +11,72 @@ import org.slf4j.LoggerFactory;
 import javax.swing.*;
 import javax.swing.table.TableColumnModel;
 import java.awt.*;
+import java.awt.event.WindowListener;
 import java.util.ArrayList;
 
 public class DetailWindow {
-    protected final Logger log = LoggerFactory.getLogger(getClass());
     private static final String REFRESH = "↻ Refresh";
     private static final String ADD_TO_FAVOURITES = "☆ Favourite";
     private static final String REMOVE_FROM_FAVOURITES = "★ Unfavourite";
-    private final FavouritesUpdatedListener favouritesUpdatedListener;
-    private final JFrame detailFrame = new JFrame();
+    
+    protected final Logger log = LoggerFactory.getLogger(getClass());
+    
+    private final JFrame frame = new JFrame();
     private final JPanel latestObsContainer = new JPanel();
     private final JPanel chartContainer = new JPanel();
     private final JPanel checkBoxContainer = new JPanel();
     private final JPanel tableContainer = new JPanel();
     private final JPanel buttonContainer = new JPanel();
     private final JTabbedPane historyContainer = new JTabbedPane();
-    private ChartPanel chartPanel = null;
     private final JLabel refreshStatusLabel = new JLabel();
+    
+    private ChartPanel chartPanel = null;
     private ArrayList<Field> fieldsToGraph = new ArrayList<>();
+    private FavouritesUpdatedListener favouritesUpdatedListener;
 
     /**
      * Create a new window, in which a chart with the most recent temperatures is displayed, both as a chart, and in a
      * table. View is modelled in tabs.
-     *
-     * @param locationManager saves previous window location, opens window to last location
-     * @param listener        an interface for updating the favourites list instantly both on screen, and in program
      */
-    public DetailWindow(WindowLocationManager locationManager, FavouritesUpdatedListener listener) {
-        favouritesUpdatedListener = listener;
-
-        detailFrame.setName("DetailWindow");
-        log.debug("{} created", detailFrame.getName());
-        detailFrame.addWindowListener(locationManager);
+    public DetailWindow() {
+        frame.setName("DetailWindow");
+        frame.setMinimumSize(new Dimension(700, 710));
+        
         JPanel container = new JPanel();
-        detailFrame.setContentPane(container);
-        detailFrame.setMinimumSize(new Dimension(700, 710));
-
+        frame.setContentPane(container);
         container.setLayout(new BoxLayout(container, BoxLayout.Y_AXIS));
+        
         buttonContainer.setLayout(new FlowLayout(FlowLayout.LEFT, 10, 10));
-
-        historyContainer.setBorder(BorderFactory.createTitledBorder("Observation History"));
         latestObsContainer.setBorder(BorderFactory.createTitledBorder("Latest Observations"));
-
-        historyContainer.addTab("Chart", chartContainer);
-        historyContainer.addTab("Table", tableContainer);
-
-        tableContainer.setLayout(new GridBagLayout());
-
-        checkBoxContainer.setLayout(new FlowLayout());
-        checkBoxContainer.setMinimumSize(new Dimension(700, 100));
+        checkBoxContainer.setLayout(new BoxLayout(checkBoxContainer, BoxLayout.Y_AXIS));
+        chartContainer.setLayout(new BorderLayout());
 
         container.add(buttonContainer);
         container.add(latestObsContainer);
-        container.add(historyContainer);
+        container.add(buildHistoryContainer());
+    }
+
+    private JTabbedPane buildHistoryContainer() {
+        tableContainer.setLayout(new GridBagLayout());
+        historyContainer.setBorder(BorderFactory.createTitledBorder("Observation History"));
+        historyContainer.addTab("Chart", chartContainer);
+        historyContainer.addTab("Table", tableContainer);
+        return historyContainer;
+    }
+
+    public void addListener(WindowListener l) {
+        frame.addWindowListener(l);
+    }
+
+    public void setFavouritesListener(FavouritesUpdatedListener l) {
+        favouritesUpdatedListener = l;
     }
 
     /**
      * The method that deals with the Java Swing context. All containers are cleared and populated with fresh data.
      *
-     * @param station      The {@link WeatherStation} for which data is displayed
-     * @param provider     An asynchronous way of retrieving the {@link WeatherObservation} data
+     * @param station  The {@link WeatherStation} for which data is displayed
+     * @param provider An asynchronous way of retrieving the {@link WeatherObservation} data
      */
     public void show(WeatherStation station, ObservationsProvider provider) {
         WeatherObservations observations = provider.loadObservations(station);
@@ -98,10 +104,7 @@ public class DetailWindow {
         updateChart(chart);
 
         addCheckBoxes(observations);
-        checkBoxContainer.revalidate();
-        checkBoxContainer.repaint();
-        chartContainer.add(checkBoxContainer);
-
+        chartContainer.add(checkBoxContainer, BorderLayout.EAST);
 
 
         // Table
@@ -112,14 +115,14 @@ public class DetailWindow {
         tableContainer.removeAll();
         tableContainer.add(new JScrollPane(buildTable(observations)), c);
 
-        detailFrame.setTitle(station.getName());
-        detailFrame.pack();
-        detailFrame.setVisible(true);
+        frame.setTitle(station.getName());
+        frame.pack();
+        frame.setVisible(true);
     }
 
     private void addCheckBoxes(WeatherObservations observations) {
         WeatherObservation observation = observations.iterator().next();
-        for(Field field: observation.getFields()) {
+        for (Field field : observation.getFields()) {
             JCheckBox fieldCheckBox = new JCheckBox(field.getLabel());
             fieldCheckBox.addActionListener(x -> addToGraph(field));
             checkBoxContainer.add(fieldCheckBox);
@@ -166,6 +169,8 @@ public class DetailWindow {
     private void updateChart(JFreeChart chart) {
         if (chartPanel == null) {
             chartPanel = new ChartPanel(chart);
+            chartPanel.setMaximumDrawHeight(Integer.MAX_VALUE);
+            chartPanel.setMaximumDrawWidth(Integer.MAX_VALUE);
             chartContainer.add(chartPanel);
         } else {
             chartPanel.setChart(chart);

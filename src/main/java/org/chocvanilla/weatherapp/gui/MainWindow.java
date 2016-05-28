@@ -1,6 +1,5 @@
 package org.chocvanilla.weatherapp.gui;
 
-import com.google.gson.Gson;
 import org.chocvanilla.weatherapp.data.forecast.ForecastProvider;
 import org.chocvanilla.weatherapp.data.observations.ObservationsProvider;
 import org.chocvanilla.weatherapp.data.observations.WeatherObservations;
@@ -14,6 +13,7 @@ import javax.swing.*;
 import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
 import java.awt.*;
+import java.awt.event.WindowListener;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.FutureTask;
 
@@ -33,23 +33,24 @@ public class MainWindow {
     private JPanel townPanel;
 
 
-    public MainWindow(Gson gson, 
-                      WeatherStations weatherStations, 
+    public MainWindow(WeatherStations weatherStations, 
                       ObservationsProvider provider, 
-                      ForecastProvider forecastProvider) {
+                      ForecastProvider forecastProvider,
+                      DetailWindow details) {
         stations = weatherStations;
         this.observationsProvider = provider;
         this.forecastProvider = forecastProvider;
         frame.setName("MainWindow");
         log.debug("{} created with {} weather stations", frame.getName(), weatherStations.size());
-        detailWindow = new DetailWindow(
-                new WindowLocationManager(gson, frame),
-                this::updateFavouritesButtons);
+        detailWindow = details;
+        detailWindow.setFavouritesListener(this::updateFavouritesButtons);
         frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-        frame.addWindowListener(new WindowLocationManager(gson, new Rectangle(800, 600)));
-        frame.addWindowListener(new FavouritesManager(weatherStations, provider));
         frame.setMinimumSize(new Dimension(800, 600));
         buildContainerLayout();
+    }
+    
+    public void addListener(WindowListener l){
+        frame.addWindowListener(l);
     }
 
     public void show() {
@@ -202,8 +203,11 @@ public class MainWindow {
 
     private void openChart(WeatherStation station, ObservationsProvider provider) {
         detailWindow.show(station, provider);
-    }   
-    
+    }
+
+    public Component getComponent() {
+        return frame;
+    }
 }
 
 

@@ -2,7 +2,6 @@ package org.chocvanilla.weatherapp.gui;
 
 import com.google.gson.Gson;
 
-import javax.swing.*;
 import java.awt.*;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
@@ -16,10 +15,10 @@ import java.nio.file.*;
 public class WindowLocationManager extends WindowAdapter {
     private static final String TARGET = ".preferences";
     private final Rectangle defaultBounds;
-    private final Window parent;
+    private final Component parent;
     private final Gson gson;
 
-    public WindowLocationManager(Gson gson, Rectangle defaultBounds, Window parent) {
+    public WindowLocationManager(Gson gson, Rectangle defaultBounds, Component parent) {
         this.defaultBounds = defaultBounds;
         this.parent = parent;
         this.gson = gson;
@@ -29,7 +28,7 @@ public class WindowLocationManager extends WindowAdapter {
         this(gson, defaultBounds, null);
     }
 
-    public WindowLocationManager(Gson gson, JFrame parent) {
+    public WindowLocationManager(Gson gson, Component parent) {
         this(gson, null, parent);
     }
 
