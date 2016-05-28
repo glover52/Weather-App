@@ -63,8 +63,6 @@ public class WeatherStationsTest {
         }
         ws.getFavourites()
                 .filter(WeatherStation::isFavourite)
-                .forEach( x-> {
-                    assertTrue(x.isFavourite());
-                });
+                .forEach( x-> assertTrue(x.isFavourite()));
     }
 }
