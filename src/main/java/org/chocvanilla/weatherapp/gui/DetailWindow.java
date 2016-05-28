@@ -13,6 +13,7 @@ import javax.swing.table.TableColumnModel;
 import java.awt.*;
 import java.awt.event.WindowListener;
 import java.util.ArrayList;
+import java.util.concurrent.TimeUnit;
 
 public class DetailWindow {
     private static final String REFRESH = "↻ Refresh";
@@ -80,13 +81,6 @@ public class DetailWindow {
      */
     public void show(WeatherStation station, ObservationsProvider provider) {
         WeatherObservations observations = provider.loadObservations(station);
-//        long elapsed = station.msSinceLastRefresh();
-//        refreshStatusLabel.setText(String.format("Last refresh: %d seconds ago.",
-//                TimeUnit.MILLISECONDS.toSeconds(elapsed)));
-//
-//        Timer timer = new Timer(1000, x -> refreshStatusLabel.setText(""));
-//        timer.setRepeats(false);
-//        timer.start();
 
         latestObsContainer.removeAll();
         latestObsContainer.add(GuiHelpers.buildDetails(observations.iterator().next()));
@@ -119,9 +113,20 @@ public class DetailWindow {
         frame.pack();
         frame.setVisible(true);
     }
+    
+    public void updateTimeSinceLastRefresh(long millis){
+        refreshStatusLabel.setText(String.format("Last refresh: %d seconds ago.", 
+                TimeUnit.MILLISECONDS.toSeconds(millis)));
+
+        Timer timer = new Timer(1000, x -> refreshStatusLabel.setText(""));
+        timer.setRepeats(false);
+        timer.start();
+
+    }
 
     private void addCheckBoxes(WeatherObservations observations) {
         WeatherObservation observation = observations.iterator().next();
+        checkBoxContainer.removeAll();
         for (Field field : observation.getFields()) {
             JCheckBox fieldCheckBox = new JCheckBox(field.getLabel());
             fieldCheckBox.addActionListener(x -> addToGraph(field));
@@ -157,7 +162,10 @@ public class DetailWindow {
      */
     private JButton buildRefreshButton(WeatherStation station, ObservationsProvider provider) {
         JButton refresh = new JButton(REFRESH);
-        refresh.addActionListener(x -> show(station, provider));
+        refresh.addActionListener(x -> {
+            show(station, provider);
+            updateTimeSinceLastRefresh(0);
+        });
         return refresh;
     }
 
@@ -223,4 +231,5 @@ public class DetailWindow {
         favouritesUpdatedListener.update();
     }
 }
+
 
