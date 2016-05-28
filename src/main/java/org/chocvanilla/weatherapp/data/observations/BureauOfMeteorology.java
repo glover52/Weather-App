@@ -13,7 +13,7 @@ import java.net.URL;
 import java.nio.file.Files;
 import java.nio.file.Path;
 
-public class BureauOfMeteorology implements ObservationsProvider{
+public class BureauOfMeteorology implements ObservationsProvider {
     protected final Logger log = LoggerFactory.getLogger(getClass());
     public static final String URL_FORMAT = "http://www.bom.gov.au/fwo/%s/%s.%s.json";
     public static final String PRODUCT_ID = "ID%c60801";
@@ -33,11 +33,11 @@ public class BureauOfMeteorology implements ObservationsProvider{
         return cache.get();
     }
 
-        /**
-         * Download all available weather observations from this station.
-         *
-         * @return a list of observations
-         */
+    /**
+     * Download all available weather observations from this station.
+     *
+     * @return a list of observations
+     */
     private WeatherObservations loadObservationsUncached(WeatherStation station) {
         try {
             Path path = downloader.downloadFile(buildURL(station), target, station.getUniqueID() + ".json");
@@ -45,7 +45,7 @@ public class BureauOfMeteorology implements ObservationsProvider{
         } catch (MalformedURLException e) {
             log.error("Malformed URL for station '{}'", station, e);
         } catch (IOException e) {
-            log.error("Unable to download latest observations for '{}' ", station, e);            
+            log.error("Unable to download latest observations for '{}' ", station, e);
         }
         return new WeatherObservations();
     }
