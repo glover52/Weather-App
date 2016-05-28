@@ -79,7 +79,7 @@ public class DetailWindow {
             WeatherObservations observations = dataSupplier.get();
             updateDataFrom(station, observations);
         } catch (InterruptedException | ExecutionException e) {
-            log.error("Failed to load observations from '{}'", station.getName(), e);
+            log.error("Failed to loadObservations observations from '{}'", station.getName(), e);
         }
     }
 

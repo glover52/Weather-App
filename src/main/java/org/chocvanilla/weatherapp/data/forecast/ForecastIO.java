@@ -16,7 +16,7 @@ public class ForecastIO implements ForecastProvider {
     protected final Logger log = LoggerFactory.getLogger(getClass());
 
     @Override
-    public WeatherObservations getForecast(WeatherStation station) throws MissingAPIKeyException {
+    public WeatherObservations loadForecast(WeatherStation station) throws MissingAPIKeyException {
         try {
             return downloadForecastFor(station.getLatitude(), station.getLongitude());
         } catch (IOException e) {

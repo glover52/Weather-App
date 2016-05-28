@@ -1,7 +1,7 @@
 package org.chocvanilla.weatherapp;
 
 import com.google.gson.Gson;
-import org.chocvanilla.weatherapp.data.FileDownloader;
+import org.chocvanilla.weatherapp.data.observations.BureauOfMeteorology;
 import org.chocvanilla.weatherapp.data.observations.Field;
 import org.chocvanilla.weatherapp.data.observations.WeatherObservations;
 import org.chocvanilla.weatherapp.data.stations.*;
@@ -27,6 +27,7 @@ import static org.junit.Assume.assumeFalse;
 
 public class WeatherAppTest {
     private WeatherStations db;
+    private BureauOfMeteorology bom;
 
     /**
      * Initialisation of some necessary functions to be show before any test. Populates a list of weather stations
@@ -35,6 +36,7 @@ public class WeatherAppTest {
     @Before
     public void setUp() throws Exception {
         db = WeatherStations.loadFrom(new WeatherStationsJSONFile(new Gson()));
+        bom = new BureauOfMeteorology();
     }
 
     @Test
@@ -50,14 +52,14 @@ public class WeatherAppTest {
     public void weatherObservationIsLoaded() throws IOException {
         Optional<WeatherStation> station = firstMatch(x -> hasWmoNumber(x, 94828));
         assertTrue(station.isPresent());
-        WeatherObservations observations = new FileDownloader(station.get()).load();
+        WeatherObservations observations = bom.loadObservations(station.get());
         assertThat(observations, is(not(empty())));
     }
 
     @Test(expected = IllegalArgumentException.class)
     public void loadObservationFromNullStation() throws IOException {
         WeatherStation station = new BomWeatherStation();
-        WeatherObservations observations = new FileDownloader(station).load();
+        WeatherObservations observations = bom.loadObservations(station);
     }
 
     @Test
@@ -93,7 +95,7 @@ public class WeatherAppTest {
         Optional<WeatherStation> maybe = firstMatch(x -> hasWmoNumber(x, 94828));
         assertTrue(maybe.isPresent());
         WeatherStation station = maybe.get();
-        WeatherObservations observations = new FileDownloader(station).load();
+        WeatherObservations observations = bom.loadObservations(station);
         JFreeChart testChart = createChart(station, observations, new ArrayList<>());
         JFrame frame = setUpTestWindow();
         ChartPanel panel = new ChartPanel(testChart);

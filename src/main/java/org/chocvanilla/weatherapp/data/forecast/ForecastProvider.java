@@ -6,6 +6,6 @@ import org.chocvanilla.weatherapp.io.MissingAPIKeyException;
 
 public interface ForecastProvider {
 
-    WeatherObservations getForecast(WeatherStation station) throws MissingAPIKeyException;
+    WeatherObservations loadForecast(WeatherStation station) throws MissingAPIKeyException;
 }
 
