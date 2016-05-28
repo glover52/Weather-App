@@ -1,6 +1,7 @@
 package org.chocvanilla.weatherapp;
 
 import com.google.gson.Gson;
+import org.chocvanilla.weatherapp.data.DataHelpers;
 import org.chocvanilla.weatherapp.data.observations.*;
 import org.chocvanilla.weatherapp.data.stations.*;
 import org.chocvanilla.weatherapp.io.WeatherStationSource;
@@ -35,7 +36,7 @@ public class WeatherAppTest {
     public void setUp() throws Exception {
         Gson gson = new Gson();
         db = WeatherStations.loadFrom(new WeatherStationsJSONFile(gson));
-        bom = new BureauOfMeteorology(gson);
+        bom = new BureauOfMeteorology(DataHelpers.observationsGson());
     }
 
     @Test
