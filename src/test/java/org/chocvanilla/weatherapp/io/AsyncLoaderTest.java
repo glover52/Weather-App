@@ -1,11 +1,9 @@
-package org.chocvanilla.weatherapp.data.forecast.io;
-
+package org.chocvanilla.weatherapp.io;
 
 import org.chocvanilla.weatherapp.data.forecast.ForecastProvider;
 import org.chocvanilla.weatherapp.data.observations.ObservationsProvider;
 import org.chocvanilla.weatherapp.data.observations.WeatherObservations;
 import org.chocvanilla.weatherapp.data.stations.WeatherStation;
-import org.chocvanilla.weatherapp.io.AsyncLoader;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.BeforeClass;
