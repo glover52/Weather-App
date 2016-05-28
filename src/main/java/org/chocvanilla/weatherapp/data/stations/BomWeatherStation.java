@@ -10,7 +10,7 @@ public class BomWeatherStation implements WeatherStation {
     protected final Logger log = LoggerFactory.getLogger(getClass());
 
     private int stationID;
-    private int wmoNumber;
+    private String wmoNumber;
     private String name;
     private String state;
     private double latitude;
@@ -34,7 +34,7 @@ public class BomWeatherStation implements WeatherStation {
         return stationID;
     }
 
-    public int getWmoNumber() {
+    public String getWmoNumber() {
         return wmoNumber;
     }
 
@@ -62,7 +62,7 @@ public class BomWeatherStation implements WeatherStation {
 
     @Override
     public String getUniqueID() {
-        return String.valueOf(wmoNumber);
+        return wmoNumber;
     }
 
     @Override

@@ -22,6 +22,9 @@ public class BureauOfMeteorology implements ObservationsProvider{
     private final FileDownloader downloader = new FileDownloader();
 
     public WeatherObservations loadObservations(WeatherStation station) {
+        if (station.getUniqueID() == null) {
+            throw new IllegalArgumentException("The supplied WeatherStation does not have a unique id!");
+        }
         WeatherCache cache = WeatherCache.observing(station, this::loadObservationsUncached);
         return cache.get();
     }
