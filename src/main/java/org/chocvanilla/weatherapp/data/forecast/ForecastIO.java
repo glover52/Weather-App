@@ -14,7 +14,8 @@ import java.net.URL;
 
 public class ForecastIO implements ForecastProvider {
     public static final String API_CALL_FORMAT = "https://api.forecast.io/forecast/%s/%f,%f" +
-            "?units=ca&exclude=currently,minutely,daily,alerts,flags" +
+            "?units=ca" +
+            "&exclude=currently,minutely,daily,alerts,flags" +
             "&extend=hourly";
     private final Gson gson;
     protected final Logger log = LoggerFactory.getLogger(getClass());

@@ -47,7 +47,7 @@ public class ForecastObservation implements WeatherObservation {
                 new Field("Time", DATE::format, getTimestamp(), false),
                 new Field("Air Temp", DEG_C, temperature),
                 new Field("Apparent Temp", DEG_C, apparentTemperature),
-                new Field("Wind Bearing", "%d°", windBearing),
+                new Field("Wind Bearing", "%d°", windBearing, false),
                 new Field("Wind Speed (km/h)", KM_H, windSpeed),
                 new Field("Dew Point", DEG_C, dewPoint),
                 new Field("Rain (mm)", MM, precipIntensity),
