@@ -1,29 +1,21 @@
 package org.chocvanilla.weatherapp.gui;
 
 import org.chocvanilla.weatherapp.chart.ChartHelpers;
-import org.chocvanilla.weatherapp.data.observations.Field;
-import org.chocvanilla.weatherapp.data.observations.ObservationsProvider;
-import org.chocvanilla.weatherapp.data.observations.WeatherObservation;
-import org.chocvanilla.weatherapp.data.observations.WeatherObservations;
+import org.chocvanilla.weatherapp.data.observations.*;
 import org.chocvanilla.weatherapp.data.stations.WeatherStation;
 import org.jfree.chart.ChartPanel;
 import org.jfree.chart.JFreeChart;
 import org.jfree.chart.plot.XYPlot;
 import org.jfree.chart.renderer.xy.StandardXYItemRenderer;
-import org.jfree.data.time.Second;
-import org.jfree.data.time.TimeSeries;
-import org.jfree.data.time.TimeSeriesCollection;
-import org.jfree.data.xy.XYDataset;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import javax.swing.*;
+import javax.swing.Timer;
 import javax.swing.table.TableColumnModel;
 import java.awt.*;
 import java.awt.event.WindowListener;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 import java.util.concurrent.TimeUnit;
 
 public class DetailWindow {
@@ -187,29 +179,16 @@ public class DetailWindow {
     private void removeFieldFromGraph(Field field, JFreeChart chart) {
         XYPlot plot = chart.getXYPlot();
         plot.setDataset(dataSetIndex.get(field.getLabel()), null);
-        plot.setRenderer(dataSetIndex.get(field.getLabel()), null);
+        // do not set the renderer to null, otherwise grid lines are lost
     }
 
     private void addFieldToGraph(Field field, JFreeChart chart, WeatherObservations observations) {
         XYPlot plot = chart.getXYPlot();
-        plot.setDataset(dataSetIndex.get(field.getLabel()), createDataSet(field, observations));
+        plot.setDataset(dataSetIndex.get(field.getLabel()), ChartHelpers.createDataSet(field, observations));
         plot.setRenderer(dataSetIndex.get(field.getLabel()), new StandardXYItemRenderer());
-
     }
 
-    private XYDataset createDataSet(Field field, WeatherObservations observations) {
-        TimeSeries series = new TimeSeries(field.getLabel());
-        for (WeatherObservation observation : observations) {
-            for (Field obsField : observation.getFields()) {
-                if (field.isGraphable() && field.getLabel().equals(obsField.getLabel())) {
-                    series.addOrUpdate(new Second(observation.getTimestamp()),
-                            Double.parseDouble(obsField.getValue().toString()));
-                }
-            }
-        }
 
-        return new TimeSeriesCollection(series);
-    }
 
     /**
      * Takes the {@link WeatherObservation} object, and creates and populates a JTable with the most recent data.
