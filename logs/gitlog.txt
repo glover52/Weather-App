@@ -1,0 +1,2093 @@
+commit 102c293f7c7a8403af0a7481b916404069f3f86b
+Author: Raj Adhikari <peez@localhost.com>
+Date:   Mon May 30 01:09:56 2016 +1000
+
+    Updated Class Diagram, HOWTO, and removed obsolete resources
+
+commit 78cb2f08ead07260cf105efc0025aa631d6007ac
+Author: Raj Adhikari <peez@localhost.com>
+Date:   Mon May 30 01:00:54 2016 +1000
+
+    Updated logs; Removed Old manual
+
+commit 65e3428a50c97ec221ca3abaa109a8e37df0c73e
+Author: Raj Adhikari <peez@localhost.com>
+Date:   Mon May 30 00:48:50 2016 +1000
+
+    Updated high level diagram; removed empty class
+
+commit c586dc0be7b31c7bf456f1c58b0fa572b5446976
+Author: Rhys Van Orsouw <s3542173@student.rmit.edu.au>
+Date:   Mon May 30 00:39:54 2016 +1000
+
+    User Contributions
+
+commit 9f89853d0d3b2572941580c5b65c3004eda64bd8
+Author: Rhys Van Orsouw <s3542173@student.rmit.edu.au>
+Date:   Mon May 30 00:29:16 2016 +1000
+
+    changed button labels
+
+commit b382ef52edcca7ab4bde0d1b97de18f94e1bcd25
+Merge: 02b19a6 df4cbf5
+Author: Rhys Van Orsouw <s3542173@student.rmit.edu.au>
+Date:   Mon May 30 00:25:40 2016 +1000
+
+    Merge remote-tracking branch 'origin/master'
+
+commit 02b19a664c15e662441047f32b11cf480a7899d9
+Author: Rhys Van Orsouw <s3542173@student.rmit.edu.au>
+Date:   Mon May 30 00:25:25 2016 +1000
+
+    changed button labels
+
+commit df4cbf5db57438da5d0cb2ecfad78215b6f04068
+Author: Raj Adhikari <peez@localhost.com>
+Date:   Mon May 30 00:24:41 2016 +1000
+
+    Added TC11
+
+commit f982125f8a29adcad165938bccd3963f610f08ba
+Merge: c2e1ab3 cbd0262
+Author: Rhys Van Orsouw <s3542173@student.rmit.edu.au>
+Date:   Mon May 30 00:20:22 2016 +1000
+
+    Merge remote-tracking branch 'origin/master'
+
+commit c2e1ab36698d7edd67c1d2d6f2bd2e26a4c3036a
+Author: Rhys Van Orsouw <s3542173@student.rmit.edu.au>
+Date:   Mon May 30 00:20:07 2016 +1000
+
+    changed button labels
+
+commit cbd0262e40cf19180acb9d95fe86a9d7d1ee9ea5
+Author: Adam Thalhammer <s3544305@student.rmit.edu.au>
+Date:   Mon May 30 00:15:03 2016 +1000
+
+    added stray javadocs
+
+commit 97d913d5b4483e3b415dc5ec2d3bd4f6cdb4df22
+Author: Adam Thalhammer <s3544305@student.rmit.edu.au>
+Date:   Mon May 30 00:12:29 2016 +1000
+
+    add description of publish-subscribe pattern; clarified code to make this more obvious
+
+commit 17fcbb092e6f07c88079366c2994f6a100c141bc
+Merge: ae10024 fb9fcfe
+Author: Raj Adhikari <peez@localhost.com>
+Date:   Mon May 30 00:09:45 2016 +1000
+
+    Merge remote-tracking branch 'origin/master'
+
+commit ae10024f2cc3a7d9f6e36512c6584f9e8f322d48
+Author: Raj Adhikari <peez@localhost.com>
+Date:   Mon May 30 00:09:27 2016 +1000
+
+    Added testing reports
+
+commit fb9fcfecc18f6c96c5805d3d672c7a0a03878097
+Author: Rhys Van Orsouw <s3542173@student.rmit.edu.au>
+Date:   Mon May 30 00:02:19 2016 +1000
+
+    changed button labels
+
+commit fd83561dfe49fcf03b6041ace0c67f16e92ea681
+Author: Adam Thalhammer <s3544305@student.rmit.edu.au>
+Date:   Sun May 29 23:57:52 2016 +1000
+
+    update javadoc
+
+commit b818879d68a94707ffbcad08a0a94e1259950e3f
+Author: Raj Adhikari <peez@localhost.com>
+Date:   Sun May 29 23:57:30 2016 +1000
+
+    Fixed test plan reference
+
+commit 7e10d09ada66901c327adb1b4a523417115e4234
+Author: Raj Adhikari <peez@localhost.com>
+Date:   Sun May 29 23:55:53 2016 +1000
+
+    Added more acceptance tests
+
+commit 99803baa4bf640b67c5be762b85a964811ffcae9
+Merge: 3f7172e b125084
+Author: Rhys Van Orsouw <s3542173@student.rmit.edu.au>
+Date:   Sun May 29 23:49:53 2016 +1000
+
+    Merge remote-tracking branch 'origin/master'
+
+commit 3f7172e3ff8f62a796e4467740aa7c3a8f75d84c
+Author: Rhys Van Orsouw <s3542173@student.rmit.edu.au>
+Date:   Sun May 29 23:49:38 2016 +1000
+
+    update readme
+
+commit b1250840769d1d5537f357fb0fe0f7949c57d77e
+Author: Adam Thalhammer <s3544305@student.rmit.edu.au>
+Date:   Sun May 29 23:45:42 2016 +1000
+
+    fixed ordering of forecast-io observations
+
+commit 8837dcfeb1267a50d36e62e756feebea019b1c10
+Author: Adam Thalhammer <s3544305@student.rmit.edu.au>
+Date:   Sun May 29 23:40:43 2016 +1000
+
+    download forecast.io observations in parallel
+
+commit f2a55a4a80ceebd6a7f116513250808d2c48a6b3
+Author: Adam Thalhammer <s3544305@student.rmit.edu.au>
+Date:   Sun May 29 23:18:21 2016 +1000
+
+    fixed bug where forecast-io observations were stored in same cache as forecast.io forecast
+
+commit 67e4c9beed8edcedab3368be833b5c3ffe7e5a37
+Author: Raj Adhikari <peez@localhost.com>
+Date:   Sun May 29 23:17:38 2016 +1000
+
+    Whitespace refactor
+
+commit 9271f9895ddf0f45cb5e1e6eee66ee1bc31bac37
+Author: Raj Adhikari <peez@localhost.com>
+Date:   Sun May 29 23:13:46 2016 +1000
+
+    Added additional test
+
+commit 634651e06b1671101c1fcf07c01883941b1da7d7
+Author: Rhys Van Orsouw <s3542173@student.rmit.edu.au>
+Date:   Sun May 29 22:58:39 2016 +1000
+
+    Fixed window size
+
+commit e5a84f3fce36a2b0827b979bf9905b83a73a5cba
+Author: Rhys Van Orsouw <s3542173@student.rmit.edu.au>
+Date:   Sun May 29 22:49:48 2016 +1000
+
+    fixed graph background colour to make plots slightly more visible
+
+commit d19238c100a69cde0e5d38d7f7a6d090b0195398
+Author: Rhys Van Orsouw <s3542173@student.rmit.edu.au>
+Date:   Sun May 29 22:47:31 2016 +1000
+
+    Fixed checkbox bug, fixed JLabel bug
+
+commit d8287d1c4499601732cd945fc64abd17336efeb9
+Merge: addd27f 5cb77f7
+Author: Rhys Van Orsouw <s3542173@student.rmit.edu.au>
+Date:   Sun May 29 22:41:13 2016 +1000
+
+    Merge remote-tracking branch 'origin/master'
+
+commit addd27f6506f177d575d069e2d701dcca25a465a
+Author: Rhys Van Orsouw <s3542173@student.rmit.edu.au>
+Date:   Sun May 29 22:40:58 2016 +1000
+
+    Added Comments. Added open source acknowledgments.
+
+commit 5cb77f7d37cfb13a7d6c60aeb8526ad7268823e9
+Author: Raj Adhikari <peez@localhost.com>
+Date:   Sun May 29 22:32:52 2016 +1000
+
+    Added the beginnings of test plan.
+
+commit cd309d182d65982eec7f1f64b8bb0abb84db8c6a
+Author: Adam Thalhammer <s3544305@student.rmit.edu.au>
+Date:   Sun May 29 21:44:14 2016 +1000
+
+    added forecast io time machine integration
+
+commit e0ed80599f58070eb1ee57c3fa6e3dfacef8ce31
+Merge: b59f79f 8f7c6db
+Author: Rhys Van Orsouw <s3542173@student.rmit.edu.au>
+Date:   Sun May 29 21:44:03 2016 +1000
+
+    Merge remote-tracking branch 'origin/master'
+
+commit b59f79f56958a3008260eb9f409a9b21a74f0960
+Author: Rhys Van Orsouw <s3542173@student.rmit.edu.au>
+Date:   Sun May 29 21:43:48 2016 +1000
+
+    minor change
+
+commit 8f7c6dbb489fd0a5834043c9b2c9c24160ac9309
+Author: Adam Thalhammer <s3544305@student.rmit.edu.au>
+Date:   Sun May 29 21:38:20 2016 +1000
+
+    add time machine observations provider for forecast io
+
+commit a6d3372687af8b3cc44e7975c244fb18add74655
+Author: Rhys Van Orsouw <s3542173@student.rmit.edu.au>
+Date:   Sun May 29 21:32:48 2016 +1000
+
+    Added button and logic for forecast.io past observations
+
+commit c93da2cdf22274ffd89c0577aa3641cb3c752ead
+Author: Rhys Van Orsouw <s3542173@student.rmit.edu.au>
+Date:   Sun May 29 21:24:25 2016 +1000
+
+    Wrapped the No Favourites text with HTML, increased MainWindow min size to 850 x 600
+
+commit e94366cb8401222a6429777c535c197d9155d4e3
+Author: Rhys Van Orsouw <s3542173@student.rmit.edu.au>
+Date:   Sun May 29 21:14:28 2016 +1000
+
+    Added Jira server details to README.md
+
+commit b336daefda688809f6295e0129c08ffe88ced3e1
+Author: Rhys Van Orsouw <s3542173@student.rmit.edu.au>
+Date:   Sun May 29 21:05:06 2016 +1000
+
+    Focus on search text area on application start up
+
+commit 152bbd63a1cb4a29805d3da24d0597c49d28949c
+Author: Adam Thalhammer <s3544305@student.rmit.edu.au>
+Date:   Sun May 29 21:00:22 2016 +1000
+
+    handle no observations available for station errors
+
+commit 4d3aab76500ae8ceecfd9511db7665eb2453f782
+Author: Rhys Van Orsouw <s3542173@student.rmit.edu.au>
+Date:   Sun May 29 20:42:21 2016 +1000
+
+    Removed Faulty Station
+
+commit a9995c306d1fab91f65a79d96d746966d4913c67
+Author: Adam Thalhammer <s3544305@student.rmit.edu.au>
+Date:   Sun May 29 20:39:32 2016 +1000
+
+    remove erroneous weather stations
+
+commit cd1d73a0e9f939d64081f7934d366c80257b38ed
+Author: Adam Thalhammer <s3544305@student.rmit.edu.au>
+Date:   Sun May 29 20:34:44 2016 +1000
+
+    don't refresh cache on creation
+
+commit 992169a07c25cf2fffff1481e4826b77d2389ef3
+Author: Adam Thalhammer <s3544305@student.rmit.edu.au>
+Date:   Sun May 29 20:33:31 2016 +1000
+
+    no longer assign null value to blank field
+
+commit 50ef0b49ecf5e2b1b9f5c4570dceda4aa010d279
+Author: Adam Thalhammer <s3544305@student.rmit.edu.au>
+Date:   Sun May 29 20:22:01 2016 +1000
+
+    don't try to graph null values
+
+commit 3b7957c4d25c659fa8b7874fd8a18b06ee9878f1
+Author: Rhys Van Orsouw <s3542173@student.rmit.edu.au>
+Date:   Sun May 29 20:06:00 2016 +1000
+
+    Added favourite button to Town Panel
+
+commit 80a8012fc4d7b7d7d908380401ad3b7c07061807
+Author: Rhys Van Orsouw <s3542173@student.rmit.edu.au>
+Date:   Sun May 29 19:39:39 2016 +1000
+
+    Added guest account to bamboo, updated README.md
+
+commit 0f5506be6468d425a86d56966f38abcc118aee67
+Author: Adam Thalhammer <s3544305@student.rmit.edu.au>
+Date:   Sun May 29 19:14:08 2016 +1000
+
+    preload forecast when adding station to town panel
+
+commit 591ad0484709c435c7b7828fad1c781ef3042434
+Merge: 4f3e28e cc7181a
+Author: Adam Thalhammer <s3544305@student.rmit.edu.au>
+Date:   Sun May 29 18:56:54 2016 +1000
+
+    Merge branch 'master' of https://bitbucket.org/chocvanilla/weather-app
+
+commit 4f3e28e2b53c45683122cee8b34cb6a926ed4278
+Author: Adam Thalhammer <s3544305@student.rmit.edu.au>
+Date:   Sun May 29 18:56:23 2016 +1000
+
+    fixed bug where favourites were not preloaded asynchronously
+
+commit cc7181a95f98037f108f2417663968ab4fed8921
+Author: Raj Adhikari <peez@localhost.com>
+Date:   Sun May 29 18:53:52 2016 +1000
+
+    Added some navigation help
+
+commit b6c9c8f9065bce2d55b890434c61923884d21f13
+Author: Rhys Van Orsouw <s3542173@student.rmit.edu.au>
+Date:   Sun May 29 18:26:54 2016 +1000
+
+    Update minimum window size
+
+commit f870847e27dd10d965f58c8741caa4aca29752de
+Author: Adam Thalhammer <s3544305@student.rmit.edu.au>
+Date:   Sun May 29 18:08:58 2016 +1000
+
+    fixed bug where gridlines were disappearing when checkbox for first dataset was unchecked
+
+commit 03f80aff859e41c0cbf3461199beabfa9df9ed61
+Author: Adam Thalhammer <s3544305@student.rmit.edu.au>
+Date:   Sun May 29 17:21:22 2016 +1000
+
+    fixed cloud cover label, don't show icon
+
+commit 6c000139b281aad8cfe2f8a5ae78ddc6ad8d8c00
+Author: Raj Adhikari <peez@localhost.com>
+Date:   Sun May 29 16:31:44 2016 +1000
+
+    Whitespace refactor
+
+commit 62ed688026397cb346bc9ce44dcb3845a650dd3d
+Merge: fdafdfe 50e32f0
+Author: Raj Adhikari <peez@localhost.com>
+Date:   Sun May 29 16:31:09 2016 +1000
+
+    Merge remote-tracking branch 'origin/master'
+    
+    # Conflicts:
+    #	src/test/java/org/chocvanilla/weatherapp/data/observations/WeatherCacheTest.java
+
+commit fdafdfea2ea0ff35404a5dbda30621998c1bc019
+Author: Raj Adhikari <peez@localhost.com>
+Date:   Sun May 29 16:29:36 2016 +1000
+
+    Added more logging for cache status
+
+commit 13e8504c5f3cf401dd4089d58ec0448713e52b78
+Author: Raj Adhikari <peez@localhost.com>
+Date:   Sun May 29 16:28:44 2016 +1000
+
+    Added cache expiry test
+
+commit 50e32f0b4ddf172fbe6b5492a2ff2836366c1bc5
+Author: Rhys Van Orsouw <s3542173@student.rmit.edu.au>
+Date:   Sun May 29 16:27:50 2016 +1000
+
+    Refactored Code, Changed favourite button to display in town panel
+
+commit 56006fd9623a3a199a1183c9ec594667bbc4fd98
+Author: Adam Thalhammer <s3544305@student.rmit.edu.au>
+Date:   Sun May 29 16:18:48 2016 +1000
+
+    prettified favourite buttons in main window; and removed outdated weather station
+
+commit f2d2c226902d1f5fbb0dc2ab70907cc238290831
+Author: Adam Thalhammer <s3544305@student.rmit.edu.au>
+Date:   Sun May 29 16:15:11 2016 +1000
+
+     make windbearing not graphable
+
+commit 4a3ee71241ee4f6e62519c15400ebd52a636b7da
+Author: Adam Thalhammer <s3544305@student.rmit.edu.au>
+Date:   Sun May 29 16:09:07 2016 +1000
+
+    get extended hourly forecast for next week
+
+commit ad16682247399fff6708c64f4707828107eec210
+Author: Adam Thalhammer <s3544305@student.rmit.edu.au>
+Date:   Sun May 29 15:55:44 2016 +1000
+
+    prevent checkbox from being unchecked if it would remove the last graph
+
+commit 436e0bc7d8ed167e5fadf44d3913da10b8db7e65
+Merge: 30b1432 a810541
+Author: Rhys Van Orsouw <s3542173@student.rmit.edu.au>
+Date:   Sun May 29 15:48:16 2016 +1000
+
+    Merge remote-tracking branch 'origin/master'
+
+commit 30b14324a46f4f811a2f4b870c739d3a7c2fafa2
+Author: Rhys Van Orsouw <s3542173@student.rmit.edu.au>
+Date:   Sun May 29 15:48:01 2016 +1000
+
+    Fixed Graph Colour
+
+commit a81054100d002175f569dcd06a8a34c94fa21dc6
+Author: Raj Adhikari <peez@localhost.com>
+Date:   Sun May 29 15:37:03 2016 +1000
+
+    Added test for favorite saving
+
+commit 62b039598a2d35c5e57e56399150a1ec410c1378
+Merge: 2899172 e80cc8f
+Author: Rhys Van Orsouw <s3542173@student.rmit.edu.au>
+Date:   Sun May 29 15:35:53 2016 +1000
+
+    Merge remote-tracking branch 'origin/master'
+
+commit 2899172880698a73659c3e292ca55860a4e980ec
+Author: Rhys Van Orsouw <s3542173@student.rmit.edu.au>
+Date:   Sun May 29 15:35:37 2016 +1000
+
+    Fixed Graph Colour
+
+commit e80cc8f8115650d5d6c584a278c3a64fbff3b999
+Author: Adam Thalhammer <s3544305@student.rmit.edu.au>
+Date:   Sun May 29 15:30:25 2016 +1000
+
+    fixed failing test due to change of field constructor signature
+
+commit d40c86f0e286be485e48ff0c0a53cf6c802b8313
+Author: Raj Adhikari <peez@localhost.com>
+Date:   Sun May 29 15:24:29 2016 +1000
+
+    whoops
+
+commit 08a4c74ac701d53bfcf81f2f0261be2bab36df31
+Author: Raj Adhikari <peez@localhost.com>
+Date:   Sun May 29 15:23:29 2016 +1000
+
+    Update tests to reflect method signature change
+    
+    Remove dummy arraylist
+
+commit cdb79d12fbfc14eede498f0643a744050d22ff63
+Merge: c09c906 b3778b7
+Author: Rhys Van Orsouw <s3542173@student.rmit.edu.au>
+Date:   Sun May 29 15:18:01 2016 +1000
+
+    Merge branch 'Graphing'
+    
+    Conflicts:
+    	src/main/java/org/chocvanilla/weatherapp/chart/ChartHelpers.java
+    	src/main/java/org/chocvanilla/weatherapp/gui/DetailWindow.java
+
+commit b3778b753c1f03120e5bd95e65aa97467f2e5c47
+Author: Rhys Van Orsouw <s3542173@student.rmit.edu.au>
+Date:   Sun May 29 15:06:20 2016 +1000
+
+    Fixed windows size, can remove items from graph
+
+commit c09c9060e9f49e40799a822ec628fb739bc04223
+Merge: ac918c5 2e0c8bb
+Author: Adam Thalhammer <s3544305@student.rmit.edu.au>
+Date:   Sun May 29 15:00:04 2016 +1000
+
+    Merge remote-tracking branch 'origin/master'
+
+commit ac918c5deb829cc3e40b30eb9c55c0979fbdbf73
+Author: Adam Thalhammer <s3544305@student.rmit.edu.au>
+Date:   Sun May 29 14:59:50 2016 +1000
+
+    flush favourites writer, fixes bug where favourites were not saved
+
+commit 0ff4981947ca2d49e21c87555e28f2cdd4b8cbbd
+Author: Rhys Van Orsouw <s3542173@student.rmit.edu.au>
+Date:   Sun May 29 14:58:41 2016 +1000
+
+    Fixed window min size
+
+commit 2e0c8bb7263832919660e7d11465f18c4d742895
+Author: Raj Adhikari <peez@localhost.com>
+Date:   Sun May 29 14:45:56 2016 +1000
+
+    Update/remove obsolete sections for new version
+    
+    New json format
+    Updated dependencies
+    releaseZip -> shadowJar
+
+commit 7c3834d1db928e153c544f2ae4a4e006119e5984
+Merge: 0af8d54 b80343e
+Author: Adam Thalhammer <s3544305@student.rmit.edu.au>
+Date:   Sun May 29 14:42:53 2016 +1000
+
+    Merge remote-tracking branch 'origin/Graphing' into Graphing
+
+commit 0af8d54fe572bee9e5ceedb81c2c65fd7ee244d6
+Author: Adam Thalhammer <s3544305@student.rmit.edu.au>
+Date:   Sun May 29 14:42:38 2016 +1000
+
+    only graph graphable fields
+
+commit b80343e51b61059908d281079ccfcc004e7c34aa
+Author: Rhys Van Orsouw <s3542173@student.rmit.edu.au>
+Date:   Sun May 29 14:37:46 2016 +1000
+
+    Changed axis Label
+
+commit 63680891d9160711b657624e44b0c951495bf2f9
+Author: Rhys Van Orsouw <s3542173@student.rmit.edu.au>
+Date:   Sun May 29 14:36:22 2016 +1000
+
+    fixed method signature
+
+commit 016a27e76b4c7ddc19a6d72690e1bd2eaa6f53d4
+Merge: 9ea5bf4 a0700be
+Author: Rhys Van Orsouw <s3542173@student.rmit.edu.au>
+Date:   Sun May 29 14:35:43 2016 +1000
+
+    Merge remote-tracking branch 'origin/Graphing' into Graphing
+
+commit 9ea5bf4e6ecf365288ec06b4ee531727da4744f0
+Author: Rhys Van Orsouw <s3542173@student.rmit.edu.au>
+Date:   Sun May 29 14:35:30 2016 +1000
+
+    tried graphing again
+
+commit a0700bedaca690b5aae7381eb6297e81c2b3d715
+Author: Adam Thalhammer <s3544305@student.rmit.edu.au>
+Date:   Sun May 29 14:29:30 2016 +1000
+
+    fixed fields
+
+commit 6ddfa5589463cecb50593beb3895fa98686ee285
+Author: Rhys Van Orsouw <s3542173@student.rmit.edu.au>
+Date:   Sun May 29 14:26:31 2016 +1000
+
+    tried graphing again
+
+commit eddb200658826288dfd5bd671d8aabb65f7f9dff
+Author: Adam Thalhammer <s3544305@student.rmit.edu.au>
+Date:   Sun May 29 14:08:13 2016 +1000
+
+    fixed adding fields to graph logic
+
+commit f1fee0aac2cd9b53069a5fca1a3e78422e543b85
+Author: Adam Thalhammer <s3544305@student.rmit.edu.au>
+Date:   Sun May 29 13:51:56 2016 +1000
+
+    neatified rhys' code
+
+commit 31b21ba7758b4bcdee2c86805a41280ed51421ea
+Author: Rhys Van Orsouw <s3542173@student.rmit.edu.au>
+Date:   Sun May 29 13:43:14 2016 +1000
+
+    tried graphing again
+
+commit a19d58605e25937f4f244e6f61671f430f98c378
+Author: Adam Thalhammer <s3544305@student.rmit.edu.au>
+Date:   Sun May 29 13:47:28 2016 +1000
+
+    commit
+
+commit c59767523a75a9c9bfcf104df994ee358c18ae34
+Author: Rhys Van Orsouw <s3542173@student.rmit.edu.au>
+Date:   Sun May 29 13:43:14 2016 +1000
+
+    tried graphing again
+
+commit 07499219b9e14d92b9a33058416d1657122ccbdb
+Author: Raj Adhikari <peez@localhost.com>
+Date:   Sun May 29 13:06:04 2016 +1000
+
+    Whitespace and Import refactor
+
+commit 2165aa2010c240ec49fc9672dfa8a97610f73023
+Author: Raj Adhikari <peez@localhost.com>
+Date:   Sun May 29 12:29:07 2016 +1000
+
+    Added Weather Cache test
+
+commit e61a042bd68ae5ed27a197b518878aeca172f2e8
+Author: Adam Thalhammer <s3544305@student.rmit.edu.au>
+Date:   Sun May 29 11:02:58 2016 +1000
+
+    create .preferences directory if it does not yet exist when saving favourites
+
+commit 8e3cd13c12271024d2991df5d85f5abac8537c9c
+Author: Adam Thalhammer <s3544305@student.rmit.edu.au>
+Date:   Sun May 29 10:52:36 2016 +1000
+
+    fix broken test by providing a correctly configured gson object to the BOM observations json parser
+
+commit 6f060fe17bc58df842ba069f6670464928115b22
+Author: Raj Adhikari <peez@localhost.com>
+Date:   Sun May 29 03:29:13 2016 +1000
+
+    Added BOM class test
+
+commit 49a4af4758b375faafd1f58859cdadf26b29ef56
+Merge: 587329a e714e02
+Author: Raj Adhikari <peez@localhost.com>
+Date:   Sun May 29 03:25:30 2016 +1000
+
+    Merge remote-tracking branch 'origin/master'
+
+commit 587329a914613d6e43832e138ae007f765a55dfd
+Author: Raj Adhikari <peez@localhost.com>
+Date:   Sun May 29 02:39:43 2016 +1000
+
+    quick refactor
+
+commit 5922a71a809de708c928ae5f7892e7fb31ee5476
+Author: Raj Adhikari <peez@localhost.com>
+Date:   Sun May 29 02:39:17 2016 +1000
+
+    added extra test
+
+commit cfe826aa42e1f4c083b5bd1d1147d7968bc14e58
+Author: Raj Adhikari <peez@localhost.com>
+Date:   Sun May 29 02:33:31 2016 +1000
+
+    moved package
+
+commit 7c03adab5f8de438b3c3343eae29e89474960a73
+Author: Raj Adhikari <peez@localhost.com>
+Date:   Sun May 29 02:32:47 2016 +1000
+
+    Added WeatherStations tests
+
+commit e33bc22634966e1d44a9dfd1be17518257350c2e
+Author: Raj Adhikari <peez@localhost.com>
+Date:   Sat May 28 23:49:45 2016 +1000
+
+    Added file downloader tests
+
+commit cfb31a662bf3385f96637d188077b361ced14a32
+Merge: 4e61836 27782dd
+Author: Raj Adhikari <peez@localhost.com>
+Date:   Sat May 28 23:14:35 2016 +1000
+
+    Merge remote-tracking branch 'origin/master'
+
+commit e714e0278eb45155f5393efbb20f610c911e7fee
+Merge: 14e25d7 27782dd
+Author: Adam Thalhammer <s3544305@student.rmit.edu.au>
+Date:   Sat May 28 21:58:57 2016 +1000
+
+    Merge branch 'master' of https://bitbucket.org/chocvanilla/weather-app
+
+commit 27782dd21427c92b8b339a128754ea442ca2517c
+Author: Rhys Van Orsouw <s3542173@student.rmit.edu.au>
+Date:   Sat May 28 21:51:12 2016 +1000
+
+    Second attempt at dynamic graphing of fields. More succesful, nearly there!
+
+commit 14e25d7f4b3f6f2ca5fbe7d3c9b95d74eb9689f2
+Author: Adam Thalhammer <s3544305@student.rmit.edu.au>
+Date:   Sat May 28 21:19:43 2016 +1000
+
+    formatting
+
+commit 4e618363a67e6f48cd6bf76b5ff242f714ea6ee1
+Author: Raj Adhikari <peez@localhost.com>
+Date:   Sat May 28 20:11:17 2016 +1000
+
+    refactor
+
+commit 59be73d3cdb15a1d52294bdf4fe78ef9abfa38f0
+Author: Raj Adhikari <peez@localhost.com>
+Date:   Sat May 28 19:08:34 2016 +1000
+
+    Propagate  exception when failing to save
+    
+    Exception -> IOException
+
+commit 36f9db2ded9ad804208325803f7ce22838ba840c
+Author: Raj Adhikari <peez@localhost.com>
+Date:   Sat May 28 19:05:26 2016 +1000
+
+    Propagate  exception when failing to save
+
+commit 3e5d2d9839a1650e82c0475bc479b22116d19286
+Author: Raj Adhikari <peez@localhost.com>
+Date:   Sat May 28 18:41:09 2016 +1000
+
+    Added AsyncLoader unit tests.
+
+commit 83552dc13a579d1f706ad61f183f01b4a3b9f186
+Author: Adam Thalhammer <s3544305@student.rmit.edu.au>
+Date:   Sat May 28 18:09:14 2016 +1000
+
+    fixed broken tests caused by misconfigured gson object
+
+commit 3220fd2c5726acf757f630f2ef24166f6b326d8b
+Author: Adam Thalhammer <s3544305@student.rmit.edu.au>
+Date:   Sat May 28 17:14:14 2016 +1000
+
+    fixed test build error (missing variable)
+
+commit e071f326f3f8e7497eed0b5cc0356d5efd3203ea
+Author: Adam Thalhammer <s3544305@student.rmit.edu.au>
+Date:   Sat May 28 17:12:34 2016 +1000
+
+    remove all checkboxes before adding more of them
+
+commit 789d0fe389ef8663c0d28a6db4126bacebf7aa86
+Author: Adam Thalhammer <s3544305@student.rmit.edu.au>
+Date:   Sat May 28 17:03:18 2016 +1000
+
+    code cleanup - and fixed layout issue with check boxes expanding detail frame's dimensions
+
+commit f86459f777af6a5de0305ea8f065fed3b3bad08d
+Author: Adam Thalhammer <s3544305@student.rmit.edu.au>
+Date:   Sat May 28 13:05:52 2016 +1000
+
+    fixed failing test - empty station was causing null pointer exception in test only
+
+commit 65cefcb4fc92d4ccaebbe6905beb462f6c2f9217
+Author: Adam Thalhammer <s3544305@student.rmit.edu.au>
+Date:   Sat May 28 12:42:28 2016 +1000
+
+    cache forecasts as well as observations
+
+commit 41f9c19f3576301781d4f95dc3f99aad06f1f5ee
+Author: Adam Thalhammer <s3544305@student.rmit.edu.au>
+Date:   Sat May 28 11:46:01 2016 +1000
+
+    proper cache implemented for weather observations
+
+commit 7a1e16b3a57470f1a28c6f3dba8a7e028a02830c
+Author: Adam Thalhammer <s3544305@student.rmit.edu.au>
+Date:   Sat May 28 10:50:28 2016 +1000
+
+    Introduce ObservationsProvider (implemented by BureauOfMeteorology) to enable proper caching of weather observations
+
+commit 1f8c4a5e94066ecb1fe0d8d07cf0e1e299ee6719
+Author: Adam Thalhammer <s3544305@student.rmit.edu.au>
+Date:   Sat May 28 10:08:52 2016 +1000
+
+    improve architecture: separate file downloader from bureau of meteorology and preparations to use proper cache
+
+commit 14b84009fac2d663a40247ac843e4ee9359d15e5
+Author: Adam Thalhammer <s3544305@student.rmit.edu.au>
+Date:   Fri May 27 23:53:57 2016 +1000
+
+    decouple station from download process
+
+commit e29d5eaa1e41e3dd5860e41d4cee8b43cd601f22
+Author: Adam Thalhammer <s3544305@student.rmit.edu.au>
+Date:   Fri May 27 23:14:03 2016 +1000
+
+    decouple weather station from async loader
+
+commit e5c72270d861b63c6b1e96f459af67d1284f0143
+Author: Adam Thalhammer <s3544305@student.rmit.edu.au>
+Date:   Fri May 27 22:57:41 2016 +1000
+
+    open forecast window on button press
+
+commit 85c12c31047d9a7bafe4cdbb29a3c8d3ec7588d6
+Merge: e6f9187 0533907
+Author: Rhys Van Orsouw <s3542173@student.rmit.edu.au>
+Date:   Fri May 27 22:55:47 2016 +1000
+
+    Merge remote-tracking branch 'origin/master'
+
+commit e6f9187ba9f6c8f52d1db2495eef851262b5eb56
+Author: Rhys Van Orsouw <s3542173@student.rmit.edu.au>
+Date:   Fri May 27 22:55:28 2016 +1000
+
+    First attempt at dynamic graphing of fields.
+
+commit 0533907461afeceb58fa6aec553dcd6b8b2e010a
+Author: Adam Thalhammer <s3544305@student.rmit.edu.au>
+Date:   Fri May 27 22:16:08 2016 +1000
+
+    amended weather station files
+
+commit 88307b304fd890ad6fd572933132333e4ef68f81
+Author: Adam Thalhammer <s3544305@student.rmit.edu.au>
+Date:   Fri May 27 20:52:56 2016 +1000
+
+    add current weather to town panel
+
+commit 7f13d80b70c35078a8e5f9a84360e501c151ffce
+Merge: fd671cc 5e11d44
+Author: Rhys Van Orsouw <s3542173@student.rmit.edu.au>
+Date:   Fri May 27 20:20:45 2016 +1000
+
+    Merge remote-tracking branch 'origin/master'
+
+commit fd671ccd5baf5b19446660b4e842a88a0d267b0d
+Author: Rhys Van Orsouw <s3542173@student.rmit.edu.au>
+Date:   Fri May 27 20:20:11 2016 +1000
+
+    Started adapting buttons and method calls to the layout
+
+commit 5e11d44a011c5e9fd68a4429347c8d4f8b100c95
+Author: Adam Thalhammer <s3544305@student.rmit.edu.au>
+Date:   Thu May 26 23:03:34 2016 +1000
+
+    download forecast from ForecastIO; add latitude and longitude to WeatherStation; load api key from resources.
+
+commit fbf7c068f7770289442f7eca2f09461da4ea72bf
+Author: Adam Thalhammer <s3544305@student.rmit.edu.au>
+Date:   Thu May 26 15:57:52 2016 +1000
+
+    calculate station code char rather than pulling from json
+
+commit aace51f227175ec631389bbdb90eef366a34d0af
+Author: Adam Thalhammer <s3544305@student.rmit.edu.au>
+Date:   Thu May 26 15:57:06 2016 +1000
+
+    add lat and long coordinates to weather stations json file
+
+commit e5941ff6d841f1a7a5b3cdee0439f9022fd534df
+Merge: 10a81a0 c78bcd5
+Author: Kyle Glover <s3539870@student.rmit.edu.au>
+Date:   Tue May 17 18:13:49 2016 +1000
+
+    Merge branch 'master' of https://bitbucket.org/chocvanilla/weather-app
+
+commit 10a81a0a8a425eb7ad17a5456a1a86d84bb1616b
+Author: Kyle Glover <s3539870@student.rmit.edu.au>
+Date:   Tue May 17 18:13:02 2016 +1000
+
+    Added minimum window size
+
+commit c78bcd56359d6cb2dad4590ffc54f1ad768814e9
+Author: Adam Thalhammer <s3544305@student.rmit.edu.au>
+Date:   Tue May 17 17:37:02 2016 +1000
+
+    logback config for tests
+
+commit ac596c3eaa1030ffb5328688b89177c994695471
+Author: Adam Thalhammer <s3544305@student.rmit.edu.au>
+Date:   Tue May 17 17:35:43 2016 +1000
+
+    logback config for tests
+
+commit e5906bd7fe4784084b03bfc6a8077cb3a3fe6b16
+Author: Adam Thalhammer <s3544305@student.rmit.edu.au>
+Date:   Tue May 17 17:33:18 2016 +1000
+
+    added some tests
+
+commit 8d88c1d015821c9072ff4ff9194554a2b000a0d1
+Author: Adam Thalhammer <s3544305@student.rmit.edu.au>
+Date:   Tue May 17 17:05:10 2016 +1000
+
+    added some tests
+
+commit 36a39baf642a227d2d0b802f6aad6fa15cd03c90
+Author: Adam Thalhammer <s3544305@student.rmit.edu.au>
+Date:   Tue May 17 16:34:50 2016 +1000
+
+    added more logging
+
+commit 5accc466f62431e12fc9158fe54dbffa6b55764a
+Author: Adam Thalhammer <s3544305@student.rmit.edu.au>
+Date:   Tue May 17 16:22:39 2016 +1000
+
+    added more logging
+
+commit 72b84c18eb71ad577bb5e605cb664707b4b736db
+Author: Adam Thalhammer <s3544305@student.rmit.edu.au>
+Date:   Tue May 17 12:35:08 2016 +1000
+
+    logging
+
+commit 7582a1fc802626c13ec945276fccdf30dc037519
+Author: Adam Thalhammer <s3544305@student.rmit.edu.au>
+Date:   Tue May 17 12:23:22 2016 +1000
+
+    ignore log files
+
+commit 2cae06aa3a23f9ad9a959937e72910183e0ea704
+Author: Adam Thalhammer <s3544305@student.rmit.edu.au>
+Date:   Tue May 17 12:22:28 2016 +1000
+
+    added initial log statements and configuration
+
+commit e72aa509f2bd2252dc81466239e8b20343dc16e3
+Author: Adam Thalhammer <s3544305@student.rmit.edu.au>
+Date:   Tue May 17 11:40:14 2016 +1000
+
+    add dependency to logback logging framework
+
+commit 620037f70fdde829adac9936c8bfc71d096aab5a
+Author: Adam Thalhammer <s3544305@student.rmit.edu.au>
+Date:   Tue May 17 10:50:05 2016 +1000
+
+    removed dupe weather station from test resources as well
+
+commit d1bd7933dc2ab35aa047822a0ebe8afc753e82fa
+Author: Adam Thalhammer <s3544305@student.rmit.edu.au>
+Date:   Tue May 17 10:47:16 2016 +1000
+
+    made weather observation more flexible: instead of forcing all values to be present, each observation can supply a list of available fields. needed for forecast io integration
+
+commit a525904e596ffad5e331b4d6b21acacfe9fe26c6
+Author: Rhys Van Orsouw <s3542173@student.rmit.edu.au>
+Date:   Thu May 5 17:48:59 2016 +1000
+
+    Deleted duplicate weather station
+
+commit a67fc96c636680200298725543b30e5fd0383455
+Merge: b947758 e1f58fe
+Author: Adam Thalhammer <s3544305@student.rmit.edu.au>
+Date:   Thu May 5 17:29:52 2016 +1000
+
+    Merge remote-tracking branch 'origin/master'
+
+commit e1f58fe81eeaa8085ccb9f324f10712f1959054b
+Author: Rhys Van Orsouw <s3542173@student.rmit.edu.au>
+Date:   Thu May 5 17:29:35 2016 +1000
+
+    Re shuffled GUI, swapped to GridBag layout. Added new panel for Town focus
+
+commit b947758d72724c89106ec6ce0109209cd6f8f18f
+Author: Adam Thalhammer <s3544305@student.rmit.edu.au>
+Date:   Thu May 5 16:55:37 2016 +1000
+
+    added forecast package and restructured
+
+commit 1832c736be546b83e25f2f6fe17871921842c39d
+Author: Adam Thalhammer <s3544305@student.rmit.edu.au>
+Date:   Thu May 5 16:29:25 2016 +1000
+
+    exclude api keys
+
+commit 1c5f09429a81223cfb1b32926cf2315e3d0d7c8b
+Author: Adam Thalhammer <s3544305@student.rmit.edu.au>
+Date:   Thu May 5 16:14:32 2016 +1000
+
+    exclude api key
+
+commit 52836d492c03511116b92a7007d390671a0df3d8
+Author: Rhys Van Orsouw <s3542173@student.rmit.edu.au>
+Date:   Tue May 3 18:20:37 2016 +1000
+
+    Added Zoom Capability
+
+commit 4884a990382ca911874d3fc9289817b132781a16
+Merge: 0cc3cd5 711cfd8
+Author: Adam Thalhammer <s3544305@student.rmit.edu.au>
+Date:   Mon May 2 19:16:14 2016 +1000
+
+    Merge remote-tracking branch 'origin/master'
+
+commit 0cc3cd5726f5f48267cfd95a88b7a67190ce4bba
+Author: Adam Thalhammer <s3544305@student.rmit.edu.au>
+Date:   Mon May 2 19:15:24 2016 +1000
+
+    add assertj-swing for acceptence testing
+
+commit 711cfd8eeadc9e144a0ea34ebe1f06329c8c8cdc
+Author: Adam Thalhammer <s3544305@student.rmit.edu.au>
+Date:   Mon May 2 10:05:53 2016 +1000
+
+    fixed file permissions for gradlew
+
+commit d43dc240704244c8fbcc3e5d34dbca8a0fd61e47
+Author: Adam Thalhammer <s3544305@student.rmit.edu.au>
+Date:   Sat Apr 30 17:01:34 2016 +1000
+
+    remove byte order mark
+
+commit 14955f5a0900027cfac71a38d640d3b7c89fdcac
+Author: Adam Thalhammer <s3544305@student.rmit.edu.au>
+Date:   Sat Apr 30 16:52:56 2016 +1000
+
+    fixed location of datahelpers
+
+commit b5206f2a68389a05b948146e42f0c9384ad9e7ee
+Author: Adam Thalhammer <s3544305@student.rmit.edu.au>
+Date:   Sat Apr 30 16:27:58 2016 +1000
+
+    release-zip gradle task no longer needed, use shadowJar and distShadowZip/distShadowTar instead.
+
+commit 0c8e19a870fee8c307e19b31b5ce4d4096b713cc
+Author: Adam Thalhammer <s3544305@student.rmit.edu.au>
+Date:   Sat Apr 30 16:26:29 2016 +1000
+
+    added missing catch clause
+
+commit 61344e75262d7cbdb7770e50aca624c73394b91a
+Author: Adam Thalhammer <s3544305@student.rmit.edu.au>
+Date:   Sat Apr 30 16:23:37 2016 +1000
+
+    fixed loading of favourites to allow for missing favourites file
+
+commit aca6097d54c80e23d9e8c98bbf2e852be50047ca
+Author: Adam Thalhammer <s3544305@student.rmit.edu.au>
+Date:   Sat Apr 30 15:58:09 2016 +1000
+
+    cleanup
+
+commit 08d52451a23a41272e1fbe0517ccf676bacdae58
+Author: Adam Thalhammer <s3544305@student.rmit.edu.au>
+Date:   Sat Apr 30 14:49:57 2016 +1000
+
+    deserialize timestamp properly; simplify code; handle missing weather stations properly
+
+commit b8d0907e447100a2bf134400bb625f34b5cd745d
+Author: Adam Thalhammer <s3544305@student.rmit.edu.au>
+Date:   Sat Apr 30 13:48:17 2016 +1000
+
+    use interface instead of class
+
+commit 9cab52119fa579a716bb24604ad0c0adeb6b37ac
+Author: Adam Thalhammer <s3544305@student.rmit.edu.au>
+Date:   Sat Apr 30 13:09:39 2016 +1000
+
+    use interface instead of class
+
+commit c232b4235b3d7e8884b950bd214cd8f861c9d2ea
+Author: Adam Thalhammer <s3544305@student.rmit.edu.au>
+Date:   Sat Apr 30 13:06:07 2016 +1000
+
+    use interface instead of class, move comparison of stations to station class
+
+commit 3ca4d47c98c57f07fd9155ebac18f54d7bc4cb03
+Author: Adam Thalhammer <s3544305@student.rmit.edu.au>
+Date:   Sat Apr 30 12:49:48 2016 +1000
+
+    fixed typo in wind speed getter, relocate error handling to gui
+
+commit 7e937b4daacf7fbb99c4fd09949aa6e8cd79e7c7
+Author: Adam Thalhammer <s3544305@student.rmit.edu.au>
+Date:   Sat Apr 30 12:37:29 2016 +1000
+
+    simplify weather observation table formatting
+
+commit f40bfb43051867bcf5c7f30033d9f600c7de3099
+Author: Adam Thalhammer <s3544305@student.rmit.edu.au>
+Date:   Sat Apr 30 12:32:54 2016 +1000
+
+    restructured
+
+commit e8ecd233a9ee4b73b59e0cebf3999ab5226a9a09
+Author: Adam Thalhammer <s3544305@student.rmit.edu.au>
+Date:   Sat Apr 30 12:28:29 2016 +1000
+
+    Simplify deserialization of possibly missing floats. further cleanup
+
+commit afc6c19cb1886db61eeb2e1d2ce82552c1a7cc63
+Author: Adam Thalhammer <s3544305@student.rmit.edu.au>
+Date:   Sat Apr 30 11:43:15 2016 +1000
+
+    cleanup
+
+commit 91d56172503ed9b30585162e0958fc3509913547
+Author: Adam Thalhammer <s3544305@student.rmit.edu.au>
+Date:   Sat Apr 30 11:39:21 2016 +1000
+
+    reformat
+
+commit 5bc0e6afec48f6b8b4dd38d8fc24e3e3b2fbcbc8
+Author: Adam Thalhammer <s3544305@student.rmit.edu.au>
+Date:   Sat Apr 30 11:37:16 2016 +1000
+
+    moving towards a better architecture: interface segregation of WeatherStation and WeatherObservation in anticipation of forecast.io
+
+commit f51efd204814bbb1e5d9ed109a63ae4f46883f61
+Author: Adam Thalhammer <s3544305@student.rmit.edu.au>
+Date:   Fri Apr 29 18:41:02 2016 +1000
+
+    moving towards a better architecture: simplified favourites handling,
+    started to separate out io functions, started hiding classes behind
+    interfaces in anticipation of forecast.io. also added dependency to
+    shadowJar, a working fatJar implementation.
+
+commit 2d653a9481989c744ed5bdf4c303a9c1301f6857
+Author: Adam Thalhammer <s3544305@student.rmit.edu.au>
+Date:   Fri Apr 29 11:07:38 2016 +1000
+
+    rename WeatherStation -> BomWeatherStation
+    moved weather_stations.json to resource directories
+
+commit c5fb7653d94d8de176c2d71a707d7a20c0c99475
+Author: Adam Thalhammer <s3544305@student.rmit.edu.au>
+Date:   Thu Apr 28 13:39:55 2016 +1000
+
+    do not attempt to create gui during tests on headless machines (e.g. running on our bamboo server)
+
+commit b60bf89b5c2f1a240f50d0f934ed0a40ae8eb787
+Author: Adam Thalhammer <s3544305@student.rmit.edu.au>
+Date:   Thu Apr 28 13:24:51 2016 +1000
+
+    makeWindow test causes other tests to fail; disable it for now (concurrent access to downloaded observations file causes IOException)
+
+commit 082c51e63b4c1a6377642b090f2a911a001cb84e
+Author: Adam Thalhammer <s3544305@student.rmit.edu.au>
+Date:   Thu Apr 28 13:14:16 2016 +1000
+
+    move releases to build directory; add gradle wrapper for continuous integration using bamboo
+
+commit d9bb108e65f16253e25f89c01e4e9d1ed0be8183
+Author: Raj Adhikari <peez@localhost.com>
+Date:   Tue Apr 26 22:58:37 2016 +1000
+
+    Cleaned up a little
+
+commit eca43a8fa310d64d26f17313ee03afde611a631b
+Author: Raj Adhikari <peez@localhost.com>
+Date:   Fri Apr 22 22:41:42 2016 +1000
+
+    Fixed team members leaking across pages
+
+commit a7749798635e38e766951bdfe419bd5fa3748363
+Author: Adam Thalhammer <s3544305@student.rmit.edu.au>
+Date:   Fri Apr 22 22:38:30 2016 +1000
+
+    added instructions for repository access
+
+commit 89c38b9a31e79f9cc501aa5c514be56e5187f5a6
+Author: Raj Adhikari <peez@localhost.com>
+Date:   Fri Apr 22 22:13:19 2016 +1000
+
+    Added High level components diagram
+    added resources subdir to reduce cluttering
+
+commit ceb552d521a83aa1ae83ce84e6d3f29957bf0812
+Author: Adam Thalhammer <s3544305@student.rmit.edu.au>
+Date:   Fri Apr 22 21:55:44 2016 +1000
+
+    added javadoc, fixed javadoc issue in Favourites class comment
+
+commit 75b3c9f0423949323830f957d50b347725a90de6
+Author: Raj Adhikari <peez@localhost.com>
+Date:   Fri Apr 22 21:35:18 2016 +1000
+
+    Added log files.
+
+commit ba675e8ed2b72b248c2d69dcca35d055f73e7c16
+Author: Raj Adhikari <peez@localhost.com>
+Date:   Fri Apr 22 21:09:02 2016 +1000
+
+    added user manual
+
+commit 1a484e6e3b924a1acdbf8a99689b56b1a3aef856
+Author: Raj Adhikari <peez@localhost.com>
+Date:   Fri Apr 22 21:03:26 2016 +1000
+
+    added latest release.
+
+commit 1f423d0300add125fe337812044cd1dab8331161
+Author: Raj Adhikari <peez@localhost.com>
+Date:   Fri Apr 22 21:01:23 2016 +1000
+
+    moved releases to root
+
+commit 7d3f62e480d8ca09ef300b7d7d1bb78c6ad5270e
+Author: Raj Adhikari <peez@localhost.com>
+Date:   Fri Apr 22 21:00:11 2016 +1000
+
+    updated build.gradle: added new gradle tasks to easily assemble releases;
+    recovered gradle script for linux;
+    added install pictures for user manual
+
+commit 8094dd7dd2ed00b0e90da09d90daa096361dfdfc
+Merge: 76bb4c2 6d2e508
+Author: Raj Adhikari <peez@localhost.com>
+Date:   Fri Apr 22 20:00:54 2016 +1000
+
+    Merge remote-tracking branch 'origin/master'
+
+commit 76bb4c20fd85e3c8410d80d259c75936edddeef3
+Author: Raj Adhikari <peez@localhost.com>
+Date:   Fri Apr 22 20:00:34 2016 +1000
+
+    added a fatJar task
+
+commit 6d2e50802cc1af40cc68db5c6113c3df690af780
+Author: Adam Thalhammer <s3544305@student.rmit.edu.au>
+Date:   Fri Apr 22 09:10:46 2016 +0000
+
+    README.md edited online with Bitbucket
+
+commit 99c68cad80f8d3072850e6d96c4102a161e1bc62
+Author: Raj Adhikari <peez@localhost.com>
+Date:   Fri Apr 22 19:06:32 2016 +1000
+
+    Added bitbucker URL
+
+commit 3fba4df12bcb5f78554749aa18f3a49849747ed4
+Author: Raj Adhikari <peez@localhost.com>
+Date:   Fri Apr 22 19:02:24 2016 +1000
+
+    Updated Installation notes; reference to user manual in Usage section
+
+commit 161538b284a525394a67cf61859bb6b5c5103a3a
+Author: Kyle Glover <kyle.glover524@gmail.com>
+Date:   Fri Apr 22 16:27:50 2016 +1000
+
+    Moved diagrams to docs folder
+
+commit 0276806a0cebbe37cb426a9ddfe94879f499bf13
+Author: Raj Adhikari <peez@localhost.com>
+Date:   Fri Apr 22 16:20:41 2016 +1000
+
+    Added Class Diagram
+
+commit 03bae48f941acebe3a6c01f09852f7baaae47fb3
+Author: Rhys Van Orsouw <s3542173@student.rmit.edu.au>
+Date:   Fri Apr 22 15:40:13 2016 +1000
+
+    Added Javadocs for DetailWindow.java
+
+commit 3bbc7498c3cf6cacadcad47bbed477be7e223c0c
+Author: Rhys Van Orsouw <s3542173@student.rmit.edu.au>
+Date:   Fri Apr 22 15:03:27 2016 +1000
+
+    Quick code clean up
+
+commit 8a4834e5e10a1cc9650602ec967159d31ad20816
+Author: Rhys Van Orsouw <s3542173@student.rmit.edu.au>
+Date:   Fri Apr 22 15:03:09 2016 +1000
+
+    Quick code clean up
+
+commit d63befaa926f0b21b9e405c0bb7220cbd28c37be
+Author: Raj Adhikari <peez@localhost.com>
+Date:   Fri Apr 22 14:35:40 2016 +1000
+
+    Added troubleshooting section
+
+commit d58a59f0f1ae5563bced815fbb7c14c937691301
+Merge: 711de00 82b9302
+Author: Raj Adhikari <peez@localhost.com>
+Date:   Fri Apr 22 14:23:58 2016 +1000
+
+    Merge remote-tracking branch 'origin/master'
+
+commit 711de00217cc56ff3fda4a3aa484c3dfa810410d
+Author: Raj Adhikari <peez@localhost.com>
+Date:   Fri Apr 22 14:20:47 2016 +1000
+
+    Added error message dialogs; moved ObservationDescription to data package;
+
+commit 82b9302c9d7b2da01b249c801cb33839d9469f78
+Author: Rhys Van Orsouw <s3542173@student.rmit.edu.au>
+Date:   Fri Apr 22 13:55:24 2016 +1000
+
+    Quick code clean up
+
+commit 6b3ca3f001c18e9e3c11123ac28d720c289fd3b6
+Author: Raj Adhikari <peez@localhost.com>
+Date:   Fri Apr 22 13:19:45 2016 +1000
+
+    White space and stuff.
+
+commit 17fb0af0013df1cf2ebee6963558121928a4f266
+Author: Raj Adhikari <peez@localhost.com>
+Date:   Fri Apr 22 13:17:29 2016 +1000
+
+    Accidentally a word
+
+commit f26b0f5c6e3589274a8f4a93ca7a4b34c468ea87
+Author: Raj Adhikari <peez@localhost.com>
+Date:   Fri Apr 22 13:14:23 2016 +1000
+
+    Removed broken link
+
+commit d2926afdfe9f096d3c9e24cbfe0cdd43a642320d
+Merge: 762dcaa 784c292
+Author: Raj Adhikari <peez@localhost.com>
+Date:   Fri Apr 22 13:09:07 2016 +1000
+
+    Merge remote-tracking branch 'origin/master'
+
+commit 762dcaa4a1ff2090fc1919f0dec278d772fba466
+Author: Raj Adhikari <peez@localhost.com>
+Date:   Fri Apr 22 13:08:51 2016 +1000
+
+    Added updating weather stations section
+
+commit 784c292572c1e14581b514f502e53c0635478f32
+Author: Rhys Van Orsouw <s3542173@student.rmit.edu.au>
+Date:   Fri Apr 22 13:05:24 2016 +1000
+
+    Added a few small test cases. Added to HOWTO.md
+
+commit 5a286505563de85414248d10794aabbed9942c4f
+Merge: 89fcd74 d90bdaf
+Author: Rhys Van Orsouw <s3542173@student.rmit.edu.au>
+Date:   Fri Apr 22 12:46:59 2016 +1000
+
+    Merge remote-tracking branch 'origin/master'
+    
+    Conflicts:
+    	README.md
+
+commit d90bdaf94cf12c176a388004ba59dfefcd1d04bc
+Author: Rhys  Van Orsouw <s3542173@student.rmit.edu.au>
+Date:   Fri Apr 22 02:45:47 2016 +0000
+
+    README.md edited online with Bitbucket
+
+commit a36f616c097baf2cfaa24872b4af26bfb88bee84
+Author: Rhys  Van Orsouw <s3542173@student.rmit.edu.au>
+Date:   Fri Apr 22 02:44:45 2016 +0000
+
+    README.md edited online with Bitbucket
+
+commit 89fcd74335715067616500acc00d2449b679a7ed
+Merge: 6cf9af6 e43e4bc
+Author: Rhys Van Orsouw <s3542173@student.rmit.edu.au>
+Date:   Fri Apr 22 12:39:29 2016 +1000
+
+    Merge remote-tracking branch 'origin/master'
+
+commit 6cf9af66443766a680e6609056fa2d2074aa303a
+Author: Rhys Van Orsouw <s3542173@student.rmit.edu.au>
+Date:   Fri Apr 22 12:38:42 2016 +1000
+
+    Edited README.md
+
+commit e43e4bc07c38f1712ef4c62e7fc813fa1000a982
+Author: Raj Adhikari <peez@localhost.com>
+Date:   Fri Apr 22 12:33:37 2016 +1000
+
+    added some white space to display list properly
+
+commit 164f6f30c95e9b777ea8a82bc113c0d469778768
+Author: Raj Adhikari <peez@localhost.com>
+Date:   Fri Apr 22 12:32:10 2016 +1000
+
+    Changed ordered list in hopes of not breaking numbers when displayed on bitbucket
+
+commit 67ab6f07399bbf49ad25c7906d4086d356848046
+Author: Raj Adhikari <peez@localhost.com>
+Date:   Fri Apr 22 12:28:23 2016 +1000
+
+    Added whitespace before and after lists
+
+commit 37d2d50ca469b37cc774bd27de627cb9e34bae01
+Merge: f167442 ba7769a
+Author: Raj Adhikari <peez@localhost.com>
+Date:   Fri Apr 22 12:25:33 2016 +1000
+
+    Merge remote-tracking branch 'origin/master'
+
+commit ba7769a24fdf37be0c8e95ceaf3769595b822c3c
+Author: Rhys Van Orsouw <s3542173@student.rmit.edu.au>
+Date:   Fri Apr 22 12:24:00 2016 +1000
+
+    Added a few small test cases. Added to HOWTO.md
+
+commit f1674423ebc38744235e74b950e1c336c4d28a65
+Author: Raj Adhikari <peez@localhost.com>
+Date:   Fri Apr 22 12:23:50 2016 +1000
+
+    Added User Interface section in HOWTO with pictures.
+
+commit d97346cfc059afb62de7946789d4e00d2f7393b1
+Author: Adam Thalhammer <s3544305@student.rmit.edu.au>
+Date:   Thu Apr 21 23:09:53 2016 +1000
+
+    fixed bug where non-numeric values in json observation fields caused a failure to load the detail view
+
+commit 5ec740b2fc6337725f72b817c672565ed6bfbcd1
+Merge: d2fe2cb 49dd61c
+Author: Raj Adhikari <peez@localhost.com>
+Date:   Thu Apr 21 22:43:53 2016 +1000
+
+    Merge remote-tracking branch 'origin/master'
+
+commit d2fe2cb7be8b831bdb776de0a92681bf6276305e
+Author: Raj Adhikari <peez@localhost.com>
+Date:   Thu Apr 21 22:41:57 2016 +1000
+
+    HOWTO.md intial commit.
+
+commit 49dd61c1551bd7c5ab2d8f44a2962f96730b0979
+Author: Adam Thalhammer <s3544305@student.rmit.edu.au>
+Date:   Thu Apr 21 22:00:53 2016 +1000
+
+    removed copy of weather stations file
+
+commit a5452c2dbd5b226ed3a3a9afd8269b2f489a44ad
+Merge: 022d9a3 34ebfc8
+Author: Raj Adhikari <peez@localhost.com>
+Date:   Thu Apr 21 21:56:35 2016 +1000
+
+    Merge remote-tracking branch 'origin/tabs'
+    
+    # Conflicts:
+    #	src/main/java/org/chocvanilla/weatherapp/gui/DetailWindow.java
+
+commit 022d9a39930932833554252dbc463aefdab0e523
+Author: Adam Thalhammer <s3544305@student.rmit.edu.au>
+Date:   Thu Mar 24 14:55:47 2016 +1100
+
+    Load weather stations from weather_stations.json; test; added hamcrest-all instead of hamcrest-core for better testing
+
+commit 34ebfc8055cc5e8d513167647b89b45fc23bd2f8
+Author: Raj Adhikari <peez@localhost.com>
+Date:   Thu Apr 21 19:45:13 2016 +1000
+
+    Moved ObservationHistory to more appropriate location
+
+commit 09f7079c94ed020d48121656ada6f8ea992b7e8b
+Author: Raj Adhikari <peez@localhost.com>
+Date:   Thu Apr 21 19:25:05 2016 +1000
+
+    Set preferred width to "Time" column
+
+commit e49d08624d459f34ed71d1395223be82950d46c2
+Author: Adam Thalhammer <s3544305@student.rmit.edu.au>
+Date:   Thu Apr 21 17:58:09 2016 +1000
+
+    cleanup
+
+commit 6b2d0db5d543a2030b5e7f25e911832f85fd66b6
+Author: Adam Thalhammer <s3544305@student.rmit.edu.au>
+Date:   Thu Apr 21 17:55:10 2016 +1000
+
+    clarified icon buttons
+
+commit 889b684418fbe76ff911ad45823b6897164599cf
+Author: Adam Thalhammer <s3544305@student.rmit.edu.au>
+Date:   Thu Apr 21 17:38:54 2016 +1000
+
+    remove star images, not needed
+
+commit 23564c9e0ef508ca4500780b90baefb3f73b6600
+Author: Raj Adhikari <peez@localhost.com>
+Date:   Thu Apr 21 18:12:59 2016 +1000
+
+    Added minimum window size to prevent chart and table from clipping.
+
+commit 9b48cbf710f3a5fe8f89611f184c69e5f207be5c
+Author: Raj Adhikari <peez@localhost.com>
+Date:   Thu Apr 21 18:04:19 2016 +1000
+
+    Fixed bug where tables would draw.
+
+commit fd8611f8e082fed52f876521d58ff0a971540269
+Author: Adam Thalhammer <s3544305@student.rmit.edu.au>
+Date:   Thu Apr 21 17:58:09 2016 +1000
+
+    cleanup
+
+commit f9b1d4d257c3baeaf38c3dab7e9cdea6b7609459
+Merge: 839c992 2f8209d
+Author: Raj Adhikari <peez@localhost.com>
+Date:   Thu Apr 21 17:57:24 2016 +1000
+
+    Merge remote-tracking branch 'origin/tabs' into tabs
+    
+    # Conflicts:
+    #	src/main/java/org/chocvanilla/weatherapp/gui/DetailWindow.java
+
+commit 839c9920c717bc8e6895354df3a1338ae8ee04cd
+Author: Raj Adhikari <peez@localhost.com>
+Date:   Thu Apr 21 17:56:38 2016 +1000
+
+    Something weird happened. Some kinda merge I think.
+
+commit 10b2180863ff15e30a4f0e39ac1ab0d056073a75
+Author: Adam Thalhammer <s3544305@student.rmit.edu.au>
+Date:   Thu Apr 21 17:55:10 2016 +1000
+
+    clarified icon buttons
+
+commit 7149e06209e9c3a0a29abdb896701a538843bc7d
+Author: Raj Adhikari <peez@localhost.com>
+Date:   Thu Apr 21 17:37:27 2016 +1000
+
+    Added tables and Tabs
+
+commit 14c9f80ef8676721abaeb3f6faa7ff0a233ca1fb
+Author: Adam Thalhammer <s3544305@student.rmit.edu.au>
+Date:   Thu Apr 21 17:38:54 2016 +1000
+
+    remove star images, not needed
+
+commit 2f8209d59b3807f3a0fa37e90dfbe61820cf2cfc
+Author: Raj Adhikari <peez@localhost.com>
+Date:   Thu Apr 21 17:37:27 2016 +1000
+
+    Added tables and Tabs
+
+commit 697ebc0e5d7253489fcc64cf1ca0aac42ed6b3b4
+Author: Adam Thalhammer <s3544305@student.rmit.edu.au>
+Date:   Thu Apr 21 17:34:06 2016 +1000
+
+    delete user-specific files from source control
+
+commit c4018c8023949c2ae4201a8c148deeb26c2ec427
+Author: Adam Thalhammer <s3544305@student.rmit.edu.au>
+Date:   Thu Apr 21 17:33:09 2016 +1000
+
+    delete user-specific files from source control
+
+commit a3ef8af2cee311c41ca5bf22ba9ad6bf1ad5b5c2
+Author: Adam Thalhammer <s3544305@student.rmit.edu.au>
+Date:   Thu Apr 21 17:30:56 2016 +1000
+
+    force UTF-8 to prevent mangling of refresh button symbol
+
+commit d2fbf706078f8053073551f7a63546b4be89fc22
+Author: Adam Thalhammer <s3544305@student.rmit.edu.au>
+Date:   Thu Apr 21 17:23:37 2016 +1000
+
+    cache (experimental)
+
+commit da17739a8403022fbe08b731a5652600dbcacc9e
+Author: Adam Thalhammer <s3544305@student.rmit.edu.au>
+Date:   Thu Apr 21 17:23:04 2016 +1000
+
+    remove observations
+
+commit 44f8033feb45bedaa55ffcb6f4808bc8fb2dba55
+Author: Adam Thalhammer <s3544305@student.rmit.edu.au>
+Date:   Thu Apr 21 07:17:46 2016 +0000
+
+    README.md edited online with Bitbucket
+
+commit 73c67f979f0ed7c6e4fe66181cb0b3f60877f313
+Author: Kyle Glover <s3539870@student.rmit.edu.au>
+Date:   Thu Apr 21 17:15:17 2016 +1000
+
+    Corrected formatting... again
+
+commit 9557ee098178ba9c1e97e7177bb2729e84586519
+Author: Kyle Glover <s3539870@student.rmit.edu.au>
+Date:   Thu Apr 21 17:13:24 2016 +1000
+
+    Corrected formatting of README
+
+commit 36e3415e1b9553635608cb44dc7daa781fb697aa
+Merge: ba366bf 6c245c0
+Author: Kyle Glover <s3539870@student.rmit.edu.au>
+Date:   Thu Apr 21 17:08:54 2016 +1000
+
+    Merge branch 'master' of https://bitbucket.org/chocvanilla/weather-app
+
+commit ba366bfd51d0d0debd2d59e9b418a0b43198aa83
+Author: Kyle Glover <s3539870@student.rmit.edu.au>
+Date:   Thu Apr 21 17:08:19 2016 +1000
+
+    Configured contributions in the README.md
+
+commit 6c245c0f8b7910ad0465d9de7ee684a89eca272c
+Author: Rhys Van Orsouw <s3542173@student.rmit.edu.au>
+Date:   Thu Apr 21 17:02:55 2016 +1000
+
+    Removed Zoom and pop menu capability on chart.
+
+commit 40062816dd6893b12f512c7db12c4fa0f1d8e2a3
+Author: Rhys Van Orsouw <s3542173@student.rmit.edu.au>
+Date:   Thu Apr 21 16:14:43 2016 +1000
+
+    Refactored file locations and saving.
+
+commit 4f3543a4a7a31f5b82a2f0222855922b4e153214
+Author: Adam Thalhammer <s3544305@student.rmit.edu.au>
+Date:   Thu Apr 21 15:48:50 2016 +1000
+
+    refactor & reformat
+
+commit 62663089c502da026b3a2902d62d1091e54868c7
+Merge: aaa3e7e 06448e9
+Author: Adam Thalhammer <s3544305@student.rmit.edu.au>
+Date:   Thu Apr 21 15:47:32 2016 +1000
+
+    Merge remote-tracking branch 'origin/master'
+
+commit 06448e958a111b73b8b0be522526d974cd62fbf4
+Author: Rhys Van Orsouw <s3542173@student.rmit.edu.au>
+Date:   Thu Apr 21 15:46:18 2016 +1000
+
+    Refactored file locations and saving.
+
+commit aaa3e7ec570bcc4dd396fa9066ac75b3851efc4d
+Author: Adam Thalhammer <s3544305@student.rmit.edu.au>
+Date:   Thu Apr 21 15:39:34 2016 +1000
+
+    refactor
+
+commit f52035ee2956819b21b0a6ecece38af10f66fea0
+Merge: af36999 ee946c5
+Author: Adam Thalhammer <s3544305@student.rmit.edu.au>
+Date:   Thu Apr 21 15:19:33 2016 +1000
+
+    Merge branch 'gui'
+
+commit ee946c5aa8d883fd7679ca3b8edd5881671d8f07
+Author: Adam Thalhammer <s3544305@student.rmit.edu.au>
+Date:   Thu Apr 21 15:18:32 2016 +1000
+
+    added refresh button
+
+commit af369994f1f37138a24603d5a326a792159344a3
+Merge: 9437b43 96744e8
+Author: Kyle Glover <kyle.glover524@gmail.com>
+Date:   Thu Apr 21 15:12:49 2016 +1000
+
+    Merged gui into master
+
+commit 96744e82a0e494d608317aebd8219bbe4960715d
+Merge: a5e6321 ef5fa4f
+Author: Kyle Glover <s3539870@student.rmit.edu.au>
+Date:   Thu Apr 21 15:08:39 2016 +1000
+
+    Merge branch 'gui' of https://bitbucket.org/chocvanilla/weather-app into gui
+
+commit a5e6321ec6c16a5f01ebbcd5dbe94e269270b36a
+Author: Kyle Glover <s3539870@student.rmit.edu.au>
+Date:   Thu Apr 21 15:06:57 2016 +1000
+
+    Modified README with contributors + deleted contributors.txt
+
+commit ef5fa4fa349421f29ac5beae22b63e3095ac15fd
+Author: Rhys Van Orsouw <s3542173@student.rmit.edu.au>
+Date:   Thu Apr 21 14:57:26 2016 +1000
+
+    Changed Button labels to Constants for code Clarity
+
+commit 04ddcb213849c5df7b6bd6ab49889f1c931ac41e
+Author: Adam Thalhammer <s3544305@student.rmit.edu.au>
+Date:   Thu Apr 21 14:51:52 2016 +1000
+
+    update favourite buttons when new favourites are added/removed
+
+commit a0cf3b8fb3b5a56e0b0d30ab090f5db2109c351d
+Author: Rhys Van Orsouw <s3542173@student.rmit.edu.au>
+Date:   Thu Apr 21 14:32:11 2016 +1000
+
+    Added a button to add/remove from the favourites list.
+
+commit 46c7384e18839744fb73c9c6d3ed61986f36f63a
+Author: Adam Thalhammer <s3544305@student.rmit.edu.au>
+Date:   Thu Apr 21 14:06:57 2016 +1000
+
+    fixed bug where favourites were saved on startup rather than when the application exits
+
+commit 838585aea0dff8f44b660a79202ea24125d90357
+Author: Adam Thalhammer <s3544305@student.rmit.edu.au>
+Date:   Thu Apr 21 12:51:47 2016 +1000
+
+    extract mapping of observations to labels to new class
+
+commit ccd60626f24788968eed88537792bfc21e97a492
+Author: Raj Adhikari <peez@localhost.com>
+Date:   Thu Apr 21 12:24:41 2016 +1000
+
+    Added a small dialog to indicate absence of favorites
+
+commit 0a527f3c1cef44dd0d831d2c040b9e1d51d4af21
+Author: Adam Thalhammer <s3544305@student.rmit.edu.au>
+Date:   Thu Apr 21 12:23:57 2016 +1000
+
+    Separate class to hold detail window
+
+commit 9437b43f3b7f8fd3d896c0fde73d8d12a5452e48
+Author: Adam Thalhammer <s3544305@student.rmit.edu.au>
+Date:   Thu Apr 21 11:14:14 2016 +1000
+
+    get rid of white background behind chart - found easier way
+
+commit fd2696319a46bffb019629eaee8b8907ddc5cd77
+Author: Adam Thalhammer <s3544305@student.rmit.edu.au>
+Date:   Thu Apr 21 11:13:13 2016 +1000
+
+    get rid of white background behind chart :)
+
+commit b71464233dbea78db990393b5851e1da82a72d72
+Author: Adam Thalhammer <s3544305@student.rmit.edu.au>
+Date:   Wed Apr 20 11:07:11 2016 +1000
+
+    deal with missing files graciously
+
+commit 215a82732ad7ee3776144b9019562c36503fab29
+Author: Adam Thalhammer <s3544305@student.rmit.edu.au>
+Date:   Wed Apr 20 10:25:40 2016 +1000
+
+    typo fix, add final
+
+commit dbdec17a2bcb0d39058c985ff275c468df13cee0
+Author: Adam Thalhammer <s3544305@student.rmit.edu.au>
+Date:   Wed Apr 20 10:20:01 2016 +1000
+
+    ignore new observations folder
+
+commit 0bb485c1e923beffe977c7128649e461a2e9c3c6
+Author: Adam Thalhammer <s3544305@student.rmit.edu.au>
+Date:   Wed Apr 20 10:18:49 2016 +1000
+
+    space before unit
+
+commit f688016d38a231f6dbc3162fe8ba295ee7fdcb32
+Author: Adam Thalhammer <s3544305@student.rmit.edu.au>
+Date:   Wed Apr 20 10:14:12 2016 +1000
+
+    Fixed bug where weather observations were loaded twice, causing long delays
+
+commit e6ad03720b38c9e7640a1fe5fcf01e76167f23b4
+Author: Adam Thalhammer <s3544305@student.rmit.edu.au>
+Date:   Wed Apr 20 09:27:08 2016 +1000
+
+    add constants for temp units; add unit to last field
+
+commit 29f84f3540a8d02a409c68b644f422534649d84d
+Author: Raj Adhikari <s3542303@student.rmit.edu.au>
+Date:   Tue Apr 19 18:23:15 2016 +1000
+
+    configuration/data files and directories are now hidden
+    Details panel now displays units
+
+commit 4ef7ed006be4a1524d5a183151b0378e5facaa19
+Author: Raj Adhikari <peez@localhost.com>
+Date:   Sun Apr 17 19:23:27 2016 +1000
+
+    Centered details information and added spacers.
+
+commit a3a02c321a32dda0eae605c3b38f9172a3c70c48
+Author: Adam Thalhammer <s3544305@student.rmit.edu.au>
+Date:   Sun Apr 17 08:37:31 2016 +1000
+
+    added saving of detail window coordinates and size; documented code
+
+commit 39b08bf056ea21a554387ef9773b149af32febbb
+Author: Raj Adhikari <peez@localhost.com>
+Date:   Fri Apr 15 14:20:37 2016 +1000
+
+    Removed unused import
+
+commit f79ef0010a036b6c6a5edde262c4f00cad93be79
+Author: Raj Adhikari <peez@localhost.com>
+Date:   Fri Apr 15 14:06:20 2016 +1000
+
+    Added latest observation details in chart window
+
+commit 802520eb31f2fd0f21896955a871e1136fdf8c45
+Author: Raj Adhikari <peez@localhost.com>
+Date:   Fri Apr 15 14:05:22 2016 +1000
+
+    Expanded Weather Observation fields
+
+commit df6df17bdc2e5d6aa97f9e84d6a460f482d7d11e
+Author: Adam Thalhammer <s3544305@student.rmit.edu.au>
+Date:   Fri Apr 15 10:25:19 2016 +1000
+
+    improve layout
+
+commit 961cfa667a59255663910737f2cf0549975aca12
+Author: Adam Thalhammer <s3544305@student.rmit.edu.au>
+Date:   Thu Apr 14 22:56:45 2016 +1000
+
+    renamed for clarity
+
+commit b0692e15646081644c4e1395c0f854ba2a16eb68
+Author: Adam Thalhammer <s3544305@student.rmit.edu.au>
+Date:   Thu Apr 14 21:49:57 2016 +1000
+
+    moved images to standard resources directory
+
+commit 4a0391005776944d56f00ededc8863492ae8ebbc
+Author: Adam Thalhammer <s3544305@student.rmit.edu.au>
+Date:   Thu Apr 14 21:48:11 2016 +1000
+
+    auto format code
+
+commit c13f9b38734868212197076b5e34e638c65758b8
+Author: Adam Thalhammer <s3544305@student.rmit.edu.au>
+Date:   Thu Apr 14 21:42:36 2016 +1000
+
+    prevent null pointer exception when selected index is null
+
+commit 8c3207c06d018f54fb0c0058fb8b4485d3c90d6b
+Author: Adam Thalhammer <s3544305@student.rmit.edu.au>
+Date:   Thu Apr 14 16:27:31 2016 +1000
+
+    open details view relative to main window. clear selection when detail window opens.
+
+commit 6c93744ff94e1d43b132e203a22c49e80a3fd1a9
+Merge: d67e8e5 e079589
+Author: Adam Thalhammer <s3544305@student.rmit.edu.au>
+Date:   Thu Apr 14 16:01:01 2016 +1000
+
+    Merge remote-tracking branch 'origin/gui' into gui
+
+commit d67e8e5fe154dd0ceb31d942ecda73f7d8371909
+Author: Adam Thalhammer <s3544305@student.rmit.edu.au>
+Date:   Thu Apr 14 16:00:33 2016 +1000
+
+    open details view relative to main window
+
+commit e079589015f46f32c361daabdfcebeb4a6942c65
+Author: Kyle Glover <s3539870@student.rmit.edu.au>
+Date:   Thu Apr 14 16:00:18 2016 +1000
+
+    Added favourite star + Credit
+
+commit 5a783070fddbb232c23a6e32f4e157f70c03a79c
+Merge: 01d5dde 7a9765e
+Author: Adam Thalhammer <s3544305@student.rmit.edu.au>
+Date:   Thu Apr 14 15:51:21 2016 +1000
+
+    Merge remote-tracking branch 'origin/gui' into gui
+
+commit 01d5ddee46b02e825183afd9686d384950183d6f
+Author: Adam Thalhammer <s3544305@student.rmit.edu.au>
+Date:   Thu Apr 14 15:50:53 2016 +1000
+
+    changed favourites to avoid duplication. favourites now implements the collection interface
+
+commit 7a9765e925eefbc6aaca49cff2e353c63c2dce54
+Author: Rhys Van Orsouw <s3542173@student.rmit.edu.au>
+Date:   Thu Apr 14 15:46:01 2016 +1000
+
+    Deleted commented out line in Chart
+
+commit 648e16f5d89c410c6d3c47b4c19f4faa16e3afd1
+Author: Kyle Glover <s3539870@student.rmit.edu.au>
+Date:   Thu Apr 14 15:44:22 2016 +1000
+
+    Fixed test errors with favourites
+
+commit 98b99978a4495d5c01a95c09cfafffb1beb9c1e6
+Author: Rhys Van Orsouw <s3542173@student.rmit.edu.au>
+Date:   Thu Apr 14 15:16:36 2016 +1000
+
+    Moved JFrame creation to MainWindow
+
+commit 1a5c0975f5aee00290d3f8ce35f5781f861dc770
+Author: Kyle Glover <s3539870@student.rmit.edu.au>
+Date:   Thu Apr 14 15:14:41 2016 +1000
+
+    Fixed FileNotFound errors when first starting
+
+commit d2027df28f942a80a137d51919826d6a4a69b004
+Author: Adam Thalhammer <s3544305@student.rmit.edu.au>
+Date:   Thu Apr 14 14:43:07 2016 +1000
+
+    separated main window from application runner, ensured that data has to be loaded from file upon creation of WeatherStations / Favourites
+
+commit 003cd440f9ca075da3e4eaf7dc0967a059566a98
+Merge: 5c24259 1483d4a
+Author: Adam Thalhammer <s3544305@student.rmit.edu.au>
+Date:   Thu Apr 14 14:32:25 2016 +1000
+
+    Merge remote-tracking branch 'origin/gui' into gui
+
+commit 5c2425924d1d83df54a2f6f0a2700ee18a5ab03e
+Author: Adam Thalhammer <s3544305@student.rmit.edu.au>
+Date:   Thu Apr 14 14:23:24 2016 +1000
+
+    separated main window from application runner, ensured that data has to be loaded from file upon creation of WeatherStations / Favourites
+
+commit 1483d4a16bf9a1ad32ea11e09dadd970a4e4a643
+Author: Rhys Van Orsouw <s3542173@student.rmit.edu.au>
+Date:   Thu Apr 14 14:20:09 2016 +1000
+
+    Started PLaying around with color background of chart and line
+
+commit 634005bf517eaa2a69710dde78847bb5669216e2
+Author: Adam Thalhammer <s3544305@student.rmit.edu.au>
+Date:   Thu Apr 14 13:43:54 2016 +1000
+
+    Streamlined date parsing
+
+commit e8f67c116c87101eb3c5263fe6a8b1b21990da41
+Author: Adam Thalhammer <s3544305@student.rmit.edu.au>
+Date:   Thu Apr 14 13:24:41 2016 +1000
+
+    experimental: open chart on list selection
+
+commit e776202ec4a36a86e661972b42627882ac6d123c
+Author: Adam Thalhammer <s3544305@student.rmit.edu.au>
+Date:   Thu Apr 14 12:32:25 2016 +1000
+
+    refactored swing component creation
+
+commit 1abf01e06c069f975ac142af89cd63928926bc7c
+Author: Adam Thalhammer <s3544305@student.rmit.edu.au>
+Date:   Thu Apr 14 12:20:39 2016 +1000
+
+    fixed failing test
+
+commit 33fd281c44a817ee036dceecb0fad6a8f74d7cf1
+Author: Adam Thalhammer <s3544305@student.rmit.edu.au>
+Date:   Thu Apr 14 11:49:58 2016 +1000
+
+    async chart loading to eliminate delay on opening chart
+
+commit b23bc9eaca72e089c0387911016a4c6839bd1606
+Author: Adam Thalhammer <s3544305@student.rmit.edu.au>
+Date:   Thu Apr 14 11:10:00 2016 +1000
+
+    fixed bug where hours were not correctly parsed...
+
+commit cac4232396cf85eb4c1f8657b1a456ef01f8d20e
+Author: Rhys Van Orsouw <s3542173@student.rmit.edu.au>
+Date:   Wed Apr 13 21:57:53 2016 +1000
+
+    Basic framework for chart temperature for favourite stations.
+
+commit e07bbc5cbb0a1c08932e7c8ba269c19440a21ae6
+Author: Rhys Van Orsouw <s3542173@student.rmit.edu.au>
+Date:   Wed Apr 13 21:56:27 2016 +1000
+
+    Basic framework for chart temperature for favourite stations.
+
+commit e5d500b1c7d6e83bc99418f8fb63cb646f75c07f
+Author: Adam Thalhammer <s3544305@student.rmit.edu.au>
+Date:   Wed Apr 13 11:56:48 2016 +1000
+
+    added basic gui with search box and list of weather stations and favourites
+
+commit bdd1853b4752cd338de46acd40da8785c19cf6ad
+Author: Adam Thalhammer <s3544305@student.rmit.edu.au>
+Date:   Tue Apr 12 18:59:50 2016 +1000
+
+    removed and ignored iml file - should not be in source control
+
+commit 8a3d973da152562a26b72be77b5476ad3e64a900
+Author: Adam Thalhammer <s3544305@student.rmit.edu.au>
+Date:   Tue Apr 12 18:57:05 2016 +1000
+
+    implemented saving and loading of favourites; added experimental gui display of favourites; refactor; additional tests
+
+commit b9323bec5ed3b6f8d8d8a4931fcaae436d0166c1
+Author: Kyle Glover <s3539870@student.rmit.edu.au>
+Date:   Tue Apr 5 19:22:31 2016 +1000
+
+    Added favourites class
+
+commit 59487654ec62639d08fcc389149164c58167bc05
+Merge: c20c011 dcf12c8
+Author: Kyle Glover <s3539870@student.rmit.edu.au>
+Date:   Tue Apr 5 18:26:19 2016 +1000
+
+    Random commit
+
+commit dcf12c81f73515402b21a07ebdb916d643831cd1
+Author: Adam Thalhammer <s3544305@student.rmit.edu.au>
+Date:   Thu Mar 24 16:08:48 2016 +1100
+
+    loading of weather observations
+
+commit 3b15ade1094f301d350125a025bb529ceac19447
+Author: Adam Thalhammer <s3544305@student.rmit.edu.au>
+Date:   Thu Mar 24 14:55:47 2016 +1100
+
+    Load weather stations from weather_stations.json; test; added hamcrest-all instead of hamcrest-core for better testing
+
+commit c20c011af1298d7d79f69ca0b8063bbc85be105f
+Author: Kyle Glover <s3539870@student.rmit.edu.au>
+Date:   Thu Mar 24 14:48:54 2016 +1100
+
+    Basic gui frame
+
+commit 07447e258f62489bb056b556ed62de0f912206ec
+Author: Rhys Van Orsouw <s3542173@student.rmit.edu.au>
+Date:   Thu Mar 24 13:43:55 2016 +1100
+
+    Added ./settings/*.prefs to .gitignore
+
+commit b4ace438b1a91e06da95e991c09d176a69caeb88
+Author: Rhys Van Orsouw <s3542173@student.rmit.edu.au>
+Date:   Thu Mar 24 13:40:03 2016 +1100
+
+    Package Directory
+
+commit c387e08e00d1ef8106ec239a66c1d0de114f9337
+Author: Kyle Glover <s3539870@student.rmit.edu.au>
+Date:   Thu Mar 24 13:24:09 2016 +1100
+
+    Fixed importing gradle .settings
+
+commit 7bdcba4cd8c55e1be3f84882e83b0304b6e746de
+Author: Kyle Glover <s3539870@student.rmit.edu.au>
+Date:   Thu Mar 24 13:02:39 2016 +1100
+
+    Added .settings to .gitignore
+
+commit 09f844a5054cb2e973f935a7a78722da7687570a
+Author: Rhys Van Orsouw <s3542173@student.rmit.edu.au>
+Date:   Thu Mar 24 12:51:18 2016 +1100
+
+    Create Packages and start files directory organisation
+
+commit 7c7f26f4c6e09767c140060876be4bb543e423c7
+Author: Adam Thalhammer <s3544305@student.rmit.edu.au>
+Date:   Wed Mar 23 10:31:21 2016 +1100
+
+    fix FindBugs warning re default encoding by using new files api
+
+commit e078e1f668bf0d2bde45451ac3e2dae2a9738ee0
+Author: Adam Thalhammer <s3544305@student.rmit.edu.au>
+Date:   Tue Mar 22 18:03:18 2016 +1100
+
+    ignore json files
+
+commit b4bda257cd3deb4bdd55c0f391a341b507dceb4a
+Author: Adam Thalhammer <s3544305@student.rmit.edu.au>
+Date:   Tue Mar 22 18:01:03 2016 +1100
+
+    added first test
+
+commit 739b8b02f6b31f6533b1b569cd72b7a86b96d554
+Author: Adam Thalhammer <s3544305@student.rmit.edu.au>
+Date:   Tue Mar 22 18:00:03 2016 +1100
+
+    WEATHERAPP-1 #close implemented saving and loading of window transitions
+
+commit c7f97cf9209766b67afb5368af8b64f7aae26a0d
+Author: Adam Thalhammer <s3544305@student.rmit.edu.au>
+Date:   Thu Mar 17 17:37:18 2016 +1100
+
+    added jfreechart to gradle build
+
+commit d604a642c9c017c6b4736b688907ae32ed0d70a1
+Author: Adam Thalhammer <s3544305@student.rmit.edu.au>
+Date:   Sun Mar 13 13:06:48 2016 +1100
+
+    condense junit dependency string; activate findbugs plugin with html reports
+
+commit d45874daa2516a9e55cab4b69dccf4711a9b57a4
+Author: Adam Thalhammer <s3544305@student.rmit.edu.au>
+Date:   Sat Mar 12 17:48:45 2016 +1100
+
+    set up skeleton for application, switched gradle plugin to "application" for "run" task
+
+commit 4927ad692291d8d9fd476084bb3dee67e25fe686
+Author: Adam Thalhammer <s3544305@student.rmit.edu.au>
+Date:   Tue Mar 8 20:56:57 2016 +1100
+
+    gradle adjustments - updated gson and junit versions to current stable releases
+
+commit c1f0a1962189fb332d64a9af62936d12f36ff7bd
+Author: Adam Thalhammer <s3544305@student.rmit.edu.au>
+Date:   Tue Mar 8 20:15:43 2016 +1100
+
+    removed auto-generated gradle files from repo
+
+commit 69700b22ddf34174a48edc3295a6d4490e2c8ebd
+Author: Adam Thalhammer <s3544305@student.rmit.edu.au>
+Date:   Tue Mar 8 20:11:43 2016 +1100
+
+    gradle adjustments - gitignore
+
+commit 7699bac88b5a45f7c85482801e7383ee17ce07a8
+Author: Adam Thalhammer <s3544305@student.rmit.edu.au>
+Date:   Tue Mar 8 19:18:33 2016 +1100
+
+    set up gradle files; config needed
+
+commit 5c3316ac76af4e23d0ab5cd1605341380e39c6b0
+Author: Raj Adhikari <s3542303@student.rmit.edu.au>
+Date:   Tue Mar 8 08:15:58 2016 +0000
+
+    .classpath deleted online with Bitbucket
+
+commit a3170f4955fa46d298b64a7b72ec06c06686d461
+Author: Raj Adhikari <s3542303@student.rmit.edu.au>
+Date:   Tue Mar 8 08:15:33 2016 +0000
+
+    .project deleted online with Bitbucket
+
+commit baa28695bee3d5af38df803da08613f630b8ec28
+Author: Adam Thalhammer <s3544305@student.rmit.edu.au>
+Date:   Tue Mar 8 07:38:40 2016 +0000
+
+    added intellij files to gitignore
+
+commit c9550bc704a8c40de8b9d306cb7fe2ccdc931aac
+Author: Rhys Van Orsouw <s3542173@student.rmit.edu.au>
+Date:   Tue Mar 8 18:33:27 2016 +1100
+
+    Edit Contributors.txt
+
+commit 425601b14dc8a2522210a0888049232cc3c4fb98
+Author: Adam Thalhammer <adam.thalhammer@hotmail.com>
+Date:   Tue Mar 8 18:26:27 2016 +1100
+
+    added self to contributors
+
+commit 81ea7f819bb3b9afe8e43aecbbc276639317cbe2
+Author: Raj Adhikari <s3542303@student.rmit.edu.au>
+Date:   Tue Mar 8 07:24:31 2016 +0000
+
+    README.md edited online with Bitbucket
+
+commit a94c3a52f7367e97a7bf67315cae550c4bb9b27e
+Author: rmit-s3542303-raj-adhikari <peez@localhost.localdomain>
+Date:   Tue Mar 8 06:23:07 2016 +1100
+
+    Initial commit
