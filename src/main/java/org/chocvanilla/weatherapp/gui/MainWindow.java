@@ -47,6 +47,7 @@ public class MainWindow {
         frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         frame.setMinimumSize(new Dimension(800, 600));
         buildContainerLayout();
+        frame.pack();
     }
     
     public void addListener(WindowListener l){
@@ -54,7 +55,6 @@ public class MainWindow {
     }
 
     public void show() {
-        frame.pack();
         frame.setVisible(true);
     }
 
@@ -168,7 +168,7 @@ public class MainWindow {
 
     private JPanel buildFavouritesPanel() {
         favouritesPanel = new JPanel();
-        favouritesPanel.setLayout(new GridBagLayout());
+        favouritesPanel.setLayout(new BoxLayout(favouritesPanel, BoxLayout.Y_AXIS));
         updateFavouritesButtons();
         favouritesPanel.setBorder(BorderFactory.createTitledBorder("Favourites"));
         return favouritesPanel;
@@ -176,18 +176,15 @@ public class MainWindow {
 
     private void updateFavouritesButtons() {
         favouritesPanel.removeAll();
-        GridBagConstraints constraints = new GridBagConstraints();
-        constraints.fill = GridBagConstraints.HORIZONTAL;
-        constraints.anchor = GridBagConstraints.NORTH;
-        constraints.weightx = 1;
-        constraints.weighty = 1;
-        constraints.gridx = 0;
         Iterable<WeatherStation> favourites = () -> stations.getFavourites().iterator();
         boolean hasFavourites = false;
         for (WeatherStation station : favourites) {
             hasFavourites = true;
             JButton favouriteButton = new JButton(station.toString());
-            favouritesPanel.add(favouriteButton, constraints);
+            Dimension d = favouriteButton.getPreferredSize();
+            d.width = 500;
+            favouriteButton.setMaximumSize(d);
+            favouritesPanel.add(favouriteButton);//, constraints);
             attachChart(favouriteButton, station);
         }
         if (!hasFavourites) {

@@ -10,7 +10,6 @@ import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
 public class WeatherCache {
-;
     protected final Logger log = LoggerFactory.getLogger(getClass());
     private static final long CACHE_EXPIRY_MILLIS = TimeUnit.MINUTES.toMillis(5);
     private final WeatherStation station;

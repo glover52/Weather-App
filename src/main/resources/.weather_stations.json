@@ -304,14 +304,6 @@
     "longitude": 151.694
   },
   {
-    "stationID": 59040,
-    "wmoNumber": 94791,
-    "name": "COFFS HARBOUR MO",
-    "state": "NSW",
-    "latitude": -30.3107,
-    "longitude": 153.1187
-  },
-  {
     "stationID": 40126,
     "wmoNumber": 94567,
     "name": "MARYBOROUGH",
