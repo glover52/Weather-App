@@ -55,10 +55,10 @@ public class ForecastObservation implements WeatherObservation {
                 new Field("Rain (mm)", MM, precipIntensity),
                 new Field("Chance of rain (%)", PERCENT, precipProbability * 100),
                 new Field("Humidity (%)", PERCENT, humidity * 100),
-                new Field("Cloud Cover", PERCENT, cloudCover * 100),
+                new Field("Cloud Cover (%)", PERCENT, cloudCover * 100),
                 new Field("Pressure (millibars)", "%.0f mbar", pressure),
-                new Field("Summary", "%s", summary, false),
-                new Field("Icon", "%s", icon, false)
+                new Field("Summary", "%s", summary, false)
+//                new Field("Icon", "%s", icon, false)
         );
     }
 }
