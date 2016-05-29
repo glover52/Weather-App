@@ -47,7 +47,7 @@ public class MainWindow {
         detailWindow = details;
         detailWindow.setFavouritesListener(this::updateFavouritesButtons);
         frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-        frame.setMinimumSize(new Dimension(850, 600));
+        frame.setMinimumSize(new Dimension(930, 600));
         buildContainerLayout();
         frame.pack();
         searchBox.requestFocusInWindow();
@@ -103,15 +103,18 @@ public class MainWindow {
         topPanel.add(new JLabel(station.getName()), BorderLayout.NORTH);
 
         JButton showForecast = new JButton("Forecast");
-        JButton showObservation = new JButton("Observations");
+        JButton showBOMObservation = new JButton("BOM Observations");
+        JButton showForcastIOObservation = new JButton("Forecast.io Observations");
         JButton toggleFavourite = buildFavouritesButton(station);
 
 
         showForecast.addActionListener(x -> openForecast(station));
-        showObservation.addActionListener(x -> openObservations(station));
+        showBOMObservation.addActionListener(x -> openBOMObservations(station));
+        showForcastIOObservation.addActionListener(x -> openForecastIOObservation(station));
 
         buttonPanel.add(showForecast);
-        buttonPanel.add(showObservation);
+        buttonPanel.add(showBOMObservation);
+        buttonPanel.add(showForcastIOObservation);
         topPanel.add(toggleFavourite);
 
         townPanel.add(buttonPanel, BorderLayout.SOUTH);
@@ -119,6 +122,10 @@ public class MainWindow {
 
         townPanel.revalidate();
         townPanel.repaint();
+    }
+
+    private void openForecastIOObservation(WeatherStation station) {
+
     }
 
     private void addCurrentWeatherToTownPanel(FutureTask<WeatherObservations> source) {
@@ -138,7 +145,7 @@ public class MainWindow {
         }
     }
 
-    private void openObservations(WeatherStation station) {
+    private void openBOMObservations(WeatherStation station) {
         if (station != null) {
             openChart(station, observationsProvider);
         }
