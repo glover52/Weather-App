@@ -33,7 +33,11 @@ Comprehensive documentation can be found in [docs](/docs).
 ### Logs
 Logs can be found in [logs](logs/).
 
-### Jira Sevrver
+### Build Automation
+Gradle was used in both the first and second build releases as a Build Automation tool. Many different aspects became
+increasingly valuable, such as Automated Testing, Build Dependencies, JAR building and Compilation.
+
+### Jira Server
 A virtual server was used to host the JIRA application. JIRA was used throughout the project to assign tasks, track
 issues, and organise sprints. JIRA was also integrated with the Bamboo server, allowing it to display whether a build
 was successful or not. JIRA was also integrated into the HipChat server, broadcasting when commits and merges
