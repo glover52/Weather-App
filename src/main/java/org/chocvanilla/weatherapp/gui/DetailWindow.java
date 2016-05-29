@@ -87,6 +87,9 @@ public class DetailWindow {
     public void show(WeatherStation station, ObservationsProvider provider) {
         fieldsToGraph.clear();
         WeatherObservations observations = provider.loadObservations(station);
+        if (observations.isEmpty()) {
+            MessageBox.show("Unfortunately, observations are not available for this station.", "Error");
+        }
         populateDataSetIndex(observations);
 
 

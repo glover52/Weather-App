@@ -1,8 +1,7 @@
 package org.chocvanilla.weatherapp.gui;
 
 import org.chocvanilla.weatherapp.data.forecast.ForecastProvider;
-import org.chocvanilla.weatherapp.data.observations.ObservationsProvider;
-import org.chocvanilla.weatherapp.data.observations.WeatherObservations;
+import org.chocvanilla.weatherapp.data.observations.*;
 import org.chocvanilla.weatherapp.data.stations.WeatherStation;
 import org.chocvanilla.weatherapp.data.stations.WeatherStations;
 import org.chocvanilla.weatherapp.io.AsyncLoader;
@@ -14,6 +13,7 @@ import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
 import java.awt.*;
 import java.awt.event.WindowListener;
+import java.util.Iterator;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.FutureTask;
 
@@ -122,9 +122,16 @@ public class MainWindow {
 
     private void addCurrentWeatherToTownPanel(FutureTask<WeatherObservations> source) {
         try {
-            JPanel observationPanel = GuiHelpers.buildDetails(source.get().iterator().next());
-            observationPanel.setLayout(new BoxLayout(observationPanel, BoxLayout.Y_AXIS));
-            townPanel.add(observationPanel, 0);
+            WeatherObservations weatherObservations = source.get();
+            Iterator<WeatherObservation> it = weatherObservations.iterator();
+            if (it.hasNext()) {
+                JPanel observationPanel = GuiHelpers.buildDetails(it.next());
+                observationPanel.setLayout(new BoxLayout(observationPanel, BoxLayout.Y_AXIS));
+                townPanel.add(observationPanel, 0);
+                // only add first observation to town panel
+            } else {
+                log.error("Unable to display current weather");             
+            }
         } catch (InterruptedException | ExecutionException e) {
             e.printStackTrace();
         }
