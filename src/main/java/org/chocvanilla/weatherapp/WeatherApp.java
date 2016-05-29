@@ -41,18 +41,18 @@ public class WeatherApp {
             MessageBox.showNow(message, "ERROR!");
             log.error(message, e);
             System.exit(-1);
-        }        
+        }
     }
 
     public void setLookAndFeel() {
-        String lookAndFeel = UIManager.getSystemLookAndFeelClassName(); 
+        String lookAndFeel = UIManager.getSystemLookAndFeelClassName();
         try {
             UIManager.setLookAndFeel(lookAndFeel);
         } catch (Exception e) {
             log.warn("Failed to set Look and Feel to '{}'", lookAndFeel, e);
         }
     }
-    
+
     public static void main(String[] args) {
         new WeatherApp().run();
     }

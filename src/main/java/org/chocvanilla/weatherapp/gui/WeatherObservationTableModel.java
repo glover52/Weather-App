@@ -1,6 +1,8 @@
 package org.chocvanilla.weatherapp.gui;
 
-import org.chocvanilla.weatherapp.data.observations.*;
+import org.chocvanilla.weatherapp.data.observations.Field;
+import org.chocvanilla.weatherapp.data.observations.WeatherObservation;
+import org.chocvanilla.weatherapp.data.observations.WeatherObservations;
 
 import javax.swing.table.AbstractTableModel;
 import java.util.ArrayList;
@@ -8,13 +10,13 @@ import java.util.List;
 
 public class WeatherObservationTableModel extends AbstractTableModel {
     private final List<List<Field>> rows = new ArrayList<>();
-    
+
     @Override
     public String getColumnName(int column) {
         return rows.get(0).get(column).getLabel();
     }
 
-    public WeatherObservationTableModel(WeatherObservations observations){
+    public WeatherObservationTableModel(WeatherObservations observations) {
         observations.stream().map(WeatherObservation::getFields).forEach(rows::add);
     }
 

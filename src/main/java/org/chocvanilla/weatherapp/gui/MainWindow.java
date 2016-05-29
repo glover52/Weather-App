@@ -33,8 +33,8 @@ public class MainWindow {
     private JPanel townPanel;
 
 
-    public MainWindow(WeatherStations weatherStations, 
-                      ObservationsProvider provider, 
+    public MainWindow(WeatherStations weatherStations,
+                      ObservationsProvider provider,
                       ForecastProvider forecastProvider,
                       DetailWindow details) {
         stations = weatherStations;
@@ -49,8 +49,8 @@ public class MainWindow {
         buildContainerLayout();
         frame.pack();
     }
-    
-    public void addListener(WindowListener l){
+
+    public void addListener(WindowListener l) {
         frame.addWindowListener(l);
     }
 
@@ -81,15 +81,14 @@ public class MainWindow {
         townPanel.add(new JLabel("No Town Selected"), BorderLayout.NORTH);
         return townPanel;
     }
-    
-    
+
 
     private void updateTownPanel(WeatherStation station) {
         townPanel.removeAll();
-        
+
         SwingUtilities.invokeLater(() -> addCurrentWeatherToTownPanel(new AsyncLoader(station).loadAsync(observationsProvider)));
-        
-        
+
+
         JPanel buttonPanel = new JPanel(new FlowLayout());
         JButton showForecast = new JButton("Forecast");
         JButton showObservation = new JButton("Observations");
@@ -100,10 +99,10 @@ public class MainWindow {
         buttonPanel.add(showForecast);
         buttonPanel.add(showObservation);
 
-        
+
         townPanel.add(new JLabel(station.getName()), BorderLayout.NORTH);
         townPanel.add(buttonPanel, BorderLayout.SOUTH);
-        
+
         townPanel.revalidate();
         townPanel.repaint();
     }
@@ -185,17 +184,13 @@ public class MainWindow {
             d.width = 500;
             favouriteButton.setMaximumSize(d);
             favouritesPanel.add(favouriteButton);//, constraints);
-            attachChart(favouriteButton, station);
+            favouriteButton.addActionListener(x -> updateTownPanel(station));
         }
         if (!hasFavourites) {
             favouritesPanel.add(new JLabel(NO_FAVOURITES));
         }
         favouritesPanel.revalidate();
         favouritesPanel.repaint();
-    }
-
-    private void attachChart(JButton favouriteButton, WeatherStation station) {
-        favouriteButton.addActionListener(x -> openChart(station, observationsProvider));
     }
 
     private void openChart(WeatherStation station, ObservationsProvider provider) {

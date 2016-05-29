@@ -15,11 +15,12 @@ import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.empty;
 import static org.hamcrest.core.IsNot.not;
+
 public class WeatherCacheTest {
     private WeatherCache cache;
 
     @Before
-    public void setUp() throws IOException{
+    public void setUp() throws IOException {
         WeatherStationSource source = new WeatherStationsJSONFile(new Gson());
         WeatherStations ws = WeatherStations.loadFrom(source);
         WeatherStation s = ws.stream()

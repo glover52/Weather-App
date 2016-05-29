@@ -1,6 +1,9 @@
 package org.chocvanilla.weatherapp.data.forecast;
 
-import com.google.gson.*;
+import com.google.gson.Gson;
+import com.google.gson.JsonElement;
+import com.google.gson.JsonObject;
+import com.google.gson.JsonParser;
 import org.chocvanilla.weatherapp.data.observations.WeatherCache;
 import org.chocvanilla.weatherapp.data.observations.WeatherObservations;
 import org.chocvanilla.weatherapp.data.stations.WeatherStation;
@@ -9,7 +12,9 @@ import org.chocvanilla.weatherapp.io.MissingAPIKeyException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.io.*;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.net.URL;
 
 public class ForecastIO implements ForecastProvider {
@@ -29,21 +34,21 @@ public class ForecastIO implements ForecastProvider {
         WeatherCache cache = WeatherCache.forecasting(station, this::loadForecastUncached);
         return cache.get();
     }
-    
-    public WeatherObservations loadForecastUncached(WeatherStation station){
+
+    public WeatherObservations loadForecastUncached(WeatherStation station) {
         try {
             return downloadForecastFor(station.getLatitude(), station.getLongitude());
         } catch (IOException e) {
             log.error("Unable to parse forecast for '{}'", station, e);
         } catch (MissingAPIKeyException e) {
-            log.error("ForecastIO API key missing,", e);   
+            log.error("ForecastIO API key missing,", e);
         }
         return new WeatherObservations();
     }
 
     private WeatherObservations downloadForecastFor(double latitude, double longitude) throws IOException {
         String api_key = KeyProvider.getForecastAPIKey();
-        String request = 
+        String request =
                 String.format(API_CALL_FORMAT, api_key, latitude, longitude);
         try (BufferedReader reader = new BufferedReader(new InputStreamReader(new URL(request).openStream()))) {
             JsonObject object = (JsonObject) new JsonParser().parse(reader);

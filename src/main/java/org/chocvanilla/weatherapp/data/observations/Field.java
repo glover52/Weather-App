@@ -11,7 +11,7 @@ public class Field {
     public Field(String labelText, String format, Object formattedValue) {
         this(labelText, format, formattedValue, true);
     }
-    
+
     public Field(String labelText, Function<Object, String> formatter, Object obj, boolean isGraphable) {
         label = labelText;
         formattedValue = formatter.apply(obj);

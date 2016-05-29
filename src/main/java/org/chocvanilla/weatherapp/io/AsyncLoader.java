@@ -7,7 +7,9 @@ import org.chocvanilla.weatherapp.data.stations.WeatherStation;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.util.concurrent.*;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+import java.util.concurrent.FutureTask;
 
 public class AsyncLoader {
     protected final Logger log = LoggerFactory.getLogger(getClass());
@@ -25,7 +27,7 @@ public class AsyncLoader {
         executor.execute(task);
         return task;
     }
-    
+
     public FutureTask<WeatherObservations> loadForecastAsync(ForecastProvider provider) {
         log.trace("Loading weather forecast for station {} asynchronously", weatherStation);
         FutureTask<WeatherObservations> task = new FutureTask<>(() -> provider.loadForecast(weatherStation));

@@ -7,8 +7,8 @@ import org.chocvanilla.weatherapp.data.observations.WeatherObservations;
 import org.chocvanilla.weatherapp.data.stations.WeatherStation;
 import org.chocvanilla.weatherapp.data.stations.WeatherStations;
 import org.junit.Before;
-import org.junit.Test;
 import org.junit.BeforeClass;
+import org.junit.Test;
 
 import java.io.IOException;
 import java.util.concurrent.ExecutionException;
@@ -24,14 +24,14 @@ public class AsyncLoaderTest {
     private static WeatherStationsJSONFile source = new WeatherStationsJSONFile(gson);
 
     @BeforeClass
-    public static void setUpClass() throws IOException{
+    public static void setUpClass() throws IOException {
         station = WeatherStations.loadFrom(source).stream().
                 findAny().
                 get();
     }
 
     @Before
-    public void setUp(){
+    public void setUp() {
         loader = new AsyncLoader(station);
     }
 

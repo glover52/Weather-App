@@ -18,18 +18,18 @@ import static org.hamcrest.core.IsNot.not;
 public class ForecastTest {
     private ForecastProvider provider;
     private WeatherStation station;
-    
+
     @Before
     public void setUp() throws IOException {
         Gson gson = new Gson();
         provider = new ForecastIO(gson);
         station = new WeatherStationsJSONFile(gson).load().get(0);
     }
-    
+
     @Test
     public void shouldRetrieveForecastForCoordinates() throws MissingAPIKeyException {
         WeatherObservations forecast = provider.loadForecast(station);
         assertThat(forecast, is(not(empty())));
     }
-    
+
 }

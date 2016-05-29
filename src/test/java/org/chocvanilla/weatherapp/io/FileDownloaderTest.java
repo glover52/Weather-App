@@ -10,9 +10,8 @@ import java.net.URL;
 import java.net.UnknownHostException;
 import java.nio.file.Path;
 
-import static org.hamcrest.Matchers.is;
-import static org.hamcrest.Matchers.not;
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
 
 public class FileDownloaderTest {
     private FileDownloader fd;
@@ -21,7 +20,7 @@ public class FileDownloaderTest {
 
     @Before
     public void setUp() {
-        fd  = new FileDownloader();
+        fd = new FileDownloader();
     }
 
     @AfterClass
@@ -35,27 +34,27 @@ public class FileDownloaderTest {
                 file.delete();
             }
             dir.delete();
-        } catch (Exception e){
+        } catch (Exception e) {
             // Ignore
         }
     }
 
-    @Test (expected = UnknownHostException.class)
-    public void badUrlTest() throws IOException{
+    @Test(expected = UnknownHostException.class)
+    public void badUrlTest() throws IOException {
         URL url = new URL("http://www.amadeupurlfortesting.com");
-        fd.downloadFile(url ,"", "" );
+        fd.downloadFile(url, "", "");
     }
 
-    @Test (expected = IOException.class)
-    public void downloadWithNoWriteAccess() throws IOException{
+    @Test(expected = IOException.class)
+    public void downloadWithNoWriteAccess() throws IOException {
         URL url = new URL("http://www.google.com");
-        fd.downloadFile(url ,"", "" );
+        fd.downloadFile(url, "", "");
     }
 
     @Test
-    public void downloadTest() throws IOException{
+    public void downloadTest() throws IOException {
         URL url = new URL("http://www.google.com");
-        Path p = fd.downloadFile(url , testDir, testFile);
+        Path p = fd.downloadFile(url, testDir, testFile);
 
         assertNotNull(p);
         assertEquals(p.getParent().getFileName().toString(), testDir);

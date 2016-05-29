@@ -13,6 +13,6 @@ public interface WeatherStation extends Comparable<WeatherStation> {
     String getUniqueID();
 
     double getLatitude();
-    
+
     double getLongitude();
 }

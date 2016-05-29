@@ -2,8 +2,13 @@ package org.chocvanilla.weatherapp;
 
 import com.google.gson.Gson;
 import org.chocvanilla.weatherapp.data.DataHelpers;
-import org.chocvanilla.weatherapp.data.observations.*;
-import org.chocvanilla.weatherapp.data.stations.*;
+import org.chocvanilla.weatherapp.data.observations.BureauOfMeteorology;
+import org.chocvanilla.weatherapp.data.observations.Field;
+import org.chocvanilla.weatherapp.data.observations.ObservationsProvider;
+import org.chocvanilla.weatherapp.data.observations.WeatherObservations;
+import org.chocvanilla.weatherapp.data.stations.BomWeatherStation;
+import org.chocvanilla.weatherapp.data.stations.WeatherStation;
+import org.chocvanilla.weatherapp.data.stations.WeatherStations;
 import org.chocvanilla.weatherapp.io.WeatherStationsJSONFile;
 import org.jfree.chart.ChartPanel;
 import org.jfree.chart.JFreeChart;

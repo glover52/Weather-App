@@ -3,7 +3,9 @@ package org.chocvanilla.weatherapp.data.observations;
 import com.google.gson.annotations.SerializedName;
 
 import java.text.SimpleDateFormat;
-import java.util.*;
+import java.util.Arrays;
+import java.util.Date;
+import java.util.List;
 
 // fields are auto-set by Gson
 @SuppressWarnings("unused")
@@ -62,13 +64,13 @@ public class BomWeatherObservation implements WeatherObservation {
 
         return Arrays.asList(
                 new Field("Time", DATE::format, timestamp, false),
-                new Field("Air Temp", DEG_C,airTemperature),
-                new Field("Apparent Temp", DEG_C,apparentTemperature),
+                new Field("Air Temp", DEG_C, airTemperature),
+                new Field("Apparent Temp", DEG_C, apparentTemperature),
                 new Field("Gust (km/h)", KM_H, gustKm),
-                new Field("Gust (kt)",KT, gustKt),
+                new Field("Gust (kt)", KT, gustKt),
                 new Field("Wind Direction", "%s", windDir, false),
                 new Field("Wind Speed (km/h)", KM_H, windSpdKmh),
-                new Field("Wind Speed (kt)",KT, windSpdKt),
+                new Field("Wind Speed (kt)", KT, windSpdKt),
                 new Field("Dew Point", DEG_C, dewPt),
                 new Field("Rain (mm)", MM, rain)
         );

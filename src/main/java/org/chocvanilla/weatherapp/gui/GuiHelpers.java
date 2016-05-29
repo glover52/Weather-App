@@ -4,7 +4,10 @@ import org.chocvanilla.weatherapp.data.observations.Field;
 import org.chocvanilla.weatherapp.data.observations.WeatherObservation;
 
 import javax.swing.*;
-import javax.swing.event.*;
+import javax.swing.event.ChangeEvent;
+import javax.swing.event.ChangeListener;
+import javax.swing.event.DocumentEvent;
+import javax.swing.event.DocumentListener;
 import javax.swing.text.Document;
 import javax.swing.text.JTextComponent;
 import java.awt.*;
@@ -12,7 +15,7 @@ import java.beans.PropertyChangeEvent;
 import java.util.Objects;
 
 public class GuiHelpers {
-       
+
     /**
      * Installs a listener to receive notification when the text of any
      * {@code JTextComponent} is changed. Internally, it installs a

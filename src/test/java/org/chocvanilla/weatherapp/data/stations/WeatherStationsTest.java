@@ -27,8 +27,8 @@ public class WeatherStationsTest {
         assertFalse(ws.isEmpty());
     }
 
-     // Testing if IOException correctly propagates through. is this even a test
-    @Test ( expected = IOException.class)
+    // Testing if IOException correctly propagates through. is this even a test
+    @Test(expected = IOException.class)
     public void loadFromBadSource() throws IOException {
 
         WeatherStationSource badSource = new WeatherStationSource() {
@@ -36,8 +36,10 @@ public class WeatherStationsTest {
             public List<WeatherStation> load() throws IOException {
                 throw new IOException();
             }
+
             @Override
-            public void save(WeatherStations stations) throws IOException {}
+            public void save(WeatherStations stations) throws IOException {
+            }
         };
 
         ws = WeatherStations.loadFrom(badSource);
@@ -48,11 +50,12 @@ public class WeatherStationsTest {
         ws = WeatherStations.loadFrom(source);
 
         boolean flag = true;
-        for ( WeatherStation s : ws) {
-            if (flag) s.setFavourite(true); flag = !flag;
+        for (WeatherStation s : ws) {
+            if (flag) s.setFavourite(true);
+            flag = !flag;
         }
         ws.getFavourites()
                 .filter(WeatherStation::isFavourite)
-                .forEach( x-> assertTrue(x.isFavourite()));
+                .forEach(x -> assertTrue(x.isFavourite()));
     }
 }
