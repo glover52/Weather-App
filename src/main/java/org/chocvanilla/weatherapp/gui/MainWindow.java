@@ -49,7 +49,7 @@ public class MainWindow {
         detailWindow = details;
         detailWindow.setFavouritesListener(this::updateFavouritesButtons);
         frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-        frame.setMinimumSize(new Dimension(930, 600));
+        frame.setMinimumSize(new Dimension(990, 600));
         buildContainerLayout();
         frame.pack();
         searchBox.requestFocusInWindow();

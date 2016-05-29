@@ -23,7 +23,7 @@ public class ChartHelpers {
      * @param observations the source of weather data for this data set
      * @return a data set containing the time series of weather observations
      */
-    public static XYDataset createDataSet(WeatherObservations observations) {
+    private static XYDataset createDataSet(WeatherObservations observations) {
         return createDataSet(new Field("Air Temp", "", ""), observations);
     }
 
@@ -72,7 +72,7 @@ public class ChartHelpers {
      * Method to set up visual aspect of graphs X and Y lines
      * @param plot the graphs plot.
      */
-    public static void enableGridlines(XYPlot plot) {
+    private static void enableGridlines(XYPlot plot) {
         GradientPaint g = new GradientPaint(
                 0.0f, 0.0f, new Color(227, 239, 255),
                 0.0f, 0.0f, new Color(255, 255, 255)
