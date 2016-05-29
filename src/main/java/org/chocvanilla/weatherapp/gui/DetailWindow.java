@@ -90,6 +90,7 @@ public class DetailWindow {
      * @param provider An asynchronous way of retrieving the {@link WeatherObservation} data
      */
     public void show(WeatherStation station, ObservationsProvider provider) {
+        fieldsToGraph.clear();
         WeatherObservations observations = provider.loadObservations(station);
         populateDataSetIndex(observations);
 
@@ -156,7 +157,7 @@ public class DetailWindow {
         }
         for (Field field : observation.getFields()) {
             if(field.isGraphable()) {
-                JCheckBox fieldCheckBox = new JCheckBox(field.getLabel(), fieldsToGraph.contains(field));
+                JCheckBox fieldCheckBox = new JCheckBox(field.getLabel(), fieldsToGraph.contains(field.getLabel()));
                 fieldCheckBox.addActionListener(x -> toggleGraph(field, chart, observations));
                 checkBoxContainer.add(fieldCheckBox);
             }
@@ -164,7 +165,7 @@ public class DetailWindow {
     }
 
     private void toggleGraph(Field field, JFreeChart chart, WeatherObservations observations) {
-        if(fieldsToGraph.contains(field)) {
+        if(fieldsToGraph.contains(field.getLabel())) {
             fieldsToGraph.remove(field.getLabel());
             removeFieldFromGraph(field, chart);
             log.debug("Field: " + field.getLabel() + " removed from list.");
