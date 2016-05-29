@@ -22,6 +22,8 @@ public class MainWindow {
     protected final Logger log = LoggerFactory.getLogger(getClass());
     private static final String NO_FAVOURITES =
             "You have no favorites! Open a station and click the favorites button to see it here.";
+    private static final String ADD_TO_FAVOURITES = "☆ Favourite";
+    private static final String REMOVE_FROM_FAVOURITES = "★ Unfavourite";
     private final JFrame frame = new JFrame("Weather App");
     private final WeatherStations stations;
     private final ObservationsProvider observationsProvider;
@@ -95,18 +97,24 @@ public class MainWindow {
 
 
         JPanel buttonPanel = new JPanel(new FlowLayout());
+        JPanel topPanel = new JPanel((new BorderLayout()));
+
+        topPanel.add(new JLabel(station.getName()), BorderLayout.NORTH);
+
         JButton showForecast = new JButton("Forecast");
         JButton showObservation = new JButton("Observations");
+        JButton toggleFavourite = buildFavouritesButton(station);
+
 
         showForecast.addActionListener(x -> openForecast(station));
         showObservation.addActionListener(x -> openObservations(station));
 
         buttonPanel.add(showForecast);
         buttonPanel.add(showObservation);
+        topPanel.add(toggleFavourite);
 
-
-        townPanel.add(new JLabel(station.getName()), BorderLayout.NORTH);
         townPanel.add(buttonPanel, BorderLayout.SOUTH);
+        townPanel.add(topPanel, BorderLayout.NORTH);
 
         townPanel.revalidate();
         townPanel.repaint();
@@ -200,6 +208,28 @@ public class MainWindow {
 
     private void openChart(WeatherStation station, ObservationsProvider provider) {
         detailWindow.show(station, provider);
+    }
+
+    private JButton buildFavouritesButton(WeatherStation station) {
+        JButton addRemoveFavourite = new JButton();
+        if (station.isFavourite()) {
+            addRemoveFavourite.setText(REMOVE_FROM_FAVOURITES);
+        } else {
+            addRemoveFavourite.setText(ADD_TO_FAVOURITES);
+        }
+        addRemoveFavourite.addActionListener(x -> toggleFavourites(station, addRemoveFavourite));
+        return addRemoveFavourite;
+    }
+
+    private void toggleFavourites(WeatherStation station, JButton button) {
+        if (station.isFavourite()) {
+            station.setFavourite(false);
+            button.setText(ADD_TO_FAVOURITES);
+        } else {
+            button.setText(REMOVE_FROM_FAVOURITES);
+            station.setFavourite(true);
+        }
+        updateFavouritesButtons();
     }
 
     public Component getComponent() {
