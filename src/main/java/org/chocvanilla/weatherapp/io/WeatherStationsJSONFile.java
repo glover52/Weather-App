@@ -53,6 +53,7 @@ public class WeatherStationsJSONFile implements WeatherStationSource {
         stations.getFavourites()
                 .map(WeatherStation::getUniqueID)
                 .forEach(favouritesWriter::println);
+        favouritesWriter.flush();
         log.debug("Favourites saved");
 
     }
