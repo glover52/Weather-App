@@ -21,27 +21,8 @@ $ java -jar weather-app-0.1.jar
 
 ###The Interface
 #####*Main Window:*
-![main_window_labeled](resources/main_window_labeled.png)
-
-1) **Search bar** - A search bar to filter the station list
-
-2) **Station list** -  A list that shows all the known weather stations by default.
-
-3) **Favorites panel** - You favorite stations will appear here for easy access.
 
 #####*Details Window:*
-
-![details_window_chart_labeled](resources/details_window_chart_labeled.png)
-
-4) **Favorite and refresh buttons** - Buttons to add the current station to favorites, or to refresh the observation data.
-
-5) **Latest observation details** - The latest observations retrieved from BOM site.
-
-6) **Temperature history chart** - A simple plot of the temperature change over time.
-
-![details_window_table_labeled](resources/details_window_table_labeled.png)
-
-7) **Observation history table** -  A table containing detailed observation history for that station.
 
 ###Updating stations:
 Weather station information is stored in [.weather_stations.json](../.weather_stations.json) as an array of weather station objects.
@@ -52,11 +33,12 @@ If you wish to edit the weather stations known by the program, simply edit the [
 Weather stations objects in [.weather_stations.json](../.weather_stations.json) adhere to the following format:
 ```json
   {
-    "stationID": 85072,
-    "wmoNumber": 94907,
-    "name": "EAST SALE AIRPORT",
-    "state": "VIC",
-    "code": "V"
+    "stationID": 40764,
+    "wmoNumber": 94580,
+    "name": "GOLD COAST SEAWAY",
+    "state": "QLD",
+    "latitude": -27.939,
+    "longitude": 153.4283
   }
 ```
 
@@ -65,25 +47,28 @@ To add a weather station, insert the appropriate object into file:
 ```json
 [
   {
-    "stationID": 58198,
-    "wmoNumber": 94596,
-    "name": "BALLINA AIRPORT AWS",
-    "state": "NSW",
-    "code": "N"
+    "stationID": 40764,
+    "wmoNumber": 94580,
+    "name": "GOLD COAST SEAWAY",
+    "state": "QLD",
+    "latitude": -27.939,
+    "longitude": 153.4283
   },
   {
-    "stationID": 88109,
-    "wmoNumber": 94874,
-    "name": "MANGALORE AIRPORT",
-    "state": "VIC",
-    "code": "V"
+    "stationID": 40717,
+    "wmoNumber": 94592,
+    "name": "COOLANGATTA",
+    "state": "QLD",
+    "latitude": -28.1681,
+    "longitude": 153.5053
   },
   {
-    "stationID": 85072,
-    "wmoNumber": 94907,
-    "name": "EAST SALE AIRPORT",
-    "state": "VIC",
-    "code": "V"
+    "stationID": 40983,
+    "wmoNumber": 95575,
+    "name": "BEAUDESERT DRUMLEY STREET",
+    "state": "QLD",
+    "latitude": -27.9707,
+    "longitude": 152.9898
   }
 ]
 ```
@@ -108,7 +93,9 @@ This project requires java 1.8 or later to build.
 - [GSON](https://github.com/google/gson)
 - [JFreeChart](http://www.jfree.org/jfreechart/)
 - [JUnit](http://junit.org/) (testing)
+- [AssertJ Swing JUnit](http://mvnrepository.com/artifact/org.assertj/assertj-swing-junit) (testing)
 - [Hamcrest](http://hamcrest.org/JavaHamcrest/) (testing)
+- [LOGback](http://logback.qos.ch/) (logging)
 
 If gradle has not been set up, run
 ```bash
@@ -132,10 +119,10 @@ If the project has already been built, to execute the application, run
 $ ./gradlew run
 ```
 
-To assemble a standalone .jar in an archive with weather stations, run
+To assemble a standalone .jar, run
 
  ```bash
- $ ./gradlew realseZip
+ $ ./gradlew shadowJar
  ```
 
 ###Testing:
