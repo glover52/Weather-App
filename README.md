@@ -28,6 +28,17 @@ place holder
 ### Logs
 Logs can be found in [logs](logs/).
 
+### Jira Sevrver
+The server may be connected to using the following details:
+
+Web Address: http://128.199.247.226:8080/
+
+User name: guest
+
+Password: guest
+
+This server may be connected to on the RMIT intranet.
+
 ### Bamboo Server
 The server may be connected to using the following details:
 
