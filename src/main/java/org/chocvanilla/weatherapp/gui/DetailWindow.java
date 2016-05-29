@@ -138,22 +138,15 @@ public class DetailWindow {
         WeatherObservation observation = observations.iterator().next();
         checkBoxContainer.removeAll();
         for (Field field : observation.getFields()) {
-            if(fieldsToGraph.size() == 0) {
+            if(fieldsToGraph.isEmpty()) {
                 if(field.getLabel().equals("Air Temp")) {
                     fieldsToGraph.add(field);
                 }
             }
             if(field.getLabel().equals("Time")) {
-                if(fieldsToGraph.contains(field)) {
-                    JCheckBox fieldCheckBox = new JCheckBox(field.getLabel(), true);
-                    fieldCheckBox.addActionListener(x -> toggleGraph(field, chart, observations));
-                    checkBoxContainer.add(fieldCheckBox);
-                }
-                else {
-                    JCheckBox fieldCheckBox = new JCheckBox(field.getLabel());
-                    fieldCheckBox.addActionListener(x -> toggleGraph(field, chart, observations));
-                    checkBoxContainer.add(fieldCheckBox);
-                }
+                JCheckBox fieldCheckBox = new JCheckBox(field.getLabel(), fieldsToGraph.contains(field));
+                fieldCheckBox.addActionListener(x -> toggleGraph(field, chart, observations));
+                checkBoxContainer.add(fieldCheckBox);
             }
         }
     }
