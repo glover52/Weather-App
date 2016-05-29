@@ -19,6 +19,7 @@ public class WeatherCache {
 
     private static final Map<String, WeatherCache> observationCaches = new HashMap<>();
     private static final Map<String, WeatherCache> forecastCaches = new HashMap<>();
+    private static final Map<String, WeatherCache> timeMachineCaches = new HashMap<>();
 
     public static WeatherCache observing(WeatherStation station, ObservationsProvider provider) {
         return observationCaches.computeIfAbsent(station.getUniqueID(),
@@ -28,6 +29,11 @@ public class WeatherCache {
     public static WeatherCache forecasting(WeatherStation station, ForecastProvider provider) {
         return forecastCaches.computeIfAbsent(station.getUniqueID(),
                 id -> new WeatherCache(station, provider::loadForecast));
+    }
+
+    public static WeatherCache timeMachining(WeatherStation station, ObservationsProvider provider) {
+        return timeMachineCaches.computeIfAbsent(station.getUniqueID(),
+                id -> new WeatherCache(station, provider));
     }
 
     public WeatherCache(WeatherStation station, ObservationsProvider source) {
@@ -54,4 +60,6 @@ public class WeatherCache {
     public long msSinceLastRefreshed() {
         return System.currentTimeMillis() - lastRefreshed;
     }
+
+
 }

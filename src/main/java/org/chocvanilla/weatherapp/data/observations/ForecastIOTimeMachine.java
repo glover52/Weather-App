@@ -28,7 +28,7 @@ public class ForecastIOTimeMachine implements ObservationsProvider {
 
     @Override
     public WeatherObservations loadObservations(WeatherStation station) {
-        WeatherCache cache = WeatherCache.forecasting(station, this::loadObservationsUncached);
+        WeatherCache cache = WeatherCache.timeMachining(station, this::loadObservationsUncached);
         return cache.get();
     }
 
