@@ -5,7 +5,10 @@ import org.chocvanilla.weatherapp.data.observations.WeatherObservation;
 import org.chocvanilla.weatherapp.data.observations.WeatherObservations;
 import org.chocvanilla.weatherapp.data.stations.WeatherStation;
 import org.jfree.chart.*;
+import org.jfree.chart.axis.NumberAxis;
+import org.jfree.chart.axis.ValueAxis;
 import org.jfree.chart.plot.XYPlot;
+import org.jfree.chart.renderer.xy.StandardXYItemRenderer;
 import org.jfree.chart.renderer.xy.XYLineAndShapeRenderer;
 import org.jfree.data.time.*;
 import org.jfree.data.xy.XYDataset;
@@ -39,10 +42,9 @@ public class ChartHelpers {
         return dataSet;
     }
 
-    public static XYDataset createDataSets(WeatherObservations observations,
+    public static TimeSeriesCollection createDataSets(WeatherObservations observations,
                                                       ArrayList<Field> fieldsToGraph) {
         TimeSeriesCollection seriesCollection = new TimeSeriesCollection();
-        ArrayList<TimeSeries> seriesFields = new ArrayList<>();
         Map<Field, TimeSeries> seriesMap = new HashMap<>();
         for(Field field : fieldsToGraph) {
             TimeSeries series = new TimeSeries(field.getLabel());
@@ -74,6 +76,19 @@ public class ChartHelpers {
         return series;
     }
 
+    private static TimeSeriesCollection createTimeDataSet(Field field, WeatherObservations observations) {
+        TimeSeries series = new TimeSeries(field.getLabel());
+        for (WeatherObservation observation : observations) {
+            for (Field obsField : observation.getFields()) {
+                if(field == obsField) {
+                    series.addOrUpdate(new Second(observation.getTimestamp()),
+                            Integer.parseInt(obsField.getFormattedValue()));
+                }
+            }
+        }
+        return new TimeSeriesCollection(series);
+    }
+
 
     /**
      * Create a temperature chart which can be added to a graphical user interface.
@@ -85,11 +100,26 @@ public class ChartHelpers {
     public static JFreeChart createChart(WeatherStation station, WeatherObservations observations,
                                          ArrayList<Field> fieldsToGraph) {
 
-        //XYDataset dataset = createDataSet(observations);
-        XYDataset setOffields = createDataSets(observations, fieldsToGraph);
+        XYDataset dataset = createDataSet(observations);
+        //TimeSeriesCollection setOfFields = createDataSets(observations, fieldsToGraph);
 
         JFreeChart chart = ChartFactory.createTimeSeriesChart(station.toString(),
-                "Date", "Value", setOffields);
+                "Date", "Value", dataset);
+
+        XYPlot plot = chart.getXYPlot();
+        int dataSetIndex = 0;
+
+        /*for (Field field : fieldsToGraph) {
+            plot.setDataset(dataSetIndex, createTimeDataSet(field, observations));
+            plot.setRenderer(dataSetIndex, new StandardXYItemRenderer());
+            dataSetIndex++;
+        }*/
+
+        ValueAxis axis = plot.getDomainAxis();
+        axis.setAutoRange(true);
+
+        NumberAxis rangeAxis2 = new NumberAxis("Range Axis 2");
+        rangeAxis2.setAutoRangeIncludesZero(false);
 
         /*XYLineAndShapeRenderer renderer = new XYLineAndShapeRenderer();
         renderer.setSeriesPaint(0, new Color(0, 0, 0));
