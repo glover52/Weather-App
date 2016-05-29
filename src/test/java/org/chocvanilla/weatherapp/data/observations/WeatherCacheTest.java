@@ -38,7 +38,7 @@ public class WeatherCacheTest {
     }
 
     @Before
-    public void setUp() throws IOException{
+    public void setUp() throws IOException {
         cache = new WeatherCache(s, bom);
     }
 
