@@ -46,7 +46,7 @@ public class DetailWindow {
      */
     public DetailWindow() {
         frame.setName("DetailWindow");
-        frame.setMinimumSize(new Dimension(800, 640));
+        frame.setMinimumSize(new Dimension(1150, 640));
 
         JPanel container = new JPanel();
         frame.setContentPane(container);
