@@ -34,7 +34,6 @@ public class WeatherCache {
         log.debug("Created cache for '{}'", station);
         this.station = station;
         this.source = source;
-        refresh();
     }
 
     private void refresh() {
