@@ -769,5 +769,181 @@
   ],
   [
     
-  ]
+  ],
+  {
+    "date":"2016-04-22T05:53:38+0000",
+    "from":{
+      "name":"Rhys Van Orsouw",
+      "user_id":3634053
+    },
+    "message":"heres the chat log export http:\/\/puu.sh\/ornKu\/148097b51e.zip"
+  },
+  {
+    "date":"2016-04-22T06:20:55+0000",
+    "from":{
+      "name":"Bitbucket",
+      "user_id":"api"
+    },
+    "message":"<img src=\"https:\/\/hipbucket.bitbucketconnect.com\/icons\/commits-blue.png\" alt=\"\" height=\"16\" width=\"13\" \/> One commit pushed to branch <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\/branch\/master\"><strong>master<\/strong><\/a> by <a href=\"https:\/\/bitbucket.org\/RajRMIT\/\"><strong>Raj Adhikari<\/strong><\/a> in <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\"><strong>chocvanilla\/weather-app<\/strong><\/a><br \/>- Added Class Diagram\\n \u00b7 <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\/commits\/0276806a0cebbe37cb426a9ddfe94879f499bf13\">0276806<\/a>"
+  },
+  {
+    "date":"2016-04-22T06:28:07+0000",
+    "from":{
+      "name":"Bitbucket",
+      "user_id":"api"
+    },
+    "message":"<img src=\"https:\/\/hipbucket.bitbucketconnect.com\/icons\/commits-blue.png\" alt=\"\" height=\"16\" width=\"13\" \/> One commit pushed to branch <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\/branch\/master\"><strong>master<\/strong><\/a> by <a href=\"https:\/\/bitbucket.org\/glover52\/\"><strong>Kyle Glover<\/strong><\/a> in <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\"><strong>chocvanilla\/weather-app<\/strong><\/a><br \/>- Moved diagrams to docs folder\\n \u00b7 <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\/commits\/161538b284a525394a67cf61859bb6b5c5103a3a\">161538b<\/a>"
+  },
+  {
+    "date":"2016-04-22T06:58:07+0000",
+    "from":{
+      "name":"Rhys Van Orsouw",
+      "user_id":3634053
+    },
+    "message":"Guys"
+  },
+  {
+    "date":"2016-04-22T06:58:10+0000",
+    "from":{
+      "name":"Rhys Van Orsouw",
+      "user_id":3634053
+    },
+    "message":"The room works fine"
+  },
+  {
+    "date":"2016-04-22T06:58:49+0000",
+    "from":{
+      "name":"Rhys Van Orsouw",
+      "user_id":3634053
+    },
+    "message":"@UtsavAdhikari "
+  },
+  {
+    "date":"2016-04-22T06:58:50+0000",
+    "from":{
+      "name":"Rhys Van Orsouw",
+      "user_id":3634053
+    },
+    "message":"see"
+  },
+  {
+    "date":"2016-04-22T06:59:01+0000",
+    "from":{
+      "name":"Utsav Adhikari",
+      "user_id":3634595
+    },
+    "message":"got it now"
+  },
+  {
+    "date":"2016-04-22T06:59:05+0000",
+    "from":{
+      "name":"Rhys Van Orsouw",
+      "user_id":3634053
+    },
+    "message":"Had to log on in the work pc"
+  },
+  {
+    "date":"2016-04-22T06:59:06+0000",
+    "from":{
+      "name":"Rhys Van Orsouw",
+      "user_id":3634053
+    },
+    "message":"now i go"
+  },
+  {
+    "date":"2016-04-22T09:02:54+0000",
+    "from":{
+      "name":"Bitbucket",
+      "user_id":"api"
+    },
+    "message":"<img src=\"https:\/\/hipbucket.bitbucketconnect.com\/icons\/commits-blue.png\" alt=\"\" height=\"16\" width=\"13\" \/> One commit pushed to branch <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\/branch\/master\"><strong>master<\/strong><\/a> by <a href=\"https:\/\/bitbucket.org\/RajRMIT\/\"><strong>Raj Adhikari<\/strong><\/a> in <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\"><strong>chocvanilla\/weather-app<\/strong><\/a><br \/>- Updated Installation notes; reference to user manual in Usage section\\n \u00b7 <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\/commits\/3fba4df12bcb5f78554749aa18f3a49849747ed4\">3fba4df<\/a>"
+  },
+  {
+    "date":"2016-04-22T09:06:40+0000",
+    "from":{
+      "name":"Bitbucket",
+      "user_id":"api"
+    },
+    "message":"<img src=\"https:\/\/hipbucket.bitbucketconnect.com\/icons\/commits-blue.png\" alt=\"\" height=\"16\" width=\"13\" \/> One commit pushed to branch <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\/branch\/master\"><strong>master<\/strong><\/a> by <a href=\"https:\/\/bitbucket.org\/RajRMIT\/\"><strong>Raj Adhikari<\/strong><\/a> in <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\"><strong>chocvanilla\/weather-app<\/strong><\/a><br \/>- Added bitbucker URL\\n \u00b7 <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\/commits\/99c68cad80f8d3072850e6d96c4102a161e1bc62\">99c68ca<\/a>"
+  },
+  {
+    "date":"2016-04-22T09:10:47+0000",
+    "from":{
+      "name":"Bitbucket",
+      "user_id":"api"
+    },
+    "message":"<img src=\"https:\/\/hipbucket.bitbucketconnect.com\/icons\/commits-blue.png\" alt=\"\" height=\"16\" width=\"13\" \/> One commit pushed to branch <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\/branch\/master\"><strong>master<\/strong><\/a> by <a href=\"https:\/\/bitbucket.org\/s3544305\/\"><strong>Adam Thalhammer<\/strong><\/a> in <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\"><strong>chocvanilla\/weather-app<\/strong><\/a><br \/>- README.md edited online with Bitbucket \u00b7 <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\/commits\/6d2e50802cc1af40cc68db5c6113c3df690af780\">6d2e508<\/a>"
+  },
+  {
+    "date":"2016-04-22T10:00:55+0000",
+    "from":{
+      "name":"Bitbucket",
+      "user_id":"api"
+    },
+    "message":"<img src=\"https:\/\/hipbucket.bitbucketconnect.com\/icons\/commits-blue.png\" alt=\"\" height=\"16\" width=\"13\" \/> 2 commits pushed to branch <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\/branch\/master\"><strong>master<\/strong><\/a> by <a href=\"https:\/\/bitbucket.org\/RajRMIT\/\"><strong>Raj Adhikari<\/strong><\/a> in <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\"><strong>chocvanilla\/weather-app<\/strong><\/a><br \/>- Merge remote-tracking branch 'origin\/master'\\n \u00b7 <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\/commits\/8094dd7dd2ed00b0e90da09d90daa096361dfdfc\">8094dd7<\/a><br \/>- added a fatJar task\\n \u00b7 <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\/commits\/76bb4c20fd85e3c8410d80d259c75936edddeef3\">76bb4c2<\/a>"
+  },
+  {
+    "date":"2016-04-22T11:00:19+0000",
+    "from":{
+      "name":"Bitbucket",
+      "user_id":"api"
+    },
+    "message":"<img src=\"https:\/\/hipbucket.bitbucketconnect.com\/icons\/commits-blue.png\" alt=\"\" height=\"16\" width=\"13\" \/> One commit pushed to branch <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\/branch\/master\"><strong>master<\/strong><\/a> by <a href=\"https:\/\/bitbucket.org\/RajRMIT\/\"><strong>Raj Adhikari<\/strong><\/a> in <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\"><strong>chocvanilla\/weather-app<\/strong><\/a><br \/>- updated build.gradle: added new gradle tasks to easily assemble rel... \u00b7 <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\/commits\/7d3f62e480d8ca09ef300b7d7d1bb78c6ad5270e\">7d3f62e<\/a>"
+  },
+  {
+    "date":"2016-04-22T11:04:06+0000",
+    "from":{
+      "name":"Bitbucket",
+      "user_id":"api"
+    },
+    "message":"<img src=\"https:\/\/hipbucket.bitbucketconnect.com\/icons\/commits-blue.png\" alt=\"\" height=\"16\" width=\"13\" \/> 2 commits pushed to branch <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\/branch\/master\"><strong>master<\/strong><\/a> by <a href=\"https:\/\/bitbucket.org\/RajRMIT\/\"><strong>Raj Adhikari<\/strong><\/a> in <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\"><strong>chocvanilla\/weather-app<\/strong><\/a><br \/>- added latest release.\\n \u00b7 <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\/commits\/1a484e6e3b924a1acdbf8a99689b56b1a3aef856\">1a484e6<\/a><br \/>- moved releases to root\\n \u00b7 <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\/commits\/1f423d0300add125fe337812044cd1dab8331161\">1f423d0<\/a>"
+  },
+  {
+    "date":"2016-04-22T11:09:13+0000",
+    "from":{
+      "name":"Bitbucket",
+      "user_id":"api"
+    },
+    "message":"<img src=\"https:\/\/hipbucket.bitbucketconnect.com\/icons\/commits-blue.png\" alt=\"\" height=\"16\" width=\"13\" \/> One commit pushed to branch <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\/branch\/master\"><strong>master<\/strong><\/a> by <a href=\"https:\/\/bitbucket.org\/RajRMIT\/\"><strong>Raj Adhikari<\/strong><\/a> in <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\"><strong>chocvanilla\/weather-app<\/strong><\/a><br \/>- added user manual\\n \u00b7 <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\/commits\/ba675e8ed2b72b248c2d69dcca35d055f73e7c16\">ba675e8<\/a>"
+  },
+  {
+    "date":"2016-04-22T11:35:25+0000",
+    "from":{
+      "name":"Bitbucket",
+      "user_id":"api"
+    },
+    "message":"<img src=\"https:\/\/hipbucket.bitbucketconnect.com\/icons\/commits-blue.png\" alt=\"\" height=\"16\" width=\"13\" \/> One commit pushed to branch <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\/branch\/master\"><strong>master<\/strong><\/a> by <a href=\"https:\/\/bitbucket.org\/RajRMIT\/\"><strong>Raj Adhikari<\/strong><\/a> in <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\"><strong>chocvanilla\/weather-app<\/strong><\/a><br \/>- Added log files.\\n \u00b7 <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\/commits\/75b3c9f0423949323830f957d50b347725a90de6\">75b3c9f<\/a>"
+  },
+  {
+    "date":"2016-04-22T11:55:52+0000",
+    "from":{
+      "name":"Bitbucket",
+      "user_id":"api"
+    },
+    "message":"<img src=\"https:\/\/hipbucket.bitbucketconnect.com\/icons\/commits-blue.png\" alt=\"\" height=\"16\" width=\"13\" \/> One commit pushed to branch <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\/branch\/master\"><strong>master<\/strong><\/a> by <a href=\"https:\/\/bitbucket.org\/s3544305\/\"><strong>Adam Thalhammer<\/strong><\/a> in <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\"><strong>chocvanilla\/weather-app<\/strong><\/a><br \/>- added javadoc, fixed javadoc issue in Favourites class comment\\n \u00b7 <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\/commits\/ceb552d521a83aa1ae83ce84e6d3f29957bf0812\">ceb552d<\/a>"
+  },
+  {
+    "date":"2016-04-22T12:13:22+0000",
+    "from":{
+      "name":"Bitbucket",
+      "user_id":"api"
+    },
+    "message":"<img src=\"https:\/\/hipbucket.bitbucketconnect.com\/icons\/commits-blue.png\" alt=\"\" height=\"16\" width=\"13\" \/> One commit pushed to branch <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\/branch\/master\"><strong>master<\/strong><\/a> by <a href=\"https:\/\/bitbucket.org\/RajRMIT\/\"><strong>Raj Adhikari<\/strong><\/a> in <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\"><strong>chocvanilla\/weather-app<\/strong><\/a><br \/>- Added High level components diagram\\nadded resources subdir to reduc... \u00b7 <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\/commits\/89c38b9a31e79f9cc501aa5c514be56e5187f5a6\">89c38b9<\/a>"
+  },
+  {
+    "date":"2016-04-22T12:38:34+0000",
+    "from":{
+      "name":"Bitbucket",
+      "user_id":"api"
+    },
+    "message":"<img src=\"https:\/\/hipbucket.bitbucketconnect.com\/icons\/commits-blue.png\" alt=\"\" height=\"16\" width=\"13\" \/> One commit pushed to branch <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\/branch\/master\"><strong>master<\/strong><\/a> by <a href=\"https:\/\/bitbucket.org\/s3544305\/\"><strong>Adam Thalhammer<\/strong><\/a> in <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\"><strong>chocvanilla\/weather-app<\/strong><\/a><br \/>- added instructions for repository access\\n \u00b7 <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\/commits\/a7749798635e38e766951bdfe419bd5fa3748363\">a774979<\/a>"
+  },
+  {
+    "date":"2016-04-22T12:41:44+0000",
+    "from":{
+      "name":"Bitbucket",
+      "user_id":"api"
+    },
+    "message":"<img src=\"https:\/\/hipbucket.bitbucketconnect.com\/icons\/commits-blue.png\" alt=\"\" height=\"16\" width=\"13\" \/> One commit pushed to branch <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\/branch\/master\"><strong>master<\/strong><\/a> by <a href=\"https:\/\/bitbucket.org\/RajRMIT\/\"><strong>Raj Adhikari<\/strong><\/a> in <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\"><strong>chocvanilla\/weather-app<\/strong><\/a><br \/>- Fixed team members leaking across pages\\n \u00b7 <a href=\"https:\/\/bitbucket.org\/chocvanilla\/weather-app\/commits\/eca43a8fa310d64d26f17313ee03afde611a631b\">eca43a8<\/a>"
+  }
 ]
