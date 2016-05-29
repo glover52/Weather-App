@@ -17,12 +17,7 @@ $ java -jar weather-app-0.1.jar
 
 ##Usage
 
- This is a basic overview. Please consult the [User Manual](User Manual.pdf) for a detailed explanation of the program.
-
-###The Interface
-#####*Main Window:*
-
-#####*Details Window:*
+Please consult the [User Manual](User Manual.pdf) for a detailed explanation of the program.
 
 ###Updating stations:
 Weather station information is stored in [.weather_stations.json](../.weather_stations.json) as an array of weather station objects.
