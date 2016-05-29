@@ -14,9 +14,15 @@ public class Field {
 
     public Field(String labelText, Function<Object, String> formatter, Object obj, boolean isGraphable) {
         label = labelText;
-        formattedValue = formatter.apply(obj);
-        graphable = isGraphable;
-        value = obj;
+        if (obj == null){
+            formattedValue = "N/A";
+            value = 0;
+            graphable = false;
+        } else {
+            formattedValue = formatter.apply(obj);
+            graphable = isGraphable;
+            value = obj;
+        }
     }
 
     public Field(String labelText, String format, Object value, boolean isGraphable) {
