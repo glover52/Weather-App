@@ -130,3 +130,52 @@ test status file [link]()  <!-- TODO -->
 **Expected Outcome**
 
 - The chart will zoom out to the standard level of magnification
+
+###TC08:
+
+**Scenario**: Main window location and size are preserved from previous execution
+
+**Set Up**: None
+
+**Procedure**
+
+1. Start the application
+2. Maximize the main window
+3. Close the window
+
+**Expected Outcome**
+
+- The application will open maximized.
+
+###TC09:
+
+**Scenario**: Detail window location and size are preserved from previous execution
+
+**Set Up**: None
+
+**Procedure**
+
+1. Start the application.
+2. Select an arbitrary weather station.
+3. Click any one of the "BOM observations", "Forecast.io observations", "Forecast" to open details window.
+4. Maximize details window.
+5. Close details window.
+
+**Expected Outcome**
+
+- The details window will open maximized.
+
+###TC10:
+
+**Scenario**: Weather stations list can be filtered through a search
+
+**Set Up**: None
+
+**Procedure**
+
+1. Start the application.
+2. Type the word "Melbourne" into the search bar.
+
+**Expected Outcome**
+
+- Only weather stations with "Melbourne" will appear on the list.
