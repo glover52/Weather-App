@@ -9,7 +9,11 @@ public class WeatherObservations extends AbstractCollection<WeatherObservation> 
     private final List<WeatherObservation> observations;
 
     public WeatherObservations(WeatherObservation... observations) {
-        this.observations = Arrays.asList(observations);
+        this(Arrays.asList(observations));
+    }
+    
+    public WeatherObservations(List<WeatherObservation> list) {
+        this.observations = list;
     }
 
     @Override
