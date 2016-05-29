@@ -49,8 +49,7 @@ public class ChartHelpers {
      * @param observations the observations to show
      * @return a displayable {@link ChartPanel}
      */
-    public static JFreeChart createChart(WeatherStation station, WeatherObservations observations,
-                                         ArrayList<Field> fieldsToGraph) {
+    public static JFreeChart createChart(WeatherStation station, WeatherObservations observations) {
 
         XYDataset dataset = createDataSet(observations);
 

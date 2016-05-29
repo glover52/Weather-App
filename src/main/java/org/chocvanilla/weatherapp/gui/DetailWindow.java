@@ -107,7 +107,7 @@ public class DetailWindow {
         buttonContainer.repaint();
         // Chart
 
-        JFreeChart chart = ChartHelpers.createChart(station, observations, fieldsToGraph);
+        JFreeChart chart = ChartHelpers.createChart(station, observations);
         updateChart(chart);
 
         addCheckBoxes(observations, chart);
