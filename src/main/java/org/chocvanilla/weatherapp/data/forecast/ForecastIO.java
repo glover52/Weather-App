@@ -13,6 +13,9 @@ import java.io.*;
 import java.net.URL;
 
 public class ForecastIO implements ForecastProvider {
+    public static final String API_CALL_FORMAT = "https://api.forecast.io/forecast/%s/%f,%f" +
+            "?units=ca&exclude=currently,minutely,daily,alerts,flags" +
+            "&extend=hourly";
     private final Gson gson;
     protected final Logger log = LoggerFactory.getLogger(getClass());
 
@@ -39,7 +42,8 @@ public class ForecastIO implements ForecastProvider {
 
     private WeatherObservations downloadForecastFor(double latitude, double longitude) throws IOException {
         String api_key = KeyProvider.getForecastAPIKey();
-        String request = String.format("https://api.forecast.io/forecast/%s/%f,%f?units=ca", api_key, latitude, longitude);
+        String request = 
+                String.format(API_CALL_FORMAT, api_key, latitude, longitude);
         try (BufferedReader reader = new BufferedReader(new InputStreamReader(new URL(request).openStream()))) {
             JsonObject object = (JsonObject) new JsonParser().parse(reader);
             JsonElement data = object.get("hourly").getAsJsonObject().get("data");

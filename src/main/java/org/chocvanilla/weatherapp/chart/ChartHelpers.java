@@ -1,6 +1,5 @@
 package org.chocvanilla.weatherapp.chart;
 
-import org.chocvanilla.weatherapp.data.observations.Field;
 import org.chocvanilla.weatherapp.data.observations.WeatherObservation;
 import org.chocvanilla.weatherapp.data.observations.WeatherObservations;
 import org.chocvanilla.weatherapp.data.stations.WeatherStation;
@@ -8,17 +7,10 @@ import org.jfree.chart.*;
 import org.jfree.chart.axis.NumberAxis;
 import org.jfree.chart.axis.ValueAxis;
 import org.jfree.chart.plot.XYPlot;
-import org.jfree.chart.renderer.xy.StandardXYItemRenderer;
-import org.jfree.chart.renderer.xy.XYLineAndShapeRenderer;
 import org.jfree.data.time.*;
 import org.jfree.data.xy.XYDataset;
 
 import java.awt.*;
-import java.sql.Time;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
 
 public class ChartHelpers {
 
