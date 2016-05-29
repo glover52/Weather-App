@@ -2528,14 +2528,6 @@
     "longitude": 146.4289
   },
   {
-    "stationID": 23123,
-    "wmoNumber": 99673,
-    "name": "ADELAIDE AIRPORT (ANEMOMETER NORTHEAST)",
-    "state": "SA",
-    "latitude": -34.9382,
-    "longitude": 138.5435
-  },
-  {
     "stationID": 23887,
     "wmoNumber": 94683,
     "name": "KUITPO FOREST RESERVE",
@@ -2552,28 +2544,12 @@
     "longitude": 147.1222
   },
   {
-    "stationID": 23124,
-    "wmoNumber": 99674,
-    "name": "ADELAIDE AIRPORT (ANEMOMETER NORTHWEST",
-    "state": "SA",
-    "latitude": -34.9435,
-    "longitude": 138.5232
-  },
-  {
     "stationID": 23034,
     "wmoNumber": 94672,
     "name": "ADELAIDE AIRPORT",
     "state": "SA",
     "latitude": -34.9524,
     "longitude": 138.5204
-  },
-  {
-    "stationID": 23109,
-    "wmoNumber": 99672,
-    "name": "ADELAIDE AIRPORT (ANEMOMETER SOUTH WEST)",
-    "state": "SA",
-    "latitude": -34.9573,
-    "longitude": 138.5152
   },
   {
     "stationID": 91344,
