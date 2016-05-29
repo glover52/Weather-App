@@ -50,6 +50,7 @@ public class MainWindow {
         frame.setMinimumSize(new Dimension(800, 600));
         buildContainerLayout();
         frame.pack();
+        searchBox.requestFocusInWindow();
     }
 
     public void addListener(WindowListener l) {
@@ -148,6 +149,7 @@ public class MainWindow {
     }
 
     private JPanel buildSearchPanel() {
+
         JPanel searchPanel = new JPanel(new BorderLayout());
         searchPanel.add(searchBox, BorderLayout.NORTH);
 
