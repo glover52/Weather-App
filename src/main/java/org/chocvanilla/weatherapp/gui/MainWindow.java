@@ -21,7 +21,7 @@ import java.util.concurrent.FutureTask;
 public class MainWindow {
     protected final Logger log = LoggerFactory.getLogger(getClass());
     private static final String NO_FAVOURITES =
-            "You have no favorites! Open a station and click the favorites button to see it here.";
+            "<HTML>You have no favorites! <br> Open a station and click the favorites button to see it here.</HTML>";
     private static final String ADD_TO_FAVOURITES = "☆ Favourite";
     private static final String REMOVE_FROM_FAVOURITES = "★ Unfavourite";
     private final JFrame frame = new JFrame("Weather App");
@@ -47,7 +47,7 @@ public class MainWindow {
         detailWindow = details;
         detailWindow.setFavouritesListener(this::updateFavouritesButtons);
         frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-        frame.setMinimumSize(new Dimension(800, 600));
+        frame.setMinimumSize(new Dimension(850, 600));
         buildContainerLayout();
         frame.pack();
         searchBox.requestFocusInWindow();
