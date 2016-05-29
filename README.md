@@ -29,6 +29,11 @@ place holder
 Logs can be found in [logs](logs/).
 
 ### Jira Sevrver
+A virtual server was used to host the JIRA application. JIRA was used throughout the project to assign tasks, track
+issues, and organise sprints. JIRA was also integrated with the Bamboo server, allowing it to display whether a build
+was successful or not. JIRA was also integrated into the HipChat server, broadcasting when commits and merges
+are made.
+
 The server may be connected to using the following details:
 
 Web Address: http://128.199.247.226:8080/
@@ -40,6 +45,9 @@ Password: guest
 This server may be connected to on the RMIT intranet.
 
 ### Bamboo Server
+Bamboo was an invaluable tool for finding bugs not instantly obvious under visual inspection. Bamboo was also integrated
+into teh HipChat server, so that the status of a build was displayed upon completion of testing.
+
 The server may be connected to using the following details:
 
 Web Address: http://128.199.247.226:8085/bamboo/
