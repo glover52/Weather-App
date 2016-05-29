@@ -158,13 +158,14 @@ public class DetailWindow {
         for (Field field : observation.getFields()) {
             if(field.isGraphable()) {
                 JCheckBox fieldCheckBox = new JCheckBox(field.getLabel(), fieldsToGraph.contains(field.getLabel()));
-                fieldCheckBox.addActionListener(x -> toggleGraph(field, chart, observations));
+                fieldCheckBox.addActionListener(x -> 
+                        toggleGraph(fieldCheckBox, field, chart, observations));
                 checkBoxContainer.add(fieldCheckBox);
             }
         }
     }
 
-    private void toggleGraph(Field field, JFreeChart chart, WeatherObservations observations) {
+    private void toggleGraph(JCheckBox box, Field field, JFreeChart chart, WeatherObservations observations) {
         if(fieldsToGraph.contains(field.getLabel())) {
             if(fieldsToGraph.size() > 1) {
                 fieldsToGraph.remove(field.getLabel());
@@ -172,7 +173,7 @@ public class DetailWindow {
                 log.debug("Field: " + field.getLabel() + " removed from list.");
             }
             else {
-
+                box.setSelected(true);
             }
         }
         else {
