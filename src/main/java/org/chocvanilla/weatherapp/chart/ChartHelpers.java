@@ -54,7 +54,7 @@ public class ChartHelpers {
         XYDataset dataset = createDataSet(observations);
 
         JFreeChart chart = ChartFactory.createTimeSeriesChart(station.toString(),
-                "Date", "Value", dataset);
+                "Date", "", dataset);
 
         XYPlot plot = chart.getXYPlot();
 
