@@ -1,6 +1,7 @@
 package org.chocvanilla.weatherapp.data.observations;
 
 import com.google.gson.Gson;
+import org.chocvanilla.weatherapp.data.DataHelpers;
 import org.chocvanilla.weatherapp.data.stations.WeatherStation;
 import org.chocvanilla.weatherapp.data.stations.WeatherStations;
 import org.chocvanilla.weatherapp.io.WeatherStationSource;
@@ -17,7 +18,7 @@ public class BureauOfMeteorologyTest {
 
     @Before
     public void setUp(){
-        bom = new BureauOfMeteorology(new Gson());
+        bom = new BureauOfMeteorology(DataHelpers.observationsGson());
     }
 
     @Test
