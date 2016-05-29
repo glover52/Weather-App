@@ -166,9 +166,14 @@ public class DetailWindow {
 
     private void toggleGraph(Field field, JFreeChart chart, WeatherObservations observations) {
         if(fieldsToGraph.contains(field.getLabel())) {
-            fieldsToGraph.remove(field.getLabel());
-            removeFieldFromGraph(field, chart);
-            log.debug("Field: " + field.getLabel() + " removed from list.");
+            if(fieldsToGraph.size() > 1) {
+                fieldsToGraph.remove(field.getLabel());
+                removeFieldFromGraph(field, chart);
+                log.debug("Field: " + field.getLabel() + " removed from list.");
+            }
+            else {
+
+            }
         }
         else {
             fieldsToGraph.add(field.getLabel());
