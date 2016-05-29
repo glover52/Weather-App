@@ -25,7 +25,6 @@ public class WeatherCacheTest {
         WeatherStation s = ws.stream()
                 .findAny()
                 .get();
-
         BureauOfMeteorology bom = new BureauOfMeteorology(DataHelpers.observationsGson());
 
         cache = new WeatherCache(s, bom);

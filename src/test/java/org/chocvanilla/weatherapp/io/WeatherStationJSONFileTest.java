@@ -12,9 +12,7 @@ import java.util.List;
 import static org.hamcrest.Matchers.empty;
 import static org.hamcrest.Matchers.is;
 import static org.hamcrest.Matchers.not;
-import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertThat;
-
 
 public class WeatherStationJSONFileTest {
     private final Gson gson = new Gson();
@@ -28,9 +26,8 @@ public class WeatherStationJSONFileTest {
     @Test
     public void testLoad() throws IOException{
         List<WeatherStation> ws = source.load();
-        assertNotNull(ws);
+        assertThat(ws, is(not(empty())));
     }
-
 
     @Test
     public void weatherStationsJSONFileIsPresent() throws IOException {

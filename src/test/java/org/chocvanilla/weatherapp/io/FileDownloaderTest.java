@@ -61,6 +61,4 @@ public class FileDownloaderTest {
         assertEquals(p.getParent().getFileName().toString(), testDir);
         assertEquals(p.getFileName().toString(), testFile);
     }
-
-
 }

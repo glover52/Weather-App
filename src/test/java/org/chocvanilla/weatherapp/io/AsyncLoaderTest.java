@@ -1,13 +1,16 @@
 package org.chocvanilla.weatherapp.io;
 
+import com.google.gson.Gson;
 import org.chocvanilla.weatherapp.data.forecast.ForecastProvider;
 import org.chocvanilla.weatherapp.data.observations.ObservationsProvider;
 import org.chocvanilla.weatherapp.data.observations.WeatherObservations;
 import org.chocvanilla.weatherapp.data.stations.WeatherStation;
+import org.chocvanilla.weatherapp.data.stations.WeatherStations;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.BeforeClass;
 
+import java.io.IOException;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.FutureTask;
 
@@ -17,52 +20,14 @@ public class AsyncLoaderTest {
 
     private AsyncLoader loader;
     private static WeatherStation station;
+    private static Gson gson = new Gson();
+    private static WeatherStationsJSONFile source = new WeatherStationsJSONFile(gson);
 
     @BeforeClass
-    public static void setUpClass(){
-        // Mock station
-        station = new WeatherStation() {
-            @Override
-            public String getName() {
-                return "Station Name";
-            }
-
-            @Override
-            public String getState() {
-                return "STATE";
-            }
-
-            @Override
-            public boolean isFavourite() {
-                return false;
-            }
-
-            @Override
-            public void setFavourite(boolean favourite) {
-
-            }
-
-            @Override
-            public String getUniqueID() {
-                return "ID";
-            }
-
-            @Override
-            public double getLatitude() {
-                return 0;
-            }
-
-            @Override
-            public double getLongitude() {
-                return 0;
-            }
-
-            @Override
-            public int compareTo(WeatherStation o) {
-                return 0;
-            }
-        };
-
+    public static void setUpClass() throws IOException{
+        station = WeatherStations.loadFrom(source).stream().
+                findAny().
+                get();
     }
 
     @Before
@@ -72,9 +37,7 @@ public class AsyncLoaderTest {
 
     @Test
     public void loadObservationTest() throws ExecutionException, InterruptedException {
-
         ObservationsProvider observer = mockStation -> new WeatherObservations();
-
         FutureTask<WeatherObservations> ft = loader.loadAsync(observer);
         WeatherObservations wo = ft.get();
         assertNotNull(wo);
@@ -82,9 +45,7 @@ public class AsyncLoaderTest {
 
     @Test
     public void loadForecastTest() throws ExecutionException, InterruptedException {
-
         ForecastProvider forecast = mockStation -> new WeatherObservations();
-
         FutureTask<WeatherObservations> ft = loader.loadForecastAsync(forecast);
         WeatherObservations wo = ft.get();
         assertNotNull(wo);
