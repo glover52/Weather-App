@@ -1,4 +1,8 @@
 org.chocvanilla.weatherapp
 org.chocvanilla.weatherapp.chart
 org.chocvanilla.weatherapp.data
+org.chocvanilla.weatherapp.data.forecast
+org.chocvanilla.weatherapp.data.observations
+org.chocvanilla.weatherapp.data.stations
 org.chocvanilla.weatherapp.gui
+org.chocvanilla.weatherapp.io

@@ -161,7 +161,7 @@ public class DetailWindow {
 
     /**
      * Shows time since the last JSON was downloaded.
-     * @param millis
+     * @param millis the number of milliseconds elapsed
      */
     public void updateTimeSinceLastRefresh(long millis) {
         refreshStatusLabel.setText(String.format("Last refresh: %d seconds ago.",
