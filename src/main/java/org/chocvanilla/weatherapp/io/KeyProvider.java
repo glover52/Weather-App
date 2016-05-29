@@ -3,7 +3,7 @@ package org.chocvanilla.weatherapp.io;
 import java.io.IOException;
 
 public class KeyProvider {
-    private static String key = "52630e6a72bebe703e82148de11ec407";
+    private static String key;
 
     public static String getForecastAPIKey() throws MissingAPIKeyException {
         try {
