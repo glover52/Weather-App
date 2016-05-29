@@ -16,6 +16,8 @@
 
 ###TC01:
 
+#####Status: PASS
+
 **Scenario**: User can favorite channels from details window.
 
 **Set Up**: Start program.
@@ -34,6 +36,8 @@
 
 ###TC02:
 
+#####Status: PASS
+
 **Scenario**: User can favorite channels in town panel.
 
 **Set Up**: Start program.
@@ -49,6 +53,8 @@
 - Favorited weather station will now appear on the favorites list
 
 ###TC03:
+
+#####Status: PASS
 
 **Scenario**: User opens detail window to show BOM weather observations history
 
@@ -66,6 +72,8 @@
 
 ###TC04:
 
+#####Status: PASS
+
 **Scenario**: User opens detail window to show Forecast.io weather observations history
 
 **Set Up**: Start program, select arbitrary weather station.
@@ -81,6 +89,8 @@
 - Observation history chart will be visible.
 
 ###TC05:
+
+#####Status: PASS
 
 **Scenario**: User opens detail window to show Forecast.io weather forecast
 
@@ -98,6 +108,8 @@
 
 ###TC06:
 
+#####Status: PASS
+
 **Scenario**: User can toggle data sets displayed on the chart.
 
 **Set Up**: Start program, select arbitrary weather station.
@@ -113,6 +125,8 @@
 - The chart will zoom into the selected portion of the chart
 
 ###TC07:
+
+#####Status: PASS
 
 **Scenario**: User can zoom out of a chart that has been magnified.
 
@@ -131,6 +145,8 @@
 
 ###TC08:
 
+#####Status: PASS
+
 **Scenario**: Main window location and size are preserved from previous execution
 
 **Set Up**: None
@@ -146,6 +162,8 @@
 - The application will open maximized.
 
 ###TC09:
+
+#####Status: PASS
 
 **Scenario**: Detail window location and size are preserved from previous execution
 
@@ -165,6 +183,8 @@
 
 ###TC10:
 
+#####Status: PASS
+
 **Scenario**: Weather stations list can be filtered through a search
 
 **Set Up**: None
@@ -177,3 +197,20 @@
 **Expected Outcome**
 
 - Only weather stations with "Melbourne" will appear on the list.
+
+###TC11:
+
+#####Status: PASS
+
+**Scenario**: Weather stations will display latest retrievable data when selected in town panel.
+
+**Set Up**: Start the application.
+
+**Procedure**
+
+1. Select an arbitrary weather station.
+
+**Expected Outcome**
+
+- Town panel will display latest observations.
+- Observation, Forecast, and Favorite buttons will be visible.
