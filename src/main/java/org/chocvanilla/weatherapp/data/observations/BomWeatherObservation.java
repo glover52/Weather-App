@@ -61,12 +61,12 @@ public class BomWeatherObservation implements WeatherObservation {
         final SimpleDateFormat DATE = new SimpleDateFormat();
 
         return Arrays.asList(
-                new Field("Time", DATE::format, timestamp),
+                new Field("Time", DATE::format, timestamp, false),
                 new Field("Air Temp", DEG_C,airTemperature),
                 new Field("Apparent Temp", DEG_C,apparentTemperature),
                 new Field("Gust (km/h)", KM_H, gustKm),
                 new Field("Gust (kt)",KT, gustKt),
-                new Field("Wind Direction", "%s", windDir),
+                new Field("Wind Direction", "%s", windDir, false),
                 new Field("Wind Speed (km/h)", KM_H, windSpdKmh),
                 new Field("Wind Speed (kt)",KT, windSpdKt),
                 new Field("Dew Point", DEG_C, dewPt),
