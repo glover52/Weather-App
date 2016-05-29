@@ -105,8 +105,8 @@ public class MainWindow {
         topPanel.add(new JLabel(station.getName()), BorderLayout.NORTH);
 
         JButton showForecast = new JButton("Forecast");
-        JButton showBOMObservation = new JButton("BOM Observations");
-        JButton showForecastIOObservation = new JButton("Forecast.io Observations");
+        JButton showBOMObservation = new JButton("Observations(BOM)");
+        JButton showForecastIOObservation = new JButton("Observations(Forecast.io)");
         JButton toggleFavourite = buildFavouritesButton(station);
 
 
