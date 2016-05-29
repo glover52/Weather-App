@@ -24,7 +24,7 @@ public class ChartHelpers {
      * @return a data set containing the time series of weather observations
      */
     public static XYDataset createDataSet(WeatherObservations observations) {
-        return createDataSet(new Field("Air Temp", "", null), observations);
+        return createDataSet(new Field("Air Temp", "", ""), observations);
     }
 
     public static XYDataset createDataSet(Field field, WeatherObservations observations) {
