@@ -74,7 +74,7 @@ public class ChartHelpers {
      */
     public static void enableGridlines(XYPlot plot) {
         GradientPaint g = new GradientPaint(
-                0.0f, 0.0f, new Color(200, 210, 255),
+                0.0f, 0.0f, new Color(227, 239, 255),
                 0.0f, 0.0f, new Color(255, 255, 255)
         );
 
