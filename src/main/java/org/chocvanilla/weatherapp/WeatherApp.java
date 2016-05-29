@@ -31,8 +31,8 @@ public class WeatherApp {
             WeatherStations stations = WeatherStations.loadFrom(source);
             DetailWindow details = new DetailWindow();
             MainWindow window = new MainWindow(stations, observations, forecast, details);
+            details.setFavouritesListener(window);
             details.addListener(new WindowLocationManager(gson, window.getComponent()));
-            // get component is a dirty hack
             window.addListener(new WindowLocationManager(gson, new Rectangle(800, 600)));
             window.addListener(new FavouritesManager(stations, observations));
             window.show();

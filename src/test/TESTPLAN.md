@@ -1,7 +1,5 @@
 # Acceptance testing plan
 
-test status file [link]()  <!-- TODO -->
-
 ## Acceptance Criteria
 
 - Forecast information is displayed in a chart and table.
