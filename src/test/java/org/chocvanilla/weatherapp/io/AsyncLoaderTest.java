@@ -25,9 +25,9 @@ public class AsyncLoaderTest {
 
     @BeforeClass
     public static void setUpClass() throws IOException {
-        station = WeatherStations.loadFrom(source).stream().
-                findAny().
-                get();
+        station = WeatherStations.loadFrom(source).stream()
+                .findAny()
+                .get();
     }
 
     @Before
@@ -38,7 +38,7 @@ public class AsyncLoaderTest {
     @Test
     public void loadObservationTest() throws ExecutionException, InterruptedException {
         ObservationsProvider observer = mockStation -> new WeatherObservations();
-        FutureTask<WeatherObservations> ft = loader.loadAsync(observer);
+        FutureTask<WeatherObservations> ft = loader.loadAsync(observer::loadObservations);
         WeatherObservations wo = ft.get();
         assertNotNull(wo);
     }
@@ -46,7 +46,7 @@ public class AsyncLoaderTest {
     @Test
     public void loadForecastTest() throws ExecutionException, InterruptedException {
         ForecastProvider forecast = mockStation -> new WeatherObservations();
-        FutureTask<WeatherObservations> ft = loader.loadForecastAsync(forecast);
+        FutureTask<WeatherObservations> ft = loader.loadAsync(forecast::loadForecast);
         WeatherObservations wo = ft.get();
         assertNotNull(wo);
     }

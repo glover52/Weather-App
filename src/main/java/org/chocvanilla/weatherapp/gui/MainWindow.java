@@ -86,7 +86,12 @@ public class MainWindow {
     private void updateTownPanel(WeatherStation station) {
         townPanel.removeAll();
 
-        SwingUtilities.invokeLater(() -> addCurrentWeatherToTownPanel(new AsyncLoader(station).loadAsync(observationsProvider)));
+        SwingUtilities.invokeLater(() -> {
+            FutureTask<WeatherObservations> source = 
+                    new AsyncLoader(station).loadAsync(observationsProvider::loadObservations);
+            new AsyncLoader(station).loadAsync(forecastProvider::loadForecast); // preload forecast
+            addCurrentWeatherToTownPanel(source);
+        });
 
 
         JPanel buttonPanel = new JPanel(new FlowLayout());

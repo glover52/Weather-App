@@ -23,7 +23,7 @@ public class FavouritesManager extends WindowAdapter {
     @Override
     public void windowOpened(WindowEvent e) {
         allStations.getFavourites().forEach(
-                station -> new AsyncLoader(station).loadAsync(provider));
+                station -> new AsyncLoader(station).loadAsync(provider::loadObservations));
     }
 
     @Override
