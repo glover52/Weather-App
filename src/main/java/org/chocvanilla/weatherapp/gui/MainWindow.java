@@ -1,5 +1,6 @@
 package org.chocvanilla.weatherapp.gui;
 
+import com.google.gson.Gson;
 import org.chocvanilla.weatherapp.data.forecast.ForecastProvider;
 import org.chocvanilla.weatherapp.data.observations.*;
 import org.chocvanilla.weatherapp.data.stations.WeatherStation;
@@ -33,6 +34,7 @@ public class MainWindow {
     private final JList<WeatherStation> stationList = new JList<>();
     private JPanel favouritesPanel;
     private JPanel townPanel;
+    private ObservationsProvider alternativeObservationsProvider = new ForecastIOTimeMachine(new Gson());
 
 
     public MainWindow(WeatherStations weatherStations,
@@ -126,6 +128,9 @@ public class MainWindow {
     }
 
     private void openForecastIOObservation(WeatherStation station) {
+        if (station != null) {
+            openChart(station, alternativeObservationsProvider);
+        }
 
     }
 

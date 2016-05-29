@@ -18,6 +18,7 @@ public class ForecastIOTimeMachine implements ObservationsProvider {
     public static final String API_CALL_FORMAT = "https://api.forecast.io/forecast/%s/%f,%f,%d" +
             "?units=ca" +
             "&exclude=minutely,daily,alerts,flags";
+    public static final int NUMBER_OF_DAYS = 14;
     private final Gson gson;
     protected final Logger log = LoggerFactory.getLogger(getClass());
 
@@ -46,7 +47,7 @@ public class ForecastIOTimeMachine implements ObservationsProvider {
         String api_key = KeyProvider.getForecastAPIKey();
         List<WeatherObservation> obs = new ArrayList<>();
         
-        for (int i = 0; i < 14; i++) {
+        for (int i = 0; i < NUMBER_OF_DAYS; i++) {
             String request =
                     String.format(API_CALL_FORMAT, api_key, latitude, longitude, 
                             Instant.now().minus(Duration.ofDays(i)).getEpochSecond());
