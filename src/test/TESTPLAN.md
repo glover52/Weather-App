@@ -88,3 +88,31 @@ test status file [link]()  <!-- TODO -->
 - Latest Observations will be visible.
 - Forecast chart will be visible.
 
+###TC06:
+
+**Scenario**: User can toggle data sets displayed on the chart.
+
+**Set Up**: Start program, select arbitrary weather station.
+
+**Procedure**
+1. Click on "Forecast.io Observations button"
+2. Click any one of the "BOM observations", "Forecast.io observations", "Forecast" to open details window.
+3. Click and drag a rectangle from top left to bottom right. While dragging a rectangle will be displayed on the portion of the chart to be magnified.
+
+**Expected Outcome**
+- The chart will zoom into the selected portion of the chart
+
+###TC07:
+
+**Scenario**: User can zoom out of a chart that has been magnified.
+
+**Set Up**: Start program, select arbitrary weather station, and open details window.
+
+**Procedure**
+1. Click on "Forecast.io Observations button"
+2. Click any one of the "BOM observations", "Forecast.io observations", "Forecast" to open details window.
+3. Click and drag a rectangle from top left to bottom right. While dragging a rectangle will be displayed on the portion of the chart to be magnified.
+4. Click and drag from right to left.
+
+**Expected Outcome**
+- The chart will zoom out to the standard level of magnification
