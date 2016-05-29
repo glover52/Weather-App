@@ -11,6 +11,12 @@ For access, please send an email to one of the team members listed below.
  - Rhys Van Orsouw (s3542173)
  - Kyle Glover (s3539870)
 
+### Project Changes
+The project underwent a restructure and code refactor, into a layered architecture. Charting was done in a more dynamic
+ way to allow for addition and removal of components. The retrieval of data was refactored to a more Object Orientated
+ approach, allowing the extension of existing frameworks to new data formats. A User Interface was also done, creating a
+ more intuitive design, allowing users to see Forecasts and past Observations.
+
 ### Source
 Application source code can be found in [src/main](src/main).
 
