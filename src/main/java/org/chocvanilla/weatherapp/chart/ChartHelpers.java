@@ -43,7 +43,7 @@ public class ChartHelpers {
     }
 
     /**
-     * Create a temperature chart which can be added to a graphical user interface.
+     * Create a chart which can be added to a graphical user interface.
      *
      * @param station      the weather station this chart is based on
      * @param observations the observations to show
@@ -68,6 +68,10 @@ public class ChartHelpers {
         return chart;
     }
 
+    /**
+     * Method to set up visual aspect of graphs X and Y lines
+     * @param plot the graphs plot.
+     */
     public static void enableGridlines(XYPlot plot) {
         GradientPaint g = new GradientPaint(
                 0.0f, 0.0f, new Color(200, 210, 255),

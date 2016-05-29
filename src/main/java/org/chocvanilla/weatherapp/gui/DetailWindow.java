@@ -23,6 +23,13 @@ public class DetailWindow {
     private static final String ADD_TO_FAVOURITES = "☆ Favourite";
     private static final String REMOVE_FROM_FAVOURITES = "★ Unfavourite";
 
+    private static final String OPEN_SOURCE_COMPONENTS =
+            "<HTML> Graph made using: JFreeChart" +
+                    "<br>" +
+                    "Observations supplied by: Bureau of Meteorology and Forecast.io" +
+                    "<br>" +
+                    "Forecast supplied by: Forecast.io </HTML>";
+
     protected final Logger log = LoggerFactory.getLogger(getClass());
 
     private final JFrame frame = new JFrame();
@@ -41,30 +48,36 @@ public class DetailWindow {
     private Map<String, Integer> dataSetIndex = new HashMap<>();
 
     /**
-     * Create a new window, in which a chart with the most recent temperatures is displayed, both as a chart, and in a
-     * table. View is modelled in tabs.
+     * Create a new window, in which a chart with the most recent data is displayed, both as a chart, and in a
+     * table. View is modelled in tabs. Data can be toggled on and off the chart.
      */
     public DetailWindow() {
         frame.setName("DetailWindow");
-        frame.setMinimumSize(new Dimension(1150, 640));
+        frame.setMinimumSize(new Dimension(1150, 665));
 
         JPanel container = new JPanel();
         frame.setContentPane(container);
         container.setLayout(new BoxLayout(container, BoxLayout.Y_AXIS));
 
+        // set layout managers
         buttonContainer.setLayout(new FlowLayout(FlowLayout.LEFT, 10, 10));
         latestObsContainer.setBorder(BorderFactory.createTitledBorder("Latest Observations"));
         checkBoxContainer.setLayout(new BoxLayout(checkBoxContainer, BoxLayout.Y_AXIS));
         chartContainer.setLayout(new BorderLayout());
 
+        // add panels to frame
         container.add(buttonContainer);
         container.add(latestObsContainer);
         container.add(buildHistoryContainer());
     }
 
+    /**
+     * Method to create tabs to contain both teh graph and table data.
+     * @return The tabbed JPane.
+     */
     private JTabbedPane buildHistoryContainer() {
         tableContainer.setLayout(new GridBagLayout());
-        historyContainer.setBorder(BorderFactory.createTitledBorder("Observation History"));
+        historyContainer.setBorder(BorderFactory.createTitledBorder("Weather Observations"));
         historyContainer.addTab("Chart", chartContainer);
         historyContainer.addTab("Table", tableContainer);
         return historyContainer;
@@ -104,13 +117,16 @@ public class DetailWindow {
         // Need to revalidate to avoid artifacts from previous button
         buttonContainer.revalidate();
         buttonContainer.repaint();
-        // Chart
 
+        // Chart
         JFreeChart chart = ChartHelpers.createChart(station, observations);
         updateChart(chart);
-
+        // Checkboxes for chart
         addCheckBoxes(observations, chart);
         chartContainer.add(checkBoxContainer, BorderLayout.EAST);
+
+        // Open source recognitions
+        chartContainer.add(new JLabel(OPEN_SOURCE_COMPONENTS), BorderLayout.SOUTH);
 
 
         // Table
@@ -126,6 +142,11 @@ public class DetailWindow {
         frame.setVisible(true);
     }
 
+    /**
+     * Populates a HashMap of integers, where the key is the name of the field. Used for adding and removing items from
+     * the graph.
+     * @param observations gives list of fields to graph.
+     */
     private void populateDataSetIndex(WeatherObservations observations) {
         WeatherObservation observation = observations.iterator().next();
         int x = 0;
@@ -138,6 +159,10 @@ public class DetailWindow {
         log.debug(dataSetIndex.toString());
     }
 
+    /**
+     * Shows time since the last JSON was downloaded.
+     * @param millis
+     */
     public void updateTimeSinceLastRefresh(long millis) {
         refreshStatusLabel.setText(String.format("Last refresh: %d seconds ago.",
                 TimeUnit.MILLISECONDS.toSeconds(millis)));
@@ -147,12 +172,19 @@ public class DetailWindow {
         timer.start();
     }
 
+    /**
+     * Adds checkbox's for the fields dynamically to the graph.
+     * @param observations the observations, required to get list of fields that can be graphed.
+     * @param chart the chart object being passed to the toggle function.
+     */
     private void addCheckBoxes(WeatherObservations observations, JFreeChart chart) {
         WeatherObservation observation = observations.iterator().next();
         checkBoxContainer.removeAll();
         if (fieldsToGraph.size() == 0) {
             fieldsToGraph.add("Air Temp");
         }
+
+        // If field is a quantifiable data item, allows user to graph it.
         for (Field field : observation.getFields()) {
             if (field.isGraphable()) {
                 JCheckBox fieldCheckBox = new JCheckBox(field.getLabel(), fieldsToGraph.contains(field.getLabel()));
@@ -163,6 +195,14 @@ public class DetailWindow {
         }
     }
 
+    /**
+     * Decides whether the action adds or removes the field, depending on its current state. Will not allow user to
+     * remove all items from the graph.
+     * @param box The checkbox being checked. Required to stop user from removing ALL values from graph
+     * @param field the field being toggled
+     * @param chart the graph the field is being added or removed to/from
+     * @param observations list of observations being added/removed.
+     */
     private void toggleGraph(JCheckBox box, Field field, JFreeChart chart, WeatherObservations observations) {
         if (fieldsToGraph.contains(field.getLabel())) {
             if (fieldsToGraph.size() > 1) {
@@ -179,12 +219,23 @@ public class DetailWindow {
         }
     }
 
+    /**
+     * Removes field in question from the graph.
+     * @param field the field to be removed
+     * @param chart the graph which the field is being removed from
+     */
     private void removeFieldFromGraph(Field field, JFreeChart chart) {
         XYPlot plot = chart.getXYPlot();
         plot.setDataset(dataSetIndex.get(field.getLabel()), null);
         // do not set the renderer to null, otherwise grid lines are lost
     }
 
+    /**
+     * Adds the field in question to the graph, and adds the plot line renderer.
+     * @param field field to be added
+     * @param chart chart in which the field is being added
+     * @param observations context of Weather Observations being added to the graph.
+     */
     private void addFieldToGraph(Field field, JFreeChart chart, WeatherObservations observations) {
         XYPlot plot = chart.getXYPlot();
         plot.setDataset(dataSetIndex.get(field.getLabel()), ChartHelpers.createDataSet(field, observations));
@@ -233,7 +284,7 @@ public class DetailWindow {
             chartPanel = new ChartPanel(chart);
             chartPanel.setMaximumDrawHeight(Integer.MAX_VALUE);
             chartPanel.setMaximumDrawWidth(Integer.MAX_VALUE);
-            chartContainer.add(chartPanel);
+            chartContainer.add(chartPanel, BorderLayout.NORTH);
         } else {
             chartPanel.setChart(chart);
         }
@@ -269,7 +320,6 @@ public class DetailWindow {
 
     /**
      * Method for toggling the favourites button between either Adding to Favourites, or Removing from Favourites.
-     * Makes us of the {@link FavouritesUpdatedListener} to dynamically update the favourites list in the Main Window
      *
      * @param station handle on the station object being operated on.
      * @param button  handle on the favourite button
