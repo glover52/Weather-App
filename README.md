@@ -28,6 +28,17 @@ place holder
 ### Logs
 Logs can be found in [logs](logs/).
 
+### Bamboo Server
+The server may be connected to using the following details:
+
+Web Address: http://128.199.247.226:8085/bamboo/
+
+User Name: guest
+
+password: guest
+
+Please note that the server cannot be accessed from the RMIT intranet, as port 8085 is blocked.
+
 ## Contribution
 ##### Adam Thalhammer (25%)
 Worked on:
