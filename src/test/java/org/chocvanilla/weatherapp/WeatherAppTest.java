@@ -4,7 +4,6 @@ import com.google.gson.Gson;
 import org.chocvanilla.weatherapp.data.DataHelpers;
 import org.chocvanilla.weatherapp.data.observations.*;
 import org.chocvanilla.weatherapp.data.stations.*;
-import org.chocvanilla.weatherapp.io.WeatherStationSource;
 import org.chocvanilla.weatherapp.io.WeatherStationsJSONFile;
 import org.jfree.chart.ChartPanel;
 import org.jfree.chart.JFreeChart;
@@ -15,7 +14,8 @@ import javax.swing.*;
 import java.awt.*;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
-import java.util.*;
+import java.util.GregorianCalendar;
+import java.util.Optional;
 import java.util.function.Predicate;
 
 import static org.chocvanilla.weatherapp.chart.ChartHelpers.createChart;
@@ -96,7 +96,7 @@ public class WeatherAppTest {
         assertTrue(maybe.isPresent());
         WeatherStation station = maybe.get();
         WeatherObservations observations = bom.loadObservations(station);
-        JFreeChart testChart = createChart(station, observations, new ArrayList<>());
+        JFreeChart testChart = createChart(station, observations);
         JFrame frame = setUpTestWindow();
         ChartPanel panel = new ChartPanel(testChart);
         frame.add(panel);
@@ -122,7 +122,7 @@ public class WeatherAppTest {
     @Test
     public void fieldShouldContainDateInformation() {
         SimpleDateFormat format = new SimpleDateFormat("dd");
-        Field f2 = new Field("Test2", format::format, new GregorianCalendar(2016, 1, 20).getTime());
+        Field f2 = new Field("Test2", format::format, new GregorianCalendar(2016, 1, 20).getTime(), false);
         assertThat(f2.toString(), containsString("20"));
     }
 }

@@ -4,7 +4,7 @@ import java.io.IOException;
 
 public class KeyProvider {
     private static String key;
-    
+
     public static String getForecastAPIKey() throws MissingAPIKeyException {
         try {
             if (key == null) {
@@ -12,7 +12,7 @@ public class KeyProvider {
             }
             return key;
         } catch (IOException e) {
-            throw new MissingAPIKeyException("ForecastIO API key missing, go to https://developer.forecast.io/register");    
+            throw new MissingAPIKeyException("ForecastIO API key missing, go to https://developer.forecast.io/register");
         }
     }
 }
