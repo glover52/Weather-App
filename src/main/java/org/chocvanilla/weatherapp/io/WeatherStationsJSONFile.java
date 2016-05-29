@@ -2,21 +2,20 @@ package org.chocvanilla.weatherapp.io;
 
 import com.google.gson.Gson;
 import org.chocvanilla.weatherapp.data.stations.*;
-import org.chocvanilla.weatherapp.gui.MessageBox;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.io.*;
 import java.nio.file.*;
 import java.util.*;
-import java.util.concurrent.ExecutionException;
 
 import static org.chocvanilla.weatherapp.io.FileSystemHelpers.getResource;
 
 public class WeatherStationsJSONFile implements WeatherStationSource {
     protected final Logger log = LoggerFactory.getLogger(getClass());
     private static final String STATIONS_PATH = "/.weather_stations.json";
-    private static final Path FAVOURITES_PATH = Paths.get(".preferences", "favourites.dat");
+    private static final String TARGET  = ".preferences";
+    private static final Path FAVOURITES_PATH = Paths.get(TARGET, "favourites.dat");
     private final Gson gson;
 
     public WeatherStationsJSONFile(Gson gson) {
@@ -48,6 +47,7 @@ public class WeatherStationsJSONFile implements WeatherStationSource {
     }
 
     public void save(WeatherStations stations) throws IOException {
+        Paths.get(TARGET).toFile().mkdirs();
         log.debug("Attempting to save favourites");
         PrintWriter favouritesWriter = new PrintWriter(Files.newBufferedWriter(FAVOURITES_PATH));
         stations.getFavourites()
