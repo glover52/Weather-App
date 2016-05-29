@@ -33,7 +33,7 @@ public class ChartHelpers {
      * @return a data set containing the time series of weather observations
      */
     public static XYDataset createDataSet(WeatherObservations observations) {
-        TimeSeries series = new TimeSeries("Temperature");
+        TimeSeries series = new TimeSeries("Air Temp");
         for (WeatherObservation obs : observations) {
             series.addOrUpdate(new Second(obs.getTimestamp()), obs.getAirTemperature());
         }

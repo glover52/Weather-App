@@ -40,7 +40,7 @@ public class DetailWindow {
     private final JLabel refreshStatusLabel = new JLabel();
     
     private ChartPanel chartPanel = null;
-    private ArrayList<Field> fieldsToGraph = new ArrayList<>();
+    private ArrayList<String> fieldsToGraph = new ArrayList<>();
     private FavouritesUpdatedListener favouritesUpdatedListener;
 
     private Map<String, Integer> dataSetIndex = new HashMap<>();
@@ -51,7 +51,7 @@ public class DetailWindow {
      */
     public DetailWindow() {
         frame.setName("DetailWindow");
-        frame.setMinimumSize(new Dimension(700, 710));
+        frame.setMinimumSize(new Dimension(800, 640));
         
         JPanel container = new JPanel();
         frame.setContentPane(container);
@@ -131,8 +131,10 @@ public class DetailWindow {
         WeatherObservation observation = observations.iterator().next();
         int x = 0;
         for (Field field : observation.getFields()) {
-            dataSetIndex.put(field.getLabel(), x);
-            x++;
+            if(field.isGraphable()) {
+                dataSetIndex.put(field.getLabel(), x);
+                x++;
+            }
         }
         log.debug(dataSetIndex.toString());
     }
@@ -144,19 +146,16 @@ public class DetailWindow {
         Timer timer = new Timer(1000, x -> refreshStatusLabel.setText(""));
         timer.setRepeats(false);
         timer.start();
-
     }
 
     private void addCheckBoxes(WeatherObservations observations, JFreeChart chart) {
         WeatherObservation observation = observations.iterator().next();
         checkBoxContainer.removeAll();
+        if(fieldsToGraph.size() == 0) {
+            fieldsToGraph.add("Air Temp");
+        }
         for (Field field : observation.getFields()) {
-            if(fieldsToGraph.isEmpty()) {
-                if(field.getLabel().equals("Air Temp")) {
-                    fieldsToGraph.add(field);
-                }
-            }
-            if(!field.getLabel().equals("Time")) {
+            if(field.isGraphable()) {
                 JCheckBox fieldCheckBox = new JCheckBox(field.getLabel(), fieldsToGraph.contains(field));
                 fieldCheckBox.addActionListener(x -> toggleGraph(field, chart, observations));
                 checkBoxContainer.add(fieldCheckBox);
@@ -166,10 +165,12 @@ public class DetailWindow {
 
     private void toggleGraph(Field field, JFreeChart chart, WeatherObservations observations) {
         if(fieldsToGraph.contains(field)) {
+            fieldsToGraph.remove(field.getLabel());
             removeFieldFromGraph(field, chart);
             log.debug("Field: " + field.getLabel() + " removed from list.");
         }
         else {
+            fieldsToGraph.add(field.getLabel());
             addFieldToGraph(field, chart, observations);
             log.debug("Field: " + field.getLabel() + " added to list.");
         }
