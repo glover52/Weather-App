@@ -104,17 +104,18 @@ public class MainWindow {
 
         JButton showForecast = new JButton("Forecast");
         JButton showBOMObservation = new JButton("BOM Observations");
-        JButton showForcastIOObservation = new JButton("Forecast.io Observations");
+        JButton showForecastIOObservation = new JButton("Forecast.io Observations");
         JButton toggleFavourite = buildFavouritesButton(station);
 
 
         showForecast.addActionListener(x -> openForecast(station));
         showBOMObservation.addActionListener(x -> openBOMObservations(station));
-        showForcastIOObservation.addActionListener(x -> openForecastIOObservation(station));
+        showForecastIOObservation.addActionListener(x -> openForecastIOObservation(station));
 
         buttonPanel.add(showForecast);
         buttonPanel.add(showBOMObservation);
-        buttonPanel.add(showForcastIOObservation);
+        buttonPanel.add(showForecastIOObservation);
+
         topPanel.add(toggleFavourite);
 
         townPanel.add(buttonPanel, BorderLayout.SOUTH);
