@@ -332,7 +332,7 @@ public class DetailWindow {
             button.setText(REMOVE_FROM_FAVOURITES);
             station.setFavourite(true);
         }
-        favouritesUpdatedListener.update();
+        favouritesUpdatedListener.favouritesUpdated();
     }
 }
 

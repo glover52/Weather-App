@@ -19,7 +19,7 @@ import java.util.concurrent.ExecutionException;
 import java.util.concurrent.FutureTask;
 
 
-public class MainWindow {
+public class MainWindow implements FavouritesUpdatedListener{
     protected final Logger log = LoggerFactory.getLogger(getClass());
     private static final String NO_FAVOURITES =
             "<HTML>You have no favorites! <br> Open a station and click the favorites button to see it here.</HTML>";
@@ -47,7 +47,6 @@ public class MainWindow {
         frame.setName("MainWindow");
         log.debug("{} created with {} weather stations", frame.getName(), weatherStations.size());
         detailWindow = details;
-        detailWindow.setFavouritesListener(this::updateFavouritesButtons);
         frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         frame.setMinimumSize(new Dimension(990, 600));
         buildContainerLayout();
@@ -203,12 +202,12 @@ public class MainWindow {
     private JPanel buildFavouritesPanel() {
         favouritesPanel = new JPanel();
         favouritesPanel.setLayout(new BoxLayout(favouritesPanel, BoxLayout.Y_AXIS));
-        updateFavouritesButtons();
+        favouritesUpdated();
         favouritesPanel.setBorder(BorderFactory.createTitledBorder("Favourites"));
         return favouritesPanel;
     }
 
-    private void updateFavouritesButtons() {
+    public void favouritesUpdated() {
         favouritesPanel.removeAll();
         Iterable<WeatherStation> favourites = () -> stations.getFavourites().iterator();
         boolean hasFavourites = false;
@@ -251,7 +250,7 @@ public class MainWindow {
             button.setText(REMOVE_FROM_FAVOURITES);
             station.setFavourite(true);
         }
-        updateFavouritesButtons();
+        favouritesUpdated();
     }
 
     public Component getComponent() {
