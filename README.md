@@ -71,20 +71,21 @@ Please note that the server cannot be accessed from the RMIT intranet, as port 8
 ##### Adam Thalhammer (25%)
 Worked on:
 
-- GUI implementation using Swing
-- Recommended and set up Gradle
-- Weather station search
-- Refactored favourites
-- JIRA setup
-- Conducted main portion of testing
-- IntelliJ recommendation
-- Multi-threading
+- Project Restructure
+- Extending data sources to Forecast.io
+- Exception Handling
+- Project Logging
+- Debugging
+- OO design emphasis
+- Unit Testing
+
 
 As a team member, Adam worked together with Raj and completed a vast majority of the backend of the project. Adam also
 conducted most of the major testing and was the first person to suggest applications/software to use for the project.
 The use of Gradle for build automation and dependency management was Adam's idea, and he provided assistance consistently in the use and
 maintenance of this useful tool. Furthermore, Adam worked well in tandem with Kyle to organise a virtual server, using student credit to pay for it,
-and set up the Centos server to run JIRA.
+and set up the Centos server to run JIRA. Adam continued to implement strong ideas, and enforced good Software Engineering
+principles throughout the project.
 
 ##### Utsav Adhikari (25%)
 Worked on:
@@ -92,13 +93,15 @@ Worked on:
 - Retrieving data from the Bureau of Meteorology website
 - Weather observation table
 - Weather station search
-- GUI layout
-- Added details under graph
+- Unit testing
+- Stress Testing
+- Acceptance Testing
 
 Raj worked mainly on the back end of the project with some aspects of design in the station GUI. Along with Adam, he
 was the main driving force behind the back end programming of the assignment and worked until the very end of the
 project whilst also balancing other assignments. Raj also made great contributions in regards to the UML and
-organisation of code structure.
+organisation of code structure. Raj provided invaluable test cases and testing framework to properly test the
+application in many ways.
 
 ##### Rhys Van Orsouw (25%)
 Worked on:
@@ -107,6 +110,7 @@ Worked on:
 - Favourites
 - Favourites button (For addition and removal)
 - GUI layout
+- GUI restructure
 - Managed HipChat
 
 Rhys worked solo on the presentation of the graph, not only that, he constructed many aspects of the GUI and had a large
@@ -120,9 +124,8 @@ Worked on:
 - JIRA setup
 - Managed JIRA
 - Managed group Git repositories (branches, .gitignore, etc.)
-- Created documentation
-- First initial work on favourites class
-- Fixed basic test errors from JUnit + Gradle
+- User Documentation
+- Bug Tracking and assignment.
 
 Kyle worked in conjunction with Adam in setting up the dedicated JIRA server, and continued to maintain the server,
 while also keeping the group organised, and managing the JIRA tasks and sprints. Kyle also helped in assigning tasks to
