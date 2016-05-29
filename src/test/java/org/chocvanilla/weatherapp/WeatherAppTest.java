@@ -96,7 +96,7 @@ public class WeatherAppTest {
         assertTrue(maybe.isPresent());
         WeatherStation station = maybe.get();
         WeatherObservations observations = bom.loadObservations(station);
-        JFreeChart testChart = createChart(station, observations, new ArrayList<>());
+        JFreeChart testChart = createChart(station, observations);
         JFrame frame = setUpTestWindow();
         ChartPanel panel = new ChartPanel(testChart);
         frame.add(panel);
