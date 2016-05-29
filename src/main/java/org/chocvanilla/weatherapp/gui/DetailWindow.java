@@ -5,6 +5,12 @@ import org.chocvanilla.weatherapp.data.observations.*;
 import org.chocvanilla.weatherapp.data.stations.WeatherStation;
 import org.jfree.chart.ChartPanel;
 import org.jfree.chart.JFreeChart;
+import org.jfree.chart.plot.XYPlot;
+import org.jfree.chart.renderer.xy.StandardXYItemRenderer;
+import org.jfree.data.time.Second;
+import org.jfree.data.time.TimeSeries;
+import org.jfree.data.time.TimeSeriesCollection;
+import org.jfree.data.xy.XYDataset;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -34,6 +40,8 @@ public class DetailWindow {
     private ChartPanel chartPanel = null;
     private ArrayList<Field> fieldsToGraph = new ArrayList<>();
     private FavouritesUpdatedListener favouritesUpdatedListener;
+
+    private int dataSetIndex = 0;
 
     /**
      * Create a new window, in which a chart with the most recent temperatures is displayed, both as a chart, and in a
@@ -94,11 +102,13 @@ public class DetailWindow {
         buttonContainer.revalidate();
         buttonContainer.repaint();
         // Chart
-        addCheckBoxes(observations);
-        chartContainer.add(checkBoxContainer, BorderLayout.EAST);
+
 
         JFreeChart chart = ChartHelpers.createChart(station, observations, fieldsToGraph);
         updateChart(chart);
+
+        addCheckBoxes(observations, chart);
+        chartContainer.add(checkBoxContainer, BorderLayout.EAST);
 
 
         // Table
@@ -124,7 +134,7 @@ public class DetailWindow {
 
     }
 
-    private void addCheckBoxes(WeatherObservations observations) {
+    private void addCheckBoxes(WeatherObservations observations, JFreeChart chart) {
         WeatherObservation observation = observations.iterator().next();
         checkBoxContainer.removeAll();
         for (Field field : observation.getFields()) {
@@ -136,27 +146,56 @@ public class DetailWindow {
             if(field.getLabel() != "Time") {
                 if(fieldsToGraph.contains(field)) {
                     JCheckBox fieldCheckBox = new JCheckBox(field.getLabel(), true);
-                    fieldCheckBox.addActionListener(x -> toggleGraph(field));
+                    fieldCheckBox.addActionListener(x -> toggleGraph(field, chart, observations));
                     checkBoxContainer.add(fieldCheckBox);
                 }
                 else {
                     JCheckBox fieldCheckBox = new JCheckBox(field.getLabel());
-                    fieldCheckBox.addActionListener(x -> toggleGraph(field));
+                    fieldCheckBox.addActionListener(x -> toggleGraph(field, chart, observations));
                     checkBoxContainer.add(fieldCheckBox);
                 }
             }
         }
     }
 
-    private void toggleGraph(Field field) {
+    private void toggleGraph(Field field, JFreeChart chart, WeatherObservations observations) {
         if(fieldsToGraph.contains(field)) {
-            fieldsToGraph.remove(field);
+            removeFieldFromGraph(field, chart);
+           // fieldsToGraph.remove(field);
             log.debug("Field: " + field.getLabel() + " removed from list.");
         }
         else {
-            fieldsToGraph.add(field);
+            addFieldToGraph(field, chart, observations);
+            //fieldsToGraph.add(field);
             log.debug("Field: " + field.getLabel() + " added to list.");
         }
+    }
+
+    private void removeFieldFromGraph(Field field, JFreeChart chart) {
+
+    }
+
+    private void addFieldToGraph(Field field, JFreeChart chart, WeatherObservations observations) {
+        XYPlot plot = chart.getXYPlot();
+        dataSetIndex++;
+        plot.setDataset(dataSetIndex, createDataSet(field, observations));
+        plot.setRenderer(dataSetIndex, new StandardXYItemRenderer());
+
+        updateChart(chart);
+    }
+
+    private XYDataset createDataSet(Field field, WeatherObservations observations) {
+        TimeSeries series = new TimeSeries(field.getLabel());
+        for(WeatherObservation observation : observations) {
+            for (Field obsField : observation.getFields()) {
+                if (field == obsField) {
+                    series.addOrUpdate(new Second(observation.getTimestamp()),
+                            Double.parseDouble(obsField.getFormattedValue()));
+                }
+            }
+        }
+
+        return new TimeSeriesCollection(series);
     }
 
     /**
