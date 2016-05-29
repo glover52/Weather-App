@@ -139,11 +139,11 @@ public class DetailWindow {
         checkBoxContainer.removeAll();
         for (Field field : observation.getFields()) {
             if(fieldsToGraph.size() == 0) {
-                if(field.getLabel() == "Air Temp") {
+                if(field.getLabel().equals("Air Temp")) {
                     fieldsToGraph.add(field);
                 }
             }
-            if(field.getLabel() != "Time") {
+            if(field.getLabel().equals("Time")) {
                 if(fieldsToGraph.contains(field)) {
                     JCheckBox fieldCheckBox = new JCheckBox(field.getLabel(), true);
                     fieldCheckBox.addActionListener(x -> toggleGraph(field, chart, observations));
