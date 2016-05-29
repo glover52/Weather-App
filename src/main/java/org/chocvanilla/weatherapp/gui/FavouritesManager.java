@@ -2,6 +2,7 @@ package org.chocvanilla.weatherapp.gui;
 
 import org.chocvanilla.weatherapp.data.observations.ObservationsProvider;
 import org.chocvanilla.weatherapp.data.stations.WeatherStations;
+import org.chocvanilla.weatherapp.io.AsyncLoader;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -21,7 +22,8 @@ public class FavouritesManager extends WindowAdapter {
 
     @Override
     public void windowOpened(WindowEvent e) {
-        allStations.getFavourites().forEach(provider::loadObservations);
+        allStations.getFavourites().forEach(
+                station -> new AsyncLoader(station).loadAsync(provider));
     }
 
     @Override
