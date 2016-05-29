@@ -3,7 +3,10 @@ package org.chocvanilla.weatherapp.data.stations;
 import org.chocvanilla.weatherapp.io.WeatherStationSource;
 
 import java.io.IOException;
-import java.util.*;
+import java.util.AbstractCollection;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
 import java.util.stream.Stream;
 
 public class WeatherStations extends AbstractCollection<WeatherStation> {
@@ -21,7 +24,7 @@ public class WeatherStations extends AbstractCollection<WeatherStation> {
         return result;
     }
 
-    public void save() throws IOException{
+    public void save() throws IOException {
         dataSource.save(this);
     }
 

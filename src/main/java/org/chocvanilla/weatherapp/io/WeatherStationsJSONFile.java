@@ -1,20 +1,29 @@
 package org.chocvanilla.weatherapp.io;
 
 import com.google.gson.Gson;
-import org.chocvanilla.weatherapp.data.stations.*;
+import org.chocvanilla.weatherapp.data.stations.BomWeatherStation;
+import org.chocvanilla.weatherapp.data.stations.WeatherStation;
+import org.chocvanilla.weatherapp.data.stations.WeatherStations;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.io.*;
-import java.nio.file.*;
-import java.util.*;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.util.Arrays;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
 
 import static org.chocvanilla.weatherapp.io.FileSystemHelpers.getResource;
 
 public class WeatherStationsJSONFile implements WeatherStationSource {
     protected final Logger log = LoggerFactory.getLogger(getClass());
     private static final String STATIONS_PATH = "/.weather_stations.json";
-    private static final String TARGET  = ".preferences";
+    private static final String TARGET = ".preferences";
     private static final Path FAVOURITES_PATH = Paths.get(TARGET, "favourites.dat");
     private final Gson gson;
 
@@ -28,7 +37,7 @@ public class WeatherStationsJSONFile implements WeatherStationSource {
         try (BufferedReader favouritesReader = Files.newBufferedReader(FAVOURITES_PATH)) {
             favouritesReader.lines().forEach(favourites::add);
             log.debug("{} favourites loaded", favourites.size());
-        } catch  (IOException e) {
+        } catch (IOException e) {
             log.error("Unable to favourites from '{}'", FAVOURITES_PATH, e);
         }
 

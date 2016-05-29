@@ -19,31 +19,31 @@ public class WeatherCache {
 
     private static final Map<String, WeatherCache> observationCaches = new HashMap<>();
     private static final Map<String, WeatherCache> forecastCaches = new HashMap<>();
-    
+
     public static WeatherCache observing(WeatherStation station, ObservationsProvider provider) {
-        return observationCaches.computeIfAbsent(station.getUniqueID(), 
+        return observationCaches.computeIfAbsent(station.getUniqueID(),
                 id -> new WeatherCache(station, provider));
     }
-    
+
     public static WeatherCache forecasting(WeatherStation station, ForecastProvider provider) {
-        return forecastCaches.computeIfAbsent(station.getUniqueID(), 
+        return forecastCaches.computeIfAbsent(station.getUniqueID(),
                 id -> new WeatherCache(station, provider::loadForecast));
     }
-    
+
     public WeatherCache(WeatherStation station, ObservationsProvider source) {
         log.debug("Created cache for '{}'", station);
         this.station = station;
         this.source = source;
         refresh();
     }
-    
+
     private void refresh() {
         log.debug("Refreshed cache for '{}'", station);
         observations = source.loadObservations(station);
         lastRefreshed = System.currentTimeMillis();
     }
-    
-    public WeatherObservations get(){
+
+    public WeatherObservations get() {
         if (msSinceLastRefreshed() > CACHE_EXPIRY_MILLIS) {
             refresh();
         } else {
@@ -51,7 +51,7 @@ public class WeatherCache {
         }
         return observations;
     }
-    
+
     public long msSinceLastRefreshed() {
         return System.currentTimeMillis() - lastRefreshed;
     }

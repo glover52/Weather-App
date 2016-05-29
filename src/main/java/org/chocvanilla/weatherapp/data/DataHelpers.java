@@ -11,17 +11,18 @@ public class DataHelpers {
 
     /**
      * Prepare a gson object that can cope with the Bureau of Meteorology data format.
+     *
      * @return a configured Gson
      */
     public static Gson observationsGson() {
         return new GsonBuilder()
-                .registerTypeAdapter(Float.class, 
+                .registerTypeAdapter(Float.class,
                         (JsonDeserializer<Float>) DataHelpers::deserializeFloat)
                 .registerTypeAdapter(Date.class,
                         (JsonDeserializer<Date>) DataHelpers::deserializeDate)
                 .create();
     }
-    
+
     /**
      * Deserialize a float value. If absent or invalid, 0.0f is returned.
      * Needed to cope with missing Bureau of Meteorology data.

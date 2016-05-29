@@ -5,7 +5,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 // fields are auto-set by Gson
-@SuppressWarnings("unused") 
+@SuppressWarnings("unused")
 public class BomWeatherStation implements WeatherStation {
     protected final Logger log = LoggerFactory.getLogger(getClass());
 

@@ -17,7 +17,7 @@ public class BureauOfMeteorologyTest {
     private BureauOfMeteorology bom;
 
     @Before
-    public void setUp(){
+    public void setUp() {
         bom = new BureauOfMeteorology(DataHelpers.observationsGson());
     }
 
@@ -28,7 +28,7 @@ public class BureauOfMeteorologyTest {
         WeatherStation s = ws.stream()
                 .findAny()
                 .get();
-        WeatherObservations ob =  bom.loadObservations(s);
+        WeatherObservations ob = bom.loadObservations(s);
 
         assertNotNull(ob);
     }

@@ -1,7 +1,10 @@
 package org.chocvanilla.weatherapp.gui;
 
 import org.chocvanilla.weatherapp.chart.ChartHelpers;
-import org.chocvanilla.weatherapp.data.observations.*;
+import org.chocvanilla.weatherapp.data.observations.Field;
+import org.chocvanilla.weatherapp.data.observations.ObservationsProvider;
+import org.chocvanilla.weatherapp.data.observations.WeatherObservation;
+import org.chocvanilla.weatherapp.data.observations.WeatherObservations;
 import org.chocvanilla.weatherapp.data.stations.WeatherStation;
 import org.jfree.chart.ChartPanel;
 import org.jfree.chart.JFreeChart;
@@ -27,9 +30,9 @@ public class DetailWindow {
     private static final String REFRESH = "↻ Refresh";
     private static final String ADD_TO_FAVOURITES = "☆ Favourite";
     private static final String REMOVE_FROM_FAVOURITES = "★ Unfavourite";
-    
+
     protected final Logger log = LoggerFactory.getLogger(getClass());
-    
+
     private final JFrame frame = new JFrame();
     private final JPanel latestObsContainer = new JPanel();
     private final JPanel chartContainer = new JPanel();
@@ -38,7 +41,7 @@ public class DetailWindow {
     private final JPanel buttonContainer = new JPanel();
     private final JTabbedPane historyContainer = new JTabbedPane();
     private final JLabel refreshStatusLabel = new JLabel();
-    
+
     private ChartPanel chartPanel = null;
     private ArrayList<String> fieldsToGraph = new ArrayList<>();
     private FavouritesUpdatedListener favouritesUpdatedListener;
@@ -52,11 +55,11 @@ public class DetailWindow {
     public DetailWindow() {
         frame.setName("DetailWindow");
         frame.setMinimumSize(new Dimension(800, 640));
-        
+
         JPanel container = new JPanel();
         frame.setContentPane(container);
         container.setLayout(new BoxLayout(container, BoxLayout.Y_AXIS));
-        
+
         buttonContainer.setLayout(new FlowLayout(FlowLayout.LEFT, 10, 10));
         latestObsContainer.setBorder(BorderFactory.createTitledBorder("Latest Observations"));
         checkBoxContainer.setLayout(new BoxLayout(checkBoxContainer, BoxLayout.Y_AXIS));
@@ -132,7 +135,7 @@ public class DetailWindow {
         WeatherObservation observation = observations.iterator().next();
         int x = 0;
         for (Field field : observation.getFields()) {
-            if(field.isGraphable()) {
+            if (field.isGraphable()) {
                 dataSetIndex.put(field.getLabel(), x);
                 x++;
             }
@@ -140,8 +143,8 @@ public class DetailWindow {
         log.debug(dataSetIndex.toString());
     }
 
-    public void updateTimeSinceLastRefresh(long millis){
-        refreshStatusLabel.setText(String.format("Last refresh: %d seconds ago.", 
+    public void updateTimeSinceLastRefresh(long millis) {
+        refreshStatusLabel.setText(String.format("Last refresh: %d seconds ago.",
                 TimeUnit.MILLISECONDS.toSeconds(millis)));
 
         Timer timer = new Timer(1000, x -> refreshStatusLabel.setText(""));
@@ -152,13 +155,13 @@ public class DetailWindow {
     private void addCheckBoxes(WeatherObservations observations, JFreeChart chart) {
         WeatherObservation observation = observations.iterator().next();
         checkBoxContainer.removeAll();
-        if(fieldsToGraph.size() == 0) {
+        if (fieldsToGraph.size() == 0) {
             fieldsToGraph.add("Air Temp");
         }
         for (Field field : observation.getFields()) {
-            if(field.isGraphable()) {
+            if (field.isGraphable()) {
                 JCheckBox fieldCheckBox = new JCheckBox(field.getLabel(), fieldsToGraph.contains(field.getLabel()));
-                fieldCheckBox.addActionListener(x -> 
+                fieldCheckBox.addActionListener(x ->
                         toggleGraph(fieldCheckBox, field, chart, observations));
                 checkBoxContainer.add(fieldCheckBox);
             }
@@ -166,17 +169,15 @@ public class DetailWindow {
     }
 
     private void toggleGraph(JCheckBox box, Field field, JFreeChart chart, WeatherObservations observations) {
-        if(fieldsToGraph.contains(field.getLabel())) {
-            if(fieldsToGraph.size() > 1) {
+        if (fieldsToGraph.contains(field.getLabel())) {
+            if (fieldsToGraph.size() > 1) {
                 fieldsToGraph.remove(field.getLabel());
                 removeFieldFromGraph(field, chart);
                 log.debug("Field: " + field.getLabel() + " removed from list.");
-            }
-            else {
+            } else {
                 box.setSelected(true);
             }
-        }
-        else {
+        } else {
             fieldsToGraph.add(field.getLabel());
             addFieldToGraph(field, chart, observations);
             log.debug("Field: " + field.getLabel() + " added to list.");
@@ -193,12 +194,12 @@ public class DetailWindow {
         XYPlot plot = chart.getXYPlot();
         plot.setDataset(dataSetIndex.get(field.getLabel()), createDataSet(field, observations));
         plot.setRenderer(dataSetIndex.get(field.getLabel()), new StandardXYItemRenderer());
-        
+
     }
 
     private XYDataset createDataSet(Field field, WeatherObservations observations) {
         TimeSeries series = new TimeSeries(field.getLabel());
-        for(WeatherObservation observation : observations) {
+        for (WeatherObservation observation : observations) {
             for (Field obsField : observation.getFields()) {
                 if (field.isGraphable() && field.getLabel().equals(obsField.getLabel())) {
                     series.addOrUpdate(new Second(observation.getTimestamp()),

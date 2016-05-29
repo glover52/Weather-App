@@ -5,7 +5,9 @@ import org.chocvanilla.weatherapp.data.observations.WeatherObservation;
 
 import java.text.SimpleDateFormat;
 import java.time.Instant;
-import java.util.*;
+import java.util.Arrays;
+import java.util.Date;
+import java.util.List;
 
 @SuppressWarnings("unused")
 public class ForecastObservation implements WeatherObservation {
@@ -40,7 +42,7 @@ public class ForecastObservation implements WeatherObservation {
         final String KT = "%.1f kt";
         final String MM = "%.1f mm";
         final String PERCENT = "%.0f%%";
-        
+
         final SimpleDateFormat DATE = new SimpleDateFormat();
 
         return Arrays.asList(
