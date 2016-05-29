@@ -3896,14 +3896,6 @@
     "longitude": 122.3122
   },
   {
-    "stationID": 3102,
-    "wmoNumber": 95202,
-    "name": "BROOME NTC AWS",
-    "state": "SA",
-    "latitude": -18.0008,
-    "longitude": 122.2183
-  },
-  {
     "stationID": 3003,
     "wmoNumber": 94203,
     "name": "BROOME AIRPORT",
