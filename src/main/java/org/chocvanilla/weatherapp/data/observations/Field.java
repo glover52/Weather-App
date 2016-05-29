@@ -6,6 +6,7 @@ public class Field {
     private final String label;
     private final String formattedValue;
     private final Object value;
+    private final boolean graphable;
 
     public Field(String labelText, String format, Object formattedValue) {
         this(labelText, format, formattedValue, true);
@@ -14,6 +15,7 @@ public class Field {
     public Field(String labelText, Function<Object, String> formatter, Object obj, boolean isGraphable) {
         label = labelText;
         formattedValue = formatter.apply(obj);
+        graphable = isGraphable;
         value = obj;
     }
 
@@ -36,5 +38,9 @@ public class Field {
     @Override
     public String toString() {
         return String.format("%s: %s", getLabel(), getFormattedValue());
+    }
+
+    public boolean isGraphable() {
+        return graphable;
     }
 }

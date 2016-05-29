@@ -192,7 +192,7 @@ public class DetailWindow {
         TimeSeries series = new TimeSeries(field.getLabel());
         for(WeatherObservation observation : observations) {
             for (Field obsField : observation.getFields()) {
-                if (field.getLabel().equals(obsField.getLabel())) {
+                if (field.isGraphable() && field.getLabel().equals(obsField.getLabel())) {
                     series.addOrUpdate(new Second(observation.getTimestamp()),
                             Double.parseDouble(obsField.getValue().toString()));
                 }
