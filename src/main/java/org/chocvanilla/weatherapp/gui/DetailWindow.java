@@ -69,6 +69,9 @@ public class DetailWindow {
         container.add(buttonContainer);
         container.add(latestObsContainer);
         container.add(buildHistoryContainer());
+
+        // Open source recognitions
+        chartContainer.add(new JLabel(OPEN_SOURCE_COMPONENTS), BorderLayout.SOUTH);
     }
 
     /**
@@ -99,6 +102,7 @@ public class DetailWindow {
      */
     public void show(WeatherStation station, ObservationsProvider provider) {
         fieldsToGraph.clear();
+
         WeatherObservations observations = provider.loadObservations(station);
         if (observations.isEmpty()) {
             MessageBox.show("Unfortunately, observations are not available for this station.", "Error");
@@ -124,10 +128,6 @@ public class DetailWindow {
         // Checkboxes for chart
         addCheckBoxes(observations, chart);
         chartContainer.add(checkBoxContainer, BorderLayout.EAST);
-
-        // Open source recognitions
-        chartContainer.add(new JLabel(OPEN_SOURCE_COMPONENTS), BorderLayout.SOUTH);
-
 
         // Table
         GridBagConstraints c = new GridBagConstraints();
@@ -284,7 +284,7 @@ public class DetailWindow {
             chartPanel = new ChartPanel(chart);
             chartPanel.setMaximumDrawHeight(Integer.MAX_VALUE);
             chartPanel.setMaximumDrawWidth(Integer.MAX_VALUE);
-            chartContainer.add(chartPanel, BorderLayout.NORTH);
+            chartContainer.add(chartPanel, BorderLayout.CENTER);
         } else {
             chartPanel.setChart(chart);
         }
