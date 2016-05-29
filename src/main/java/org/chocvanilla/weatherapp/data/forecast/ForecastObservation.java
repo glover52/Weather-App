@@ -44,7 +44,7 @@ public class ForecastObservation implements WeatherObservation {
         final SimpleDateFormat DATE = new SimpleDateFormat();
 
         return Arrays.asList(
-                new Field("Time", DATE::format, getTimestamp()),
+                new Field("Time", DATE::format, getTimestamp(), false),
                 new Field("Air Temp", DEG_C, temperature),
                 new Field("Apparent Temp", DEG_C, apparentTemperature),
                 new Field("Wind Bearing", "%d°", windBearing),
@@ -55,8 +55,8 @@ public class ForecastObservation implements WeatherObservation {
                 new Field("Humidity (%)", PERCENT, humidity * 100),
                 new Field("Cloud Cover", PERCENT, cloudCover * 100),
                 new Field("Pressure (millibars)", "%.0f mbar", pressure),
-                new Field("Summary", "%s", summary),
-                new Field("Icon", "%s", icon)
+                new Field("Summary", "%s", summary, false),
+                new Field("Icon", "%s", icon, false)
         );
     }
 }

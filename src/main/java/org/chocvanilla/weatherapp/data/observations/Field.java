@@ -8,15 +8,19 @@ public class Field {
     private final Object value;
 
     public Field(String labelText, String format, Object formattedValue) {
-        this(labelText, x -> String.format(format, x), formattedValue);
+        this(labelText, format, formattedValue, true);
     }
     
-    public Field(String labelText, Function<Object, String> formatter, Object obj) {
+    public Field(String labelText, Function<Object, String> formatter, Object obj, boolean isGraphable) {
         label = labelText;
         formattedValue = formatter.apply(obj);
         value = obj;
     }
-    
+
+    public Field(String labelText, String format, Object value, boolean isGraphable) {
+        this(labelText, x -> String.format(format, x), value, isGraphable);
+    }
+
     public Object getValue() {
         return value;
     }
