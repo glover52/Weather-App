@@ -40,6 +40,7 @@ public class BureauOfMeteorology implements ObservationsProvider {
      */
     private WeatherObservations loadObservationsUncached(WeatherStation station) {
         try {
+            log.debug("No cached observations. Downloading observation data for {}", station.getName());
             Path path = downloader.downloadFile(buildURL(station), target, station.getUniqueID() + ".json");
             return parseObservations(path);
         } catch (MalformedURLException e) {
