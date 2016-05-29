@@ -143,7 +143,7 @@ public class DetailWindow {
                     fieldsToGraph.add(field);
                 }
             }
-            if(field.getLabel().equals("Time")) {
+            if(!field.getLabel().equals("Time")) {
                 JCheckBox fieldCheckBox = new JCheckBox(field.getLabel(), fieldsToGraph.contains(field));
                 fieldCheckBox.addActionListener(x -> toggleGraph(field, chart, observations));
                 checkBoxContainer.add(fieldCheckBox);
@@ -154,12 +154,10 @@ public class DetailWindow {
     private void toggleGraph(Field field, JFreeChart chart, WeatherObservations observations) {
         if(fieldsToGraph.contains(field)) {
             removeFieldFromGraph(field, chart);
-           // fieldsToGraph.remove(field);
             log.debug("Field: " + field.getLabel() + " removed from list.");
         }
         else {
             addFieldToGraph(field, chart, observations);
-            //fieldsToGraph.add(field);
             log.debug("Field: " + field.getLabel() + " added to list.");
         }
     }
@@ -173,17 +171,16 @@ public class DetailWindow {
         dataSetIndex++;
         plot.setDataset(dataSetIndex, createDataSet(field, observations));
         plot.setRenderer(dataSetIndex, new StandardXYItemRenderer());
-
-        updateChart(chart);
+        
     }
 
     private XYDataset createDataSet(Field field, WeatherObservations observations) {
         TimeSeries series = new TimeSeries(field.getLabel());
         for(WeatherObservation observation : observations) {
             for (Field obsField : observation.getFields()) {
-                if (field == obsField) {
+                if (field.getLabel().equals(obsField.getLabel())) {
                     series.addOrUpdate(new Second(observation.getTimestamp()),
-                            Double.parseDouble(obsField.getFormattedValue()));
+                            Double.parseDouble(obsField.getValue().toString()));
                 }
             }
         }

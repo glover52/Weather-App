@@ -4,15 +4,21 @@ import java.util.function.Function;
 
 public class Field {
     private final String label;
-    private final String value;
+    private final String formattedValue;
+    private final Object value;
 
-    public Field(String labelText, String format, Object value) {
-        this(labelText, x -> String.format(format, x), value);
+    public Field(String labelText, String format, Object formattedValue) {
+        this(labelText, x -> String.format(format, x), formattedValue);
     }
     
     public Field(String labelText, Function<Object, String> formatter, Object obj) {
         label = labelText;
-        value = formatter.apply(obj);
+        formattedValue = formatter.apply(obj);
+        value = obj;
+    }
+    
+    public Object getValue() {
+        return value;
     }
 
     public String getLabel() {
@@ -20,7 +26,7 @@ public class Field {
     }
 
     public String getFormattedValue() {
-        return value;
+        return formattedValue;
     }
 
     @Override
