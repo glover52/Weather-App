@@ -65,7 +65,7 @@ public class ChartHelpers {
         rangeAxis2.setAutoRangeIncludesZero(false);
 
         GradientPaint g = new GradientPaint(
-                0.0f, 0.0f, new Color(182, 212, 255),
+                0.0f, 0.0f, new Color(200, 210, 255),
                 0.0f, 0.0f, new Color(255, 255, 255)
         );
 
