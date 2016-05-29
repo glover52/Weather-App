@@ -19,6 +19,8 @@ import javax.swing.table.TableColumnModel;
 import java.awt.*;
 import java.awt.event.WindowListener;
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
 public class DetailWindow {
@@ -41,7 +43,7 @@ public class DetailWindow {
     private ArrayList<Field> fieldsToGraph = new ArrayList<>();
     private FavouritesUpdatedListener favouritesUpdatedListener;
 
-    private int dataSetIndex = 0;
+    private Map<String, Integer> dataSetIndex = new HashMap<>();
 
     /**
      * Create a new window, in which a chart with the most recent temperatures is displayed, both as a chart, and in a
@@ -89,6 +91,8 @@ public class DetailWindow {
      */
     public void show(WeatherStation station, ObservationsProvider provider) {
         WeatherObservations observations = provider.loadObservations(station);
+        populateDataSetIndex(observations);
+
 
         latestObsContainer.removeAll();
         latestObsContainer.add(GuiHelpers.buildDetails(observations.iterator().next()));
@@ -102,7 +106,6 @@ public class DetailWindow {
         buttonContainer.revalidate();
         buttonContainer.repaint();
         // Chart
-
 
         JFreeChart chart = ChartHelpers.createChart(station, observations, fieldsToGraph);
         updateChart(chart);
@@ -123,7 +126,17 @@ public class DetailWindow {
         frame.pack();
         frame.setVisible(true);
     }
-    
+
+    private void populateDataSetIndex(WeatherObservations observations) {
+        WeatherObservation observation = observations.iterator().next();
+        int x = 0;
+        for (Field field : observation.getFields()) {
+            dataSetIndex.put(field.getLabel(), x);
+            x++;
+        }
+        log.debug(dataSetIndex.toString());
+    }
+
     public void updateTimeSinceLastRefresh(long millis){
         refreshStatusLabel.setText(String.format("Last refresh: %d seconds ago.", 
                 TimeUnit.MILLISECONDS.toSeconds(millis)));
@@ -163,14 +176,15 @@ public class DetailWindow {
     }
 
     private void removeFieldFromGraph(Field field, JFreeChart chart) {
-
+        XYPlot plot = chart.getXYPlot();
+        plot.setDataset(dataSetIndex.get(field.getLabel()), null);
+        plot.setRenderer(dataSetIndex.get(field.getLabel()), null);
     }
 
     private void addFieldToGraph(Field field, JFreeChart chart, WeatherObservations observations) {
         XYPlot plot = chart.getXYPlot();
-        dataSetIndex++;
-        plot.setDataset(dataSetIndex, createDataSet(field, observations));
-        plot.setRenderer(dataSetIndex, new StandardXYItemRenderer());
+        plot.setDataset(dataSetIndex.get(field.getLabel()), createDataSet(field, observations));
+        plot.setRenderer(dataSetIndex.get(field.getLabel()), new StandardXYItemRenderer());
         
     }
 
