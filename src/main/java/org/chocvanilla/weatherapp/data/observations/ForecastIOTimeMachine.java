@@ -44,7 +44,7 @@ public class ForecastIOTimeMachine implements ObservationsProvider {
                 .boxed().parallel()
                 .map(day -> download(apiKey, day, latitude, longitude))
                 .flatMap(Collection::stream)
-                .sorted((x,y) -> x.getTimestamp().compareTo(y.getTimestamp()))
+                .sorted((x,y) -> y.getTimestamp().compareTo(x.getTimestamp()))
                 .collect(Collectors.toList());
         return new WeatherObservations(obs);
     }
