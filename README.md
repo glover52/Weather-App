@@ -30,9 +30,6 @@ Test plan is located at [src/test/TESTPLAN.txt](src/test/TESTPLAN.md).
 ### Documentation
 Comprehensive documentation can be found in [docs](/docs).
 
-### Continuous Integration
-place holder
-
 ### Logs
 Logs can be found in [logs](logs/).
 
@@ -52,9 +49,9 @@ Password: guest
 
 This server may be connected to on the RMIT intranet.
 
-### Bamboo Server
+### Contiguous Integration
 Bamboo was an invaluable tool for finding bugs not instantly obvious under visual inspection. Bamboo was also integrated
-into teh HipChat server, so that the status of a build was displayed upon completion of testing.
+into the HipChat server, so that the status of a build was displayed upon completion of testing.
 
 The server may be connected to using the following details:
 
