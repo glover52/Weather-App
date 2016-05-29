@@ -23,12 +23,14 @@ test status file [link]()  <!-- TODO -->
 **Set Up**: Start program.
 
 **Procedure**
+
 1. Select an arbitrary station from the weather station list
 2. Click any one of the "BOM observations", "Forecast.io observations", "Forecast" to open details window.
 3. Click on the favorite button
 4. Close the details window
 
 **Expected Outcome**
+
 - Favorite button with change to unfavorite button.
 - Favorited weather station will now appear on the favorites list
 
@@ -39,10 +41,12 @@ test status file [link]()  <!-- TODO -->
 **Set Up**: Start program.
 
 **Procedure**
+
 1. Select an arbitrary station from the weather station list
 2. Click on the favorite button.
 
 **Expected Outcome**
+
 - Favorite button with change to unfavorite button.
 - Favorited weather station will now appear on the favorites list
 
@@ -53,9 +57,11 @@ test status file [link]()  <!-- TODO -->
 **Set Up**: Start program, select arbitrary weather station.
 
 **Procedure**
+
 1. Click on "BOM Observations button"
 
 **Expected Outcome**
+
 - Details Window will open.
 - Latest Observations will be visible.
 - Observation history chart will be visible.
@@ -67,9 +73,11 @@ test status file [link]()  <!-- TODO -->
 **Set Up**: Start program, select arbitrary weather station.
 
 **Procedure**
+
 1. Click on "Forecast.io Observations button"
 
 **Expected Outcome**
+
 - Details Window will open.
 - Latest Observations will be visible.
 - Observation history chart will be visible.
@@ -81,9 +89,11 @@ test status file [link]()  <!-- TODO -->
 **Set Up**: Start program, select arbitrary weather station.
 
 **Procedure**
+
 1. Click on "Forecast.io Observations button"
 
 **Expected Outcome**
+
 - Details Window will open.
 - Latest Observations will be visible.
 - Forecast chart will be visible.
@@ -95,11 +105,13 @@ test status file [link]()  <!-- TODO -->
 **Set Up**: Start program, select arbitrary weather station.
 
 **Procedure**
+
 1. Click on "Forecast.io Observations button"
 2. Click any one of the "BOM observations", "Forecast.io observations", "Forecast" to open details window.
 3. Click and drag a rectangle from top left to bottom right. While dragging a rectangle will be displayed on the portion of the chart to be magnified.
 
 **Expected Outcome**
+
 - The chart will zoom into the selected portion of the chart
 
 ###TC07:
@@ -109,10 +121,12 @@ test status file [link]()  <!-- TODO -->
 **Set Up**: Start program, select arbitrary weather station, and open details window.
 
 **Procedure**
+
 1. Click on "Forecast.io Observations button"
 2. Click any one of the "BOM observations", "Forecast.io observations", "Forecast" to open details window.
 3. Click and drag a rectangle from top left to bottom right. While dragging a rectangle will be displayed on the portion of the chart to be magnified.
 4. Click and drag from right to left.
 
 **Expected Outcome**
+
 - The chart will zoom out to the standard level of magnification
