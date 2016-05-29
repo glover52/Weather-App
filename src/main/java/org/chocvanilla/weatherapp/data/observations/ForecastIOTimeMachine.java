@@ -13,6 +13,8 @@ import java.net.URL;
 import java.time.Duration;
 import java.time.Instant;
 import java.util.*;
+import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 
 public class ForecastIOTimeMachine implements ObservationsProvider {
     public static final String API_CALL_FORMAT = "https://api.forecast.io/forecast/%s/%f,%f,%d" +
@@ -33,30 +35,35 @@ public class ForecastIOTimeMachine implements ObservationsProvider {
     }
 
     public WeatherObservations loadObservationsUncached(WeatherStation station) {
-        try {
-            return downloadObservationsFor(station.getLatitude(), station.getLongitude());
-        } catch (IOException e) {
-            log.error("Unable to parse forecast for '{}'", station, e);
-        } catch (MissingAPIKeyException e) {
-            log.error("ForecastIO API key missing,", e);
-        }
-        return new WeatherObservations();
+        return downloadObservationsFor(station.getLatitude(), station.getLongitude());
     }
 
-    private WeatherObservations downloadObservationsFor(double latitude, double longitude) throws IOException {
-        String api_key = KeyProvider.getForecastAPIKey();
-        List<WeatherObservation> obs = new ArrayList<>();
-        
-        for (int i = 0; i < NUMBER_OF_DAYS; i++) {
-            String request =
-                    String.format(API_CALL_FORMAT, api_key, latitude, longitude, 
-                            Instant.now().minus(Duration.ofDays(i)).getEpochSecond());
+    private WeatherObservations downloadObservationsFor(double latitude, double longitude) {
+        String apiKey = KeyProvider.getForecastAPIKey();
+        final List<WeatherObservation> obs = IntStream.range(0, NUMBER_OF_DAYS)
+                .boxed().parallel()
+                .map(day -> download(apiKey, day, latitude, longitude))
+                .flatMap(Collection::stream)
+                .sorted((x,y) -> x.getTimestamp().compareTo(y.getTimestamp()))
+                .collect(Collectors.toList());
+        return new WeatherObservations(obs);
+    }
+
+    private List<WeatherObservation> download(String apiKey, int day, double lat, double lon) {
+        try {
+            String request = String.format(API_CALL_FORMAT, apiKey, lat, lon,
+                    Instant.now().minus(Duration.ofDays(day)).getEpochSecond());
             try (BufferedReader reader = new BufferedReader(new InputStreamReader(new URL(request).openStream()))) {
                 JsonObject object = (JsonObject) new JsonParser().parse(reader);
                 JsonElement data = object.get("hourly").getAsJsonObject().get("data");
-                obs.addAll(Arrays.asList(gson.fromJson(data, ForecastObservation[].class)));
-            }           
+                return Arrays.asList(gson.fromJson(data, ForecastObservation[].class));
+            }
+        } catch (IOException e) {
+            log.error("Unable to parse ForecastIO observations for '{}', '{}", lat, lon, e);
+        } catch (MissingAPIKeyException e) {
+            log.error("ForecastIO API key missing,", e);
         }
-        return new WeatherObservations(obs);
+        return Collections.emptyList();
+
     }
 }
