@@ -42,54 +42,6 @@ public class ChartHelpers {
         return dataSet;
     }
 
-    public static TimeSeriesCollection createDataSets(WeatherObservations observations,
-                                                      ArrayList<Field> fieldsToGraph) {
-        TimeSeriesCollection seriesCollection = new TimeSeriesCollection();
-        Map<Field, TimeSeries> seriesMap = new HashMap<>();
-        for(Field field : fieldsToGraph) {
-            TimeSeries series = new TimeSeries(field.getLabel());
-            seriesMap.put(field, series);
-        }
-
-
-        for (WeatherObservation observation : observations) {
-            List<Field> obsFields = observation.getFields();
-            for(Field field : obsFields) {
-                if(fieldsToGraph.contains(field)) {
-                    seriesMap.put(field, updateSeries(field, seriesMap, observation));
-                }
-            }
-        }
-
-        for(Field field : fieldsToGraph) {
-            seriesCollection.addSeries(seriesMap.get(field));
-        }
-
-        return seriesCollection;
-    }
-
-    private static TimeSeries updateSeries(Field field, Map<Field, TimeSeries> seriesMap,
-                                           WeatherObservation observation) {
-        TimeSeries series = seriesMap.get(field);
-        series.addOrUpdate(new Second(observation.getTimestamp()),
-                Integer.parseInt(field.getFormattedValue()));
-        return series;
-    }
-
-    private static TimeSeriesCollection createTimeDataSet(Field field, WeatherObservations observations) {
-        TimeSeries series = new TimeSeries(field.getLabel());
-        for (WeatherObservation observation : observations) {
-            for (Field obsField : observation.getFields()) {
-                if(field == obsField) {
-                    series.addOrUpdate(new Second(observation.getTimestamp()),
-                            Integer.parseInt(obsField.getFormattedValue()));
-                }
-            }
-        }
-        return new TimeSeriesCollection(series);
-    }
-
-
     /**
      * Create a temperature chart which can be added to a graphical user interface.
      *
@@ -101,33 +53,17 @@ public class ChartHelpers {
                                          ArrayList<Field> fieldsToGraph) {
 
         XYDataset dataset = createDataSet(observations);
-        //TimeSeriesCollection setOfFields = createDataSets(observations, fieldsToGraph);
 
         JFreeChart chart = ChartFactory.createTimeSeriesChart(station.toString(),
                 "Date", "Value", dataset);
 
         XYPlot plot = chart.getXYPlot();
-        int dataSetIndex = 0;
-
-        /*for (Field field : fieldsToGraph) {
-            plot.setDataset(dataSetIndex, createTimeDataSet(field, observations));
-            plot.setRenderer(dataSetIndex, new StandardXYItemRenderer());
-            dataSetIndex++;
-        }*/
 
         ValueAxis axis = plot.getDomainAxis();
         axis.setAutoRange(true);
 
         NumberAxis rangeAxis2 = new NumberAxis("Range Axis 2");
         rangeAxis2.setAutoRangeIncludesZero(false);
-
-        /*XYLineAndShapeRenderer renderer = new XYLineAndShapeRenderer();
-        renderer.setSeriesPaint(0, new Color(0, 0, 0));
-        renderer.setSeriesShapesVisible(0, false);
-
-        XYPlot plot = (XYPlot) chart.getPlot();
-        plot.setDataset(0, dataset);
-        plot.setRenderer(0, renderer);
 
         GradientPaint g = new GradientPaint(
                 0.0f, 0.0f, new Color(182, 212, 255),
@@ -139,7 +75,8 @@ public class ChartHelpers {
         plot.setDomainGridlinePaint(lineColor);
         plot.setRangeGridlinePaint(lineColor);
         plot.setOutlineVisible(false);
-        chart.setBackgroundPaint(null);*/
+        chart.setBackgroundPaint(null);
+
         return chart;
     }
 }
