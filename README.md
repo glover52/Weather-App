@@ -17,7 +17,7 @@ Application source code can be found in [src/main](src/main).
 ### Tests
 Unit tests can be found in [src/test](src/test).
 
-Test plan is located at [src/test/TestPlan.txt](src/test/TestPlan.txt).
+Test plan is located at [src/test/TESTPLAN.txt](src/test/TESTPLAN.md).
 
 ### Documentation
 Comprehensive documentation can be found in [docs](/docs).
