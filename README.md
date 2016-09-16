@@ -1,7 +1,8 @@
 # Software Engineering: Process & Tools
 
 [WeatherApp on Bitbucket](https://bitbucket.org/chocvanilla/weather-app)
-This repository was private to help prevent plagiarism.
+
+This repository was private to help prevent plagiarism, it is now under the [**GNU AGPLv3**](http://choosealicense.com/licenses/agpl-3.0/) license.
 
 ## Team Members
 
