@@ -1,8 +1,7 @@
 # Software Engineering: Process & Tools
 
 [WeatherApp on Bitbucket](https://bitbucket.org/chocvanilla/weather-app)
-This repository is private to help prevent plagiarism.
-For access, please send an email to one of the team members listed below.
+This repository was private to help prevent plagiarism.
 
 ## Team Members
 
@@ -45,7 +44,7 @@ are made.
 
 The server may be connected to using the following details:
 
-Web Address: http://128.199.247.226:8080/
+Web Address: #REMOVED#
 
 User name: guest
 
@@ -59,7 +58,7 @@ into the HipChat server, so that the status of a build was displayed upon comple
 
 The server may be connected to using the following details:
 
-Web Address: http://128.199.247.226:8085/bamboo/
+Web Address: #REMOVED#
 
 User Name: guest
 
